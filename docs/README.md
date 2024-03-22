@@ -151,8 +151,32 @@ public void skipFlow() throws Exception {
     }
 ```
 
+#### 监听器
+实现Listener接口，然后在设计器中配置好监听器
+```
+public class FinishListener implements Listener {
 
+    @Resource
+    private TestLeaveMapper testLeaveMapper;
 
+    private static final Logger log = LoggerFactory.getLogger(StartListener.class);
+
+    @Override
+    public void notify(ListenerVariable variable) {
+        log.info("完成监听器:{}", variable);
+        Instance instance = variable.getInstance();
+        Map<String, Object> testLeaveMap = variable.getVariable();
+        TestLeave testLeave = (TestLeave) testLeaveMap.get("testLeave");
+        /** 如果{@link com.ruoyi.system.service.impl.TestLeaveServiceImpl}中更新了，这里就不用更新了*/
+//        testLeave.setNodeCode(instance.getNodeCode());
+//        testLeave.setNodeName(instance.getNodeName());
+//        testLeave.setFlowStatus(instance.getFlowStatus());
+//        testLeave.setUpdateTime(DateUtils.getNowDate());
+//        testLeaveMapper.updateTestLeave(testLeave);
+        log.info("完成监听器结束;{}", "任务完成");
+    }
+}
+```
 
 
 ## 流程设计器
