@@ -153,7 +153,7 @@ public void skipFlow() throws Exception {
 
 #### 监听器
 实现Listener接口，然后在设计器中配置好监听器
-```
+```java
 public class FinishListener implements Listener {
 
     @Resource
