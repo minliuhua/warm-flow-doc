@@ -99,9 +99,7 @@ https://gitee.com/warm_4/warm-flow/wikis/%E8%A1%A8%E7%BB%93%E6%9E%84?sort_id=933
 
 ### 代码示例
 
-
-
-> **以下测试代码请详见hh-vue项目中的hh-vue/hh-admin/src/test/java/com/hh/test/service/impl/FlowTest.java**
+https://gitee.com/min290/hh-vue/blob/master/ruoyi-admin/src/test/java/com/ruoyi/system/service/impl/FlowTest.java
 
 
 
