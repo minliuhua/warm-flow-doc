@@ -22,7 +22,7 @@
 
 ## 联系方式
 
-![输入图片说明](../image.png)
+![输入图片说明](https://gitee.com/warm_4/warm-flow-doc/raw/main/image.png)
 
 **demo项目**：  
 
