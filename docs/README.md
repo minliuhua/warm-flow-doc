@@ -151,6 +151,10 @@ public void skipFlow() throws Exception {
 ```
 
 #### 监听器
+具体可以阅读以下两篇文章：
+[监听器生命周期](https://blog.csdn.net/weixin_43284369/article/details/137402216)
+[权限监听器动态设置](https://blog.csdn.net/weixin_43284369/article/details/137225966)
+
 实现Listener接口，然后在设计器中配置好监听器
 ```java
 public class PermissionListener implements Listener {
