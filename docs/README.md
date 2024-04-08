@@ -21,8 +21,13 @@
 >   **git地址**：https://gitee.com/warm_4/warm-flow.git
 
 ## 联系方式
- 
-![输入图片说明](https://gitee.com/warm_4/warm-flow-doc/raw/main/image.png)
+
+<table>
+    <tr>
+        <td><img src="https://foruda.gitee.com/images/1712558531943387552/1d315883_2218307.png"/></td>
+        <td><img src="https://foruda.gitee.com/images/1712558539736718830/71186fdd_2218307.png"/></td>
+    </tr>
+</table>
 
 **demo项目**：  
 
