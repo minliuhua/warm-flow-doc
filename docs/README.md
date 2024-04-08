@@ -27,7 +27,7 @@
 **demo项目**：  
 
 springboot：[RuoYi-Vue-Warm-Flow](https://gitee.com/min290/hh-vue) ｜[演示地址](http://www.hhzai.top:81)  
-solon：[warm-sun](https://gitee.com/min290/warm-sun.git) ｜[演示地址](http://www.warm-sun.vip)
+solon：[warm-sun](https://gitee.com/min290/warm-sun.git) ｜[演示地址](http://www.warm-sun.vip)  
 vue3前端：[warm-vue3](https://gitee.com/min290/warm-vue3.git)，不定时更新
 
 
