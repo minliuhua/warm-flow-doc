@@ -21,7 +21,7 @@
 >
 >   **git地址**：https://gitee.com/warm_4/warm-flow.git
 
-## 加入warm-flow开发
+## 加入warm-flow团队
 完成一个功能开发，即可申请加入
 
 ## 联系方式
