@@ -199,7 +199,7 @@ public class PermissionListener implements Listener {
 ```
 ### 配置文件
 一下配置可通过yml等配置文件设置，也可通过代码设置
-```
+```yaml
 # warm-flow工作流配置
 warm-flow:
   # 是否显示banner图，默认是
@@ -208,7 +208,7 @@ warm-flow:
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
 ```
 
-```
+```java
 @Configuration
 public class WarmFlowConfig {
 
@@ -222,6 +222,7 @@ public class WarmFlowConfig {
     }
 }
 ```
+
 
 
 ### 表结构
