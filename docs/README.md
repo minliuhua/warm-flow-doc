@@ -197,6 +197,32 @@ public class PermissionListener implements Listener {
     }
 }
 ```
+### 配置文件
+一下配置可通过yml等配置文件设置，也可通过代码设置
+```
+# warm-flow工作流配置
+warm-flow:
+  # 是否显示banner图，默认是
+  banner: true
+  # 填充器 （自定义填充有限配置文件）
+  data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
+```
+
+```
+@Configuration
+public class WarmFlowConfig {
+
+    /**
+     * 自定义填充 （自定义填充有限配置文件）
+     * @return
+     */
+    @Bean
+    public DataFillHandler dataFillHandler() {
+        return new CustomDataFillHandler();
+    }
+}
+```
+
 
 ### 表结构
 | **#** | **数据表**      | **名称**       | **备注说明** |
