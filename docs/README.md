@@ -24,6 +24,16 @@
 ## 加入warm-flow团队
 完成一个功能开发，即可申请加入
 
+
+## 集成项目示例 
+
+| 版本           | 项目名称           | | 源码地址              | 
+|--------------|--------------|-----------------------------------------|
+| springboot2+vue2  |RuoYi-Vue-Warm-Flow| https://gitee.com/min290/hh-vue        |
+| springboot3+React |quick-boot         | https://github.com/csx-bill/quick-boot |
+| solon+vue3        |warm-sun           | https://gitee.com/min290/warm-sun.git  |
+
+
 ## 联系方式
 
 <table>
@@ -32,12 +42,6 @@
         <td><img src="https://foruda.gitee.com/images/1712558539736718830/71186fdd_2218307.png"/></td>
     </tr>
 </table>
-
-**demo项目**：  
-
- **springboot2+vue2：** [RuoYi-Vue-Warm-Flow](https://gitee.com/min290/hh-vue) ｜[演示地址](http://www.hhzai.top:81)  
- **springboot3+React：** [quick-boot](https://github.com/csx-bill/quick-boot)  
- **solon+vue3：** [warm-sun](https://gitee.com/min290/warm-sun.git) ｜[演示地址](http://www.warm-sun.vip)  
 
 
 ## 快速开始
