@@ -557,6 +557,7 @@ https://blog.csdn.net/a506602491/article/details/129195232
 - v1.1.5
   - 支持自定义填充
   - 新增配置文件，部分功能可配置
+  - 重构代码，insService.skip标识即将删除，改用taskService.skip
   - 引入日志门面
 
 - v1.1.42
