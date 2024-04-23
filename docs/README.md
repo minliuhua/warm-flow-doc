@@ -19,7 +19,7 @@
 >  **希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长**  
 >   **可二开、商用，但请注明出处，保留代码注释中的作者名，[但是使用前请先登记](https://gitee.com/warm_4/warm-flow/issues/I7Y57D)**  **  
 >
->   **git地址**：https://gitee.com/warm_4/warm-flow.git
+>   **[gitee地址](https://gitee.com/warm_4/warm-flow.git  )** |**[github地址](https://github.com/minliuhua/warm-flow.git)**
 
 ## 加入warm-flow团队
 完成一个功能开发，即可申请加入
