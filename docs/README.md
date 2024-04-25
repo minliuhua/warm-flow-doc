@@ -47,7 +47,7 @@
 
 <table>
     <tr>
-        <td><img src="https://foruda.gitee.com/images/1713161319270208523/401f8b92_2218307.png"/></td>
+        <td><img src="https://foruda.gitee.com/images/1714012802753863162/57b4e3a8_2218307.png"/></td>
         <td><img src="https://foruda.gitee.com/images/1712558539736718830/71186fdd_2218307.png"/></td>
     </tr>
 </table>
