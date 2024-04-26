@@ -555,7 +555,7 @@ https://blog.csdn.net/a506602491/article/details/129195232
   - 设计器考虑bpmn
 
 **正在执行中的计划**
-- v1.1.7
+- v1.1.8
   - orm支持mybatis-plus扩展
   - 新增会签、票签支持
 
