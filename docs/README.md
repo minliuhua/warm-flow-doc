@@ -36,11 +36,11 @@
 
 ## 集成项目示例 
 
-| 版本           | 项目名称           | 源码地址              | 
-|--------------|--------------|-----------------------------------------|
-| springboot2+vue2  |RuoYi-Vue-Warm-Flow| https://gitee.com/min290/hh-vue        |
-| springboot3+React |quick-boot         | https://github.com/csx-bill/quick-boot |
-| solon+vue3        |warm-sun           | https://gitee.com/min290/warm-sun.git  |
+| 版本           | 项目名称           | 源码地址              | 备注｜
+|--------------|--------------|-----------------------------------------|--------|
+| springboot2+vue2  |RuoYi-Vue-Warm-Flow| https://gitee.com/min290/hh-vue        | |
+| springboot3+React |quick-boot         | https://github.com/csx-bill/quick-boot | |
+| solon+vue3        |warm-sun           | https://gitee.com/min290/warm-sun.git  |vue3前端有几个月没同步，找时间会同步|
 
 
 ## 联系方式
