@@ -262,6 +262,7 @@ public class WarmFlowConfig {
 | 7     | from_path   | 审批表单路径                      | VARCHAR(100)    |          |          |            |              |
 | 8     | create_time | 创建时间                          | DATETIME        |          |          |            |              |
 | 9     | update_time | 更新时间                          | DATETIME        |          |          |            |              |
+| 10     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 
 
@@ -284,7 +285,8 @@ public class WarmFlowConfig {
 | 13    | gateway_node     | 所属并行网关节点编码                                         | VARCHAR(40)     |          |          |            |              |
 | 14    | message          | 审批意见                                                     | VARCHAR(500)    |          |          |            |              |
 | 15    | create_time      | 创建时间                                                     | DATETIME        |          |          |            |              |
-| 16    | update_time      | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 16    | update_time      | 更新时间                          | DATETIME        |          |          |            |              |
+| 17     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 **flow_instance [流程实例表]**
 
@@ -302,7 +304,8 @@ public class WarmFlowConfig {
 | 10    | create_by     | 创建者                                                       | VARCHAR(64)  |          |          |            |              |
 | 11    | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
 | 12    | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
-| 13    | ext           | 扩展字段                                                     | VARCHAR(500) |          |          |            |              |
+| 13    | ext           | 扩展字段                       | VARCHAR(500) |          |          |            |              |
+| 14     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 **flow_node [流程结点表]**
 
@@ -320,7 +323,8 @@ public class WarmFlowConfig {
 | 10    | skip_any_node   | 是否可以退回任意节点（Y是 N否）                              | VARCHAR(100)    |          |          | 'N'        |              |
 | 11    | version         | 版本                                                         | VARCHAR(20)     |          | √        |            |              |
 | 12    | create_time     | 创建时间                                                     | DATETIME        |          |          |            |              |
-| 13    | update_time     | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 13    | update_time     | 更新时间            | DATETIME        |          |          |            |              |
+| 14     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 **flow_skip [结点跳转关联表]**
 
@@ -338,7 +342,8 @@ public class WarmFlowConfig {
 | 10    | skip_condition | 跳转条件                                                     | VARCHAR(200)    |          |          |            |              |
 | 11    | coordinate     | 坐标                                                         | VARCHAR(100)    |          |          |            |              |
 | 12    | create_time    | 创建时间                                                     | DATETIME        |          |          |            |              |
-| 13    | update_time    | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 13    | update_time    | 更新时间                           | DATETIME        |          |          |            |              |
+| 14     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 **flow_task [待办任务表]**
 
@@ -358,8 +363,8 @@ public class WarmFlowConfig {
 | 12    | variable        | 任务变量                                                     | TEXT         |          |          |            |              |
 | 13    | gateway_node    | 所属并行网关节点编码                                         | VARCHAR(40)  |          |          |            |              |
 | 14    | create_time     | 创建时间                                                     | DATETIME     |          |          |            |              |
-| 15    | update_time     | 更新时间                                                     | DATETIME     |          |          |            |              |
-
+| 15    | update_time     | 更新时间                      | DATETIME     |          |          |            |              |
+| 16     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 
 ## 流程设计器
