@@ -367,17 +367,17 @@ public class WarmFlowConfig {
 | 16     | del_flag | 删除标志                          | CHAR(1)        |          |          |            |              |
 
 ### RuoYi-Vue-Warm-Flow切换mybaits-plus
-1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter
-2、ruoyi-flow的pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter
-3、ruoyi-common增加依赖
+1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter  
+2、ruoyi-flow的pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter  
+3、ruoyi-common增加依赖  
 ```java
-<dependency>
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
 ```
-4、MyBatisConfig.java注释掉，新增MybatisPlusConfig
+4、MyBatisConfig.java注释掉，新增MybatisPlusConfig  
 ```java
 package com.ruoyi.framework.config;
 
@@ -442,7 +442,7 @@ public class MybatisPlusConfig
     }
 }
 ```
-5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
+5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus  
 
 ## 流程设计器
 
