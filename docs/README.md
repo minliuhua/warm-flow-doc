@@ -232,14 +232,23 @@ public class PermissionListener implements Listener {
 ```
 ### 配置文件
 一下配置可通过yml等配置文件设置，也可通过代码设置
-```yaml
+```yml
 # warm-flow工作流配置
 warm-flow:
   # 是否显示banner图，默认是
   banner: true
-  # 填充器 （自定义填充有限配置文件）
-  data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
+  # 填充器 （可配置文件注入，也可用@Bean/@Component方式）
+  data-fill-handler-path: com.warm.flow.core.test.handle.CustomDataFillHandler
+  # 全局租户处理器（可配置文件注入，也可用@Bean/@Component方式）
+  tenant_handler_path: com.warm.flow.core.test.handle.CustomTenantHandler
+  # 是否开启逻辑删除
+  logic_delete: true
+  # 逻辑删除字段值（开启后默认为2）
+  logic_delete_value: 2
+  # 逻辑未删除字段（开启后默认为0）
+  logic_not_delete_value: 0
 ```
+
 
 ```java
 @Configuration
