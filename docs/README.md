@@ -72,7 +72,7 @@
 
 
 ### maven依赖
-
+#### mybatis
 **springboot项目**
 
 ```maven
@@ -89,6 +89,27 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
+      <version>最新版本</version>
+</dependency>
+```
+
+#### mybatis-plus
+**springboot项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
+      <version>最新版本</version>
+</dependency>
+```
+
+**solon项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
       <version>最新版本</version>
 </dependency>
 ```
