@@ -72,7 +72,7 @@
 
 
 ### maven依赖
-#### mybatis
+#### 1、mybatis
 **springboot项目**
 
 ```maven
@@ -93,7 +93,7 @@
 </dependency>
 ```
 
-#### mybatis-plus
+#### 2、mybatis-plus
 **springboot项目**
 
 ```maven
