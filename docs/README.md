@@ -666,7 +666,7 @@ https://blog.csdn.net/a506602491/article/details/129195232
   - 设计器考虑bpmn
 
 **正在执行中的计划**
-- v1.1.80
+- v1.1.90
   - orm支持mybatis-plus扩展
   - 多租户字段隔离提供全局配置，自动获取
   - 增加软删除可以配置化
