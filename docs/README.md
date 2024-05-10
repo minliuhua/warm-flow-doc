@@ -655,6 +655,17 @@ http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86lo
 https://blog.csdn.net/abc_cml/article/details/129065033
 https://blog.csdn.net/a506602491/article/details/129195232
 
+3、spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）
+删除"lazy-initialization: true",可解决问题，以下是错误示例
+
+```yml
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    lazy-initialization: true
+    web-application-type: servlet
+```
+
 
 
 ## **更新记录和未来计划** 
