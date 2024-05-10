@@ -118,6 +118,7 @@ https://www.bilibili.com/video/BV1Ci42117pK/
 ‍
 
 ### 支持数据库类型
+**已经新增mybatis-plus扩展依赖，理论上转换表结构，即可。组件中不存在sql脚本了，全是mybaits-plus语法**
 
 * [x] mysql
 * [ ] oracle
