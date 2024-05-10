@@ -646,7 +646,7 @@ demo项目已经准备了五套流程，以及开启流程代码，开启流程�
 
 ## 常见问题
 
-1、（感谢【luoheyu】提供测试意见）此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度
+1、此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度（感谢【luoheyu】提供测试意见）    
 按照这个把long序列化成字符串，前端页面就不会丢失精度了，获取查看hh-vue项目如何处理
 http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98
 
@@ -655,7 +655,7 @@ http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86lo
 https://blog.csdn.net/abc_cml/article/details/129065033
 https://blog.csdn.net/a506602491/article/details/129195232
 
-3、spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）
+3、spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）  
 删除"lazy-initialization: true",可解决问题，以下是错误示例
 
 ```yml
