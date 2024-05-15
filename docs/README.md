@@ -806,7 +806,7 @@ restart.include.flow=/io.github.minliuhua.*.jar
 
 昵称：warm  
 角色：后端开  
-个人介绍：研发工程师、技术经理，工作经验8年。爱好撸代码，带娃  
+个人介绍：研发工程师、技术经理，工作经验8年。爱好撸代码。  
 
 
 
