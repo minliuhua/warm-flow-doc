@@ -802,7 +802,11 @@ restart.include.flow=/io.github.minliuhua.*.jar
   - 用户角色抽取出来 
   - 整理流程表，调整表名和字段名
 
+## warm组织成员介绍
 
+昵称：warm
+角色：后端开
+个人介绍：研发工程师、技术经理，工作经验8年。爱好撸代码，带娃。
 
 
 
