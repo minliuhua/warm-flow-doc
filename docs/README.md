@@ -27,7 +27,7 @@
 
 - admin/admin123
 
-演示地址：http://www.hhzai.top:81
+演示地址：http://www.hhzai.top
 
 
 ## 学习视频
