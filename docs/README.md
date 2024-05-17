@@ -63,9 +63,9 @@ https://www.bilibili.com/video/BV1Ci42117pK/
 * 熟悉 Spring Boot或者Solon 及相关框架
 * 熟悉 Java 构建工具，比如 Maven
 
-### 导入sql，按需求执行增量脚本
->   **如果第一次导入，请先创建数据库，并导入：https://gitee.com/warm_4/warm-flow/blob/master/sql/warm-flow.sql**  
->   **如果需要增量更新，请按需导入：https://gitee.com/warm_4/warm-flow/blob/master/sql/warm-flow_xxx.sql**
+### 导入sql，按需求执行
+>   **如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行**  
+>   **如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行** 
 
 
 
