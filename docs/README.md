@@ -711,7 +711,7 @@ restart.include.flow=/io.github.minliuhua.*.jar
   - 设计器考虑bpmn
 
 
-**正在执行中的计划**
+**正在执行中的计划** 注意事项：工具包路径调整，新增升级脚本
   - 人员解偶，新增人员表
   - jpa扩展
   - oracle适配
@@ -722,7 +722,7 @@ restart.include.flow=/io.github.minliuhua.*.jar
   - vue3版本设计器
 
 
-**已完成计划**
+**已完成计划** 注意事项：执行1.1.90版本sql
 - v1.1.90
   - orm支持mybatis-plus扩展
   - 多租户字段隔离提供全局配置，自动获取
