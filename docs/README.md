@@ -723,6 +723,9 @@ restart.include.flow=/io.github.minliuhua.*.jar
 
 
 **已完成计划**
+- v1.1.91
+  - 修复设置默认填充器时候，判空错误
+  
 - v1.1.90
   - orm支持mybatis-plus扩展
   - 多租户字段隔离提供全局配置，自动获取
