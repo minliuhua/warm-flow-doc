@@ -39,7 +39,7 @@ https://www.bilibili.com/video/BV1Ci42117pK/
 
 | 版本           | 项目名称        | 源码地址              |
 |--------------|--------------|------ |
-| springboot2+vue2  |RuoYi-Vue-Warm-Flow| https://gitee.com/min290/hh-vue        | 
+| springboot2+vue2  |hh-vue| https://gitee.com/min290/hh-vue        | 
 | springboot3+React |quick-boot     | https://github.com/csx-bill/quick-boot |
 | vue3        |ruoyi-vue3      | https://gitee.com/min290/RuoYi-Vue3.git |
 
