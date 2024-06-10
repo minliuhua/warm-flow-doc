@@ -15,10 +15,7 @@ export default sidebar([
             '/guide/expression.md',
             '/guide/processterm.md',
             '/guide/processrule.md',
-            '/guide/troubleshooting.md',
-            '/guide/update.md',
-            '/guide/member.md',
-            '/guide/support.md'
+            '/guide/troubleshooting.md'
         ],
     }
 ]);
