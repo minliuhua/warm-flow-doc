@@ -4,7 +4,7 @@
 按照这个把long序列化成字符串，前端页面就不会丢失精度了，获取查看hh-vue项目如何处理
 http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98
 
-2、生成的流程图中文乱码
+2、生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
 由于服务器上缺少中文字体，通过检查fc-list :lang=zh是否包含中文字符集（以下是存在的示例）
 ```shell
 [root@iZbp18ilgi6s1lkbmmfo2jZ zhFonts]# fc-list :lang=zh
