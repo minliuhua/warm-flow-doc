@@ -17,19 +17,19 @@ actions:
 features:
 
 - title: 简洁易用
-  icon: code
+  icon: '/icons/concise.svg'
   details: 只有6张表，短时间内就可以浏览完核心代码
 
 - title: 常规审批功能
-  icon: relation
+  icon: '/icons/approval.svg'
   details: 支持通过、退回、任意跳转、转办、终止(会签、票签、委派、加减签开发中)
 
 - title: 监听器与流程表里
-  icon: relation
+  icon: '/icons/listener.svg'
   details: 支持五种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
   
 - title: 流程图
-  icon: update
+  icon: '/icons/flowchart.svg'
   details: 后端组件自带流程图，可不集成流程设计器，使用本组件
 
 - title: 条件表达式
