@@ -20,26 +20,33 @@ features:
   icon: code
   details: 只有6张表，短时间内就可以浏览完核心代码
 
-- title: 覆盖常规审批功能
+- title: 常规审批功能
   icon: relation
-  details: 通过、退回、任意跳转、转办、终止(会签、票签、委派、加减签开发中)
+  details: 支持通过、退回、任意跳转、转办、终止(会签、票签、委派、加减签开发中)
 
-- title: 流程图支持
+- title: 监听器与流程表里
+  icon: relation
+  details: 支持五种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
+  
+- title: 流程图
   icon: update
   details: 后端组件自带流程图，可不集成流程设计器，使用本组件
 
-- title: 条件表达式支持扩展
+- title: 条件表达式
   icon: safe
   details: 内置常见的条件表达式，并且支持自定义扩展
   
-- title: orm框架扩展支持
+- title: orm框架扩展
   icon: safe
   details: 目前支持mybatis、mybatis-plus，后续还会由社区提供其他支持，并且扩展方便
 
-- title: 数据库支持
+- title: 数据库
   icon: safe
   details: 目前支持mysql，后续会继续支持oracle，pg或者国产数据库
 
+- title: 多租户与软删除
+  icon: safe
+  details: 组件维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
 copyright: false
 footer: Copyright © warm-flow
