@@ -6,8 +6,8 @@ export default navbar([
         text: '项目地址',
         icon: "bulb",
         children: [
-            { text: 'gitee', link: 'https://gitee.com/dromara/warm-flow.git' },
-            { text: 'github', link: 'https://github.com/dromara/warm-flow.git' }
+            { text: 'gitee', icon: '/icons/gitee.svg', link: 'https://gitee.com/dromara/warm-flow.git' },
+            { text: 'github', icon: '/icons/github.svg', link: 'https://github.com/dromara/warm-flow.git' }
         ]
     },
     {
@@ -22,7 +22,7 @@ export default navbar([
     },
     {
         text: 'warm组织成员',
-        icon: '/icons/support.svg',
+        icon: '/icons/member.svg',
         link: '/guide/member.md'
     },
     {

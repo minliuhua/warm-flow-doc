@@ -7,9 +7,10 @@
 }
 
 .vp-navbar {
-  .nav-dropdown {
-    inset-inline-end: -100%;
-    top: 110%;
+  .nav-link:hover {
+    img.icon {
+      color: var(--theme-color) !important;
+    }
   }
 }
 
@@ -22,3 +23,12 @@
 .vp-sidebar > .vp-sidebar-links {
   padding: 2.8rem 0;
 }
+
+.vp-feature-title {
+  display: flex;
+  align-items: center;
+  .icon {
+    height: 22.98px;
+  }
+}
+
