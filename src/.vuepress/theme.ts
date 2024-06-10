@@ -12,7 +12,6 @@ export default hopeTheme({
     iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
     iconPrefix: "iconfont icon-",
     logo: "/logo.png",
-    repo: "https://gitee.com/dromara/warm-flow.git",
     docsDir: "src",
     print: false,
     locales: {

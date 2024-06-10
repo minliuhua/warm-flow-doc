@@ -33,19 +33,19 @@ features:
   details: 后端组件自带流程图，可不集成流程设计器，使用本组件
 
 - title: 条件表达式
-  icon: safe
+  icon: '/icons/condition.svg'
   details: 内置常见的条件表达式，并且支持自定义扩展
   
 - title: orm框架扩展
-  icon: safe
+  icon: '/icons/extend.svg'
   details: 目前支持mybatis、mybatis-plus，后续还会由社区提供其他支持，并且扩展方便
 
 - title: 数据库
-  icon: safe
+  icon: '/icons/database.svg'
   details: 目前支持mysql，后续会继续支持oracle，pg或者国产数据库
 
 - title: 多租户与软删除
-  icon: safe
+  icon: '/icons/maintenance.svg'
   details: 组件维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
 copyright: false
