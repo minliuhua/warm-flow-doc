@@ -9,9 +9,12 @@ export default sidebar([
         children: [
             '/guide/introduction.md',
             '/guide/started.md',
+            '/guide/listener.md',
+            '/guide/config.md',
+            '/guide/table.md',
+            '/guide/ruoyi-mp.md',
             '/guide/processdesign.md',
             '/guide/demonstration.md',
-            '/guide/flowchart.md',
             '/guide/expression.md',
             '/guide/processterm.md',
             '/guide/processrule.md',
