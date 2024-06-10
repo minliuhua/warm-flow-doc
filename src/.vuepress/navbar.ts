@@ -11,11 +11,6 @@ export default navbar([
         ]
     },
     {
-        text: '常见问题',
-        icon: '/icons/problem.svg',
-        link: '/guide/troubleshooting.md'
-    },
-    {
         text: '更新日志',
         icon: '/icons/update.svg',
         link: '/guide/update.md'

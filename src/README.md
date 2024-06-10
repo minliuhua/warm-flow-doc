@@ -4,7 +4,7 @@ icon: home-fill
 title: 首页
 heroImage: /home.png
 heroText: warm-flow工作流
-tagline: 🎉国产自研工作流，其特点简洁(只有6张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
+tagline: 🎉国产自研工作流，其特点简洁(只有7张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
 - text: 快速开始 ➜
@@ -24,7 +24,7 @@ features:
   icon: '/icons/approval.svg'
   details: 支持通过、退回、任意跳转、转办、终止(会签、票签、委派、加减签开发中)
 
-- title: 监听器与流程表里
+- title: 监听器与流程变量
   icon: '/icons/listener.svg'
   details: 支持五种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
   
