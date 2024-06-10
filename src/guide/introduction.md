@@ -1,6 +1,6 @@
 # 介绍
 
-🎉国产自研工作流，其特点简洁(只有6张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
+🎉国产自研工作流引擎，其特点简洁(只有6张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 
 1. 支持常规的流程流转，比如跳转、回退、审批和任意跳转
 2. 支持转办、终止，任务最终回到发起人
@@ -37,7 +37,7 @@ https://www.bilibili.com/video/BV1Ci42117pK/
 
 | 版本           | 项目名称        | 源码地址              |
 |--------------|--------------|------ |
-| springboot2+vue2  |RuoYi-Vue-Warm-Flow| https://gitee.com/min290/hh-vue        | 
+| springboot2+vue2  |hh-vue| https://gitee.com/min290/hh-vue        | 
 | springboot3+React |quick-boot     | https://github.com/csx-bill/quick-boot |
 | vue3        |ruoyi-vue3      | https://gitee.com/min290/RuoYi-Vue3.git |
 
