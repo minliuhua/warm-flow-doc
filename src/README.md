@@ -11,7 +11,7 @@ actions:
   link: /guide/introduction.html
   type: primary
 
-- text: 流程设计器
+- text: 功能演示
   link: /guide/processdesign.html
 
 features:

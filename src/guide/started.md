@@ -8,8 +8,11 @@
 * 熟悉 Java 构建工具，比如 Maven
 
 ## 导入sql，按需求执行
->   **如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行**  
->   **如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行** 
+```shell
+如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行  
+如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行
+```
+
 
 
 
@@ -42,7 +45,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>最新版本</version>
+      <version>springboot，mybatis-plus扩展包，最新版本</version>
 </dependency>
 ```
 
@@ -52,11 +55,32 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>最新版本</version>
+      <version>solon，mybatis-plus扩展包，最新版本</version>
 </dependency>
 ```
 
-‍
+### 3、jpa
+**springboot项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-jpa-sb-starter</artifactId>
+      <version>springboot2.x, 最新版本</version>
+</dependency>
+
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-jpa-jakarta-sb-starter</artifactId>
+      <version>springboot3.x, 最新版本</version>
+</dependency>
+```
+
+**solon项目**
+
+```maven
+暂不支持
+```
 
 ## 支持数据库类型
 **已经新增mybatis-plus扩展依赖，理论上转换表结构，即可。组件中不存在sql脚本了，全是mybaits-plus语法**

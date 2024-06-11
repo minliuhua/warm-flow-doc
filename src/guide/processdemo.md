@@ -1,4 +1,4 @@
-# 流程设计器
+# 功能演示
 
 ## 演示图
 
@@ -46,13 +46,30 @@
 
 ![输入图片说明](https://foruda.gitee.com/images/1703667450784737720/940b2bab_2218307.png "屏幕截图")
 
+## 流程设计
+暂无
+
+## 开启流程实例
+
+demo项目已经准备了五套流程，以及开启流程代码，开启流程会直接执行到开始节点后一个节点
+
+![输入图片说明](https://foruda.gitee.com/images/1703668403710988300/77dd7ef4_2218307.png "屏幕截图")
 
 
-## 流程绘制
+## 提交流程
 
-前端通过logic-flow画图，得到的json转成流程组件所需的xml格式
+提交流程后，流程流转到代表任务，由流程设计中的对应权限人去办理
 
-后台解析xml保存流程表flow_definition、flow_node、flow_skip
+![输入图片说明](https://foruda.gitee.com/images/1703668493778770778/d77716b5_2218307.png "屏幕截图")
 
-![输入图片说明](https://foruda.gitee.com/images/1703668217542373017/a168e1e0_2218307.png "屏幕截图")
-![输入图片说明](https://foruda.gitee.com/images/1703668142615887253/95a1485a_2218307.png "屏幕截图")
+
+## 办理流程
+
+如果是互斥网关则会判断是否满足条件
+
+![输入图片说明](https://foruda.gitee.com/images/1703668882786849328/0b9554ec_2218307.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1703668896500858952/c9dc78e1_2218307.png "屏幕截图")
+
+## 驳回流程
+
+![输入图片说明](https://foruda.gitee.com/images/1703669345903195445/4ba131bc_2218307.png "屏幕截图")

@@ -16,6 +16,14 @@ export default navbar([
         link: '/guide/update.md'
     },
     {
+        text: '社区贡献',
+        icon: 'bulb',
+        children: [
+            { text: '社区pr', link: '/guide/pr.md' },
+            { text: '捐赠列表', link: '/guide/donation.md' }
+        ]
+    },
+    {
         text: 'warm组织成员',
         icon: '/icons/member.svg',
         link: '/guide/member.md'

@@ -16,9 +16,11 @@
 12. 兼容java8和java17,理论11也可以
 13. 官方提供基于ruoyi-vue封装实战项目，很实用
 
+```shell
+希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长
+使用前请先登记，可加入企业群：https://gitee.com/warm_4/warm-flow/issues/I7Y57D
+```
 
->  **希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长**  
->  **使用前请先登记，可加入企业群：https://gitee.com/warm_4/warm-flow/issues/I7Y57D**  
 
 
 ## 演示地址
@@ -31,15 +33,6 @@
 ## 学习视频
 这是群友个人录制的视频，把研究心得以以视频的形式发在b站了，主要是读源码都是业余时间录制的！
 https://www.bilibili.com/video/BV1Ci42117pK/
-
-
-## 集成项目示例 
-
-| 版本           | 项目名称        | 源码地址              |
-|--------------|--------------|------ |
-| springboot2+vue2  |hh-vue| https://gitee.com/min290/hh-vue        | 
-| springboot3+React |quick-boot     | https://github.com/csx-bill/quick-boot |
-| vue3        |ruoyi-vue3      | https://gitee.com/min290/RuoYi-Vue3.git |
 
 
 ## 联系方式
