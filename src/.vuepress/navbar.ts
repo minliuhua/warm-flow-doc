@@ -24,7 +24,7 @@ export default navbar([
         ]
     },
     {
-        text: 'warm组织成员',
+        text: '组织成员',
         icon: '/icons/member.svg',
         link: '/guide/member.md'
     },
