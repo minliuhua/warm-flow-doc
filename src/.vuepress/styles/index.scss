@@ -12,6 +12,14 @@
       color: var(--theme-color) !important;
     }
   }
+  .dropdown-title {
+    display: flex;
+    align-items: center;
+    .title {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .theme-container {
@@ -22,6 +30,12 @@
 
 .vp-sidebar > .vp-sidebar-links {
   padding: 2.8rem 0;
+}
+
+.vp-sidebar {
+  .vp-sidebar-header {
+    margin-inline: 0;
+  }
 }
 
 .vp-feature-title {

@@ -18,7 +18,7 @@ export default sidebar([
     },
     {
         text: "进阶部分",
-        icon: "bulb",
+        icon: "/icons/advanced.svg",
         prefix: "/guide/",
         collapsible: false,
         children: [
@@ -29,7 +29,7 @@ export default sidebar([
     },
     {
         text: "其他",
-        icon: "bulb",
+        icon: "/icons/other.svg",
         prefix: "/guide/",
         collapsible: false,
         children: [
