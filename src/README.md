@@ -12,7 +12,7 @@ actions:
   type: primary
 
 - text: 功能演示
-  link: /guide/processdesign.html
+  link: /guide/processdemo.html
 
 features:
 
