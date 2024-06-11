@@ -29,12 +29,6 @@
 
 演示地址：http://www.hhzai.top
 
-
-## 学习视频
-这是群友个人录制的视频，把研究心得以以视频的形式发在b站了，主要是读源码都是业余时间录制的！
-https://www.bilibili.com/video/BV1Ci42117pK/
-
-
 ## 联系方式
 
 <table>

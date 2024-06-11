@@ -33,8 +33,8 @@ export default sidebar([
         prefix: "/guide/",
         collapsible: false,
         children: [
+            '/guide/learningmaterials.md',
             '/guide/troubleshooting.md',
-            '/guide/ruoyi-mp.md',
             '/guide/projectexample.md',
         ],
     }
