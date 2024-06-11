@@ -7,7 +7,7 @@ heroText: warm-flow工作流
 tagline: 🎉国产自研工作流引擎，其特点简洁(只有7张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
-- text: 快速开始 ➜
+- text: 开始学习 ➜
   link: /guide/introduction.html
   type: primary
 
