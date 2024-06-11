@@ -2,16 +2,12 @@ import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar([
     {
-        text: "介绍",
-        prefix: "/guide/",
-        link: '/guide/introduction.md'
-    },
-    {
         text: "基础部分",
         icon: "bulb",
         prefix: "/guide/",
         collapsible: false,
         children: [
+            '/guide/introduction.md',
             '/guide/started.md',
             '/guide/table.md',
             '/guide/config.md',
