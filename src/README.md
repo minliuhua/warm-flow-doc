@@ -20,7 +20,7 @@ features:
   icon: '/icons/concise.svg'
   details: 只有7张表，代码量少，短时间内可以浏览完核心代码
 
-- title: 常规审批功能
+- title: 审批功能
   icon: '/icons/approval.svg'
   details: 支持通过、退回、任意跳转、转办、终止、会签、票签、委派和加减签
 
