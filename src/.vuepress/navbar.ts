@@ -4,7 +4,7 @@ export default navbar([
     "/",
     {
         text: '项目地址',
-        icon: "bulb",
+        icon: '/icons/project.svg',
         children: [
             { text: 'gitee', icon: '/icons/gitee.svg', link: 'https://gitee.com/dromara/warm-flow.git' },
             { text: 'github', icon: '/icons/github.svg', link: 'https://github.com/dromara/warm-flow.git' }
@@ -17,7 +17,7 @@ export default navbar([
     },
     {
         text: '社区贡献',
-        icon: 'bulb',
+        icon: '/icons/community.svg',
         children: [
             { text: '社区pr', link: '/guide/pr.md' },
             { text: '捐赠列表', link: '/guide/donation.md' }
