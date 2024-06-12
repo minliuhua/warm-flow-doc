@@ -1,11 +1,12 @@
 # 快速开始
 
-在开始之前，我们假定您已经：
-
-* 熟悉 Java 环境配置及其开发
-* 熟悉 关系型 数据库，比如 MySQL
-* 熟悉 Spring Boot或者Solon 及相关框架
-* 熟悉 Java 构建工具，比如 Maven
+> [!IMPORTANT] 
+> **在开始之前，我们假定您已经:**
+> 
+> 熟悉 Java 环境配置及其开发
+> 熟悉 关系型 数据库，比如 MySQL
+> 熟悉 Spring Boot或者Solon 及相关框架
+> 熟悉 Java 构建工具，比如 Maven
 
 ## 导入sql，按需求执行
 ```shell
