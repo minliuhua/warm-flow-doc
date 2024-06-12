@@ -8,11 +8,14 @@
 - finish：结束监听器，当前任务完成后执行
 
 ## 监听器生命周期图
-![listenerLife.png](..%2F.vuepress%2Fpublic%2FlistenerLife.png)
+![](..%2F.vuepress%2Fpublic%2FlistenerLife.png)
 
 ## 监听器使用
 1、实现以下接口
 ```java
+/**
+ * 监听器接口
+ */
 public interface Listener extends Serializable {
 
     /** 开始监听器，当前任务开始前执行 */
@@ -29,6 +32,10 @@ public interface Listener extends Serializable {
 
     void notify(ListenerVariable variable);
 }
+
+/**
+ * 监听器实现类
+ */
 public class FinishListener implements Listener {
     private static final Logger log = LoggerFactory.getLogger(StartListener.class);
 
@@ -43,10 +50,10 @@ public class FinishListener implements Listener {
 ```
 
 
-2、页面配置监听器，传递后台通过“@@”分割不同监听器
+2、页面配置监听器，传递后台通过`@@`分割不同监听器
 监听器类型和监听器路径，上下一一对应
 
-![listenerUse.png](..%2F.vuepress%2Fpublic%2FlistenerUse.png)
+![](..%2F.vuepress%2Fpublic%2FlistenerUse.png)
 
 
 3、实现权限监听器接口，然后在设计器中配置好监听器
