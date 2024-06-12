@@ -106,8 +106,8 @@
 
 ## 代码示例
 
-warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
-
+> 测试代码在warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
+> 七套流程定义xml在：warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
 
 ### 部署流程
 
