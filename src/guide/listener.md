@@ -1,9 +1,55 @@
 # 监听器
-具体可以阅读以下两篇文章：
-[监听器生命周期](https://blog.csdn.net/weixin_43284369/article/details/137402216)
-[权限监听器动态设置](https://blog.csdn.net/weixin_43284369/article/details/137225966)
 
-实现Listener接口，然后在设计器中配置好监听器
+## 监听器类型
+- create：创建监听器，任务创建时执行
+- start：开始监听器，任务开始办理时执行
+- permission：权限监听器，办理任务动态设置权限
+- assignment： 分派办理人监听器，分派后执行
+- finish：结束监听器，当前任务完成后执行
+
+## 监听器生命周期图
+![listenerLife.png](..%2F.vuepress%2Fpublic%2FlistenerLife.png)
+
+## 监听器使用
+1、实现以下接口
+```java
+public interface Listener extends Serializable {
+
+    /** 开始监听器，当前任务开始前执行 */
+    String LISTENER_START = "start";
+
+    /** 结束监听器，当前任务完成后执行 */
+    String LISTENER_END = "finish";
+
+    /** 分派办理人监听器，分派后执行 */
+    String LISTENER_ASSIGNMENT = "assignment";
+
+    /** 权限监听器，办理任务动态设置权限 */
+    String LISTENER_PERMISSION = "permission";
+
+    void notify(ListenerVariable variable);
+}
+public class FinishListener implements Listener {
+    private static final Logger log = LoggerFactory.getLogger(StartListener.class);
+
+    @Override
+    public void notify(ListenerVariable variable) {
+        log.info("完成监听器:{}", variable);
+        Instance instance = variable.getInstance();
+        Map<String, Object> testLeaveMap = variable.getVariable();
+        log.info("完成监听器结束;{}", "任务完成");
+    }
+}
+```
+
+
+2、页面配置监听器，传递后台通过“@@”分割不同监听器
+监听器类型和监听器路径，上下一一对应
+
+![listenerUse.png](..%2F.vuepress%2Fpublic%2FlistenerUse.png)
+
+
+3、实现权限监听器接口，然后在设计器中配置好监听器
 ```java
 @Component
 public class PermissionListener implements Listener {
