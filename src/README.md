@@ -4,7 +4,7 @@ icon: home-fill
 title: 首页
 heroImage: /home.png
 heroText: warm-flow工作流
-tagline: 🎉国产自研工作流引擎，其特点简洁(只有7张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
+tagline: 🎉国产自研工作流引擎，其特点简洁轻量但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
 - text: 开始学习 ➜
@@ -42,7 +42,7 @@ features:
 
 - title: 数据库
   icon: '/icons/database.svg'
-  details: 目前支持mysql，后续会继续支持oracle，pg或者国产数据库
+  details: 目前支持mysql、oracle和pg，后续会继续支持其他数据库或者国产数据库
 
 - title: 多租户与软删除
   icon: '/icons/maintenance.svg'
