@@ -3,6 +3,11 @@ import {navbar} from "vuepress-theme-hope";
 export default navbar([
     "/",
     {
+        text: '快速开始',
+        icon: '/icons/update.svg',
+        link: '/guide/started.md'
+    },
+    {
         text: '项目地址',
         icon: '/icons/project.svg',
         children: [
@@ -11,16 +16,10 @@ export default navbar([
         ]
     },
     {
-        text: '更新日志',
-        icon: '/icons/update.svg',
-        link: '/guide/update.md'
-    },
-    {
         text: '社区贡献',
         icon: '/icons/community.svg',
         children: [
             { text: '社区pr', link: '/guide/pr.md' },
-            { text: '捐赠列表', link: '/guide/donation.md' }
         ]
     },
     {
