@@ -2,7 +2,7 @@
 
 ## mybatis-plus
 
-### 获取组件中的mapper，使用mybaits的自带方法
+### 获取组件中的mapper，使用mybaits-plus的自带方法
 ```java
   WarmDaoImpl<Definition> dao = defService.getDao();
   WarmMapper<Definition> mapper = dao.getMapper();
