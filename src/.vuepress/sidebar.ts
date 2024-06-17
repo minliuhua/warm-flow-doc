@@ -25,6 +25,7 @@ export default sidebar([
             '/guide/api.md',
             '/guide/listener.md',
             '/guide/expression.md',
+            '/guide/ormusagetips.md',
         ],
     },
     {
@@ -36,6 +37,7 @@ export default sidebar([
             '/guide/learningmaterials.md',
             '/guide/troubleshooting.md',
             '/guide/projectexample.md',
+            '/guide/update.md',
         ],
     }
 ]);

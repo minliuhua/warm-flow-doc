@@ -69,12 +69,6 @@
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
       <version>springboot2.x, 最新版本</version>
 </dependency>
-
-<dependency>
-      <groupId>io.github.minliuhua</groupId>
-      <artifactId>warm-flow-jpa-jakarta-sb-starter</artifactId>
-      <version>springboot3.x, 最新版本</version>
-</dependency>
 ```
 
 **solon项目**
@@ -106,8 +100,8 @@
 
 ## 代码示例
 
-warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
-
+> 测试代码在warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
+> 七套流程定义xml在：warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
 
 ### 部署流程
 

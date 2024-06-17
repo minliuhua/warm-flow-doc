@@ -48,6 +48,48 @@
 | 10    | del_flag    | 删除标志                          | CHAR(1)         |          |          |            |              |
 | 11    | tenant_id   | 租户id                            | VARCHAR(40)     |          |          |            |              |
 
+### **flow_his_task [**历史任务记录表**]**
+
+| **#** | **字段**         | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
+| ----- | ---------------- | ------------------------------------------------------------ | --------------- | -------- | -------- | ---------- | ------------ |
+| 1     | id               | 主键id                                                       | BIGINT UNSIGNED | √        | √        |            |              |
+| 2     | definition_id    | 对应flow_definition表的id                                    | BIGINT          |          | √        |            |              |
+| 3     | instance_id      | 对应flow_instance表的id                                      | BIGINT          |          | √        |            |              |
+| 4     | task_id          | 对应flow_task表的id                                          | BIGINT          |          | √        |            |              |
+| 5     | node_code        | 开始节点编码                                                 | VARCHAR(100)    |          |          |            |              |
+| 6     | node_name        | 开始节点名称                                                 | VARCHAR(100)    |          |          |            |              |
+| 7     | node_type        | 开始节点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)          |          |          |            |              |
+| 8     | target_node_code | 目标节点编码                                                 | VARCHAR(100)    |          |          |            |              |
+| 9     | target_node_name | 结束节点名称                                                 | VARCHAR(100)    |          |          |            |              |
+| 10    | approver         | 审批者                                                       | VARCHAR(40)     |          |          |            |              |
+| 11    | cooperate_type   | 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签)          | BIT(1)          |          | √        | 0          |              |
+| 12    | collaborator     | 协作人                                                       | VARCHAR(40)     |          |          |            |              |
+| 13    | flow_status      | 流程状态（1审批中 2 审批通过 9已退回 10失效）                | BIT(1)          |          | √        |            |              |
+| 14    | message          | 审批意见                                                     | VARCHAR(500)    |          |          |            |              |
+| 15    | create_time      | 创建时间                                                     | DATETIME        |          |          |            |              |
+| 16    | update_time      | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 17    | del_flag         | 删除标志                                                     | CHAR(1)         |          |          |            |              |
+| 18    | tenant_id        | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
+
+### **flow_instance [**流程实例表**]**
+
+| **#** | **字段**      | **名称**                                                     | **数据类型** | **主键** | **非空** | **默认值** | **备注说明** |
+| ----- | ------------- | ------------------------------------------------------------ | ------------ | -------- | -------- | ---------- | ------------ |
+| 1     | id            | 主键id                                                       | BIGINT       | √        | √        |            |              |
+| 2     | definition_id | 对应flow_definition表的id                                    | BIGINT       |          | √        |            |              |
+| 3     | business_id   | 业务id                                                       | VARCHAR(40)  |          | √        |            |              |
+| 4     | node_type     | 结点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)       |          | √        |            |              |
+| 5     | node_code     | 流程节点编码                                                 | VARCHAR(40)  |          | √        |            |              |
+| 6     | node_name     | 流程节点名称                                                 | VARCHAR(100) |          |          |            |              |
+| 7     | variable      | 任务变量                                                     | TEXT         |          |          |            |              |
+| 8     | flow_status   | 流程状态（0待提交 1审批中 2 审批通过 3自动通过 8已完成 9已退回 10失效） | BIT(1)       |          | √        |            |              |
+| 9     | create_by     | 创建者                                                       | VARCHAR(64)  |          |          |            |              |
+| 10    | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
+| 11    | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
+| 12    | ext           | 扩展字段                                                     | VARCHAR(500) |          |          |            |              |
+| 13    | del_flag      | 删除标志                                                     | CHAR(1)      |          |          |            |              |
+| 14    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
+
 ### **flow_node [**流程结点表**]**
 
 | **#** | **字段**        | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
@@ -90,25 +132,6 @@
 | 13    | del_flag       | 删除标志                                                     | CHAR(1)         |          |          |            |              |
 | 14    | tenant_id      | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
 
-### **flow_instance [**流程实例表**]**
-
-| **#** | **字段**      | **名称**                                                     | **数据类型** | **主键** | **非空** | **默认值** | **备注说明** |
-| ----- | ------------- | ------------------------------------------------------------ | ------------ | -------- | -------- | ---------- | ------------ |
-| 1     | id            | 主键id                                                       | BIGINT       | √        | √        |            |              |
-| 2     | definition_id | 对应flow_definition表的id                                    | BIGINT       |          | √        |            |              |
-| 3     | business_id   | 业务id                                                       | VARCHAR(40)  |          | √        |            |              |
-| 4     | node_type     | 结点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)       |          | √        |            |              |
-| 5     | node_code     | 流程节点编码                                                 | VARCHAR(40)  |          | √        |            |              |
-| 6     | node_name     | 流程节点名称                                                 | VARCHAR(100) |          |          |            |              |
-| 7     | variable      | 任务变量                                                     | TEXT         |          |          |            |              |
-| 8     | flow_status   | 流程状态（0待提交 1审批中 2 审批通过 8已完成 9已退回 10失效） | BIT(1)       |          | √        |            |              |
-| 9     | create_by     | 创建者                                                       | VARCHAR(64)  |          |          |            |              |
-| 10    | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
-| 11    | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
-| 12    | ext           | 扩展字段                                                     | VARCHAR(500) |          |          |            |              |
-| 13    | del_flag      | 删除标志                                                     | CHAR(1)      |          |          |            |              |
-| 14    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
-
 ### **flow_task [**待办任务表**]**
 
 | **#** | **字段**      | **名称**                                                     | **数据类型** | **主键** | **非空** | **默认值** | **备注说明** |
@@ -124,35 +147,12 @@
 | 9     | del_flag      | 删除标志                                                     | CHAR(1)      |          |          |            |              |
 | 10    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
 
-### **flow_his_task [**历史任务记录表**]**
-
-| **#** | **字段**         | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
-| ----- | ---------------- | ------------------------------------------------------------ | --------------- | -------- | -------- | ---------- | ------------ |
-| 1     | id               | 主键id                                                       | BIGINT UNSIGNED | √        | √        |            |              |
-| 2     | definition_id    | 对应flow_definition表的id                                    | BIGINT          |          | √        |            |              |
-| 3     | instance_id      | 对应flow_instance表的id                                      | BIGINT          |          | √        |            |              |
-| 4     | task_id          | 对应flow_task表的id                                          | BIGINT          |          | √        |            |              |
-| 5     | node_code        | 开始节点编码                                                 | VARCHAR(100)    |          |          |            |              |
-| 6     | node_name        | 开始节点名称                                                 | VARCHAR(100)    |          |          |            |              |
-| 7     | node_type        | 开始节点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)          |          |          |            |              |
-| 8     | target_node_code | 目标节点编码                                                 | VARCHAR(100)    |          |          |            |              |
-| 9     | target_node_name | 结束节点名称                                                 | VARCHAR(100)    |          |          |            |              |
-| 10    | approver         | 审批者                                                       | VARCHAR(40)     |          |          |            |              |
-| 11    | cooperate_type   | 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签)          | BIT(1)          |          | √        | 0          |              |
-| 12    | collaborator     | 协作人                                                       | VARCHAR(40)     |          |          |            |              |
-| 13    | flow_status      | 流程状态（1审批中 2 审批通过 9已退回 10失效）                | BIT(1)          |          | √        |            |              |
-| 14    | message          | 审批意见                                                     | VARCHAR(500)    |          |          |            |              |
-| 15    | create_time      | 创建时间                                                     | DATETIME        |          |          |            |              |
-| 16    | update_time      | 更新时间                                                     | DATETIME        |          |          |            |              |
-| 17    | del_flag         | 删除标志                                                     | CHAR(1)         |          |          |            |              |
-| 18    | tenant_id        | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
-
 ### **flow_user [**流程用户表**]**
 
 | **#** | **字段**     | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
 | ----- | ------------ | ------------------------------------------------------------ | --------------- | -------- | -------- | ---------- | ------------ |
 | 1     | id           | 主键id                                                       | BIGINT UNSIGNED | √        | √        |            |              |
-| 2     | type         | 人员类型（1代办任务的审批人权限 2代办任务的转办人权限 3流程实例的抄送人权限 4待办任务的委托人权限） | CHAR(1)         |          | √        |            |              |
+| 2     | type         | 人员类型（1代办任务的审批人权限 2代办任务的转办人权限 3待办任务的委托人权限） | CHAR(1)         |          | √        |            |              |
 | 3     | processed_by | 权限人                                                       | VARCHAR(80)     |          |          |            |              |
 | 4     | associated   | 关联表id                                                     | BIGINT          |          | √        |            |              |
 | 5     | create_time  | 创建时间                                                     | DATETIME        |          |          |            |              |
@@ -160,4 +160,3 @@
 | 7     | update_time  | 更新时间                                                     | DATETIME        |          |          |            |              |
 | 8     | del_flag     | 删除标志                                                     | CHAR(1)         |          |          |            |              |
 | 9     | tenant_id    | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
-
