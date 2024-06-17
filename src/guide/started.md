@@ -69,12 +69,6 @@
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
       <version>springboot2.x, 最新版本</version>
 </dependency>
-
-<dependency>
-      <groupId>io.github.minliuhua</groupId>
-      <artifactId>warm-flow-jpa-jakarta-sb-starter</artifactId>
-      <version>springboot3.x, 最新版本</version>
-</dependency>
 ```
 
 **solon项目**
