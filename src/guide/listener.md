@@ -92,44 +92,4 @@ public class PermissionListener implements Listener {
 ## 监听器参数使用
 `variable` 和 `params`的区别, `params`弃用, 目前没删`params`代码
 
-![](..%2F.vuepress%2Fpublic%2FlistenerVariable.png)
-
-一起debug看下代码的执行过程
-
-![](..%2F.vuepress%2Fpublic%2FtestListener1.png)
-
-**注意, 上述代码的监听器类型为权限监听器, 对其他监听器同样如此, 一通百通**
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener1.png)
-
-主要关注图中圈出的两个红框
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener2.png)
-
-上图细节点写在图上
-
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener3.png)
-
-主要看这个图, 传入参数为我们在函数中指定的内容, 这里使用正则将路径和参数解析出来存入valueHloder中
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener4.png)
-
-这里将valueHolder中的路径反射出来后, 在FrameInvoker中拿到该Listener类型的子类,这里拿到的是权限监听器, 同样我们可以看到variable中已经将key=WarmListenerParam存入进去, 恰巧就是在测试方法中传进去的参数, 继续F9往下执行
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener5.png)
-
-到这里大家已经明白在监听器中可以拿到全局参数, 那实例参数如何获取呢？
-
----
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener6.png)
-
-在这里我已经将实例参数放入到`variable`中, 同样的debug方式, 将debug放入到权限监听器开始的地方
-
-![](..%2F.vuepress%2Fpublic%2FdebugListener7.png)
-
-到这里相信大家已经明白实例参数和全局参数的获取方式
-
-- 全局参数：指定`key`为`WarmListenerParam`
-- 实例参数：业务系统传入的任何参数, 注意需要实现`Listener`接口, 如果业务系统在监听器中处理很多种不同情况, 建议做好流程模块开发, 防止“牵一发而动全身”
+待完善。。。
