@@ -90,7 +90,6 @@ public class PermissionListener implements Listener {
 }
 ```
 ## 监听器参数使用
-`variable` 和 `params`的区别, `params`弃用, 目前没删`params`代码
 
 ### params
 页面配置监听器时加上类路径
@@ -104,22 +103,6 @@ public class PermissionListener implements Listener {
         // 拿到json后使用序列化可以拿到配置信息
         Object o = MapUtils.getMap(testLeaveMap, FlowCons.WARM_LISTENER_PARAM);
         HashMap hashMap = JSONObject.parseObject(JSONObject.toJSONString(o), HashMap.class);
-        log.info("创建监听器结束");
-    }
-```
-### variable
-新增审批时加入业务参数
-
-![](..%2F.vuepress%2Fpublic%2Flistener2.png)
-
-```java
-    public void notify(ListenerVariable variable) {
-        log.info("创建监听器");
-        Instance instance = variable.getInstance();
-        Map<String, Object> testLeaveMap = variable.getVariable();
-        if (StringUtils.isNotNull(testLeaveMap)) {
-            TestLeave testLeave = (TestLeave) testLeaveMap.get("testLeave");
-        }
         log.info("创建监听器结束");
     }
 ```
