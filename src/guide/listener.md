@@ -89,9 +89,8 @@ public class PermissionListener implements Listener {
     }
 }
 ```
-## 监听器参数使用
+## 监听器参数使用 (下期生效)
 
-### params
 页面配置监听器时加上类路径
 
 ![](..%2F.vuepress%2Fpublic%2Flistener1.png)
