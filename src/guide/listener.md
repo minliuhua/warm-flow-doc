@@ -101,8 +101,11 @@ public class PermissionListener implements Listener {
         Instance instance = variable.getInstance();
         Map<String, Object> variableMap = variable.getVariable();
         // 拿到json后使用序列化可以拿到配置信息
-        Object o = MapUtils.getMap(testLeaveMap, FlowCons.WARM_LISTENER_PARAM);
-        HashMap hashMap = JSONObject.parseObject(JSONObject.toJSONString(o), HashMap.class);
+        Map<String, Object> variableMap = variable.getVariable();
+        if (MapUtil.isNotEmpty(variableMap)) {
+            Object o = variableMap.get(FlowCons.WARM_LISTENER_PARAM);
+            HashMap hashMap = JSONObject.parseObject(JSONObject.toJSONString(o), HashMap.class);
+        }
         log.info("创建监听器结束");
     }
 ```
