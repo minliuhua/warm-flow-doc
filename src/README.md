@@ -38,18 +38,18 @@ features:
   
 - title: orm框架扩展
   icon: '/icons/extend.svg'
-  details: 目前支持mybatis、mybatis-plus和jpa，后续会由社区提供其他支持，扩展方便
+  details: 目前支持MyBatis、Mybatis-Plus和Jpa，后续会由社区提供其他支持，扩展方便
 
 - title: 数据库
   icon: '/icons/database.svg'
-  details: 目前支持mysql、oracle和pg，后续会继续支持其他数据库或者国产数据库
+  details: 目前支持MySQL 、Oracle 和PostgreSQL，后续会继续支持其他数据库或者国产数据库
 
 - title: 多租户与软删除
   icon: '/icons/maintenance.svg'
   details: 流程引擎自身维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
 copyright: false
-footer: Copyright © warm-flow
+footer: Copyright © 2024 warm-flow
 
 ---
 
