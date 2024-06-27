@@ -1,0 +1,48 @@
+// place your custom styles here
+.vp-hero-info {
+  padding-top: 40px;
+  .vp-hero-image {
+    min-height: 26rem;
+  }
+}
+
+.vp-navbar {
+  .nav-link:hover {
+    img.icon {
+      color: var(--theme-color) !important;
+    }
+  }
+  .dropdown-title {
+    display: flex;
+    align-items: center;
+    .title {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.theme-container {
+  .vp-page {
+    padding-top: calc(var(--navbar-height) + 20px);
+  }
+}
+
+.vp-sidebar > .vp-sidebar-links {
+  padding: 2.8rem 0;
+}
+
+.vp-sidebar {
+  .vp-sidebar-header {
+    margin-inline: 0;
+  }
+}
+
+.vp-feature-title {
+  display: flex;
+  align-items: center;
+  .icon {
+    height: 22.98px;
+  }
+}
+
