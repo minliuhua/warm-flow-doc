@@ -89,3 +89,22 @@ public class PermissionListener implements Listener {
     }
 }
 ```
+## 监听器参数使用
+
+页面配置监听器时加上类路径
+
+![](..%2F.vuepress%2Fpublic%2Flistener1.png)
+
+```java
+    public void notify(ListenerVariable variable) {
+        Instance instance = variable.getInstance();
+        Map<String, Object> variableMap = variable.getVariable();
+        // 拿到json后使用序列化可以拿到配置信息
+        Map<String, Object> variableMap = variable.getVariable();
+        if (MapUtil.isNotEmpty(variableMap)) {
+            Object o = variableMap.get(FlowCons.WARM_LISTENER_PARAM);
+            HashMap hashMap = JSONObject.parseObject(JSONObject.toJSONString(o), HashMap.class);
+        }
+        log.info("创建监听器结束");
+    }
+```
