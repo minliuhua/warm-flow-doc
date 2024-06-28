@@ -5,7 +5,7 @@ export default sidebar([
         text: "基础部分",
         icon: "bulb",
         prefix: "/guide/",
-        collapsible: false,
+        collapsible: true,
         children: [
             '/guide/introduction.md',
             '/guide/started.md',
@@ -20,8 +20,9 @@ export default sidebar([
         text: "进阶部分",
         icon: "/icons/advanced.svg",
         prefix: "/guide/",
-        collapsible: false,
+        collapsible: true,
         children: [
+            // '/guide/datafillhandler.md',
             '/guide/api.md',
             '/guide/listener.md',
             '/guide/expression.md',
@@ -32,7 +33,7 @@ export default sidebar([
         text: "其他",
         icon: "/icons/other.svg",
         prefix: "/guide/",
-        collapsible: false,
+        collapsible: true,
         children: [
             '/guide/learningmaterials.md',
             '/guide/troubleshooting.md',
