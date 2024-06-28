@@ -89,7 +89,7 @@ public class PermissionListener implements Listener {
     }
 }
 ```
-## 监听器参数使用 (下期生效)
+## 监听器参数使用
 
 页面配置监听器时加上类路径
 
