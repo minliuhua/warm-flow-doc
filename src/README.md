@@ -18,7 +18,7 @@ features:
 
 - title: 简洁易用
   icon: '/icons/concise.svg'
-  details: 只有7张表，代码量少，短时间内可以浏览完核心代码
+  details: 只有7张表，代码量少，可快速上手和集成
 
 - title: 审批功能
   icon: '/icons/approval.svg'
