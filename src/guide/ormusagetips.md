@@ -14,7 +14,7 @@
 
   // 第二种
   FlowTaskMapper taskMapper = FrameInvoker.getBean(FlowTaskMapper.class);
-  LambdaQueryWrapper<Task> taskWrapper = new LambdaQueryWrapper<>();
-  taskWrapper.eq(Task::getBusinessId, "1");
-  mapper.selectList(taskWrapper);
+  LambdaQueryWrapper<FlowTask> taskWrapper = new LambdaQueryWrapper<>();
+  taskWrapper.eq(FlowTask::getBusinessId, "1");
+  taskMapper.selectList(taskWrapper);
 ```
