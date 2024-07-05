@@ -53,3 +53,22 @@ protected EntityManager entityManager;
 
 entityManager.find
 ```
+
+## mybatis-flex
+
+### 获取组件中的mapper，使用mybaits-flex的自带方法
+```java
+  // 获取Mapper方式
+  // 第一种
+  WarmDaoImpl<Definition> dao = defService.getDao();
+  WarmMapper<Definition> mapper = dao.getMapper();
+  QueryWrapper queryWrapper = QueryWrapper.create();
+  queryWrapper.in(FlowDefinition::getFlowCode, flowCodeList);
+  mapper.selectListByQueryAs(queryWrapper);
+
+  // 第二种
+  FlowDefinitionMapper definitionMapper = FrameInvoker.getBean(FlowDefinitionMapper.class);
+  QueryWrapper queryWrapper = QueryWrapper.create();
+  queryWrapper.in(FlowDefinition::getFlowCode, flowCodeList);
+  definitionMapper.selectListByQueryAs(queryWrapper);
+```
