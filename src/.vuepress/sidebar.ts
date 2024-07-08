@@ -22,7 +22,6 @@ export default sidebar([
         prefix: "/guide/",
         collapsible: true,
         children: [
-            // '/guide/datafillhandler.md',
             '/guide/api.md',
             '/guide/listener.md',
             '/guide/expression.md',
@@ -37,7 +36,6 @@ export default sidebar([
         children: [
             '/guide/learningmaterials.md',
             '/guide/troubleshooting.md',
-            '/guide/projectexample.md',
             '/guide/update.md',
         ],
     }
