@@ -96,28 +96,22 @@
 支持中...
 ```
 
-**solon项目**
-
-```maven
-暂不支持
-```
-
 ## 支持数据库类型
 
 * [x] mysql
 * [x] oracle
+* [x] postgresql
+* [ ] 达梦
+* [ ] 人大金仓
+* [ ] GaussDB
+* [ ] oceanbase
 * [ ] sqlserver
 * [ ] ......
 
 
 ## 支持orm框架类型
 
-* [x] mybatis
-* [x] mybatis-plus
-* [x] jpa
-* [x] mybatis-flex
-* [ ] easy-query
-* [ ] ......
+wa
 
 
 
