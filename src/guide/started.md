@@ -76,6 +76,29 @@
 **solon项目**
 
 ```maven
+支持中...
+```
+
+### 4、mybatis-flex
+**springboot项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
+      <version>springboot，mybatis-plus扩展包，最新版本</version>
+</dependency>
+```
+
+**solon项目**
+
+```maven
+支持中...
+```
+
+**solon项目**
+
+```maven
 暂不支持
 ```
 
