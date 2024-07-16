@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.8",
+    "axios": "^1.7.2",
     "flowchart.ts": "^3.0.0",
     "katex": "^0.16.9",
     "mermaid": "^10.9.0"
