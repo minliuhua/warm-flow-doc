@@ -5,14 +5,6 @@
 ### 获取组件中的mapper，使用mybaits-plus的自带方法
 ```java
   // 获取Mapper方式
-  // 第一种
-  WarmDaoImpl<Definition> dao = defService.getDao();
-  WarmMapper<Definition> mapper = dao.getMapper();
-  LambdaQueryWrapper<Definition> queryWrapper = new LambdaQueryWrapper<>();
-  queryWrapper.eq(Definition::getFlowCode, "flow_01");
-  mapper.selectList(queryWrapper);
-
-  // 第二种
   FlowTaskMapper taskMapper = FrameInvoker.getBean(FlowTaskMapper.class);
   LambdaQueryWrapper<FlowTask> taskWrapper = new LambdaQueryWrapper<>();
   taskWrapper.eq(FlowTask::getBusinessId, "1");
@@ -69,14 +61,6 @@ entityManager.createQuery(criteriaUpdate).executeUpdate()
 ### 获取组件中的mapper，使用mybaits-flex的自带方法
 ```java
   // 获取Mapper方式
-  // 第一种
-  WarmDaoImpl<Definition> dao = defService.getDao();
-  WarmMapper<Definition> mapper = dao.getMapper();
-  QueryWrapper queryWrapper = QueryWrapper.create();
-  queryWrapper.in(FlowDefinition::getFlowCode, flowCodeList);
-  mapper.selectListByQueryAs(queryWrapper);
-
-  // 第二种
   FlowDefinitionMapper definitionMapper = FrameInvoker.getBean(FlowDefinitionMapper.class);
   QueryWrapper queryWrapper = QueryWrapper.create();
   queryWrapper.in(FlowDefinition::getFlowCode, flowCodeList);
