@@ -7,7 +7,7 @@ export default navbar([
         icon: '/icons/community.svg',
         children: [
             { text: '集成项目示例', link: '/guide/projectexample.md' },
-            { text: '公司集成列表', link: '/guide/companyintegration.md' },
+            { text: '公司使用列表', link: '/guide/companyintegration.md' },
         ]
     },
     {
