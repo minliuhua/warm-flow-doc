@@ -13,7 +13,8 @@ http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86lo
 /usr/share/fonts/zhFonts/SIMSUN.TTC: 新宋体,NSimSun:style=常规,Regular
 /usr/share/fonts/zhFonts/SIMSUN.TTC: 宋体,SimSun:style=常规,Regular
 ```
-[zhFonts.zip](https://gitee.com/warm_4/warm-flow-doc/blob/main/file/zhFonts.zip)将文件解压至 /usr/share/fonts 目录下
+[zhFonts.zip](https://gitee.com/warm_4/warm-flow-doc/blob/main/file/zhFonts.zip)将文件解压至/usr/share/fonts目录下，如果还不行，添加到jre的lib/fonts目录（感谢【我们好像在哪儿见过
+】提供的方案）
 ```shell
 [root@iZbp18ilgi6s1lkbmmfo2jZ fonts]# ll
 总用量 8

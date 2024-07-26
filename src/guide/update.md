@@ -15,7 +15,37 @@
   - 重启流程
   - 流程定义增加显示流程图
 
-**已完成计划**
+
+**正开发中计划**
+- v1.2.4 未发布
+  - [feat] 支持接收外部流程状态，支持流程状态扩展 @vanlin
+  - [feat] 新增spel插件，支持表达式执行
+  - [feat] 新增分派监听器，支持代办任务中办理人等动态修改 @liangli
+  - [feat] 新增Easy-Query框架支持 @link2fun
+  - [feat] 新增Mybatis-Flex的solon扩展包  @xiarigang
+  - [feat] 历史表新增调整类型，记录跳转类型 @vanlin
+  - [update] 之前强依赖流程状态的通过的，改为跳转类型，历史数据考虑如何处理 @vanlin
+  - [update] 之前所有保存流程状态地方，全部提供可接受外部传入 @vanlin
+  - [update] 流程开启，校验节点是否发布，提示语增加流程编码
+  - [update] 删除校验是否任意跳转
+  - [update] 修改扩展字段ext注释，删除FlowConfigUtil多余的代码
+  - [remove] 移除节点前置执行权限处理器
+  - [remove] 删除cooperateAutoPass方法
+  - [update] 代办改为待办
+  - [fix] 修复加签批量提交报错
+  - [fix] 修复TaskServiceImpl#handleDepute方法中删除受托人传参数错误 
+  - [fix] 修复 JPA flowUserDao bug @vanlin
+  - [chore] 升级dom4j为安全版本2.1.3
+
+**【升级注意事项】**：
+    1、执行升级脚本【warm-flow_1.2.4.sql】  
+    2、流程定义表from_custom改为form_custom，from_path改为form_path，涉及到这两个字段的前后段都要修改  
+    3、反显审批流程表单，改为通过task表新增的form_custom和form_path字段
+
+
+
+**已完成计划** 
+
 - v1.2.3 2024-06-28
   - [fix] 修复更新拼上了多余的条件
   - [fix] 修复保存流程xml报错问题
@@ -36,7 +66,6 @@
   - [fix] solon插件包增加userMapper.xml加载 
   - [fix] 修复填充器不接收外部设置的时间 
   - [fix] 修复userMapper.xml中updateLogic的某个负值错误 
-  
   
 - v1.2.0  2024-06-13 注意事项：工具包路径调整，新增升级脚本
   - 待办表解偶用户，新增用户表（查询方式需要改动）
