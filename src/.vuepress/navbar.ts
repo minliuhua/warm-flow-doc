@@ -34,4 +34,11 @@ export default navbar([
             { text: 'gitcode', icon: '/icons/gitCode.svg', link: 'https://gitcode.com/minliuhua/warm-flow.git' },
         ]
     },
+    {
+        text: '历史版本',
+        icon: '/icons/version.svg',
+        children: [
+            { text: 'v1.0', link: '/v1.0/guide/introduction.html' }
+        ]
+    },
 ]);
