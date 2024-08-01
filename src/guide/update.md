@@ -23,7 +23,7 @@
   - [feat] 新增分派监听器，支持代办任务中办理人等动态修改 @liangli
   - [feat] 新增Easy-Query框架支持 @link2fun
   - [feat] 新增Mybatis-Flex的solon扩展包  @xiarigang
-  - [feat] 历史表新增调整类型，记录跳转类型 @vanlin
+  - [feat] 历史表新增跳转类型，记录跳转类型 @vanlin
   - [update] 之前强依赖流程状态的通过的，改为跳转类型，历史数据考虑如何处理 @vanlin
   - [update] 之前所有保存流程状态地方，全部提供可接受外部传入 @vanlin
   - [update] 流程开启，校验节点是否发布，提示语增加流程编码

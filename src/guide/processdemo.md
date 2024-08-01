@@ -57,7 +57,7 @@
 ![](..%2F.vuepress%2Fpublic%2FdefNode.png)
 
 ### 跳转线设置
-配置跳转名称，调整类型（通过还是退回），调整条件
+配置跳转名称，跳转类型（通过还是退回），调整条件
 
 ![](..%2F.vuepress%2Fpublic%2FdefSkip.png)
 
