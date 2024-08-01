@@ -38,19 +38,19 @@ export default sidebar({
             ],
         }
     ],
-    "/v1.0/guide/": [
+    "/v1.2.3/guide/": [
         {
             text: "基础部分",
             icon: "bulb",
             collapsible: true,
             children: [
-                '/v1.0/guide/introduction.md',
-                '/v1.0/guide/started.md',
-                '/v1.0/guide/table.md',
-                '/v1.0/guide/config.md',
-                '/v1.0/guide/processdemo.md',
-                '/v1.0/guide/processterm.md',
-                '/v1.0/guide/processrule.md',
+                'v1.2.3/guide/introduction.md',
+                'v1.2.3/guide/started.md',
+                'v1.2.3/guide/table.md',
+                'v1.2.3/guide/config.md',
+                'v1.2.3/guide/processdemo.md',
+                'v1.2.3/guide/processterm.md',
+                'v1.2.3/guide/processrule.md',
             ],
         },
         {
@@ -58,10 +58,10 @@ export default sidebar({
             icon: "/icons/advanced.svg",
             collapsible: true,
             children: [
-                '/v1.0/guide/api.md',
-                '/v1.0/guide/listener.md',
-                '/v1.0/guide/expression.md',
-                '/v1.0/guide/ormusagetips.md',
+                'v1.2.3/guide/api.md',
+                'v1.2.3/guide/listener.md',
+                'v1.2.3/guide/expression.md',
+                'v1.2.3/guide/ormusagetips.md',
             ],
         },
         {
@@ -69,9 +69,9 @@ export default sidebar({
             icon: "/icons/other.svg",
             collapsible: true,
             children: [
-                '/v1.0/guide/learningmaterials.md',
-                '/v1.0/guide/troubleshooting.md',
-                '/v1.0/guide/update.md',
+                'v1.2.3/guide/learningmaterials.md',
+                'v1.2.3/guide/troubleshooting.md',
+                'v1.2.3/guide/update.md',
             ],
         }
     ]
