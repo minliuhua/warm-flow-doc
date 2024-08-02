@@ -22,7 +22,7 @@ features:
 
 - title: 审批功能
   icon: '/icons/approval.svg'
-  details: 支持通过、退回、任意跳转、转办、终止、会签、票签、委派和加减签
+  details: 支持通过、退回、任意跳转、转办、终止、会签、票签、委派和加减签、互斥和并行网关
 
 - title: 监听器与流程变量
   icon: '/icons/listener.svg'
@@ -40,7 +40,7 @@ features:
   icon: '/icons/extend.svg'
   details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex和Jpa，后续会由社区提供其他支持，扩展方便
 
-- title: 数据库
+- title: 数据库支持
   icon: '/icons/database.svg'
   details: 目前支持MySQL 、Oracle 和PostgreSQL，后续会继续支持其他数据库或者国产数据库
 
