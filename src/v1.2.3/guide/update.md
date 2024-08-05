@@ -41,7 +41,7 @@
     1、执行升级脚本【warm-flow_1.2.4.sql】  
     2、流程定义表from_custom改为form_custom，from_path改为form_path，涉及到这两个字段的前后段都要修改  
     3、反显审批流程表单，改为通过task表新增的form_custom和form_path字段
-
+    4、mybatis-plus多租户和逻辑删除，改为通过mybatis-plus的自带的方式实现
 
 
 **已完成计划** 
