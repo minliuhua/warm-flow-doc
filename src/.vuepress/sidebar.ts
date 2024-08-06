@@ -98,6 +98,7 @@ export default sidebar({
             children: [
                 '/v1.2.4/guide/logicdelete.md',
                 '/v1.2.4/guide/tenant.md',
+                '/v1.2.4/guide/customstatus.md',
                 '/v1.2.4/guide/listener.md',
                 '/v1.2.4/guide/expression.md',
                 '/v1.2.4/guide/ormusagetips.md',

@@ -27,7 +27,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
@@ -37,7 +37,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
@@ -48,7 +48,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>springboot，mybatis-plus扩展包，最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
@@ -58,7 +58,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>solon，mybatis-plus扩展包，最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
@@ -69,7 +69,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>springboot2.x, 最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
@@ -86,7 +86,7 @@
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>springboot，mybatis-plus扩展包，最新版本</version>
+      <version>1.2.3</version>
 </dependency>
 ```
 
