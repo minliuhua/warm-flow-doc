@@ -40,7 +40,9 @@ public interface Listener extends Serializable {
 
 ```
 ### 3.2、完成监听器实现类例子
+通过@Component或者@Bean注解注入到容器
 ```java
+@Component
 public class FinishListener implements Listener {
     private static final Logger log = LoggerFactory.getLogger(StartListener.class);
 
@@ -56,6 +58,7 @@ public class FinishListener implements Listener {
 
 ### 3.3、分派监听器实现类例子
 ```java
+@Component
 public class AssignmentListener implements Listener {
 
     private static final Logger log = LoggerFactory.getLogger(AssignmentListener.class);
