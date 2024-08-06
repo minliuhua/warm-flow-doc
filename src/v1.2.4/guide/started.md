@@ -8,19 +8,19 @@
 > 熟悉 Spring Boot或者Solon 及相关框架
 > 熟悉 Java 构建工具，比如 Maven
 
-## 导入sql，按需求执行
+## 1、导入sql，按需求执行
 ```shell
 如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行  
 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行
 ```
-## 官网七套流程定义xml
+## 2、官网七套流程定义xml
 ```shell
 地址：warm-flow\warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
 ```
 
 
-## maven依赖
-### 1、mybatis
+## 3、maven依赖
+### 3.1、mybatis
 **springboot项目**
 
 ```maven
@@ -41,7 +41,7 @@
 </dependency>
 ```
 
-### 2、mybatis-plus
+### 3.2、mybatis-plus
 **springboot项目**
 
 ```maven
@@ -62,7 +62,7 @@
 </dependency>
 ```
 
-### 3、jpa
+### 3.3、jpa
 **springboot项目**
 
 ```maven
@@ -76,27 +76,66 @@
 **solon项目**
 
 ```maven
-支持中...
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
+      <version>solon，jpa扩展包，最新版本</version>
+</dependency>
 ```
 
-### 4、mybatis-flex
+### 3.4、mybatis-flex
 **springboot项目**
 
 ```maven
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>springboot，mybatis-plus扩展包，最新版本</version>
+      <version>springboot，mybatis-flex扩展包，最新版本</version>
 </dependency>
 ```
 
 **solon项目**
 
 ```maven
-支持中...
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
+      <version>solon，mybatis-flex扩展包，最新版本</version>
+</dependency>
 ```
 
-## 支持数据库类型
+### 3.5、easy-query
+**springboot项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-easy-query-sb-starter</artifactId>
+      <version>springboot，easy-query扩展包，最新版本</version>
+</dependency>
+```
+
+**solon项目**
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
+      <exclusions>
+          <exclusion>
+              <groupId>org.noear</groupId>
+              <artifactId>solon.data</artifactId>
+          </exclusion>
+          <exclusion>
+              <groupId>org.noear</groupId>
+              <artifactId>solon.logging</artifactId>
+          </exclusion>
+      </exclusions>
+      <version>solon，easy-query扩展包，最新版本</version>
+</dependency>
+```
+
+## 4、支持数据库类型
 
 * [x] mysql
 * [x] oracle
@@ -109,21 +148,24 @@
 * [ ] ......
 
 
-## 支持orm框架类型
-
-wa
-
+## 5、支持orm框架类型
+* [x] mybatis
+* [x] mybatis-plus
+* [x] jpa
+* [x] easy-query
+* [x] mybatis-flex
+* [ ] ......
 
 
 
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**
 
-## 代码示例
+## 6、代码示例
 
 > 测试代码在warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
 
 
-### 部署流程
+## 7、部署流程
 
 ```java
 public void deployFlow() throws Exception {
@@ -132,7 +174,7 @@ public void deployFlow() throws Exception {
     }
 ```
 
-### 发布流程
+## 8、发布流程
 
 ```java
 public void publish() throws Exception {
@@ -140,7 +182,7 @@ public void publish() throws Exception {
     }
 ```
 
-### 开启流程
+## 9、开启流程
 
 ```java
 public void startFlow() {
@@ -148,7 +190,7 @@ public void startFlow() {
     }
 ```
 
-### 流程流转
+## 10、流程流转
 
 ```java
 public void skipFlow() throws Exception {

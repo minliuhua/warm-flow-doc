@@ -111,9 +111,12 @@
 
 ## 支持orm框架类型
 
-wa
-
-
+* [x] mybatis
+* [x] mybatis-plus
+* [x] jpa
+* [x] easy-query
+* [ ] mybatis-flex
+* [ ] ......
 
 
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**

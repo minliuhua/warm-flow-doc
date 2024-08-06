@@ -1,6 +1,6 @@
 # orm扩展包使用技巧
 
-## mybatis-plus
+## 1、mybatis-plus
 
 **获取组件中的mapper，使用mybaits-plus的自带方法**
 ```java
@@ -11,7 +11,7 @@
   taskMapper.selectList(taskWrapper);
 ```
 
-## JPA
+## 2、JPA
 
 **注入 unitName=warm-flow-jpa  EntityManager entityManager 对象**
 
@@ -56,7 +56,7 @@ entityManager.createQuery(criteriaUpdate).executeUpdate()
 **JPA注意事项** JPA涉及持久化操作必须开启事务  @Transactional(spring) @Tran(solon)
 
 
-## mybatis-flex
+## 3、mybatis-flex
 
 **获取组件中的mapper，使用mybaits-flex的自带方法**
 ```java

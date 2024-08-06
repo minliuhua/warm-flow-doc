@@ -16,7 +16,7 @@
 >       7、演练要记录过程 （历史任务表）
 >       8、最终军事演练完成，流程完成
 
-##  表清单
+## 表清单
 
 | **#** | **数据表**      | **名称**       | **备注说明** |
 | ----- | --------------- | -------------- | ------------ |
@@ -30,9 +30,9 @@
 
 
 
-##  表字段明细
+## 表字段明细
 
-###  **flow_definition [**流程定义表**]**
+### **flow_definition [**流程定义表**]**
 
 | **#** | **字段**    | **名称**                          | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
 | ----- | ----------- | --------------------------------- | --------------- | -------- | -------- | ---------- | ------------ |
@@ -41,12 +41,13 @@
 | 3     | flow_name   | 流程名称                          | VARCHAR(100)    |          | √        |            |              |
 | 4     | version     | 流程版本                          | VARCHAR(20)     |          | √        |            |              |
 | 5     | is_publish  | 是否发布（0未发布 1已发布 9失效） | BIT(1)          |          | √        | 0          |              |
-| 6     | from_custom | 审批表单是否自定义（Y是 N否）     | CHAR(1)         |          |          | 'N'        |              |
-| 7     | from_path   | 审批表单路径                      | VARCHAR(100)    |          |          |            |              |
-| 8     | create_time | 创建时间                          | DATETIME        |          |          |            |              |
-| 9     | update_time | 更新时间                          | DATETIME        |          |          |            |              |
-| 10    | del_flag    | 删除标志                          | CHAR(1)         |          |          |            |              |
-| 11    | tenant_id   | 租户id                            | VARCHAR(40)     |          |          |            |              |
+| 6     | form_custom | 审批表单是否自定义（Y是 N否）     | CHAR(1)         |          |          | 'N'        |              |
+| 7     | form_path   | 审批表单路径                      | VARCHAR(100)    |          |          |            |              |
+| 8     | ext         | 扩展字段，预留给业务系统使用      | VARCHAR(500)    |          |          |            |              |
+| 9     | create_time | 创建时间                          | DATETIME        |          |          |            |              |
+| 10    | update_time | 更新时间                          | DATETIME        |          |          |            |              |
+| 11    | del_flag    | 删除标志                          | CHAR(1)         |          |          | '0'        |              |
+| 12    | tenant_id   | 租户id                            | VARCHAR(40)     |          |          |            |              |
 
 ### **flow_his_task [**历史任务记录表**]**
 
@@ -64,32 +65,35 @@
 | 10    | approver         | 审批者                                                       | VARCHAR(40)     |          |          |            |              |
 | 11    | cooperate_type   | 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签)          | BIT(1)          |          | √        | 0          |              |
 | 12    | collaborator     | 协作人                                                       | VARCHAR(40)     |          |          |            |              |
-| 13    | flow_status      | 流程状态（1审批中 2 审批通过 9已退回 10失效）                | BIT(1)          |          | √        |            |              |
-| 14    | message          | 审批意见                                                     | VARCHAR(500)    |          |          |            |              |
-| 15    | create_time      | 开始时间                                                     | DATETIME        |          |          |            |              |
-| 16    | update_time      | 结束时间                                                     | DATETIME        |          |          |            |              |
-| 17    | ext              | 业务详情 存业务表对象json字符串                              | VARCHAR(400)    |          |          |            |              |
-| 18    | del_flag         | 删除标志                                                     | CHAR(1)         |          |          |            |              |
-| 19    | tenant_id        | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
+| 13    | skip_type        | 流转类型（PASS通过 REJECT退回 NONE无动作）                   | VARCHAR(10)     |          |          |            |              |
+| 14    | flow_status      | 流程状态（1审批中 2 审批通过 9已退回 10失效）                | BIT(1)          |          | √        |            |              |
+| 15    | form_custom      | 审批表单是否自定义（Y是 N否）                                | CHAR(1)         |          |          | 'N'        |              |
+| 16    | form_path        | 审批表单路径                                                 | VARCHAR(100)    |          |          |            |              |
+| 17    | message          | 审批意见                                                     | VARCHAR(500)    |          |          |            |              |
+| 18    | ext              | 扩展字段，预留给业务系统使用                                 | VARCHAR(400)    |          |          |            |              |
+| 19    | create_time      | 创建时间                                                     | DATETIME        |          |          |            |              |
+| 20    | update_time      | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 21    | del_flag         | 删除标志                                                     | CHAR(1)         |          |          | '0'        |              |
+| 22    | tenant_id        | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
 
 ### **flow_instance [**流程实例表**]**
 
-| **#** | **字段**      | **名称**                                    | **数据类型** | **主键** | **非空** | **默认值** | **备注说明** |
-| ----- | ------------- |-------------------------------------------| ------------ | -------- | -------- | ---------- | ------------ |
-| 1     | id            | 主键id                                      | BIGINT       | √        | √        |            |              |
-| 2     | definition_id | 对应flow_definition表的id                     | BIGINT       |          | √        |            |              |
-| 3     | business_id   | 业务id                                      | VARCHAR(40)  |          | √        |            |              |
-| 4     | node_type     | 结点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关）       | BIT(1)       |          | √        |            |              |
-| 5     | node_code     | 流程节点编码                                    | VARCHAR(40)  |          | √        |            |              |
-| 6     | node_name     | 流程节点名称                                    | VARCHAR(100) |          |          |            |              |
-| 7     | variable      | 任务变量                                      | TEXT         |          |          |            |              |
-| 8     | flow_status   | 流程状态（0待提交 1审批中 2 审批通过 3自动通过 8已完成 9已退回 10失效） | BIT(1)       |          | √        |            |              |
-| 9     | create_by     | 创建者                                       | VARCHAR(64)  |          |          |            |              |
-| 10    | create_time   | 创建时间                                      | DATETIME     |          |          |            |              |
-| 11    | update_time   | 更新时间                                      | DATETIME     |          |          |            |              |
-| 12    | ext           | 扩展字段，预留给业务系统使用                | VARCHAR(500) |          |          |            |              |
-| 13    | del_flag      | 删除标志                                      | CHAR(1)      |          |          |            |              |
-| 14    | tenant_id     | 租户id                                      | VARCHAR(40)  |          |          |            |              |
+| **#** | **字段**      | **名称**                                                     | **数据类型** | **主键** | **非空** | **默认值** | **备注说明** |
+| ----- | ------------- | ------------------------------------------------------------ | ------------ | -------- | -------- | ---------- | ------------ |
+| 1     | id            | 主键id                                                       | BIGINT       | √        | √        |            |              |
+| 2     | definition_id | 对应flow_definition表的id                                    | BIGINT       |          | √        |            |              |
+| 3     | business_id   | 业务id                                                       | VARCHAR(40)  |          | √        |            |              |
+| 4     | node_type     | 结点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)       |          | √        |            |              |
+| 5     | node_code     | 流程节点编码                                                 | VARCHAR(40)  |          | √        |            |              |
+| 6     | node_name     | 流程节点名称                                                 | VARCHAR(100) |          |          |            |              |
+| 7     | variable      | 任务变量                                                     | TEXT         |          |          |            |              |
+| 8     | flow_status   | 流程状态（0待提交 1审批中 2 审批通过 8已完成 9已退回 10失效） | BIT(1)       |          | √        |            |              |
+| 9     | create_by     | 创建者                                                       | VARCHAR(64)  |          |          |            |              |
+| 10    | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
+| 11    | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
+| 12    | del_flag      | 删除标志                                                     | CHAR(1)      |          |          | '0'        |              |
+| 13    | ext           | 扩展字段，预留给业务系统使用                                 | VARCHAR(500) |          |          |            |              |
+| 14    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
 
 ### **flow_node [**流程结点表**]**
 
@@ -108,13 +112,15 @@
 | 11    | listener_path   | 监听器路径                                                   | VARCHAR(400)    |          |          |            |              |
 | 12    | handler_type    | 处理器类型                                                   | VARCHAR(100)    |          |          |            |              |
 | 13    | handler_path    | 处理器路径                                                   | VARCHAR(400)    |          |          |            |              |
-| 14    | version         | 版本                                                         | VARCHAR(20)     |          | √        |            |              |
-| 15    | create_time     | 创建时间                                                     | DATETIME        |          |          |            |              |
-| 16    | update_time     | 更新时间                                                     | DATETIME        |          |          |            |              |
-| 17    | del_flag        | 删除标志                                                     | CHAR(1)         |          |          |            |              |
-| 18    | tenant_id       | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
+| 14    | form_custom     | 审批表单是否自定义（Y是 N否）                                | CHAR(1)         |          |          | 'N'        |              |
+| 15    | form_path       | 审批表单路径                                                 | VARCHAR(100)    |          |          |            |              |
+| 16    | version         | 版本                                                         | VARCHAR(20)     |          | √        |            |              |
+| 17    | create_time     | 创建时间                                                     | DATETIME        |          |          |            |              |
+| 18    | update_time     | 更新时间                                                     | DATETIME        |          |          |            |              |
+| 19    | del_flag        | 删除标志                                                     | CHAR(1)         |          |          | '0'        |              |
+| 20    | tenant_id       | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
 
-### **flow_skip [**结点跳转关联表**]**
+### 1.2.5 **flow_skip [**结点跳转关联表**]**
 
 | **#** | **字段**       | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
 | ----- | -------------- | ------------------------------------------------------------ | --------------- | -------- | -------- | ---------- | ------------ |
@@ -130,7 +136,7 @@
 | 10    | coordinate     | 坐标                                                         | VARCHAR(100)    |          |          |            |              |
 | 11    | create_time    | 创建时间                                                     | DATETIME        |          |          |            |              |
 | 12    | update_time    | 更新时间                                                     | DATETIME        |          |          |            |              |
-| 13    | del_flag       | 删除标志                                                     | CHAR(1)         |          |          |            |              |
+| 13    | del_flag       | 删除标志                                                     | CHAR(1)         |          |          | '0'        |              |
 | 14    | tenant_id      | 租户id                                                       | VARCHAR(40)     |          |          |            |              |
 
 ### **flow_task [**待办任务表**]**
@@ -143,21 +149,23 @@
 | 4     | node_code     | 节点编码                                                     | VARCHAR(100) |          | √        |            |              |
 | 5     | node_name     | 节点名称                                                     | VARCHAR(100) |          |          |            |              |
 | 6     | node_type     | 节点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)       |          | √        |            |              |
-| 7     | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
-| 8     | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
-| 9     | del_flag      | 删除标志                                                     | CHAR(1)      |          |          |            |              |
-| 10    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
+| 7     | form_custom   | 审批表单是否自定义（Y是 N否）                                | CHAR(1)      |          |          | 'N'        |              |
+| 8     | form_path     | 审批表单路径                                                 | VARCHAR(100) |          |          |            |              |
+| 9     | create_time   | 创建时间                                                     | DATETIME     |          |          |            |              |
+| 10    | update_time   | 更新时间                                                     | DATETIME     |          |          |            |              |
+| 11    | del_flag      | 删除标志                                                     | CHAR(1)      |          |          | '0'        |              |
+| 12    | tenant_id     | 租户id                                                       | VARCHAR(40)  |          |          |            |              |
 
 ### **flow_user [**流程用户表**]**
 
 | **#** | **字段**     | **名称**                                                     | **数据类型**    | **主键** | **非空** | **默认值** | **备注说明** |
 | ----- | ------------ | ------------------------------------------------------------ | --------------- | -------- | -------- | ---------- | ------------ |
 | 1     | id           | 主键id                                                       | BIGINT UNSIGNED | √        | √        |            |              |
-| 2     | type         | 人员类型（1待办任务的审批人权限 2待办任务的转办人权限 3待办任务的委托人权限） | CHAR(1)         |          | √        |            |              |
+| 2     | type         | 人员类型（1代办任务的审批人权限 2代办任务的转办人权限 3流程实例的抄送人权限 4待办任务的委托人权限） | CHAR(1)         |          | √        |            |              |
 | 3     | processed_by | 权限人                                                       | VARCHAR(80)     |          |          |            |              |
 | 4     | associated   | 关联表id                                                     | BIGINT          |          | √        |            |              |
 | 5     | create_time  | 创建时间                                                     | DATETIME        |          |          |            |              |
 | 6     | create_by    | 创建人                                                       | VARCHAR(80)     |          |          |            |              |
 | 7     | update_time  | 更新时间                                                     | DATETIME        |          |          |            |              |
-| 8     | del_flag     | 删除标志                                                     | CHAR(1)         |          |          |            |              |
+| 8     | del_flag     | 删除标志                                                     | CHAR(1)         |          |          | '0'        |              |
 | 9     | tenant_id    | 租户id                                                       | VARCHAR(40)     |          |          |            |              |

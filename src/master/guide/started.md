@@ -110,8 +110,11 @@
 
 
 ## 支持orm框架类型
-
-wa
+* [x] mybatis
+* [x] mybatis-plus
+* [x] jpa
+* [ ] mybatis-flex
+* [ ] ......
 
 
 

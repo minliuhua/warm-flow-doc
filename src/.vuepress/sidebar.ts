@@ -5,7 +5,7 @@ export default sidebar({
         {
             text: "基础部分",
             icon: "bulb",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/master/guide/introduction.md',
                 '/master/guide/started.md',
@@ -19,7 +19,7 @@ export default sidebar({
         {
             text: "进阶部分",
             icon: "/icons/advanced.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/master/guide/api.md',
                 '/master/guide/listener.md',
@@ -30,7 +30,7 @@ export default sidebar({
         {
             text: "其他",
             icon: "/icons/other.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/master/guide/learningmaterials.md',
                 '/master/guide/troubleshooting.md',
@@ -42,7 +42,7 @@ export default sidebar({
         {
             text: "基础部分",
             icon: "bulb",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/v1.2.3/guide/introduction.md',
                 '/v1.2.3/guide/started.md',
@@ -56,7 +56,7 @@ export default sidebar({
         {
             text: "进阶部分",
             icon: "/icons/advanced.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/v1.2.3/guide/api.md',
                 '/v1.2.3/guide/listener.md',
@@ -67,7 +67,7 @@ export default sidebar({
         {
             text: "其他",
             icon: "/icons/other.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/v1.2.3/guide/learningmaterials.md',
                 '/v1.2.3/guide/troubleshooting.md',
@@ -79,12 +79,13 @@ export default sidebar({
         {
             text: "基础部分",
             icon: "bulb",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/v1.2.4/guide/introduction.md',
                 '/v1.2.4/guide/started.md',
                 '/v1.2.4/guide/table.md',
                 '/v1.2.4/guide/config.md',
+                '/v1.2.4/guide/api.md',
                 '/v1.2.4/guide/processdemo.md',
                 '/v1.2.4/guide/processterm.md',
                 '/v1.2.4/guide/processrule.md',
@@ -93,9 +94,10 @@ export default sidebar({
         {
             text: "进阶部分",
             icon: "/icons/advanced.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
-                '/v1.2.4/guide/api.md',
+                '/v1.2.4/guide/logicdelete.md',
+                '/v1.2.4/guide/tenant.md',
                 '/v1.2.4/guide/listener.md',
                 '/v1.2.4/guide/expression.md',
                 '/v1.2.4/guide/ormusagetips.md',
@@ -104,7 +106,7 @@ export default sidebar({
         {
             text: "其他",
             icon: "/icons/other.svg",
-            collapsible: true,
+            collapsible: false,
             children: [
                 '/v1.2.4/guide/learningmaterials.md',
                 '/v1.2.4/guide/troubleshooting.md',
