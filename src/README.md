@@ -8,11 +8,11 @@ tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量但又不简�
 actions:
 
 - text: 开始学习 ➜
-  link: /guide/introduction.html
+  link: /master/guide/introduction.html
   type: primary
 
 - text: 功能演示
-  link: /guide/processdemo.html
+  link: /master/guide/processdemo.html
 
 features:
 

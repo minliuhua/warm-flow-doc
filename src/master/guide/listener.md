@@ -8,7 +8,7 @@
 - finish：结束监听器，当前任务完成后执行
 
 ## 监听器生命周期图
-![](..%2F.vuepress%2Fpublic%2FlistenerLife.png)
+![](../../.vuepress/public/listenerLife.png)
 
 ## 监听器使用
 1、实现以下接口
@@ -53,7 +53,7 @@ public class FinishListener implements Listener {
 2、页面配置监听器，传递后台通过`@@`分割不同监听器
 监听器类型和监听器路径，上下一一对应
 
-![](..%2F.vuepress%2Fpublic%2FlistenerUse.png)
+![](../../.vuepress/public/listenerUse.png)
 
 
 3、实现权限监听器接口，然后在设计器中配置好监听器
@@ -93,7 +93,7 @@ public class PermissionListener implements Listener {
 
 页面配置监听器时加上类路径
 
-![](..%2F.vuepress%2Fpublic%2Flistener1.png)
+![](../../.vuepress/public/listener1.png)
 
 ```java
     public void notify(ListenerVariable variable) {

@@ -5,11 +5,11 @@
 warm-flow:
   # 是否显示banner图，默认是
   banner: true
-  # 填充器 （可配置文件注入，也可用@Bean/@Component方式）
+  # 填充器 （可通过配置文件注入，也可用@Bean/@Component方式）
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
-  # 全局租户处理器（可配置文件注入，也可用@Bean/@Component方式）
+  # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式）
   tenant_handler_path: com.ruoyi.system.handle.CustomTenantHandler
-  # 是否开启逻辑删除
+  # 是否开启逻辑删除（orm框架本身不支持逻辑删除，可通过这种方式开启）
   logic_delete: true
   # 逻辑删除字段值（开启后默认为2）
   logic_delete_value: 2
@@ -17,9 +17,7 @@ warm-flow:
   logic_not_delete_value: 0
   # 当使用JPA时指定JpaPersistenceProvider
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
-  # 数据源类型, mybatis模块对orm进一步的封装, 由于各数据库分页语句存在差异,
-  # 当配置此参数时, 以此参数结果为基准, 未配置时, 取DataSource中数据源类型,
-  # 兜底为mysql数据库
+  # 内部已实现自动获取，失效时使用此配置（在使用mybatis扩展包时, 由于各数据库sql语句存在差异, 通过此配置兼容，默认为mysql）
   data_source_type: mysql
 ```
 
@@ -37,7 +35,7 @@ public class WarmFlowConfig {
     }
 
     /**
-     * 全局租户处理器（可配置文件注入，也可用@Bean/@Component方式）
+     * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
      */
     @Bean
     public TenantHandler tenantHandler() {

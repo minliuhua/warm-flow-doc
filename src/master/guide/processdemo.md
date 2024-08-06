@@ -54,18 +54,18 @@
 ### 节点设置
 配置节点名称，协作方式，节点权限，是否任意调整，监听器等
 
-![](..%2F.vuepress%2Fpublic%2FdefNode.png)
+![](../../.vuepress/public/defNode.png)
 
 ### 跳转线设置
 配置跳转名称，跳转类型（通过还是退回），调整条件
 
-![](..%2F.vuepress%2Fpublic%2FdefSkip.png)
+![](../../.vuepress/public/defSkip.png)
 
 ## 开启流程实例
 
 hh-vue项目已经准备了七套流程，以及开启流程代码，开启流程会直接执行到开始节点后一个节点
 
-![](..%2F.vuepress%2Fpublic%2FaddIns.png)
+![](../../.vuepress/public/addIns.png)
 
 
 ## 提交流程
