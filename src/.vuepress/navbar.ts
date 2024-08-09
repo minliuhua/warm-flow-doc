@@ -39,7 +39,7 @@ export default navbar([
         icon: '/icons/version.svg',
         children: [
             { text: 'v1.2.3', link: '/v1.2.3/guide/introduction.html' },
-            { text: 'v1.2.4-m1(尝鲜版)', link: '/v1.2.4/guide/introduction.html' },
+            { text: 'v1.2.4-m2(尝鲜版)', link: '/v1.2.4/guide/introduction.html' },
         ]
     },
 ]);

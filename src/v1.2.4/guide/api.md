@@ -62,29 +62,38 @@
 - flowStatus:流程状态，自定义流程状态[按需传输]
 
 `transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
+- taskId 修改的任务id [必传]
+- curUser 当前办理人唯一标识 [必传]
+- permissionFlag 用户权限标识集合 [必传]
+- addHandlers 增加办理人：加签，转办，委托 [必传]
+- message 审批意见 [按需传输]
 
 `depute(taskId, curUser, permissionFlag, addHandlers, message)`：委派, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
+- taskId 修改的任务id [必传]
+- curUser 当前办理人唯一标识 [必传]
+- permissionFlag 用户权限标识集合 [必传]
+- addHandlers 增加办理人：加签，转办，委托 [必传]
+- message 审批意见 [按需传输]
 
 `addSignature(taskId, curUser, permissionFlag, addHandlers, message)`：加签，增加办理人
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
+- taskId 修改的任务id [必传]
+- curUser 当前办理人唯一标识 [必传]
+- permissionFlag 用户权限标识集合 [必传]
+- addHandlers 增加办理人：加签，转办，委托 [必传]
+- message 审批意见 [按需传输]
 
 `reductionSignature(taskId, curUser, permissionFlag, addHandlers, message)`：减签，减少办理人
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
+- taskId 修改的任务id [必传]
+- curUser 当前办理人唯一标识 [必传]
+- permissionFlag 用户权限标识集合 [必传]
+- addHandlers 增加办理人：加签，转办，委托 [必传]
+- message 审批意见 [按需传输]
+
+`updateHandler(modifyHandler)`：修改办理人
+- curUser:办理人唯一标识 [按需传输]
+- ignore: 转办忽略权限校验（true：忽略，false：不忽略）[按需传输]
+- permissionFlag: 用户所拥有的权限标识 [按需传输，ignore为false，则必传]
+- addHandlers: 增加办理人：加签，转办，委托 [按需传输]
+- reductionHandlers: 减少办理人：减签，委托 [按需传输]
+- message: 审批意见 [按需传输]
+- cooperateType: 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签）[按需传输]
