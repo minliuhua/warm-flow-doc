@@ -1,6 +1,16 @@
 # orm扩展包使用技巧
+- **常规增删改查可以通过注入方式，或者工具类获取service**
+```java
+//  第一种
+@Resource
+private DefService defService;
 
-## mybatis-plus
+// 第二种
+FlowFactory.defService()
+```
+- **但是由于不同orm框架的数据库操作的，接口使用方式不一致，所以可以通过以下方式获取对应的使用入口。**
+
+## 1、mybatis-plus
 
 **获取组件中的mapper，使用mybaits-plus的自带方法**
 ```java
@@ -11,7 +21,7 @@
   taskMapper.selectList(taskWrapper);
 ```
 
-## JPA
+## 2、JPA
 
 **注入 unitName=warm-flow-jpa  EntityManager entityManager 对象**
 
@@ -56,7 +66,7 @@ entityManager.createQuery(criteriaUpdate).executeUpdate()
 **JPA注意事项** JPA涉及持久化操作必须开启事务  @Transactional(spring) @Tran(solon)
 
 
-## mybatis-flex
+## 3、mybatis-flex
 
 **获取组件中的mapper，使用mybaits-flex的自带方法**
 ```java

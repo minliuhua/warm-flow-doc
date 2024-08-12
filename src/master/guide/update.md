@@ -2,49 +2,70 @@
 > [!IMPORTANT]
 > 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
 
-**未来发布计划**
+## 未来发布计划
 
 - vx.x.x
-  - 每个中间节点都可以自定义表单，多审批节点的，对应不同表单填写
+  - 动态表单支持
   - 设计器考虑bpmn
   - 挂起和恢复
   - 撤回
   - 适配国产数据库
-  - 条件表达式支持spel执行器
   - 支持主键自增策略
   - 重启流程
   - 流程定义增加显示流程图
 
 
-**正开发中计划**
+## 正开发中计划
 - v1.2.4 未发布
+  - [feat] 激活和挂起 @xiaoxiaoliu889
+  - [feat] 不同节点也支持配置审批表单路径 @vanlin
   - [feat] 支持接收外部流程状态，支持流程状态扩展 @vanlin
-  - [feat] 新增spel插件，支持表达式执行
+  - [feat] 新增spel条件表达式，新增可通过SPI机制加载条件表达式
   - [feat] 新增分派监听器，支持代办任务中办理人等动态修改 @liangli
   - [feat] 新增Easy-Query框架支持 @link2fun
   - [feat] 新增Mybatis-Flex的solon扩展包  @xiarigang
+  - [feat] 新增Jpa的solon扩展包  @vanlin
   - [feat] 历史表新增跳转类型，记录跳转类型 @vanlin
+  - [feat] 增加组件加载，yml控制开关 @疯狂的狮子Li
   - [update] 之前强依赖流程状态的通过的，改为跳转类型，历史数据考虑如何处理 @vanlin
   - [update] 之前所有保存流程状态地方，全部提供可接受外部传入 @vanlin
   - [update] 流程开启，校验节点是否发布，提示语增加流程编码
   - [update] 删除校验是否任意跳转
   - [update] 修改扩展字段ext注释，删除FlowConfigUtil多余的代码
+  - [update] SqlSessionFactory改为构造函数引入
+  - [update] 替换异常类，UtilException高版本不兼容
+  - [update] from_custom改为form_custom，from_path改为form_path
   - [remove] 移除节点前置执行权限处理器
   - [remove] 删除cooperateAutoPass方法
   - [update] 代办改为待办
+  - [refactor] 重构测试模块，完善mybatis-plus多租户和逻辑删除使用方式
+  - [refactor] 重构solon和插件模块
   - [fix] 修复加签批量提交报错
   - [fix] 修复TaskServiceImpl#handleDepute方法中删除受托人传参数错误 
   - [fix] 修复 JPA flowUserDao bug @vanlin
+  - [fix] 流程第三个节点为网关时无法渲染颜色
+  - [fix] 修复查看流程图模糊的问题 @erfeijiadao
+  - [fix] 修復开始节点直连网关，流程图渲染有问题
+  - [fix] 修复不能退回，未完成过任务
+  - [fix] 修复流程定义和流程实例相同，处于非结束节点，流程实例不能存在相同的业务id
+  - [fix] 修复不能退回，未完成过任务
+  - [fix] 删除不必要的··符号，修复postgresql与mysql关键词符号问题。
+  - [fix] 修复流程已完成，流程图结束节点显示为黑色
+  - [fix] 修复已办任务查询审批想起无效问题
+  - [fix] 设置开始节点 skip_type = PASS
+  - [fix] 为SpringUtil指定bean name,解决 LocalContainerEntityManagerFactoryBean 依赖问题
   - [chore] 升级dom4j为安全版本2.1.3
 
 **【升级注意事项】**：
     1、执行升级脚本【warm-flow_1.2.4.sql】  
     2、流程定义表from_custom改为form_custom，from_path改为form_path，涉及到这两个字段的前后段都要修改  
     3、反显审批流程表单，改为通过task表新增的form_custom和form_path字段
+    4、只针对mybatis-plus扩展包，其他的扩展包可忽略，多租户和逻辑删除，改为通过mybatis-plus的自带的方式实现，并且流程表的逻辑删除字段都更新为0
 
 
 
-**已完成计划** 
+
+## 已完成计划
 
 - v1.2.3 2024-06-28
   - [fix] 修复更新拼上了多余的条件

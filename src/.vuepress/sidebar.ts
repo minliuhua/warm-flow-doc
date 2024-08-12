@@ -11,6 +11,7 @@ export default sidebar({
                 '/master/guide/started.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
+                '/master/guide/api.md',
                 '/master/guide/processdemo.md',
                 '/master/guide/processterm.md',
                 '/master/guide/processrule.md',
@@ -21,7 +22,9 @@ export default sidebar({
             icon: "/icons/advanced.svg",
             collapsible: false,
             children: [
-                '/master/guide/api.md',
+                '/master/guide/logicdelete.md',
+                '/master/guide/tenant.md',
+                '/master/guide/customstatus.md',
                 '/master/guide/listener.md',
                 '/master/guide/expression.md',
                 '/master/guide/ormusagetips.md',
