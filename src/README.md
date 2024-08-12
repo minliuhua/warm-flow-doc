@@ -49,7 +49,7 @@ features:
   details: 流程引擎自身维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
 copyright: false
-footer: Copyright © 2024 warm-flow
+footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 
 ---
 

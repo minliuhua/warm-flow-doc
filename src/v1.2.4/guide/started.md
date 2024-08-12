@@ -13,7 +13,7 @@
 如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行  
 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行
 ```
-## 2、官网七套流程定义xml
+## 2、官网九套流程定义xml
 ```shell
 地址：warm-flow\warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
 ```
@@ -21,7 +21,7 @@
 
 ## 3、maven依赖
 ### 3.1、mybatis
-**springboot项目**
+springboot项目
 
 ```maven
 <dependency>
@@ -31,7 +31,7 @@
 </dependency>
 ```
 
-**solon项目**
+solon项目
 
 ```maven
 <dependency>
@@ -42,7 +42,7 @@
 ```
 
 ### 3.2、mybatis-plus
-**springboot项目**
+springboot项目
 
 ```maven
 <dependency>
@@ -52,7 +52,7 @@
 </dependency>
 ```
 
-**solon项目**
+solon项目
 
 ```maven
 <dependency>
@@ -63,7 +63,15 @@
 ```
 
 ### 3.3、jpa
-**springboot项目**
+warm-flow工作流配置
+```yml
+# warm-flow工作流配置
+warm-flow:
+  # 当使用JPA时指定JpaPersistenceProvider
+  jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
+```
+
+springboot项目
 
 ```maven
 <dependency>
@@ -73,7 +81,7 @@
 </dependency>
 ```
 
-**solon项目**
+solon项目
 
 ```maven
 <dependency>
@@ -84,7 +92,7 @@
 ```
 
 ### 3.4、mybatis-flex
-**springboot项目**
+springboot项目
 
 ```maven
 <dependency>
@@ -94,7 +102,7 @@
 </dependency>
 ```
 
-**solon项目**
+solon项目
 
 ```maven
 <dependency>
@@ -105,7 +113,7 @@
 ```
 
 ### 3.5、easy-query
-**springboot项目**
+springboot项目
 
 ```maven
 <dependency>
@@ -115,7 +123,7 @@
 </dependency>
 ```
 
-**solon项目**
+solon项目
 
 ```maven
 <dependency>

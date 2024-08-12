@@ -39,6 +39,14 @@
         <td><img src="https://foruda.gitee.com/images/1703641687716655707/62a8b20c_2218307.png"/></td>
         <td><img src="https://foruda.gitee.com/images/1703641702939748288/6da6c4f6_2218307.png"/></td>
     </tr>
+    <tr>
+        <td><img src="../../.vuepress/public/demo4.png"/></td>
+        <td><img src="../../.vuepress/public/demo2.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="../../.vuepress/public/demo3.png"/></td>
+        <td><img src="../../.vuepress/public/demo1.png"/></td>
+    </tr>
 </table>
 
 
