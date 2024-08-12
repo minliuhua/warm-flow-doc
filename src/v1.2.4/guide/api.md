@@ -20,6 +20,10 @@
 
 `flowChart(instanceId)`： 获取流程图的图片流
 
+`active(Long id)`： 激活流程
+
+`unActive(Long id)`： 挂起流程：流程定义挂起后，相关的流程实例都无法继续流转
+
 ## 2、InsService流程实例接口
 
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
@@ -97,3 +101,7 @@
 - reductionHandlers: 减少办理人：减签，委托 [按需传输]
 - message: 审批意见 [按需传输]
 - cooperateType: 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签）[按需传输]
+
+`active(Long id)`： 激活实例
+
+`unActive(Long id)`： 挂起实例，流程实例挂起后，该流程实例无法继续流转
