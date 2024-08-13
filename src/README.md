@@ -38,7 +38,7 @@ features:
   
 - title: orm框架扩展
   icon: '/icons/extend.svg'
-  details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex和Jpa，后续会由社区提供其他支持，扩展方便
+  details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
 
 - title: 数据库支持
   icon: '/icons/database.svg'
