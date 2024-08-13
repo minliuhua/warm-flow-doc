@@ -31,6 +31,36 @@ export default sidebar({
             ],
         }
     ],
+    "/v1.2.5/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.2.5/guide/introduction.md',
+                '/v1.2.5/guide/started.md',
+                '/v1.2.5/guide/table.md',
+                '/v1.2.5/guide/config.md',
+                '/v1.2.5/guide/api.md',
+                '/v1.2.5/guide/processdemo.md',
+                '/v1.2.5/guide/processterm.md',
+                '/v1.2.5/guide/processrule.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.2.5/guide/logicdelete.md',
+                '/v1.2.5/guide/tenant.md',
+                '/v1.2.5/guide/customstatus.md',
+                '/v1.2.5/guide/listener.md',
+                '/v1.2.5/guide/expression.md',
+                '/v1.2.5/guide/ormusagetips.md',
+            ],
+        }
+    ],
     "/v1.2.3/guide/": [
         {
             text: "基础部分",
