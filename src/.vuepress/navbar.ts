@@ -11,9 +11,12 @@ export default navbar([
         ]
     },
     {
-        text: '社区贡献',
+        text: '社区支持',
         icon: '/icons/community.svg',
-        link: '/master/guide/pr.md'
+        children: [
+            { text: '社区贡献', link: '/master/guide/pr.md' },
+            { text: '鼓励支持', link: '/master/guide/support.md' },
+        ]
     },
     {
         text: '组织成员',
@@ -21,9 +24,14 @@ export default navbar([
         link: '/master/guide/member.md'
     },
     {
-        text: '鼓励支持',
-        icon: '/icons/support.svg',
-        link: '/master/guide/support.md'
+        text: '相关资料',
+        icon: '/icons/community.svg',
+        link: '/master/guide/learningmaterials.md'
+    },
+    {
+        text: '常见问题',
+        icon: '/icons/member.svg',
+        link: '/master/guide/troubleshooting.md'
     },
     {
         text: '项目地址',
@@ -33,6 +41,11 @@ export default navbar([
             { text: 'gitee', icon: '/icons/gitee.svg', link: 'https://gitee.com/dromara/warm-flow.git' },
             { text: 'gitcode', icon: '/icons/gitCode.svg', link: 'https://gitcode.com/minliuhua/warm-flow.git' },
         ]
+    },
+    {
+        text: '更新计划',
+        icon: '/icons/member.svg',
+        link: '/master/guide/update.md'
     },
     {
         text: '历史版本',

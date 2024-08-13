@@ -57,6 +57,9 @@ public class FinishListener implements Listener {
 ```
 
 ### 3.3、分派监听器实现类例子
+- 注意： 
+  - 下个节点配置权限策略
+  - 上个节点分派监听器修改
 ```java
 @Component
 public class AssignmentListener implements Listener {

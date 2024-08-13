@@ -29,16 +29,6 @@ export default sidebar({
                 '/master/guide/expression.md',
                 '/master/guide/ormusagetips.md',
             ],
-        },
-        {
-            text: "其他",
-            icon: "/icons/other.svg",
-            collapsible: false,
-            children: [
-                '/master/guide/learningmaterials.md',
-                '/master/guide/troubleshooting.md',
-                '/master/guide/update.md',
-            ],
         }
     ],
     "/v1.2.3/guide/": [
