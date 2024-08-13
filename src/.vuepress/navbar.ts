@@ -39,15 +39,6 @@ export default navbar([
         link: '/common/troubleshooting.md'
     },
     {
-        text: '项目地址',
-        icon: '/icons/project.svg',
-        children: [
-            { text: 'github', icon: '/icons/github.svg', link: 'https://github.com/dromara/warm-flow.git' },
-            { text: 'gitee', icon: '/icons/gitee.svg', link: 'https://gitee.com/dromara/warm-flow.git' },
-            { text: 'gitcode', icon: '/icons/gitCode.svg', link: 'https://gitcode.com/minliuhua/warm-flow.git' },
-        ]
-    },
-    {
         text: '更新计划',
         icon: '/icons/member.svg',
         link: '/common/update.md'
