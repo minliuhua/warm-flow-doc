@@ -174,6 +174,11 @@ export default sidebar({
             text: "更新计划",
             collapsible: false,
             link: '/common/update.md',
+        },
+        {
+            text: "加入群聊",
+            collapsible: false,
+            link: '/common/joingroup.md',
         }
     ],
 });
