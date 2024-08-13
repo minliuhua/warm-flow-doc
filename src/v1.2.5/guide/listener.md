@@ -58,8 +58,8 @@ public class FinishListener implements Listener {
 
 ### 3.3、分派监听器实现类例子
 - 注意： 
-  - 下个节点配置权限策略
-  - 上个节点分派监听器修改
+  - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
+  - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
 ```java
 @Component
 public class AssignmentListener implements Listener {
