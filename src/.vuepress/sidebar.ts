@@ -137,5 +137,43 @@ export default sidebar({
                 '/v1.2.4/guide/update.md',
             ],
         }
-    ]
+    ],
+    "/common/": [
+        {
+            text: "集成项目示例",
+            collapsible: false,
+            children: [
+                '/common/projectexample.md',
+                '/common/companyintegration.md',
+            ],
+        },
+        {
+            text: "社区支持",
+            collapsible: false,
+            children: [
+                '/common/pr.md',
+                '/common/support.md',
+            ],
+        },
+        {
+            text: "组织成员",
+            collapsible: false,
+            link: '/common/member.md',
+        },
+        {
+            text: "相关资料",
+            collapsible: false,
+            link: '/common/learningmaterials.md',
+        },
+        {
+            text: "常见问题",
+            collapsible: false,
+            link: '/common/troubleshooting.md',
+        },
+        {
+            text: "更新计划",
+            collapsible: false,
+            link: '/common/update.md',
+        }
+    ],
 });

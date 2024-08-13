@@ -3,35 +3,40 @@ import {navbar} from "vuepress-theme-hope";
 export default navbar([
     "/",
     {
+        text: '快速开始',
+        icon: '/icons/community.svg',
+        link: '/master/guide/started.md',
+    },
+    {
         text: '项目集成',
         icon: '/icons/community.svg',
         children: [
-            { text: '集成项目示例', link: '/master/guide/projectexample.md' },
-            { text: '公司使用列表', link: '/master/guide/companyintegration.md' },
+            { text: '集成项目示例', link: '/common/projectexample.md' },
+            { text: '公司使用列表', link: '/common/companyintegration.md' },
         ]
     },
     {
         text: '社区支持',
         icon: '/icons/community.svg',
         children: [
-            { text: '社区贡献', link: '/master/guide/pr.md' },
-            { text: '鼓励支持', link: '/master/guide/support.md' },
+            { text: '社区贡献', link: '/common/pr.md' },
+            { text: '鼓励支持', link: '/common/support.md' },
         ]
     },
     {
         text: '组织成员',
         icon: '/icons/member.svg',
-        link: '/master/guide/member.md'
+        link: '/common/member.md'
     },
     {
         text: '相关资料',
         icon: '/icons/community.svg',
-        link: '/master/guide/learningmaterials.md'
+        link: '/common/learningmaterials.md'
     },
     {
         text: '常见问题',
         icon: '/icons/member.svg',
-        link: '/master/guide/troubleshooting.md'
+        link: '/common/troubleshooting.md'
     },
     {
         text: '项目地址',
@@ -45,7 +50,7 @@ export default navbar([
     {
         text: '更新计划',
         icon: '/icons/member.svg',
-        link: '/master/guide/update.md'
+        link: '/common/update.md'
     },
     {
         text: '历史版本',
