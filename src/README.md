@@ -74,13 +74,13 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
     }
 
     .member-project a img {
-        height: 40px;
+        height: 500px !important;
     }
 </style>
 
 <div class="member-project">
-    <a href="https://gitee.com/lwj/flow" target="_blank">
-        <img src="./.vuepress/public/flowableHb.jpg" alt="open-capacity-platform" title="对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》">
+    <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
+      <img :src="item.src" :alt="item.alt" :title="item.title">
     </a>
 </div>
 
@@ -92,10 +92,15 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 <script>
 import axios from 'axios';
 
+import imageSrc from '/flowableHb.jpg';
+
 export default {
     data() {
         return {
-            content: ''
+            content: '',
+            projectList: [
+              { href: "https://gitee.com/lwj/flow", src: imageSrc, alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" }
+            ]
         }
     },
     async mounted() {
@@ -106,7 +111,6 @@ export default {
             console.error('Failed to fetch external markdown:', error);
         }
     }
-
 }
 </script>
 
