@@ -62,6 +62,29 @@ copyright: false
 footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 
 ---
+## **👍友情链接**
+<style>
+    .member-project {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .member-project a {
+        padding: 10px;
+    }
+
+    .member-project a img {
+        height: 40px;
+    }
+</style>
+
+<div class="member-project">
+    <a href="https://gitee.com/lwj/flow" target="_blank">
+        <img src="./.vuepress/public/flowableHb.jpg" alt="open-capacity-platform" title="对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》">
+    </a>
+</div>
+
+---
 
 ## **🚀Dromara成员项目**
 <div v-html="content"></div>
