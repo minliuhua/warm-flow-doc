@@ -1,11 +1,8 @@
 # 加入群聊
-## 普通交流群
-<table>
-    <tr>
-        <td><img src="../.vuepress/public/wx.png"/></td>
-        <td><img src="../.vuepress/public/qq.png"/></td>
-    </tr>
-</table>
+## 交流群
+** 微信号 : 【warm-houhou】**
+** qq群 : 【778470567】**
+</br>
 
 ## VIP群(付费加群，提供问题解答，技术分享)
 
