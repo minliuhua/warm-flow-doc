@@ -157,6 +157,14 @@ export default sidebar({
             ],
         },
         {
+            text: "如何贡献",
+            collapsible: false,
+            children: [
+                '/common/getinvolved.md',
+                '/common/submitpr.md',
+            ],
+        },
+        {
             text: "相关资料",
             collapsible: false,
             link: '/common/learningmaterials.md',

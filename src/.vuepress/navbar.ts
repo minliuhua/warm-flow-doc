@@ -25,6 +25,14 @@ export default navbar([
         ]
     },
     {
+        text: '参与贡献',
+        icon: '/icons/community.svg',
+        children: [
+            { text: '如何贡献', link: '/common/getinvolved.md' },
+            { text: '提交pr', link: '/common/submitpr.md' },
+        ]
+    },
+    {
         text: '相关资料',
         icon: '/icons/community.svg',
         link: '/common/learningmaterials.md'
