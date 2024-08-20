@@ -148,18 +148,11 @@ export default sidebar({
             ],
         },
         {
-            text: "社区支持",
-            collapsible: false,
-            children: [
-                '/common/pr.md',
-                '/common/support.md',
-            ],
-        },
-        {
-            text: "社区成员",
+            text: "社区",
             collapsible: false,
             children: [
                 '/common/member.md',
+                '/common/pr.md',
                 '/common/dromara.md',
             ],
         },
@@ -177,6 +170,11 @@ export default sidebar({
             text: "更新计划",
             collapsible: false,
             link: '/common/update.md',
+        },
+        {
+            text: "捐赠",
+            collapsible: false,
+            link: '/common/support.md',
         },
         {
             text: "加入群聊",

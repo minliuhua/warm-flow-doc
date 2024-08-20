@@ -16,18 +16,11 @@ export default navbar([
         ]
     },
     {
-        text: '社区支持',
-        icon: '/icons/community.svg',
-        children: [
-            { text: '社区贡献', link: '/common/pr.md' },
-            { text: '鼓励支持', link: '/common/support.md' },
-        ]
-    },
-    {
-        text: '社区成员',
+        text: '社区',
         icon: '/icons/community.svg',
         children: [
             { text: '组织成员', link: '/common/member.md' },
+            { text: '社区贡献', link: '/common/pr.md' },
             { text: 'Dromara成员项目', link: '/common/dromara.md' },
         ]
     },
