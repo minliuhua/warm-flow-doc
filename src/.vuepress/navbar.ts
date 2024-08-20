@@ -3,41 +3,47 @@ import {navbar} from "vuepress-theme-hope";
 export default navbar([
     "/",
     {
+        text: '快速开始',
+        icon: '/icons/community.svg',
+        link: '/master/guide/started.md',
+    },
+    {
         text: '项目集成',
         icon: '/icons/community.svg',
         children: [
-            { text: '集成项目示例', link: '/master/guide/projectexample.md' },
-            { text: '公司使用列表', link: '/master/guide/companyintegration.md' },
+            { text: '集成项目示例', link: '/common/projectexample.md' },
+            { text: '公司使用列表', link: '/common/companyintegration.md' },
         ]
     },
     {
-        text: '社区贡献',
+        text: '社区',
         icon: '/icons/community.svg',
-        link: '/master/guide/pr.md'
-    },
-    {
-        text: '组织成员',
-        icon: '/icons/member.svg',
-        link: '/master/guide/member.md'
-    },
-    {
-        text: '鼓励支持',
-        icon: '/icons/support.svg',
-        link: '/master/guide/support.md'
-    },
-    {
-        text: '项目地址',
-        icon: '/icons/project.svg',
         children: [
-            { text: 'github', icon: '/icons/github.svg', link: 'https://github.com/dromara/warm-flow.git' },
-            { text: 'gitee', icon: '/icons/gitee.svg', link: 'https://gitee.com/dromara/warm-flow.git' },
-            { text: 'gitcode', icon: '/icons/gitCode.svg', link: 'https://gitcode.com/minliuhua/warm-flow.git' },
+            { text: '组织成员', link: '/common/member.md' },
+            { text: '社区贡献', link: '/common/pr.md' },
+            { text: 'Dromara成员项目', link: '/common/dromara.md' },
         ]
+    },
+    {
+        text: '相关资料',
+        icon: '/icons/community.svg',
+        link: '/common/learningmaterials.md'
+    },
+    {
+        text: '常见问题',
+        icon: '/icons/member.svg',
+        link: '/common/troubleshooting.md'
+    },
+    {
+        text: '更新计划',
+        icon: '/icons/member.svg',
+        link: '/common/update.md'
     },
     {
         text: '历史版本',
         icon: '/icons/version.svg',
         children: [
+            { text: 'v1.2.5', link: '/v1.2.5/guide/introduction.html' },
             { text: 'v1.2.4', link: '/v1.2.4/guide/introduction.html' },
             { text: 'v1.2.3', link: '/v1.2.3/guide/introduction.html' },
         ]

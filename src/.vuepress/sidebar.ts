@@ -29,15 +29,35 @@ export default sidebar({
                 '/master/guide/expression.md',
                 '/master/guide/ormusagetips.md',
             ],
-        },
+        }
+    ],
+    "/v1.2.5/guide/": [
         {
-            text: "其他",
-            icon: "/icons/other.svg",
+            text: "基础部分",
+            icon: "bulb",
             collapsible: false,
             children: [
-                '/master/guide/learningmaterials.md',
-                '/master/guide/troubleshooting.md',
-                '/master/guide/update.md',
+                '/v1.2.5/guide/introduction.md',
+                '/v1.2.5/guide/started.md',
+                '/v1.2.5/guide/table.md',
+                '/v1.2.5/guide/config.md',
+                '/v1.2.5/guide/api.md',
+                '/v1.2.5/guide/processdemo.md',
+                '/v1.2.5/guide/processterm.md',
+                '/v1.2.5/guide/processrule.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.2.5/guide/logicdelete.md',
+                '/v1.2.5/guide/tenant.md',
+                '/v1.2.5/guide/customstatus.md',
+                '/v1.2.5/guide/listener.md',
+                '/v1.2.5/guide/expression.md',
+                '/v1.2.5/guide/ormusagetips.md',
             ],
         }
     ],
@@ -117,5 +137,49 @@ export default sidebar({
                 '/v1.2.4/guide/update.md',
             ],
         }
-    ]
+    ],
+    "/common/": [
+        {
+            text: "集成项目示例",
+            collapsible: false,
+            children: [
+                '/common/projectexample.md',
+                '/common/companyintegration.md',
+            ],
+        },
+        {
+            text: "社区",
+            collapsible: false,
+            children: [
+                '/common/member.md',
+                '/common/pr.md',
+                '/common/dromara.md',
+            ],
+        },
+        {
+            text: "相关资料",
+            collapsible: false,
+            link: '/common/learningmaterials.md',
+        },
+        {
+            text: "常见问题",
+            collapsible: false,
+            link: '/common/troubleshooting.md',
+        },
+        {
+            text: "更新计划",
+            collapsible: false,
+            link: '/common/update.md',
+        },
+        {
+            text: "捐赠",
+            collapsible: false,
+            link: '/common/support.md',
+        },
+        {
+            text: "加入群聊",
+            collapsible: false,
+            link: '/common/joingroup.md',
+        }
+    ],
 });

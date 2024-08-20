@@ -7,12 +7,22 @@ heroText: warm-flow工作流
 tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
+- text: github
+  link: https://github.com/dromara/warm-flow.git
+  type: success
+
+- text: gitee
+  link: https://gitee.com/dromara/warm-flow.git
+  type: success
+  
+- text: 加入群聊
+  link: /common/joingroup.md
+  type: success
+  
 - text: 开始学习 ➜
   link: /master/guide/introduction.html
-  type: primary
+  type: primary  
 
-- text: 功能演示
-  link: /master/guide/processdemo.html
 
 features:
 
@@ -52,28 +62,41 @@ copyright: false
 footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 
 ---
+## **👍友情链接**
+<style>
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-## **🚀Dromara成员项目**
-<div v-html="content"></div>
+    .links a {
+        padding: 10px;
+    }
+
+    .links a img {
+        height: 200px !important;
+    }
+</style>
+
+<div class="links">
+    <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
+      <img :src="item.src" :alt="item.alt" :title="item.title">
+    </a>
+</div>
 
 <script>
-import axios from 'axios';
+
+import imageSrc from '/flowableHb.jpg';
 
 export default {
     data() {
         return {
-            content: ''
+            projectList: [
+              { href: "https://item.jd.com/13928958.html", src: imageSrc, alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
+            ]
         }
     },
-    async mounted() {
-        try {
-            const response = await axios.get('https://x-file-storage.xuyanwu.cn/assets/link/member-project-pure.md');
-            this.content = response.data;
-        } catch (error) {
-            console.error('Failed to fetch external markdown:', error);
-        }
-    }
-
 }
 </script>
 
+---
