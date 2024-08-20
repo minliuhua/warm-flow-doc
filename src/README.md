@@ -20,7 +20,7 @@ actions:
   type: success
   
 - text: 开始学习 ➜
-  link: /master/guide/introduction.html
+  link: /common/introduction.html
   type: primary  
 
 

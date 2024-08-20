@@ -7,7 +7,6 @@ export default sidebar({
             icon: "bulb",
             collapsible: false,
             children: [
-                '/master/guide/introduction.md',
                 '/master/guide/started.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
@@ -140,21 +139,25 @@ export default sidebar({
     ],
     "/common/": [
         {
-            text: "集成项目示例",
+            text: "工作流介绍",
             collapsible: false,
             children: [
-                '/common/projectexample.md',
-                '/common/companyintegration.md',
-            ],
-        },
-        {
-            text: "社区",
-            collapsible: false,
-            children: [
+                '/common/introduction.md',
                 '/common/member.md',
                 '/common/pr.md',
                 '/common/dromara.md',
+                '/common/joingroup.md',
             ],
+        },
+        {
+            text: "集成项目示例",
+            collapsible: false,
+            link: '/common/projectexample.md',
+        },
+        {
+            text: "使用者登记",
+            collapsible: false,
+            link: '/common/companyintegration.md',
         },
         {
             text: "如何贡献",
@@ -165,7 +168,7 @@ export default sidebar({
             ],
         },
         {
-            text: "相关资料",
+            text: "学习资料",
             collapsible: false,
             link: '/common/learningmaterials.md',
         },
@@ -184,10 +187,5 @@ export default sidebar({
             collapsible: false,
             link: '/common/support.md',
         },
-        {
-            text: "加入群聊",
-            collapsible: false,
-            link: '/common/joingroup.md',
-        }
     ],
 });
