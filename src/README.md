@@ -7,16 +7,16 @@ heroText: warm-flow工作流
 tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
-- text: github
+- text: GitHub
   link: https://github.com/dromara/warm-flow.git
   type: success
 
-- text: gitee
+- text: Gitee
   link: https://gitee.com/dromara/warm-flow.git
   type: success
   
-- text: 加入群聊
-  link: /common/joingroup.md
+- text: GitCode
+  link: https://gitcode.com/dromara/warm-flow
   type: success
   
 - text: 开始学习 ➜
