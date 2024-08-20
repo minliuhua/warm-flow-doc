@@ -125,3 +125,7 @@ public class MybatisPlusConfig
 </details>
 
 5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus  
+
+## 6、导入依赖包失败
+### 6.1、可尝试切换maven版本 （感谢【一拳打爆常大宝】）
+如maven3.9.6切换为低版本3.8.2
