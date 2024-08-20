@@ -64,53 +64,39 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 ---
 ## **👍友情链接**
 <style>
-    .member-project {
+    .links {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .member-project a {
+    .links a {
         padding: 10px;
     }
 
-    .member-project a img {
-        height: 500px !important;
+    .links a img {
+        height: 200px !important;
     }
 </style>
 
-<div class="member-project">
+<div class="links">
     <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
       <img :src="item.src" :alt="item.alt" :title="item.title">
     </a>
 </div>
 
----
-
-## **🚀Dromara成员项目**
-<div v-html="content"></div>
-
 <script>
-import axios from 'axios';
 
 import imageSrc from '/flowableHb.jpg';
 
 export default {
     data() {
         return {
-            content: '',
             projectList: [
-              { href: "https://gitee.com/lwj/flow", src: imageSrc, alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" }
+              { href: "https://item.jd.com/13928958.html", src: imageSrc, alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
             ]
         }
     },
-    async mounted() {
-        try {
-            const response = await axios.get('https://x-file-storage.xuyanwu.cn/assets/link/member-project-pure.md');
-            this.content = response.data;
-        } catch (error) {
-            console.error('Failed to fetch external markdown:', error);
-        }
-    }
 }
 </script>
 
+---

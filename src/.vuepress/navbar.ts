@@ -24,9 +24,12 @@ export default navbar([
         ]
     },
     {
-        text: '组织成员',
-        icon: '/icons/member.svg',
-        link: '/common/member.md'
+        text: '社区成员',
+        icon: '/icons/community.svg',
+        children: [
+            { text: '组织成员', link: '/common/member.md' },
+            { text: 'Dromara成员项目', link: '/common/dromara.md' },
+        ]
     },
     {
         text: '相关资料',

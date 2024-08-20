@@ -156,9 +156,12 @@ export default sidebar({
             ],
         },
         {
-            text: "组织成员",
+            text: "社区成员",
             collapsible: false,
-            link: '/common/member.md',
+            children: [
+                '/common/member.md',
+                '/common/dromara.md',
+            ],
         },
         {
             text: "相关资料",
