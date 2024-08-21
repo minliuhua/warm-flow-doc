@@ -89,7 +89,7 @@ public class AssignmentListener implements Listener {
 ### 3.4、页面配置监听器
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应
 
-![](../../.vuepress/public/listenerUse.png)
+![](../../.vuepress/public/defNode.png)
 
 
 ## 4、监听器参数使用
