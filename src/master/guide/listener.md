@@ -57,6 +57,10 @@ public class FinishListener implements Listener {
 ```
 
 ### 3.3、分派监听器实现类例子
+如下图中示例可以很容易实现
+<img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
+
+
 - 注意： 
   - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
   - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
