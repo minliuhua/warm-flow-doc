@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
-import navbar from "./navbar";
-import sidebar from "./sidebar";
+import navbar from "./navbar.js";
+import sidebar from "./sidebar.js";
 
 export default hopeTheme({
     hostname: "https://gitee.com/warm_4/warm-flow-doc",
@@ -59,6 +58,13 @@ export default hopeTheme({
             sup: true,
             tabs: true,
             vPre: true,
+        },
+        shiki: {
+            // theme: "houston",
+            themes: {
+                light: "one-light",
+                dark: "one-dark-pro",
+            },
         }
     }
 });

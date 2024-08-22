@@ -1,9 +1,8 @@
 import {defineUserConfig} from "vuepress";
 
-import {removePwaPlugin} from "@vuepress/plugin-remove-pwa";
 import {viteBundler} from '@vuepress/bundler-vite'
 
-import theme from "./theme";
+import theme from "./theme.js";
 
 export default defineUserConfig({
     base: "/",
@@ -16,9 +15,6 @@ export default defineUserConfig({
     },
     theme,
     shouldPrefetch: true,
-    plugins: [
-        removePwaPlugin({}),
-    ],
     bundler: viteBundler({
         viteOptions: {},
         vuePluginOptions: {},
