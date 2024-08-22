@@ -18,7 +18,6 @@
 
 ```shell
 希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长
-使用前请先登记，可加入企业群：https://gitee.com/warm_4/warm-flow/issues/I7Y57D
 ```
 
 ## 2、开源协议
