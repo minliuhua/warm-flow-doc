@@ -73,7 +73,7 @@
 ## 3、TaskService待办任务接口
 
 ### 3.1、流程跳转
-`skip(taskId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
+`skip(taskId, flowParams)`：传入流程任务id，流程跳转。flowParams包含如下字段：
 - skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
 - nodeCode: 节点编码 [如果指定跳转节点,必传]
 - permissionFlag: 办理人权限标识 [按需传输]
