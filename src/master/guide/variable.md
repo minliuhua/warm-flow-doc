@@ -1,8 +1,9 @@
 # 流程变量
 
-- 是流程变量，map类型，用于流程执行中的数据转递
-- 在执行流程时，可以设置流程变量
-- 在监听器中，可以获取流程变量。
+> [!IMPORTANT]
+> 是流程变量，map类型，用于流程执行中的数据转递
+> 在执行流程时，可以设置流程变量
+> 在监听器中，可以获取流程变量。
 
 ```java
     public void insertTestLeave(TestLeave testLeave, Integer flowStatus)
