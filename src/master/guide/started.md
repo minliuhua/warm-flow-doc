@@ -9,14 +9,20 @@
 > 熟悉 Java 构建工具，比如 Maven
 
 ## 1、导入sql，按需求执行
-```shell
-如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行  
-如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行
-```
+
+- 首次导入，先创建数据库，找到对应数据库的全量脚本[warm-flow-all.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql)，执行  
+- 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
+
+<table>
+    <tr>
+        <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
+        <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
+    </tr>
+</table>
+
 ## 2、官网九套流程定义xml
-```shell
-地址：warm-flow\warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
-```
+
+[官网九套流程定义xml](https://gitee.com/dromara/warm-flow/tree/master/warm-flow-test/warm-flow-core-test/src/main/resources)
 
 
 ## 3、maven依赖
