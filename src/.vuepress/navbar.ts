@@ -5,7 +5,7 @@ export default navbar([
     {
         text: '文档导航',
         icon: '/icons/community.svg',
-        link: '/common/projectexample.md',
+        link: '/common/introduction.md',
     },
     {
         text: '快速开始',
