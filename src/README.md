@@ -64,6 +64,12 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 ---
 ## **👍友情链接**
 <style>
+  .vp-feature-item:hover {
+    background-color: var(--bg-color-secondary);
+    box-shadow: 0 2px 12px 0 var(--card-shadow);
+    transform: translate(-2px, -2px);
+    transform: scale(1.05);
+  }
     .links {
         display: flex;
         flex-wrap: wrap;
