@@ -17,9 +17,6 @@ const sidebarTopArray = [
   `<a href="http://warm-flow.cn/" target="_blank">
     <img className="no-zoom" height="110px" width="110px" src="/logo.png">
   </a>`,
-  `<a href="http://warm-flow.cn/" target="_blank">
-    <img className="no-zoom" height="110px" width="110px" src="/logo.png">
-  </a>`,
 ];
 
 const sidebarContent = ref("");
@@ -48,7 +45,7 @@ watch(
     shuffle(sidebarTopArray);
 
     sidebarContent.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">特别赞助</div>
+      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">今日心情</div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>
