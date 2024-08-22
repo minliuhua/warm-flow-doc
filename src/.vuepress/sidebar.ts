@@ -14,7 +14,7 @@ export default sidebar({
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
-                '/master/guide/form.md',
+                '/master/guide/ormusagetips.md',
                 '/master/guide/processterm.md',
                 '/master/guide/processrule.md',
             ],
@@ -26,10 +26,10 @@ export default sidebar({
             children: [
                 '/master/guide/logicdelete.md',
                 '/master/guide/tenant.md',
+                '/master/guide/form.md',
                 '/master/guide/customstatus.md',
                 '/master/guide/listener.md',
                 '/master/guide/expression.md',
-                '/master/guide/ormusagetips.md',
             ],
         }
     ],
