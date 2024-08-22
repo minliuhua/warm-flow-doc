@@ -176,7 +176,7 @@ solon项目
 
 ## 6、代码示例
 
-> 测试代码在warm-flow中warm-flow-test目录下，warm-flow-xxx-test模块的测类
+> 测试代码在warm-flow中[warm-flow-test](https://gitee.com/dromara/warm-flow/tree/master/warm-flow-test)目录下，warm-flow-xxx-test模块的测类
 
 
 ## 7、部署流程
