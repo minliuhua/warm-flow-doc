@@ -45,7 +45,7 @@ watch(
     shuffle(sidebarTopArray);
 
     sidebarContent.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">今日心情</div>
+      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">赞助商</div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>
