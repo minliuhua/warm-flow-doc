@@ -220,3 +220,11 @@ public void skipFlow() throws Exception {
         System.out.println("流转后流程实例：" + instance.toString());
     }
 ```
+
+## 11、初学者推荐学习路线
+
+### 11.1、推荐集成案例hh-vue
+[项目地址](../../common/projectexample.md)
+
+### 11.2、推荐学习视频
+[新手教学视频，社区同学录制](https://www.bilibili.com/video/BV1Ci42117pK/)

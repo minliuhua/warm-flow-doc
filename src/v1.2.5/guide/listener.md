@@ -57,6 +57,10 @@ public class FinishListener implements Listener {
 ```
 
 ### 3.3、分派监听器实现类例子
+如下图中示例可以很容易实现
+<img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
+
+
 - 注意： 
   - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
   - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
@@ -89,7 +93,7 @@ public class AssignmentListener implements Listener {
 ### 3.4、页面配置监听器
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应
 
-![](../../.vuepress/public/listenerUse.png)
+![](../../.vuepress/public/defNode.png)
 
 
 ## 4、监听器参数使用
