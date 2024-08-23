@@ -14,8 +14,8 @@ const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
-  `<a href="http://apifox.com/?utm_source=pay&utm_medium=fast-request" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/">
+  `<a href="http://warm-flow.cn/" target="_blank">
+    <img className="no-zoom" height="110px" width="110px" src="/logo.png">
   </a>`,
 ];
 
@@ -45,9 +45,9 @@ watch(
     shuffle(sidebarTopArray);
 
     sidebarContent.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">特别赞助</div>
+      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">赞助商</div>
       <div style="width:230px;margin:5px auto;">
-        ${sidebarTopArray.slice(0, 4).join("\n  ")}
+        ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>
     `;
   },
