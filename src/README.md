@@ -10,14 +10,17 @@ actions:
 - text: GitHub
   link: https://github.com/dromara/warm-flow.git
   type: success
+  icon: /icons/github_home.svg
 
 - text: Gitee
   link: https://gitee.com/dromara/warm-flow.git
   type: success
+  icon: /icons/gitee_home.svg
   
 - text: GitCode
   link: https://gitcode.com/dromara/warm-flow
   type: success
+  icon: /icons/gitcode_home.svg
   
 - text: 开始学习 ➜
   link: /common/introduction.html

@@ -21,6 +21,14 @@
     }
   }
 }
+.vp-hero-actions {
+  display: flex;
+  align-items: center;
+  .vp-hero-action {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .theme-container {
   .vp-page {
