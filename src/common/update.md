@@ -21,12 +21,12 @@
   - 更新日志
     - [feat] 增加获取下个节点集合api  @xiarigang
     - [feat] id内存策略新增14、15位雪花算法支持
-    - [feat] 增加流程图展示，流程激活和挂起案例  @xiaoxiaoliu889
+    - [feat] 流程激活和挂起案例  @xiaoxiaoliu889
+    - [feat] 增加基于流程定义Id获取流程图  @xiaoxiaoliu889
     - [update] 流程状态改成字符串类型  @xiarigang
     - [update] 测试模块拆分独立仓库
     - [update] modes-sb删除加载配置文件，改为有上层jar加载
     - [update] flex solon版本yml弄错了，config调整
-    - [update] 获取初始流程图功能改为基于流程定义Id
     - [refactor] 流程版本号生成逻辑重构  @xiaoxiaoliu889
     - [fix] 修复deleteByTaskIds 中的根据无法正确删除user数据
     - [fix] 修复 jpa solon注解问题  @vanlin
