@@ -14,8 +14,8 @@
 
 ## 2、自定义表达式
 
-**1.扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
-**2.并且通过这个方法进行注册ExpressionUtil.setExpression**
+**1、扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
+**2、并且通过这个方法进行注册ExpressionUtil.setExpression**
 
 <table>
     <tr>
