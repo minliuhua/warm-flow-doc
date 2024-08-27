@@ -1,85 +1,69 @@
 # 填充器
+> [!IMPORTANT]
+> 如果觉得内置的id、创建时间和更新时间自动生成规则，不符合业务要求，可通过填充器覆盖
 
-## DefService流程定义接口
+## 1、自定义填充器，并继承DataFillHandler
+```java
+public class CustomDataFillHandler implements DataFillHandler {
 
-`importXml(is)`：导入流程定义xml的输入流is，保存流程定义数据，返回流程定义对象
+    /**
+     * 填充主键
+     */
+    @Override
+    public void idFill(Object object) {
+        RootEntity entity = (RootEntity) object;
+        if (ObjectUtil.isNotNull(entity)) {
+            if (Objects.isNull(entity.getId())) {
+                entity.setId(IdUtils.nextId());
+            }
+        }
+    }
 
-`saveXml(def))`： 传入流程定义id、流程定义xml字符串，保存流程定义数据  
+    /**
+     * 填充创建时间和更新时间
+     */
+    @Override
+    public void insertFill(Object object) {
+        RootEntity entity = (RootEntity) object;
+        if (ObjectUtil.isNotNull(entity)) {
+            entity.setCreateTime(ObjectUtil.isNotNull(entity.getCreateTime()) ? entity.getCreateTime() : new Date());
+            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getCreateTime() : new Date());
+        }
+    }
 
-`exportXml(id)`： 导出流程定义xml的Document对象  
+    /**
+     * 填充更新时间
+     */
+    @Override
+    public void updateFill(Object object) {
+        RootEntity entity = (RootEntity) object;
+        if (ObjectUtil.isNotNull(entity)) {
+            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getCreateTime() : new Date());
+        }
+    }
+}
 
-`xmlString(id)`： 获取流程定义xml的字符串  
+```
 
-`removeDef(ids)`： 删除流程定义相关数据  
+## 2、注入bean
+### 2.1、通过@Component方式注入
 
-`publish(id)`： 发布流程定义  
+### 2.2、yaml配置方式
+```yml
+# warm-flow工作流配置
+warm-flow:
+  # 填充器 （可通过配置文件注入，也可用@Bean/@Component方式）
+  data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
+```
 
-`unPublish(id)`： 取消发布流程定义  
+### 2.3、@Configuration+@Bean配置方式
+```java
+@Configuration
+public class WarmFlowConfig {
 
-`copyDef(id)`： 复制流程定义   
-
-`flowChart(instanceId)`： 获取流程图的图片流
-
-## InsService流程实例接口
-
-`start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
-- flowCode:流程编码 [必传]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-- ext:扩展字段，预留给业务系统使用 [按需传输]
-
-`skipByInsId(instanceId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
-- skipType:跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode:节点编码 [如果指定跳转节点,必传]
-- permissionFlag:办理人权限标识 [按需传输]
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-
-`termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-
-`remove(instanceIds)`：根据实例ids，删除流程
-
-## TaskService待办任务接口
-
-`skip(taskId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
-- skipType:跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode:节点编码 [如果指定跳转节点,必传]
-- permissionFlag:办理人权限标识 [按需传输]
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-
-`termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
-
-`depute(taskId, curUser, permissionFlag, addHandlers, message)`：委派, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
-
-`addSignature(taskId, curUser, permissionFlag, addHandlers, message)`：加签，增加办理人
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
-
-`reductionSignature(taskId, curUser, permissionFlag, addHandlers, message)`：减签，减少办理人
-- taskId 修改的任务id
-- curUser 当前办理人唯一标识
-- permissionFlag 用户权限标识集合
-- addHandlers 增加办理人：加签，转办，委托
-- message 审批意见
+    @Bean
+    public DataFillHandler dataFillHandler() {
+        return new CustomDataFillHandler();
+    }
+}
+```

@@ -1,12 +1,13 @@
 import {defineUserConfig} from "vuepress";
 
-import {removePwaPlugin} from "@vuepress/plugin-remove-pwa";
 import {viteBundler} from '@vuepress/bundler-vite'
+import {path} from "vuepress/utils";
 
-import theme from "./theme";
+import theme from "./theme.js";
 
 export default defineUserConfig({
     base: "/",
+    port: 8081,
     locales: {
         "/": {
             lang: "zh-CN",
@@ -15,10 +16,13 @@ export default defineUserConfig({
         },
     },
     theme,
+    alias: {
+        "@theme-hope/layouts/Layout": path.resolve(
+            __dirname,
+            "./layouts/Layout.vue",
+        )
+    },
     shouldPrefetch: true,
-    plugins: [
-        removePwaPlugin({}),
-    ],
     bundler: viteBundler({
         viteOptions: {},
         vuePluginOptions: {},

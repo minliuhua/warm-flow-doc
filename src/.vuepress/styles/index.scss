@@ -21,6 +21,14 @@
     }
   }
 }
+.vp-hero-actions {
+  display: flex;
+  align-items: center;
+  .vp-hero-action {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .theme-container {
   .vp-page {
@@ -29,7 +37,7 @@
 }
 
 .vp-sidebar > .vp-sidebar-links {
-  padding: 2.8rem 0;
+  padding: 8px 0 2.8rem 0;
 }
 
 .vp-sidebar {
@@ -46,3 +54,10 @@
   }
 }
 
+.theme-hope-content table img {
+  max-width: 100% !important;
+}
+
+.external-link-icon .theme-hope-content a[href*="://"]:not(.no-external-link-icon)::after, .external-link-icon .theme-hope-content a[target=_blank]:not(.no-external-link-icon)::after {
+  display: none;
+}

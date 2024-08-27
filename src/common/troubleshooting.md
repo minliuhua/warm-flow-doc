@@ -1,9 +1,14 @@
 # 常见问题
 
 ## 1、id精度丢失    
-此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度（感谢【luoheyu】提供测试意见）    
+此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度（感谢【luoheyu】提供测试意见）   
+**第一个方案：**
 按照这个把long序列化成字符串，前端页面就不会丢失精度了，获取查看hh-vue项目如何处理
 http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98
+</br>
+**第二个方案：**
+参照如下文章，继承填充器接口，修改id生成方式
+[Warm-Flow工作流引擎数据库主键自增策略实现](https://juejin.cn/post/7402110528298074152)
 
 ## 2、流程图片中文乱码
 生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
@@ -125,3 +130,7 @@ public class MybatisPlusConfig
 </details>
 
 5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus  
+
+## 6、导入依赖包失败
+### 6.1、可尝试切换maven版本 （感谢【一拳打爆常大宝】）
+如maven3.9.6切换为低版本3.8.2

@@ -7,20 +7,23 @@ heroText: warm-flow工作流
 tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。
 actions:
 
-- text: github
+- text: GitHub
   link: https://github.com/dromara/warm-flow.git
   type: success
+  icon: /icons/github_home.svg
 
-- text: gitee
+- text: Gitee
   link: https://gitee.com/dromara/warm-flow.git
   type: success
+  icon: /icons/gitee_home.svg
   
-- text: 加入群聊
-  link: /common/joingroup.md
+- text: GitCode
+  link: https://gitcode.com/dromara/warm-flow
   type: success
+  icon: /icons/gitcode_home.svg
   
 - text: 开始学习 ➜
-  link: /master/guide/introduction.html
+  link: /common/introduction.html
   type: primary  
 
 
@@ -64,6 +67,12 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 ---
 ## **👍友情链接**
 <style>
+  .vp-feature-item:hover {
+    background-color: var(--bg-color-secondary);
+    box-shadow: 0 2px 12px 0 var(--card-shadow);
+    transform: translate(-2px, -2px);
+    transform: scale(1.05);
+  }
     .links {
         display: flex;
         flex-wrap: wrap;
@@ -74,6 +83,7 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
     }
 
     .links a img {
+        width: 200px !important;
         height: 200px !important;
     }
 </style>
@@ -86,13 +96,12 @@ footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
 
 <script>
 
-import imageSrc from '/flowableHb.jpg';
-
 export default {
     data() {
         return {
             projectList: [
-              { href: "https://item.jd.com/13928958.html", src: imageSrc, alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
+              { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
+              { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
             ]
         }
     },

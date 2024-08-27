@@ -1,11 +1,12 @@
 # 监听器
 
 ## 1、监听器类型
-- create：创建监听器，任务创建时执行
-- start：开始监听器，任务开始办理时执行
-- permission：权限监听器，办理任务动态设置权限（后续不建议用）
-- assignment： 分派办理人监听器，动态修改代办任务信息
-- finish：结束监听器，当前任务完成后执行
+> [!IMPORTANT]
+> create：创建监听器，任务创建时执行
+> start：开始监听器，任务开始办理时执行
+> permission：权限监听器，办理任务动态设置权限（后续不建议用）
+> assignment： 分派办理人监听器，动态修改代办任务信息
+> finish：结束监听器，当前任务完成后执行
 
 ## 2、监听器生命周期图
 ![](../../.vuepress/public/listenerLife.png)
@@ -57,6 +58,10 @@ public class FinishListener implements Listener {
 ```
 
 ### 3.3、分派监听器实现类例子
+如下图中示例可以很容易实现
+<img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
+
+
 - 注意： 
   - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
   - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
@@ -89,7 +94,7 @@ public class AssignmentListener implements Listener {
 ### 3.4、页面配置监听器
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应
 
-![](../../.vuepress/public/listenerUse.png)
+![](../../.vuepress/public/defNode.png)
 
 
 ## 4、监听器参数使用

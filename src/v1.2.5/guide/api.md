@@ -39,27 +39,27 @@
 
 ### 2.1、开启流程
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
-- flowCode:流程编码 [必传]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-- ext:扩展字段，预留给业务系统使用 [按需传输]
-- flowStatus:流程状态，自定义流程状态[按需传输]
+- flowCode: 流程编码 [必传]
+- handler: 办理人唯一标识 [建议传]
+- variable: 流程变量 [按需传输]
+- ext: 扩展字段，预留给业务系统使用 [按需传输]
+- flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 2.2、流程跳转
 `skipByInsId(instanceId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
-- skipType:跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode:节点编码 [如果指定跳转节点,必传]
-- permissionFlag:办理人权限标识 [按需传输]
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-- flowStatus:流程状态，自定义流程状态[按需传输]
+- skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
+- nodeCode: 节点编码 [如果指定跳转节点,必传]
+- permissionFlag: 办理人权限标识 [按需传输]
+- message: 审批意见 [按需传输]
+- handler: 办理人唯一标识 [建议传]
+- variable: 流程变量 [按需传输]
+- flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 2.3、终止流程
 `termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- flowStatus:流程状态，自定义流程状态[按需传输]
+- message: 审批意见 [按需传输]
+- handler: 办理人唯一标识 [建议传]
+- flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 2.4、删除流程实例
 `remove(instanceIds)`：根据实例ids，删除流程
@@ -73,56 +73,56 @@
 ## 3、TaskService待办任务接口
 
 ### 3.1、流程跳转
-`skip(taskId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
-- skipType:跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode:节点编码 [如果指定跳转节点,必传]
-- permissionFlag:办理人权限标识 [按需传输]
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- variable:流程变量 [按需传输]
-- flowStatus:流程状态，自定义流程状态[按需传输]
+`skip(taskId, flowParams)`：传入流程任务id，流程跳转。flowParams包含如下字段：
+- skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
+- nodeCode: 节点编码 [如果指定跳转节点,必传]
+- permissionFlag: 办理人权限标识 [按需传输]
+- message: 审批意见 [按需传输]
+- handler: 办理人唯一标识 [建议传]
+- variable: 流程变量 [按需传输]
+- flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 3.2、终止流程
 `termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
-- message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
-- flowStatus:流程状态，自定义流程状态[按需传输]
+- message: 审批意见 [按需传输]
+- handler: 办理人唯一标识 [建议传]
+- flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 3.3、转办
 `transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id [必传]
-- curUser 当前办理人唯一标识 [必传]
-- permissionFlag 用户权限标识集合 [必传]
-- addHandlers 增加办理人：加签，转办，委托 [必传]
-- message 审批意见 [按需传输]
+- taskId: 修改的任务id [必传]
+- curUser: 当前办理人唯一标识 [必传]
+- permissionFlag: 用户权限标识集合 [必传]
+- addHandlers: 增加办理人：加签，转办，委托 [必传]
+- message: 审批意见 [按需传输]
 
 ### 3.4、委派
 `depute(taskId, curUser, permissionFlag, addHandlers, message)`：委派, 默认删除当然办理用户权限，转办后，当前办理不可办理
-- taskId 修改的任务id [必传]
-- curUser 当前办理人唯一标识 [必传]
-- permissionFlag 用户权限标识集合 [必传]
-- addHandlers 增加办理人：加签，转办，委托 [必传]
-- message 审批意见 [按需传输]
+- taskId: 修改的任务id [必传]
+- curUser: 当前办理人唯一标识 [必传]
+- permissionFlag: 用户权限标识集合 [必传]
+- addHandlers: 增加办理人：加签，转办，委托 [必传]
+- message: 审批意见 [按需传输]
 
 ### 3.5、加签
 `addSignature(taskId, curUser, permissionFlag, addHandlers, message)`：加签，增加办理人
-- taskId 修改的任务id [必传]
-- curUser 当前办理人唯一标识 [必传]
-- permissionFlag 用户权限标识集合 [必传]
-- addHandlers 增加办理人：加签，转办，委托 [必传]
-- message 审批意见 [按需传输]
+- taskId: 修改的任务id [必传]
+- curUser: 当前办理人唯一标识 [必传]
+- permissionFlag: 用户权限标识集合 [必传]
+- addHandlers: 增加办理人：加签，转办，委托 [必传]
+- message: 审批意见 [按需传输]
 
 ### 3.6、减签
 `reductionSignature(taskId, curUser, permissionFlag, addHandlers, message)`：减签，减少办理人
-- taskId 修改的任务id [必传]
-- curUser 当前办理人唯一标识 [必传]
-- permissionFlag 用户权限标识集合 [必传]
-- addHandlers 增加办理人：加签，转办，委托 [必传]
-- message 审批意见 [按需传输]
+- taskId: 修改的任务id [必传]
+- curUser: 当前办理人唯一标识 [必传]
+- permissionFlag: 用户权限标识集合 [必传]
+- addHandlers: 增加办理人：加签，转办，委托 [必传]
+- message: 审批意见 [按需传输]
 
 ### 3.7、修改办理人
 `updateHandler(modifyHandler)`：修改办理人
-- curUser:办理人唯一标识 [按需传输]
+- curUser: 办理人唯一标识 [按需传输]
 - ignore: 转办忽略权限校验（true：忽略，false：不忽略）[按需传输]
 - permissionFlag: 用户所拥有的权限标识 [按需传输，ignore为false，则必传]
 - addHandlers: 增加办理人：加签，转办，委托 [按需传输]
@@ -130,3 +130,91 @@
 - message: 审批意见 [按需传输]
 - cooperateType: 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签）[按需传输]
 
+## 4、公共api接口
+### 4.1、根据id查询
+`getById(id)`：根据id查询
+- id: 主键 [必传]
+
+### 4.2、根据ids主键集合查询
+`getByIds(ids)`：根据ids主键集合查询
+- ids: 主键集合 [必传]
+
+### 4.3、分页查询
+`getById(entity, page)`：分页查询
+- entity: 查询实体 [必传]
+- page: 分页对象，支持设置排序字段 [必传]
+
+### 4.4、查询列表
+`list(entity)`：查询列表
+- entity: 查询实体 [必传]
+
+### 4.5、查询列表，可排序
+`list(entity, query)`：查询列表，可排序
+- entity: 查询实体 [必传]
+- query: 查询代理层处理，支持设置排序字段 [必传]
+
+### 4.6、查询一条记录
+`getOne(entity)`：查询一条记录
+- entity 查询实体 [必传]
+
+### 4.7、获取总数量
+`selectCount(entity)`：获取总数量
+- entity: 查询实体 [必传]
+
+### 4.8、判断是否存在
+`exists(entity)`：判断是否存在
+- entity: 查询实体 [必传]
+
+### 4.8、新增
+`save(entity)`：新增
+- entity: 实体 [必传]
+
+### 4.9、根据id修改
+`updateById(entity)`：根据id修改
+- entity: 实体 [必传]
+
+### 4.10、根据id删除
+`removeById(id)`：根据id删除
+- id: 实体 [必传]
+
+### 4.11、根据entity删除
+`remove(entity)`：根据entity删除
+- entity: 实体 [必传]
+
+### 4.12、根据ids批量删除
+`removeByIds(ids)`：根据ids批量删除
+- ids: 实体 [必传]
+
+### 4.13、批量新增
+`saveBatch(list)`：批量新增
+- list: 实体集合 [必传]
+
+### 4.14、批量新增
+`saveBatch(list, batchSize)`：批量新增
+- list: 需要插入的集合数据 [必传]
+- batchSize: 插入大小 [必传]
+
+### 4.15、批量更新
+`updateBatch(list)`：批量更新
+- list: 集合数据 [必传]
+
+### 4.16、id设置正序排列
+`orderById()`：id设置正序排列
+
+### 4.17、创建时间设置正序排列
+`orderByCreateTime()`：创建时间设置正序排列
+
+### 4.18、更新时间设置正序排列
+`orderByUpdateTime()`：更新时间设置正序排列
+
+### 4.19、设置正序排列
+`orderByAsc(orderByField)`：设置正序排列
+- orderByField: 排序字段 [必传]
+
+### 4.20、设置倒序排列
+`orderByDesc(orderByField)`：设置倒序排列
+- orderByField: 排序字段 [必传]
+
+### 4.21、用户自定义排序方案
+`orderBy(orderByField)`：用户自定义排序方案
+- orderByField: 排序字段 [必传]

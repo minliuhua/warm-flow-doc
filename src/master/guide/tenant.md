@@ -1,7 +1,9 @@
 # 多租户
 
 ## 1、Mybatis-plus
-> **Mybatis-plus只支持自身的多租户方式**
+> [!IMPORTANT]
+> Mybatis-plus只支持自身的多租户方式
+
 ### 1.1、spring
 ```java
 @Component
