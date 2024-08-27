@@ -22,7 +22,7 @@
 
 ## 2、官网九套流程定义xml
 
-[官网九套流程定义xml](https://gitee.com/dromara/warm-flow/tree/master/warm-flow-test/warm-flow-core-test/src/main/resources)
+[官网九套流程定义xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)
 
 
 ## 3、maven依赖
