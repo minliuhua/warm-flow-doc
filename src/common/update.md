@@ -30,6 +30,7 @@
     - [refactor] 流程版本号生成逻辑重构  @xiaoxiaoliu889
     - [fix] 修复deleteByTaskIds 中的根据无法正确删除user数据
     - [fix] 修复 jpa solon注解问题  @vanlin
+    - [fix] 修复 并行网关三个任务分支的时候，错误结束流程的问题  
 
 
  
