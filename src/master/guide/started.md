@@ -22,7 +22,7 @@
 
 ## 2、官网九套流程定义xml
 
-[官网九套流程定义xml](https://gitee.com/dromara/warm-flow/tree/master/warm-flow-test/warm-flow-core-test/src/main/resources)
+[官网九套流程定义xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)
 
 
 ## 3、maven依赖
@@ -33,7 +33,7 @@ springboot项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -43,7 +43,7 @@ solon项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -54,7 +54,7 @@ springboot项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -64,7 +64,7 @@ solon项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -83,7 +83,7 @@ springboot项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -93,7 +93,7 @@ solon项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -104,7 +104,7 @@ springboot项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -114,7 +114,7 @@ solon项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -125,7 +125,7 @@ springboot项目
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -145,7 +145,7 @@ solon项目
               <artifactId>solon.logging</artifactId>
           </exclusion>
       </exclusions>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
 </dependency>
 ```
 
@@ -176,7 +176,7 @@ solon项目
 
 ## 6、代码示例
 
-> 测试代码在warm-flow中[warm-flow-test](https://gitee.com/dromara/warm-flow/tree/master/warm-flow-test)目录下，warm-flow-xxx-test模块的测类
+> 测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类
 
 
 ## 7、部署流程
