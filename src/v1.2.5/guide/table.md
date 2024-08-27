@@ -164,7 +164,7 @@
 | 1     | id           | 主键id                                                       | BIGINT UNSIGNED | √        | √        |            |              |
 | 2     | type         | 人员类型（1代办任务的审批人权限 2代办任务的转办人权限 3待办任务的委托人权限） | CHAR(1)         |          | √        |            |              |
 | 3     | processed_by | 权限人                                                       | VARCHAR(80)     |          |          |            |              |
-| 4     | associated   | 关联表id                                                     | BIGINT          |          | √        |            |              |
+| 4     | associated   | 任务表id                                                     | BIGINT          |          | √        |            |              |
 | 5     | create_time  | 创建时间                                                     | DATETIME        |          |          |            |              |
 | 6     | create_by    | 创建人                                                       | VARCHAR(80)     |          |          |            |              |
 | 7     | update_time  | 更新时间                                                     | DATETIME        |          |          |            |              |
