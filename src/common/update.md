@@ -37,6 +37,7 @@
 
   - 更新日志
     - [feat] 增加获取下个节点集合api  @xiarigang
+    - [feat] 全局监听器  @xiaoxiaoliu889
     - [feat] id内存策略新增14、15位雪花算法支持
     - [feat] 流程激活和挂起案例  @xiaoxiaoliu889
     - [feat] 增加基于流程定义Id获取流程图  @xiaoxiaoliu889
