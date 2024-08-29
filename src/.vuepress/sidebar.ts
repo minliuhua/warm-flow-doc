@@ -74,7 +74,7 @@ export default sidebar({
             link: '/common/troubleshooting.md',
         },
         {
-            text: "更新计划",
+            text: "更新日志",
             collapsible: false,
             link: '/common/update.md',
         },

@@ -18,7 +18,7 @@ export default navbar([
         link: '/common/troubleshooting.md'
     },
     {
-        text: '更新计划',
+        text: '更新日志',
         icon: '/icons/member.svg',
         link: '/common/update.md'
     },
