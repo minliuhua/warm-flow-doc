@@ -52,7 +52,7 @@ public class CustomDataFillHandler implements DataFillHandler {
 ```yml
 # warm-flow工作流配置
 warm-flow:
-  # 填充器 （可通过配置文件注入，也可用@Bean/@Component方式）
+  # 填充器，内部有默认实现，如果不满足实际业务，可通过此配置自定义实现
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
 ```
 

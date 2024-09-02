@@ -74,7 +74,7 @@ export default sidebar({
             link: '/common/troubleshooting.md',
         },
         {
-            text: "更新计划",
+            text: "更新日志",
             collapsible: false,
             link: '/common/update.md',
         },
@@ -83,6 +83,38 @@ export default sidebar({
             collapsible: false,
             link: '/common/support.md',
         },
+    ],
+    "/v1.2.7/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.2.7/guide/started.md',
+                '/v1.2.7/guide/processdemo.md',
+                '/v1.2.7/guide/table.md',
+                '/v1.2.7/guide/config.md',
+                '/v1.2.7/guide/api.md',
+                '/v1.2.7/guide/datafillhandler.md',
+                '/v1.2.7/guide/variable.md',
+                '/v1.2.7/guide/ormusagetips.md',
+                '/v1.2.7/guide/processterm.md',
+                '/v1.2.7/guide/processrule.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.2.7/guide/listener.md',
+                '/v1.2.7/guide/logicdelete.md',
+                '/v1.2.7/guide/tenant.md',
+                '/v1.2.7/guide/form.md',
+                '/v1.2.7/guide/customstatus.md',
+                '/v1.2.7/guide/expression.md',
+            ],
+        }
     ],
     "/v1.2.6/guide/": [
         {
