@@ -2,12 +2,21 @@
 
 ## 1、id精度丢失    
 此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度（感谢【luoheyu】提供测试意见）   
-**第一个方案：**
-按照这个把long序列化成字符串，前端页面就不会丢失精度了，获取查看hh-vue项目如何处理
-http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98
-</br>
-**第二个方案：**
-参照如下文章，继承填充器接口，修改id生成方式
+**第一个方案：**   
+按照这个把long序列化成字符串，前端页面就不会丢失精度  
+[如何处理Long类型精度丢失问题](http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98)
+
+**第二个方案：**  
+通过设置id生成器类型，修改id生成方式  
+```yml
+# warm-flow工作流配置
+warm-flow:
+  # id生成器类型, 不填默认19位雪花算法, SnowId14:14位，SnowId15:15位， SnowFlake19：19位
+  key_type: SnowId19
+```
+
+**第三个方案：**    
+参照如下文章，继承填充器接口，修改id生成方式  
 [Warm-Flow工作流引擎数据库主键自增策略实现](https://juejin.cn/post/7402110528298074152)
 
 ## 2、流程图片中文乱码
