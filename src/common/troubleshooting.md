@@ -3,101 +3,101 @@
 ## 1、id精度丢失
 
 此项目目前使用的是雪花算法生成id，可能导致前端页面获取丢失精度（感谢【luoheyu】提供测试意见）   
-**第一个方案：**
-按照这个把long序列化成字符串，前端页面就不会丢失精度了，获取查看hh-vue项目如何处理
+### 方案1：处理长度过长的Long类型 
+只处理长度过长的Long类型，前端页面就不会丢失精度了 (感谢【Colin】提供解决方案)
 
-- 优雅版（推荐）只处理超过精度的Long类型
-    - 创建一个BigNumberSerializer（用来处理超过JS数据范围的Long类型）
-     ```java
+创建一个BigNumberSerializer（用来处理超过JS数据范围的Long类型）
+```java
+/**
+ * 超出 JS 最大最小值 处理
+ */
+@JacksonStdImpl
+public class BigNumberSerializer extends NumberSerializer {
+
     /**
-     * 超出 JS 最大最小值 处理
+     * 根据 JS Number.MAX_SAFE_INTEGER 与 Number.MIN_SAFE_INTEGER 得来
      */
-    @JacksonStdImpl
-    public class BigNumberSerializer extends NumberSerializer {
-    
-        /**
-         * 根据 JS Number.MAX_SAFE_INTEGER 与 Number.MIN_SAFE_INTEGER 得来
-         */
-        private static final long MAX_SAFE_INTEGER = 9007199254740991L;
-        private static final long MIN_SAFE_INTEGER = -9007199254740991L;
-    
-        /**
-         * 提供实例
-         */
-        public static final BigNumberSerializer INSTANCE = new BigNumberSerializer(Number.class);
-    
-        public BigNumberSerializer(Class<? extends Number> rawType) {
-            super(rawType);
-        }
-    
-        @Override
-        public void serialize(Number value, JsonGenerator gen, SerializerProvider provider) throws IOException {
-            // 超出范围 序列化位字符串
-            if (value.longValue() > MIN_SAFE_INTEGER && value.longValue() < MAX_SAFE_INTEGER) {
-                super.serialize(value, gen, provider);
-            } else {
-                gen.writeString(value.toString());
-            }
+    private static final long MAX_SAFE_INTEGER = 9007199254740991L;
+    private static final long MIN_SAFE_INTEGER = -9007199254740991L;
+
+    /**
+     * 提供实例
+     */
+    public static final BigNumberSerializer INSTANCE = new BigNumberSerializer(Number.class);
+
+    public BigNumberSerializer(Class<? extends Number> rawType) {
+        super(rawType);
+    }
+
+    @Override
+    public void serialize(Number value, JsonGenerator gen, SerializerProvider provider) throws IOException {
+        // 超出范围 序列化位字符串
+        if (value.longValue() > MIN_SAFE_INTEGER && value.longValue() < MAX_SAFE_INTEGER) {
+            super.serialize(value, gen, provider);
+        } else {
+            gen.writeString(value.toString());
         }
     }
-     ```
-    - 添加JacksonConfig配置全局序列化（针对所有属性）
-        - 以Jackson2ObjectMapperBuilderCustomizer为例
-          ```java
-            @Configuration
-            public class JacksonConfig {
-          
-          
-              @Bean
-              public Jackson2ObjectMapperBuilderCustomizer customizer() {
-                  return builder -> {
-          
-                      ... 其他配置....
-          
-                      ... 其他配置....
-               
-                      JavaTimeModule javaTimeModule = new JavaTimeModule();
-                    
-                      //Long,BigInteger  转为 String 防止 js 丢失精度
-                      javaTimeModule.addSerializer(Long.class, BigNumberSerializer.INSTANCE);
-                      javaTimeModule.addSerializer(Long.TYPE, BigNumberSerializer.INSTANCE);
-                      javaTimeModule.addSerializer(BigInteger.class, BigNumberSerializer.INSTANCE);
-                      
-                      builder.modules(javaTimeModule);
-                  };
-              }
-          }
-          ```
-            - 其他方式
-              ```java
-                @Configuration
-                public class JacksonConfig {
+}
+```
+添加JacksonConfig配置全局序列化（针对所有属性），一下两种方式任选其一
+```java
+@Configuration
+public class JacksonConfig {
     
-                @Bean
-                public MappingJackson2HttpMessageConverter jackson2HttpMessageConverter() {
-                    final Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder();
-                    final ObjectMapper objectMapper = builder.build();
-                     ... 其他配置....
+    // 方式一  
+    @Bean
+    public Jackson2ObjectMapperBuilderCustomizer customizer() {
+        return builder -> {
+            
+            ... 其他配置....
+     
+            JavaTimeModule javaTimeModule = new JavaTimeModule();
           
-                     ... 其他配置....
-              
-                    SimpleModule simpleModule = new SimpleModule();
-                    // Long,BigInteger 转为 String 防止 js 丢失精度
-                   simpleModule.addSerializer(Long.class, BigNumberSerializer.INSTANCE);
-                   simpleModule.addSerializer(Long.TYPE, BigNumberSerializer.INSTANCE);
-                   simpleModule.addSerializer(BigInteger.class, BigNumberSerializer.INSTANCE);
-                   objectMapper.registerModule(simpleModule);
-                  
-                    return new MappingJackson2HttpMessageConverter(objectMapper);
-                }
-              }
-              ```
-- 普通版
-  http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98
-  </br>
+            //Long,BigInteger  转为 String 防止 js 丢失精度
+            javaTimeModule.addSerializer(Long.class, BigNumberSerializer.INSTANCE);
+            javaTimeModule.addSerializer(Long.TYPE, BigNumberSerializer.INSTANCE);
+            javaTimeModule.addSerializer(BigInteger.class, BigNumberSerializer.INSTANCE);
+            
+            builder.modules(javaTimeModule);
+        };
+    }
+    
+    // 方式二
+    @Bean
+    public MappingJackson2HttpMessageConverter jackson2HttpMessageConverter() {
+        final Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder();
+        final ObjectMapper objectMapper = builder.build();
+    
+         ... 其他配置....
 
-**第二个方案：**
-参照如下文章，继承填充器接口，修改id生成方式
+        SimpleModule simpleModule = new SimpleModule();
+        // Long,BigInteger 转为 String 防止 js 丢失精度
+        simpleModule.addSerializer(Long.class, BigNumberSerializer.INSTANCE);
+        simpleModule.addSerializer(Long.TYPE, BigNumberSerializer.INSTANCE);
+        simpleModule.addSerializer(BigInteger.class, BigNumberSerializer.INSTANCE);
+        objectMapper.registerModule(simpleModule);
+
+        return new MappingJackson2HttpMessageConverter(objectMapper);
+    }
+}
+```
+
+### 方案2：序列化所有long类型
+[如何处理Long类型精度丢失问题](http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98)
+
+
+### 方案3：通过yml配置
+通过设置id生成器类型，修改id生成方式
+```yml
+# warm-flow工作流配置
+warm-flow:
+  # id生成器类型, 不填默认19位雪花算法, SnowId14:14位，SnowId15:15位， SnowFlake19：19位
+  key_type: SnowId19
+```
+
+### 方案4：自定义id生成策略
+参照如下文章，继承填充器接口，修改id生成方式  
 [Warm-Flow工作流引擎数据库主键自增策略实现](https://juejin.cn/post/7402110528298074152)
 
 ## 2、流程图片中文乱码
