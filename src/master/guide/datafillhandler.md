@@ -6,9 +6,6 @@
 ```java
 public class CustomDataFillHandler implements DataFillHandler {
 
-    /**
-     * 填充主键
-     */
     @Override
     public void idFill(Object object) {
         RootEntity entity = (RootEntity) object;
@@ -19,21 +16,16 @@ public class CustomDataFillHandler implements DataFillHandler {
         }
     }
 
-    /**
-     * 填充创建时间和更新时间
-     */
     @Override
     public void insertFill(Object object) {
         RootEntity entity = (RootEntity) object;
         if (ObjectUtil.isNotNull(entity)) {
-            entity.setCreateTime(ObjectUtil.isNotNull(entity.getCreateTime()) ? entity.getCreateTime() : new Date());
-            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getCreateTime() : new Date());
+            Date date = ObjectUtil.isNotNull(entity.getCreateTime())? entity.getCreateTime() : new Date();
+            entity.setCreateTime(date);
+            entity.setUpdateTime(date);
         }
     }
 
-    /**
-     * 填充更新时间
-     */
     @Override
     public void updateFill(Object object) {
         RootEntity entity = (RootEntity) object;
