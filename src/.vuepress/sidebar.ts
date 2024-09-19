@@ -30,6 +30,7 @@ export default sidebar({
                 '/master/guide/form.md',
                 '/master/guide/customstatus.md',
                 '/master/guide/expression.md',
+                '/master/guide/jsonlib.md',
             ],
         }
     ],
