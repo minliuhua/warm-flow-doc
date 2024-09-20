@@ -14,11 +14,13 @@ FlowFactory.defService()
 
 **获取组件中的mapper，使用mybaits-plus的自带方法**
 ```java
-  // 获取Mapper方式
-  FlowTaskMapper taskMapper = FrameInvoker.getBean(FlowTaskMapper.class);
-  LambdaQueryWrapper<FlowTask> taskWrapper = new LambdaQueryWrapper<>();
-  taskWrapper.eq(FlowTask::getBusinessId, "1");
-  taskMapper.selectList(taskWrapper);
+
+// 第一种方式
+@Resource
+private FlowTaskMapper taskMapper;
+
+// 第二种方式
+FlowTaskMapper taskMapper = FrameInvoker.getBean(FlowTaskMapper.class);
 ```
 
 ## 2、JPA
@@ -70,9 +72,12 @@ entityManager.createQuery(criteriaUpdate).executeUpdate()
 
 **获取组件中的mapper，使用mybaits-flex的自带方法**
 ```java
-  // 获取Mapper方式
-  FlowDefinitionMapper definitionMapper = FrameInvoker.getBean(FlowDefinitionMapper.class);
-  QueryWrapper queryWrapper = QueryWrapper.create();
-  queryWrapper.in(FlowDefinition::getFlowCode, flowCodeList);
-  definitionMapper.selectListByQueryAs(queryWrapper);
+
+// 第一种方式
+@Resource
+private FlowTaskMapper taskMapper;
+
+// 第二种方式
+FlowDefinitionMapper definitionMapper = FrameInvoker.getBean(FlowDefinitionMapper.class);
+
 ```
