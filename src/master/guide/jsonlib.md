@@ -6,6 +6,7 @@
 ## json库扩展
 - 扩展json库需要实现`JsonConvert`接口，并实现`strToMap`和`mapToStr`方法
 - 并通过spi机制加载，可参照`warm-flow-plugin-json`模块
+- 在resource目录下新建`META-INF\services`文件夹，并在该文件夹下新建文件`com.warm.flow.core.json.JsonConvert`, 配置实现类的全限定名，如`com.warm.plugin.json.JsonConvertJackson`
 
 ```java
 public class JsonConvertJackson implements JsonConvert {
