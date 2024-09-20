@@ -48,8 +48,8 @@
 ### 2.2、流程跳转
 `skipByInsId(instanceId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
 - skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode: 节点编码 [如果指定跳转节点,必传]
-- permissionFlag: 办理人权限标识 [按需传输]
+- nodeCode: 节点编码 [如果指定节点,可任意跳转到对应节点,按需传输]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等[只有未设置办理人时可不传]
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
@@ -75,8 +75,8 @@
 ### 3.1、流程跳转
 `skip(taskId, flowParams)`：传入流程任务id，流程跳转。flowParams包含如下字段：
 - skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
-- nodeCode: 节点编码 [如果指定跳转节点,必传]
-- permissionFlag: 办理人权限标识 [按需传输]
+- nodeCode: 节点编码 [如果指定节点,可任意跳转到对应节点,按需传输]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等[只有未设置办理人时可不传]
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
@@ -130,91 +130,100 @@
 - message: 审批意见 [按需传输]
 - cooperateType: 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签）[按需传输]
 
-## 4、公共api接口
-### 4.1、根据id查询
+## 4、NodeService节点接口
+### 4.1、获取下一个节点列表
+`getNextNodeList(definitionId, nowNodeCode, anyNodeCode, skipType, variable)`：根据流程定义和当前节点code获取下一节点,如是网关跳过取下一节点,并行网关返回多个节点
+- definitionId: 流程定义id [必传]
+- nowNodeCode: 当前节点code [必传]
+- anyNodeCode: anyNodeCode不为空，则可跳转anyNodeCode节点（优先级最高） [按需传输]
+- skipType: 跳转类型（PASS审批通过 REJECT退回） [必传]
+- variable: 流程变量,下一个节点是网关需要判断跳转条件,并行网关返回多个节点 [按需传输]
+
+## 5、公共api接口
+### 5.1、根据id查询
 `getById(id)`：根据id查询
 - id: 主键 [必传]
 
-### 4.2、根据ids主键集合查询
+### 5.2、根据ids主键集合查询
 `getByIds(ids)`：根据ids主键集合查询
 - ids: 主键集合 [必传]
 
-### 4.3、分页查询
+### 5.3、分页查询
 `getById(entity, page)`：分页查询
 - entity: 查询实体 [必传]
 - page: 分页对象，支持设置排序字段 [必传]
 
-### 4.4、查询列表
+### 5.4、查询列表
 `list(entity)`：查询列表
 - entity: 查询实体 [必传]
 
-### 4.5、查询列表，可排序
+### 5.5、查询列表，可排序
 `list(entity, query)`：查询列表，可排序
 - entity: 查询实体 [必传]
 - query: 查询代理层处理，支持设置排序字段 [必传]
 
-### 4.6、查询一条记录
+### 5.6、查询一条记录
 `getOne(entity)`：查询一条记录
 - entity 查询实体 [必传]
 
-### 4.7、获取总数量
+### 5.7、获取总数量
 `selectCount(entity)`：获取总数量
 - entity: 查询实体 [必传]
 
-### 4.8、判断是否存在
+### 5.8、判断是否存在
 `exists(entity)`：判断是否存在
 - entity: 查询实体 [必传]
 
-### 4.8、新增
+### 5.8、新增
 `save(entity)`：新增
 - entity: 实体 [必传]
 
-### 4.9、根据id修改
+### 5.9、根据id修改
 `updateById(entity)`：根据id修改
 - entity: 实体 [必传]
 
-### 4.10、根据id删除
+### 5.10、根据id删除
 `removeById(id)`：根据id删除
 - id: 实体 [必传]
 
-### 4.11、根据entity删除
+### 5.11、根据entity删除
 `remove(entity)`：根据entity删除
 - entity: 实体 [必传]
 
-### 4.12、根据ids批量删除
+### 5.12、根据ids批量删除
 `removeByIds(ids)`：根据ids批量删除
 - ids: 实体 [必传]
 
-### 4.13、批量新增
+### 5.13、批量新增
 `saveBatch(list)`：批量新增
 - list: 实体集合 [必传]
 
-### 4.14、批量新增
+### 5.14、批量新增
 `saveBatch(list, batchSize)`：批量新增
 - list: 需要插入的集合数据 [必传]
 - batchSize: 插入大小 [必传]
 
-### 4.15、批量更新
+### 5.15、批量更新
 `updateBatch(list)`：批量更新
 - list: 集合数据 [必传]
 
-### 4.16、id设置正序排列
+### 5.16、id设置正序排列
 `orderById()`：id设置正序排列
 
-### 4.17、创建时间设置正序排列
+### 5.17、创建时间设置正序排列
 `orderByCreateTime()`：创建时间设置正序排列
 
-### 4.18、更新时间设置正序排列
+### 5.18、更新时间设置正序排列
 `orderByUpdateTime()`：更新时间设置正序排列
 
-### 4.19、设置正序排列
+### 5.19、设置正序排列
 `orderByAsc(orderByField)`：设置正序排列
 - orderByField: 排序字段 [必传]
 
-### 4.20、设置倒序排列
+### 5.20、设置倒序排列
 `orderByDesc(orderByField)`：设置倒序排列
 - orderByField: 排序字段 [必传]
 
-### 4.21、用户自定义排序方案
+### 5.21、用户自定义排序方案
 `orderBy(orderByField)`：用户自定义排序方案
 - orderByField: 排序字段 [必传]

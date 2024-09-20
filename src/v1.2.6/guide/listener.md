@@ -1,12 +1,20 @@
 # 监听器
 
 ## 1、监听器类型
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > create：创建监听器，任务创建时执行
 > start：开始监听器，任务开始办理时执行
 > permission：权限监听器，办理任务动态设置权限（后续不建议用）
 > assignment： 分派办理人监听器，动态修改代办任务信息
 > finish：结束监听器，当前任务完成后执行
+
+## 2、全局监听器和局部监听器
+> [!IMPORTANT]  
+> 执行顺序：优先执行局部监听器，然后执行全局监听器  
+> 全局监听器：在流程定义中配置，所有节点任务都会执行  
+> 局部监听器：在流程节点中配置，只有指定节点任务才会执行
+
+
 
 ## 2、监听器生命周期图
 ![](../../.vuepress/public/listenerLife.png)
@@ -92,16 +100,21 @@ public class AssignmentListener implements Listener {
 ```
 
 ### 3.4、页面配置监听器
-传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应
+#### 3.4.1、局部监听器（流程节点配置）
 
-![](../../.vuepress/public/defNode.png)
+> 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
 
+<img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
+
+#### 3.4.1、全局监听器（流程定义配置）
+
+<img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 
 ## 4、监听器参数使用
 
 页面配置监听器时加上类路径
 
-![](../../.vuepress/public/listener1.png)
+<img src="../../.vuepress/public/listener1.png" width="500px" height="500px">
 
 ```java
     public void notify(ListenerVariable variable) {

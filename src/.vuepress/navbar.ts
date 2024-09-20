@@ -18,7 +18,7 @@ export default navbar([
         link: '/common/troubleshooting.md'
     },
     {
-        text: '更新计划',
+        text: '更新日志',
         icon: '/icons/member.svg',
         link: '/common/update.md'
     },
@@ -26,9 +26,10 @@ export default navbar([
         text: '历史版本',
         icon: '/icons/version.svg',
         children: [
-            { text: 'v1.2.5', link: '/v1.2.5/guide/introduction.html' },
-            { text: 'v1.2.4', link: '/v1.2.4/guide/introduction.html' },
-            { text: 'v1.2.3', link: '/v1.2.3/guide/introduction.html' },
+            { text: 'v1.2.7', link: '/v1.2.7/guide/started.md' },
+            { text: 'v1.2.6', link: '/v1.2.6/guide/started.md' },
+            { text: 'v1.2.4', link: '/v1.2.4/guide/started.md' },
+            { text: 'v1.2.3', link: '/v1.2.3/guide/started.md' },
         ]
     },
 ]);
