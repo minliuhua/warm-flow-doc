@@ -1,10 +1,10 @@
 # json库切换和扩展
 
 > [!IMPORTANT]
-> 目前支持Snack3、Jackson、fastjson和Gson三种json库，默认使用snack3
+> 目前支持Snack3、Jackson、fastjson和Gson四种json库，默认使用snack3
 
 ## json库切换
-- 切换json库只需要在pom.xml中排除原来的json库，引入新的即可, 默认使用snack3，需要切换为jackson
+- 切换json库只需要在pom.xml中排除默认的snack3库，引入新的即可，示例如下：
 
 ### 切换为Jackson
 ```pom.xml
