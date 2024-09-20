@@ -31,15 +31,15 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 
 ```java
 /**
- * 条件表达式
+ * 变量替换策略
  *
  * @author warm
  */
-public interface ExpressionStrategy {
+public interface VariableStrategy {
 
     /**
-     * 获取表达式类型
-     * @return 表达式类型
+     * 获取变量替换类型
+     * @return 变量替换类型
      */
     String getType();
 
@@ -49,8 +49,9 @@ public interface ExpressionStrategy {
      * @param variable 流程变量
      * @return 执行结果
      */
-    boolean eval(String expression, Map<String, Object> variable);
+    String eval(String expression, Map<String, Object> variable);
 }
+
 
 
 /**
