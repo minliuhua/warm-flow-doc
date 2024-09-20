@@ -8,15 +8,16 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/master/guide/started.md',
+                '/master/guide/processterm.md',
+                '/master/guide/processrule.md',
                 '/master/guide/processdemo.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
+                '/master/guide/variableStategy.md',
                 '/master/guide/ormusagetips.md',
-                '/master/guide/processterm.md',
-                '/master/guide/processrule.md',
             ],
         },
         {

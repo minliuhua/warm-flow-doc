@@ -111,7 +111,7 @@ warm-flow:
 /usr/share/fonts/zhFonts/SIMSUN.TTC: 宋体,SimSun:style=常规,Regular
 ```
 
-[zhFonts.zip](https://gitee.com/warm_4/warm-flow-doc/blob/main/file/zhFonts.zip)
+[zhFonts.zip](https://gitee.com/min290/file/blob/main/warm-flow-doc/zhFonts.zip)
 将文件解压至/usr/share/fonts目录下，如果还不行，添加到jre的lib/fonts目录（感谢【我们好像在哪儿见过
 】提供的方案）
 
