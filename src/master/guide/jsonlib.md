@@ -6,6 +6,7 @@
 ## json库切换
 - 切换json库只需要在pom.xml中排除原来的json库，引入新的即可, 默认使用snack3，需要切换为jackson
 
+### 切换为Jackson
 ```pom.xml
 <dependency>
     <groupId>io.github.minliuhua</groupId>
@@ -21,7 +22,44 @@
 <dependency>
     <groupId>io.github.minliuhua</groupId>
     <artifactId>warm-flow-plugin-jackson</artifactId>
-    <version>1.2.7</version>
+</dependency>
+```
+
+### 切换为fastjson
+```pom.xml
+<dependency>
+    <groupId>io.github.minliuhua</groupId>
+    <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
+    <exclusions>
+        <exclusion>
+            <artifactId>warm-flow-plugin-snack</artifactId>
+            <groupId>io.github.minliuhua</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+<dependency>
+    <groupId>io.github.minliuhua</groupId>
+    <artifactId>warm-flow-plugin-fastjson</artifactId>
+</dependency>
+```
+
+### 切换为Gson
+```pom.xml
+<dependency>
+    <groupId>io.github.minliuhua</groupId>
+    <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
+    <exclusions>
+        <exclusion>
+            <artifactId>warm-flow-plugin-snack</artifactId>
+            <groupId>io.github.minliuhua</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+<dependency>
+    <groupId>io.github.minliuhua</groupId>
+    <artifactId>warm-flow-plugin-gson</artifactId>
 </dependency>
 ```
 
