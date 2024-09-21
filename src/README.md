@@ -47,7 +47,11 @@ features:
 
 - title: 条件表达式
   icon: '/icons/condition.svg'
-  details: 内置常见的条件表达式，并且支持自定义扩展
+  details: 内置常见的和spel条件表达式，并且支持自定义扩展
+  
+- title: 办理人变量表达式
+  icon: '/icons/condition.svg'
+  details: 内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
   
 - title: orm框架扩展
   icon: '/icons/extend.svg'

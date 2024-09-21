@@ -12,27 +12,14 @@
 - 9、SpEL
 - 10、自定义表达式
 
-## 2、自定义表达式
 
-**1、扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
-**2、并且通过这个方法进行注册ExpressionUtil.setExpression**
+## 2、Spring Expression Language（SpEL）
+- 前端配置如`@@spel@@|#{@user.eval()}`表达式，入库最终为`@@spel@@|#{@user.eval()}` 
 
-<table>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1703669588889979582/cbe952be_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
-    </tr>
-</table>
+<img src="https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png" width="500" >
 
-## 3、Spring Expression Language（SpEL）
-引入以下包，前端配置如`@@spel@@|#{@user.eval()}`表达式，即可解析
-测试案例`com.warm.flow.sb.test.expression.ExpressionTest`
-```xml
-<dependency>
-    <groupId>io.github.minliuhua</groupId>
-    <artifactId>warm-flow-plugin-spel</artifactId>
-</dependency>
-```
+
+- 测试案例`com.warm.flow.sb.test.expression.ExpressionTest`
 
 ```java
 @Component("user")
@@ -59,3 +46,14 @@ public class ExpressionTest extends FlowBaseTest {
 }
 ```
 
+## 3、自定义表达式
+
+**1、扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
+**2、并且通过这个方法进行注册ExpressionUtil.setExpression**
+
+<table>
+    <tr>
+        <td><img src="https://foruda.gitee.com/images/1703669588889979582/cbe952be_2218307.png"/></td>
+        <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
+    </tr>
+</table>

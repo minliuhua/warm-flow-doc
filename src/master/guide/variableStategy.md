@@ -2,7 +2,7 @@
 
 ## 1、内置表达式
 - 1、`@@default@@|${handler}`：handler是需要被流程变量中替换的标识
-- 2、`@@spel@@|#{@user.evalVariable()}`：#{@user.evalVariable()}是spel表达式
+- 2、`@@spel@@|#{@user.evalVar()}`：#{@user.evalVar()}是spel表达式
 
 ## 2、前端页面设置变量
 - 比如：`@@default@@|${handler},role:1,1`
