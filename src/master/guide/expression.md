@@ -14,7 +14,7 @@
 
 
 ## 2、Spring Expression Language（SpEL）
-- 前端配置如`@@spel@@|#{@user.eval()}`表达式，入库最终为`@@spel@@|#{@user.eval()}` 
+- 前端配置如`#{@user.eval()}`表达式，入库前要拼接前缀方便区分表达式类型，最终为`@@spel@@|#{@user.eval()}` 
 
 <img src="https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png" width="500" >
 
