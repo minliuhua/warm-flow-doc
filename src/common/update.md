@@ -16,7 +16,7 @@
 
  
 ## 开发中计划
-### v1.3.0 2024-09-18
+### v1.3.0 2024-10-12
   - 【升级注意事项】
     - 无
     
@@ -33,7 +33,9 @@
 
 - 更新日志
     - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展       
-    - [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展              
+    - [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展    
+    - [feat] ListenerVariable监听器变量新增FlowParams字段，方便开始监听器全局传递参数
+    - [feat] 终止新增对监听器的支持
     - [update] 条件表达式spring默认支持spel                            
     - [update] 历史记录改为单条保存，删除重复代码                              
     - [update] 修改FlowUserDao的bean名称                           
