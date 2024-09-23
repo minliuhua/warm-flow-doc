@@ -22,7 +22,7 @@
     
   - 更新日志
     - 动态表单支持                         @vanlin
-    - 设计器考虑独立出来，可以单独引入使用     @晓华
+    - 设计器考虑独立出来，可以单独引入使用      @晓华
     - 撤回                               @xiarigang
     - 对代码通过工具进行扫描，并解决漏洞       @晓华
     - 增加单元测试                         @晓华
@@ -38,7 +38,8 @@
     - [feat] 终止新增对监听器的支持
     - [update] 条件表达式spring默认支持spel                            
     - [update] 历史记录改为单条保存，删除重复代码                              
-    - [update] 修改FlowUserDao的bean名称                           
+    - [update] 修改FlowUserDao的bean名称          
+    - [update] 中间节点拆分为或签，会签，票签
     - [fix] 修复历史记录创建时间相等，导致流程图渲染异常                         
     - [fix]修复Mybatis逻辑删除变成真实删除的缺陷                               @xiarigang
     - [refactor] 重构id生成器，支持orm默认策略，删除数据填充默认实现类，改为匿名类  
