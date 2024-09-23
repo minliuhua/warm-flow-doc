@@ -117,7 +117,6 @@ public class GlobalFinishListener implements Listener {
       // 可以统一使用一个全局监听器，不同实体类，不同的操作
       if (o instanceof TestLeave) {
         TestLeave testLeave = (TestLeave) o;
-        testLeave= testLeaveMapper.selectTestLeaveById(testLeave.getId());
         testLeave.setNodeCode(instance.getNodeCode());
         testLeave.setNodeName(instance.getNodeName());
         testLeave.setNodeType(instance.getNodeType());
