@@ -59,7 +59,7 @@ public class GlobalStartListener implements Listener {
   private static final Logger log = LoggerFactory.getLogger(GlobalStartListener.class);
 
   /**
-   * 这里的设置办理人、权限等操作，也可以放到业务代码中办理前设置，或者局部监听器
+   * 设置办理人id、所拥有的权限等操作，也可以放到业务代码中办理前设置，或者局部监听器
    * @param listenerVariable 监听器变量
    */
   @Override
@@ -102,7 +102,7 @@ public class GlobalFinishListener implements Listener {
   private TestLeaveMapper testLeaveMapper;
 
   /**
-   * 这里的新增或者更新操作，也可以放到业务代码中办理完成后，或者局部监听器
+   * 业务表新增或者更新操作，也可以放到业务代码中办理完成后，或者局部监听器
    * @param listenerVariable 监听器变量
    */
   @Override
