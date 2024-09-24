@@ -14,35 +14,44 @@
 
 
 ## 2、Spring Expression Language（SpEL）
-- 前端配置如`#{@user.eval()}`表达式，入库前要拼接前缀方便区分表达式类型，最终为`@@spel@@|#{@user.eval()}` 
+- 前端配置如`#{@user.eval(#flag)}`表达式，入库前要拼接前缀，方便区分表达式类型，最终为`@@spel@@|#{@user.eval(#flag)}` 
+- `#flag`为变量和以下方法入参命名一致，可不设置入参
 
-<img src="https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png" width="500" >
-
-
-- 测试案例`com.warm.flow.sb.test.expression.ExpressionTest`
+<img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
 
 ```java
 @Component("user")
 public class User {
 
-    public boolean eval() {
-        return true;
+    /**
+     * spel条件表达：判断大于等4
+     * @param flag 待判断的字符串
+     * @return boolean
+     */
+    public boolean eval(String flag) {
+        BigDecimal a = new BigDecimal(flag);
+        BigDecimal b = new BigDecimal("4");
+        return a.compareTo(b) > 0;
     }
 }
 
-@Slf4j
-@SpringBootTest
-public class ExpressionTest extends FlowBaseTest {
+/**
+ * 新增OA 请假申请
+ *
+ * @param testLeave OA 请假申请
+ * @return 结果
+ */
+@Override
+public int insertTestLeave(TestLeave testLeave, String flowStatus)
+{
+    FlowParams flowParams = FlowParams.build().flowCode(getFlowType(testLeave));
+    // 流程变量
+    Map<String, Object> variable = new HashMap<>();
+    variable.put("flag", String.valueOf(testLeave.getDay()));
+    flowParams.variable(variable);
 
-    /**
-     *  @@spel@@|#{@user.eval()}
-     */
-    @Test
-    public void testSpel() {
-        Map<String, Object> variable = new HashMap<>();
-        variable.put("aa", "yes");
-        log.info("spel结果:{}", ExpressionUtil.eval("@@spel@@|#{@user.eval()}", null));
-    }
+    Instance instance = insService.start(id, flowParams);
+    return instance != null? 1 : 0;
 }
 ```
 
