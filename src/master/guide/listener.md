@@ -48,103 +48,24 @@ public interface Listener extends Serializable {
 }
 
 ```
-
-### 3.2、开始监听器实现类例子
+### 3.2、完成监听器实现类例子
 通过@Component或者@Bean注解注入到容器
 ```java
 @Component
-public class GlobalStartListener implements Listener {
+public class FinishListener implements Listener {
+    private static final Logger log = LoggerFactory.getLogger(StartListener.class);
 
-
-  private static final Logger log = LoggerFactory.getLogger(GlobalStartListener.class);
-
-  /**
-   * 设置办理人id、所拥有的权限等操作，也可以放到业务代码中办理前设置，或者局部监听器
-   * @param listenerVariable 监听器变量
-   */
-  @Override
-  public void notify(ListenerVariable listenerVariable) {
-    log.info("全局开始监听器");
-
-    FlowParams flowParams = listenerVariable.getFlowParams();
-    LoginUser user = SecurityUtils.getLoginUser();
-    // 设置当前办理人id
-    flowParams.setHandler(user.getUser().getUserId().toString());
-
-    // 设置办理人所拥有的权限，比如角色、部门、用户等
-    List<String> permissionList = flowParams.getPermissionFlag();
-    if (StringUtils.isEmpty(permissionList)) {
-      permissionList = new ArrayList<>();
+    @Override
+    public void notify(ListenerVariable variable) {
+        log.info("完成监听器:{}", variable);
+        Instance instance = variable.getInstance();
+        Map<String, Object> testLeaveMap = variable.getVariable();
+        log.info("完成监听器结束;{}", "任务完成");
     }
-
-    List<SysRole> roles = user.getUser().getRoles();
-    if (Objects.nonNull(roles)) {
-      permissionList.addAll(roles.stream().map(role -> "role:" + role.getRoleId()).collect(Collectors.toList()));
-    }
-    permissionList.add("dept:" + SecurityUtils.getLoginUser().getUser().getDeptId());
-    permissionList.add(user.getUser().getUserId().toString());
-    flowParams.setPermissionFlag(permissionList);
-
-    log.info("全局开始监听器结束;{}", "开启流程完成");
-  }
 }
 ```
 
-### 3.3、完成监听器实现类例子
-```java
-@Component
-public class GlobalFinishListener implements Listener {
-
-
-  private static final Logger log = LoggerFactory.getLogger(GlobalFinishListener.class);
-
-  @Resource
-  private TestLeaveMapper testLeaveMapper;
-
-  /**
-   * 业务表新增或者更新操作，也可以放到业务代码中办理完成后，或者局部监听器
-   * @param listenerVariable 监听器变量
-   */
-  @Override
-  public void notify(ListenerVariable listenerVariable) {
-    log.info("全局完成监听器");
-    Instance instance = listenerVariable.getInstance();
-    Map<String, Object> variable = listenerVariable.getVariable();
-    Object o = variable.get("businessData");
-
-    // 更新业务数据
-    if (ObjectUtil.isNotNull(o)) {
-      // 可以统一使用一个全局监听器，不同实体类，不同的操作
-      if (o instanceof TestLeave) {
-        TestLeave testLeave = (TestLeave) o;
-        testLeave.setNodeCode(instance.getNodeCode());
-        testLeave.setNodeName(instance.getNodeName());
-        testLeave.setNodeType(instance.getNodeType());
-        testLeave.setFlowStatus(instance.getFlowStatus());
-        // 如果没有实例id，说明是新增
-        if (ObjectUtil.isNull(testLeave.getInstanceId())) {
-          testLeave.setInstanceId(instance.getId());
-          testLeaveMapper.insertTestLeave(testLeave);
-          testLeave.setCreateTime(DateUtils.getNowDate());
-          // 新增抄送人方法，也可发送通知
-          if (StringUtils.isNotNull(testLeave.getAdditionalHandler())) {
-            List<User> users = FlowFactory.userService().structureUser(instance.getId()
-                    , testLeave.getAdditionalHandler(), "4");
-            FlowFactory.userService().saveBatch(users);
-          }
-        } else {
-          testLeave.setUpdateTime(DateUtils.getNowDate());
-          testLeaveMapper.updateTestLeave(testLeave);
-        }
-      }
-    }
-
-    log.info("全局完成监听器结束;{}", "任务完成");
-  }
-}
-```
-
-### 3.4、分派监听器实现类例子
+### 3.3、分派监听器实现类例子
 如下图中示例可以很容易实现
 <img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
 
@@ -178,17 +99,14 @@ public class AssignmentListener implements Listener {
 }
 ```
 
-### 3.5、创建监听器
-就是在下一个任务生成前执行，比如创建任务前需要初始化信息或者校验数据是否合法
+### 3.4、页面配置全局或局部监听器
+#### 3.4.1、局部监听器（流程节点配置）
 
-### 3.6、页面配置全局或局部监听器
-#### 3.6.1、局部监听器（流程节点配置）
-
-传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
+> 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
 
 <img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
 
-#### 3.6.1、全局监听器（流程定义配置）
+#### 3.4.1、全局监听器（流程定义配置）
 
 <img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 

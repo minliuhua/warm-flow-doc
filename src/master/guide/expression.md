@@ -12,50 +12,7 @@
 - 9、SpEL
 - 10、自定义表达式
 
-
-## 2、Spring Expression Language（SpEL）
-- 前端配置如`#{@user.eval(#flag)}`表达式，入库前要拼接前缀，方便区分表达式类型，最终为`@@spel@@|#{@user.eval(#flag)}` 
-- `#flag`为变量和以下方法入参命名一致，可不设置入参
-
-<img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
-
-```java
-@Component("user")
-public class User {
-
-    /**
-     * spel条件表达：判断大于等4
-     * @param flag 待判断的字符串
-     * @return boolean
-     */
-    public boolean eval(String flag) {
-        BigDecimal a = new BigDecimal(flag);
-        BigDecimal b = new BigDecimal("4");
-        return a.compareTo(b) > 0;
-    }
-}
-
-/**
- * 新增OA 请假申请
- *
- * @param testLeave OA 请假申请
- * @return 结果
- */
-@Override
-public int insertTestLeave(TestLeave testLeave, String flowStatus)
-{
-    FlowParams flowParams = FlowParams.build().flowCode(getFlowType(testLeave));
-    // 流程变量
-    Map<String, Object> variable = new HashMap<>();
-    variable.put("flag", String.valueOf(testLeave.getDay()));
-    flowParams.variable(variable);
-
-    Instance instance = insService.start(id, flowParams);
-    return instance != null? 1 : 0;
-}
-```
-
-## 3、自定义表达式
+## 2、自定义表达式
 
 **1、扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
 **2、并且通过这个方法进行注册ExpressionUtil.setExpression**
@@ -66,3 +23,39 @@ public int insertTestLeave(TestLeave testLeave, String flowStatus)
         <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
     </tr>
 </table>
+
+## 3、Spring Expression Language（SpEL）
+引入以下包，前端配置如`@@spel@@|#{@user.eval()}`表达式，即可解析
+测试案例`com.warm.flow.sb.test.expression.ExpressionTest`
+```xml
+<dependency>
+    <groupId>io.github.minliuhua</groupId>
+    <artifactId>warm-flow-plugin-spel</artifactId>
+</dependency>
+```
+
+```java
+@Component("user")
+public class User {
+
+    public boolean eval() {
+        return true;
+    }
+}
+
+@Slf4j
+@SpringBootTest
+public class ExpressionTest extends FlowBaseTest {
+
+    /**
+     *  @@spel@@|#{@user.eval()}
+     */
+    @Test
+    public void testSpel() {
+        Map<String, Object> variable = new HashMap<>();
+        variable.put("aa", "yes");
+        log.info("spel结果:{}", ExpressionUtil.eval("@@spel@@|#{@user.eval()}", null));
+    }
+}
+```
+
