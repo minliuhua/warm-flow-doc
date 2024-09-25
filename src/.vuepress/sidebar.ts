@@ -8,15 +8,16 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/master/guide/started.md',
+                '/master/guide/processterm.md',
+                '/master/guide/processrule.md',
                 '/master/guide/processdemo.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
+                '/master/guide/variableStategy.md',
                 '/master/guide/ormusagetips.md',
-                '/master/guide/processterm.md',
-                '/master/guide/processrule.md',
             ],
         },
         {
@@ -30,6 +31,7 @@ export default sidebar({
                 '/master/guide/form.md',
                 '/master/guide/customstatus.md',
                 '/master/guide/expression.md',
+                '/master/guide/jsonlib.md',
             ],
         }
     ],
@@ -83,6 +85,40 @@ export default sidebar({
             collapsible: false,
             link: '/common/support.md',
         },
+    ],
+    "/v1.2.8/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.2.8/guide/started.md',
+                '/v1.2.8/guide/processterm.md',
+                '/v1.2.8/guide/processrule.md',
+                '/v1.2.8/guide/processdemo.md',
+                '/v1.2.8/guide/table.md',
+                '/v1.2.8/guide/config.md',
+                '/v1.2.8/guide/api.md',
+                '/v1.2.8/guide/datafillhandler.md',
+                '/v1.2.8/guide/variable.md',
+                '/v1.2.8/guide/variableStategy.md',
+                '/v1.2.8/guide/ormusagetips.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.2.8/guide/listener.md',
+                '/v1.2.8/guide/logicdelete.md',
+                '/v1.2.8/guide/tenant.md',
+                '/v1.2.8/guide/form.md',
+                '/v1.2.8/guide/customstatus.md',
+                '/v1.2.8/guide/expression.md',
+                '/v1.2.8/guide/jsonlib.md',
+            ],
+        }
     ],
     "/v1.2.7/guide/": [
         {

@@ -5,31 +5,55 @@
 ## 未来发布计划
 
 ### vx.x.x
-  - json库支持可扩展
   - 事件
   - 流程图合法性检验
   - 把不能退回到开始节点去掉，会有什么影响
   - 子流程
   - 会签和票签通过率策略，支持扩展
   - 可多个网关直连
+  - 重启流程
+  - 适配国产数据库
 
  
 ## 开发中计划
-### v1.3.0 2024-09-18
+### v1.3.0 2024-10-12
   - 【升级注意事项】
     - 无
     
   - 更新日志
     - 动态表单支持                         @vanlin
-    - 设计器考虑bpmn                      @晓华
+    - 设计器考虑独立出来，可以单独引入使用      @晓华
     - 撤回                               @xiarigang
     - 对代码通过工具进行扫描，并解决漏洞       @晓华
     - 增加单元测试                         @晓华
-    - 节点办理人支持${xxx}变量形式           xiaoxiaoliu
-    - 重启流程
-    - 适配国产数据库
 
 ## 更新日志
+### v1.2.8 2024-09-25
+- 【升级注意事项】
+    - 本次升级，内置json库snack3方式，改为spi方式加载，业务项目中存在哪种json就会使用哪种的实现，
+      支持顺序按顺序加载一种：snack3、jackson、fastjson、gson，并且目前只实现了这四种，可扩展
+    - 如在未集成snack3库的环境下，还需要使用snack3库，需要单独使用（原组件使用snack3库）
+      ```pom.xml
+            <dependency>
+                <groupId>org.noear</groupId>
+                <artifactId>snack3</artifactId>
+                <version>3.2.88</version>
+            </dependency>
+       ```
+
+- 更新日志
+    - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展
+    - [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展
+    - [feat] ListenerVariable监听器变量新增FlowParams字段，方便开始监听器全局传递参数
+    - [feat] 终止新增对开始和完成监听器的支持
+    - [update] springboot项目的条件表达式默认支持spel
+    - [update] 历史记录改为单条保存，删除重复代码
+    - [update] 修改FlowUserDao的bean名称
+    - [update] 中间节点拆分为或签，会签，票签
+    - [fix] 修复历史记录创建时间相等，导致流程图渲染异常
+    - [fix]修复Mybatis逻辑删除变成真实删除的缺陷                               @xiarigang
+    - [refactor] 重构id生成器，支持orm默认策略，删除数据填充默认实现类，改为匿名类
+
 ### v1.2.7 2024-09-03
 - 【升级注意事项】
     - 无
