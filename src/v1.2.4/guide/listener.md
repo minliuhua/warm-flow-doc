@@ -8,7 +8,7 @@
 - finish：结束监听器，当前任务完成后执行
 
 ## 2、监听器生命周期图
-![](../../.vuepress/public/listenerLife.png)
+<img src="https://foruda.gitee.com/images/1727400671105493207/2af20fe3_2218307.png" width="700">
 
 ## 3、监听器使用
 ### 3.1、实现以下接口
