@@ -1,4 +1,6 @@
 # 监听器
+> [!IMPORTANT]  
+> 在办理流程过程中，通过监听器，监听办理过程的不同环节，进行业务处理，功能增强。
 
 ## 1、监听器类型
 > [!IMPORTANT]  
@@ -17,7 +19,7 @@
 
 
 ## 2、监听器生命周期图
-![](../../.vuepress/public/listenerLife.png)
+<img src="https://foruda.gitee.com/images/1727400671105493207/2af20fe3_2218307.png" width="700">
 
 ## 3、监听器使用
 ### 3.1、实现以下接口
