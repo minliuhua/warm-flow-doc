@@ -23,11 +23,3 @@
         <td><img src="../.vuepress/public/skzfb.jpg"/></td>
     </tr>
 </table>
-
-## 赞助商
-
-如何成为赞助商 加群联系作者详谈
-
-## 友情链接
-
-如何成为赞助商 加群联系作者详谈

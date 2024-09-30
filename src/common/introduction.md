@@ -31,10 +31,23 @@
 - 不可二次分发开源参与同类竞品，如有想法可联系290631660@qq.com商议合作。
 - 若您的项目无法满足以上几点，需要更多功能代码，获取可找作者定制化开发，290631660@qq.com
 
-## 3、你可以请作者喝杯咖啡表示鼓励
-[捐赠地址](./support.md)
-## 4、演示地址
+## 3、演示地址
 
 - admin/admin123
 
 演示地址：http://www.hhzai.top
+
+## 4、特别赞助
+<table>
+    <tr>
+        <td><img src="../.vuepress/public/ggw/MaxKey.png"/></td>
+        <td><img src="../.vuepress/public/ggw/MaxKey.png"/></td>
+    </tr>
+</table>
+
+[如何成为赞助商 加群联系作者详谈](./joingroup.md)
+
+## 5、你可以请作者喝杯咖啡表示鼓励
+[捐赠地址](./support.md)
+
+
