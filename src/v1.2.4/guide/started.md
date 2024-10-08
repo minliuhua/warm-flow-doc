@@ -13,7 +13,7 @@
 如果第一次导入，请先创建数据库，找到组件中的sql目录，找到对应数据库的全量脚本warm-flow-all.sql，执行  
 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，warm-flow_x.x.x.sql，执行
 ```
-## 2、官网九套流程定义xml
+## 2、官网流程定义案例xml
 ```shell
 地址：warm-flow\warm-flow-test\warm-flow-core-test\src\main\resources\leaveFlow-xxx.xml
 ```
