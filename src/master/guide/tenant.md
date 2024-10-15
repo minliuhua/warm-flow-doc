@@ -171,4 +171,18 @@ public class WarmFlowConfig {
         return new CustomTenantHandler();
     }
 }
+
+/**
+ * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
+ *
+ * @author warm
+ */
+public class CustomTenantHandler implements TenantHandler {
+
+
+    @Override
+    public String getTenantId() {
+        return "000000";
+    }
+}
 ```
