@@ -173,7 +173,7 @@ public class WarmFlowConfig {
 }
 ```
 
-### 2.3、自定义租户处理器
+### 2.3、@Component配置方式
 ```java
 /**
  * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
