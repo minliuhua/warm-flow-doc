@@ -86,6 +86,41 @@ export default sidebar({
             link: '/common/support.md',
         },
     ],
+    "/v1.3.0/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.3.0/guide/started.md',
+                '/v1.3.0/guide/processterm.md',
+                '/v1.3.0/guide/processrule.md',
+                '/v1.3.0/guide/processdemo.md',
+                '/v1.3.0/guide/table.md',
+                '/v1.3.0/guide/config.md',
+                '/v1.3.0/guide/api.md',
+                '/v1.3.0/guide/datafillhandler.md',
+                '/v1.3.0/guide/variable.md',
+                '/v1.3.0/guide/variableStategy.md',
+                '/v1.3.0/guide/ormusagetips.md',
+                '/v1.3.0/guide/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.3.0/guide/listener.md',
+                '/v1.3.0/guide/logicdelete.md',
+                '/v1.3.0/guide/tenant.md',
+                '/v1.3.0/guide/form.md',
+                '/v1.3.0/guide/customstatus.md',
+                '/v1.3.0/guide/expression.md',
+                '/v1.3.0/guide/jsonlib.md',
+            ],
+        }
+    ],
     "/v1.2.10/guide/": [
         {
             text: "基础部分",
