@@ -65,6 +65,22 @@ public class ShiroConfig {
 ```
 <br>
 
+### 2.3 sa-token 放行配置
+
+```java
+@Configuration
+public class SaTokenConfigure implements WebMvcConfigurer {
+    // 注册拦截器
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
+                .addPathPatterns("/**")
+                // 以上是sa-token案例，下面才是需要排除的地址
+                .excludePathPatterns("/warm-flow-ui/**", "/warm-flow/**");
+    }
+}
+```
+
 ## 3. 前端加载设计器
 
 ### 3.1 vue2 引入
@@ -134,15 +150,16 @@ public class ShiroConfig {
 <br>
 
 ### 3.2 vue3 引入
-- vue3项目引入注意事项同以上vue2
+- vue3项目引入过程同上vue2
+- 注意vue3的vue.config.js配置代理路径没有后面的`/warm-flow-ui`
 
 ```javascript
-'/warm-flow-ui': {
-  target: 'http://localhost:8080/warm-flow-ui',
-  changeOrigin: true,
-  pathRewrite: {
-    rewrite: (p) => p.replace(/^\/warm-flow-ui/, '')
-  }
+"/warm-flow-ui": {
+    target: `http://localhost:8080`,
+        changeOrigin: true,
+        pathRewrite: {
+        '/warm-flow-ui': '/'
+    }
 },
 ```
 <br>
