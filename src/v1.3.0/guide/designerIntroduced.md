@@ -1,4 +1,8 @@
 # 设计器引入
+> [!IMPORTANT]
+> 1、为了方便业务系统快速引入设计器，不需要搬运并且适配等工作
+> 2、可以按照本文中介绍的，使用设计器，并快速接入业务系统
+> 3、设计原理采取不分离的方式，把设计器打包的jar包中,以接口和静态资源的方式引入
 
 ## 1. 引入依赖
 
@@ -64,9 +68,10 @@ public class ShiroConfig {
 ## 3. 前端加载设计器
 
 ### 3.1 vue2 引入
-- 前后端分离需要vue.config.js配置代码, 部署到nginx中同样需要配置代理
+- 前后端分离项目需要把访问路径代理到后端，后者直接访问后端接口，但是需要处理跨域问题
+- 代理到后端需要vue.config.js配置代码, 部署到nginx中同样需要配置代理
 
-```vue
+```javascript
 "/warm-flow-ui": {
   target: `http://localhost:8080/warm-flow-ui`,
   changeOrigin: true,
@@ -76,17 +81,18 @@ public class ShiroConfig {
 },
 
 ```
-- 前端通过iframe引入设计器
+
+<br>
+
+- 首先传入设计器需要的流程定义definitionId和是否可编辑disabled参数
+- 本实例采用iframe方式嵌入设计器
 <br>
 
 ```vue
 
 <template>
   <div :style="'height:' + height">
-    <iframe
-        :src="url"
-        style="width: 100%; height: 100%"
-    />
+    <iframe :src="url" style="width: 100%; height: 100%"/>
   </div>
 </template>
 <script>
@@ -101,7 +107,7 @@ public class ShiroConfig {
     },
     mounted() {
       // definitionId为需要查询的流程定义id，
-      // disabled为是否禁用设计器, 查看的时候不可编辑，不可保存
+      // disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
       this.url = `/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`;
       this.iframeLoaded();
     },
@@ -128,9 +134,9 @@ public class ShiroConfig {
 <br>
 
 ### 3.2 vue3 引入
-- 前后端分离需要vue.config.js配置代码, 部署到nginx中同样需要配置代理
+- vue3项目引入注意事项同以上vue2
 
-```vue
+```javascript
 '/warm-flow-ui': {
   target: 'http://localhost:8080/warm-flow-ui',
   changeOrigin: true,
@@ -139,8 +145,7 @@ public class ShiroConfig {
   }
 },
 ```
-
-- 前端通过iframe引入设计器
+<br>
 
 ```vue
 <template>
@@ -154,7 +159,7 @@ const { proxy } = getCurrentInstance();
 import { onMounted } from 'vue';
 
 // definitionId为需要查询的流程定义id，
-// disabled为是否禁用设计器, 查看的时候不可编辑，不可保存
+// disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
 const iframeUrl = ref(`/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`);
 
 const iframeLoaded = () => {
@@ -189,8 +194,10 @@ onMounted(() => {
 ```
 
 ### 3.3 前后端不分离版本
-<br>
+- 前后端不分离项目，前后端端口一致，不需要代理（以下代码再ruoyi不分离版中测试）
 
+- 可以直接访问后端接口加载页面，如：`/warm-flow/1839683148936663047?disabled=false`
+<br>
 ```java
 @Controller
 @RequestMapping("/warm-flow")
@@ -199,9 +206,21 @@ public class WarmFlowController
     @GetMapping()
     public String index(String definitionId, Boolean disabled)
     {
-        return redirect("/warm-flow-ui/warm-flow/1839683148936663047?disabled=false");
+        return redirect("/warm-flow-ui/warm-flow/" + definitionId + "?disabled=" + disabled);
     }
 }
+```
+<br>
+
+- 或者前端直接访问后端接口，如：`/warm-flow/1839683148936663047?disabled=false`
+<br>
+```javascript
+/*打开新的页签，加载设计器*/
+function detail(dictId) {
+    var url = prefix + '/detail/' + dictId;
+    $.modal.openTab("字典数据", "/warm-flow-ui/warm-flow/1839683148936663047?disabled=false&pageNum=1");
+}
+
 ```
 <br>
 
@@ -240,25 +259,37 @@ public interface HandlerSelectService {
 @Component
 public class HandlerSelectServiceImpl implements HandlerSelectService {
 
+    /**
+     * 获取办理人权限设置列表tabs页签，如：用户、角色和部门等，可以返回其中一种或者多种，按业务需求决定
+     * @return
+     */
     @Override
     public List<String> getHandlerType() {
         return Arrays.asList("用户", "角色", "部门");
     }
 
+    /**
+     * 获取用户列表、角色列表、部门列表等，可以返回其中一种或者多种，按业务需求决定
+     * @param query
+     * @return
+     */
     @Override
     public List<HandlerSelectVo> getHandlerSelect(HandlerQuery query) {
         List<HandlerSelectVo> handlerSelectVos = new ArrayList<>();
 
+        // 获取用户列表
         if ("用户".equals(query.getHandlerType())) {
             HandlerSelectVo handlerSelectVo = getUser(query);
             handlerSelectVos.add(handlerSelectVo);
         }
 
+        // 获取角色列表
         if ("角色".equals(query.getHandlerType())) {
             HandlerSelectVo handlerSelectVo = getRole(query);
             handlerSelectVos.add(handlerSelectVo);
         }
 
+        // 获取部门列表
         if ("部门".equals(query.getHandlerType())) {
             HandlerSelectVo handlerSelectVo = getDept(query);
             handlerSelectVos.add(handlerSelectVo);

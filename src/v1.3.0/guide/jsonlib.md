@@ -1,7 +1,7 @@
 # json库扩展
 
 > [!IMPORTANT]
-> 目前支持Snack3、Jackson、fastjson和Gson四种json库
+> 1、目前支持Snack3、Jackson、fastjson和Gson四种json库
 
 ## json库扩展
 - 扩展json库需要实现`JsonConvert`接口，并实现`strToMap`和`mapToStr`方法
