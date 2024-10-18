@@ -293,11 +293,20 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
     @Autowired
     private SysDeptMapper deptMapper;
 
+    /**
+     * 获取办理人权限设置列表tabs页签，如：用户、角色和部门等，可以返回其中一种或者多种，按业务需求决定
+     * @return tabs页签
+     */
     @Override
     public List<String> getHandlerType() {
         return Arrays.asList("用户", "角色", "部门");
     }
 
+    /**
+     * 获取用户列表、角色列表、部门列表等，可以返回其中一种或者多种，按业务需求决定
+     * @param query 查询参数
+     * @return 结果
+     */
     @Override
     public HandlerSelectVo getHandlerSelect(HandlerQuery query) {
 
@@ -323,17 +332,13 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
      * @return HandlerSelectVo
      */
     private HandlerSelectVo getRole(HandlerQuery query) {
-        startPage();
-        SysRole sysRole = new SysRole();
-        sysRole.setRoleKey(query.getHandlerCode());
-        sysRole.setRoleName(query.getHandlerName());
-        sysRole.getParams().put("beginTime", query.getBeginTime());
-        sysRole.getParams().put("endTime", query.getEndTime());
+        ......
         // 查询角色列表
         List<SysRole> roleList = roleMapper.selectRoleList(sysRole);
+        long total = new PageInfo<>(roleList).getTotal();
 
-        // 业务系统数据，转成组件内部能够显示的数据
-        HandlerFunDto<SysRole> handlerFunDto = new HandlerFunDto<>(roleList, new PageInfo<>(roleList).getTotal())
+        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+        HandlerFunDto<SysRole> handlerFunDto = new HandlerFunDto<>(roleList, total)
                 // 以下设置获取内置变量的Function
                 .setStorageId(role -> "role:" + role.getRoleId()) // 前面拼接role:  是为了防止用户、角色的主键重复
                 .setHandlerCode(SysRole::getRoleKey) // 权限编码
@@ -350,16 +355,13 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
      * @return HandlerSelectVo
      */
     private HandlerSelectVo getDept(HandlerQuery query) {
-        startPage();
-        SysDept sysDept = new SysDept();
-        sysDept.setDeptName(query.getHandlerName());
-        sysDept.getParams().put("beginTime", query.getBeginTime());
-        sysDept.getParams().put("endTime", query.getEndTime());
+        ......
         // 查询部门列表
         List<SysDept> deptList = deptMapper.selectDeptList(sysDept);
+        long total = new PageInfo<>(deptList).getTotal();
 
-        // 业务系统数据，转成组件内部能够显示的数据
-        HandlerFunDto<SysDept> handlerFunDto = new HandlerFunDto<>(deptList, new PageInfo<>(deptList).getTotal())
+        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+        HandlerFunDto<SysDept> handlerFunDto = new HandlerFunDto<>(deptList, total)
                 .setStorageId(dept -> "dept:" + dept.getDeptId()) // 前面拼接dept:  是为了防止用户、部门的主键重复
                 .setHandlerName(SysDept::getDeptName) // 权限名称
                 .setCreateTime(dept -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, dept.getCreateTime()));
@@ -375,23 +377,15 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
      * @return HandlerSelectVo
      */
     private HandlerSelectVo getUser(HandlerQuery query) {
-        startPage();
-        SysUser sysUser = new SysUser();
-        sysUser.setUserName(query.getHandlerCode());
-        sysUser.setNickName(query.getHandlerName());
-        // 办理人用户选择列表，需要展示左侧树状部门，所以可能会通过部门id
-        if (MathUtil.isNumeric(query.getGroupId())) {
-            sysUser.setDeptId(Long.valueOf(query.getGroupId()));
-        }
-        sysUser.getParams().put("beginTime", query.getBeginTime());
-        sysUser.getParams().put("endTime", query.getEndTime());
+        ......
         // 查询用户列表
         List<SysUser> userList = userMapper.selectUserList(sysUser);
+        long total = new PageInfo<>(userList).getTotal();
         // 查询部门列表，构建树状结构
         List<SysDept> deptList = deptMapper.selectDeptList(new SysDept());
 
-        // 业务系统数据，转成组件内部能够显示的数据
-        HandlerFunDto<SysUser> handlerFunDto = new HandlerFunDto<>(userList, new PageInfo<>(userList).getTotal())
+        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+        HandlerFunDto<SysUser> handlerFunDto = new HandlerFunDto<>(userList, total)
                 .setStorageId(user -> user.getUserId().toString())
                 .setHandlerCode(SysUser::getUserName) // 权限编码
                 .setHandlerName(SysUser::getNickName) // 权限名称
