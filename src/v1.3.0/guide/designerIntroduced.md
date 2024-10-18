@@ -85,8 +85,21 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 > 1、总体思路就是把前端接口(比如80)代理成后端接口(8080)，其他不变
 > 2、或者直接访问后端接口，可能需要处理跨域问题
 
-### 3.1 vue2 引入
-- 代理到后端需要vue.config.js配置代码, 部署到nginx中同样需要配置代理
+### 3.1 nginx 代理配置
+
+```
+server {
+    listen       80;
+    server_name  localhost;
+
+    location /warm-flow-ui/ {
+        proxy_pass http://localhost:8080/warm-flow-ui/;
+    }
+}
+```
+
+### 3.2 vue2 引入
+- 代理到后端需要vue.config.js配置代码
 
 ```javascript
 "/warm-flow-ui": {
@@ -150,7 +163,7 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 ```
 <br>
 
-### 3.2 vue3 引入
+### 3.3 vue3 引入
 - vue3项目引入过程同上vue2
 
 ```javascript
@@ -210,10 +223,10 @@ onMounted(() => {
 
 ```
 
-### 3.3 React版本 引入
+### 3.4 React版本 引入
 > 待完善
 
-### 3.4 前后端不分离版本
+### 3.5 前后端不分离版本
 - 前后端不分离项目，前后端端口一致，不需要代理（以下代码再ruoyi不分离版中测试）
 
 - 可以直接访问后端接口加载页面，如：`/warm-flow/1839683148936663047?disabled=false`
