@@ -82,9 +82,10 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 ```
 
 ## 3. 前端加载设计器
+> 总体思路就是把前端接口(比如80)代理成后端接口(8080)，其他不变
+> 或者直接访问后端接口，可能需要处理跨域问题
 
 ### 3.1 vue2 引入
-- 前后端分离项目需要把访问路径代理到后端，后者直接访问后端接口，但是需要处理跨域问题
 - 代理到后端需要vue.config.js配置代码, 部署到nginx中同样需要配置代理
 
 ```javascript
@@ -151,7 +152,6 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 
 ### 3.2 vue3 引入
 - vue3项目引入过程同上vue2
-- 注意vue3的vue.config.js配置代理路径没有后面的`/warm-flow-ui`
 
 ```javascript
 "/warm-flow-ui": {
@@ -210,7 +210,10 @@ onMounted(() => {
 
 ```
 
-### 3.3 前后端不分离版本
+### 3.3 React版本 待完善
+
+
+### 3.4 前后端不分离版本
 - 前后端不分离项目，前后端端口一致，不需要代理（以下代码再ruoyi不分离版中测试）
 
 - 可以直接访问后端接口加载页面，如：`/warm-flow/1839683148936663047?disabled=false`
@@ -240,6 +243,7 @@ function detail(dictId) {
 
 ```
 <br>
+
 
 ## 4. 实现HandlerSelectService接口
 > 给任务节点设置哪些权限的人可以办理，实现此接口提供个设计器
