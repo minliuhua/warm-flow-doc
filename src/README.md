@@ -4,7 +4,7 @@ icon: home-fill
 title: 首页
 heroImage: /home.png
 heroText: warm-flow工作流
-tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，组件独立, 流程设计器可快速引入，可扩展，可满足中小项目的组件。
+tagline: Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，可扩展，是一个可通过jar引入设计器的工作流。
 actions:
 
 - text: GitHub
