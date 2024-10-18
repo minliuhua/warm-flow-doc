@@ -245,13 +245,17 @@ function detail(dictId) {
 <br>
 
 
-## 4. 实现HandlerSelectService接口
-> 给任务节点设置哪些权限的人可以办理，实现此接口提供个设计器
+## 4. 设计器办理人权限数据接入
+> 给任务节点设置哪些权限的人可以办理，实现接口提供给设计器
+
+### 4.1 办理人权限选择弹框页面
 
 <img src="https://foruda.gitee.com/images/1729094468685997422/d38c7e79_2218307.png">
-
 <br>
 
+### 4.2 实现接口获取办理人权限数据
+
+#### 4.2.1 HandlerSelectService接口
 ```java
 /**
  * 流程设计器-获取办理人权限设置列表接口
@@ -275,6 +279,9 @@ public interface HandlerSelectService {
 }
 
 ```
+<br>
+
+#### 4.2.2 HandlerSelectServiceImpl实现类
 
 ```java
 /**
