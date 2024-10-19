@@ -82,7 +82,7 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 ```
 
 ## 3. 前端加载设计器
-> 1、设计器页面入口地址为：`/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`  
+> 1、设计器页面入口地址为：`/warm-flow-ui/${definitionId}?disabled=${disabled}`  
 > 2、总体思路就是把前端接口(比如80)代理成后端接口(8080)，去访问该地址，其他不变  
 > 3、或者直接通过后端接口访问该地址，可能需要处理跨域问题
 
@@ -139,7 +139,7 @@ server {
     mounted() {
       // definitionId为需要查询的流程定义id，
       // disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
-      this.url = `/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`;
+      this.url = `/warm-flow-ui/${definitionId}?disabled=${disabled}`;
       this.iframeLoaded();
     },
     methods: {
@@ -191,7 +191,7 @@ import { onMounted } from 'vue';
 
 // definitionId为需要查询的流程定义id，
 // disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
-const iframeUrl = ref(`/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`);
+const iframeUrl = ref(`/warm-flow-ui/${definitionId}?disabled=${disabled}`);
 
 const iframeLoaded = () => {
   // iframe监听组件内设计器保存事件
@@ -240,7 +240,7 @@ public class WarmFlowController
     @GetMapping()
     public String index(String definitionId, Boolean disabled)
     {
-        return redirect("/warm-flow-ui/warm-flow/" + definitionId + "?disabled=" + disabled);
+        return redirect("/warm-flow-ui/" + definitionId + "?disabled=" + disabled);
     }
 }
 ```
@@ -252,7 +252,7 @@ public class WarmFlowController
 /*打开新的页签，加载设计器*/
 function detail(dictId) {
     var url = prefix + '/detail/' + dictId;
-    $.modal.openTab("字典数据", "/warm-flow-ui/warm-flow/1839683148936663047?disabled=false&pageNum=1");
+    $.modal.openTab("字典数据", "/warm-flow-ui/1839683148936663047?disabled=false&pageNum=1");
 }
 
 ```
