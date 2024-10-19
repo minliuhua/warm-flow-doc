@@ -82,8 +82,9 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 ```
 
 ## 3. 前端加载设计器
-> 1、总体思路就是把前端接口(比如80)代理成后端接口(8080)，其他不变
-> 2、或者直接访问后端接口，可能需要处理跨域问题
+> 1、设计器页面入口地址为：`/warm-flow-ui/warm-flow/${definitionId}?disabled=${disabled}`  
+> 2、总体思路就是把前端接口(比如80)代理成后端接口(8080)，去访问该地址，其他不变  
+> 3、或者直接通过后端接口访问该地址，可能需要处理跨域问题
 
 ### 3.1 nginx 代理配置
 
@@ -266,7 +267,7 @@ function detail(dictId) {
 <img src="https://foruda.gitee.com/images/1729094468685997422/d38c7e79_2218307.png">
 <br>
 
-### 4.2 实现接口获取办理人权限数据
+### 4.2 实现接口获取以上页面办理人权限数据
 
 #### 4.2.1 HandlerSelectService接口
 ```java
