@@ -4,7 +4,14 @@
 - 1、默认办理人变量策略: `@@default@@|${handler1}`
 - 2、spel办理人变量策略: `@@spel@@|#{@user.evalVar(#handler2)}`
 
-## 2、默认办理人变量策略
+## 2、变量替换时机
+- 1、上一个节点任务办理时，传入变量
+- 2、下一个节点任务生成时即可获取替换  
+
+> 比如B-->C, C任务设置办理人变量为`@@default@@|${handler1}`，B任务办理时传入变量`handler1=100`，则C节点办理人变量为100
+
+
+## 3、默认办理人变量策略
 
 ### 前端页面设置变量
 - 比如：`@@default@@|${handler1},role:1,1`
@@ -27,7 +34,7 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 3、spel办理人变量策略
+## 4、spel办理人变量策略
 
 ### 前端页面设置变量
 - 比如：`@@spel@@|#{@user.evalVar(#handler2)}`
@@ -65,7 +72,7 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 4、扩展
+## 5、扩展
 
 - 扩展需要实现`VariableStrategy`接口, 实现`getType和eval`方法
 - 并且通过这个方法进行注册VariableUtil.setVariable

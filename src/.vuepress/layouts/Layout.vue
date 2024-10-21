@@ -16,6 +16,8 @@ const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 const sidebarTopArray = [
   `<a href="https://www.maxkey.top" target="_blank">
     <img className="no-zoom" height="50px" width="200px" src="/ggw/MaxKey.png">
+  </a>`,
+  `<a href="http://www.warm-flow.cn" target="_blank">
     <img className="no-zoom" height="50px" width="200px" src="/ggw/WarmFlow.png">
   </a>`,
 ];

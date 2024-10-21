@@ -1,4 +1,4 @@
-# 社区pr
+# 贡献者列表
 
 <div class="project-contributors__container">
   <h3 class="header">贡献者列表 ({{authorsList.length}})</h3>
