@@ -67,6 +67,7 @@
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限[按需传输]
 
 ### 2.4、删除流程实例
 `remove(instanceIds)`：根据实例ids，删除流程
@@ -94,6 +95,7 @@
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限[按需传输]
 
 ### 3.3、转办
 `transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
