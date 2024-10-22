@@ -3,6 +3,7 @@
 ## 1、内置表达式
 - 1、默认办理人变量策略: `@@default@@|${handler1}`
 - 2、spel办理人变量策略: `@@spel@@|#{@user.evalVar(#handler2)}`
+- 3、@@xxx@@: 标识不同策略的前缀
 
 ## 2、变量替换时机
 - 1、上一个节点任务办理时，传入变量
@@ -14,9 +15,8 @@
 ## 3、默认办理人变量策略
 
 ### 前端页面设置变量
-- 比如：`@@default@@|${handler1},role:1,1`
+- 比如：`@@default@@|${handler1}`
 - `@@default@@|${handler1}`中@@default@@表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
-- `role:1,1`表示办理人角色和具体办理人
 
 
 <img src="https://foruda.gitee.com/images/1727164067302855332/04f4b2ca_2218307.png"  width="700">
