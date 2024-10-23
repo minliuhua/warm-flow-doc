@@ -46,6 +46,7 @@ export default sidebar({
                 '/common/pr.md',
                 '/common/dromara.md',
                 '/common/joingroup.md',
+                '/common/paidservice.md',
             ],
         },
         {
