@@ -18,6 +18,7 @@ export default sidebar({
                 '/master/guide/variable.md',
                 '/master/guide/variableStategy.md',
                 '/master/guide/ormusagetips.md',
+                '/master/guide/designerIntroduced.md',
             ],
         },
         {
