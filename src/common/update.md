@@ -27,7 +27,10 @@
   
 ### v1.3.1 2024-11-01
 - 【升级注意事项】
-    - 无
+    - 设计器后端放行地址`/warm-flow/**`删除，不再需要
+    - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
+    - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
+    - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
 
 - 更新日志
     - 撤销                               @xiarigang
@@ -36,6 +39,7 @@
     - 流程图片清晰度调整                    @晓华
     - 流程定义数据保存支持json格式           @晓华
     - 流程图查询异常处理                  @晓华
+    - 新增boot3starter                  @晓华
     - 对代码通过工具进行扫描，并解决漏洞       @晓华
     - 增加单元测试                         @晓华
 
