@@ -24,24 +24,30 @@
     - 动态表单支持                         @vanlin
     - 对代码通过工具进行扫描，并解决漏洞       @晓华
     - 增加单元测试                         @晓华
-  
-### v1.3.1 2024-11-01
-- 【升级注意事项】
-    - 设计器后端放行地址`/warm-flow/**`删除，不再需要
-    - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
-    - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
-    - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
-
-- 更新日志
     - 撤销                               @xiarigang
     - 取回                               @xiarigang
     - 新增流程图元数据                      @晓华
     - 流程图片清晰度调整                    @晓华
     - 流程定义数据保存支持json格式           @晓华
-    - 流程图查询异常处理                  @晓华
+  
+### v1.3.1 2024-11-01
+- 【升级注意事项】
+    - 节点详情进入改为双击
+    - 新增流程状态枚举（终止、作废、撤销和取回），业务系统可以适当增加字典
+    - 终止流程状态改为更合理的终止，如需还想按照原本的自动完成，请使用自定义流程状态
+    - 设计器引入优化
+      - 设计器后端放行地址`/warm-flow/**`删除，不再需要 
+      - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
+      - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
+      - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
+
+- 更新日志
     - 新增boot3starter                  @晓华
-    - 对代码通过工具进行扫描，并解决漏洞       @晓华
-    - 增加单元测试                         @晓华
+    - [feat] 流程设计器新增快捷键支持
+    - [feat] 新增流程状态枚举（终止、作废、撤销和取回）
+    - [update] 终止流程状态改为更合理的终止状态
+    - [fix] 流程图查询异常处理
+    - [fix] 修复历史记录表，创建时间和更新时间一样的问题
 
 
 ## 更新日志
