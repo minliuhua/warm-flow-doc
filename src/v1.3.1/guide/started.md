@@ -27,12 +27,22 @@
 
 ## 3、maven依赖
 ### 3.1、mybatis
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
       <version>1.3.1</version>
 </dependency>
 ```
