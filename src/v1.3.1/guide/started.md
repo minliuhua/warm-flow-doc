@@ -97,12 +97,22 @@ warm-flow:
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
 ```
 
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>io.github.minliuhua</groupId>
+      <artifactId>warm-flow-jpa-sb3-starter</artifactId>
       <version>1.3.1</version>
 </dependency>
 ```
