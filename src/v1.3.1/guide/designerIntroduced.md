@@ -8,7 +8,7 @@
 
 ```xml
 <dependency>
-  <groupId>io.github.minliuhua</groupId>
+  <groupId>org.dromara</groupId>
   <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
   <version>版本号</version>
 </dependency>
