@@ -38,8 +38,10 @@
   
 
 ## 更新日志
-### v1.3.1 2024-10-31
+### v1.3.1 2024-11-01
 - 【升级指南】
+    - 依赖的groupId：io.github.minliuhua，改为org.dromara
+    - 包名：com.warm， 改为org.dromara.warm 
     - 节点详情进入改为双击
     - 终止操作的流程状态改为更合理的终止状态，如需还想按照原本的自动完成，请使用自定义流程状态
     - FlowParams对象删除setXxx(yyy)方法，改为xxx(yyy)方法赋值

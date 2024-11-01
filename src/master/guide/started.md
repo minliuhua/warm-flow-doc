@@ -27,13 +27,23 @@
 
 ## 3、maven依赖
 ### 3.1、mybatis
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>org.dromara</groupId>
+      <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -41,20 +51,30 @@ solon项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 
 ### 3.2、mybatis-plus
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>org.dromara</groupId>
+      <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -62,9 +82,9 @@ solon项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -77,13 +97,23 @@ warm-flow:
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
 ```
 
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>org.dromara</groupId>
+      <artifactId>warm-flow-jpa-sb3-starter</artifactId>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -91,20 +121,30 @@ solon项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 
 ### 3.4、mybatis-flex
-springboot项目
+springboot2项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
+</dependency>
+```
+
+springboot3项目
+
+```maven
+<dependency>
+      <groupId>org.dromara</groupId>
+      <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -112,9 +152,9 @@ solon项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -123,9 +163,9 @@ springboot项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 
@@ -133,7 +173,7 @@ solon项目
 
 ```maven
 <dependency>
-      <groupId>io.github.minliuhua</groupId>
+      <groupId>org.dromara</groupId>
       <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
       <exclusions>
           <exclusion>
@@ -145,7 +185,7 @@ solon项目
               <artifactId>solon.logging</artifactId>
           </exclusion>
       </exclusions>
-      <version>1.3.0</version>
+      <version>1.3.1</version>
 </dependency>
 ```
 

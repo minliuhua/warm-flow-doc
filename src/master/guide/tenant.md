@@ -157,7 +157,7 @@ public class WarmFlowConfig {
 # warm-flow工作流配置
 warm-flow:
   # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
-  tenant_handler_path: com.warm.flow.core.test.handle.CustomTenantHandler
+  tenant_handler_path: org.dromara.warm.flow.core.test.handle.CustomTenantHandler
 ```
 ### 2.2、bean配置方式
 ```java

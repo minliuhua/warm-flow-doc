@@ -8,16 +8,16 @@
 
 ```xml
 <dependency>
-    <groupId>io.github.minliuhua</groupId>
-    <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
-    <version>版本号</version>
+  <groupId>org.dromara</groupId>
+  <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
+  <version>版本号</version>
 </dependency>
 ```
 
 ## 2. 后端放行部分路径
-> 这两个路径需要放行，否则无法访问，`/warm-flow-ui/**`, `/warm-flow/**`
+> 这个路径需要放行，否则无法访问，`/warm-flow-ui/**`
 
-### 2.1 spring-security 放行配置  
+### 2.1 spring-security 放行配置
 <br>
 
 ```java
@@ -29,7 +29,7 @@ protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exce
             // 注解标记允许匿名访问的url
             .authorizeHttpRequests((requests) -> {
                 // 后端请求，静态资源，可匿名访问
-                requests.antMatchers("/warm-flow-ui/**", "/warm-flow/**").permitAll()
+                requests.antMatchers("/warm-flow-ui/**").permitAll()
                         // 除上面外的所有请求全部需要鉴权认证
                         .anyRequest().authenticated();
             })
@@ -56,7 +56,6 @@ public class ShiroConfig {
         // 后端请求，静态资源，可匿名访问
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         filterChainDefinitionMap.put("/warm-flow-ui/**", "anon");
-        filterChainDefinitionMap.put("/warm-flow/**", "anon");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
@@ -76,48 +75,19 @@ public class SaTokenConfigure implements WebMvcConfigurer {
         registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
                 .addPathPatterns("/**")
                 // 以上是sa-token案例，下面才是需要排除的地址
-                .excludePathPatterns("/warm-flow-ui/**", "/warm-flow/**");
+                .excludePathPatterns("/warm-flow-ui/**");
     }
 }
 ```
 
 ## 3. 前端加载设计器
-> 1、设计器页面入口地址为：`/warm-flow-ui/${definitionId}?disabled=${disabled}`  
-> 2、总体思路就是把前端接口(比如80)代理成后端接口(8080)，去访问该地址，其他不变  
-> 3、或者直接通过后端接口访问该地址，可能需要处理跨域问题
-
-### 3.1 nginx 代理配置
-
-```
-server {
-    listen       80;
-    server_name  localhost;
-
-    location /warm-flow-ui/ {
-        proxy_pass http://localhost:8080/warm-flow-ui/;
-    }
-}
-```
+> 1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}?disabled=${disabled}`
 
 ### 3.2 vue2 引入
-- 代理到后端需要vue.config.js配置代码
-
-```javascript
-"/warm-flow-ui": {
-  target: `http://localhost:8080/warm-flow-ui`,
-  changeOrigin: true,
-  pathRewrite: {
-    '/warm-flow-ui': '/'
-  }
-},
-
-```
-
-<br>
 
 - 首先传入设计器需要的流程定义definitionId和是否可编辑disabled参数
 - 本实例采用iframe方式嵌入设计器
-<br>
+  <br>
 
 ```vue
 
@@ -137,9 +107,10 @@ server {
       };
     },
     mounted() {
-      // definitionId为需要查询的流程定义id，
-      // disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
-      this.url = `/warm-flow-ui/${definitionId}?disabled=${disabled}`;
+      // process.env.VUE_APP_BASE_API: 前端地址的前缀如dev-api
+      // definitionId: 为需要查询的流程定义id
+      // disabled: 为是否可编辑, 例如：查看的时候不可编辑，不可保存
+      this.url = process.env.VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`;
       this.iframeLoaded();
     },
     methods: {
@@ -165,18 +136,6 @@ server {
 <br>
 
 ### 3.3 vue3 引入
-- vue3项目引入过程同上vue2
-
-```javascript
-"/warm-flow-ui": {
-    target: `http://localhost:8080`,
-        changeOrigin: true,
-        pathRewrite: {
-        '/warm-flow-ui': '/'
-    }
-},
-```
-<br>
 
 ```vue
 <template>
@@ -189,9 +148,10 @@ server {
 const { proxy } = getCurrentInstance();
 import { onMounted } from 'vue';
 
-// definitionId为需要查询的流程定义id，
-// disabled为是否可编辑, 例如：查看的时候不可编辑，不可保存
-const iframeUrl = ref(`/warm-flow-ui/${definitionId}?disabled=${disabled}`);
+// import.meta.env.VITE_APP_BASE_API:  前端地址的前缀如dev-api
+// definitionId: 为需要查询的流程定义id
+// disabled: 为是否可编辑, 例如：查看的时候不可编辑，不可保存
+const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}?disabled=${disabled}`);
 
 const iframeLoaded = () => {
   // iframe监听组件内设计器保存事件
@@ -228,10 +188,9 @@ onMounted(() => {
 > 待完善
 
 ### 3.5 前后端不分离版本
-- 前后端不分离项目，前后端端口一致，不需要代理（以下代码再ruoyi不分离版中测试）
-
-- 可以直接访问后端接口加载页面，如：`/warm-flow/1839683148936663047?disabled=false`
-<br>
+- 可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}?disabled=${disabled}`
+  <br>
+-
 ```java
 @Controller
 @RequestMapping("/warm-flow")
@@ -240,19 +199,19 @@ public class WarmFlowController
     @GetMapping()
     public String index(String definitionId, Boolean disabled)
     {
-        return redirect("/warm-flow-ui/" + definitionId + "?disabled=" + disabled);
+        return redirect("/warm-flow-ui/index.html?id=" + definitionId + "&disabled=" + disabled);
     }
 }
 ```
 <br>
 
-- 或者前端直接访问后端接口，如：`/warm-flow/1839683148936663047?disabled=false`
-<br>
+- 或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&disabled=false`
+  <br>
 ```javascript
 /*打开新的页签，加载设计器*/
 function detail(dictId) {
-    var url = prefix + '/detail/' + dictId;
-    $.modal.openTab("字典数据", "/warm-flow-ui/1839683148936663047?disabled=false&pageNum=1");
+  var url = prefix + '/detail/' + dictId;
+  $.modal.openTab("字典数据", "/warm-flow-ui/index.html?id=1839683148936663047&disabled=false");
 }
 
 ```
@@ -278,18 +237,18 @@ function detail(dictId) {
  */
 public interface HandlerSelectService {
 
-    /**
-     * 获取办理人权限设置列表tabs页签, 如：用户、角色和部门等
-     * @return tabs页签
-     */
-    List<String> getHandlerType();
+  /**
+   * 获取办理人权限设置列表tabs页签, 如：用户、角色和部门等
+   * @return tabs页签
+   */
+  List<String> getHandlerType();
 
-    /**
-     * 获取办理人权限设置列表结果，如：用户列表、角色列表、部门列表等
-     * @param query 查询参数
-     * @return 结果
-     */
-    List<HandlerSelectVo> getHandlerSelect(HandlerQuery query);
+  /**
+   * 获取办理人权限设置列表结果，如：用户列表、角色列表、部门列表等
+   * @param query 查询参数
+   * @return 结果
+   */
+  List<HandlerSelectVo> getHandlerSelect(HandlerQuery query);
 }
 
 ```
@@ -305,121 +264,121 @@ public interface HandlerSelectService {
  */
 @Component
 public class HandlerSelectServiceImpl implements HandlerSelectService {
-    @Autowired
-    private SysUserMapper userMapper;
+  @Autowired
+  private SysUserMapper userMapper;
 
-    @Autowired
-    private SysRoleMapper roleMapper;
+  @Autowired
+  private SysRoleMapper roleMapper;
 
-    @Autowired
-    private SysDeptMapper deptMapper;
+  @Autowired
+  private SysDeptMapper deptMapper;
 
-    /**
-     * 获取办理人权限设置列表tabs页签，如：用户、角色和部门等，可以返回其中一种或者多种，按业务需求决定
-     * @return tabs页签
-     */
-    @Override
-    public List<String> getHandlerType() {
-        return Arrays.asList("用户", "角色", "部门");
+  /**
+   * 获取办理人权限设置列表tabs页签，如：用户、角色和部门等，可以返回其中一种或者多种，按业务需求决定
+   * @return tabs页签
+   */
+  @Override
+  public List<String> getHandlerType() {
+    return Arrays.asList("用户", "角色", "部门");
+  }
+
+  /**
+   * 获取用户列表、角色列表、部门列表等，可以返回其中一种或者多种，按业务需求决定
+   * @param query 查询参数
+   * @return 结果
+   */
+  @Override
+  public HandlerSelectVo getHandlerSelect(HandlerQuery query) {
+
+    if ("角色".equals(query.getHandlerType())) {
+      return getRole(query);
     }
 
-    /**
-     * 获取用户列表、角色列表、部门列表等，可以返回其中一种或者多种，按业务需求决定
-     * @param query 查询参数
-     * @return 结果
-     */
-    @Override
-    public HandlerSelectVo getHandlerSelect(HandlerQuery query) {
-
-        if ("角色".equals(query.getHandlerType())) {
-            return getRole(query);
-        }
-
-        if ("部门".equals(query.getHandlerType())) {
-            return getDept(query);
-        }
-
-        if ("用户".equals(query.getHandlerType())) {
-            return getUser(query);
-        }
-
-        return new HandlerSelectVo();
+    if ("部门".equals(query.getHandlerType())) {
+      return getDept(query);
     }
 
-    /**
-     * 获取角色列表
-     *
-     * @param query 查询条件
-     * @return HandlerSelectVo
-     */
-    private HandlerSelectVo getRole(HandlerQuery query) {
+    if ("用户".equals(query.getHandlerType())) {
+      return getUser(query);
+    }
+
+    return new HandlerSelectVo();
+  }
+
+  /**
+   * 获取角色列表
+   *
+   * @param query 查询条件
+   * @return HandlerSelectVo
+   */
+  private HandlerSelectVo getRole(HandlerQuery query) {
         ......
-        // 查询角色列表
-        List<SysRole> roleList = roleMapper.selectRoleList(sysRole);
-        long total = new PageInfo<>(roleList).getTotal();
+    // 查询角色列表
+    List<SysRole> roleList = roleMapper.selectRoleList(sysRole);
+    long total = new PageInfo<>(roleList).getTotal();
 
-        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
-        HandlerFunDto<SysRole> handlerFunDto = new HandlerFunDto<>(roleList, total)
-                // 以下设置获取内置变量的Function
-                .setStorageId(role -> "role:" + role.getRoleId()) // 前面拼接role:  是为了防止用户、角色的主键重复
-                .setHandlerCode(SysRole::getRoleKey) // 权限编码
-                .setHandlerName(SysRole::getRoleName) // 权限名称
-                .setCreateTime(role -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, role.getCreateTime()));
+    // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+    HandlerFunDto<SysRole> handlerFunDto = new HandlerFunDto<>(roleList, total)
+            // 以下设置获取内置变量的Function
+            .setStorageId(role -> "role:" + role.getRoleId()) // 前面拼接role:  是为了防止用户、角色的主键重复
+            .setHandlerCode(SysRole::getRoleKey) // 权限编码
+            .setHandlerName(SysRole::getRoleName) // 权限名称
+            .setCreateTime(role -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, role.getCreateTime()));
 
-        return getHandlerSelectVo(handlerFunDto);
-    }
+    return getHandlerSelectVo(handlerFunDto);
+  }
 
-    /**
-     * 获取用户列表
-     *
-     * @param query 查询条件
-     * @return HandlerSelectVo
-     */
-    private HandlerSelectVo getDept(HandlerQuery query) {
+  /**
+   * 获取用户列表
+   *
+   * @param query 查询条件
+   * @return HandlerSelectVo
+   */
+  private HandlerSelectVo getDept(HandlerQuery query) {
         ......
-        // 查询部门列表
-        List<SysDept> deptList = deptMapper.selectDeptList(sysDept);
-        long total = new PageInfo<>(deptList).getTotal();
+    // 查询部门列表
+    List<SysDept> deptList = deptMapper.selectDeptList(sysDept);
+    long total = new PageInfo<>(deptList).getTotal();
 
-        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
-        HandlerFunDto<SysDept> handlerFunDto = new HandlerFunDto<>(deptList, total)
-                .setStorageId(dept -> "dept:" + dept.getDeptId()) // 前面拼接dept:  是为了防止用户、部门的主键重复
-                .setHandlerName(SysDept::getDeptName) // 权限名称
-                .setCreateTime(dept -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, dept.getCreateTime()));
+    // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+    HandlerFunDto<SysDept> handlerFunDto = new HandlerFunDto<>(deptList, total)
+            .setStorageId(dept -> "dept:" + dept.getDeptId()) // 前面拼接dept:  是为了防止用户、部门的主键重复
+            .setHandlerName(SysDept::getDeptName) // 权限名称
+            .setCreateTime(dept -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, dept.getCreateTime()));
 
-        return getHandlerSelectVo(handlerFunDto);
+    return getHandlerSelectVo(handlerFunDto);
 
-    }
+  }
 
-    /**
-     * 获取用户列表, 同时构建左侧部门树状结构
-     *
-     * @param query 查询条件
-     * @return HandlerSelectVo
-     */
-    private HandlerSelectVo getUser(HandlerQuery query) {
+  /**
+   * 获取用户列表, 同时构建左侧部门树状结构
+   *
+   * @param query 查询条件
+   * @return HandlerSelectVo
+   */
+  private HandlerSelectVo getUser(HandlerQuery query) {
         ......
-        // 查询用户列表
-        List<SysUser> userList = userMapper.selectUserList(sysUser);
-        long total = new PageInfo<>(userList).getTotal();
-        // 查询部门列表，构建树状结构
-        List<SysDept> deptList = deptMapper.selectDeptList(new SysDept());
+    // 查询用户列表
+    List<SysUser> userList = userMapper.selectUserList(sysUser);
+    long total = new PageInfo<>(userList).getTotal();
+    // 查询部门列表，构建树状结构
+    List<SysDept> deptList = deptMapper.selectDeptList(new SysDept());
 
-        // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
-        HandlerFunDto<SysUser> handlerFunDto = new HandlerFunDto<>(userList, total)
-                .setStorageId(user -> user.getUserId().toString())
-                .setHandlerCode(SysUser::getUserName) // 权限编码
-                .setHandlerName(SysUser::getNickName) // 权限名称
-                .setCreateTime(user -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, user.getCreateTime()))
-                .setGroupName(user -> user.getDept() != null ? user.getDept().getDeptName() : "");
+    // 业务系统数据，转成组件内部能够显示的数据, total是业务数据总数，用于分页显示
+    HandlerFunDto<SysUser> handlerFunDto = new HandlerFunDto<>(userList, total)
+            .setStorageId(user -> user.getUserId().toString())
+            .setHandlerCode(SysUser::getUserName) // 权限编码
+            .setHandlerName(SysUser::getNickName) // 权限名称
+            .setCreateTime(user -> DateUtils.parseDateToStr(DateUtils.YYYY_MM_DD_HH_MM_SS, user.getCreateTime()))
+            .setGroupName(user -> user.getDept() != null ? user.getDept().getDeptName() : "");
 
-        // 业务系统机构，转成组件内部左侧树列表能够显示的数据
-        TreeFunDto<SysDept> treeFunDto = new TreeFunDto<>(deptList)
-                .setId(dept -> dept.getDeptId().toString()) // 左侧树ID
-                .setName(SysDept::getDeptName) // 左侧树名称
-                .setParentId(dept -> dept.getParentId().toString()); // 左侧树父级ID
+    // 业务系统机构，转成组件内部左侧树列表能够显示的数据
+    TreeFunDto<SysDept> treeFunDto = new TreeFunDto<>(deptList)
+            .setId(dept -> dept.getDeptId().toString()) // 左侧树ID
+            .setName(SysDept::getDeptName) // 左侧树名称
+            .setParentId(dept -> dept.getParentId().toString()); // 左侧树父级ID
 
-        return getHandlerSelectVo(handlerFunDto, treeFunDto);
-    }
+    return getHandlerSelectVo(handlerFunDto, treeFunDto);
+  }
 }
 ```

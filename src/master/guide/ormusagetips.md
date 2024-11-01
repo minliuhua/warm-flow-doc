@@ -34,13 +34,13 @@ protected EntityManager entityManager;
 **通过上述注解获取工作流组件内各Entity访问能力**
 ```xml
 <persistence-unit name="warm-flow-jpa" transaction-type="RESOURCE_LOCAL">
-    <class>com.warm.flow.orm.entity.FlowDefinition</class>
-    <class>com.warm.flow.orm.entity.FlowHisTask</class>
-    <class>com.warm.flow.orm.entity.FlowInstance</class>
-    <class>com.warm.flow.orm.entity.FlowNode</class>
-    <class>com.warm.flow.orm.entity.FlowSkip</class>
-    <class>com.warm.flow.orm.entity.FlowTask</class>
-    <class>com.warm.flow.orm.entity.FlowUser</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowDefinition</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowHisTask</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowInstance</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowNode</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowSkip</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowTask</class>
+    <class>org.dromara.warm.flow.orm.entity.FlowUser</class>
 </persistence-unit>
 ```
 **以下为主要接口示例，更多接口请参考 EntityManager 接口**
