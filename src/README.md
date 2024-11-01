@@ -39,7 +39,7 @@ features:
 
 - title: 监听器与流程变量
   icon: '/icons/listener.svg'
-  details: 支持五种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
+  details: 支持四种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
   
 - title: 流程设计器
   icon: '/icons/flowchart.svg'
@@ -70,7 +70,7 @@ features:
   details: 流程引擎自身维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
 copyright: false
-footer: Copyright © 2024 warm-flow｜赣ICP备2021008655号-3
+footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by xiaohua Member of Dromara <br>赣ICP备2021008655号-3
 
 ---
 ## **👍友情链接**

@@ -46,6 +46,7 @@ export default sidebar({
                 '/common/pr.md',
                 '/common/dromara.md',
                 '/common/joingroup.md',
+                '/common/paidservice.md',
             ],
         },
         {
@@ -86,6 +87,41 @@ export default sidebar({
             collapsible: false,
             link: '/common/support.md',
         },
+    ],
+    "/v1.3.1/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.3.1/guide/started.md',
+                '/v1.3.1/guide/processterm.md',
+                '/v1.3.1/guide/processrule.md',
+                '/v1.3.1/guide/processdemo.md',
+                '/v1.3.1/guide/table.md',
+                '/v1.3.1/guide/config.md',
+                '/v1.3.1/guide/api.md',
+                '/v1.3.1/guide/datafillhandler.md',
+                '/v1.3.1/guide/variable.md',
+                '/v1.3.1/guide/variableStategy.md',
+                '/v1.3.1/guide/ormusagetips.md',
+                '/v1.3.1/guide/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.3.1/guide/listener.md',
+                '/v1.3.1/guide/logicdelete.md',
+                '/v1.3.1/guide/tenant.md',
+                '/v1.3.1/guide/form.md',
+                '/v1.3.1/guide/customstatus.md',
+                '/v1.3.1/guide/expression.md',
+                '/v1.3.1/guide/jsonlib.md',
+            ],
+        }
     ],
     "/v1.3.0/guide/": [
         {

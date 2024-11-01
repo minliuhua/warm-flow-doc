@@ -8,6 +8,10 @@ warm-flow:
   enabled: true
   # 是否显示banner图，默认是
   banner: true
+  # 是否开启设计器ui，默认true
+  ui: true
+  # id生成器类型, 不填默认为orm扩展自带生成器或者warm-flow内置的19位雪花算法, SnowId14:14位，SnowId15:15位， SnowFlake19：19位
+  key_type: SnowId19
   # 填充器，内部有默认实现，如果不满足实际业务，可通过此配置自定义实现
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
   # 全局租户处理器，有多租户需要，可以配置自定义实现
@@ -45,6 +49,21 @@ public class WarmFlowConfig {
         return new CustomTenantHandler();
     }
 }
+
+/**
+ * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
+ *
+ * @author warm
+ */
+public class CustomTenantHandler implements TenantHandler {
+
+
+    @Override
+    public String getTenantId() {
+        return "000000";
+    }
+}
+
 ```
 
 ## 2、solon
@@ -55,9 +74,9 @@ warm-flow:
   # 是否显示banner图，默认是
   banner: true
   # # 填充器，内部有默认实现，如果不满足实际业务，可通过此配置自定义实现
-  #  data-fill-handler-path: com.warm.flow.core.test.handle.CustomDataFillHandler
+  #  data-fill-handler-path: org.dromara.warm.flow.core.test.handle.CustomDataFillHandler
   # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
-  #  tenant_handler_path: com.warm.flow.core.test.handle.CustomTenantHandler
+  #  tenant_handler_path: org.dromara.warm.flow.core.test.handle.CustomTenantHandler
   # 是否开启逻辑删除（orm框架本身不支持逻辑删除，可通过这种方式开启，比如jpa）
   logic_delete: false
   # 逻辑删除字段值（开启后默认为2）

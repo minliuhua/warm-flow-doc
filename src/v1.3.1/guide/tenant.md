@@ -2,7 +2,7 @@
 
 ## 1、Mybatis-plus
 > [!IMPORTANT]
-> Mybatis-plus只支持自身的多租户方式
+> 1、Mybatis-plus只支持自身的多租户方式
 
 ### 1.1、spring
 ```java
@@ -157,9 +157,9 @@ public class WarmFlowConfig {
 # warm-flow工作流配置
 warm-flow:
   # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
-  tenant_handler_path: com.warm.flow.core.test.handle.CustomTenantHandler
+  tenant_handler_path: org.dromara.warm.flow.core.test.handle.CustomTenantHandler
 ```
-### 2.1、bean配置方式
+### 2.2、bean配置方式
 ```java
 @Configuration
 public class WarmFlowConfig {
@@ -171,4 +171,24 @@ public class WarmFlowConfig {
         return new CustomTenantHandler();
     }
 }
+
 ```
+
+### 2.3、@Component配置方式
+```java
+/**
+ * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
+ *
+ * @author warm
+ */
+public class CustomTenantHandler implements TenantHandler {
+
+
+    @Override
+    public String getTenantId() {
+        // 这里返回系统中的当前办理人的租户ID，一般会有工具类获取
+        return "000000";
+    }
+}
+```
+
