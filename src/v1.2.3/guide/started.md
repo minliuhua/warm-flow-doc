@@ -23,7 +23,7 @@
 ### 1、mybatis
 **springboot项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
@@ -33,7 +33,7 @@
 
 **solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
@@ -44,7 +44,7 @@
 ### 2、mybatis-plus
 **springboot项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
@@ -54,7 +54,7 @@
 
 **solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -65,7 +65,7 @@
 ### 3、jpa
 **springboot项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
@@ -75,14 +75,14 @@
 
 **solon项目**
 
-```maven
+```xml
 支持中...
 ```
 
 ### 4、mybatis-flex
 **springboot项目**
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
@@ -92,7 +92,7 @@
 
 **solon项目**
 
-```maven
+```xml
 支持中...
 ```
 

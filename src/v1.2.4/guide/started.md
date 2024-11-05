@@ -23,7 +23,7 @@
 ### 3.1、mybatis
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
@@ -33,7 +33,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
@@ -44,7 +44,7 @@ solon项目
 ### 3.2、mybatis-plus
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
@@ -54,7 +54,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -73,7 +73,7 @@ warm-flow:
 
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
@@ -83,7 +83,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -94,7 +94,7 @@ solon项目
 ### 3.4、mybatis-flex
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
@@ -104,7 +104,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
@@ -115,7 +115,7 @@ solon项目
 ### 3.5、easy-query
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
@@ -125,7 +125,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-easy-query-solon-plugin</artifactId>

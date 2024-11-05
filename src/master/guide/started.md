@@ -27,9 +27,9 @@
 
 ## 3、maven依赖
 ### 3.1、mybatis
-springboot2项目
+**springboot2项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
@@ -37,9 +37,9 @@ springboot2项目
 </dependency>
 ```
 
-springboot3项目
+**springboot3项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
@@ -47,9 +47,9 @@ springboot3项目
 </dependency>
 ```
 
-solon项目
+**solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
@@ -58,9 +58,9 @@ solon项目
 ```
 
 ### 3.2、mybatis-plus
-springboot2项目
+**springboot2项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
@@ -68,9 +68,9 @@ springboot2项目
 </dependency>
 ```
 
-springboot3项目
+**springboot3项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
@@ -78,9 +78,9 @@ springboot3项目
 </dependency>
 ```
 
-solon项目
+**solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -89,7 +89,7 @@ solon项目
 ```
 
 ### 3.3、jpa
-warm-flow工作流配置
+**warm-flow工作流配置**
 ```yml
 # warm-flow工作流配置
 warm-flow:
@@ -97,9 +97,9 @@ warm-flow:
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
 ```
 
-springboot2项目
+**springboot2项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
@@ -107,9 +107,9 @@ springboot2项目
 </dependency>
 ```
 
-springboot3项目
+**springboot3项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-jpa-sb3-starter</artifactId>
@@ -117,9 +117,9 @@ springboot3项目
 </dependency>
 ```
 
-solon项目
+**solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -128,9 +128,9 @@ solon项目
 ```
 
 ### 3.4、mybatis-flex
-springboot2项目
+**springboot2项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
@@ -138,9 +138,9 @@ springboot2项目
 </dependency>
 ```
 
-springboot3项目
+**springboot3项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
@@ -148,9 +148,9 @@ springboot3项目
 </dependency>
 ```
 
-solon项目
+**solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
@@ -159,9 +159,9 @@ solon项目
 ```
 
 ### 3.5、easy-query
-springboot项目
+**springboot项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
@@ -169,9 +169,9 @@ springboot项目
 </dependency>
 ```
 
-solon项目
+**solon项目**
 
-```maven
+```xml
 <dependency>
       <groupId>org.dromara</groupId>
       <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
@@ -210,16 +210,18 @@ solon项目
 * [x] mybatis-flex
 * [ ] ......
 
-
-
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**
 
-## 6、代码示例
+## 6、设计器引入
+> 通过jar包引入：[文档地址](./designerIntroduced.md)
 
-> 测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类
+## 7、代码示例
 
+> 详细案例测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类
 
-## 7、部署流程
+**以下为简短案例：**
+
+### 7.1、部署流程
 
 ```java
 public void deployFlow() throws Exception {
@@ -228,7 +230,7 @@ public void deployFlow() throws Exception {
     }
 ```
 
-## 8、发布流程
+### 7.2、发布流程
 
 ```java
 public void publish() throws Exception {
@@ -236,7 +238,7 @@ public void publish() throws Exception {
     }
 ```
 
-## 9、开启流程
+### 7.3、开启流程
 
 ```java
 public void startFlow() {
@@ -244,7 +246,7 @@ public void startFlow() {
     }
 ```
 
-## 10、流程流转
+### 7.4、流程流转
 
 ```java
 public void skipFlow() throws Exception {
@@ -267,10 +269,10 @@ public void skipFlow() throws Exception {
     }
 ```
 
-## 11、初学者推荐学习路线
+## 8、初学者推荐学习路线
 
-### 11.1、推荐集成案例hh-vue
+### 8.1、推荐集成案例hh-vue
 [项目地址](../../common/projectexample.md)
 
-### 11.2、推荐学习视频
+### 8.2、推荐学习视频
 [新手教学视频，社区同学录制](https://www.bilibili.com/video/BV1Ci42117pK/)
