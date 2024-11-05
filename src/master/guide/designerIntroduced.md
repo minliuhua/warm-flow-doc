@@ -1,7 +1,7 @@
 # 设计器引入
 > [!IMPORTANT]
-> 1、为了方便业务系统快速引入设计器，不需要搬运并且适配等工作
-> 2、可以按照本文中介绍的，使用设计器，并快速接入业务系统
+> 1、为了方便业务系统快速引入设计器，不需要搬运并且适配等工作  
+> 2、可以按照本文中介绍的，使用设计器，并快速接入业务系统  
 > 3、设计原理采取不分离的方式，把设计器打包的jar包中,以接口和静态资源的方式引入
 
 ## 1. 引入依赖
@@ -382,3 +382,38 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
   }
 }
 ```
+
+## 5. 设计器二开
+### 5.1 下载设计器源码，改造 
+
+<img src="https://foruda.gitee.com/images/1730823525754067269/9573585f_2218307.png" width="400">
+
+### 5.2 源码调试
+- 设计器需要配置业务系统的代理地址，否则无法访问业务系统
+- 独立启动该设计器
+- 业务系统配置该设计的访问地址：http://localhost:81/warm-flow-ui/index.html?id=xxx&disabled=false
+
+<img src="https://foruda.gitee.com/images/1730821008574953214/941ea1cd_2218307.png" width="700">
+<img src="https://foruda.gitee.com/images/1730825131504921296/a17821eb_2218307.png" width="700">
+
+### 5.3 部署
+#### 5.3.1 先排除原依赖的前端代码
+```xml
+<dependency>
+    <groupId>org.dromara</groupId>
+    <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
+    <exclusions>
+        <exclusion>
+            <artifactId>warm-flow-plugin-vue3-ui</artifactId>
+            <groupId>org.dromara</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+
+#### 5.3.2 不分离部署(部署方案一)
+- 打包项目，把打包后的文件`dist`复制到业务系统`src/main/META-INF/resources`目录下,改名为warm-flow-ui
+<img src="https://foruda.gitee.com/images/1730822519593337466/41e4ce38_2218307.png" width="400">
+
+#### 5.3.2 前端独立部署/分离部署(部署方案二)
+待更新......
