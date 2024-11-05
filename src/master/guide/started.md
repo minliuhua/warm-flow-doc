@@ -107,16 +107,6 @@ warm-flow:
 </dependency>
 ```
 
-**springboot3项目**
-
-```xml
-<dependency>
-      <groupId>org.dromara</groupId>
-      <artifactId>warm-flow-jpa-sb3-starter</artifactId>
-      <version>1.3.1</version>
-</dependency>
-```
-
 **solon项目**
 
 ```xml
