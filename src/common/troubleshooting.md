@@ -239,3 +239,7 @@ public class MybatisPlusConfig {
 ### 6.1、可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 
 如maven3.9.6切换为低版本3.8.2
+
+## 7、 StackOverflowError 错误
+查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
+<img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/>
