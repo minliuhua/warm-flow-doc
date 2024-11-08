@@ -5,7 +5,7 @@
 ### 1.1、新增流程定义表数据，新增后需要通过saveXml接口保存流程节点和流程跳转数据
 `checkAndSave(definition)`：校验后新增
 
-### 1.1、新增流程定义、流程节点和流程跳转数据
+### 1.1、导入流程定义、流程节点和流程跳转数据
 `importXml(is)`：导入流程定义xml的输入流
 
 ### 1.2、保存流程节点和流程跳转数据
@@ -59,7 +59,7 @@
 `skipByInsId(instanceId, flowParams)`：传入流程实例id，流程跳转。flowParams包含如下字段：
 - skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
 - nodeCode: 节点编码,如果指定节点,可任意跳转到对应节点 [按需传输]
-- permissionFlag: 办理人权限标识，比如用户，角色，部门等 [只有未设置办理人时可不传]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等,未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
@@ -89,7 +89,7 @@
 `skip(taskId, flowParams)`：传入流程任务id，流程跳转。flowParams包含如下字段：
 - skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
 - nodeCode: 节点编码，如果指定节点,可任意跳转到对应节点 [按需传输]
-- permissionFlag: 办理人权限标识，比如用户，角色，部门等 [只有未设置办理人时可不传]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等,未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
