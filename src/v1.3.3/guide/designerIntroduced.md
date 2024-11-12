@@ -386,17 +386,17 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 
 ## 5. 共享后端权限(如token)
 - 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
-- 加载设计器页面路径`/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`，在后面追加&token=${token}，token是业务系统的token，会保存到cookies中`Warm-Token`
-- yml中配置`warm-flow.token-name=Authorization`,每次请求会把token, set到header`Authorization`上
+- 在前端加载设计器页面路径后面，追加&Authorization=${token}，token是业务系统的token，可追加多个token
+- yml中配置`warm-flow.token-name=Authorization`,每次请求会把token, set到header`Authorization`上，多个token用逗号分隔
+- 请注意：请求中的token的名称或者key，要和后端yml中配置一致
 ```yml
 # warm-flow工作流配置
 warm-flow:
   ......
-  ## 如果需要工作流共享业务系统权限，默认Authorization
+  ## 如果需要工作流共享业务系统权限，默认Authorization，如果有多个token，用逗号分隔
   token-name: Authorization
   ......
 ```
-<img src="https://foruda.gitee.com/images/1731387777362688133/b23bd741_2218307.png" width="700">
 
 
 ## 6. 设计器二开
