@@ -423,7 +423,7 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 ```
 
 #### 6.3.2 设计器不分离部署(部署方案一)
-- 打包项目，把打包后的文件`dist`复制到业务系统`src/main/META-INF/resources`目录下,改名为warm-flow-ui
+- 打包项目，把打包后的文件`dist`复制到业务系统`src/main/META-INF/resources`目录下,或者`src/main/resources`目录下都可以,改名为warm-flow-ui
 - 独立服务
 
 <img src="https://foruda.gitee.com/images/1730822519593337466/41e4ce38_2218307.png" width="400">
