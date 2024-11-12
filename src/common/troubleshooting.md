@@ -101,7 +101,7 @@ warm-flow:
 [Warm-Flow工作流引擎数据库主键自增策略实现](https://juejin.cn/post/7402110528298074152)
 
 ## 2、流程图片中文乱码
-
+### linux环境：安装中文字体
 生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
 由于服务器上缺少中文字体，通过检查fc-list :lang=zh是否包含中文字符集（以下是存在的示例）
 
@@ -121,8 +121,14 @@ warm-flow:
 drwxr-xr-x 2 root root 4096 5月  17 00:20 dejavu
 drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 ```
-
 重启服务
+
+### docker环境：安装中文字体
+以ruoyi-vue-plus-4.x中dockerfile为例，添加中文字体即可  （感谢【格调@main】提供的方案）
+
+<img src="https://foruda.gitee.com/images/1730708137813267165/0ff99854_2218307.png" width="700" />
+
+
 
 ## 3、FlowAutoConfig.initFlow()未加载
 
@@ -135,7 +141,7 @@ spring:
     allow-bean-definition-overriding: true
     lazy-initialization: true
     web-application-type: servlet
-``` 
+```
 
 ## 4、监听器未执行或者类型转换异常
 
@@ -233,3 +239,7 @@ public class MybatisPlusConfig {
 ### 6.1、可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 
 如maven3.9.6切换为低版本3.8.2
+
+## 7、 StackOverflowError 错误
+查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
+<img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/>
