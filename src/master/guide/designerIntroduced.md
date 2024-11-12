@@ -29,7 +29,7 @@ protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exce
             // 注解标记允许匿名访问的url
             .authorizeHttpRequests((requests) -> {
                 // 后端请求，静态资源，可匿名访问
-                requests.antMatchers("/warm-flow-ui/**").permitAll()
+                requests.antMatchers("/warm-flow-ui/**", "/warm-flow/**").permitAll()
                         // 除上面外的所有请求全部需要鉴权认证
                         .anyRequest().authenticated();
             })
@@ -56,6 +56,7 @@ public class ShiroConfig {
         // 后端请求，静态资源，可匿名访问
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         filterChainDefinitionMap.put("/warm-flow-ui/**", "anon");
+        filterChainDefinitionMap.put("/warm-flow/**", "anon");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
@@ -75,7 +76,7 @@ public class SaTokenConfigure implements WebMvcConfigurer {
         registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
                 .addPathPatterns("/**")
                 // 以上是sa-token案例，下面才是需要排除的地址
-                .excludePathPatterns("/warm-flow-ui/**");
+                .excludePathPatterns("/warm-flow-ui/**", "/warm-flow/**");
     }
 }
 ```
@@ -383,23 +384,28 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 }
 ```
 
-## 5. 设计器二开
-### 5.1 下载设计器源码，改造 
+## 5. 共享后端权限(如token)
+- 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
+- 加载设计器页面路径`/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`，在后面追加&token=${token}，token是业务系统的token
+
+
+## 6. 设计器二开
+### 6.1 下载设计器源码，改造 
 
 - 如果内置的接口不满足或者不够支持实际业务开发，可在业务系统中增加接口，设计器配置该接口地址
 
 <img src="https://foruda.gitee.com/images/1730823525754067269/9573585f_2218307.png" width="400">
 <img src="https://foruda.gitee.com/images/1730958025453602251/ae415296_2218307.png" width="700">
 
-### 5.2 源码调试
+### 6.2 源码调试
 - 设计器需要配置业务系统的代理地址，否则无法访问业务系统
 - 独立启动该设计器
 
 <img src="https://foruda.gitee.com/images/1730821008574953214/941ea1cd_2218307.png" width="700">
 <img src="https://foruda.gitee.com/images/1730825131504921296/a17821eb_2218307.png" width="700">
 
-### 5.3 部署
-#### 5.3.1 先排除原依赖的前端代码
+### 6.3 部署
+#### 6.3.1 先排除原依赖的前端代码
 
 ```xml
 <dependency>
@@ -414,13 +420,13 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 </dependency>
 ```
 
-#### 5.3.2 设计器不分离部署(部署方案一)
+#### 6.3.2 设计器不分离部署(部署方案一)
 - 打包项目，把打包后的文件`dist`复制到业务系统`src/main/META-INF/resources`目录下,改名为warm-flow-ui
 - 独立服务
 
 <img src="https://foruda.gitee.com/images/1730822519593337466/41e4ce38_2218307.png" width="400">
 
-#### 5.3.2 设计器独立部署/分离部署(部署方案二)
+#### 6.3.2 设计器独立部署/分离部署(部署方案二)
 - 打包项目，把打包后的文件`dist`复制到nginx的html目录下,改名为warm-flow-ui
 - 访问地址改为(请注意地址少了`/warm-flow-ui`)：http://localhost:81/index.html?id=xxx&disabled=false
 
