@@ -20,6 +20,8 @@ warm-flow:
   logic_delete: true
   # 逻辑删除字段值（开启后默认为2）
   logic_delete_value: 2
+  ## 如果需要工作流共享业务系统权限，默认Authorization，如果有多个token，用逗号分隔
+  token-name: Authorization1
   # 逻辑未删除字段（开启后默认为0）
   logic_not_delete_value: 0
   # 当使用JPA时指定JpaPersistenceProvider
