@@ -387,6 +387,8 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 ## 5. 共享后端权限(如token)
 - 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
 - 加载设计器页面路径`/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`，在后面追加&token=${token}，token是业务系统的token
+- 此token组件会保存到cookies中`Warm-Token`，每次请求都会把这个set到header`Authorization`，如果后端不是这个key，请按照下面二开改造
+<img src="https://foruda.gitee.com/images/1731387777362688133/b23bd741_2218307.png" width="700">
 
 
 ## 6. 设计器二开
