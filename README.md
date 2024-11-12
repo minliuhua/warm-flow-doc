@@ -36,3 +36,6 @@
 
 - 在**项目根目录**运行 `npm run docs:dev` 命令
   - 站点会默认运行在 `http://localhost:8080` 
+
+### 打包
+-  `npm run docs:build` 命令
