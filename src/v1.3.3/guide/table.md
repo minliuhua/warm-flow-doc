@@ -93,7 +93,7 @@
 | 5     | node_code       | 流程节点编码                                                 | VARCHAR(40)  |          | √        |            |              |
 | 6     | node_name       | 流程节点名称                                                 | VARCHAR(100) |          |          |            |              |
 | 7     | variable        | 任务变量                                                     | TEXT         |          |          |            |              |
-| 8     | flow_status     | 流程状态（0待提交 1审批中 2 审批通过 3自动通过 8已完成 9已退回 10失效） | VARCHAR(20)  |          | √        |            |              |
+| 8     | flow_status     | 流程状态（0待提交 1审批中 2 审批通过 3自动通过 4终止 5作废 6撤销 7取回  8已完成 9已退回 10失效） | VARCHAR(20)  |          | √        |            |              |
 | 9     | activity_status | 流程激活状态（0挂起 1激活）                                  | BIT(1)       |          | √        | 1          |              |
 | 10    | create_by       | 创建者                                                       | VARCHAR(64)  |          |          |            |              |
 | 11    | create_time     | 创建时间                                                     | DATETIME     |          |          |            |              |
