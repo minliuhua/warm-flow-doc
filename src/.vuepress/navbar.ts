@@ -26,6 +26,7 @@ export default navbar([
         text: '历史版本',
         icon: '/icons/version.svg',
         children: [
+            { text: 'v1.3.4', link: '/v1.3.4/guide/started.md' },
             { text: 'v1.3.3', link: '/v1.3.3/guide/started.md' },
             { text: 'v1.3.1', link: '/v1.3.1/guide/started.md' },
             { text: 'v1.3.0', link: '/v1.3.0/guide/started.md' },
