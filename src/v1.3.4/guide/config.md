@@ -16,8 +16,6 @@ warm-flow:
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
   # 全局租户处理器，有多租户需要，可以配置自定义实现
   tenant_handler_path: com.ruoyi.system.handle.CustomTenantHandler
-  # 办理人权限处理器，审批前获取当前办理人，办理时会校验的该权限集合
-  permission-handler-path: com.ruoyi.system.handle.CustomPermissionHandler
   # 是否开启逻辑删除（orm框架本身不支持逻辑删除，可通过这种方式开启）
   logic_delete: true
   # 逻辑删除字段值（开启后默认为2）
