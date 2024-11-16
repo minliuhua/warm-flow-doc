@@ -8,7 +8,7 @@
 > start：开始监听器，任务开始办理时执行
 > permission：权限监听器，办理任务动态设置权限（后续不建议用）
 > assignment： 分派办理人监听器，动态修改代办任务信息
-> finish：结束监听器，当前任务完成后执行
+> finish：完成监听器，当前任务完成后执行
 
 ## 2、流程监听器和节点监听器
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ public interface Listener extends Serializable {
     String LISTENER_START = "start";
 
     /**
-     * 结束监听器，当前任务完成后执行
+     * 完成监听器，当前任务完成后执行
      */
     String LISTENER_END = "finish";
 
@@ -87,7 +87,7 @@ public class DefStartListener implements Listener {
     permissionList.add(user.getUser().getUserId().toString());
     flowParams.setPermissionFlag(permissionList);
 
-    log.info("流程开始监听器结束;{}", "开启流程完成");
+    log.info("流程开始监听器结束......");
   }
 }
 ```
@@ -141,7 +141,7 @@ public class DefFinishListener implements Listener {
       }
     }
 
-    log.info("流程完成监听器结束;{}", "任务完成");
+    log.info("流程完成监听器结束......");
   }
 }
 ```
