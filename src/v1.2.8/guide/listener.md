@@ -10,11 +10,11 @@
 > assignment： 分派办理人监听器，动态修改代办任务信息
 > finish：结束监听器，当前任务完成后执行
 
-## 2、全局监听器和局部监听器
+## 2、流程监听器和节点监听器
 > [!IMPORTANT]  
-> 执行顺序：优先执行局部监听器，然后执行全局监听器  
-> 全局监听器：在流程定义中配置，所有节点任务都会执行  
-> 局部监听器：在流程节点中配置，只有指定节点任务才会执行
+> 执行顺序：优先执行节点监听器，然后执行流程监听器  
+> 流程监听器：在流程定义中配置，所有节点任务都会执行  
+> 节点监听器：在流程节点中配置，只有指定节点任务才会执行
 
 
 
@@ -55,18 +55,18 @@ public interface Listener extends Serializable {
 通过@Component或者@Bean注解注入到容器
 ```java
 @Component
-public class GlobalStartListener implements Listener {
+public class DefStartListener implements Listener {
 
 
-  private static final Logger log = LoggerFactory.getLogger(GlobalStartListener.class);
+  private static final Logger log = LoggerFactory.getLogger(DefStartListener.class);
 
   /**
-   * 设置办理人id、所拥有的权限等操作，也可以放到业务代码中办理前设置，或者局部监听器
+   * 设置办理人id、所拥有的权限等操作，也可以放到业务代码中办理前设置，或者节点监听器
    * @param listenerVariable 监听器变量
    */
   @Override
   public void notify(ListenerVariable listenerVariable) {
-    log.info("全局开始监听器");
+    log.info("流程开始监听器");
 
     FlowParams flowParams = listenerVariable.getFlowParams();
     LoginUser user = SecurityUtils.getLoginUser();
@@ -87,7 +87,7 @@ public class GlobalStartListener implements Listener {
     permissionList.add(user.getUser().getUserId().toString());
     flowParams.setPermissionFlag(permissionList);
 
-    log.info("全局开始监听器结束;{}", "开启流程完成");
+    log.info("流程开始监听器结束;{}", "开启流程完成");
   }
 }
 ```
@@ -95,28 +95,28 @@ public class GlobalStartListener implements Listener {
 ### 3.3、完成监听器实现类例子
 ```java
 @Component
-public class GlobalFinishListener implements Listener {
+public class DefFinishListener implements Listener {
 
 
-  private static final Logger log = LoggerFactory.getLogger(GlobalFinishListener.class);
+  private static final Logger log = LoggerFactory.getLogger(DefFinishListener.class);
 
   @Resource
   private TestLeaveMapper testLeaveMapper;
 
   /**
-   * 业务表新增或者更新操作，也可以放到业务代码中办理完成后，或者局部监听器
+   * 业务表新增或者更新操作，也可以放到业务代码中办理完成后，或者节点监听器
    * @param listenerVariable 监听器变量
    */
   @Override
   public void notify(ListenerVariable listenerVariable) {
-    log.info("全局完成监听器");
+    log.info("流程完成监听器");
     Instance instance = listenerVariable.getInstance();
     Map<String, Object> variable = listenerVariable.getVariable();
     Object o = variable.get("businessData");
 
     // 更新业务数据
     if (ObjectUtil.isNotNull(o)) {
-      // 可以统一使用一个全局监听器，不同实体类，不同的操作
+      // 可以统一使用一个流程监听器，不同实体类，不同的操作
       if (o instanceof TestLeave) {
         TestLeave testLeave = (TestLeave) o;
         testLeave.setNodeCode(instance.getNodeCode());
@@ -141,7 +141,7 @@ public class GlobalFinishListener implements Listener {
       }
     }
 
-    log.info("全局完成监听器结束;{}", "任务完成");
+    log.info("流程完成监听器结束;{}", "任务完成");
   }
 }
 ```
@@ -183,14 +183,14 @@ public class AssignmentListener implements Listener {
 ### 3.5、创建监听器
 就是在下一个任务生成前执行，比如创建任务前需要初始化信息或者校验数据是否合法
 
-### 3.6、页面配置全局或局部监听器
-#### 3.6.1、局部监听器（流程节点配置）
+### 3.6、页面配置全局或节点监听器
+#### 3.6.1、节点监听器（流程节点配置）
 
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
 
 <img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
 
-#### 3.6.1、全局监听器（流程定义配置）
+#### 3.6.1、流程监听器（流程定义配置）
 
 <img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 
