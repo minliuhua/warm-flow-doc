@@ -180,6 +180,7 @@ warm-flow:
 ```
 
 ## 4、支持数据库类型
+> 开始学习前，请先了解[表结构](./table.md)，不迷路
 
 * [x] mysql
 * [x] oracle

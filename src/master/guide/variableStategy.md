@@ -1,18 +1,54 @@
-# 办理人变量设置
+# 办理人变量表达式
+> [!IMPORTANT]  
+> 1、业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人变量表达式就派上用场了
 
-## 1、内置表达式
+## 1、特点
+- 1、内置常见表达式，同时支持功能强大的spel表达，支持扩展
+- 2、支持一对一替换，同时支持多对一的替换，替换集合
+
+```java
+ @SpringBootTest
+public class VariableTest {
+
+    /**
+     * 办理人变量表达式测试
+     */
+    @Test
+    public void testVariable() {
+        List<Task> addTasks = new ArrayList<>();
+        addTasks.add(FlowFactory.newTask().setPermissionList(Arrays.asList("@@default@@|${handler1}"
+                , "@@spel@@|#{@user.evalVar(#handler2)}", "@@default@@|${handler3}"
+                , "@@spel@@|#{@user.evalVar(#handler4)}"
+                , "@@spel@@|#{@user.evalVarEntity(#handler5)}"
+                , "role:1", "1")));
+        FlowParams flowParams = new FlowParams();
+        Map<String, Object> variable = new HashMap<>();
+        variable.put("handler1", Arrays.asList(4, "5", 100L));
+        variable.put("handler2", 12L);
+        variable.put("handler3", new Object[] {9, "10", 102L});
+        variable.put("handler4", "15");
+        Task task = FlowFactory.newTask();
+        variable.put("handler5", task.setId(55L));
+
+        VariableUtil.replacement(addTasks, variable);
+        addTasks.forEach(p -> p.getPermissionList().forEach(System.out::println));
+    }
+}
+```
+
+## 2、内置表达式
 - 1、默认办理人变量策略: `@@default@@|${handler1}`
 - 2、spel办理人变量策略: `@@spel@@|#{@user.evalVar(#handler2)}`
 - 3、@@xxx@@: 标识不同策略的前缀
 
-## 2、变量替换时机
-- 1、上一个节点任务办理时，传入变量
-- 2、下一个节点任务生成时即可获取替换  
+## 3、变量替换时机
+- 1、本节点任务之前的代办任务办理时，传入变量
+- 2、本节点任务生成时即可替换完成  
 
-> 比如B-->C, C任务设置办理人变量为`@@default@@|${handler1}`，B任务办理时传入变量`handler1=100`，则C节点办理人变量为100
+> 比如B-->C, C任务设置办理人变量为`@@default@@|${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
 
 
-## 3、默认办理人变量策略
+## 4、默认办理人变量策略
 
 ### 前端页面设置变量
 - 比如：`@@default@@|${handler1}`
@@ -34,7 +70,7 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 4、spel办理人变量策略
+## 5、spel办理人变量策略
 
 ### 前端页面设置变量
 - 比如：`@@spel@@|#{@user.evalVar(#handler2)}`
@@ -72,7 +108,7 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 5、扩展
+## 6、扩展
 
 - 扩展需要实现`VariableStrategy`接口, 实现`getType和eval`方法
 - 并且通过这个方法进行注册VariableUtil.setVariable
