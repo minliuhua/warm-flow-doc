@@ -48,13 +48,33 @@ Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但功能�
 10. 跨部门协作：Warm-Flow支持跨部门的流程协作，帮助不同部门之间更好地协调工作。
 
 
-## 4、演示地址
+## 4、支持数据库类型
+* [x] mysql
+* [x] oracle
+* [x] postgresql
+* [ ] 达梦
+* [ ] 人大金仓
+* [ ] GaussDB
+* [ ] oceanbase
+* [ ] sqlserver
+* [ ] ......
+
+
+## 5、支持orm框架类型
+* [x] mybatis
+* [x] mybatis-plus
+* [x] jpa
+* [x] easy-query
+* [x] mybatis-flex
+* [ ] ......
+
+## 6、演示地址
 
 - admin/admin123
 
 演示地址：http://www.hhzai.top
 
-## 5、特别赞助
+## 7、特别赞助
 <table>
     <tr>
         <td><img src="../.vuepress/public/ggw/MaxKey.png"/></td>
@@ -64,6 +84,6 @@ Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但功能�
 
 [如何成为赞助商 加群联系作者详谈](./joingroup.md)
 
-## 6、你可以请作者喝杯咖啡表示鼓励
+## 8、你可以请作者喝杯咖啡表示鼓励
 [捐赠地址](./support.md)
 

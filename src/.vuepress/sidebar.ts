@@ -17,6 +17,7 @@ export default sidebar({
                 '/master/guide/permission_handler.md',
                 '/master/guide/variableStategy.md',
                 '/master/guide/listener.md',
+                '/master/guide/expression.md',
                 '/master/guide/ormusagetips.md',
                 '/master/guide/logicdelete.md',
                 '/master/guide/tenant.md',
@@ -30,8 +31,9 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/master/guide/designer_two_open.md',
+                '/master/guide/variableStategy_ex.md',
                 '/master/guide/customstatus.md',
-                '/master/guide/expression.md',
+                '/master/guide/expression_ex.md',
                 '/master/guide/form.md',
                 '/master/guide/jsonlib.md',
             ],

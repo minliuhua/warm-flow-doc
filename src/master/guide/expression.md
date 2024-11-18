@@ -1,4 +1,7 @@
 # 条件表达式
+> [!IMPORTANT]
+> 在执行互斥网关时候，抉择是执行哪个分支，可以通过条件表达式来判断
+
 
 ## 1、内置表达式
 - 1、大于
@@ -54,15 +57,3 @@ public int insertTestLeave(TestLeave testLeave, String flowStatus)
     return instance != null? 1 : 0;
 }
 ```
-
-## 3、自定义表达式
-
-**1、扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
-**2、并且通过这个方法进行注册ExpressionUtil.setExpression**
-
-<table>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1703669588889979582/cbe952be_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
-    </tr>
-</table>
