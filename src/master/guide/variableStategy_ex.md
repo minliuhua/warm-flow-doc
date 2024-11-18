@@ -9,7 +9,7 @@
 ### 1.1、VariableStrategy接口定义
 ```java
 /**
- * 变量替换策略
+ * 办理人表里表达式策略
  *
  * @author warm
  */
@@ -35,7 +35,7 @@ public interface VariableStrategy {
 
 ```java
 /**
- * 默认变量替换策略： @@default@@|${flag}
+ * 默认办理人表里表达式策略： @@default@@|${flag}
  *
  * @author warm
  */

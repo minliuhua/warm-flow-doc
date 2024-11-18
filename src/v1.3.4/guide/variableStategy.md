@@ -79,7 +79,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 
 ```java
 /**
- * 变量替换策略
+ * 办理人表里表达式策略
  *
  * @author warm
  */
@@ -103,7 +103,7 @@ public interface VariableStrategy {
 
 
 /**
- * 默认变量替换策略： @@default@@|${flag}
+ * 默认办理人表里表达式策略： @@default@@|${flag}
  *
  * @author warm
  */
