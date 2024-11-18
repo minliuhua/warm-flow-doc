@@ -2,8 +2,8 @@ import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
     "/master/guide/": [
-        {
-            text: "基础部分",
+         {
+            text: "初级篇",
             icon: "bulb",
             collapsible: false,
             children: [
@@ -14,19 +14,26 @@ export default sidebar({
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
-                '/master/guide/permission_handler.md',
-                '/master/guide/variableStategy.md',
-                '/master/guide/listener.md',
                 '/master/guide/expression.md',
-                '/master/guide/ormusagetips.md',
-                '/master/guide/logicdelete.md',
-                '/master/guide/tenant.md',
-                '/master/guide/designerIntroduced.md',
                 '/master/guide/processterm.md',
             ],
         },
         {
-            text: "进阶部分",
+            text: "进阶篇",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/master/guide/permission_handler.md',
+                '/master/guide/variableStategy.md',
+                '/master/guide/listener.md',
+                '/master/guide/ormusagetips.md',
+                '/master/guide/logicdelete.md',
+                '/master/guide/tenant.md',
+                '/master/guide/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "提高篇",
             icon: "/icons/advanced.svg",
             collapsible: false,
             children: [
