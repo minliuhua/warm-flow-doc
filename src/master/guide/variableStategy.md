@@ -30,7 +30,7 @@ public class VariableTest {
         Task task = FlowFactory.newTask();
         variable.put("handler5", task.setId(55L));
 
-        VariableUtil.replacement(addTasks, variable);
+        ExpressionUtil.replacement(addTasks, variable);
         addTasks.forEach(p -> p.getPermissionList().forEach(System.out::println));
     }
 }

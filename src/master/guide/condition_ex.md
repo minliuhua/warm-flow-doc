@@ -4,14 +4,8 @@
 
 
 ## 1、实现接口
-- 扩展需要实现`ExpressionStrategy`接口或者继承`ExpressionStrategyAbstract`抽象类**  
+- 扩展需要实现`ConditionStrategy`接口或者继承`ConditionStrategyAbstract`抽象类**  
 
-<table>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1703669588889979582/cbe952be_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
-    </tr>
-</table>
 
 ### 1.1、ExpressionStrategy接口
 ```java
@@ -20,21 +14,17 @@
  *
  * @author warm
  */
-public interface ExpressionStrategy {
+public interface ConditionStrategy extends ExpressionStrategy<Boolean> {
 
-    /**
-     * 获取表达式类型
-     * @return 表达式类型
-     */
-    String getType();
+    Map<String, ExpressionStrategy<Boolean>> map = new HashMap<>();
 
-    /**
-     * 执行表达式
-     * @param expression 表达式
-     * @param variable 流程变量
-     * @return 执行结果
-     */
-    boolean eval(String expression, Map<String, Object> variable);
+    default void setExpression(ExpressionStrategy<Boolean> expressionStrategy) {
+        map.put(expressionStrategy.getType(), expressionStrategy);
+    }
+
+    static Map<String, ExpressionStrategy<Boolean>> getExpressionMap() {
+        return map;
+    }
 }
 ```
 
@@ -46,12 +36,13 @@ public interface ExpressionStrategy {
  *
  * @author warm
  */
-public abstract class ExpressionStrategyAbstract implements ExpressionStrategy {
+public abstract class ConditionStrategyAbstract implements ConditionStrategy {
 
 
     /**
      * 执行表达式前置方法 合法性校验
-     * @param split 表达式后缀：如flag@@eq@@4
+     *
+     * @param split    表达式后缀：如flag@@eq@@4
      * @param variable 流程变量
      */
     public void preEval(String[] split, Map<String, Object> variable) {
@@ -62,12 +53,13 @@ public abstract class ExpressionStrategyAbstract implements ExpressionStrategy {
 
     /**
      * 执行表达式
+     *
      * @param expression 表达式
-     * @param variable 流程变量
+     * @param variable   流程变量
      * @return 执行结果
      */
     @Override
-    public boolean eval(String expression, Map<String, Object> variable) {
+    public Boolean eval(String expression, Map<String, Object> variable) {
         String[] split = expression.split(FlowCons.splitAt);
         preEval(split, variable);
         String variableValue = String.valueOf(variable.get(split[0].trim()));
@@ -76,11 +68,12 @@ public abstract class ExpressionStrategyAbstract implements ExpressionStrategy {
 
     /**
      * 执行表达式后置方法
+     *
      * @param split 如flag@@eq@@4
      * @param value 流程变量值
      * @return 执行结果
      */
-    public abstract boolean afterEval(String[] split, String value);
+    public abstract Boolean afterEval(String[] split, String value);
 
 }
 ```
@@ -92,7 +85,7 @@ public abstract class ExpressionStrategyAbstract implements ExpressionStrategy {
  *
  * @author warm
  */
-public class ExpressionStrategyEq extends ExpressionStrategyAbstract {
+public class ConditionStrategyEq extends ConditionStrategyAbstract {
 
     @Override
     public String getType() {
@@ -100,7 +93,7 @@ public class ExpressionStrategyEq extends ExpressionStrategyAbstract {
     }
 
     @Override
-    public boolean afterEval(String[] split, String value) {
+    public Boolean afterEval(String[] split, String value) {
         if (MathUtil.isNumeric(split[2].trim())) {
             return MathUtil.determineSize(value, split[2].trim()) == 0;
         } else {

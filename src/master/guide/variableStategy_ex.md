@@ -13,21 +13,17 @@
  *
  * @author warm
  */
-public interface VariableStrategy {
+public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 
-    /**
-     * 获取变量替换类型
-     * @return 变量替换类型
-     */
-    String getType();
+    Map<String, ExpressionStrategy<List<String>>> map = new HashMap<>();
 
-    /**
-     * 执行表达式
-     * @param expression 表达式
-     * @param variable 流程变量
-     * @return 执行结果
-     */
-    String eval(String expression, Map<String, Object> variable);
+    default void setExpression(ExpressionStrategy<List<String>> variableStrategy) {
+        map.put(variableStrategy.getType(), variableStrategy);
+    }
+
+    static Map<String, ExpressionStrategy<List<String>>> getExpressionMap() {
+        return map;
+    }
 }
 ```
 
@@ -69,5 +65,5 @@ public class DefaultVariableStrategy implements VariableStrategy {
 - 通过这个方法进行注册VariableUtil.setVariable
 
 ```java
-VariableUtil.setExpression(new DefaultVariableStrategy());
+ExpressionUtil.setExpression(new DefaultVariableStrategy());
 ```

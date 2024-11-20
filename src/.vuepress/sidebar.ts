@@ -2,7 +2,7 @@ import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
     "/master/guide/": [
-         {
+        {
             text: "初级篇",
             icon: "bulb",
             collapsible: false,
@@ -14,7 +14,7 @@ export default sidebar({
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
-                '/master/guide/expression.md',
+                '/master/guide/condition.md',
                 '/master/guide/processterm.md',
             ],
         },
@@ -40,7 +40,7 @@ export default sidebar({
                 '/master/guide/designer_two_open.md',
                 '/master/guide/variableStategy_ex.md',
                 '/master/guide/customstatus.md',
-                '/master/guide/expression_ex.md',
+                '/master/guide/condition_ex.md',
                 '/master/guide/form.md',
                 '/master/guide/jsonlib.md',
             ],
