@@ -38,9 +38,8 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/master/guide/designer_two_open.md',
-                '/master/guide/variableStategy_ex.md',
                 '/master/guide/customstatus.md',
-                '/master/guide/condition_ex.md',
+                '/master/guide/expression_ex.md',
                 '/master/guide/form.md',
                 '/master/guide/jsonlib.md',
             ],

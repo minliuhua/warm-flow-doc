@@ -9,20 +9,61 @@
 ### 1.1、VariableStrategy接口定义
 ```java
 /**
- * 办理人表里表达式策略
+ * 策略类接口
+ *
+ * @author warm
+ */
+public interface ExpressionStrategy<T> {
+
+    /**
+     * 获取策略类型
+     *
+     * @return 类型
+     */
+    String getType();
+
+    /**
+     * 是否截取表达式前缀，然后在进行执行，默认不截取
+     * 如果截取，比如@@spel@@|#{@user.evalVar()} , 截取@@spel@@|，后再执行#{@user.evalVar()}解析
+     *
+     * @return 类型
+     */
+    default Boolean isIntercept() {
+        return false;
+    }
+
+    /**
+     * 执行表达式
+     *
+     * @param expression 表达式
+     * @param variable   流程变量
+     * @return 执行结果
+     */
+    T eval(String expression, Map<String, Object> variable);
+
+
+    /**
+     * 设置表达式
+     * @param expressionStrategy 表达式
+     */
+    void setExpression(ExpressionStrategy<T> expressionStrategy);
+
+}
+
+/**
+ * 办理人变量表达式策略
  *
  * @author warm
  */
 public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 
-    Map<String, ExpressionStrategy<List<String>>> map = new HashMap<>();
+    /**
+     * 办理人变量表达式策略实现类集合
+     */
+    List<ExpressionStrategy<List<String>>> expressionStrategyList = new ArrayList<>();
 
-    default void setExpression(ExpressionStrategy<List<String>> variableStrategy) {
-        map.put(variableStrategy.getType(), variableStrategy);
-    }
-
-    static Map<String, ExpressionStrategy<List<String>>> getExpressionMap() {
-        return map;
+    default void setExpression(ExpressionStrategy<List<String>> expressionStrategy) {
+        expressionStrategyList.add(expressionStrategy);
     }
 }
 ```
@@ -31,7 +72,7 @@ public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 
 ```java
 /**
- * 默认办理人表里表达式策略： @@default@@|${flag}
+ * 默认办理人变量表达式策略： @@default@@|${flag}
  *
  * @author warm
  */
@@ -62,7 +103,7 @@ public class DefaultVariableStrategy implements VariableStrategy {
 ```
 
 ## 2、注册实现类
-- 通过这个方法进行注册VariableUtil.setVariable
+- 通过这个方法进行注册ExpressionUtil.setVariable
 
 ```java
 ExpressionUtil.setExpression(new DefaultVariableStrategy());

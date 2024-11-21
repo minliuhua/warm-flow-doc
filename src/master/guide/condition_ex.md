@@ -7,15 +7,60 @@
 - 扩展需要实现`ConditionStrategy`接口或者继承`ConditionStrategyAbstract`抽象类**  
 
 
-### 1.1、ExpressionStrategy接口
+### 1.1、ConditionStrategy接口
 ```java
 /**
- * 条件表达式
+ * 策略类接口
+ *
+ * @author warm
+ */
+public interface ExpressionStrategy<T> {
+
+    /**
+     * 获取策略类型
+     *
+     * @return 类型
+     */
+    String getType();
+
+    /**
+     * 是否截取表达式前缀，然后在进行执行，默认不截取
+     * 如果截取，比如@@spel@@|#{@user.evalVar()} , 截取@@spel@@|，后再执行#{@user.evalVar()}解析
+     *
+     * @return 类型
+     */
+    default Boolean isIntercept() {
+        return false;
+    }
+
+    /**
+     * 执行表达式
+     *
+     * @param expression 表达式
+     * @param variable   流程变量
+     * @return 执行结果
+     */
+    T eval(String expression, Map<String, Object> variable);
+
+
+    /**
+     * 设置表达式
+     * @param expressionStrategy 表达式
+     */
+    void setExpression(ExpressionStrategy<T> expressionStrategy);
+
+}
+
+/**
+ * 条件表达式接口
  *
  * @author warm
  */
 public interface ConditionStrategy extends ExpressionStrategy<Boolean> {
 
+    /**
+     * 条件表达式策略实现类map
+     */
     Map<String, ExpressionStrategy<Boolean>> map = new HashMap<>();
 
     default void setExpression(ExpressionStrategy<Boolean> expressionStrategy) {
@@ -24,6 +69,10 @@ public interface ConditionStrategy extends ExpressionStrategy<Boolean> {
 
     static Map<String, ExpressionStrategy<Boolean>> getExpressionMap() {
         return map;
+    }
+    
+    default Boolean isIntercept() {
+        return true;
     }
 }
 ```
