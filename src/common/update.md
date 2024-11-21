@@ -36,6 +36,8 @@
 
 - 【升级指南】
     - 条件表达式策略类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
+    - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
+    - 执行1.3.4增量脚本sql
 
 - 更新日志
     - 监听器优化配置（类中配置增加类型接口，或者优化页面配置）
