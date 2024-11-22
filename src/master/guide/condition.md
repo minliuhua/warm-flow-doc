@@ -16,11 +16,10 @@
 - 10、自定义表达式
 
 ## 2、匹配规则
-- 1、常规匹配规则为`@@xxx@@|yyy@@xxx@@zzz`，`xxx`为表达式策略，其中`yyy`为变量，，最后的`zzz`为变量值
+- 1、常规匹配规则：`@@xxx@@|yyy@@xxx@@zzz`，`xxx`为表达式策略，其中`yyy`为变量，，最后的`zzz`为变量值
 
-- 2、Spring Expression Language（SpEL）
-- 前端配置如`#{@user.eval(#flag)}`表达式，入库前要拼接前缀，方便区分表达式类型，最终为`@@spel@@|#{@user.eval(#flag)}` 
-- `#flag`为变量和以下方法入参命名一致，可不设置入参
+- 2、Spring Expression Language（SpEL）: 
+前端配置如`#{@user.eval(#flag)}`表达式，入库前要拼接前缀，方便区分表达式类型，最终为`@@spel@@|#{@user.eval(#flag)}`，`#flag`为变量和以下方法入参命名一致，可不设置入参
 
 <img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
 
