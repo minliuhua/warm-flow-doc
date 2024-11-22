@@ -16,43 +16,43 @@ public class VariableTest {
     @Test
     public void testVariable() {
         List<Task> addTasks = new ArrayList<>();
-        addTasks.add(FlowFactory.newTask().setPermissionList(Arrays.asList("@@default@@|${handler1}"
-                , "@@spel@@|#{@user.evalVar(#handler2)}", "@@default@@|${handler3}"
-                , "@@spel@@|#{@user.evalVar(#handler4)}"
-                , "@@spel@@|#{@user.evalVarEntity(#handler5)}"
-                , "role:1", "1")));
+        addTasks.add(FlowFactory.newTask().setPermissionList(Arrays.asList("${handler1}"
+                , "#{@user.evalVar(#handler2)}", "${handler3}", "#{@user.evalVar(#handler4)}"
+                , "#{@user.evalVarEntity(#handler5)}", "role:1", "1")));
         FlowParams flowParams = new FlowParams();
         Map<String, Object> variable = new HashMap<>();
         variable.put("handler1", Arrays.asList(4, "5", 100L));
         variable.put("handler2", 12L);
-        variable.put("handler3", new Object[] {9, "10", 102L});
+        variable.put("handler3", new Object[]{9, "10", 102L});
         variable.put("handler4", "15");
         Task task = FlowFactory.newTask();
         variable.put("handler5", task.setId(55L));
 
-        ExpressionUtil.replacement(addTasks, variable);
+        ExpressionUtil.evalVariable(addTasks, variable);
         addTasks.forEach(p -> p.getPermissionList().forEach(System.out::println));
     }
 }
 ```
 
 ## 2、内置表达式
-- 1、默认办理人变量策略: `@@default@@|${handler1}`
-- 2、spel办理人变量策略: `@@spel@@|#{@user.evalVar(#handler2)}`
-- 3、@@xxx@@: 标识不同策略的前缀
+- 1、默认办理人变量策略: `${handler1}`， `$`前缀表示默认办理人变量策略
+- 2、spel办理人变量策略: `#{@user.evalVar(#handler2)}`，`#`前缀表示spel办理人变量策略
 
-## 3、变量替换时机
-- 1、本节点任务之前的代办任务办理时，传入变量
-- 2、本节点任务生成时即可替换完成  
+## 3、匹配规则
+- 1、默认按照注入策略顺序，倒叙匹配。比如最后注入spel策略，就先遍历spel策略，匹配上就执行。
 
-> 比如B-->C, C任务设置办理人变量为`@@default@@|${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
+## 4、变量替换时机
+- 1、流程设计时，本节点配置办理人变量表达式
+- 2、上一个节点任务办理时，传入变量
+- 2、办理完成会生成本节点任务，即可替换完成  
+
+> 比如B-->C, C任务设置办理人变量为`${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
 
 
-## 4、默认办理人变量策略
+## 5、默认办理人变量策略
 
 ### 前端页面设置变量
-- 比如：`@@default@@|${handler1}`
-- `@@default@@|${handler1}`中@@default@@表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
+- 比如：`${handler1}`，表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
 
 
 <img src="https://foruda.gitee.com/images/1727164067302855332/04f4b2ca_2218307.png"  width="700">
@@ -70,11 +70,10 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 5、spel办理人变量策略
+## 6、spel办理人变量策略
 
 ### 前端页面设置变量
-- 比如：`@@spel@@|#{@user.evalVar(#handler2)}`
-- `#{@user.evalVar(#handler2)}`是spel表达式，`#handler2`是方法入参变量，可以不设置
+- 比如：`#{@user.evalVar(#handler2)}`，是spel表达式，`#handler2`是方法入参变量，可以不设置
 
 
 

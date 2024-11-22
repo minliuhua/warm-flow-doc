@@ -91,7 +91,7 @@ public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 
 ```java
 /**
- * 默认办理人变量表达式策略： @@default@@|${flag}
+ * 默认办理人变量表达式策略： ${flag}
  *
  * @author warm
  */
@@ -99,7 +99,7 @@ public class DefaultVariableStrategy implements VariableStrategy {
 
     @Override
     public String getType() {
-        return FlowCons.splitAt + "default" + FlowCons.splitAt;
+        return "$";
     }
 
     @Override
@@ -149,7 +149,7 @@ public interface ListenerStrategy extends ExpressionStrategy<Boolean> {
 
 ```java
 /**
- * spel监听器表达式 @@spel@@|#{@user.eval()}
+ * spel监听器表达式 #{@user.eval()}
  *
  * @author warm
  */

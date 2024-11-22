@@ -37,12 +37,12 @@
 - 【升级指南】
     - 条件表达式策略类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
     - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
-    - 执行1.3.4增量脚本sql
+    - 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4增量脚本sql
 
 - 更新日志
     - 监听器优化配置（类中配置增加类型接口，或者优化页面配置）
-    - 监听器支持spel
     - [update] 重新定义监听器名称，原全局监听器改名为流程监听器，局部监听器改名为节点监听器
+    - [feat] 新增监听器spel表达式，并且支持扩展
     - [feat] 增加全局监听器，针对整个系统，通过接口接入方式
     - [feat] 新增审批前获取当前办理人接口，类似satoken方式 @huangjian
     - [feat] 流程变量表达式支持替换集合 @huangjian
@@ -51,6 +51,7 @@
     - [update] 转办、委派、加签和减签，增加参数合法性校验
     - [update] 修改流程变量传递方式，可通过办理人变量表达式或者分派监听器，初始化后续所有办理人
     - [update] 加载handler取消懒加载，重构test项目
+    - [update] 办理人变量表达式，删除策略前缀，通过$和#区分
     - [refactor] 重构条件表达式和办理人变量表达式
     - [remove] 移除权限监听器
 

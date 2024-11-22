@@ -1,33 +1,37 @@
 # 监听器
 > [!IMPORTANT]  
-> 在办理流程过程中，通过监听器，监听办理过程的不同时期，进行业务处理，功能增强。
+> 在办理流程过程中，通过监听器，监听办理过程的不同时期，进行业务处理，功能增强。  
+> 支持类包名配置和表达式配置。
 
 ## 1、监听器大类
 > [!IMPORTANT]  
-> 节点监听器：在流程节点中配置，只有指定节点任务才会执行
-> 流程监听器：在流程定义中配置，该流程所有节点任务都会执行  
-> 全局监听器：实现全局监听器接口，所有流程的节点任务都会执行  
+> 节点监听器：在流程节点中配置，只有指定节点任务才会执行  
+> 流程监听器：在流程定义中配置，该流程所有节点任务都会执行    
+> 全局监听器：实现全局监听器接口，所有流程的节点任务都会执行    
 > 执行顺序：节点监听器 --> 流程监听器 --> 全局监听器
 
 
 ## 2、监听器小类
 > [!IMPORTANT]  
-> start：开始监听器，任务开始办理时执行
-> assignment： 分派办理人监听器，动态修改代办任务信息
-> finish：完成监听器，当前任务完成后执行
-> create：创建监听器，任务创建时执行
+> start：开始监听器，任务开始办理时执行  
+> assignment： 分派办理人监听器，动态修改代办任务信息  
+> finish：完成监听器，当前任务完成后执行  
+> create：创建监听器，任务创建时执行  
 
 ## 3、监听器设置
-> 监听器设置：设置节点表的`listener_type`和`listener_path`字段，如果有多个监听器，用`,`分隔，并且两个字段对应
-> listener_type：监听器类型，如`start,assignment,finish,create`等
-> listener_path：监听器路径，支持配置类包名和表达式，如`包名1,表达式1,包名2,表达式2`等
-> 监听器路径：默认内置spel表达式，支持扩展
+> 监听器设置：设置节点表的`listener_type`和`listener_path`字段，如果有多个监听器，用`,`分隔，并且两个字段对应  
+> listener_type：监听器类型，如`start,assignment,finish,create`等  
+> listener_path：监听器路径，支持配置类包名和表达式，如`包名1,表达式1,包名2,表达式2`等  
+> 监听器路径：默认支持内置spel表达式，支持扩展，比如：`#{@assignmentExpListener.notify(#listenerVariable)}`  
 
-## 3、监听器生命周期图
+## 4、匹配规则
+- 默认先判断是否是监听器表达式，然后再去尝试加载类路径
+
+## 5、监听器生命周期图
 <img src="https://foruda.gitee.com/images/1731859136606965258/01a88e8b_2218307.png" width="800">
 
-## 4、节点和流程监听器
-### 4.1、实现以下接口
+## 5、节点和流程监听器
+### 5.1、实现以下接口
 ```java
 /**
  * 监听器接口
@@ -53,7 +57,7 @@ public interface Listener extends Serializable {
 
 ```
 
-### 4.2、开始监听器实现类例子
+### 5.2、开始监听器实现类例子
 通过@Component或者@Bean注解注入到容器
 ```java
 @Component
@@ -94,7 +98,7 @@ public class DefStartListener implements Listener {
 }
 ```
 
-### 4.3、完成监听器实现类例子
+### 5.3、完成监听器实现类例子
 ```java
 @Component
 public class DefFinishListener implements Listener {
@@ -152,7 +156,7 @@ public class DefFinishListener implements Listener {
 }
 ```
 
-### 4.4、分派监听器实现类例子
+### 5.4、分派监听器实现类例子
 如下图中示例可以很容易实现
 <img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
 
@@ -186,21 +190,21 @@ public class AssignmentListener implements Listener {
 }
 ```
 
-### 4.5、创建监听器
+### 5.5、创建监听器
 就是在下一个任务生成前执行，比如创建任务前需要初始化信息或者校验数据是否合法
 
-### 4.6、页面配置全局或节点监听器
-#### 4.6.1、节点监听器（流程节点配置）
+### 5.6、页面配置全局或节点监听器
+#### 5.6.1、节点监听器（流程节点配置）
 
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
 
 <img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
 
-#### 4.6.1、流程监听器（流程定义配置）
+#### 5.6.1、流程监听器（流程定义配置）
 
 <img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 
-## 5、全局监听器
+## 6、全局监听器
 
 - 全局监听器，只需要实现GlobalListener接口, 按照时间业务需求选择实现一个方法或者多个方法。
 
@@ -260,7 +264,7 @@ public class CustomGlobalListener implements GlobalListener {
 }
 ```
 
-## 6、监听器参数使用
+## 7、监听器参数使用
 
 页面配置监听器时加上类路径
 
