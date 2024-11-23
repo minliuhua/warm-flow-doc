@@ -6,10 +6,22 @@
 
 ## 1. 引入依赖
 
+### springboot
+
 ```xml
 <dependency>
   <groupId>org.dromara</groupId>
   <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
+  <version>版本号</version>
+</dependency>
+```
+
+### solon
+
+```xml
+<dependency>
+  <groupId>org.dromara</groupId>
+  <artifactId>warm-flow-plugin-ui-solon-web</artifactId>
   <version>版本号</version>
 </dependency>
 ```
