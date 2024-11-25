@@ -196,8 +196,6 @@ public class AssignmentListener implements Listener {
 ### 5.6、页面配置全局或节点监听器
 #### 5.6.1、节点监听器（流程节点配置）
 
-传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
-<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="500" />
 <img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500" />
 
 

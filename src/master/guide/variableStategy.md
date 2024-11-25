@@ -55,7 +55,7 @@ public class VariableTest {
 - 比如：`${handler1}`，表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
 
 
-<img src="https://foruda.gitee.com/images/1727164067302855332/04f4b2ca_2218307.png"  width="700">
+<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="500" />
 
 
 
@@ -75,9 +75,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 ### 前端页面设置变量
 - 比如：`#{@user.evalVar(#handler2)}`，是spel表达式，`#handler2`是方法入参变量，可以不设置
 
-
-
-<img src="https://foruda.gitee.com/images/1727164084637385718/6b68c042_2218307.png"  width="700">
+<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="500" />
 
 
 
