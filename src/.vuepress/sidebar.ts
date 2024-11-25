@@ -3,35 +3,44 @@ import {sidebar} from "vuepress-theme-hope";
 export default sidebar({
     "/master/guide/": [
         {
-            text: "基础部分",
+            text: "初级篇",
             icon: "bulb",
             collapsible: false,
             children: [
                 '/master/guide/started.md',
-                '/master/guide/processterm.md',
-                '/master/guide/processrule.md',
                 '/master/guide/processdemo.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
                 '/master/guide/api.md',
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
+                '/master/guide/condition.md',
+                '/master/guide/processterm.md',
+            ],
+        },
+        {
+            text: "进阶篇",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/master/guide/permission_handler.md',
                 '/master/guide/variableStategy.md',
+                '/master/guide/listener.md',
                 '/master/guide/ormusagetips.md',
+                '/master/guide/logicdelete.md',
+                '/master/guide/tenant.md',
                 '/master/guide/designerIntroduced.md',
             ],
         },
         {
-            text: "进阶部分",
+            text: "提高篇",
             icon: "/icons/advanced.svg",
             collapsible: false,
             children: [
-                '/master/guide/listener.md',
-                '/master/guide/logicdelete.md',
-                '/master/guide/tenant.md',
-                '/master/guide/form.md',
+                '/master/guide/designer_two_open.md',
                 '/master/guide/customstatus.md',
-                '/master/guide/expression.md',
+                '/master/guide/expression_ex.md',
+                '/master/guide/form.md',
                 '/master/guide/jsonlib.md',
             ],
         }
@@ -87,6 +96,41 @@ export default sidebar({
             collapsible: false,
             link: '/common/support.md',
         },
+    ],
+    "/v1.3.4/guide/": [
+        {
+            text: "基础部分",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.3.4/guide/started.md',
+                '/v1.3.4/guide/processterm.md',
+                '/v1.3.4/guide/processrule.md',
+                '/v1.3.4/guide/processdemo.md',
+                '/v1.3.4/guide/table.md',
+                '/v1.3.4/guide/config.md',
+                '/v1.3.4/guide/api.md',
+                '/v1.3.4/guide/datafillhandler.md',
+                '/v1.3.4/guide/variable.md',
+                '/v1.3.4/guide/variableStategy.md',
+                '/v1.3.4/guide/ormusagetips.md',
+                '/v1.3.4/guide/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "进阶部分",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.3.4/guide/listener.md',
+                '/v1.3.4/guide/logicdelete.md',
+                '/v1.3.4/guide/tenant.md',
+                '/v1.3.4/guide/form.md',
+                '/v1.3.4/guide/customstatus.md',
+                '/v1.3.4/guide/expression.md',
+                '/v1.3.4/guide/jsonlib.md',
+            ],
+        }
     ],
     "/v1.3.3/guide/": [
         {

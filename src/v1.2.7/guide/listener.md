@@ -6,13 +6,13 @@
 > start：开始监听器，任务开始办理时执行
 > permission：权限监听器，办理任务动态设置权限（后续不建议用）
 > assignment： 分派办理人监听器，动态修改代办任务信息
-> finish：结束监听器，当前任务完成后执行
+> finish：完成监听器，当前任务完成后执行
 
-## 2、全局监听器和局部监听器
+## 2、流程监听器和节点监听器
 > [!IMPORTANT]  
-> 执行顺序：优先执行局部监听器，然后执行全局监听器  
-> 全局监听器：在流程定义中配置，所有节点任务都会执行  
-> 局部监听器：在流程节点中配置，只有指定节点任务才会执行
+> 执行顺序：优先执行节点监听器，然后执行流程监听器  
+> 流程监听器：在流程定义中配置，所有节点任务都会执行  
+> 节点监听器：在流程节点中配置，只有指定节点任务才会执行
 
 
 
@@ -34,7 +34,7 @@ public interface Listener extends Serializable {
     String LISTENER_START = "start";
 
     /**
-     * 结束监听器，当前任务完成后执行
+     * 完成监听器，当前任务完成后执行
      */
     String LISTENER_END = "finish";
 
@@ -60,7 +60,7 @@ public class FinishListener implements Listener {
         log.info("完成监听器:{}", variable);
         Instance instance = variable.getInstance();
         Map<String, Object> testLeaveMap = variable.getVariable();
-        log.info("完成监听器结束;{}", "任务完成");
+        log.info("完成监听器结束......");
     }
 }
 ```
@@ -99,14 +99,14 @@ public class AssignmentListener implements Listener {
 }
 ```
 
-### 3.4、页面配置全局或局部监听器
-#### 3.4.1、局部监听器（流程节点配置）
+### 3.4、页面配置全局或节点监听器
+#### 3.4.1、节点监听器（流程节点配置）
 
 > 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
 
 <img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
 
-#### 3.4.1、全局监听器（流程定义配置）
+#### 3.4.1、流程监听器（流程定义配置）
 
 <img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 

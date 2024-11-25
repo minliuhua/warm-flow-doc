@@ -1,14 +1,7 @@
 # orm扩展包使用技巧
-- **常规增删改查可以通过注入方式，或者工具类获取service**
-```java
-//  第一种
-@Resource
-private DefService defService;
+> [!IMPORTANT]
+> 1、组件本身提供常见并且基础的api，如果满足不了需求，可以使用orm自身的api
 
-// 第二种
-FlowFactory.defService()
-```
-- **但是由于不同orm框架的数据库操作的，接口使用方式不一致，所以可以通过以下方式获取对应的使用入口。**
 
 ## 1、mybatis-plus
 

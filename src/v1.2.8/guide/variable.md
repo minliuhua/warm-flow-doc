@@ -33,7 +33,7 @@ public class FinishListener implements Listener {
         log.info("完成监听器:{}", variable);
         Instance instance = variable.getInstance();
         Map<String, Object> testLeaveMap = variable.getVariable();
-        log.info("完成监听器结束;{}", "任务完成");
+        log.info("完成监听器结束......");
     }
 }
 ```

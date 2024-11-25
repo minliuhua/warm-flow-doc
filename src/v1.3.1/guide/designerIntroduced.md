@@ -81,7 +81,7 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 ```
 
 ## 3. 前端加载设计器
-> 1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}?disabled=${disabled}`
+> 1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
 
 ### 3.2 vue2 引入
 
@@ -151,7 +151,7 @@ import { onMounted } from 'vue';
 // import.meta.env.VITE_APP_BASE_API:  前端地址的前缀如dev-api
 // definitionId: 为需要查询的流程定义id
 // disabled: 为是否可编辑, 例如：查看的时候不可编辑，不可保存
-const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}?disabled=${disabled}`);
+const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`);
 
 const iframeLoaded = () => {
   // iframe监听组件内设计器保存事件
@@ -188,7 +188,7 @@ onMounted(() => {
 > 待完善
 
 ### 3.5 前后端不分离版本
-- 可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}?disabled=${disabled}`
+- 可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
   <br>
 -
 ```java
