@@ -39,11 +39,11 @@ features:
 
 - title: 监听器与流程变量
   icon: '/icons/listener.svg'
-  details: 支持四种监听器，可应对不同场景，灵活可扩展，参数传递，动态权限
+  details: 支持四种监听器和不同颗粒的的作用范围，支持spel表达式，灵活可扩展，参数传递，动态权限
   
 - title: 流程设计器
   icon: '/icons/flowchart.svg'
-  details: 可通过jar包形式快速集成到项目，减少繁琐代码搬运和适配
+  details: 可通过jar包形式快速集成到项目，减少繁琐代码搬运和适配，支持solon和springboot
   
 - title: 流程图
   icon: '/icons/flowchart.svg'
