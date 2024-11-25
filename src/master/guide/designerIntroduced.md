@@ -10,7 +10,7 @@
 
 ```xml
 <dependency>
-  <groupId>org.dromara</groupId>
+  <groupId>org.dromara.warm</groupId>
   <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
   <version>版本号</version>
 </dependency>
@@ -20,7 +20,7 @@
 
 ```xml
 <dependency>
-  <groupId>org.dromara</groupId>
+  <groupId>org.dromara.warm</groupId>
   <artifactId>warm-flow-plugin-ui-solon-web</artifactId>
   <version>版本号</version>
 </dependency>
