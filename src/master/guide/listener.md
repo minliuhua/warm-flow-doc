@@ -201,11 +201,11 @@ public class AssignmentListener implements Listener {
 
 #### 5.6.1、流程监听器（流程定义配置）
 
-<img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
+<img src="https://foruda.gitee.com/images/1732548175204139076/1f88c928_2218307.png" width="600px">
 
 ## 6、全局监听器
 
-- 全局监听器，只需要实现GlobalListener接口, 按照时间业务需求选择实现一个方法或者多个方法。
+- 全局监听器，只需要实现GlobalListener接口, 按照实际业务需求选择实现一个方法或者多个方法。
 
 ```java
 /**
@@ -267,7 +267,7 @@ public class CustomGlobalListener implements GlobalListener {
 
 页面配置监听器时加上类路径
 
-<img src="../../.vuepress/public/listener1.png" width="500px" height="500px">
+<img src="https://foruda.gitee.com/images/1732548102324679120/544ff483_2218307.png" width="600px">
 
 ```java
     public void notify(ListenerVariable variable) {
