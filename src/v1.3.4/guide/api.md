@@ -5,44 +5,47 @@
 ### 1.1、新增流程定义表数据，新增后需要通过saveXml接口保存流程节点和流程跳转数据
 `checkAndSave(definition)`：校验后新增
 
-### 1.1、导入流程定义、流程节点和流程跳转数据
+### 1.2、新增流程定义，并初始化流程节点和流程跳转数据
+`saveAndInitNode(definition)`：校验后新增
+
+### 1.3、导入流程定义、流程节点和流程跳转数据
 `importXml(is)`：导入流程定义xml的输入流
 
-### 1.2、保存流程节点和流程跳转数据
+### 1.4、保存流程节点和流程跳转数据
 `saveXml(def)`： 传入流程定义id、流程定义xml字符串
 - id: 流程定义id [必传]
 - xmlString: 流程定义xml字符串 [必传]
 
-### 1.3、保存流程节点和流程跳转数据
+### 1.5、保存流程节点和流程跳转数据
 `saveXml(id, xmlString)`： 传入流程定义id、流程定义xml字符串
 - id: 流程定义id
 - xmlString: 流程定义xml字符串
 
-### 1.4、导出流程定义
+### 1.6、导出流程定义
 `exportXml(id)`： 导出流程定义(流程定义、流程节点和流程跳转数据)xml的Document对象  
 
-### 1.5、获取流程定义
+### 1.7、获取流程定义
 `xmlString(id)`： 获取流程定义xml(流程定义、流程节点和流程跳转数据)的字符串  
 
-### 1.6、删除
+### 1.8、删除
 `removeDef(ids)`： 删除流程定义相关数据  
 
-### 1.7、发布
+### 1.9、发布
 `publish(id)`： 发布流程定义  
 
-### 1.8、取消发布
+### 1.10、取消发布
 `unPublish(id)`： 取消发布流程定义  
 
-### 1.9、复制流程
+### 1.11、复制流程
 `copyDef(id)`： 复制流程定义   
 
-### 1.10、获取流程图
+### 1.12、获取流程图
 `flowChart(instanceId)`： 获取流程图的图片流
 
-### 1.11、激活流程
+### 1.13、激活流程
 `active(Long id)`： 激活流程
 
-### 1.12、挂起流程
+### 1.14、挂起流程
 `unActive(Long id)`： 挂起流程：流程定义挂起后，相关的流程实例都无法继续流转
 
 ## 2、InsService流程实例接口
@@ -83,6 +86,9 @@
 ### 2.6、挂起实例
 `unActive(Long id)`： 挂起实例，流程实例挂起后，该流程实例无法继续流转
 
+### 2.7、根据流程定义id集合，查询流程实例集合
+`listByDefIds(defIds)`：根据流程定义id集合，查询流程实例集合
+
 ## 3、TaskService待办任务接口
 
 ### 3.1、流程跳转
@@ -107,7 +113,7 @@
 ### 3.3、转办
 `transfer(taskId, flowParams)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
-- permissionFlag: 用户权限标识集合 [必传]
+- permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - addHandlers: 转办对象 [必传]
 - message: 审批意见 [按需传输]
 - ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -115,7 +121,7 @@
 ### 3.4、委派
 `depute(taskId, flowParams)`：委派, 默认删除当然办理用户权限，委派后，当前办理不可办理。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
-- permissionFlag: 用户权限标识集合 [必传]
+- permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - addHandlers: 委托对象 [必传]
 - message: 审批意见 [按需传输]
 - ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -123,7 +129,7 @@
 ### 3.5、加签
 `addSignature(taskId, flowParams)`：加签，增加办理人。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
-- permissionFlag: 用户权限标识集合 [必传]
+- permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - addHandlers: 加签对象 [必传]
 - message: 审批意见 [按需传输]
 - ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -131,7 +137,7 @@
 ### 3.6、减签
 `reductionSignature(taskId, flowParams)`：减签，减少办理人。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
-- permissionFlag: 用户权限标识集合 [必传]
+- permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - reductionHandlers: 减少办理人 [必传]
 - message: 审批意见 [按需传输]
 - ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]

@@ -10,6 +10,7 @@
 
 ## 1、导入sql，按需求执行
 
+- 开始学习前，请先了解[表结构](./table.md)，不迷路
 - 首次导入，先创建数据库，找到对应数据库的全量脚本[warm-flow-all.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql)，执行  
 - 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
 
@@ -31,7 +32,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -41,7 +42,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -51,7 +52,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -62,7 +63,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -72,7 +73,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -82,7 +83,7 @@
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -101,7 +102,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -111,7 +112,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -122,7 +123,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -132,7 +133,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -142,7 +143,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -153,7 +154,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
       <version>1.3.3</version>
 </dependency>
@@ -163,7 +164,7 @@ warm-flow:
 
 ```xml
 <dependency>
-      <groupId>org.dromara</groupId>
+      <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
       <exclusions>
           <exclusion>
@@ -179,39 +180,15 @@ warm-flow:
 </dependency>
 ```
 
-## 4、支持数据库类型
-
-* [x] mysql
-* [x] oracle
-* [x] postgresql
-* [ ] 达梦
-* [ ] 人大金仓
-* [ ] GaussDB
-* [ ] oceanbase
-* [ ] sqlserver
-* [ ] ......
-
-
-## 5、支持orm框架类型
-* [x] mybatis
-* [x] mybatis-plus
-* [x] jpa
-* [x] easy-query
-* [x] mybatis-flex
-* [ ] ......
-
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**
 
-## 6、设计器引入
-> 通过jar包引入：[文档地址](./designerIntroduced.md)
-
-## 7、代码示例
+## 4、代码示例
 
 > 详细案例测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类
 
 **以下为简短案例：**
 
-### 7.1、部署流程
+### 4.1、部署流程
 
 ```java
 public void deployFlow() throws Exception {
@@ -220,7 +197,7 @@ public void deployFlow() throws Exception {
     }
 ```
 
-### 7.2、发布流程
+### 4.2、发布流程
 
 ```java
 public void publish() throws Exception {
@@ -228,7 +205,7 @@ public void publish() throws Exception {
     }
 ```
 
-### 7.3、开启流程
+### 4.3、开启流程
 
 ```java
 public void startFlow() {
@@ -236,7 +213,7 @@ public void startFlow() {
     }
 ```
 
-### 7.4、流程流转
+### 4.4、流程流转
 
 ```java
 public void skipFlow() throws Exception {
@@ -258,11 +235,13 @@ public void skipFlow() throws Exception {
         System.out.println("流转后流程实例：" + instance.toString());
     }
 ```
+## 5、设计器引入
+> 通过jar包引入：[文档地址](./designerIntroduced.md)
 
-## 8、初学者推荐学习路线
+## 6、初学者推荐学习路线
 
-### 8.1、推荐集成案例hh-vue
+### 6.1、推荐集成案例hh-vue
 [项目地址](../../common/projectexample.md)
 
-### 8.2、推荐学习视频
+### 6.2、推荐学习视频
 [新手教学视频，社区同学录制](https://www.bilibili.com/video/BV1Ci42117pK/)

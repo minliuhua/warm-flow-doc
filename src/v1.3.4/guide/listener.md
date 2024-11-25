@@ -1,29 +1,37 @@
 # 监听器
 > [!IMPORTANT]  
-> 1、在办理流程过程中，通过监听器，监听办理过程的不同环节，进行业务处理，功能增强。
+> 在办理流程过程中，通过监听器，监听办理过程的不同时期，进行业务处理，功能增强。  
+> 支持类包名配置和表达式配置。
 
-## 1、监听器类型
+## 1、监听器大类
 > [!IMPORTANT]  
-> create：创建监听器，任务创建时执行
-> start：开始监听器，任务开始办理时执行
-> permission：权限监听器，办理任务动态设置权限（后续不建议用）
-> assignment： 分派办理人监听器，动态修改代办任务信息
-> finish：完成监听器，当前任务完成后执行
+> 节点监听器：在流程节点中配置，只有指定节点任务才会执行  
+> 流程监听器：在流程定义中配置，该流程所有节点任务都会执行    
+> 全局监听器：实现全局监听器接口，所有流程的节点任务都会执行    
+> 执行顺序：节点监听器 --> 流程监听器 --> 全局监听器
 
-## 2、流程监听器和节点监听器
+
+## 2、监听器小类
 > [!IMPORTANT]  
-> 流程监听器和某个流程定义有关，节点监听器和某个节点有关
-> 执行顺序：优先执行节点监听器，然后执行流程监听器  
-> 流程监听器：在流程定义中配置，所有节点任务都会执行  
-> 节点监听器：在流程节点中配置，只有指定节点任务才会执行
+> start：开始监听器，任务开始办理时执行  
+> assignment： 分派办理人监听器，动态修改代办任务信息  
+> finish：完成监听器，当前任务完成后执行  
+> create：创建监听器，任务创建时执行  
 
+## 3、监听器设置
+> 监听器设置：设置节点表的`listener_type`和`listener_path`字段，如果有多个监听器，用`,`分隔，并且两个字段对应  
+> listener_type：监听器类型，如`start,assignment,finish,create`等  
+> listener_path：监听器路径，支持配置类包名和表达式，如`包名1,表达式1,包名2,表达式2`等  
+> 监听器路径：默认支持内置spel表达式，支持扩展，比如：`#{@assignmentExpListener.notify(#listenerVariable)}`  
 
+## 4、匹配规则
+- 默认先判断是否是监听器表达式，然后再去尝试加载类路径
 
-## 2、监听器生命周期图
-<img src="https://foruda.gitee.com/images/1727400671105493207/2af20fe3_2218307.png" width="700">
+## 5、监听器生命周期图
+<img src="https://foruda.gitee.com/images/1731859136606965258/01a88e8b_2218307.png" width="800">
 
-## 3、监听器使用
-### 3.1、实现以下接口
+## 5、节点和流程监听器
+### 5.1、实现以下接口
 ```java
 /**
  * 监听器接口
@@ -39,20 +47,17 @@ public interface Listener extends Serializable {
     /**
      * 完成监听器，当前任务完成后执行
      */
-    String LISTENER_END = "finish";
+    String LISTENER_FINISH = "finish";
 
     /** 分派监听器，动态修改代办任务信息 */
     String LISTENER_ASSIGNMENT = "assignment";
-
-    /** 权限监听器，办理任务动态设置权限(1.2.4版本后建议使用分派监听器修改办理人) */
-    String LISTENER_PERMISSION = "permission";
 
     void notify(ListenerVariable variable);
 }
 
 ```
 
-### 3.2、开始监听器实现类例子
+### 5.2、开始监听器实现类例子
 通过@Component或者@Bean注解注入到容器
 ```java
 @Component
@@ -93,7 +98,7 @@ public class DefStartListener implements Listener {
 }
 ```
 
-### 3.3、完成监听器实现类例子
+### 5.3、完成监听器实现类例子
 ```java
 @Component
 public class DefFinishListener implements Listener {
@@ -113,33 +118,37 @@ public class DefFinishListener implements Listener {
     log.info("流程完成监听器");
     Instance instance = listenerVariable.getInstance();
     Map<String, Object> variable = listenerVariable.getVariable();
-    Object o = variable.get("businessData");
-
-    // 更新业务数据
-    if (ObjectUtil.isNotNull(o)) {
-      // 可以统一使用一个流程监听器，不同实体类，不同的操作
-      if (o instanceof TestLeave) {
-        TestLeave testLeave = (TestLeave) o;
-        testLeave.setNodeCode(instance.getNodeCode());
-        testLeave.setNodeName(instance.getNodeName());
-        testLeave.setNodeType(instance.getNodeType());
-        testLeave.setFlowStatus(instance.getFlowStatus());
-        // 如果没有实例id，说明是新增
-        if (ObjectUtil.isNull(testLeave.getInstanceId())) {
-          testLeave.setInstanceId(instance.getId());
-          testLeaveMapper.insertTestLeave(testLeave);
-          testLeave.setCreateTime(DateUtils.getNowDate());
-          // 新增抄送人方法，也可发送通知
-          if (StringUtils.isNotNull(testLeave.getAdditionalHandler())) {
-            List<User> users = FlowFactory.userService().structureUser(instance.getId()
-                    , testLeave.getAdditionalHandler(), "4");
-            FlowFactory.userService().saveBatch(users);
-          }
-        } else {
-          testLeave.setUpdateTime(DateUtils.getNowDate());
-          testLeaveMapper.updateTestLeave(testLeave);
+    if (StringUtils.isNotNull(variable)) {
+        String businessId = instance.getBusinessId();
+        Object businessType = variable.get("businessType");
+        /** 如果{@link com.ruoyi.system.service.impl.TestLeaveServiceImpl}中更新了，这里就不用更新了*/
+        // 更新业务数据
+        if ("testLeave".equals(businessType)) {
+            // 可以统一使用一个流程监听器，不同实体类，不同的操作
+            TestLeave testLeave = testLeaveMapper.selectTestLeaveById(businessId);
+            if (ObjectUtil.isNull(testLeave)) {
+                testLeave = (TestLeave) variable.get("businessData");
+            }
+            testLeave.setNodeCode(instance.getNodeCode());
+            testLeave.setNodeName(instance.getNodeName());
+            testLeave.setNodeType(instance.getNodeType());
+            testLeave.setFlowStatus(instance.getFlowStatus());
+            // 如果没有实例id，说明是新增
+            if (ObjectUtil.isNull(testLeave.getInstanceId())) {
+                testLeave.setInstanceId(instance.getId());
+                testLeaveMapper.insertTestLeave(testLeave);
+                testLeave.setCreateTime(DateUtils.getNowDate());
+                // 新增抄送人方法，也可发送通知
+                if (StringUtils.isNotNull(testLeave.getAdditionalHandler())) {
+                    List<User> users = FlowFactory.userService().structureUser(instance.getId()
+                            , testLeave.getAdditionalHandler(), "4");
+                    FlowFactory.userService().saveBatch(users);
+                }
+            } else {
+                testLeave.setUpdateTime(DateUtils.getNowDate());
+                testLeaveMapper.updateTestLeave(testLeave);
+            }
         }
-      }
     }
 
     log.info("流程完成监听器结束......");
@@ -147,7 +156,7 @@ public class DefFinishListener implements Listener {
 }
 ```
 
-### 3.4、分派监听器实现类例子
+### 5.4、分派监听器实现类例子
 如下图中示例可以很容易实现
 <img src="../../.vuepress/public/assignmentlistener.jpg" width="550px" height="450px" />
 
@@ -181,21 +190,82 @@ public class AssignmentListener implements Listener {
 }
 ```
 
-### 3.5、创建监听器
+### 5.5、创建监听器
 就是在下一个任务生成前执行，比如创建任务前需要初始化信息或者校验数据是否合法
 
-### 3.6、页面配置全局或节点监听器
-#### 3.6.1、节点监听器（流程节点配置）
+### 5.6、页面配置全局或节点监听器
+#### 5.6.1、节点监听器（流程节点配置）
 
 传递后台通过`@@`分割不同监听器，监听器类型和监听器路径，上下一一对应  
+<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="500" />
+<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500" />
 
-<img src="../../.vuepress/public/defNode.png" width="450px" height="500px">
 
-#### 3.6.1、流程监听器（流程定义配置）
+#### 5.6.1、流程监听器（流程定义配置）
 
 <img src="https://foruda.gitee.com/images/1724724458250125678/d5567e8b_2218307.png" width="450px" height="500px">
 
-## 4、监听器参数使用
+## 6、全局监听器
+
+- 全局监听器，只需要实现GlobalListener接口, 按照时间业务需求选择实现一个方法或者多个方法。
+
+```java
+/**
+ * 全局监听器: 整个系统只有一个，任务开始、分派、完成和创建时期执行
+ *
+ * @author warm
+ * @since 2024/11/17
+ */
+@Component
+public class CustomGlobalListener implements GlobalListener {
+
+    private static final Logger log = LoggerFactory.getLogger(CustomGlobalListener.class);
+
+    /**
+     * 开始监听器，任务开始办理时执行
+     * @param listenerVariable 监听器变量
+     */
+    public void start(ListenerVariable listenerVariable) {
+        log.info("全局开始监听器开始执行......");
+
+        log.info("全局开始监听器执行结束......");
+
+    }
+
+    /**
+     * 分派监听器，动态修改代办任务信息
+     * @param listenerVariable  监听器变量
+     */
+    public void assignment(ListenerVariable listenerVariable) {
+        log.info("全局分派监听器开始执行......");
+
+        log.info("全局分派监听器执行结束......");
+    }
+
+    /**
+     * 完成监听器，当前任务完成后执行
+     * @param listenerVariable  监听器变量
+     */
+    public void finish(ListenerVariable listenerVariable) {
+        log.info("全局完成监听器开始执行......");
+
+        log.info("全局完成监听器执行结束......");
+    }
+
+    /**
+     * 创建监听器，任务创建时执行
+     * @param listenerVariable  监听器变量
+     */
+    public void create(ListenerVariable listenerVariable) {
+        log.info("全局创建监听器开始执行......");
+
+        log.info("全局创建监听器执行结束......");
+    }
+
+}
+```
+
+## 7、监听器参数使用
 
 页面配置监听器时加上类路径
 
