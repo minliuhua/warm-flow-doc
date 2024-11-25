@@ -8,7 +8,6 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/master/guide/started.md',
-                '/master/guide/processdemo.md',
                 '/master/guide/table.md',
                 '/master/guide/config.md',
                 '/master/guide/api.md',
@@ -51,6 +50,7 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/common/introduction.md',
+                '/common/processdemo.md',
                 '/common/member.md',
                 '/common/pr.md',
                 '/common/dromara.md',

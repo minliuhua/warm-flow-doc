@@ -39,12 +39,12 @@
         <td><img src="https://foruda.gitee.com/images/1703641702939748288/6da6c4f6_2218307.png"/></td>
     </tr>
     <tr>
-        <td><img src="../../.vuepress/public/demo4.png"/></td>
-        <td><img src="../../.vuepress/public/demo2.png"/></td>
+        <td><img src="../.vuepress/public/demo4.png"/></td>
+        <td><img src="../.vuepress/public/demo2.png"/></td>
     </tr>
     <tr>
-        <td><img src="../../.vuepress/public/demo3.png"/></td>
-        <td><img src="../../.vuepress/public/demo1.png"/></td>
+        <td><img src="../.vuepress/public/demo3.png"/></td>
+        <td><img src="../.vuepress/public/demo1.png"/></td>
     </tr>
 </table>
 
@@ -61,18 +61,19 @@
 ### 2、1节点设置
 配置节点名称，协作方式（会签、票签和或签），节点权限，是否任意调整，监听器等
 
-![](../../.vuepress/public/defNode.png)
+<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="700" />
+<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" />
 
 ### 2、2跳转线设置
 配置跳转名称，跳转类型（通过还是退回）,**退回不能选择通过类型**，调整条件
 
-![](../../.vuepress/public/defSkip.png)
+![](../.vuepress/public/defSkip.png)
 ![](https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png)
 ## 3、开启流程实例
 
 hh-vue项目已经准备了七套流程，以及开启流程代码，开启流程会直接执行到开始节点后一个节点
 
-![](../../.vuepress/public/addIns.png)
+![](../.vuepress/public/addIns.png)
 
 
 ## 4、提交流程
