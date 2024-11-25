@@ -21,12 +21,12 @@
 
 ```xml
 <dependency>
-    <groupId>org.dromara</groupId>
+    <groupId>org.dromara.warm</groupId>
     <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
     <exclusions>
         <exclusion>
             <artifactId>warm-flow-plugin-vue3-ui</artifactId>
-            <groupId>org.dromara</groupId>
+            <groupId>org.dromara.warm</groupId>
         </exclusion>
     </exclusions>
 </dependency>

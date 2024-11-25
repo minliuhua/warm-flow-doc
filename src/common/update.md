@@ -39,6 +39,7 @@
   - 条件表达式策略类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
   - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
   - 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4增量脚本sql
+  - 依赖的groupId：org.dromara，改为org.dromara.warm
 
 - 更新日志
   - [feat] 新增监听器spel表达式，并且支持扩展
@@ -56,6 +57,7 @@
   - [update] 加载handler取消懒加载，重构test项目
   - [update] 办理人变量表达式，删除策略前缀，通过$和#区分
   - [update] 流程版本号默认改完自动递增，不接收外部设置
+  - [update] 修改项目的groupId
   - [refactor] 重构条件表达式和办理人变量表达式
   - [remove] 移除权限监听器
 
