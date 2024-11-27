@@ -1,5 +1,8 @@
 # Warm-Flow发布1.3.4, 支持solon和便捷性提升
 
+## 1、老群被干没了，新群：  
+<img src="http://www.warm-flow.cn/assets/wxqun-DtKfuDNv.jpg" width="300">
+
 **本次的版本大大提升了工作流的使用便捷性，如下：**
 
 > 设计器引入，新增支持solon
