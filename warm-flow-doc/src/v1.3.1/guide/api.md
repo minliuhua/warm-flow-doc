@@ -45,6 +45,20 @@
 ### 1.12、挂起流程
 `unActive(Long id)`： 挂起流程：流程定义挂起后，相关的流程实例都无法继续流转
 
+### 1.13、导入流程定义、流程节点和流程跳转数据
+`importJson(inputStream)`：导入流程定义json的输入流,数据是FlowCombine的json字符串
+
+### 1.14、导出流程信息（流程定义，流程节点和跳转数据）
+`exportJson(defId)`： 导出流程定义(流程定义、流程节点和流程跳转数据)json的输入流,数据是FlowCombine的json字符串
+
+### 1.15、保存流程节点和流程跳转数据
+`saveJson(defId, jsonString)`： 传入流程定义id、流程定义json字符串
+- defId: 流程定义id [必传]
+- jsonString: 流程定义FlowCombine的json字符串 [必传]
+
+### 1.16、获取流程信息（流程定义，流程节点和跳转数据）
+`jsonString(defId)`： 获取流程FlowCombine(流程定义、流程节点和流程跳转数据)的json字符串
+
 ## 2、InsService流程实例接口
 
 ### 2.1、开启流程
