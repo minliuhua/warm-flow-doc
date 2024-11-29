@@ -6,7 +6,7 @@ export default hopeTheme(
     {
         hostname: "https://gitee.com/warm_4/warm-flow-doc",
         author: {
-            name: "warm-flow工作流",
+            name: "Dromara Warm-Flow工作流",
             url: "https://gitee.com/warm_4/warm-flow-doc",
         },
         iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
