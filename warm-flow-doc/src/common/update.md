@@ -36,10 +36,11 @@
 ### v1.3.4 2024-11-25
 
 - 【升级指南】
-  - 条件表达式策略类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
-  - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
   - 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4增量脚本sql
   - 依赖的groupId：org.dromara，改为org.dromara.warm
+  - 如果扩展了条件表达式策略
+    - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
+    - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
 
 - 更新日志
   - [feat] 新增监听器spel表达式，并且支持扩展
