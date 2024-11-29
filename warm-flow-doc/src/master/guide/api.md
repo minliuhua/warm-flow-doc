@@ -51,6 +51,9 @@
 ### 1.15、获取流程定义
 `getAllDataDefinition(Long id)`： 获取流程定义全部数据(包含节点和跳转)
 
+### 1.16、查询流程设计所需的数据，比如流程图渲染，导出流程定义
+`getAllDataDefinition(Long id)`： 查询流程设计所需的数据，比如流程图渲染，导出流程定义
+
 ## 2、InsService流程实例接口
 
 ### 2.1、开启流程
