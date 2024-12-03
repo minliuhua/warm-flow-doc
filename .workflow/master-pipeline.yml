@@ -7,9 +7,6 @@ triggers:
     branches:
       include:
         - master
-    paths:
-      precise:
-        - warm-flow-doc/
 stages:
   - name: compile
     displayName: 编译
