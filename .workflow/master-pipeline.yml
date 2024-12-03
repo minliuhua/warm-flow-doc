@@ -9,7 +9,7 @@ triggers:
         - master
     paths:
       precise:
-        - https://gitee.com/warm_4/warm-flow-doc/tree/main/warm-flow-doc
+        - /warm-flow-doc
 stages:
   - name: compile
     displayName: 编译
