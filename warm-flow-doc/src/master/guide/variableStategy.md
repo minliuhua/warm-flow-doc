@@ -104,3 +104,6 @@ flowParams.variable(variable);
 
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
+
+## 7、办理人选择项接口
+通过此接口可以给办理人选择，增加默认选项比如发起人、部门领导审批之类的（待开发）

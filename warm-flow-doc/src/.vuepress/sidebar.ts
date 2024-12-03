@@ -14,6 +14,8 @@ export default sidebar({
                 '/master/guide/datafillhandler.md',
                 '/master/guide/variable.md',
                 '/master/guide/condition.md',
+                '/master/guide/handler_change.md',
+                '/master/guide/collaboration.md',
                 '/master/guide/processterm.md',
             ],
         },
