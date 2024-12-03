@@ -23,6 +23,7 @@ stages:
         commands:
           - echo 'Hello Nodejs Go!'
           - pwd
+          - echo 'Hello pwd1 Go!'
           - cd warm-flow-doc
           - echo 'Hello pwd Go!'
           - pwd
