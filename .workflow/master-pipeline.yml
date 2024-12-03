@@ -9,7 +9,7 @@ triggers:
         - master
     paths:
       precise:
-        - https://gitee.com/warm_4/warm-flow-doc/tree/main/warm-flow-doc/src/.vuepress/dist
+        - https://gitee.com/warm_4/warm-flow-doc/tree/main/warm-flow-doc
 stages:
   - name: compile
     displayName: 编译
@@ -26,6 +26,7 @@ stages:
           - name: BUILD_ARTIFACT
             path:
               - ./dist
+        strategy: {}
       - step: publish@general_artifacts
         name: publish_general_artifacts
         displayName: 上传制品
