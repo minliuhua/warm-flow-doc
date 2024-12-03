@@ -40,7 +40,9 @@ export default sidebar({
             children: [
                 '/master/guide/designer_two_open.md',
                 '/master/guide/customstatus.md',
-                '/master/guide/expression_ex.md',
+                '/master/guide/condition_two_open',
+                '/master/guide/variableStatey_two_open',
+                '/master/guide/listener_two_open',
                 '/master/guide/form.md',
                 '/master/guide/jsonlib.md',
             ],
