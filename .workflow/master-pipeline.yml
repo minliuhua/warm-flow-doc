@@ -23,6 +23,7 @@ stages:
         commands:
           - echo 'Hello Nodejs Go!'
           - pwd
+          - cd warm-flow-doc
           - npm install
           - rm -rf ./src/.vuepress/dist
           - npm run docs:build
