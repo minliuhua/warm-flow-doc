@@ -9,7 +9,7 @@ triggers:
         - master
     paths:
       precise:
-        - /warm-flow-doc
+        - ./warm-flow-doc
 stages:
   - name: compile
     displayName: 编译
@@ -21,11 +21,11 @@ stages:
         displayName: Nodejs 构建
         nodeVersion: 18.16.0
         commands:
-          - npm install && rm -rf ./src/.vuepress/dist && npm run docs:build
+          - npm install && rm -rf ./warm-flow-doc/src/.vuepress/dist && npm run docs:build
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - ./src/.vuepress/dist
+              - ./warm-flow-doc/src/.vuepress/dist
         strategy: {}
   - name: release
     displayName: 发布
