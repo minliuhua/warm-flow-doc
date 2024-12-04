@@ -5,8 +5,8 @@ triggers:
   trigger: auto
   push:
     branches:
-      prefix:
-        - ''
+      precise:
+        - main
 stages:
   - name: stage-86342c20
     displayName: build
