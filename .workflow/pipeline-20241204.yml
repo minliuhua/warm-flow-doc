@@ -58,6 +58,7 @@ stages:
           - ''
           - rm -rf /home/nginx/html/warm-flow
           - tar zxvf ~/gitee_go/deploy/warm-flow.tar.gz -C /home/nginx/html
+          - mv /home/nginx/html/dist /home/nginx/html/warm-flow
           - docker restart nginx
           - echo 'Hello Gitee Go!'
         notify: []
