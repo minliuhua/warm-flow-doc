@@ -12,7 +12,8 @@ stages:
     displayName: 打包
     strategy: naturally
     trigger: auto
-    executor: []
+    executor:
+      - min290
     steps:
       - step: build@nodejs
         name: build_nodejs
@@ -38,7 +39,8 @@ stages:
     displayName: 部署
     strategy: naturally
     trigger: auto
-    executor: []
+    executor:
+      - min290
     steps:
       - step: deploy@agent
         name: deploy_agent
