@@ -27,7 +27,7 @@ stages:
         artifacts:
           - name: doc_dist
             path:
-              - ./dist
+              - ./src/.vuepress/dist
         caches:
           - ~/.npm
           - ~/.yarn
