@@ -8,12 +8,11 @@ triggers:
       precise:
         - main
 stages:
-  - name: stage-322c8e79
+  - name: stage-1b54bfa1
     displayName: 打包
     strategy: naturally
     trigger: auto
-    executor:
-      - min290
+    executor: []
     steps:
       - step: build@nodejs
         name: build_nodejs
@@ -24,11 +23,11 @@ stages:
           - npm config set registry https://registry.npmmirror.com
           - ''
           - '# 执行编译命令'
-          - npm install && npm run docs:build
+          - npm install && npm run build
         artifacts:
-          - name: doc_dist
+          - name: BUILD_ARTIFACT
             path:
-              - ./src/.vuepress/dist
+              - ./dist
         caches:
           - ~/.npm
           - ~/.yarn
