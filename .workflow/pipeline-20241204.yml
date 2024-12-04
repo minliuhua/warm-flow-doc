@@ -2,14 +2,14 @@ version: '1.0'
 name: pipeline-20241204
 displayName: pipeline-20241204
 triggers:
-  trigger: auto
+  trigger: manual
   push:
     branches:
       prefix:
         - ''
 stages:
   - name: stage-322c8e79
-    displayName: 未命名
+    displayName: 打包
     strategy: naturally
     trigger: auto
     executor: []
@@ -35,7 +35,7 @@ stages:
         strategy:
           retry: '0'
   - name: stage-2348bb04
-    displayName: 未命名
+    displayName: 部署
     strategy: naturally
     trigger: auto
     executor: []
