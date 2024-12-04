@@ -49,15 +49,15 @@ stages:
             - 5d17a90e-f12e-4515-8c65-d8a4325474bb
         deployArtifact:
           - source: build
-            name: warm-flow1
+            name: warm-flow
             target: ~/gitee_go/deploy
             dependArtifact: doc_dist
         script:
           - '# 功能：部署脚本会在部署主机组的每台机器上执行'
           - '# 使用场景：先将制品包解压缩到指定目录中，再执行启动脚本deploy.sh，脚本示例地址：https://gitee.com/gitee-go/spring-boot-maven-deploy-case/blob/master/deploy.sh'
           - ''
-          - '# rm -rf /home/nginx/html/warm-flow'
-          - tar zxvf ~/gitee_go/deploy/warm-flow1.tar.gz -C /home/nginx/html
+          - rm -rf /home/nginx/html/warm-flow
+          - tar zxvf ~/gitee_go/deploy/warm-flow.tar.gz -C /home/nginx/html
           - '# docker restart nginx'
           - echo 'Hello Gitee Go!'
         notify: []
