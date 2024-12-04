@@ -5,8 +5,8 @@ triggers:
   trigger: manual
   push:
     branches:
-      prefix:
-        - ''
+      precise:
+        - main
 stages:
   - name: stage-322c8e79
     displayName: 打包
