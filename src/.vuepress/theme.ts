@@ -6,7 +6,7 @@ export default hopeTheme(
     {
         hostname: "https://gitee.com/warm_4/warm-flow-doc",
         author: {
-            name: "Dromara Warm-Flow工作流",
+            name: "Warm-Flow工作流",
             url: "https://gitee.com/warm_4/warm-flow-doc",
         },
         iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
@@ -27,6 +27,32 @@ export default hopeTheme(
         editLink: false,
 
         plugins: {
+            components: {
+                // 你想使用的组件
+                components: [
+                    "BiliBili",
+                    "VPCard",
+                ],
+            },
+            notice: [
+                {
+                    path: "/",
+                    title: "Warm-Flow工作流",
+                    content:
+                        "简洁轻量，五脏俱全，可扩展，可通过jar引入设计器的工作流。\r\n" +
+                        "希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力",
+                    actions: [
+                        {
+                            text: "⭐️Star⭐️",
+                            link: "https://gitee.com/dromara/warm-flow/stargazers",
+                            type: "primary",
+                        },
+                        { text: "取消" },
+                    ],
+                    fullscreen: true,
+                    confirm: true
+                },
+            ],
             searchPro: {},
             mdEnhance: {
                 align: true,

@@ -1,17 +1,25 @@
-# 贡献者列表
+# 团队
 
-<div class="project-contributors__container">
-  <h3 class="header">贡献者列表 ({{authorsList.length}})</h3>
-  <div class="grid">
-    <div class="user-list-item" v-for="(item, index) in authorsList" :key="index">
-      <span class="flex-shrink-0"><img class="avatar" src="/logo.png"></span>
-      <div class="content">
-        <span class="username">{{ item.name }}</span>
-        <span class="sub-info">Commits: {{ item.contributions }}</span>
-      </div>
-    </div>
-  </div>
-</div>
+<table>
+    <thead>
+        <tr style="text-align: left;">
+            <th>avatar</th>
+            <th>name</th>
+            <th>email</th>
+            <th>role</th>
+            <th>contributions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="(item, index) in authorsList" :key="index">
+            <td width="30"><img src="/logo.png"></td>
+            <td>{{ item.name }}</td>
+            <td><a :href="'mailto:' + item.email">{{ item.email }}</a></td>
+            <td>{{ item.role }}</td>
+            <td>{{ item.contributions }}</td>
+        </tr>
+    </tbody>
+</table>
 
 <script>
 import { ref, onMounted } from 'vue';
@@ -24,6 +32,15 @@ export default {
       try {
         const response = await fetch('https://gitee.com/api/v5/repos/dromara/warm-flow/contributors?type=authors');
         authorsList.value = await response.json();
+        authorsList.value = authorsList.value.map(author => {
+          if (author.name === 'warm') {
+            return { ...author, role: 'Author' };
+          } else if (['xiarigang', 'vanlin', 'liangli', 'Zhen'].includes(author.name)) {
+            return { ...author, role: 'PMC' };
+          } else {
+            return { ...author, role: 'Committer' };
+          }
+        });
       } catch (error) {
         console.error('Error fetching data:', error);
       }
