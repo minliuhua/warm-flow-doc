@@ -1,30 +1,32 @@
 import {navbar} from "vuepress-theme-hope";
 
 export default navbar([
-    "/",
     {
-        text: '文档导航',
-        icon: '/icons/community.svg',
+        text: '🧭 导航',
         link: '/common/introduction.md',
     },
     {
-        text: '快速开始',
-        icon: '/icons/community.svg',
-        link: '/master/guide/started.md',
+        text: '📖 使用文档',
+        link: '/master/primary/started.md',
     },
     {
-        text: '常见问题',
-        icon: '/icons/member.svg',
+        text: '👩‍👩‍👦‍👦 团队',
+        link: '/common/team.md',
+    },
+    {
+        text: '❓ 常见问题',
         link: '/common/troubleshooting.md'
     },
     {
-        text: '更新日志',
-        icon: '/icons/member.svg',
+        text: '👏 更新日志',
         link: '/common/update.md'
     },
     {
-        text: '历史版本',
-        icon: '/icons/version.svg',
+        text: '🌟 新闻公告',
+        link: '/common/news.md'
+    },
+    {
+        text: '🔄 历史版本',
         children: [
             { text: 'v1.3.4', link: '/v1.3.4/guide/started.md' },
             { text: 'v1.3.3', link: '/v1.3.3/guide/started.md' },
