@@ -3,12 +3,13 @@ import {sidebar} from "vuepress-theme-hope";
 export default sidebar({
     "/master/": [
         {
-            text: "初级篇",
-            icon: "bulb",
-            ariaLabel: 1232,
+            text: "🎃 初级篇",
             collapsible: false,
             children: [
-                'primary/started.md',
+                {
+                    text: "🎲 快速开始",
+                    link: "started.md",
+                },
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -21,8 +22,7 @@ export default sidebar({
             ],
         },
         {
-            text: "进阶篇",
-            icon: "bulb",
+            text: "🎈 进阶篇",
             collapsible: false,
             children: [
                 'advanced/permission_handler.md',
@@ -35,8 +35,7 @@ export default sidebar({
             ],
         },
         {
-            text: "提高篇",
-            icon: "/icons/advanced.svg",
+            text: "🏆 提高篇",
             collapsible: false,
             children: [
                 'enhance/designer_two_open.md',

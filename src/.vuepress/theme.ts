@@ -36,15 +36,29 @@ export default hopeTheme(
             },
             notice: [
                 {
+                    width: "400px",
                     path: "/",
                     title: "Warm-Flow工作流",
                     content:
-                        "简洁轻量，五脏俱全，可扩展，可通过jar引入设计器的工作流。\r\n" +
-                        "希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力",
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
+                        '       一键三连，你的⭐️ Star ⭐️是我持续开发的动力' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
+                        '       有❓疑问❓先看常见问题，然后再是提👉 issue 👈' +
+                        '     </span>\n' +
+                        '</div>',
                     actions: [
                         {
-                            text: "⭐️Star⭐️",
+                            text: "⭐️star⭐️",
                             link: "https://gitee.com/dromara/warm-flow/stargazers",
+                            type: "primary",
+                        },
+                        {
+                            text: "❓疑问❓",
+                            link: "https://gitee.com/dromara/warm-flow/issues",
                             type: "primary",
                         },
                         { text: "取消" },
@@ -97,3 +111,4 @@ export default hopeTheme(
     },
     { custom: true }
 );
+

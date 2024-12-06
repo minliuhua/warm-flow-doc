@@ -17,8 +17,8 @@
 **加群扫码: 99元**  
 <table>
     <tr>
-        <td><img src="../.vuepress/public/skwx.jpg"/></td>
-        <td><img src="../.vuepress/public/skzfb.jpg"/></td>
+        <td><img src="../.vuepress/public/skwx.png" height="300"></td>
+        <td><img src="../.vuepress/public/skzfb.png" height="300"></td>
     </tr>
 </table>
 
