@@ -8,7 +8,7 @@ export default sidebar({
             children: [
                 {
                     text: "🎲 快速开始",
-                    link: "started.md",
+                    link: "primary/started.md",
                 },
                 'primary/table.md',
                 'primary/config.md',
