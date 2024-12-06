@@ -7,7 +7,7 @@ heroFullScreen: true
 breadcrumbExclude: true
 heroText: Warm-Flow工作流
 tagline:
-  Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，可扩展，是一个可通过jar引入设计器的工作流
+  国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器
 actions:
 - text: GitHub
   link: https://github.com/dromara/warm-flow.git
