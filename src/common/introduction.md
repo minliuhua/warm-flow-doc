@@ -78,8 +78,8 @@ Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但功能�
 ## 7、特别赞助
 <table>
     <tr>
-        <td><img src="../.vuepress/public/ggw/MaxKey.png"/></td>
-        <td><img src="../.vuepress/public/ggw/WarmFlow.png"/></td>
+        <td style="width: 50%"><img src="../.vuepress/public/ggw/MaxKey.png"/></td>
+        <td style="width: 50%"><img src="../.vuepress/public/ggw/WarmFlow.png"/></td>
     </tr>
 </table>
 

@@ -63,6 +63,7 @@ export default hopeTheme(
                         },
                         { text: "取消" },
                     ],
+                    showOnce: true,
                     fullscreen: true,
                     confirm: true
                 },
