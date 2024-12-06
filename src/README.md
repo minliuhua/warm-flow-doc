@@ -3,17 +3,11 @@ home: true
 icon: home
 title: 首页
 bgImage: /bg.png
-bgImageStyle:
-  background-attachment: fixed
 heroFullScreen: true
 breadcrumbExclude: true
 heroText: Warm-Flow工作流
 tagline:
-  <div class="scrolling-container">
-      <div class="scrolling-text">
-        Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，可扩展，是一个可通过jar引入设计器的工作流。
-      </div>
-  </div>
+  Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，可扩展，是一个可通过jar引入设计器的工作流
 actions:
 - text: GitHub
   link: https://github.com/dromara/warm-flow.git
@@ -33,6 +27,36 @@ actions:
 - text: 开始学习 ➜
   link: /common/introduction.html
   type: primary  
+
+- text: 
+  link: https://gitee.com/dromara/warm-flow.git
+  type: success
+  icon: https://gitee.com/dromara/warm-flow/badge/star.svg?theme=dark
+  
+- text:
+  link: https://gitee.com/dromara/warm-flow/members
+  type: success
+  icon: https://gitee.com/dromara/warm-flow/badge/fork.svg?theme=dark
+  
+- text:
+  link: https://github.com/dromara/warm-flow.git
+  type: success
+  icon: https://img.shields.io/github/stars/dromara/warm-flow.svg
+  
+- text:
+  link: https://github.com/dromara/warm-flow.git
+  type: success
+  icon: https://img.shields.io/github/forks/dromara/warm-flow.svg
+  
+- text:
+  link: https://gitcode.com/dromara/warm-flow
+  type: success
+  icon: https://gitcode.com/dromara/warm-flow/star/badge.svg
+  
+- text:
+  link: https://gitee.com/dromara/warm-flow/blob/master/LICENSE
+  type: success
+  icon: https://img.shields.io/badge/License-Apache2.0-blue.svg
 
 highlights:
   - header: Warm-Flow 特性
@@ -67,60 +91,13 @@ highlights:
       - title: 🏋 多租户与软删除
         details: 流程引擎自身维护多租户和软删除实现，也可使用对应orm框架的实现方式
 
+
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by xiaohua Member of Dromara <br>赣ICP备2021008655号-3
 
 ---
 
 ## **👍友情链接**
-<style>
-  .vp-feature-item:hover {
-    background-color: var(--bg-color-secondary);
-    box-shadow: 0 2px 12px 0 var(--card-shadow);
-    transform: translate(-2px, -2px);
-    transform: scale(1.05);
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .links a {
-    padding: 10px;
-  }
-
-  .links a img {
-    width: 200px !important;
-    height: 200px !important;
-  }
-
-  .scrolling-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .scrolling-text {
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: scroll-left 15s linear infinite;
-    left: 0;
-    will-change: transform; /* 提高性能 */
-  }
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-</style>
 
 <style>
   .vp-feature-item:hover {
