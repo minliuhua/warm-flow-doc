@@ -28,35 +28,35 @@ actions:
   link: /common/introduction.html
   type: primary  
 
-- text: 
-  link: https://gitee.com/dromara/warm-flow.git
-  type: success
-  icon: https://gitee.com/dromara/warm-flow/badge/star.svg?theme=dark
-  
-- text:
-  link: https://gitee.com/dromara/warm-flow/members
-  type: success
-  icon: https://gitee.com/dromara/warm-flow/badge/fork.svg?theme=dark
-  
-- text:
-  link: https://github.com/dromara/warm-flow.git
-  type: success
-  icon: https://img.shields.io/github/stars/dromara/warm-flow.svg
-  
-- text:
-  link: https://github.com/dromara/warm-flow.git
-  type: success
-  icon: https://img.shields.io/github/forks/dromara/warm-flow.svg
-  
-- text:
-  link: https://gitcode.com/dromara/warm-flow
-  type: success
-  icon: https://gitcode.com/dromara/warm-flow/star/badge.svg
-  
-- text:
-  link: https://gitee.com/dromara/warm-flow/blob/master/LICENSE
-  type: success
-  icon: https://img.shields.io/badge/License-Apache2.0-blue.svg
+#- text: 
+#  link: https://gitee.com/dromara/warm-flow.git
+#  type: success
+#  icon: https://gitee.com/dromara/warm-flow/badge/star.svg?theme=dark
+#  
+#- text:
+#  link: https://gitee.com/dromara/warm-flow/members
+#  type: success
+#  icon: https://gitee.com/dromara/warm-flow/badge/fork.svg?theme=dark
+#  
+#- text:
+#  link: https://github.com/dromara/warm-flow.git
+#  type: success
+#  icon: https://img.shields.io/github/stars/dromara/warm-flow.svg
+#  
+#- text:
+#  link: https://github.com/dromara/warm-flow.git
+#  type: success
+#  icon: https://img.shields.io/github/forks/dromara/warm-flow.svg
+#  
+#- text:
+#  link: https://gitcode.com/dromara/warm-flow
+#  type: success
+#  icon: https://gitcode.com/dromara/warm-flow/star/badge.svg
+#  
+#- text:
+#  link: https://gitee.com/dromara/warm-flow/blob/master/LICENSE
+#  type: success
+#  icon: https://img.shields.io/badge/License-Apache2.0-blue.svg
 
 highlights:
   - header: Warm-Flow 特性
