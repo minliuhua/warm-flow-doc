@@ -1,9 +1,10 @@
 # 常见问题
 
 ## 1、id精度丢失
-### 方案1：处理长度过长的Long类型
-::: tip
+::: tip 方案1：处理长度过长的Long类型
+
 只处理长度过长的Long类型，前端页面就不会丢失精度了 (感谢【Colin】提供解决方案)
+
 创建一个BigNumberSerializer（用来处理超过JS数据范围的Long类型）
 
 <details>
@@ -44,9 +45,8 @@ public class BigNumberSerializer extends NumberSerializer {
 ```
 
 </details>
-:::
 
-::: tip 添加JacksonConfig配置全局序列化（针对所有属性），一下两种方式任选其一
+添加JacksonConfig配置全局序列化（针对所有属性），一下两种方式任选其一
 
 <details>
   <summary><span style="color: orangered;">👇 代码详情 👇</span></summary>
@@ -97,18 +97,20 @@ public class JacksonConfig {
 
 :::
 
+
 <br>
 
-### 方案2：序列化所有long类型
-::: tip 如何处理Long类型精度丢失问题
-[点击👇](http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98)
+::: tip 方案2：序列化所有long类型
+
+[如何处理Long类型精度丢失问题 👇点击👇](http://doc.ruoyi.vip/ruoyi/other/faq.html#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86long%E7%B1%BB%E5%9E%8B%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98)
 :::
 
 
 <br>
 
-### 方案3：通过yml配置
-::: tip 通过设置id生成器类型，修改id生成方式
+::: tip 方案3：通过yml配置
+通过设置id生成器类型，修改id生成方式
+
 ```yml
 # warm-flow工作流配置
 warm-flow:
@@ -119,8 +121,8 @@ warm-flow:
 
 
 
-### 方案4：自定义id生成策略
-::: tip 参照如下文章，继承填充器接口，修改id生成方式  
+::: tip 方案4：自定义id生成策略
+参照如下文章，继承填充器接口，修改id生成方式  
 
 [Warm-Flow工作流引擎数据库主键自增策略实现👇](https://juejin.cn/post/7402110528298074152)
 :::
@@ -128,9 +130,9 @@ warm-flow:
 
 
 ## 2、流程图片中文乱码
-### linux环境：安装中文字体
-::: tip
+::: tip linux环境：安装中文字体
 生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
+
 由于服务器上缺少中文字体，通过检查fc-list :lang=zh是否包含中文字符集（以下是存在的示例）
 
 ```shell
@@ -152,8 +154,7 @@ drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 :::
 
 
-### docker环境：安装中文字体
-::: tip
+::: tip docker环境：安装中文字体
 以ruoyi-vue-plus-4.x中dockerfile为例，添加中文字体即可  （感谢【格调@main】提供的方案）
 
 <img src="https://foruda.gitee.com/images/1730708137813267165/0ff99854_2218307.png" width="700" />
@@ -162,10 +163,11 @@ drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 
 
 
-## 3、FlowAutoConfig.initFlow()未加载
+## 3、initFlow()未加载
 
 ::: tip
 spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）  
+
 删除"lazy-initialization: true",可解决问题，以下是错误示例
 
 ```yml
@@ -178,7 +180,7 @@ spring:
 :::
 
 
-## 4、监听器未执行或者类型转换异常
+## 4、监听器等对象获取不到
 
 ::: tip
 热部署插件jrebel或者devtools导致问题，检查是否使用热部署插件，比如spring.devtools，可以把插件关了，或者加上排除配置spring-devtools.properties
@@ -193,8 +195,10 @@ restart.include.flow=/io.github.minliuhua.*.jar
 ## 5、hh-vue切换mybaits-plus
 
 ::: tip
-1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter  
+1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter 
+
 2、ruoyi-flow的pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter  
+
 3、ruoyi-common增加依赖
 
 ```java
@@ -206,6 +210,7 @@ restart.include.flow=/io.github.minliuhua.*.jar
 ```
 
 4、MyBatisConfig.java注释掉，新增MybatisPlusConfig
+
 <details>
   <summary><span style="color: orangered;">👇 代码详情 👇</span></summary>
 
@@ -278,14 +283,21 @@ public class MybatisPlusConfig {
 
 ## 6、导入依赖包失败
 
-### 6.1、可尝试切换maven版本 （感谢【一拳打爆常大宝】）
-
-::: tip 如maven3.9.6切换为低版本3.8.2
+::: tip 可尝试切换maven版本 （感谢【一拳打爆常大宝】）
+如maven3.9.6切换为低版本3.8.2
 :::
 
 ## 7、 StackOverflowError 错误
 ::: tip
 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
+
 <img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/>
 :::
 
+## 7、 后端接收流程xml部分丢失
+::: tip
+一般是xxs过滤导致，排查下接口就行或者对象就行
+
+<img src="https://foruda.gitee.com/images/1733466289672727602/b693f617_2218307.png" width="700"/>
+<img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/>
+:::
