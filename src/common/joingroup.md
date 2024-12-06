@@ -1,12 +1,7 @@
 # 加入群聊
 ## 交流群
 
-<table>
-    <tr>
-        <td><img src="../.vuepress/public/wxqun3.jpg"/></td>
-        <td><img src="../.vuepress/public/wxqun2.jpg"/></td>
-    </tr>
-</table>
+<img src="../.vuepress/public/wxqun.jpg" width="500"/>
 
 **qq群 : 【778470567】**   
 

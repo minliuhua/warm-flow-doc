@@ -21,6 +21,7 @@
     </tr>
 </table>
 
+
 ## 2、官网流程定义案例xml
 
 [官网流程定义案例xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)
@@ -236,7 +237,7 @@ public void skipFlow() throws Exception {
     }
 ```
 ## 5、设计器引入
-> 通过jar包引入：[文档地址](./designerIntroduced.md)
+> 通过jar包引入：[文档地址](../advanced/designerIntroduced.md)
 
 ## 6、初学者推荐学习路线
 

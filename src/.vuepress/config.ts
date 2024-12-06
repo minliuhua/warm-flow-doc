@@ -11,8 +11,7 @@ export default defineUserConfig({
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Dromara Warm-Flow工作流",
-            description: "国产工作流引擎🎉，其特点简洁轻量但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。",
+            title: "Warm-Flow工作流",
         },
     },
     theme,

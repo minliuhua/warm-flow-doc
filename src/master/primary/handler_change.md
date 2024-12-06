@@ -9,7 +9,7 @@
 > 4、减签：办理中途，希望某些人不参与办理
 
 ## 2、接口描述
-[接口描述地址](http://www.warm-flow.cn/master/guide/api.html#_3-1%E3%80%81%E6%B5%81%E7%A8%8B%E8%B7%B3%E8%BD%AC)
+[接口描述地址](http://www.warm-flow.cn/master/primary/api.html#_3-1%E3%80%81%E6%B5%81%E7%A8%8B%E8%B7%B3%E8%BD%AC)
 </br>
 
 ## 3、代码示例
