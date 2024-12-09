@@ -245,4 +245,4 @@ public void skipFlow() throws Exception {
 [项目地址](../../common/projectexample.md)
 
 ### 6.2、推荐学习视频
-[新手教学视频，社区同学录制](https://www.bilibili.com/video/BV1Ci42117pK/)
+<BiliBili bvid="BV1Ci42117pK" />

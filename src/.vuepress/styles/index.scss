@@ -30,12 +30,6 @@
   }
 }
 
-.theme-container {
-  .vp-page {
-    padding-top: calc(var(--navbar-height) + 20px);
-  }
-}
-
 .vp-sidebar > .vp-sidebar-links {
   padding: 8px 0 2.8rem 0;
 }
@@ -77,6 +71,25 @@
   color: red;
 }
 
-.vp-notice-wrapper fullscreen {
-  --notice-width: 250px;
+.vp-notice-wrapper.fullscreen {
+  width: 450px;
+  height: 200px;
 }
+
+.vp-sidebar-links {
+  font-size: 14px
+}
+
+//.auto-link {
+//  display: inline-block;
+//  overflow: hidden;
+//  min-width: 4rem;
+//  margin: 0.5rem;
+//  padding: 0.0em 0.0rem;
+//  border-radius: 2rem;
+//  background: var(--bg-color-secondary);
+//  color: var(--text-color);
+//  font-size: 1.2rem;
+//  text-align: center;
+//  transition: color var(--color-transition), color var(--color-transition), transform var(--transform-transition);
+//}

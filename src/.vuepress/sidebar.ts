@@ -4,12 +4,10 @@ export default sidebar({
     "/master/": [
         {
             text: "🎃 初级篇",
-            collapsible: false,
+            collapsible: true,
+            expanded: true,
             children: [
-                {
-                    text: "🎲 快速开始",
-                    link: "primary/started.md",
-                },
+                "primary/started.md",
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -19,11 +17,13 @@ export default sidebar({
                 'primary/handler_change.md',
                 'primary/collaboration.md',
                 'primary/processterm.md',
+                'primary/designerIntroduced.md',
             ],
         },
         {
             text: "🎈 进阶篇",
-            collapsible: false,
+            collapsible: true,
+            expanded: true,
             children: [
                 'advanced/permission_handler.md',
                 'advanced/variableStategy.md',
@@ -31,12 +31,12 @@ export default sidebar({
                 'advanced/ormusagetips.md',
                 'advanced/logicdelete.md',
                 'advanced/tenant.md',
-                'advanced/designerIntroduced.md',
             ],
         },
         {
             text: "🏆 提高篇",
-            collapsible: false,
+            collapsible: true,
+            expanded: true,
             children: [
                 'enhance/designer_two_open.md',
                 'enhance/customstatus.md',

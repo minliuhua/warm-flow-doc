@@ -47,7 +47,7 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       有❓疑问❓先看常见问题，然后再是提👉 issue 👈' +
+                        '       有❓疑问❓先看常见问题和issue，然后再是提👉 issue 👈' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
@@ -57,13 +57,17 @@ export default hopeTheme(
                             type: "primary",
                         },
                         {
-                            text: "❓疑问❓",
+                            text: "👉issue👈",
                             link: "https://gitee.com/dromara/warm-flow/issues",
+                            type: "primary",
+                        },
+                        {
+                            text: "❓常见问题❓",
+                            link: "http://localhost:8081/common/troubleshooting.html",
                             type: "primary",
                         },
                         { text: "取消" },
                     ],
-                    showOnce: true,
                     fullscreen: true,
                     confirm: true
                 },
