@@ -63,7 +63,7 @@ export default hopeTheme(
                         },
                         {
                             text: "❓常见问题❓",
-                            link: "http://localhost:8081/common/troubleshooting.html",
+                            link: "/common/troubleshooting.html",
                             type: "primary",
                         },
                         { text: "取消" },
