@@ -12,6 +12,7 @@
 ## 2 源码调试
 - 设计器需要配置业务系统的代理地址，否则无法访问业务系统
 - 独立启动该设计器
+- 业务系统配置设计器的地址
 
 <img src="https://foruda.gitee.com/images/1730821008574953214/941ea1cd_2218307.png" width="700">
 <img src="https://foruda.gitee.com/images/1730825131504921296/a17821eb_2218307.png" width="700">
