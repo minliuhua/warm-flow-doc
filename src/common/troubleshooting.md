@@ -186,13 +186,16 @@ spring:
 热部署插件jrebel或者devtools导致问题，检查是否使用热部署插件，比如spring.devtools，可以把插件关了，或者加上排除配置spring-devtools.properties
 
 ```properties
-restart.include.flow=/io.github.minliuhua.*.jar
+restart.include.flow=/org.dromara.warm.*.jar
 ```
 :::
 
+## 5、类型转换异常
+::: tip 同上
+:::
 
 
-## 5、hh-vue切换mybaits-plus
+## 6、hh-vue切换mybaits-plus
 
 ::: tip
 1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter 
@@ -281,20 +284,20 @@ public class MybatisPlusConfig {
 :::
 
 
-## 6、导入依赖包失败
+## 7、导入依赖包失败
 
 ::: tip 可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 如maven3.9.6切换为低版本3.8.2
 :::
 
-## 7、 StackOverflowError 错误
+## 8、 StackOverflowError 错误
 ::: tip
 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
 
 <img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/>
 :::
 
-## 7、 后端接收流程xml部分丢失
+## 9、 后端接收流程xml部分丢失
 ::: tip
 一般是xxs过滤导致，排查下接口就行或者对象就行
 
