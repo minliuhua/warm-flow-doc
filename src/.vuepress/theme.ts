@@ -36,9 +36,8 @@ export default hopeTheme(
             },
             notice: [
                 {
-                    width: "400px",
                     path: "/",
-                    title: "Warm-Flow工作流",
+                    title: "请务必阅读",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
@@ -47,7 +46,12 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       有❓疑问❓先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '       有❓ 疑问 ❓先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.md\'" class="link-style">' +
+                        '       集成前先快速浏览📖 使用文档 📖，大概知道有功能和注意事项' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
@@ -68,6 +72,7 @@ export default hopeTheme(
                         },
                         { text: "取消" },
                     ],
+                    showOnce: false,
                     fullscreen: true,
                     confirm: true
                 },
