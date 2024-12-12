@@ -41,17 +41,22 @@ export default hopeTheme(
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
-                        '       一键三连，你的⭐️ Star ⭐️是我持续开发的动力' +
+                        '       ⭐️ Star ：一键三连，你的Star是我持续开发的动力' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       有❓ 疑问 ❓先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '       ❓ 疑问 :    先看常见问题和issue，然后再是提👉 issue 👈' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/primary/started.md\'" class="link-style">' +
-                        '       集成前先快速浏览📖 使用文档 📖，大概知道有功能和注意事项' +
+                        '       📖使用文档：集成前先快速浏览，大概知道有功能和注意事项' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                            '     <span onclick="window.location.href=\'/common/news.md\'" class="link-style">' +
+                        '      🌟升级指南：如发布新版本，请查看' +
                         '     </span>\n' +
                         '</div>',
                     actions: [

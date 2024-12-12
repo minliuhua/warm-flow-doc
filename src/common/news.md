@@ -79,6 +79,12 @@ export default {
       ];
       authorsList.value = [
         {
+            "type": "upgrade_guide",
+            "title": "升级指南", 
+            "url": "./news/upgrade_guide/4.md",
+            "pushTime": "2024-11-25"
+        },
+        {
             "type": "experience",
             "title": "WarmFlow工作流动态指定审批人", 
             "url": "./news/experience/6.md",
@@ -89,12 +95,6 @@ export default {
             "title": "solon集成Warm-Flow", 
             "url": "./news/news/5.md",
             "pushTime": "2024-12-04"
-        },
-        {
-            "type": "upgrade_guide",
-            "title": "Warm-Flow发布1.3.4, 支持solon和便捷性提升", 
-            "url": "./news/upgrade_guide/4.md",
-            "pushTime": "2024-11-25"
         },
         {
             "type": "news",
