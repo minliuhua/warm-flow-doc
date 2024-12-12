@@ -30,28 +30,7 @@ import { ref, onMounted } from 'vue';
 export default {
   setup() {
     const authorsList = ref([]);
-    const newsType = ref( [
-        {
-            "key": "news",
-            "value": "新闻", 
-            "color": "#1890ff"
-        },
-        {
-            "key": "notice",
-            "value": "公告", 
-            "color": "#ffba00"
-        },
-        {
-            "key": "upgrade_guide",
-            "value": "升级指南", 
-            "color": "#ff9292"
-        },
-        {
-            "key": "experience",
-            "value": "使用心得", 
-            "color": "#71e2a3"
-        },
-      ]);
+    const newsType = ref( []);
     const selectedType = ref('');
  
     const fetchData = async () => {
