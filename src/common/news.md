@@ -1,13 +1,35 @@
 # 新闻公告
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
-    <select v-model="selectedType" @change="filterAuthorsList">
-        <option selected value="">全部</option>
-        <option v-for="(nt, index) in getType()" :key="nt.key" :value="nt.key">{{ nt.value }}</option>
-    </select>
+    <input 
+        type="text" 
+        v-model="searchQuery" 
+        @input="filterByTitle" 
+        placeholder="搜索标题" 
+        style="justify-content: flex-start; margin-right: 10px; padding: 5px; border: 1px solid #1890ff; border-radius: 4px;"
+    />
+    <ul id="tabs" style="list-style-type: none; padding: 0; margin: 0; font-size: 15px;">
+        <li 
+            class="tab" 
+            :class="{ active: getSelected('') }" 
+            @click="filterSelect('')"
+        >
+            全部
+        </li>
+        <li 
+            class="tab" 
+            v-for="(nt, index) in getType()" 
+            :key="nt.key" 
+            :class="{ active: getSelected(nt.key) }" 
+            @click="filterSelect(nt.key)"
+        >
+            {{ nt.value }}
+        </li>
+    </ul>
 </div>
+
 <table class="no-border" style="width: 100%; border-collapse: collapse; ">
     <tbody>
-       <tr v-for="(item, index) in authorsList" :key="index" style="font-size: 15px;">
+       <tr v-for="(item, index) in filterList" :key="index" style="font-size: 15px;">
             <td class="no-border" style="width: 10%; text-align: left;">
                 <div :style="{ padding: '3px', backgroundColor: getTypeColor(item.type), color: 'white', borderRadius: '4px', margin: '2px' }">
                     {{ getTypeValue(item.type) }}
@@ -23,15 +45,35 @@
     </tbody>
 </table>
 
+<style> 
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+}
+
+.tab.active {
+    background-color: white;
+    border-top: 2px solid blue; /* 激活页签的颜色 */
+    color: red;
+}
+
+</style>
 
 <script>
 import { ref, onMounted } from 'vue';
  
 export default {
   setup() {
-    const authorsList = ref([]);
+    const allList = ref([]);
+    const filterList = ref([]);
     const newsType = ref( []);
     const selectedType = ref('');
+    const searchQuery = ref('');
  
     const fetchData = async () => {
     newsType.value = [
@@ -56,7 +98,7 @@ export default {
             "color": "#71e2a3"
         },
       ];
-      authorsList.value = [
+      filterList.value = allList.value = [
         {
             "type": "upgrade_guide",
             "title": "升级指南", 
@@ -112,12 +154,43 @@ export default {
       return newsType.value.find(nt => nt.key === type)?.color || type;
     };
 
+    const filterSelect = (type) => {
+      selectedType.value = type;
+      if (type) {
+        filterList.value = allList.value.filter(item => item.type === type);
+      } else {
+        fetchData();
+      }
+      filterByTitle();
+    };
+
+    const getSelected = (type) => {
+        return selectedType.value === type
+    };
+
+    const filterByTitle = () => {
+      if (searchQuery.value) {
+        filterList.value = filterList.value.filter(item => 
+          item.title.toLowerCase().includes(searchQuery.value.toLowerCase())
+        );
+      } else {
+        filterSelect(selectedType.value);
+      }
+    };
+
     return {
-      authorsList,
+      allList,
+      filterList,
+      newsType,
+      selectedType,
+      searchQuery,    
       navigateTo,
       getType,
       getTypeValue,
       getTypeColor,
+      filterSelect,
+      getSelected,
+      filterByTitle,
     };
   },
 };
