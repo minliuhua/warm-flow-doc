@@ -10,6 +10,8 @@ export default sidebar({
                 "introduction/introduction.md",
                 "introduction/processdemo.md",
                 "introduction/getinvolved.md",
+                "introduction/companyintegration.md",
+                "introduction/projectexample.md",
                 "introduction/support.md",
             ],
         },
@@ -56,6 +58,18 @@ export default sidebar({
                 'enhance/listener_two_open',
                 'enhance/form.md',
                 'enhance/jsonlib.md',
+            ],
+        },
+        {
+            text: "🚸 其他",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'other/team.md',
+                'other/troubleshooting.md',
+                'other/update',
+                'other/news',
+                'other/paidservice',
             ],
         }
     ],

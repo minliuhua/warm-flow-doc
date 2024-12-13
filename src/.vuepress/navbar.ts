@@ -11,23 +11,23 @@ export default navbar([
     },
     {
         text: '👩‍👩‍👦‍👦团队',
-        link: '/common/team.md',
+        link: '/master/other/team.md',
     },
     {
         text: '❓常见问题',
-        link: '/common/troubleshooting.md'
+        link: '/master/other/troubleshooting.md'
     },
     {
         text: '👏更新日志',
-        link: '/common/update.md'
+        link: '/master/other/update.md'
     },
     {
         text: '🌟新闻公告',
-        link: '/common/news.md'
+        link: '/master/other/news.md'
     },
     {
         text: "🍚有偿服务",
-        link: "/common/paidservice.md",
+        link: "/master/other/paidservice.md",
     },
     {
         text: '🔄 历史版本',

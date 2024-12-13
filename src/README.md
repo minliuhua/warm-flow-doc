@@ -80,7 +80,7 @@ highlights:
 
   - header: 加入群聊
     description: 有❓疑问❓先看<a href="http://www.warm-flow.cn/common/troubleshooting.html">常见问题</a>，然后再是提👉 <a href="https://gitee.com/dromara/warm-flow/issues">issue</a> 👈
-    image: http://www.warm-flow.cn/assets/wxqun-HDESafl7.jpg
+    image: /wxqun.jpg
     bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     
