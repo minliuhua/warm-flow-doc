@@ -35,7 +35,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -55,7 +55,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -66,7 +66,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -76,7 +76,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -86,7 +86,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -105,7 +105,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -115,7 +115,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -126,7 +126,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -136,7 +136,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -146,7 +146,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -157,7 +157,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -177,7 +177,7 @@ warm-flow:
               <artifactId>solon.logging</artifactId>
           </exclusion>
       </exclusions>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 

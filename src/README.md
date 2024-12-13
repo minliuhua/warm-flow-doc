@@ -5,9 +5,9 @@ title: 首页
 bgImage: /bg.png
 heroFullScreen: true
 breadcrumbExclude: true
-heroText: Warm-Flow工作流
+heroText: Warm-Flow工作流 
 tagline:
-  国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器
+  国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!  
 actions:
 - text: GitHub
   link: https://github.com/dromara/warm-flow.git
@@ -490,9 +490,23 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     height: 200px !important;
   }
 
+  .version-badge {
+    padding: 4px 8px; /* 内边距 */
+    font-size: 15px; /* 字体大小 */
+    border-radius: 4px; /* 圆角 */
+    margin: 4px; /* 外边距 */
+  }
+
 </style>
 
 ---
+
+<div class="vp-hero-title1">
+  Warm-Flow工作流
+  <span class="version-badge">v1.3.4</span>
+</div>
+
+
 <div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">
 	<br><strong style="font-size: 30px;">👍友情链接</strong><br><br><br>
     <div class="links ">
@@ -502,8 +516,6 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     </div>
 </div>
 
-
-
 <script>
 
 import { ref, onMounted } from 'vue';
@@ -512,12 +524,32 @@ export default {
   setup() {
     const projectList = ref([]);
     const links = ref();
+    const version = ref('');
 
     const fetchData = async () => {
       projectList.value = [
         { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
       ];
+      try {
+        const response = await fetch('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
+         headers: {
+           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+         }
+       });
+        version.value = await response.json();
+        const pElement = document.querySelector('.vp-hero-title');
+
+        if (pElement) {
+            var versionSpan = document.createElement('span');
+            versionSpan.className = 'version-badge';
+            versionSpan.textContent = version.value.name;
+
+            pElement.appendChild(versionSpan);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };
 
     const navigateTo = () => {
@@ -539,7 +571,7 @@ export default {
         console.error('.vp-hero-actions 元素未找到');
       }
 
-      const element = document.querySelector('.main-description');
+      const element = document.getElementById('main-description');
       const text = element.textContent;
       let index = 0;
     
@@ -547,11 +579,18 @@ export default {
     
       function typeWriter() {
         if (index < text.length) {
-          element.textContent += text.charAt(index);
-          index++;
-          setTimeout(typeWriter, 100);
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 150);
+        } else {
+            setTimeout(() => {
+                index = 0;
+                element.textContent = '';
+                setTimeout(typeWriter, 150);
+            }, 3000);
+            
         }
-      }
+     }
     
       typeWriter();
     };
@@ -564,6 +603,7 @@ export default {
     return {
       projectList,
       links,
+      version,
     };
   },
 };
