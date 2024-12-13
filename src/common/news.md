@@ -1,4 +1,50 @@
 # 新闻公告
+
+---
+title: 真实项目
+icon: splotch
+order: 1
+category:
+- 案例
+
+docs:
+- name: Waline
+  desc: 一款简洁、安全的评论系统。
+  logo: https://waline.js.org/logo.png
+  url: https://waline.js.org/
+  repo: https://github.com/walinejs/waline
+  preview: /assets/image/waline.jpg
+
+- name: inNENU
+  desc: 最全东师新生攻略
+  logo: https://innenu.com/logo.svg
+  url: https://innenu.com
+  repo: https://github.com/inNENU/resource/
+  preview: /assets/image/innenu.jpg
+- name: Waline
+  desc: 一款简洁、安全的评论系统。
+  logo: https://waline.js.org/logo.png
+  url: https://waline.js.org/
+  repo: https://github.com/walinejs/waline
+  preview: /assets/image/waline.jpg
+
+- name: inNENU
+  desc: 最全东师新生攻略
+  logo: https://innenu.com/logo.svg
+  url: https://innenu.com
+  repo: https://github.com/inNENU/resource/
+  preview: /assets/image/innenu.jpg
+
+---
+
+## 使用 VuePress Theme Hope 的文档
+
+<SiteInfo
+v-for="item in $frontmatter.docs"
+:key="item.link"
+v-bind="item"
+/>
+
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
     <input 
         type="text" 

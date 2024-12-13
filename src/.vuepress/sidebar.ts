@@ -54,7 +54,7 @@ export default sidebar({
             link: "introduction.md",
         },
         {
-            text: "👉 功能演示",
+            text: "😁   功能演示",
             link: "processdemo.md",
         },
         {
@@ -70,7 +70,7 @@ export default sidebar({
             link: "projectexample.md",
         },
         {
-            text: "🍚 有偿服务",
+            text: "🍚 有偿 服务",
             link: "paidservice.md",
         },
         {

@@ -1,5 +1,5 @@
 # Dromara成员项目
-<div v-html="content"></div>
+<div id ="dromara" v-html="content"></div>
 
 <script>
 import axios from 'axios';
