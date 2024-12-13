@@ -92,19 +92,19 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     <div class="com-box com-box-you table-show-pj">
         <SiteInfo
         name="hh-vue"
-        desc="官方集成案例"
+        desc="官方集成案例:springboot2+vue2"
         url="http://www.hhzai.top/"
         logo="http://localhost:8081/logo.png"
         repo="https://gitee.com/min290/hh-vue.git"
         preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
         />
         <SiteInfo
-        name="Mr.Hope's Blog"
-        desc="Where there is light, there is hope"
-        url="https://mister-hope.com"
-        logo="https://mister-hope.com/logo.svg"
-        repo="https://github.com/Mister-Hope/Mister-Hope.github.io"
-        preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
+        name="RuoYi-Vue3"
+        desc="官方集成案例:vue3前端"
+        url="http://www.hhzai.top/"
+        logo="http://localhost:8081/logo.png"
+        repo="https://gitee.com/min290/RuoYi-Vue3.git"
+        preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
         />
     </div>
     <div style="height: 10px; clear: both;"></div>
