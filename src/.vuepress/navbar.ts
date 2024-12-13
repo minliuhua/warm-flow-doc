@@ -2,28 +2,32 @@ import {navbar} from "vuepress-theme-hope";
 
 export default navbar([
     {
-        text: '🧭 导航',
-        link: '/common/introduction.md',
+        text: '🧭首页',
+        link: '/',
     },
     {
-        text: '📖 使用文档',
-        link: '/master/primary/started.md',
+        text: '📖文档',
+        link: '/master/introduction/introduction.md',
     },
     {
-        text: '👩‍👩‍👦‍👦 团队',
+        text: '👩‍👩‍👦‍👦团队',
         link: '/common/team.md',
     },
     {
-        text: '❓ 常见问题',
+        text: '❓常见问题',
         link: '/common/troubleshooting.md'
     },
     {
-        text: '👏 更新日志',
+        text: '👏更新日志',
         link: '/common/update.md'
     },
     {
-        text: '🌟 新闻公告',
+        text: '🌟新闻公告',
         link: '/common/news.md'
+    },
+    {
+        text: "🍚有偿服务",
+        link: "/common/paidservice.md",
     },
     {
         text: '🔄 历史版本',

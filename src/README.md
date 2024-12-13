@@ -25,7 +25,7 @@ actions:
   icon: /icons/gitcode_home.svg
   
 - text: 开始学习 ➜
-  link: /common/introduction.html
+  link: /master/introduction/introduction.html
   type: primary  
 
 highlights:
@@ -78,6 +78,24 @@ highlights:
         link: /master/advanced/logicdelete.md
         details: 流程引擎自身维护软删除实现，也可使用对应orm框架的实现方式
 
+  - header: 加入群聊
+    description: 有❓疑问❓先看<a href="http://www.warm-flow.cn/common/troubleshooting.html">常见问题</a>，然后再是提👉 <a href="https://gitee.com/dromara/warm-flow/issues">issue</a> 👈
+    image: http://www.warm-flow.cn/assets/wxqun-HDESafl7.jpg
+    bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
+    
+    highlights:
+      - title: 微信公众号
+        icon: circle-half-stroke
+        details: warm-flow工作流
+
+      - title: 微信号
+        icon: palette
+        details: warm-houhou
+
+      - title: qq群
+        icon: ellipsis
+        details: 778470567
 
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
@@ -91,25 +109,36 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
     <div class="com-box com-box-you table-show-pj">
         <SiteInfo
-        name="hh-vue"
-        desc="官方集成案例:springboot2+vue2"
-        url="http://www.hhzai.top/"
-        logo="http://localhost:8081/logo.png"
-        repo="https://gitee.com/min290/hh-vue.git"
-        preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
+            name="hh-vue"
+            desc="官方集成案例:springboot2+vue2"
+            url="http://www.hhzai.top/"
+            logo="http://localhost:8081/logo.png"
+            repo="https://gitee.com/min290/hh-vue.git"
+            preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
         />
         <SiteInfo
-        name="RuoYi-Vue3"
-        desc="官方集成案例:vue3前端"
-        url="http://www.hhzai.top/"
-        logo="http://localhost:8081/logo.png"
-        repo="https://gitee.com/min290/RuoYi-Vue3.git"
-        preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
+            name="seaflow"
+            desc="seaflow 是一款 开源仿钉钉工作流 平台， 前端使用 vue3+element plus ， 实现 流程设计和审批功能， 后端基于国产工作流warm-flow 实现流程控制， 大大缩短了学习成本"
+            url="http://124.222.180.108:8999/"
+            logo="https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png"
+            repo="https://gitee.com/qq75547276/seaflow"
+            preview="https://foruda.gitee.com/images/1734071245444213365/6827b6a0_1251122.png"
+        />
+        <SiteInfo
+            name="RuoYi-Vue3"
+            desc="官方集成案例:vue3前端"
+            url="http://www.hhzai.top/"
+            logo="http://localhost:8081/logo.png"
+            repo="https://gitee.com/min290/RuoYi-Vue3.git"
+            preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
         />
     </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
+    </p>
+    <p>
+    	（更多开源项目详情，您可以 <a href="/common/projectexample.html" target="_blank">在此</a> 查看）
     </p>
 </div>
 
@@ -514,13 +543,13 @@ export default {
       const text = element.textContent;
       let index = 0;
     
-      element.textContent = ''; // 清空原始文本
+      element.textContent = '';
     
       function typeWriter() {
         if (index < text.length) {
           element.textContent += text.charAt(index);
           index++;
-          setTimeout(typeWriter, 100); // 每100毫秒显示一个字符
+          setTimeout(typeWriter, 100);
         }
       }
     

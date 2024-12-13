@@ -3,6 +3,17 @@ import {sidebar} from "vuepress-theme-hope";
 export default sidebar({
     "/master/": [
         {
+            text: "🤞 开始",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "introduction/introduction.md",
+                "introduction/processdemo.md",
+                "introduction/getinvolved.md",
+                "introduction/support.md",
+            ],
+        },
+        {
             text: "🎃 初级篇",
             collapsible: true,
             expanded: true,
@@ -47,48 +58,6 @@ export default sidebar({
                 'enhance/jsonlib.md',
             ],
         }
-    ],
-    "/common/": [
-        {
-            text: "😁 介绍",
-            link: "introduction.md",
-        },
-        {
-            text: "😁   功能演示",
-            link: "processdemo.md",
-        },
-        {
-            text: "🖲 加入群聊",
-            link: "joingroup.md",
-        },
-        {
-            text: "🥷 公司使用列表",
-            link: "companyintegration.md",
-        },
-        {
-            text: "🚸 集成项目示例",
-            link: "projectexample.md",
-        },
-        {
-            text: "🍚 有偿 服务",
-            link: "paidservice.md",
-        },
-        {
-            text: "✍️ 如何贡献",
-            link: "getinvolved.md",
-        },
-        {
-            text: "㊙️ 学习资料",
-            link: "learningmaterials.md",
-        },
-        {
-            text: "㊗️ Dromara成员项目",
-            link: "dromara.md",
-        },
-        {
-            text: "🤞 捐赠",
-            link: "support.md",
-        },
     ],
     "/v1.3.4/guide/": [
         {
