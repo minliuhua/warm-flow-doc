@@ -45,25 +45,6 @@
     </tbody>
 </table>
 
-<style> 
-
-.tab {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    background-color: #f1f1f1;
-}
-
-.tab.active {
-    background-color: white;
-    border-top: 2px solid blue; /* 激活页签的颜色 */
-    color: red;
-}
-
-</style>
-
 <script>
 import { ref, onMounted } from 'vue';
  
@@ -201,3 +182,21 @@ export default {
 };
 </script>
 
+<style> 
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+}
+
+.tab.active {
+    background-color: white;
+    border-top: 2px solid blue; /* 激活页签的颜色 */
+    color: red;
+}
+
+</style>
