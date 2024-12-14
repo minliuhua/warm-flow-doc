@@ -35,6 +35,13 @@ export default hopeTheme(
                     "SiteInfo",
                 ],
             },
+            comment: {
+                provider: "Giscus",
+                repo: "dromara/warm-flow",
+                repoId: "R_kgDOK_2R_w",
+                category: "Announcements",
+                categoryId: "DIC_kwDOK_2R_84ClNey",
+            },
             notice: [
                 {
                     path: "/",

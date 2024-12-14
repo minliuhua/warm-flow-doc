@@ -77,10 +77,12 @@ Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但功能�
 
 ## 7、特别赞助
 <table>
-    <tr>
-        <td style="width: 50%"><img src="/ggw/MaxKey.png"/></td>
-        <td style="width: 50%"><img src="/ggw/WarmFlow.png"/></td>
-    </tr>
+    <tbody>
+        <tr>
+            <td style="width: 50%"><img src="/ggw/MaxKey.png"/></td>
+            <td style="width: 50%"><img src="/ggw/WarmFlow.png"/></td>
+        </tr>
+    </tbody>
 </table>
 
 [如何成为赞助商 加群联系作者详谈](./joingroup.md)
