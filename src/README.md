@@ -85,17 +85,12 @@ highlights:
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     
     highlights:
-      - title: 微信公众号
-        icon: circle-half-stroke
-        details: warm-flow工作流
+      - title: 微信公众号：warm-flow工作流
 
-      - title: 微信号
-        icon: palette
-        details: warm-houhou
+      - title: 微信号：warm-houhou
 
-      - title: qq群
-        icon: ellipsis
-        details: 778470567
+      - title: qq群：778470567
+        
 
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
@@ -104,17 +99,18 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 
 ---
-<div class="com-box-f s-width">
-    <div class="s-fenge"></div>
+
+<div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
     <div class="com-box com-box-you table-show-pj">
         <SiteInfo
             name="hh-vue"
+            width="calc(30% - 16px)"
             desc="官方集成案例:springboot2+vue2"
             url="http://www.hhzai.top/"
             logo="http://localhost:8081/logo.png"
-            repo="https://gitee.com/min290/hh-vue.git"
-            preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
+            repo="https://gitee.com/min290/hh-vue"
+            preview="/warm-flow.png"
         />
         <SiteInfo
             name="seaflow"
@@ -122,15 +118,15 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
             url="http://124.222.180.108:8999/"
             logo="https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png"
             repo="https://gitee.com/qq75547276/seaflow"
-            preview="https://foruda.gitee.com/images/1734071245444213365/6827b6a0_1251122.png"
+            preview="https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png"
         />
         <SiteInfo
             name="RuoYi-Vue3"
             desc="官方集成案例:vue3前端"
             url="http://www.hhzai.top/"
             logo="http://localhost:8081/logo.png"
-            repo="https://gitee.com/min290/RuoYi-Vue3.git"
-            preview="https://foruda.gitee.com/images/1734069989612682159/d8370b7a_2218307.png"
+            repo="https://gitee.com/min290/RuoYi-Vue3"
+            preview="/warm-flow.png"
         />
     </div>
     <div style="height: 10px; clear: both;"></div>
@@ -143,8 +139,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f s-width">
-    <div class="s-fenge"></div>
+<div class="com-box-f">
     <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
     <div class="com-box com-box-you table-show-pj">
         <a href="https://maxkey.top/" target="_blank">
@@ -194,8 +189,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f s-width">
-    <div class="s-fenge"></div>
+<div class="com-box-f">
     <br><strong style="font-size: 30px;">Dromara 成员项目</strong><br><br><br>
     <div class="com-box com-box-you table-show-pj">
     	<a href="https://gitee.com/dromara/TLog" target="_blank">
@@ -492,21 +486,17 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
   .version-badge {
     padding: 4px 8px; /* 内边距 */
-    font-size: 15px; /* 字体大小 */
+    font-size: 20px; /* 字体大小 */
     border-radius: 4px; /* 圆角 */
     margin: 4px; /* 外边距 */
+  }
+  .vp-site-info {
+    width: calc(31%);
   }
 
 </style>
 
 ---
-
-<div class="vp-hero-title1">
-  Warm-Flow工作流
-  <span class="version-badge">v1.3.4</span>
-</div>
-
-
 <div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">
 	<br><strong style="font-size: 30px;">👍友情链接</strong><br><br><br>
     <div class="links ">
@@ -532,18 +522,19 @@ export default {
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
       ];
       try {
-        const response = await fetch('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
-         headers: {
-           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-         }
-       });
-        version.value = await response.json();
+       //  const response = await fetch('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
+       //   headers: {
+       //     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+       //   }
+       // });
+       //  version.value = await response.json();
         const pElement = document.querySelector('.vp-hero-title');
 
         if (pElement) {
             var versionSpan = document.createElement('span');
             versionSpan.className = 'version-badge';
-            versionSpan.textContent = version.value.name;
+            // versionSpan.textContent = version.value.name;
+            versionSpan.textContent = "v1.3.4";
 
             pElement.appendChild(versionSpan);
         }
