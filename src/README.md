@@ -97,46 +97,22 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
-
 ---
 
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
-    <div class="com-box com-box-you table-show-pj">
-        <SiteInfo
-            name="hh-vue"
-            width="calc(30% - 16px)"
-            desc="官方集成案例：springboot2+vue2"
-            url="http://www.hhzai.top/"
-            logo="http://localhost:8081/logo.png"
-            repo="https://gitee.com/min290/hh-vue"
-            preview="/warm-flow.png"
-        />
-        <SiteInfo
-            name="seaflow"
-            desc="seaflow 是一款 开源仿钉钉工作流 平台， 前端使用 vue3+element plus ， 实现 流程设计和审批功能， 后端基于国产工作流warm-flow 实现流程控制， 大大缩短了学习成本"
-            url="http://124.222.180.108:8999/"
-            logo="https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png"
-            repo="https://gitee.com/qq75547276/seaflow"
-            preview="https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png"
-        />
-        <SiteInfo
-            name="Ruoyi-Cloud"
-            desc="基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3 "
-            url="http://www.hhzai.top/"
-            logo="http://localhost:8081/logo.png"
-            repo="/master/introduction/projectexample.md"
-            preview="/warm-flow.png"
-        />
-        <SiteInfo
-            name="RuoYi-Vue3"
-            desc="官方集成案例:vue3前端"
-            url="http://www.hhzai.top/"
-            logo="http://localhost:8081/logo.png"
-            repo="https://gitee.com/min290/RuoYi-Vue3"
-            preview="/warm-flow.png"
-        />
-    </div>
+    <div class="feature-box s-case-box">
+		<div class="s-case" v-for="item in kyProjectList" :key="item.href">
+			<a :href="item.href" target="_blank" class="s-case-link">
+				<img class="lazy" :data-original="item.src" :src="item.src" style="">
+			</a>
+            <div class="s-case-h3">
+                <h3 class="s-case-title">{{ item.title }}</h3>
+			    <span class="s-author"> {{ item.author }} </span>
+            </div>
+			<p class="s-case-intro">{{ item.intro }}</p>
+		</div>
+	</div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
@@ -197,6 +173,7 @@ export default {
     const links = ref();
     const version = ref('');
     const qyProjectList = ref([]);
+    const kyProjectList = ref([]);
     const dromaraList = ref([]);
 
     const fetchData = async () => {
@@ -218,6 +195,13 @@ export default {
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
         { href: "", title: "半月无霜", src: "http://localhost:8081/logo.png" },
         { href: "", title: "图灵谷", src: "http://localhost:8081/logo.png" }
+        ];
+
+      kyProjectList.value = [
+        { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华", intro: "官方集成案例：springboot2+vue2" },
+        { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seaflow", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
+        { href: "/master/introduction/projectexample.md", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
+        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华", intro: "官方集成案例:vue3前端" },
         ];
 
       dromaraList.value = [
@@ -363,6 +347,7 @@ export default {
       links,
       version,
       qyProjectList,
+      kyProjectList,
       dromaraList,
     };
   },
@@ -370,96 +355,148 @@ export default {
 </script>
 
 <style>
-  .com-box {
+.com-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+  justify-content: flex-start;
+}
+.com-box-f {
+    padding: 1em 1em;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.com-box-you a {
+    flex: 0 0 14.5%;
+    line-height: 60px;
+    height: 60px;
+    margin: 10px;
+}
+.table-show-pj a img {
+  min-width: 60%;
+  max-width: 80%;
+  vertical-align: middle;
+  max-height: 100%;
+  transition: transform 0.2s !important;
+}
+.table-show-pj a {
+  border-width: 0 1px 1px 0px;
+}
+.table-show-pj a {
+  flex: 0 0 16.5%;
+  border: 1px #d5d5d5 solid;
+  margin: 0;
+  padding: 7px 0;
+  overflow: hidden;
+}
+.com-box a {
+    display: block;
+    flex: 1 0 14.5%;
+    margin: 0px;
+    cursor: pointer;
+}   
+
+.vp-feature-item:hover {
+  background-color: var(--bg-color-secondary);
+  box-shadow: 0 2px 12px 0 var(--card-shadow);
+  transform: translate(-2px, -2px);
+  transform: scale(1.05);
+}
+.links {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 50px;
-    justify-content: flex-start;
-  }
-  .com-box-f {
-      padding: 1em 1em;
-      padding-bottom: 30px;
-      text-align: center;
-  }
-  .com-box-you a {
-      flex: 0 0 14.5%;
-      line-height: 60px;
-      height: 60px;
-      margin: 10px;
-  }
-  .table-show-pj a img {
-    min-width: 60%;
-    max-width: 80%;
-    vertical-align: middle;
-    max-height: 100%;
-    transition: transform 0.2s !important;
-  }
-  .table-show-pj a {
-    border-width: 0 1px 1px 0px;
-  }
-  .table-show-pj a {
-    flex: 0 0 16.5%;
-    border: 1px #d5d5d5 solid;
-    margin: 0;
-    padding: 7px 0;
-    overflow: hidden;
-  }
-  .com-box a {
-      display: block;
-      flex: 1 0 14.5%;
-      margin: 0px;
-      cursor: pointer;
-  }   
+}
 
-  .vp-feature-item:hover {
-    background-color: var(--bg-color-secondary);
-    box-shadow: 0 2px 12px 0 var(--card-shadow);
-    transform: translate(-2px, -2px);
-    transform: scale(1.05);
-  }
-    .links {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .links a {
-        padding: 10px;
-    }
-
-    .links a img {
-        width: 200px !important;
-        height: 200px !important;
-    }
-    .vp-feature-item:hover {
-    background-color: var(--bg-color-secondary);
-    box-shadow: 0 2px 12px 0 var(--card-shadow);
-    transform: translate(-2px, -2px);
-    transform: scale(1.05);
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .links a {
+.links a {
     padding: 10px;
-  }
+}
 
-  .links a img {
+.links a img {
     width: 200px !important;
     height: 200px !important;
-  }
+}
+  .vp-feature-item:hover {
+  background-color: var(--bg-color-secondary);
+  box-shadow: 0 2px 12px 0 var(--card-shadow);
+  transform: translate(-2px, -2px);
+  transform: scale(1.05);
+}
 
-  .version-badge {
-    padding: 4px 8px; /* 内边距 */
-    font-size: 20px; /* 字体大小 */
-    border-radius: 4px; /* 圆角 */
-    margin: 4px; /* 外边距 */
-  }
-  .vp-site-info {
-    width: calc(31%);
-  }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links a {
+  padding: 10px;
+}
+
+.links a img {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.version-badge {
+  padding: 4px 8px; /* 内边距 */
+  font-size: 20px; /* 字体大小 */
+  border-radius: 4px; /* 圆角 */
+  margin: 4px; /* 外边距 */
+}
+.vp-site-info {
+  width: calc(31%);
+}
+
+.s-case-box {
+    justify-content: space-between;
+}
+.feature-box {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.s-case {
+    position: relative;
+    transition: all 0.2s;
+    background-color: #FFF;
+    border: 1px #e5e5e5 solid;
+    flex: 0 0 31.5%;
+    margin-top: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+    overflow: hidden;
+}
+.s-case-title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  font-family: "microsoft yahei";
+}
+
+.s-case-title, .s-case-intro {
+    padding: 0 16px;
+}
+.s-case-link {
+    display: block;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.s-author {
+    padding: 0 5px;
+    font-size: 12px;
+    transform: translate(0, -25px);
+    color: #ff5722;
+    border: 1px #ff5722 solid;
+    position: absolute;
+    right: 20px;
+    display: inline-block;
+}
 
 </style>
