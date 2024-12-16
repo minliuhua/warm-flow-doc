@@ -107,7 +107,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 				<img class="lazy" :data-original="item.src" :src="item.src" style="">
 			</a>
       <div class="s-case-h3">
-        <span class="s-case-title">{{ item.title }}</span>
+        <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
         <span class="s-author"> {{ item.author }} </span>
       </div>
 			<p class="s-case-intro">{{ item.intro }}</p>
@@ -200,10 +200,10 @@ export default {
         ];
 
       kyProjectList.value = [
-        { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华", intro: "官方集成案例：springboot2+vue2" },
-        { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seaflow", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
+        { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
+        { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seven", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
         { href: "/master/introduction/projectexample.md", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
-        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华", intro: "官方集成案例:vue3前端" },
+        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例:vue3前端" },
         ];
 
       dromaraList.value = [
@@ -263,7 +263,7 @@ export default {
         {title: "基于easyAi引擎的JAVA高性能，低成本，轻量级智能客服。", href: "https://gitee.com/dromara/sayOrder", src: "https://oss.dev33.cn/sa-token/link/sayorder.png"},
         {title: "扩展MyBatis JPA支持，简化CUID操作，增强SELECT分页查询", href: "https://gitee.com/dromara/mybatis-jpa-extra", src: "https://oss.dev33.cn/sa-token/link/mybatis-jpa-extra.png"},
         {title: "现代化的动画引擎", href: "https://newcar.js.org/zh/", src: "https://oss.dev33.cn/sa-token/link/newcar.png"},
-        {title: "国产自研工作流，其特点简洁(只有6张表)但又不简单，五脏俱全，组件独立，可扩展，可满足中小项目的组件。", href: "http://warm-flow.cn", src: "https://oss.dev33.cn/sa-token/link/warm-flow.png", style: "max-width: 110%"},
+        {title: "Dromara Warm-Flow国产工作流引擎🎉，简洁轻量，五脏俱全，可扩展，可通过jar引入设计器。解决flowable和activities复杂、学习成本高和集成难等痛点。", href: "http://warm-flow.cn", src: "https://oss.dev33.cn/sa-token/link/warm-flow.png", style: "max-width: 110%"},
         {title: "DyJava是一款功能强大的抖音Java开发工具包", href: "https://gitee.com/dromara/dy-java", src: "https://oss.dev33.cn/sa-token/link/dy-java.png"},
         {title: "MilvusPlus（简称 MP）是一个 Milvus 的操作工具，旨在简化与 Milvus 向量数据库的交互，为开发者提供类似 MyBatis-Plus 注解和方法调用风格的直观 API,提高效率而生。", href: "https://gitee.com/dromara/MilvusPlus", src: "https://oss.dev33.cn/sa-token/link/MilvusPlus-logo.png"},
         {title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin", href: "http://www.easy-query.com/easy-query-doc/", src: "https://oss.dev33.cn/sa-token/link/easy-query.png"},
