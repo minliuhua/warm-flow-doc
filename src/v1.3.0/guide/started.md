@@ -14,10 +14,12 @@
 - 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
 
 <table>
-    <tr>
+    <tbody>
+        <tr>
         <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
         <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
     </tr>
+    </tbody>
 </table>
 
 ## 2、官网流程定义案例xml
@@ -29,7 +31,7 @@
 ### 3.1、mybatis
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
@@ -39,7 +41,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
@@ -50,7 +52,7 @@ solon项目
 ### 3.2、mybatis-plus
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
@@ -60,7 +62,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -79,7 +81,7 @@ warm-flow:
 
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
@@ -89,7 +91,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
@@ -100,7 +102,7 @@ solon项目
 ### 3.4、mybatis-flex
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
@@ -110,7 +112,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
@@ -121,7 +123,7 @@ solon项目
 ### 3.5、easy-query
 springboot项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
@@ -131,7 +133,7 @@ springboot项目
 
 solon项目
 
-```maven
+```xml
 <dependency>
       <groupId>io.github.minliuhua</groupId>
       <artifactId>warm-flow-easy-query-solon-plugin</artifactId>

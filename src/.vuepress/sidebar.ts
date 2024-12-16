@@ -1,24 +1,139 @@
 import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
-    "/master/guide/": [
+    "/master/": [
+        {
+            text: "🤞 开始",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "introduction/introduction.md",
+                "introduction/processdemo.md",
+                "introduction/getinvolved.md",
+                "introduction/companyintegration.md",
+                "introduction/projectexample.md",
+                "introduction/support.md",
+            ],
+        },
+        {
+            text: "🎃 初级篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "primary/started.md",
+                'primary/table.md',
+                'primary/config.md',
+                'primary/api.md',
+                'primary/datafillhandler.md',
+                'primary/variable.md',
+                'primary/condition.md',
+                'primary/handler_change.md',
+                'primary/collaboration.md',
+                'primary/processterm.md',
+                'primary/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "🎈 进阶篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'advanced/permission_handler.md',
+                'advanced/variableStategy.md',
+                'advanced/listener.md',
+                'advanced/ormusagetips.md',
+                'advanced/logicdelete.md',
+                'advanced/tenant.md',
+            ],
+        },
+        {
+            text: "🏆 提高篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'enhance/designer_two_open.md',
+                'enhance/customstatus.md',
+                'enhance/condition_two_open',
+                'enhance/variableStatey_two_open',
+                'enhance/listener_two_open',
+                'enhance/form.md',
+                'enhance/jsonlib.md',
+            ],
+        },
+        {
+            text: "🚸 其他",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'other/team.md',
+                'other/troubleshooting.md',
+                'other/update',
+                'other/news',
+                'other/paidservice',
+            ],
+        }
+    ],
+    "/v1.3.4/guide/": [
+        {
+            text: "初级篇",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.3.4/guide/started.md',
+                '/v1.3.4/guide/table.md',
+                '/v1.3.4/guide/config.md',
+                '/v1.3.4/guide/api.md',
+                '/v1.3.4/guide/datafillhandler.md',
+                '/v1.3.4/guide/variable.md',
+                '/v1.3.4/guide/condition.md',
+                '/v1.3.4/guide/processterm.md',
+            ],
+        },
+        {
+            text: "进阶篇",
+            icon: "bulb",
+            collapsible: false,
+            children: [
+                '/v1.3.4/guide/permission_handler.md',
+                '/v1.3.4/guide/variableStategy.md',
+                '/v1.3.4/guide/listener.md',
+                '/v1.3.4/guide/ormusagetips.md',
+                '/v1.3.4/guide/logicdelete.md',
+                '/v1.3.4/guide/tenant.md',
+                '/v1.3.4/guide/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "提高篇",
+            icon: "/icons/advanced.svg",
+            collapsible: false,
+            children: [
+                '/v1.3.4/guide/designer_two_open.md',
+                '/v1.3.4/guide/customstatus.md',
+                '/v1.3.4/guide/expression_ex.md',
+                '/v1.3.4/guide/form.md',
+                '/v1.3.4/guide/jsonlib.md',
+            ],
+        }
+    ],
+    "/v1.3.3/guide/": [
         {
             text: "基础部分",
             icon: "bulb",
             collapsible: false,
             children: [
-                '/master/guide/started.md',
-                '/master/guide/processterm.md',
-                '/master/guide/processrule.md',
-                '/master/guide/processdemo.md',
-                '/master/guide/table.md',
-                '/master/guide/config.md',
-                '/master/guide/api.md',
-                '/master/guide/datafillhandler.md',
-                '/master/guide/variable.md',
-                '/master/guide/variableStategy.md',
-                '/master/guide/ormusagetips.md',
-                '/master/guide/designerIntroduced.md',
+                '/v1.3.3/guide/started.md',
+                '/v1.3.3/guide/processterm.md',
+                '/v1.3.3/guide/processrule.md',
+                '/v1.3.3/guide/processdemo.md',
+                '/v1.3.3/guide/table.md',
+                '/v1.3.3/guide/config.md',
+                '/v1.3.3/guide/api.md',
+                '/v1.3.3/guide/datafillhandler.md',
+                '/v1.3.3/guide/variable.md',
+                '/v1.3.3/guide/variableStategy.md',
+                '/v1.3.3/guide/ormusagetips.md',
+                '/v1.3.3/guide/designerIntroduced.md',
             ],
         },
         {
@@ -26,67 +141,15 @@ export default sidebar({
             icon: "/icons/advanced.svg",
             collapsible: false,
             children: [
-                '/master/guide/listener.md',
-                '/master/guide/logicdelete.md',
-                '/master/guide/tenant.md',
-                '/master/guide/form.md',
-                '/master/guide/customstatus.md',
-                '/master/guide/expression.md',
-                '/master/guide/jsonlib.md',
+                '/v1.3.3/guide/listener.md',
+                '/v1.3.3/guide/logicdelete.md',
+                '/v1.3.3/guide/tenant.md',
+                '/v1.3.3/guide/form.md',
+                '/v1.3.3/guide/customstatus.md',
+                '/v1.3.3/guide/expression.md',
+                '/v1.3.3/guide/jsonlib.md',
             ],
         }
-    ],
-    "/common/": [
-        {
-            text: "工作流介绍",
-            collapsible: false,
-            children: [
-                '/common/introduction.md',
-                '/common/member.md',
-                '/common/pr.md',
-                '/common/dromara.md',
-                '/common/joingroup.md',
-                '/common/paidservice.md',
-            ],
-        },
-        {
-            text: "集成项目示例",
-            collapsible: false,
-            link: '/common/projectexample.md',
-        },
-        {
-            text: "使用者登记",
-            collapsible: false,
-            link: '/common/companyintegration.md',
-        },
-        {
-            text: "如何贡献",
-            collapsible: false,
-            children: [
-                '/common/getinvolved.md',
-                '/common/submitpr.md',
-            ],
-        },
-        {
-            text: "学习资料",
-            collapsible: false,
-            link: '/common/learningmaterials.md',
-        },
-        {
-            text: "常见问题",
-            collapsible: false,
-            link: '/common/troubleshooting.md',
-        },
-        {
-            text: "更新日志",
-            collapsible: false,
-            link: '/common/update.md',
-        },
-        {
-            text: "捐赠",
-            collapsible: false,
-            link: '/common/support.md',
-        },
     ],
     "/v1.3.1/guide/": [
         {

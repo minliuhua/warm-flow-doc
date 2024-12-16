@@ -30,12 +30,6 @@
   }
 }
 
-.theme-container {
-  .vp-page {
-    padding-top: calc(var(--navbar-height) + 20px);
-  }
-}
-
 .vp-sidebar > .vp-sidebar-links {
   padding: 8px 0 2.8rem 0;
 }
@@ -60,4 +54,28 @@
 
 .external-link-icon .theme-hope-content a[href*="://"]:not(.no-external-link-icon)::after, .external-link-icon .theme-hope-content a[target=_blank]:not(.no-external-link-icon)::after {
   display: none;
+}
+
+/* 设置透明边框，可以调整最后一个值来改变透明度 */
+.no-border {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.link-style {
+  cursor: pointer;
+  line-height: 33px;
+}
+
+/* 悬浮时的颜色 */
+.link-style:hover {
+  color: red;
+}
+
+.vp-notice-wrapper {
+  width: 450px;
+  height: 250px;
+}
+
+.vp-sidebar-links {
+  font-size: 15px
 }

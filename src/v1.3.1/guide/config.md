@@ -74,9 +74,9 @@ warm-flow:
   # 是否显示banner图，默认是
   banner: true
   # # 填充器，内部有默认实现，如果不满足实际业务，可通过此配置自定义实现
-  #  data-fill-handler-path: com.warm.flow.core.test.handle.CustomDataFillHandler
+  #  data-fill-handler-path: org.dromara.warm.flow.core.test.handle.CustomDataFillHandler
   # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
-  #  tenant_handler_path: com.warm.flow.core.test.handle.CustomTenantHandler
+  #  tenant_handler_path: org.dromara.warm.flow.core.test.handle.CustomTenantHandler
   # 是否开启逻辑删除（orm框架本身不支持逻辑删除，可通过这种方式开启，比如jpa）
   logic_delete: false
   # 逻辑删除字段值（开启后默认为2）
