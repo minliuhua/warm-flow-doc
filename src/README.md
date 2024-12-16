@@ -7,7 +7,7 @@ heroFullScreen: true
 breadcrumbExclude: true
 heroText: Warm-Flow工作流 
 tagline:
-  国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!  
+  Dromara Warm-Flow国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!  
 actions:
 - text: GitHub
   link: https://github.com/dromara/warm-flow.git
@@ -325,12 +325,12 @@ export default {
         if (index < text.length) {
             element.textContent += text.charAt(index);
             index++;
-            setTimeout(typeWriter, 150);
+            setTimeout(typeWriter, 60);
         } else {
             setTimeout(() => {
                 index = 0;
                 element.textContent = '';
-                setTimeout(typeWriter, 150);
+                setTimeout(typeWriter, 60);
             }, 3000);
             
         }

@@ -75,7 +75,7 @@ export default {
         },
         {
             "type": "news",
-            "title": "solon集成Warm-Flow", 
+            "title": "solon集成Dromara Warm-Flow", 
             "url": "./news/news/5.md",
             "pushTime": "2024-12-04"
         },
@@ -97,7 +97,7 @@ export default {
             "pushTime": "2024-02-22"
         }, {
             "type": "experience",
-            "title": "Warm-Flow工作流引擎数据库主键自增策略实现", 
+            "title": "Dromara Warm-Flow工作流引擎数据库主键自增策略实现", 
             "url": "https://juejin.cn/post/7402110528298074152",
             "pushTime": "2024-02-22"
         },
