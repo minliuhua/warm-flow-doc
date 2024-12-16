@@ -1,30 +1,10 @@
 # 新闻公告
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
-    <input 
-        type="text" 
-        v-model="searchQuery" 
-        @input="filterByTitle" 
-        placeholder="搜索标题" 
-        style="justify-content: flex-start; margin-right: 10px; padding: 5px; border: 1px solid #1890ff; border-radius: 4px;"
-    />
-    <ul id="tabs" style="list-style-type: none; padding: 0; margin: 0; font-size: 15px;">
-        <li 
-            class="tab" 
-            :class="{ active: getSelected('') }" 
-            @click="filterSelect('')"
-        >
-            全部
-        </li>
-        <li 
-            class="tab" 
-            v-for="(nt, index) in getType()" 
-            :key="nt.key" 
-            :class="{ active: getSelected(nt.key) }" 
-            @click="filterSelect(nt.key)"
-        >
-            {{ nt.value }}
-        </li>
-    </ul>
+    <el-input v-model="searchQuery" class="Input" placeholder="搜索标题" @input="filterByTitle" clearable />
+    <el-tabs type="border-card" class="Tabs" v-model="activeTab" @tab-change="filterSelect(activeTab)">
+      <el-tab-pane label="全部" name=""></el-tab-pane>
+      <el-tab-pane v-for="(nt, index) in getType()" :key="nt.key" :label="nt.value" :name="nt.key"></el-tab-pane>
+    </el-tabs>
 </div>
 
 <table class="no-border" style="width: 100%; border-collapse: collapse; ">
@@ -55,6 +35,7 @@ export default {
     const newsType = ref( []);
     const selectedType = ref('');
     const searchQuery = ref('');
+    const activeTab = ref('');
  
     const fetchData = async () => {
     newsType.value = [
@@ -147,7 +128,7 @@ export default {
       } else {
         fetchData();
       }
-      filterByTitle();
+      if (searchQuery.value) filterByTitle();
     };
 
     const getSelected = (type) => {
@@ -165,6 +146,7 @@ export default {
     };
 
     return {
+      activeTab,
       allList,
       filterList,
       newsType,
@@ -182,21 +164,15 @@ export default {
 };
 </script>
 
-<style> 
-
-.tab {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    background-color: #f1f1f1;
+<style>
+.Input {
+  width: 180px;
+  margin-right: 10px;
 }
-
-.tab.active {
-    background-color: white;
-    border-top: 2px solid blue; /* 激活页签的颜色 */
-    color: red;
+.Tabs .el-tabs__content {
+  display: none;
 }
-
+.Tabs .el-tabs__header {
+  border-bottom: 0;
+}
 </style>
