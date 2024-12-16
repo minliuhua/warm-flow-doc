@@ -19,6 +19,7 @@
   "dependencies": {
     "@vuepress/plugin-shiki": "^2.0.0-rc.39",
     "axios": "^1.7.4",
+    "element-plus": "^2.9.1",
     "flowchart.ts": "^3.0.0",
     "katex": "^0.16.11",
     "mermaid": "^10.9.1",

@@ -106,10 +106,10 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 			<a :href="item.href" target="_blank" class="s-case-link">
 				<img class="lazy" :data-original="item.src" :src="item.src" style="">
 			</a>
-            <div class="s-case-h3">
-                <h3 class="s-case-title">{{ item.title }}</h3>
-			    <span class="s-author"> {{ item.author }} </span>
-            </div>
+      <div class="s-case-h3">
+        <span class="s-case-title">{{ item.title }}</span>
+        <span class="s-author"> {{ item.author }} </span>
+      </div>
 			<p class="s-case-intro">{{ item.intro }}</p>
 		</div>
 	</div>
@@ -144,7 +144,9 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     <br><strong style="font-size: 30px;">Dromara 成员项目</strong><br><br><br>
     <div class="com-box com-box-you table-show-pj">
     	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
-    		<img class="lazy" :title="item.title" :src="item.src" :style="item.style">
+        <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
+    		  <img class="lazy" :src="item.src" :style="item.style">
+        </el-tooltip>
     	</a>
     </div>
     <div style="height: 10px; clear: both;"></div>
@@ -373,6 +375,11 @@ export default {
     height: 60px;
     margin: 10px;
 }
+.imgTip {
+  padding: 10px;
+  font-size: 14px;
+  max-width: 300px;
+}
 .table-show-pj a img {
   min-width: 60%;
   max-width: 80%;
@@ -466,37 +473,42 @@ export default {
     margin-top: 30px;
     text-align: left;
     box-sizing: border-box;
-    padding-bottom: 16px;
     overflow: hidden;
 }
+.s-case-h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 16px;
+}
 .s-case-title {
-  margin-top: 20px;
   font-size: 18px;
   font-weight: 400;
   color: #333;
   font-family: "microsoft yahei";
 }
 
-.s-case-title, .s-case-intro {
+.s-case-intro {
     padding: 0 16px;
+    word-break: break-all;
+    color: #777;
 }
 .s-case-link {
     display: block;
     width: 100%;
-    height: 0px;
-    padding-bottom: 50%;
     position: relative;
     overflow: hidden;
+    img {
+      height: 190px;
+      object-fit: cover;
+      width: 100%;
+    }
 }
 .s-author {
     padding: 0 5px;
-    font-size: 12px;
-    transform: translate(0, -25px);
+    font-size: 14px;
+    line-height: 24px;
     color: #ff5722;
     border: 1px #ff5722 solid;
-    position: absolute;
-    right: 20px;
-    display: inline-block;
 }
-
 </style>
