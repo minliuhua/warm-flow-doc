@@ -2,7 +2,7 @@ version: '1.0'
 name: pipeline-20241204
 displayName: deploy
 triggers:
-  trigger: auto
+  trigger: manual
   push:
     branches:
       precise:
@@ -12,8 +12,7 @@ stages:
     displayName: build
     strategy: naturally
     trigger: auto
-    executor:
-      - min290
+    executor: []
     steps:
       - step: build@nodejs
         name: build_nodejs
@@ -39,8 +38,7 @@ stages:
     displayName: deploy
     strategy: naturally
     trigger: auto
-    executor:
-      - min290
+    executor: []
     steps:
       - step: deploy@agent
         name: deploy_agent
@@ -66,4 +64,3 @@ stages:
         notify: []
         strategy:
           retry: '0'
-strategy: {}
