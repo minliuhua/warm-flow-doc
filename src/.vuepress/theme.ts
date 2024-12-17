@@ -6,7 +6,7 @@ export default hopeTheme(
     {
         hostname: "https://gitee.com/warm_4/warm-flow-doc",
         author: {
-            name: "Warm-Flow工作流",
+            name: "Dromara Warm-Flow工作流",
             url: "https://gitee.com/warm_4/warm-flow-doc",
         },
         iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
@@ -32,23 +32,60 @@ export default hopeTheme(
                 components: [
                     "BiliBili",
                     "VPCard",
+                    "SiteInfo",
                 ],
+            },
+            comment: {
+                provider: "Giscus",
+                repo: "dromara/warm-flow",
+                repoId: "R_kgDOK_2R_w",
+                category: "Announcements",
+                categoryId: "DIC_kwDOK_2R_84ClNey",
             },
             notice: [
                 {
                     path: "/",
-                    title: "Warm-Flow工作流",
+                    title: "请务必阅读",
                     content:
-                        "简洁轻量，五脏俱全，可扩展，可通过jar引入设计器的工作流。\r\n" +
-                        "希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力",
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
+                        '       ⭐️ Star ：一键三连，你的Star是我持续开发的动力' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
+                        '       ❓ 疑问 :    先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.md\'" class="link-style">' +
+                        '       📖使用文档：集成前先快速浏览，大概知道有功能和注意事项' +
+                        '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                            '     <span onclick="window.location.href=\'/common/news.md\'" class="link-style">' +
+                        '      🌟升级指南：如发布新版本，请查看' +
+                        '     </span>\n' +
+                        '</div>',
                     actions: [
                         {
-                            text: "⭐️Star⭐️",
+                            text: "⭐️star⭐️",
                             link: "https://gitee.com/dromara/warm-flow/stargazers",
+                            type: "primary",
+                        },
+                        {
+                            text: "👉issue👈",
+                            link: "https://gitee.com/dromara/warm-flow/issues",
+                            type: "primary",
+                        },
+                        {
+                            text: "❓常见问题❓",
+                            link: "/common/troubleshooting.html",
                             type: "primary",
                         },
                         { text: "取消" },
                     ],
+                    showOnce: false,
                     fullscreen: true,
                     confirm: true
                 },
@@ -97,3 +134,4 @@ export default hopeTheme(
     },
     { custom: true }
 );
+

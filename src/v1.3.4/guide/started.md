@@ -15,10 +15,12 @@
 - 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
 
 <table>
-    <tr>
+    <tbody>
+        <tr>
         <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
         <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
     </tr>
+    </tbody>
 </table>
 
 ## 2、官网流程定义案例xml

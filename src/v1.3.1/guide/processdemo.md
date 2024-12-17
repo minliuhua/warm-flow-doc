@@ -6,7 +6,8 @@
 ## 演示图
 
 <table>
-    <tr>
+    <tbody>
+        <tr>
         <td><img src="https://foruda.gitee.com/images/1697704379975758657/558474f6_2218307.png"/></td>
         <td><img src="https://foruda.gitee.com/images/1703576997421577844/a1dc2737_2218307.png"/></td>
     </tr>
@@ -46,6 +47,7 @@
         <td><img src="../../.vuepress/public/demo3.png"/></td>
         <td><img src="../../.vuepress/public/demo1.png"/></td>
     </tr>
+    </tbody>
 </table>
 
 

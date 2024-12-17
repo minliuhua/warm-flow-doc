@@ -3,12 +3,24 @@ import {sidebar} from "vuepress-theme-hope";
 export default sidebar({
     "/master/": [
         {
-            text: "初级篇",
-            icon: "bulb",
-            ariaLabel: 1232,
-            collapsible: false,
+            text: "🤞 开始",
+            collapsible: true,
+            expanded: true,
             children: [
-                'primary/started.md',
+                "introduction/introduction.md",
+                "introduction/processdemo.md",
+                "introduction/getinvolved.md",
+                "introduction/companyintegration.md",
+                "introduction/projectexample.md",
+                "introduction/support.md",
+            ],
+        },
+        {
+            text: "🎃 初级篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "primary/started.md",
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -18,12 +30,13 @@ export default sidebar({
                 'primary/handler_change.md',
                 'primary/collaboration.md',
                 'primary/processterm.md',
+                'primary/designerIntroduced.md',
             ],
         },
         {
-            text: "进阶篇",
-            icon: "bulb",
-            collapsible: false,
+            text: "🎈 进阶篇",
+            collapsible: true,
+            expanded: true,
             children: [
                 'advanced/permission_handler.md',
                 'advanced/variableStategy.md',
@@ -31,13 +44,12 @@ export default sidebar({
                 'advanced/ormusagetips.md',
                 'advanced/logicdelete.md',
                 'advanced/tenant.md',
-                'advanced/designerIntroduced.md',
             ],
         },
         {
-            text: "提高篇",
-            icon: "/icons/advanced.svg",
-            collapsible: false,
+            text: "🏆 提高篇",
+            collapsible: true,
+            expanded: true,
             children: [
                 'enhance/designer_two_open.md',
                 'enhance/customstatus.md',
@@ -47,49 +59,19 @@ export default sidebar({
                 'enhance/form.md',
                 'enhance/jsonlib.md',
             ],
+        },
+        {
+            text: "🚸 其他",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'other/team.md',
+                'other/troubleshooting.md',
+                'other/update',
+                'other/news',
+                'other/paidservice',
+            ],
         }
-    ],
-    "/common/": [
-        {
-            text: "😁 介绍",
-            link: "introduction.md",
-        },
-        {
-            text: "👉 功能演示",
-            link: "processdemo.md",
-        },
-        {
-            text: "🖲 加入群聊",
-            link: "joingroup.md",
-        },
-        {
-            text: "🥷 公司使用列表",
-            link: "companyintegration.md",
-        },
-        {
-            text: "🚸 集成项目示例",
-            link: "projectexample.md",
-        },
-        {
-            text: "🍚 有偿服务",
-            link: "paidservice.md",
-        },
-        {
-            text: "✍️ 如何贡献",
-            link: "getinvolved.md",
-        },
-        {
-            text: "㊙️ 学习资料",
-            link: "learningmaterials.md",
-        },
-        {
-            text: "㊗️ Dromara成员项目",
-            link: "dromara.md",
-        },
-        {
-            text: "🤞 捐赠",
-            link: "support.md",
-        },
     ],
     "/v1.3.4/guide/": [
         {

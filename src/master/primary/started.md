@@ -15,10 +15,12 @@
 - 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
 
 <table>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
-        <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
-    </tr>
+    <tbody>
+        <tr>
+            <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
+            <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
+        </tr>
+    </tbody>
 </table>
 
 
@@ -35,7 +37,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -45,7 +47,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -55,7 +57,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -66,7 +68,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -76,7 +78,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -86,7 +88,7 @@
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -105,7 +107,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -115,7 +117,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -126,7 +128,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -136,7 +138,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -146,7 +148,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -157,7 +159,7 @@ warm-flow:
 <dependency>
       <groupId>org.dromara.warm</groupId>
       <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -177,7 +179,7 @@ warm-flow:
               <artifactId>solon.logging</artifactId>
           </exclusion>
       </exclusions>
-      <version>1.3.4</version>
+      <version>最新版本</version>
 </dependency>
 ```
 
@@ -245,4 +247,4 @@ public void skipFlow() throws Exception {
 [项目地址](../../common/projectexample.md)
 
 ### 6.2、推荐学习视频
-[新手教学视频，社区同学录制](https://www.bilibili.com/video/BV1Ci42117pK/)
+<BiliBili bvid="BV1Ci42117pK" />
