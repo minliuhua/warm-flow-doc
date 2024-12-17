@@ -73,6 +73,78 @@ export default sidebar({
             ],
         }
     ],
+    "/v1.3.5/": [
+        {
+            text: "🤞 开始",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "introduction/introduction.md",
+                "introduction/processdemo.md",
+                "introduction/getinvolved.md",
+                "introduction/companyintegration.md",
+                "introduction/projectexample.md",
+                "introduction/support.md",
+            ],
+        },
+        {
+            text: "🎃 初级篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "primary/started.md",
+                'primary/table.md',
+                'primary/config.md',
+                'primary/api.md',
+                'primary/datafillhandler.md',
+                'primary/variable.md',
+                'primary/condition.md',
+                'primary/handler_change.md',
+                'primary/collaboration.md',
+                'primary/processterm.md',
+                'primary/designerIntroduced.md',
+            ],
+        },
+        {
+            text: "🎈 进阶篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'advanced/permission_handler.md',
+                'advanced/variableStategy.md',
+                'advanced/listener.md',
+                'advanced/ormusagetips.md',
+                'advanced/logicdelete.md',
+                'advanced/tenant.md',
+            ],
+        },
+        {
+            text: "🏆 提高篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'enhance/designer_two_open.md',
+                'enhance/customstatus.md',
+                'enhance/condition_two_open',
+                'enhance/variableStatey_two_open',
+                'enhance/listener_two_open',
+                'enhance/form.md',
+                'enhance/jsonlib.md',
+            ],
+        },
+        {
+            text: "🚸 其他",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'other/team.md',
+                'other/troubleshooting.md',
+                'other/update',
+                'other/news',
+                'other/paidservice',
+            ],
+        }
+    ],
     "/v1.3.4/guide/": [
         {
             text: "初级篇",

@@ -30,7 +30,7 @@
 
 - 安装 [NodeJS 18](https://nodejs.org/en/download/)
 - 使用 [GitHub Desktop](https://desktop.github.com/) 或者 Git 命令行来克隆本库 (`git clone`)
-- 在**项目根目录**运行 `npm install` 命令
+- 在**项目根目录**运行 `npm install --registry=https://registry.npmmirror.com` 命令
 
 ### 本地测试
 
