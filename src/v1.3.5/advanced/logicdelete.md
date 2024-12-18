@@ -2,9 +2,43 @@
 
 ## 1、Mybatis-plus
 > [!IMPORTANT]
-> 1、Mybatis-plus只支持自身的逻辑删除方式, 默认开启，目前不支持关闭
+> 1、Mybatis-plus只支持自身的逻辑删除方式, 默认开启。 如若关闭, 需高版本比如3.5.3或者以上
 > 2、默认逻辑未删除值：0，逻辑已删除值：1
 > 3、如需修改默认值，请参考如下配置文件中进行修改  
+
+```java
+/**
+ * 关闭逻辑删除
+ *
+ * @author warm
+ */
+@Component
+public class PlusPostInitTableInfoHandler implements PostInitTableInfoHandler {
+
+    List<String> tableNames = Arrays.asList("flow_definition", "flow_node", "flow_skip", "flow_instance", "flow_task"
+            , "flow_his_task", "flow_user");
+    @Override
+    public void postTableInfo(TableInfo tableInfo, Configuration configuration) {
+        String tableName = tableInfo.getTableName();
+        if (tableNames.contains(tableName)) {
+            Class<?> clazz = tableInfo.getClass();
+            Field[] fields = clazz.getDeclaredFields();
+            try {
+                for (Field field : fields) {
+                    if ("withLogicDelete".equals(field.getName())) {
+                        field.setAccessible(true);
+                        // 关闭逻辑删除
+                        field.set(tableInfo, false);
+                    }
+                }
+            } catch (IllegalAccessException e) {
+                throw new FlowException("反射设置对象值异常");
+            }
+        }
+    }
+}
+
+```
 
 ### 1.1、spring
 ```yml

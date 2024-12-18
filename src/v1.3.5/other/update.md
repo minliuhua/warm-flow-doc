@@ -31,11 +31,12 @@
 
 ### v1.3.5
 
+- [feat] 条件表达式新增默认策略`default|${flag == 5 && flag > 4}`
 - [update] 退回不校验是否办理过
 - [update] 复制流程版本号支持自动递增
 - [update] 节点全部改成节点
 - [refactor] 导入流程方法拆成两个方法，读取is流和导入实体类，insertFlow改为公共方法
-- [refactor] 条件表达式原本太繁琐，进行精简，并且支持表达式组合，比如and、or
+- [refactor] 条件表达式原本太繁琐，进行精简, `@@eq@@|flag@@eq@5` --> `eq|flag|5`
 - [refactor] 任意跳转，改成退回选择目标节点，票签必填，修改字段名称
 
 ## 更新日志

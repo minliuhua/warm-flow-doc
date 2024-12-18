@@ -4,16 +4,17 @@
 
 
 ## 1、内置表达式类型
-- 1、大于: `gt|flag|4`
-- 2、大于等于: `ge|flag|4`
-- 3、等于: `eq|flag|4`
-- 4、不等于： `ne|flag|4`
-- 5、小于: `lt|flag|4`
-- 6、小于等于: `le|flag|4`
-- 7、包含: `like|flag|4`
-- 8、不包含: `notNike|flag|4`
-- 9、SpEL: `#{@user.eval(#flag)}` 
-- 10、自定义表达式
+- 1、默认: `default|${flag == 5 && flag > 4}`
+- 2、SpEL: `#{@user.eval(#flag)}`
+- 3、大于: `gt|flag|4`
+- 4、大于等于: `ge|flag|4`
+- 5、等于: `eq|flag|4`
+- 6、不等于： `ne|flag|4`
+- 7、小于: `lt|flag|4`
+- 8、小于等于: `le|flag|4`
+- 9、包含: `like|flag|4`
+- 10、不包含: `notNike|flag|4`
+- 11、自定义表达式
 
 ## 2、匹配规则
 - 1、常规匹配规则：`xxx|yyy|zzz`，`xxx`为表达式类型，其中`yyy`为变量名，，最后的`zzz`为变量值
