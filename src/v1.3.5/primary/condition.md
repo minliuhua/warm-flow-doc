@@ -5,7 +5,7 @@
 
 ## 1、内置表达式类型
 - 1、默认: `default|${flag == 5 && flag > 4}`
-- 2、SpEL: `#{@user.eval(#flag)}`
+- 2、SpEL: `spel|#{@user.eval(#flag)}`
 - 3、大于: `gt|flag|4`
 - 4、大于等于: `ge|flag|4`
 - 5、等于: `eq|flag|4`

@@ -78,19 +78,6 @@ highlights:
         link: /master/advanced/logicdelete.md
         details: 流程引擎自身维护软删除实现，也可使用对应orm框架的实现方式
 
-  - header: 加入群聊
-    description: 有❓疑问❓先看<a href="http://www.warm-flow.cn/common/troubleshooting.html">常见问题</a>，然后再是提👉 <a href="https://gitee.com/dromara/warm-flow/issues">issue</a> 👈
-    image: /wxqun.jpg
-    bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
-    bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
-    
-    highlights:
-      - title: 微信公众号：warm-flow工作流
-
-      - title: 微信号：warm-houhou
-
-      - title: qq群：778470567
-        
 
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
@@ -154,6 +141,53 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     	为往圣继绝学，一个人或许能走的更快，但一群人会走的更远。
     </p>
 </div>
+
+---
+
+<div class="vp-highlight-wrapper">
+	<div class="vp-highlight-bg light" style="background-image: url(&quot;https://theme-hope-assets.vuejs.press/bg/4-light.svg&quot;);"/>
+	<div class="vp-highlight-bg dark" style="background-image: url(&quot;https://theme-hope-assets.vuejs.press/bg/4-dark.svg&quot;);"/>
+	<div class="vp-highlight">
+		<img class="vp-highlight-image" src="/wxqun.jpg" alt="">
+			<!---->
+			<div class="vp-highlight-info-wrapper">
+				<div class="vp-highlight-info">
+					<h2 class="vp-highlight-header">加入群聊</h2>
+					<p class="vp-highlight-description">有❓疑问❓先看<a href="http://www.warm-flow.cn/common/troubleshooting.html">常见问题</a>，然后再是提👉 <a href="https://gitee.com/dromara/warm-flow/issues">issue</a> 👈</p>
+					<ul class="vp-highlights">
+						<li class="vp-highlight-item-wrapper">
+							<div class="vp-highlight-item">
+								<h3 class="vp-highlight-title">
+									<!---->
+									<span>微信公众号：warm-flow工作流</span>
+								</h3>
+								<!---->
+							</div>
+						</li>
+						<li class="vp-highlight-item-wrapper">
+							<div class="vp-highlight-item">
+								<h3 class="vp-highlight-title">
+									<!---->
+									<span>微信号：warm-houhou</span>
+								</h3>
+								<!---->
+							</div>
+						</li>
+						<li class="vp-highlight-item-wrapper">
+							<div class="vp-highlight-item">
+								<h3 class="vp-highlight-title">
+									<!---->
+									<span>qq群：778470567</span>
+								</h3>
+								<!---->
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 ---
 <div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">

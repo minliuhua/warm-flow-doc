@@ -75,7 +75,7 @@
 :::
 
 
-<img src="https://foruda.gitee.com/images/1732545110982338617/97366444_2218307.png" width="700" />
+<img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="700" />
 <img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" />
 
 ### 2、2跳转线设置
