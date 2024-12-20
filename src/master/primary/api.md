@@ -160,12 +160,20 @@
 
 ## 4、NodeService节点接口
 ### 4.1、获取下一个节点列表
+`previousNodeList(nodeId)`：根据节点id获取下所有的前置节点集合
+- nodeId: 节点id [必传]
+
+`previousNodeList(definitionId, nowNodeCode)`：根据流程定义id和当前节点code获取所有的前置节点集合
+- definitionId: 流程定义id [必传]
+- nowNodeCode: 当前节点code [必传]
+
 `getNextNodeList(definitionId, nowNodeCode, anyNodeCode, skipType, variable)`：根据流程定义和当前节点code获取下一节点,如是网关跳过取下一节点,并行网关返回多个节点
 - definitionId: 流程定义id [必传]
 - nowNodeCode: 当前节点code [必传]
 - skipType: 跳转类型（PASS审批通过 REJECT退回） [必传]
 - anyNodeCode: anyNodeCode不为空，则可跳转anyNodeCode节点（优先级最高） [按需传输]
 - variable: 流程变量,下一个节点是网关需要判断跳转条件,并行网关返回多个节点 [按需传输]
+
 
 ## 5、公共api接口
 ### 5.1、根据id查询

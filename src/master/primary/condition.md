@@ -3,23 +3,24 @@
 > 在执行互斥网关时候，抉择是执行哪个分支，可以通过条件表达式来判断
 
 
-## 1、内置表达式
-- 1、大于: `@@gt@@|flag@@gt@@4`
-- 2、大于等于: `@@ge@@|flag@@ge@@4`
-- 3、等于: `@@eq@@|flag@@eq@@4`
-- 4、不等于： `@@ne@@|flag@@ne@@4`
-- 5、小于: `@@lt@@|flag@@lt@@4`
-- 6、小于等于: `@@le@@|flag@@le@@4`
-- 7、包含: `@@like@@|flag@@like@@4`
-- 8、不包含: `@@notNike@@|flag@@notNike@@4`
-- 9、SpEL: `@@spel@@|#{@user.eval(#flag)}` 
-- 10、自定义表达式
+## 1、内置表达式类型
+- 1、默认: `default|${flag == 5 && flag > 4}`
+- 2、SpEL: `spel|#{@user.eval(#flag)}`
+- 3、大于: `gt|flag|4`
+- 4、大于等于: `ge|flag|4`
+- 5、等于: `eq|flag|4`
+- 6、不等于： `ne|flag|4`
+- 7、小于: `lt|flag|4`
+- 8、小于等于: `le|flag|4`
+- 9、包含: `like|flag|4`
+- 10、不包含: `notNike|flag|4`
+- 11、自定义表达式
 
 ## 2、匹配规则
-- 1、常规匹配规则：`@@xxx@@|yyy@@xxx@@zzz`，`xxx`为表达式策略，其中`yyy`为变量，，最后的`zzz`为变量值
+- 1、常规匹配规则：`xxx|yyy|zzz`，`xxx`为表达式类型，其中`yyy`为变量名，，最后的`zzz`为变量值
 
 - 2、Spring Expression Language（SpEL）: 
-前端配置如`#{@user.eval(#flag)}`表达式，入库前要拼接前缀，方便区分表达式类型，最终为`@@spel@@|#{@user.eval(#flag)}`，`#flag`为变量和以下方法入参命名一致，可不设置入参
+`#{@user.eval(#flag)}`表达式，`#flag`为变量和以下方法入参命名一致，可不设置入参
 
 <img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
 
