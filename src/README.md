@@ -36,7 +36,7 @@ highlights:
         details: 只有7张表，代码量少，可快速上手和集成
 
       - title: 🤏 审批功能
-        link: http://www.warm-flow.cn/master/primary/started.html#_4%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B
+        link: /master/primary/started.html#_4%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B
         details: 支持通过、退回、任意跳转、转办、终止、会签、票签、委派和加减签、互斥和并行网关
 
       - title: 🎐 流程变量
@@ -63,11 +63,11 @@ highlights:
         details: 内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
 
       - title: 🌎 orm框架扩展
-        link: http://www.warm-flow.cn/common/introduction.html#_6%E3%80%81%E6%94%AF%E6%8C%81orm%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B
+        link: /master/introduction/introduction.html#_6%E3%80%81%E6%94%AF%E6%8C%81orm%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B
         details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
 
       - title: 🎬 数据库支持
-        link: http://www.warm-flow.cn/common/introduction.html#_5%E3%80%81%E6%94%AF%E6%8C%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B
+        link: /master/introduction/introduction.html#_5%E3%80%81%E6%94%AF%E6%8C%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B
         details: 目前支持MySQL 、Oracle 和PostgreSQL，后续会继续支持其他数据库或者国产数据库
 
       - title: 🏋 多租户
@@ -141,52 +141,6 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     	为往圣继绝学，一个人或许能走的更快，但一群人会走的更远。
     </p>
 </div>
-
----
-
-<div class="vp-highlight-wrapper">
-	<div class="vp-highlight-bg light" style="background-image: url(&quot;https://theme-hope-assets.vuejs.press/bg/4-light.svg&quot;);"/>
-	<div class="vp-highlight-bg dark" style="background-image: url(&quot;https://theme-hope-assets.vuejs.press/bg/4-dark.svg&quot;);"/>
-	<div class="vp-highlight">
-		<img class="vp-highlight-image" src="/wxqun.jpg" alt="">
-			<!---->
-			<div class="vp-highlight-info-wrapper">
-				<div class="vp-highlight-info">
-					<h2 class="vp-highlight-header">加入群聊</h2>
-					<p class="vp-highlight-description">有❓疑问❓先看<a href="http://www.warm-flow.cn/common/troubleshooting.html">常见问题</a>，然后再是提👉 <a href="https://gitee.com/dromara/warm-flow/issues">issue</a> 👈</p>
-					<ul class="vp-highlights">
-						<li class="vp-highlight-item-wrapper">
-							<div class="vp-highlight-item">
-								<h3 class="vp-highlight-title">
-									<!---->
-									<span>微信公众号：warm-flow工作流</span>
-								</h3>
-								<!---->
-							</div>
-						</li>
-						<li class="vp-highlight-item-wrapper">
-							<div class="vp-highlight-item">
-								<h3 class="vp-highlight-title">
-									<!---->
-									<span>微信号：warm-houhou</span>
-								</h3>
-								<!---->
-							</div>
-						</li>
-						<li class="vp-highlight-item-wrapper">
-							<div class="vp-highlight-item">
-								<h3 class="vp-highlight-title">
-									<!---->
-									<span>qq群：778470567</span>
-								</h3>
-								<!---->
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 ---
@@ -310,18 +264,19 @@ export default {
         {title: "java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。", href: "https://gitee.com/dromara/mica-mqtt", src: "https://oss.dev33.cn/sa-token/link/mica-mqtt.png"},
     ];
     try {
-        const response = await axios.get('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
-           headers: {
-             'Content-Type': 'application/json'
-           }
-         });
-        version.value = response.data;
+        // const response = await axios.get('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
+        //    headers: {
+        //      'Content-Type': 'application/json'
+        //    }
+        //  });
+        // version.value = response.data;
         const pElement = document.querySelector('.vp-hero-title');
 
         if (pElement) {
             const versionSpan = document.createElement('span');
             versionSpan.className = 'version-badge';
-            versionSpan.textContent = version.value.name;
+            // versionSpan.textContent = version.value.name;
+            versionSpan.textContent = 'v1.3.5';
             pElement.appendChild(versionSpan);
         }
       } catch (error) {

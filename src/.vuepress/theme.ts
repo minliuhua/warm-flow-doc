@@ -90,7 +90,7 @@ export default hopeTheme(
                     confirm: true
                 },
             ],
-            searchPro: {},
+            slimsearch: true,
             mdEnhance: {
                 align: true,
                 attrs: true,
@@ -123,13 +123,6 @@ export default hopeTheme(
                 tabs: true,
                 vPre: true,
             },
-            shiki: {
-                // theme: "houston",
-                themes: {
-                    light: "one-light",
-                    dark: "one-dark-pro",
-                },
-            }
         }
     },
     { custom: true }

@@ -64,36 +64,36 @@ export default {
         {
             "type": "upgrade_guide",
             "title": "升级指南", 
-            "url": "/master/other/news/upgrade_guide/4.md",
+            "url": "./news/upgrade_guide/4.html",
             "pushTime": "2024-11-25"
-        },
+        },  
         {
             "type": "experience",
             "title": "WarmFlow工作流动态指定审批人", 
-            "url": "/master/other/news/experience/6.md",
+            "url": "./news/experience/6.html",
             "pushTime": "2024-12-06"
         },
         {
             "type": "news",
             "title": "solon集成Dromara Warm-Flow", 
-            "url": "/master/other/news/news/5.md",
+            "url": "./news/news/5.html",    
             "pushTime": "2024-12-04"
         },
         {
             "type": "news",
             "title": "一个自带流程设计器的工作流引擎", 
-            "url": "/master/other/news/news/3.md",
+            "url": "./news/news/3.html",
             "pushTime": "2024-11-01"
         },
         {
             "type": "news",
             "title": "gitee变成maven私库", 
-            "url": "/master/other/news/news/2.md",
+            "url": "./news/news/2.html",
             "pushTime": "2024-09-29"
         }, {
             "type": "notice",
             "title": "工作流引擎Warm-Flow加入Dromara开源社区", 
-            "url": "/master/other/news/notice/1.md",
+            "url": "./news/notice/1.html",
             "pushTime": "2024-02-22"
         }, {
             "type": "experience",

@@ -30,7 +30,7 @@
 - [feat] 流程定义数据保存支持json格式 @xiarigang
 
 ## 更新日志
-### v1.3.5 2024-12-20  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-3-5-2024-12-20) 
+### v1.3.5 2024-12-20  [升级指南](./news/upgrade_guide/4.html#v1-3-5-2024-12-20) 
 
 - [feat] 新增获取所有前置节点接口
 - [feat] 设计器新增设置驳回指定节点
@@ -43,7 +43,7 @@
 - [refactor] 条件表达式原本太繁琐，进行精简, `@@eq@@|flag@@eq@5` --> `eq|flag|5`
 - [refactor] 任意跳转，改成退回选择目标节点，票签必填，修改字段名称
 
-### v1.3.4 2024-11-25  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-3-4-2024-11-25)
+### v1.3.4 2024-11-25  [升级指南](./news/upgrade_guide/4.html#v1-3-4-2024-11-25)
 
 - [feat] 新增监听器spel表达式，并且支持扩展
 - [feat] 增加全局监听器，针对整个系统，通过接口接入方式
@@ -64,7 +64,7 @@
 - [refactor] 重构条件表达式和办理人变量表达式
 - [remove] 移除权限监听器
 
-### v1.3.3 2024-11-12  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-3-3-2024-11-12)
+### v1.3.3 2024-11-12  [升级指南](./news/upgrade_guide/4.html#v1-3-3-2024-11-12)
 
 - [feat] 新增支持接入业务系统token，支持多token
 - [update] 办理人选择tabs切换
@@ -74,7 +74,7 @@
 - [fix] 修改【Bug】 会签节点委派 @vanlin
 - [fix] 统一修复分页bug
 
-### v1.3.1 2024-11-01  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-3-1-2024-10-23)
+### v1.3.1 2024-11-01  [升级指南](./news/upgrade_guide/4.html#v1-3-1-2024-10-23)
 
 - [feat] 新增boot3+java17支持
 - [feat] 流程设计器新增快捷键支持
@@ -102,7 +102,7 @@
 
 - [fix] 修复mybatis-plus扩展包，配置了其他id策略不生效的问题
 
-### v1.2.8 2024-09-25  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-2-8-2024-09-25)
+### v1.2.8 2024-09-25  [升级指南](./news/upgrade_guide/4.html#v1-2-8-2024-09-25)
 
 - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展
 - [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展
@@ -123,7 +123,7 @@
 - [update] ModifyHandler增加链式调用
 - [fix] 修复流程监听器导出失败的问题
 
-### v1.2.6 2024-08-28  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-2-6-2024-08-28)
+### v1.2.6 2024-08-28  [升级指南](./news/upgrade_guide/4.html#v1-2-6-2024-08-28)
 
 - [feat] 增加获取下个节点集合api @xiarigang
 - [feat] 流程监听器 @xiaoxiaoliu889
@@ -139,7 +139,7 @@
 - [fix] 修复 jpa solon注解问题 @vanlin
 - [fix] 修复 并行网关三个任务分支的时候，错误结束流程的问题
 
-### v1.2.4 2024-08-14  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-2-4-2024-06-28)
+### v1.2.4 2024-08-14  [升级指南](./news/upgrade_guide/4.html#v1-2-4-2024-06-28)
 
 - [feat] 激活和挂起 @xiaoxiaoliu889
 - [feat] 不同节点也支持配置审批表单路径 @vanlin
@@ -185,7 +185,7 @@
 - [fix] 修复更新拼上了多余的条件
 - [fix] 修复保存流程xml报错问题
 
-### v1.2.1 2024-06-28  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-2-1-2024-06-13)
+### v1.2.1 2024-06-28  [升级指南](./news/upgrade_guide/4.html#v1-2-1-2024-06-13)
 
 - [feat] 新增mybatis-flex扩展包 @xiarigang
 - [feat] 新增抄送演示案例 @adru*
@@ -203,7 +203,7 @@
 - [fix] 修复填充器不接收外部设置的时间
 - [fix] 修复userMapper.xml中updateLogic的某个负值错误
 
-### v1.2.0  2024-06-13  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-2-0-2024-06-13)
+### v1.2.0  2024-06-13  [升级指南](./news/upgrade_guide/4.html#v1-2-0-2024-06-13)
 
 - 待办表解偶用户，新增用户表（查询方式需要改动）
 - 会签，票签
@@ -213,7 +213,7 @@
 - oracle适配
 - pg适配
 
-### v1.1.9  2024-05-08  [升级指南](http://www.warm-flow.cn/master/other/news/upgrade_guide/4.html#v1-1-9-2024-05-08)
+### v1.1.9  2024-05-08  [升级指南](./news/upgrade_guide/4.html#v1-1-9-2024-05-08)
 
 - orm支持mybatis-plus扩展
 - 多租户字段隔离提供全局配置，自动获取

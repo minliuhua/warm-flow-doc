@@ -69,6 +69,7 @@ export default sidebar({
                 'other/troubleshooting.md',
                 'other/update',
                 'other/news',
+                'other/jionqun.md',
                 'other/paidservice',
             ],
         }

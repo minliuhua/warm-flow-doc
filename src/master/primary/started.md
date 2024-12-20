@@ -244,7 +244,7 @@ public void skipFlow() throws Exception {
 ## 6、初学者推荐学习路线
 
 ### 6.1、推荐集成案例hh-vue
-[项目地址](../../common/projectexample.md)
+[项目地址](../introduction/projectexample.md)
 
 ### 6.2、推荐学习视频
 <BiliBili bvid="BV1Ci42117pK" />

@@ -22,6 +22,10 @@ export default navbar([
         link: '/master/other/update.md'
     },
     {
+        text: "🤝加入群聊",
+        link: "/master/other/jionqun.md",
+    },
+    {
         text: '🌟新闻公告',
         link: '/master/other/news.md'
     },
