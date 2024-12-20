@@ -39,6 +39,7 @@ export default sidebar({
             expanded: true,
             children: [
                 'advanced/permission_handler.md',
+                'enhance/customstatus.md',
                 'advanced/variableStategy.md',
                 'advanced/listener.md',
                 'advanced/ormusagetips.md',
@@ -52,7 +53,6 @@ export default sidebar({
             expanded: true,
             children: [
                 'enhance/designer_two_open.md',
-                'enhance/customstatus.md',
                 'enhance/condition_two_open',
                 'enhance/variableStatey_two_open',
                 'enhance/listener_two_open',

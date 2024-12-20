@@ -105,7 +105,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多开源项目详情，您可以 <a href="/common/projectexample.html" target="_blank">在此</a> 查看）
+    	（更多开源项目详情，您可以 <a href="/master/introduction/projectexample.html" target="_blank">在此</a> 查看）
     </p>
 </div>
 
@@ -122,7 +122,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
     	（如果您的企业也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/I7Y57D" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多使用企业/个人详情，您可以 <a href="/common/companyintegration.md" target="_blank">在此</a> 查看）
+    	（更多使用企业/个人详情，您可以 <a href="/master/introduction/companyintegration.md" target="_blank">在此</a> 查看）
     </p>
 </div>
 

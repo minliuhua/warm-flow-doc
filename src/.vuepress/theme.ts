@@ -63,7 +63,7 @@ export default hopeTheme(
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                            '     <span onclick="window.location.href=\'/common/news.md\'" class="link-style">' +
+                            '     <span onclick="window.location.href=\'/master/other/news.md\'" class="link-style">' +
                         '      🌟升级指南：如发布新版本，请查看' +
                         '     </span>\n' +
                         '</div>',
@@ -80,7 +80,7 @@ export default hopeTheme(
                         },
                         {
                             text: "❓常见问题❓",
-                            link: "/common/troubleshooting.html",
+                            link: "/master/other/troubleshooting.html",
                             type: "primary",
                         },
                         { text: "取消" },
