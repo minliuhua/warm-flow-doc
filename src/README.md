@@ -201,7 +201,8 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 <script>
 
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'; 
+import axios from "axios"; 
 
 export default {
   setup() {
@@ -308,21 +309,19 @@ export default {
         {title: "轻量级、语义化、对开发者友好的 golang 时间处理库", href: "https://gitee.com/dromara/carbon", src: "https://oss.dev33.cn/sa-token/link/carbon.png"},
         {title: "java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。", href: "https://gitee.com/dromara/mica-mqtt", src: "https://oss.dev33.cn/sa-token/link/mica-mqtt.png"},
     ];
-      try {
-       //  const response = await fetch('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
-       //   headers: {
-       //     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-       //   }
-       // });
-       //  version.value = await response.json();
+    try {
+        const response = await axios.get('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
+           headers: {
+             'Content-Type': 'application/json'
+           }
+         });
+        version.value = response.data;
         const pElement = document.querySelector('.vp-hero-title');
 
         if (pElement) {
-            var versionSpan = document.createElement('span');
+            const versionSpan = document.createElement('span');
             versionSpan.className = 'version-badge';
-            // versionSpan.textContent = version.value.name;
-            versionSpan.textContent = "v1.3.5";
-
+            versionSpan.textContent = version.value.name;
             pElement.appendChild(versionSpan);
         }
       } catch (error) {
