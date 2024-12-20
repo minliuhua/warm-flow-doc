@@ -321,7 +321,7 @@ export default {
             var versionSpan = document.createElement('span');
             versionSpan.className = 'version-badge';
             // versionSpan.textContent = version.value.name;
-            versionSpan.textContent = "v1.3.4";
+            versionSpan.textContent = "v1.3.5";
 
             pElement.appendChild(versionSpan);
         }
