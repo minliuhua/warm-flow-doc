@@ -1,6 +1,6 @@
 # json库扩展
 ::: tip
-目前支持Snack3、Jackson、fastjson和Gson四种json库
+- 目前支持Snack3、Jackson、fastjson和Gson四种json库
 
 :::
 

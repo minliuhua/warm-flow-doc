@@ -2,7 +2,7 @@
 
 ## 1、Mybatis-plus
 ::: tip
-Mybatis-plus只支持自身的多租户方式  
+- Mybatis-plus只支持自身的多租户方式  
 
 :::
 
