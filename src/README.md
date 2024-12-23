@@ -276,7 +276,7 @@ export default {
             const versionSpan = document.createElement('span');
             versionSpan.className = 'version-badge';
             // versionSpan.textContent = version.value.name;
-            versionSpan.textContent = 'v1.3.5';
+            versionSpan.textContent = 'v1.3.6';
             pElement.appendChild(versionSpan);
         }
       } catch (error) {
