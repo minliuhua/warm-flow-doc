@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 首页
-bgImage: /bg.png
+bgImage: /bg.jpg
 heroFullScreen: true
 breadcrumbExclude: true
 heroText: Warm-Flow工作流 
