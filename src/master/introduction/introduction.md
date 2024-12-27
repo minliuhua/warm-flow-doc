@@ -56,14 +56,11 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
 
 
 ## 5、支持数据库类型
+::: tip 目前支持MySQL 、Oracle 和PostgreSQL，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
+:::
 * [x] mysql
 * [x] oracle
 * [x] postgresql
-* [ ] 达梦
-* [ ] 人大金仓
-* [ ] GaussDB
-* [ ] oceanbase
-* [ ] sqlserver
 * [ ] ......
 
 
