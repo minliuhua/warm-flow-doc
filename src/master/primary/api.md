@@ -1,66 +1,60 @@
 # 核心api
 
 ## 1、DefService流程定义接口
-### 1.1、导入流程定义、流程节点和流程跳转数据
+### 1.1、导入流程输入流
 `importIs(is)`：流程定义的输入流
 
-### 1.2、导入流程定义、流程节点和流程跳转数据
+### 1.2、导入流程json字符串
 `importJson(defStr)`：流程定义defJson的json字符串
 
-### 1.3、导入流程定义、流程节点和流程跳转数据
+### 1.3、导入流程json对象
 `importDef(defJson)`：流程定义json对象
 
-### 1.4、新增流程定义、流程节点和流程跳转数据
-`insertFlow(definition, allNodes, allSkips)`：
-- definition: 流程定义 [必传]
-- nodeList: 流程节点 [必传]
-- skipList: 流程跳转 [必传]
+### 1.4、新增流程
+`saveAndInitNode(definition)`：新增流程定义，并初始化流程节点和流程跳转数据
 
-### 1.5、新增流程定义，并初始化流程节点和流程跳转数据
-`saveAndInitNode(definition)`：流程定义对象
-
-### 1.6、只新增流程定义表数据
+### 1.5、只新增流程定义表数据
 `checkAndSave(definition)`：流程定义对象
 
-### 1.7、保存流程节点和跳转
+### 1.6、保存流程节点和跳转
 `saveDef(defJson)`：流程定义json对象
 
-### 1.8、导出流程定义(流程定义、流程节点和流程跳转数据)的json字符串
-`exportJson(id)`： 流程定义id
+### 1.7、导出流程定义json字符串
+`exportJson(id)`： 导出流程定义(流程定义、流程节点和流程跳转数据)的json字符串
 
-### 1.9、获取流程定义全部数据(包含节点和跳转)
-`getAllDataDefinition(id)`： 流程定义id
+### 1.8、获取流程定义全部数据对象
+`getAllDataDefinition(id)`： 获取流程定义全部数据(包含节点和跳转)
 
-### 1.10、查询流程设计所需的数据，比如流程图渲染
-`queryDesign(id)`： 流程定义id
+### 1.9、查询流程设计所需的数据
+`queryDesign(id)`： 查询流程设计所需的数据，比如流程图渲染
 
-### 1.11、更新流程定义发布状态
+### 1.10、更新流程定义发布状态
 `updatePublishStatus(defIds, publishStatus)`：
 - defIds: 流程定义id列表 [必传]
 - publishStatus: 流程定义发布状态 [必传]
 
-### 1.12、删除
+### 1.11、删除
 `removeDef(ids)`： 删除流程定义相关数据  
 
-### 1.13、发布
+### 1.12、发布
 `publish(id)`： 发布流程定义  
 
-### 1.14、取消发布
+### 1.13、取消发布
 `unPublish(id)`： 取消发布流程定义  
 
-### 1.15、复制流程
+### 1.14、复制流程
 `copyDef(id)`： 复制流程定义   
 
-### 1.16、获取流程图
+### 1.15、获取流程图
 `flowChart(instanceId)`： 获取流程图的图片流
 
-### 1.17、根据流程定义ID,获取流程图的图片流(不渲染颜色)
+### 1.16、根据流程定义ID,获取流程图的图片流(不渲染颜色)
 `flowChartNoColor(definitionId)`： 流程定义id
 
-### 1.18、激活流程
+### 1.17、激活流程
 `active(id)`： 激活流程
 
-### 1.19、挂起流程
+### 1.18、挂起流程
 `unActive(id)`： 挂起流程：流程定义挂起后，相关的流程实例都无法继续流转
 
 
