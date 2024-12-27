@@ -196,7 +196,7 @@ warm-flow:
 ```java
 public void deployFlow() throws Exception {
         String path = "/Users/minliuhua/Desktop/mdata/file/IdeaProjects/min/hh-vue/hh-admin/src/main/resources/leaveFlow-serial.xml";
-        System.out.println("已部署流程的id：" + defService.importXml(new FileInputStream(path)).getId());
+        System.out.println("已部署流程的id：" + defService.importIs(new FileInputStream(path)).getId());
     }
 ```
 
