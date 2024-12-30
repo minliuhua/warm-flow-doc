@@ -2,39 +2,39 @@ import {navbar} from "vuepress-theme-hope";
 
 export default navbar([
     {
-        text: '🧭首页',
+        text: '首页',
         link: '/',
     },
     {
-        text: '📖文档',
+        text: '文档',
         link: '/master/introduction/introduction.md',
     },
     {
-        text: '👩‍👩‍👦‍👦团队',
+        text: '团队',
         link: '/master/other/team.md',
     },
     {
-        text: '❓常见问题',
+        text: '常见问题',
         link: '/master/other/troubleshooting.md'
     },
     {
-        text: '👏更新日志',
+        text: '更新日志',
         link: '/master/other/update.md'
     },
     {
-        text: "🤝加入群聊",
+        text: "联系我",
         link: "/master/other/jionqun.md",
     },
     {
-        text: '🌟新闻公告',
+        text: '新闻公告',
         link: '/master/other/news.md'
     },
     {
-        text: "🍚有偿服务",
+        text: "有偿服务",
         link: "/master/other/paidservice.md",
     },
     {
-        text: '🔄 历史版本',
+        text: '历史版本',
         children: [
             { text: 'v1.3.5', link: '/v1.3.5/introduction/introduction.md' },
             { text: 'v1.3.4', link: '/v1.3.4/guide/started.md' },

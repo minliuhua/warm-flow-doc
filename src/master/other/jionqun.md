@@ -1,29 +1,24 @@
-# 加入讨论群
-::: tip
-- 加入 Warm-Flow 专属讨论群，与众多大佬一起努力成长。
+# 联系我
+
+## 1、提交issue
+::: tip issue描述清楚问题，方便我们快速定位问题
+<a href="https://gitee.com/dromara/warm-flow/issues">https://gitee.com/dromara/warm-flow/issues</a>
 
 :::
 
----
-
-## 1、加入qq交流群
-qq交流群: 778470567 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8V7OKThduy3Ghtsb9OnRMj_6IwZp0CjB&jump_from=webapi&authKey=euTqWZEvL2tP7zIHYOHNGqYAFbUsWqt3/8RCxXBSf629qOQGM4vYwLhwZD+iKaCZ">
-<img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Dromara WarmFlow交流群" title="Dromara WarmFlow交流群">
-</a>
-
-## 2、加入微信交流群
-<img src="/wx.png" width="150px">
+## 2、加入公众号
+<img src="/wxgzh.jpg" width="150px">
 
 <br>
 <br>
 <br>
 
-加入群聊的好处：
+加入公众号的好处：
 
 - 第一时间收到框架更新通知。
 - 第一时间收到框架 bug 通知。
 - 第一时间收到新增开源案例通知。
-- 和众多大佬一起互相 (huá shuǐ) 交流 (mō yú)。
+- 第一时间收到最新技术文章通知。
 
 <br>
 

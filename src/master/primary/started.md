@@ -239,7 +239,7 @@ public void skipFlow() throws Exception {
     }
 ```
 ## 5、设计器引入
-> 通过jar包引入：[文档地址](../advanced/designerIntroduced.md)
+> 通过jar包引入：[文档地址](./designerIntroduced.md)
 
 ## 6、初学者推荐学习路线
 
