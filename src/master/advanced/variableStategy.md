@@ -18,7 +18,7 @@ public class VariableTest {
     @Test
     public void testVariable() {
         List<Task> addTasks = new ArrayList<>();
-        addTasks.add(FlowFactory.newTask().setPermissionList(Arrays.asList("${handler1}"
+        addTasks.add(FlowEngine.newTask().setPermissionList(Arrays.asList("${handler1}"
                 , "#{@user.evalVar(#handler2)}", "${handler3}", "#{@user.evalVar(#handler4)}"
                 , "#{@user.evalVarEntity(#handler5)}", "role:1", "1")));
         FlowParams flowParams = new FlowParams();
@@ -27,7 +27,7 @@ public class VariableTest {
         variable.put("handler2", 12L);
         variable.put("handler3", new Object[]{9, "10", 102L});
         variable.put("handler4", "15");
-        Task task = FlowFactory.newTask();
+        Task task = FlowEngine.newTask();
         variable.put("handler5", task.setId(55L));
 
         ExpressionUtil.evalVariable(addTasks, variable);

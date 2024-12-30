@@ -141,9 +141,9 @@ public class DefFinishListener implements Listener {
                 testLeave.setCreateTime(DateUtils.getNowDate());
                 // 新增抄送人方法，也可发送通知
                 if (StringUtils.isNotNull(testLeave.getAdditionalHandler())) {
-                    List<User> users = FlowFactory.userService().structureUser(instance.getId()
+                    List<User> users = FlowEngine.userService().structureUser(instance.getId()
                             , testLeave.getAdditionalHandler(), "4");
-                    FlowFactory.userService().saveBatch(users);
+                    FlowEngine.userService().saveBatch(users);
                 }
             } else {
                 testLeave.setUpdateTime(DateUtils.getNowDate());
