@@ -25,7 +25,8 @@
 
 - admin/admin123
 
-演示地址：http://www.hhzai.top
+演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
+项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)
 
 ## 3、开源协议
 > Dromara Warm-Flow采用APACHE LICENSE 2.0开源协议，项目代码、文档 均开源免费可商用，遵循开源协议即可  

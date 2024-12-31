@@ -9,24 +9,6 @@ heroText: Warm-Flow工作流
 tagline:
   Dromara Warm-Flow国产工作流引擎，简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!  
 actions:
-- text: GitHub
-  link: https://github.com/dromara/warm-flow.git
-  type: success
-  icon: /icons/github_home.svg
-
-- text: Gitee
-  link: https://gitee.com/dromara/warm-flow.git
-  type: success
-  icon: /icons/gitee_home.svg
-  
-- text: GitCode
-  link: https://gitcode.com/dromara/warm-flow
-  type: success
-  icon: /icons/gitcode_home.svg
-  
-- text: 开始学习 ➜
-  link: /master/introduction/introduction.html
-  type: primary  
 
 highlights:
   - header: Warm-Flow 特性
@@ -156,13 +138,10 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 <script>
 
 import { ref, onMounted } from 'vue'; 
-import axios from "axios"; 
 
 export default {
   setup() {
     const projectList = ref([]);
-    const links = ref();
-    const version = ref('');
     const qyProjectList = ref([]);
     const kyProjectList = ref([]);
     const dromaraList = ref([]);
@@ -262,38 +241,19 @@ export default {
         {title: "SSL证书监测平台，申请证书，自动续签，到期提醒。", href: "https://domain-admin.cn/", src: "https://oss.dev33.cn/sa-token/link/domain-admin.png"},
         {title: "轻量级、语义化、对开发者友好的 golang 时间处理库", href: "https://gitee.com/dromara/carbon", src: "https://oss.dev33.cn/sa-token/link/carbon.png"},
         {title: "java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。", href: "https://gitee.com/dromara/mica-mqtt", src: "https://oss.dev33.cn/sa-token/link/mica-mqtt.png"},
-    ];
-    try {
-        // const response = await axios.get('https://gitee.com/api/v5/repos/dromara/warm-flow/releases/latest', {
-        //    headers: {
-        //      'Content-Type': 'application/json'
-        //    }
-        //  });
-        // version.value = response.data;
-        const pElement = document.querySelector('.vp-hero-title');
-
-        if (pElement) {
-            const versionSpan = document.createElement('span');
-            versionSpan.className = 'version-badge';
-            // versionSpan.textContent = version.value.name;
-            versionSpan.textContent = 'v1.3.6';
-            pElement.appendChild(versionSpan);
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+        ];
     };
 
     const navigateTo = () => {
-      const pElement = document.querySelector('.vp-hero-actions');
+      const pElement = document.querySelector('#main-description');
 
-      var contentToAppend = `        <p>
-          <a href="https://gitee.com/dromara/warm-flow.git" style="margin-left: 12px;"><img src="https://gitee.com/dromara/warm-flow/badge/star.svg?theme=dark"></a>
+      var contentToAppend = `<p><a href="https://gitee.com/dromara/warm-flow.git" style="margin-left: 12px;"><img src="https://gitee.com/dromara/warm-flow/badge/star.svg?theme=dark"></a>
           <a href='https://gitee.com/dromara/warm-flow/members'><img src='https://gitee.com/dromara/warm-flow/badge/fork.svg?theme=dark' alt='fork'></a>
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/stars/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
-          <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/badge/License-Apache2.0-blue.svg' alt='fork'></a>
+          <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/github/v/release/dromara/warm-flow' alt='fork'></a>
         </p>
       `;
 
@@ -334,8 +294,6 @@ export default {
 
     return {
       projectList,
-      links,
-      version,
       qyProjectList,
       kyProjectList,
       dromaraList,
@@ -411,7 +369,7 @@ export default {
     width: 200px !important;
     height: 200px !important;
 }
-  .vp-feature-item:hover {
+.vp-feature-item:hover {
   background-color: var(--bg-color-secondary);
   box-shadow: 0 2px 12px 0 var(--card-shadow);
   transform: translate(-2px, -2px);
