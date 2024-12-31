@@ -9,6 +9,7 @@ export default sidebar({
             children: [
                 "introduction/introduction.md",
                 "introduction/processdemo.md",
+                "introduction/license.md",
                 "introduction/getinvolved.md",
                 "introduction/companyintegration.md",
                 "introduction/projectexample.md",

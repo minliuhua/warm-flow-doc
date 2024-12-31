@@ -26,6 +26,12 @@ export default hopeTheme(
         },
         editLink: false,
 
+        markdown: {
+            spoiler: true,
+            mark: true,
+            codeTabs: true,
+        },
+
         plugins: {
             components: {
                 // 你想使用的组件

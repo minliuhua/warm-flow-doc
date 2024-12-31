@@ -31,69 +31,85 @@
 
 ## 3、maven依赖
 ### 3.1、mybatis
-**springboot2项目**
+
+::: code-tabs#shell
+
+@tab:active springboot2
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-sb-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-sb-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**springboot3项目**
+@tab springboot3
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-sb3-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**solon项目**
+@tab solon
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-solon-plugin</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
+
+:::
+
 
 ### 3.2、mybatis-plus
-**springboot2项目**
+
+::: code-tabs#shell
+
+@tab:active springboot2
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-plus-sb-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**springboot3项目**
+@tab springboot3
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**solon项目**
+@tab solon
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
+
+:::
+
 
 ### 3.3、jpa
-**warm-flow工作流配置**
+
+::: code-tabs#shell
+
+@tab:active 必须配置
+
 ```yml
 # warm-flow工作流配置
 warm-flow:
@@ -101,87 +117,104 @@ warm-flow:
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
 ```
 
-**springboot2项目**
+@tab springboot2
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-jpa-sb-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-jpa-sb-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**solon项目**
+@tab solon
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
+
+:::
+
+
 
 ### 3.4、mybatis-flex
-**springboot2项目**
+
+::: code-tabs#shell
+
+@tab:active springboot2
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**springboot3项目**
+@tab springboot3
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**solon项目**
+@tab solon
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
+
+:::
+
 
 ### 3.5、easy-query
-**springboot项目**
+
+::: code-tabs#shell
+
+@tab:active springboot2
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-easy-query-sb-starter</artifactId>
+    <version>最新版本</version>
 </dependency>
 ```
 
-**solon项目**
+@tab solon
 
 ```xml
 <dependency>
-      <groupId>org.dromara.warm</groupId>
-      <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
-      <exclusions>
-          <exclusion>
-              <groupId>org.noear</groupId>
-              <artifactId>solon.data</artifactId>
-          </exclusion>
-          <exclusion>
-              <groupId>org.noear</groupId>
-              <artifactId>solon.logging</artifactId>
-          </exclusion>
-      </exclusions>
-      <version>最新版本</version>
+    <groupId>org.dromara.warm</groupId>
+    <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.noear</groupId>
+            <artifactId>solon.data</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.noear</groupId>
+            <artifactId>solon.logging</artifactId>
+        </exclusion>
+    </exclusions>
+    <version>最新版本</version>
 </dependency>
 ```
+
+:::
+
+
 
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**
 
@@ -191,53 +224,58 @@ warm-flow:
 
 **以下为简短案例：**
 
-### 4.1、部署流程
+::: code-tabs#shell
+
+@tab:active 部署流程
 
 ```java
 public void deployFlow() throws Exception {
-        String path = "/Users/minliuhua/Desktop/mdata/file/IdeaProjects/min/hh-vue/hh-admin/src/main/resources/leaveFlow-serial.xml";
-        System.out.println("已部署流程的id：" + defService.importXml(new FileInputStream(path)).getId());
-    }
+    String path = "/Users/minliuhua/Desktop/mdata/file/IdeaProjects/min/hh-vue/hh-admin/src/main/resources/leaveFlow-serial.xml";
+    System.out.println("已部署流程的id：" + defService.importXml(new FileInputStream(path)).getId());
+}
 ```
 
-### 4.2、发布流程
+@tab 发布流程
 
 ```java
 public void publish() throws Exception {
-        defService.publish(1212437969554771968L);
-    }
+    defService.publish(1212437969554771968L);
+}
 ```
 
-### 4.3、开启流程
+@tab 开启流程
 
 ```java
 public void startFlow() {
-        System.out.println("已开启的流程实例id：" + insService.start("1", getUser()).getId());
-    }
+    System.out.println("已开启的流程实例id：" + insService.start("1", getUser()).getId());
+}
 ```
 
-### 4.4、流程流转
+@tab 流程流转
 
 ```java
 public void skipFlow() throws Exception {
-        // 通过实例id流转
-        Instance instance = insService.skipByInsId(1219286332141080576L, getUser().skipType(SkipType.PASS.getKey())
-                .permissionFlag(Arrays.asList("role:1", "role:2")));
-        System.out.println("流转后流程实例：" + instance.toString());
+    // 通过实例id流转
+    Instance instance = insService.skipByInsId(1219286332141080576L, getUser().skipType(SkipType.PASS.getKey())
+            .permissionFlag(Arrays.asList("role:1", "role:2")));
+    System.out.println("流转后流程实例：" + instance.toString());
 
 //        // 通过任务id流转
 //        Instance instance = insService.skip(1219286332145274880L, getUser().skipType(SkipType.PASS.getKey())
 //                .permissionFlag(Arrays.asList("role:1", "role:2")));
 //        System.out.println("流转后流程实例：" + instance.toString());
-    }
+}
 
- public void skipAnyNode() throws Exception {
-        // 跳转到指定节点
-        Instance instance = insService.skip(1219286332145274880L, getUser().skipType(SkipType.PASS.getKey())
-                .permissionFlag(Arrays.asList("role:1", "role:2")).nodeCode("4"));
-        System.out.println("流转后流程实例：" + instance.toString());
-    }
+public void skipAnyNode() throws Exception {
+    // 跳转到指定节点
+    Instance instance = insService.skip(1219286332145274880L, getUser().skipType(SkipType.PASS.getKey())
+            .permissionFlag(Arrays.asList("role:1", "role:2")).nodeCode("4"));
+    System.out.println("流转后流程实例：" + instance.toString());
+}
 ```
+
+:::
+
 ## 5、设计器引入
 > 通过jar包引入：[文档地址](./designerIntroduced.md)
 
