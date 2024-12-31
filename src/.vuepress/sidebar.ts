@@ -3,12 +3,13 @@ import {sidebar} from "vuepress-theme-hope";
 export default sidebar({
     "/master/": [
         {
-            text: "🤞 开始",
+            text: "🤞开始",
             collapsible: true,
             expanded: true,
             children: [
                 "introduction/introduction.md",
                 "introduction/processdemo.md",
+                "introduction/license.md",
                 "introduction/getinvolved.md",
                 "introduction/companyintegration.md",
                 "introduction/projectexample.md",
@@ -16,7 +17,7 @@ export default sidebar({
             ],
         },
         {
-            text: "🎃 初级篇",
+            text: "🎃初级篇",
             collapsible: true,
             expanded: true,
             children: [
@@ -34,7 +35,7 @@ export default sidebar({
             ],
         },
         {
-            text: "🎈 进阶篇",
+            text: "🎈进阶篇",
             collapsible: true,
             expanded: true,
             children: [
@@ -48,7 +49,7 @@ export default sidebar({
             ],
         },
         {
-            text: "🏆 提高篇",
+            text: "🏆提高篇",
             collapsible: true,
             expanded: true,
             children: [

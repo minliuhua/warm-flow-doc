@@ -26,6 +26,12 @@ export default hopeTheme(
         },
         editLink: false,
 
+        markdown: {
+            spoiler: true,
+            mark: true,
+            codeTabs: true,
+        },
+
         plugins: {
             components: {
                 // 你想使用的组件
@@ -58,12 +64,12 @@ export default hopeTheme(
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.md\'" class="link-style">' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
                         '       📖使用文档：集成前先快速浏览，大概知道有功能和注意事项' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                            '     <span onclick="window.location.href=\'/master/other/news.md\'" class="link-style">' +
+                            '     <span onclick="window.location.href=\'/master/other/news.html\'" class="link-style">' +
                         '      🌟升级指南：如发布新版本，请查看' +
                         '     </span>\n' +
                         '</div>',

@@ -25,21 +25,10 @@
 
 - admin/admin123
 
-演示地址：http://www.hhzai.top
+演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
+项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)
 
-## 3、开源协议
-> Dromara Warm-Flow采用APACHE LICENSE 2.0开源协议，项目代码、文档 均开源免费可商用，遵循开源协议即可  
-> 已申请软著，您如果需要源码开发方式，需要注意以下几点：
-
-- 请不要删除和修改根目录下的LICENSE文件。
-- 请不要删除和修改Warm-Flow源码头部的版权声明。
-- 本项目代码可免费商业使用，商业使用请保留源码和相关描述文件的项目出处，作者声明等。
-- 分发源码时候，请注明软件出处 https://warm-flow.dromara.org/
-- 不可二次分发开源参与同类竞品，如有想法可联系290631660@qq.com商议合作。
-- 若您的项目无法满足以上几点，需要更多功能代码，获取可找作者定制化开发，290631660@qq.com
-
-
-## 4、应用场景
+## 3、应用场景
 
 Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但功能全面，适用于多种应用场景，尤其是针对中小型项目。以下是一些典型的应用场景：
 
@@ -54,8 +43,7 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
 9. 合规性和风险管理：帮助企业在遵守法规和标准的同时，管理风险和合规流程。
 10. 跨部门协作：Dromara Warm-Flow支持跨部门的流程协作，帮助不同部门之间更好地协调工作。
 
-
-## 5、支持数据库类型
+## 4、支持数据库类型
 ::: tip 目前支持MySQL 、Oracle 和PostgreSQL，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
 :::
 * [x] mysql
@@ -64,28 +52,10 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
 * [ ] ......
 
 
-## 6、支持orm框架类型
+## 5、支持orm框架类型
 * [x] mybatis
 * [x] mybatis-plus
 * [x] jpa
 * [x] easy-query
 * [x] mybatis-flex
 * [ ] ......
-
-
-
-## 7、特别赞助
-<table>
-    <tbody>
-        <tr>
-            <td style="width: 50%"><img src="/ggw/MaxKey.png"/></td>
-            <td style="width: 50%"><img src="/ggw/WarmFlow.png"/></td>
-        </tr>
-    </tbody>
-</table>
-
-[如何成为赞助商 加群联系作者详谈](../other/paidservice.md)
-
-## 8、你可以请作者喝杯咖啡表示鼓励
-[捐赠地址]( ./support.md)
-
