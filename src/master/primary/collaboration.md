@@ -14,7 +14,7 @@
 ### 2.1、或签
 <img src="https://foruda.gitee.com/images/1733192550833087867/e28c8a1c_2218307.png"/>
 
-### 2.2、票签签
+### 2.2、票签
 <img src="https://foruda.gitee.com/images/1733192752351796936/ab226443_2218307.png"/>
 
 ### 2.3、会签
