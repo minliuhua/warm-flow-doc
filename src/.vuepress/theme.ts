@@ -51,7 +51,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/",
-                    title: "请务必阅读 　　　　　　　　　　🌟最新v1.3.7",
+                    title: "请务必阅读",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
