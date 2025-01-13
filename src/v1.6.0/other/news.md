@@ -1,4 +1,4 @@
-# 新闻公告
+# 新闻
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
     <el-input v-model="searchQuery" class="Input" placeholder="搜索标题" @input="filterByTitle" clearable />
     <el-tabs type="border-card" class="Tabs" v-model="activeTab" @tab-change="filterSelect(activeTab)">
@@ -45,13 +45,8 @@ export default {
             "color": "#1890ff"
         },
         {
-            "key": "notice",
-            "value": "公告", 
-            "color": "#ffba00"
-        },
-        {
-            "key": "upgrade_guide",
-            "value": "升级指南", 
+            "key": "upgrade",
+            "value": "版本发布", 
             "color": "#ff9292"
         },
         {
@@ -62,11 +57,11 @@ export default {
       ];
       filterList.value = allList.value = [
         {
-            "type": "upgrade_guide",
-            "title": "升级指南", 
-            "url": "./news/upgrade_guide/4.html",
-            "pushTime": "2024-11-25"
-        },  
+            "type": "upgrade",
+            "title": "🧨新春版v1.6.0发布：网关直连和流程图重构", 
+            "url": "./news/upgrade/4.html",    
+            "pushTime": "2025-01-15"
+        },
         {
             "type": "experience",
             "title": "WarmFlow工作流动态指定审批人", 
@@ -74,26 +69,26 @@ export default {
             "pushTime": "2024-12-06"
         },
         {
-            "type": "news",
-            "title": "solon集成Dromara Warm-Flow", 
-            "url": "./news/news/5.html",    
+            "type": "upgrade",
+            "title": "v1.3.4发布：solon集成Dromara Warm-Flow", 
+            "url": "./news/upgrade/5.html",    
             "pushTime": "2024-12-04"
         },
         {
-            "type": "news",
-            "title": "一个自带流程设计器的工作流引擎", 
-            "url": "./news/news/3.html",
+            "type": "upgrade",
+            "title": "v1.3.1发布：一个自带流程设计器的工作流引擎", 
+            "url": "./news/upgrade/3.html",
             "pushTime": "2024-11-01"
         },
         {
-            "type": "news",
+            "type": "news", 
             "title": "gitee变成maven私库", 
             "url": "./news/news/2.html",
             "pushTime": "2024-09-29"
         }, {
-            "type": "notice",
+            "type": "news",
             "title": "工作流引擎Warm-Flow加入Dromara开源社区", 
-            "url": "./news/notice/1.html",
+            "url": "./news/news/1.html",
             "pushTime": "2024-02-22"
         }, {
             "type": "experience",

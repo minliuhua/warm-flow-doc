@@ -26,7 +26,7 @@ export default navbar([
         link: "/master/other/jionqun.md",
     },
     {
-        text: '新闻公告',
+        text: '新闻',
         link: '/master/other/news.md'
     },
     {

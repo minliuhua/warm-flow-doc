@@ -2,10 +2,11 @@
 ::: tip
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
 
-::: 
+:::
 
 ### v1.6.0
 - 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
+- 升级前先把在途的流程实例全部走完，否则在途的流程实例会有问题
 - 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
 - 全局FlowFactory替换成FlowEngine
 - [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护
@@ -74,11 +75,11 @@ public ResponseEntity<byte[]> exportDefinition(@PathVariable("id") Long id) {
 :::
 
 
-### v1.3.7 2024-12-31
+### v1.3.7
 - 执行[1.3.7版本升级脚本](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 如果设计器是自己维护的，需要相应调整，可以参考如下
-  - 流程设计时，办理人有多个，回显通过`,`分隔，改为`@@`
-  - 流程设计时，办理人设置了多个，入库拼接通过`,`拼接改为`@@`
+    - 流程设计时，办理人有多个，回显通过`,`分隔，改为`@@`
+    - 流程设计时，办理人设置了多个，入库拼接通过`,`拼接改为`@@`
 
 ::: tip 原between.vue：`,`分隔回显
 ```js {3}
@@ -139,9 +140,9 @@ watch(() => form.value.permissionFlag, (n) => {
 ### v1.3.5
 - 执行升级脚本1.3.5版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 如果设计器是自己维护的，需要相应调整，可以参考如下
-  - 条件表达式前端拼接需要把原本`@@eq@@|flag@@eq@5`格式 改成 `eq|flag|5`,
-  - `@@spel@@|#{@user.eval(#flag)}`改成`spel|#{@user.eval(flag)}`
-  - 新增默认表达`default|${flag == 5 && flag > 4}`
+    - 条件表达式前端拼接需要把原本`@@eq@@|flag@@eq@5`格式 改成 `eq|flag|5`,
+    - `@@spel@@|#{@user.eval(#flag)}`改成`spel|#{@user.eval(flag)}`
+    - 新增默认表达`default|${flag == 5 && flag > 4}`
 
 ::: tip 原between.vue：跳转条件下拉框
 ```vue
@@ -163,7 +164,7 @@ watch(() => form.value.permissionFlag, (n) => {
   </el-form-item>
 </slot>
 ```
-::: 
+:::
 
 ::: tip 现between.vue：跳转条件下拉框
 ```vue
@@ -278,12 +279,12 @@ if (skipCondition) {
 :::
 
 ### v1.3.4
-  
+
 - 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 依赖的groupId：org.dromara，改为org.dromara.warm
 - 如果扩展了条件表达式策略
-  - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
-  - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
+    - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
+    - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
 
 
 ### v1.3.3
@@ -301,11 +302,11 @@ if (skipCondition) {
 - 转办、委派、加签和减签方法，老方法标识即将删除, 请尽快使用新的接口
 - 终止免校验权限改为设置ignore字段
 - 设计器引入优化
-  - 设计器后端放行地址`/warm-flow/**`删除，不再需要
-  - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
-  - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API +
-    `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
-  - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
+    - 设计器后端放行地址`/warm-flow/**`删除，不再需要
+    - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
+    - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API +
+      `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
+    - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
 
 ### v1.3.0
 
