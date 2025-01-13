@@ -19,6 +19,7 @@
 
 ## 开发中计划
 
+## 更新日志
 ### v1.6.0  2025-01-17  [升级指南](./news/upgrade_guide/4.html#v1-6-0)
 
 - [feat] 导入、导出和保存等新增json格式支持 @晓华@xiarigang
@@ -41,7 +42,6 @@
 - [fix] 修复流程退回目标节点前存在并行网关，导致不生成代办任务的问题
 - [remove] 移除DefService获取流程图api，由ChartService中chartIns和chartDef代替
 
-## 更新日志
 ### v1.3.8 2025-01-07
 
 - [fix] 修复最新设计器代码未复制到到jar包
