@@ -26,7 +26,7 @@ export default navbar([
         link: "/master/other/jionqun.md",
     },
     {
-        text: '新闻公告',
+        text: '新闻',
         link: '/master/other/news.md'
     },
     {
@@ -36,6 +36,7 @@ export default navbar([
     {
         text: '历史版本',
         children: [
+            { text: 'v1.6.0', link: '/v1.6.0/introduction/introduction.md' },
             { text: 'v1.3.7', link: '/v1.3.5/introduction/introduction.md' },
             { text: 'v1.3.6', link: '/v1.3.5/introduction/introduction.md' },
             { text: 'v1.3.5', link: '/v1.3.5/introduction/introduction.md' },

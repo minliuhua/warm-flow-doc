@@ -2,13 +2,84 @@
 ::: tip
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
 
-::: 
+:::
 
-### v1.3.7 2024-12-31
+### v1.6.0
+- 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
+- 升级前先把在途的流程实例全部走完，否则在途的流程实例会有问题
+- 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
+- 全局FlowFactory替换成FlowEngine
+- [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护
+
+
+::: tip 原DefController.java：导入
+```java
+public R<Void> importDefinition(MultipartFile file) throws Exception {
+  defService.importXml(file.getInputStream());
+  return R.ok();
+}
+```
+:::
+
+::: tip 现DefController.java：导入
+```java
+public R<Void> importDefinition(MultipartFile file) throws Exception {
+  defService.importIs(file.getInputStream());
+  return R.ok();
+}
+```
+:::
+
+::: tip 原DefController.java：导出
+```java
+public void exportDefinition(@PathVariable("id") Long id, HttpServletResponse response) throws Exception {
+  Document document = defService.exportXml(id);
+  // 设置生成xml的格式
+  OutputFormat of = OutputFormat.createPrettyPrint();
+  // 设置编码格式
+  of.setEncoding("UTF-8");
+  of.setIndent(true);
+  of.setIndent("    ");
+  of.setNewlines(true);
+
+  // 创建一个xml文档编辑器
+  XMLWriter writer = new XMLWriter(response.getOutputStream(), of);
+  writer.setEscapeText(false);
+  response.reset();
+  response.setCharacterEncoding("UTF-8");
+  response.setContentType("application/x-msdownload");
+  response.setHeader("Content-Disposition", "attachment;");
+  writer.write(document);
+  writer.close();
+}
+```
+:::
+
+::: tip 现DefController.java：导出
+```java
+public ResponseEntity<byte[]> exportDefinition(@PathVariable("id") Long id) {
+  // 要导出的字符串
+  String content = defService.exportJson(id);
+
+  // 设置响应头
+  HttpHeaders headers = new HttpHeaders();
+  headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=exported_string.txt");
+
+  // 返回响应
+  return ResponseEntity.ok()
+          .headers(headers)
+          .contentType(MediaType.TEXT_PLAIN)
+          .body(content.getBytes(StandardCharsets.UTF_8));
+}
+```
+:::
+
+
+### v1.3.7
 - 执行[1.3.7版本升级脚本](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 如果设计器是自己维护的，需要相应调整，可以参考如下
-  - 流程设计时，办理人有多个，回显通过`,`分隔，改为`@@`
-  - 流程设计时，办理人设置了多个，入库拼接通过`,`拼接改为`@@`
+    - 流程设计时，办理人有多个，回显通过`,`分隔，改为`@@`
+    - 流程设计时，办理人设置了多个，入库拼接通过`,`拼接改为`@@`
 
 ::: tip 原between.vue：`,`分隔回显
 ```js {3}
@@ -66,12 +137,12 @@ watch(() => form.value.permissionFlag, (n) => {
 ```
 :::
 
-### v1.3.5 2024-12-20
+### v1.3.5
 - 执行升级脚本1.3.5版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 如果设计器是自己维护的，需要相应调整，可以参考如下
-  - 条件表达式前端拼接需要把原本`@@eq@@|flag@@eq@5`格式 改成 `eq|flag|5`,
-  - `@@spel@@|#{@user.eval(#flag)}`改成`spel|#{@user.eval(flag)}`
-  - 新增默认表达`default|${flag == 5 && flag > 4}`
+    - 条件表达式前端拼接需要把原本`@@eq@@|flag@@eq@5`格式 改成 `eq|flag|5`,
+    - `@@spel@@|#{@user.eval(#flag)}`改成`spel|#{@user.eval(flag)}`
+    - 新增默认表达`default|${flag == 5 && flag > 4}`
 
 ::: tip 原between.vue：跳转条件下拉框
 ```vue
@@ -93,7 +164,7 @@ watch(() => form.value.permissionFlag, (n) => {
   </el-form-item>
 </slot>
 ```
-::: 
+:::
 
 ::: tip 现between.vue：跳转条件下拉框
 ```vue
@@ -207,21 +278,21 @@ if (skipCondition) {
 ```
 :::
 
-### v1.3.4 2024-11-25
-  
+### v1.3.4
+
 - 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 依赖的groupId：org.dromara，改为org.dromara.warm
 - 如果扩展了条件表达式策略
-  - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
-  - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
+    - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`
+    - 全局搜索`org.dromara.warm.flow.core.expression` 替换为`org.dromara.warm.flow.core.expression`,然后检查是否正确
 
 
-### v1.3.3 2024-11-12
+### v1.3.3
 
 - 独立设计器放行路径增加`/warm-flow`，如果想要共享后端权限(比如token)，可不增加，并且按照官网流程设计器引入进行设置
 
 
-### v1.3.1 2024-11-01
+### v1.3.1
 
 - 依赖的groupId：io.github.minliuhua，改为org.dromara
 - 包名：com.warm， 改为org.dromara.warm
@@ -231,18 +302,18 @@ if (skipCondition) {
 - 转办、委派、加签和减签方法，老方法标识即将删除, 请尽快使用新的接口
 - 终止免校验权限改为设置ignore字段
 - 设计器引入优化
-  - 设计器后端放行地址`/warm-flow/**`删除，不再需要
-  - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
-  - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API +
-    `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
-  - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
+    - 设计器后端放行地址`/warm-flow/**`删除，不再需要
+    - 前端加载设计器代理配置,vue.config.js或者nginx中的代理，`/warm-flow-ui/`删除，不再需要
+    - iframe中访问设计器接口由`/warm-flow-ui/${definitionId}?disabled=${disabled}`，改为VUE_APP_BASE_API +
+      `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
+    - VUE_APP_BASE_API是前端访问前缀比如`prod-api`
 
-### v1.3.0 2024-10-23
+### v1.3.0
 
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 
 
-### v1.2.8 2024-09-25
+### v1.2.8
 
 - 本次升级，内置json库snack3方式，改为spi方式加载，业务项目中存在哪种json就会使用哪种的实现，
   支持顺序按顺序加载一种：snack3、jackson、fastjson、gson，并且目前只实现了这四种，可扩展
@@ -257,13 +328,13 @@ if (skipCondition) {
 
 
 
-### v1.2.6 2024-08-28
+### v1.2.6
 
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 流程状态字段flow_status改为string类型，业务系统需要对应修改
 
 
-### v1.2.4 2024-08-14
+### v1.2.4
 
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 流程定义表from_custom改为form_custom，from_path改为form_path，涉及到这两个字段的前后段都要修改
@@ -273,14 +344,14 @@ if (skipCondition) {
 - 原本的我发起[warmFlowInitiator], 组件内部不在维护替换，由分派监听器实现替换
 
 
-### v1.2.1 2024-06-28
+### v1.2.1
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 
 
-### v1.2.0  2024-06-13
+### v1.2.0
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 工具包路径调整
 
 
-### v1.1.9  2024-05-08
+### v1.1.9
 - 执行.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)

@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 首页
-bgImage: /bg.png
+bgImage: /bg.jpg
 heroFullScreen: true
 breadcrumbExclude: true
 heroText: Warm-Flow工作流 
@@ -34,7 +34,7 @@ highlights:
         details: 可通过jar包形式快速集成到项目，减少繁琐代码搬运和适配，支持solon和springboot
 
       - title: 👍 流程图
-        details: 流程引擎自带流程图，可在不集成流程设计器情况下使用
+        details: 流程引擎自带流程图，数据入库，并行支持扩展
 
       - title: 🔦 条件表达式
         link: /master/primary/condition.md
@@ -50,7 +50,7 @@ highlights:
 
       - title: 🎬 数据库支持
         link: /master/introduction/introduction.html#_5%E3%80%81%E6%94%AF%E6%8C%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B
-        details: 目前支持MySQL 、Oracle 和PostgreSQL，后续会继续支持其他数据库或者国产数据库
+        details: 目前支持MySQL 、Oracle 和PostgreSQL，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
 
       - title: 🏋 多租户
         link: /master/advanced/tenant.md
