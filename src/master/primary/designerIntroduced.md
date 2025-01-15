@@ -6,8 +6,9 @@
 :::
 
 ## 1. 引入依赖
+::: code-tabs#shell
 
-### springboot
+@tab:active springboot
 
 ```xml
 <dependency>
@@ -17,7 +18,7 @@
 </dependency>
 ```
 
-### solon
+@tab solon
 
 ```xml
 <dependency>
@@ -27,11 +28,14 @@
 </dependency>
 ```
 
+:::
+
 ## 2. 后端放行部分路径
 > 这个路径需要放行，否则无法访问，`/warm-flow-ui/**`, `/warm-flow/**`
 
-### 2.1 spring-security 放行配置
-<br>
+::: code-tabs#shell
+
+@tab:active spring-security
 
 ```java
 @Bean
@@ -50,10 +54,24 @@ protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exce
             .build();
 }
 ```
-<br>
 
-### 2.2 shiro 放行配置
-<br>
+@tab sa-token
+
+```java
+@Configuration
+public class SaTokenConfigure implements WebMvcConfigurer {
+    // 注册拦截器
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
+                .addPathPatterns("/**")
+                // 以上是sa-token案例，下面才是需要排除的地址
+                .excludePathPatterns("/warm-flow-ui/**", "/warm-flow/**");
+    }
+}
+```
+
+@tab shiro
 
 ```java
 @Configuration
@@ -76,34 +94,22 @@ public class ShiroConfig {
     }
 }
 ```
-<br>
 
-### 2.3 sa-token 放行配置
+:::
 
-```java
-@Configuration
-public class SaTokenConfigure implements WebMvcConfigurer {
-    // 注册拦截器
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new SaInterceptor(handle -> StpUtil.checkLogin()))
-                .addPathPatterns("/**")
-                // 以上是sa-token案例，下面才是需要排除的地址
-                .excludePathPatterns("/warm-flow-ui/**", "/warm-flow/**");
-    }
-}
-```
+## 3. 前端引入设计器
+::: tip
+**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`**
 
-## 3. 前端加载设计器
-> 1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
+:::
 
-### 3.2 vue2 引入
+::: code-tabs#shell
 
-- 首先传入设计器需要的流程定义definitionId和是否可编辑disabled参数
-- 本实例采用iframe方式嵌入设计器
-  <br>
+@tab:active vue2
 
 ```vue
+首先传入设计器需要的流程定义definitionId和是否可编辑disabled参数
+本实例采用iframe方式嵌入设计器
 
 <template>
   <div :style="'height:' + height">
@@ -147,9 +153,8 @@ public class SaTokenConfigure implements WebMvcConfigurer {
   };
 </script>
 ```
-<br>
 
-### 3.3 vue3 引入
+@tab vue3
 
 ```vue
 <template>
@@ -198,14 +203,11 @@ onMounted(() => {
 
 ```
 
-### 3.4 React版本 引入
-> 待完善
+@tab 前后端不分离
 
-### 3.5 前后端不分离版本
-- 可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
-  <br>
--
 ```java
+可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
+
 @Controller
 @RequestMapping("/warm-flow")
 public class WarmFlowController
@@ -216,12 +218,8 @@ public class WarmFlowController
         return redirect("/warm-flow-ui/index.html?id=" + definitionId + "&disabled=" + disabled);
     }
 }
-```
-<br>
 
-- 或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&disabled=false`
-  <br>
-```javascript
+或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&disabled=false`
 /*打开新的页签，加载设计器*/
 function detail(dictId) {
   var url = prefix + '/detail/' + dictId;
@@ -229,8 +227,14 @@ function detail(dictId) {
 }
 
 ```
-<br>
 
+@tab React
+
+```shell
+待完善
+```
+
+:::
 
 ## 4. 设计器办理人权限数据接入
 > 给任务节点设置哪些权限的人可以办理，实现接口提供给设计器

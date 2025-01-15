@@ -8,9 +8,38 @@
 
 :::
 
+### 1.1、配置默认逻辑删除值
+::: code-tabs#shell
+
+@tab:active springboot
+
+```yml
+# mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 2 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
+```
+
+@tab solon
+
+```yaml
+# 配置数据源对应的 mybatis 信息（要与 DataSource bean 的名字对上）
+mybatis.db1:
+  globalConfig: #全局配置（要与 GlobalConfig 类的属性一一对应）
+    banner: false
+    logicDeleteValue: 2 # 逻辑已删除值
+    logicNotDeleteValue: 0 # 逻辑未删除值
+```
+
+:::
+
+### 1.2、关闭逻辑删除方案
+
 ```java
 /**
- * 关闭逻辑删除
+ * 关闭逻辑删除，需高版本比如3.5.3或者以上
  *
  * @author warm
  */
@@ -42,26 +71,6 @@ public class PlusPostInitTableInfoHandler implements PostInitTableInfoHandler {
 
 ```
 
-### 1.1、spring
-```yml
-# mybatis-plus配置
-mybatis-plus:
-  global-config:
-    db-config:
-      logic-delete-value: 2 # 逻辑已删除值
-      logic-not-delete-value: 0 # 逻辑未删除值
-```
-
-### 1.2、solon
-
-```yaml
-# 配置数据源对应的 mybatis 信息（要与 DataSource bean 的名字对上）
-mybatis.db1:
-  globalConfig: #全局配置（要与 GlobalConfig 类的属性一一对应）
-    banner: false
-    logicDeleteValue: 2 # 逻辑已删除值
-    logicNotDeleteValue: 0 # 逻辑未删除值
-```
 
 ## 2、通用逻辑删除
 
