@@ -71,18 +71,19 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 <el-carousel :interval="4000" height="600px" style="width: 600px; overflow: inherit">
     <el-carousel-item>
         <img src="https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg"/>
+        <h3 class="small justify-end" text="2xl">G-Star</h3>
     </el-carousel-item>
     <el-carousel-item>
         <img src="https://foruda.gitee.com/images/1736921883064913542/15bd8fd1_2218307.png"/>
+        <h3 class="small justify-end" text="2xl">gitee star数超1.7k</h3>
     </el-carousel-item>
     <el-carousel-item>
         <img src="/Warm-Flow工作流引擎软件.png" />
+        <h3 class="small justify-end" text="2xl">软著</h3>
     </el-carousel-item>
     <el-carousel-item>
         <img src="https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg"/>
-    </el-carousel-item>
-    <el-carousel-item>
-        <img src="https://foruda.gitee.com/images/1736923174974574882/32516feb_2218307.png"/>
+        <h3 class="small justify-end" text="2xl">dromara全家福</h3>
     </el-carousel-item>
 </el-carousel>
 
