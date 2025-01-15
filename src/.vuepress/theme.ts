@@ -30,6 +30,7 @@ export default hopeTheme(
             spoiler: true,
             mark: true,
             codeTabs: true,
+            include: true,
         },
 
         plugins: {

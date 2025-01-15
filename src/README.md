@@ -68,20 +68,59 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
+<el-carousel :interval="4000" height="600px" style="width: 600px; overflow: inherit">
+    <el-carousel-item>
+        <img src="https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg"/>
+    </el-carousel-item>
+    <el-carousel-item>
+        <img src="https://foruda.gitee.com/images/1736921883064913542/15bd8fd1_2218307.png"/>
+    </el-carousel-item>
+    <el-carousel-item>
+        <img src="/Warm-Flow工作流引擎软件.png" />
+    </el-carousel-item>
+    <el-carousel-item>
+        <img src="https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg"/>
+    </el-carousel-item>
+    <el-carousel-item>
+        <img src="https://foruda.gitee.com/images/1736923174974574882/32516feb_2218307.png"/>
+    </el-carousel-item>
+</el-carousel>
+
+<style scoped>
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+  text-align: center;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+</style>
+
+---
+
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
-    <div class="feature-box s-case-box">
-		<div class="s-case" v-for="item in kyProjectList" :key="item.href">
-			<a :href="item.href" target="_blank" class="s-case-link">
-				<img class="lazy" :data-original="item.src" :src="item.src" style="">
-			</a>
-      <div class="s-case-h3">
-        <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
-        <span class="s-author"> {{ item.author }} </span>
-      </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
+          v-for="item in kyProjectList" :key="item.href">
+          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%"/></a>
+          <div class="s-case-h3">
+            <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
+            <span class="s-author"> {{ item.author }} </span>
+          </div>
+          <div>
 			<p class="s-case-intro">{{ item.intro }}</p>
-		</div>
-	</div>
+		  </div>
+        </el-card>
+    </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
@@ -94,10 +133,15 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 ---
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
-    <div class="com-box com-box-you table-show-pj">
-        <a :href="item.href" target="_blank" v-for="item in qyProjectList" :key="item.href">
-    		<img class="lazy" :title="item.title" :src="item.src" :style="item.style">
-    	</a>
+    <div style="display: flex; flex-wrap: wrap;">
+        <el-card style="max-width: 33%; max-height: 140px; flex: 1 1 calc(16% - 20px); padding: 0px;" shadow="hover"
+          v-for="item in qyProjectList" :key="item.href">
+          <a :href="item.href" target="_blank">
+          <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
+    		  <img style="width: 100%" :title="item.title" :src="item.src">
+          </el-tooltip>
+          </a>
+        </el-card>
     </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
@@ -111,6 +155,16 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 ---
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">Dromara 成员项目</strong><br><br><br>
+    <div style="display: flex; flex-wrap: wrap;">
+        <el-card style="max-width: 33%; max-height: 140px; flex: 1 1 calc(16% - 20px); padding: 0px;" shadow="hover"
+          v-for="item in dromaraList" :key="item.href">
+          <a :href="item.href" target="_blank">
+          <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
+    		  <img style="width: 100%" :title="item.title" :src="item.src">
+          </el-tooltip>
+          </a>
+        </el-card>
+    </div>
     <div class="com-box com-box-you table-show-pj">
     	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
         <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
@@ -349,13 +403,6 @@ export default {
     margin: 0px;
     cursor: pointer;
 }   
-
-.vp-feature-item:hover {
-  background-color: var(--bg-color-secondary);
-  box-shadow: 0 2px 12px 0 var(--card-shadow);
-  transform: translate(-2px, -2px);
-  transform: scale(1.05);
-}
 .links {
     display: flex;
     flex-wrap: wrap;
@@ -368,47 +415,6 @@ export default {
 .links a img {
     width: 200px !important;
     height: 200px !important;
-}
-.vp-feature-item:hover {
-  background-color: var(--bg-color-secondary);
-  box-shadow: 0 2px 12px 0 var(--card-shadow);
-  transform: translate(-2px, -2px);
-  transform: scale(1.05);
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.links a {
-  padding: 10px;
-}
-
-.links a img {
-  width: 200px !important;
-  height: 200px !important;
-}
-
-.version-badge {
-  padding: 4px 8px; /* 内边距 */
-  font-size: 20px; /* 字体大小 */
-  border-radius: 4px; /* 圆角 */
-  margin: 4px; /* 外边距 */
-}
-.vp-site-info {
-  width: calc(31%);
-}
-
-.s-case-box {
-    justify-content: space-between;
-}
-.feature-box {
-    margin-top: 10px;
-    margin-bottom: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 .s-case {
     position: relative;
@@ -432,23 +438,11 @@ export default {
   font-weight: 400;
   color: #333;
   font-family: "microsoft yahei";
-}
-
+} 
 .s-case-intro {
-    padding: 0 16px;
+    padding: 9px 0px 0px 0px;
     word-break: break-all;
     color: #777;
-}
-.s-case-link {
-    display: block;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    img {
-      height: 190px;
-      object-fit: cover;
-      width: 100%;
-    }
 }
 .s-author {
     padding: 0 5px;
