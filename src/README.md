@@ -163,8 +163,8 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
-        { href: "", title: "半月无霜", src: "http://localhost:8081/logo.png" },
-        { href: "", title: "图灵谷", src: "http://localhost:8081/logo.png" }
+        { href: "", title: "半月无霜", src: "logo.png" },
+        { href: "", title: "图灵谷", src: "logo.png" }
         ];
 
       kyProjectList.value = [

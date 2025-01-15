@@ -39,6 +39,7 @@
 - [refactor] 重构获取前置节点方法NodeService.previousNodeList
 - [fix] 修复退回时存在其他代办任务，未删除的问题
 - [fix] 修复流程退回目标节点前存在并行网关，导致不生成代办任务的问题
+- [fix] 修复条件表达式中如果有`|`或导致错误分隔的问题
 - [remove] 移除DefService获取流程图api，由ChartService中chartIns和chartDef代替
 
 ### v1.3.8 2025-01-07

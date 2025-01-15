@@ -55,17 +55,17 @@ export default hopeTheme(
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/upgrade/4.html\'" class="link-style">' +
-                        '       <strong>🧨🧨新春版v1.6.0发布🧨🧨：网关直连和流程图重构</strong> ' +
+                        '       <strong>🧨🧨新春版v1.6.0-m3尝鲜版🧨🧨：网关直连和流程图重构</strong> ' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
-                        '       ⭐️ Star ：一键三连，你的Star是我持续开发的动力' +
+                        '       ⭐️ Star：一键三连，你的Star是我持续开发的动力' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       ❓ 疑问 :    先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '       ❓ 疑问：先看常见问题和issue，然后再是提👉 issue 👈' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +

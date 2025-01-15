@@ -106,112 +106,18 @@
 
 ### 3.3、jpa
 
-::: code-tabs#shell
-
-@tab:active 必须配置
-
-```yml
-# warm-flow工作流配置
-warm-flow:
-  # 当使用JPA时指定JpaPersistenceProvider
-  jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
-```
-
-@tab springboot2
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-jpa-sb-starter</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-@tab solon
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-mybatis-plus-solon-plugin</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-:::
+[https://gitee.com/warm_4/warm-flow-jpa.git](https://gitee.com/warm_4/warm-flow-jpa.git)
 
 
 ### 3.4、mybatis-flex
 
-::: code-tabs#shell
+[https://gitee.com/rigangxia/warm-flow-mybatis-flex.git](https://gitee.com/rigangxia/warm-flow-mybatis-flex.git)
 
-@tab:active springboot2
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-mybatis-flex-sb-starter</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-@tab springboot3
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-mybatis-flex-sb3-starter</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-@tab solon
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-mybatis-flex-solon-plugin</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-:::
 
 
 ### 3.5、easy-query
 
-::: code-tabs#shell
-
-@tab:active springboot2
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-easy-query-sb-starter</artifactId>
-    <version>最新版本</version>
-</dependency>
-```
-
-@tab solon
-
-```xml
-<dependency>
-    <groupId>org.dromara.warm</groupId>
-    <artifactId>warm-flow-easy-query-solon-plugin</artifactId>
-    <exclusions>
-        <exclusion>
-            <groupId>org.noear</groupId>
-            <artifactId>solon.data</artifactId>
-        </exclusion>
-        <exclusion>
-            <groupId>org.noear</groupId>
-            <artifactId>solon.logging</artifactId>
-        </exclusion>
-    </exclusions>
-    <version>最新版本</version>
-</dependency>
-```
-
-:::
+[https://gitee.com/link2fun/warm-flow-easy-query.git](https://gitee.com/link2fun/warm-flow-easy-query.git)
 
 
 
