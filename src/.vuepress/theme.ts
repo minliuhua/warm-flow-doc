@@ -55,7 +55,7 @@ export default hopeTheme(
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/upgrade/4.html\'" class="link-style">' +
-                        '       <strong>🧨🧨新春版v1.6.0-m3尝鲜版🧨🧨：网关直连和流程图重构</strong> ' +
+                        '       <strong>🧨🧨新春版v1.6.0-m4尝鲜版🧨🧨：网关直连和流程图重构</strong> ' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
