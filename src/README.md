@@ -66,7 +66,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
----
+<hr style="max-width: 100vw" />
 
 <el-carousel class="carousel" type="card" :interval="4000" height="650px" style="width: 100%" indicator-position="outside">
     <el-carousel-item style="text-align: center;">
@@ -88,9 +88,16 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </el-carousel>
 
 <style scoped>
+.theme-hope-content {
+  max-width: 100vw !important;
+}
 .el-carousel__item img {
   height: 600px;
   object-fit: contain;
+}
+hr {
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
 }
 .el-carousel__item h3 {
   color: #475669;
@@ -101,7 +108,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 }
 </style>
 
----
+<hr style="max-width: 100vw" />
 
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
@@ -175,7 +182,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 
 ---
-<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">
+<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;max-width: var(--content-width, 740px);margin: 0 auto;">
 	<br><strong style="font-size: 30px;">👍友情链接</strong><br><br><br>
     <div class="links ">
             <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
@@ -364,6 +371,8 @@ export default {
   padding: 1em 1em;
   padding-bottom: 30px;
   text-align: center;
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
 }
 .com-box-f .el-card__body {
   padding: 0px;
