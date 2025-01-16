@@ -66,9 +66,9 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
----
+<hr style="max-width: 100vw" />
 
-<el-carousel type="card" :interval="4000" height="600px" style="width: 100%">
+<el-carousel class="carousel" type="card" :interval="4000" height="650px" style="width: 100%" indicator-position="outside">
     <el-carousel-item style="text-align: center;">
         <img src="https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg"/>
         <h3 class="small justify-end" text="2xl">G-Star</h3>
@@ -88,24 +88,27 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </el-carousel>
 
 <style scoped>
+.theme-hope-content {
+  max-width: 100vw !important;
+}
+.el-carousel__item img {
+  height: 600px;
+  object-fit: contain;
+}
+hr {
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
+}
 .el-carousel__item h3 {
   color: #475669;
   opacity: 0.75;
-  line-height: 200px;
+  line-height: 50px;
   margin: 0;
   text-align: center;
 }
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
 </style>
 
----
+<hr style="max-width: 100vw" />
 
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
@@ -179,7 +182,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 
 ---
-<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">
+<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;max-width: var(--content-width, 740px);margin: 0 auto;">
 	<br><strong style="font-size: 30px;">👍友情链接</strong><br><br><br>
     <div class="links ">
             <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
@@ -368,6 +371,8 @@ export default {
   padding: 1em 1em;
   padding-bottom: 30px;
   text-align: center;
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
 }
 .com-box-f .el-card__body {
   padding: 0px;
