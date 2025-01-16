@@ -68,20 +68,20 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
-<el-carousel :interval="4000" height="600px" style="width: 600px; overflow: inherit">
-    <el-carousel-item>
+<el-carousel type="card" :interval="4000" height="600px" style="width: 100%">
+    <el-carousel-item style="text-align: center;">
         <img src="https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg"/>
         <h3 class="small justify-end" text="2xl">G-Star</h3>
     </el-carousel-item>
-    <el-carousel-item>
+    <el-carousel-item style="text-align: center;">
         <img src="https://foruda.gitee.com/images/1736921883064913542/15bd8fd1_2218307.png"/>
         <h3 class="small justify-end" text="2xl">gitee star数超1.7k</h3>
     </el-carousel-item>
-    <el-carousel-item>
+    <el-carousel-item style="text-align: center;">
         <img src="/Warm-Flow工作流引擎软件.png" />
         <h3 class="small justify-end" text="2xl">软著</h3>
     </el-carousel-item>
-    <el-carousel-item>
+    <el-carousel-item style="text-align: center;">
         <img src="https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg"/>
         <h3 class="small justify-end" text="2xl">dromara全家福</h3>
     </el-carousel-item>
@@ -109,10 +109,10 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
           v-for="item in kyProjectList" :key="item.href">
-          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%"/></a>
+          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%;height: 190px;"/></a>
           <div class="s-case-h3">
             <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
             <span class="s-author"> {{ item.author }} </span>
@@ -132,17 +132,16 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f">
+<div class="com-box-img">
     <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
-        <el-card style="max-width: 33%; max-height: 140px; flex: 1 1 calc(16% - 20px); padding: 0px;" shadow="hover"
-          v-for="item in qyProjectList" :key="item.href">
-          <a :href="item.href" target="_blank">
+      <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
+        <a :href="item.href" target="_blank">
           <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
-    		  <img style="width: 100%" :title="item.title" :src="item.src">
+            <img style="width: 100%" :title="item.title" :src="item.src">
           </el-tooltip>
-          </a>
-        </el-card>
+        </a>
+      </el-card>
     </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
@@ -154,17 +153,16 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f">
+<div class="com-box-img">
     <br><strong style="font-size: 30px;">Dromara 成员项目</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
-        <el-card style="max-width: 33%; max-height: 140px; flex: 1 1 calc(16% - 20px); padding: 0px;" shadow="hover"
-          v-for="item in dromaraList" :key="item.href">
-          <a :href="item.href" target="_blank">
+      <el-card shadow="hover" v-for="item in dromaraList" :key="item.href">
+        <a :href="item.href" target="_blank">
           <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
-    		  <img style="width: 100%" :title="item.title" :src="item.src">
+            <img style="width: 100%" :title="item.title" :src="item.src">
           </el-tooltip>
-          </a>
-        </el-card>
+        </a>
+      </el-card>
     </div>
     <div class="com-box com-box-you table-show-pj">
     	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
@@ -365,10 +363,34 @@ export default {
   margin-bottom: 50px;
   justify-content: flex-start;
 }
+.com-box-img,
 .com-box-f {
-    padding: 1em 1em;
-    padding-bottom: 30px;
-    text-align: center;
+  padding: 1em 1em;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.com-box-f .el-card__body {
+  padding: 0px;
+}
+.com-box-img .el-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 76px;
+  flex: 1 1 calc(16% - 20px);
+  padding: 10px;
+}
+.com-box-img .el-card .el-card__body {
+  height: 100%;
+  padding: 0;
+}
+.com-box-img .el-card .el-card__body a {
+  display: block;
+  height: 100%;
+}
+.com-box-img .el-card .el-card__body a img {
+  object-fit: contain;
+  height: 100%;
 }
 .com-box-you a {
     flex: 0 0 14.5%;
@@ -441,9 +463,10 @@ export default {
   font-family: "microsoft yahei";
 } 
 .s-case-intro {
-    padding: 9px 0px 0px 0px;
+    padding: 9px 16px 0px 16px;
     word-break: break-all;
     color: #777;
+    text-align: left;
 }
 .s-author {
     padding: 0 5px;
