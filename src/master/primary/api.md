@@ -78,7 +78,7 @@
 - 返回值：base64编码的图片流字符串，流程实例开启后，流程图元数据存储在实例表中的def_json字段中
 
 ### 流程图(不渲染状态)-自行渲染
-`DefChart(definitionId)`：根据流程定义ID,获取流程图对象
+`chartDefObj(definitionId)`：根据流程定义ID,获取流程图对象
 
 ## InsService流程实例
 
