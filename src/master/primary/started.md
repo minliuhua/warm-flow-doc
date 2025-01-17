@@ -30,7 +30,13 @@
 
 
 ## 3、maven依赖
-### 3.1、mybatis
+### 3.1、从首页获取最新版本
+<br>
+
+<img src="https://foruda.gitee.com/images/1737083610883952173/03616595_2218307.png" width="500px">
+<br>
+
+### 3.2、mybatis
 
 ::: code-tabs#shell
 
@@ -67,7 +73,7 @@
 :::
 
 
-### 3.2、mybatis-plus
+### 3.3、mybatis-plus
 
 ::: code-tabs#shell
 
@@ -104,18 +110,18 @@
 :::
 
 
-### 3.3、jpa
+### 3.4、jpa
 
 [https://gitee.com/warm_4/warm-flow-jpa.git](https://gitee.com/warm_4/warm-flow-jpa.git)
 
 
-### 3.4、mybatis-flex
+### 3.5、mybatis-flex
 
 [https://gitee.com/rigangxia/warm-flow-mybatis-flex.git](https://gitee.com/rigangxia/warm-flow-mybatis-flex.git)
 
 
 
-### 3.5、easy-query
+### 3.6、easy-query
 
 [https://gitee.com/link2fun/warm-flow-easy-query.git](https://gitee.com/link2fun/warm-flow-easy-query.git)
 

@@ -55,11 +55,6 @@ export default hopeTheme(
                     title: "请务必阅读",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/news/upgrade/4.html\'" class="link-style">' +
-                        '       <strong>🧨🧨新春版v1.6.0-m4尝鲜版🧨🧨：网关直连和流程图重构</strong> ' +
-                        '     </span>\n' +
-                        '</div>' +
-                        '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
                         '       ⭐️ Star：一键三连，你的Star是我持续开发的动力' +
                         '     </span>\n' +
