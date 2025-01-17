@@ -68,22 +68,10 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 <hr style="max-width: 100vw" />
 
-<el-carousel class="carousel" type="card" :interval="4000" height="650px" style="width: 100%" indicator-position="outside">
-    <el-carousel-item style="text-align: center;">
-        <img src="https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg"/>
-        <h3 class="small justify-end" text="2xl">G-Star</h3>
-    </el-carousel-item>
-    <el-carousel-item style="text-align: center;">
-        <img src="https://foruda.gitee.com/images/1736921883064913542/15bd8fd1_2218307.png"/>
-        <h3 class="small justify-end" text="2xl">gitee star数超1.7k</h3>
-    </el-carousel-item>
-    <el-carousel-item style="text-align: center;">
-        <img src="/Warm-Flow工作流引擎软件.png" />
-        <h3 class="small justify-end" text="2xl">软著</h3>
-    </el-carousel-item>
-    <el-carousel-item style="text-align: center;">
-        <img src="https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg"/>
-        <h3 class="small justify-end" text="2xl">dromara全家福</h3>
+<el-carousel class="carousel" type="card" :interval="3000" height="650px" style="width: 100%" indicator-position="outside">
+    <el-carousel-item style="text-align: center;" v-for="item in rzList" :key="item.title">
+        <img :src="item.src"/>
+        <h3 class="small justify-end" text="2xl">{{item.title}}</h3>
     </el-carousel-item>
 </el-carousel>
 
@@ -201,8 +189,16 @@ export default {
     const qyProjectList = ref([]);
     const kyProjectList = ref([]);
     const dromaraList = ref([]);
+    const rzList = ref([]);
 
     const fetchData = async () => {
+      rzList.value = [
+        { title: "Gitee star数超1.7k", src: "https://foruda.gitee.com/images/1737022334513857663/1cd362ad_2218307.png" },
+        { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
+        { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
+        { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
+      ];
+
       projectList.value = [
         { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
@@ -353,6 +349,7 @@ export default {
       qyProjectList,
       kyProjectList,
       dromaraList,
+      rzList,
     };
   },
 };
