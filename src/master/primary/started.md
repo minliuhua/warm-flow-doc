@@ -33,7 +33,7 @@
 ### 3.1、从首页获取最新版本
 <br>
 
-<img src="https://foruda.gitee.com/images/1737083610883952173/03616595_2218307.png" width="500px">
+<img src="https://foruda.gitee.com/images/1737083916006381044/743f5bfb_2218307.png" width="500px">
 <br>
 
 ### 3.2、mybatis
