@@ -66,22 +66,53 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 
----
+<hr style="max-width: 100vw" />
+
+<el-carousel class="carousel" type="card" :interval="3000" height="650px" style="width: 100%" indicator-position="outside">
+    <el-carousel-item style="text-align: center;" v-for="item in rzList" :key="item.title">
+        <img :src="item.src"/>
+        <h3 class="small justify-end" text="2xl">{{item.title}}</h3>
+    </el-carousel-item>
+</el-carousel>
+
+<style scoped>
+.theme-hope-content {
+  max-width: 100vw !important;
+}
+.el-carousel__item img {
+  height: 600px;
+  object-fit: contain;
+}
+hr {
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
+}
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 50px;
+  margin: 0;
+  text-align: center;
+}
+</style>
+
+<hr style="max-width: 100vw" />
 
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
-    <div class="feature-box s-case-box">
-		<div class="s-case" v-for="item in kyProjectList" :key="item.href">
-			<a :href="item.href" target="_blank" class="s-case-link">
-				<img class="lazy" :data-original="item.src" :src="item.src" style="">
-			</a>
-      <div class="s-case-h3">
-        <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
-        <span class="s-author"> {{ item.author }} </span>
-      </div>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
+          v-for="item in kyProjectList" :key="item.href">
+          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%;height: 190px;"/></a>
+          <div class="s-case-h3">
+            <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
+            <span class="s-author"> {{ item.author }} </span>
+          </div>
+          <div>
 			<p class="s-case-intro">{{ item.intro }}</p>
-		</div>
-	</div>
+		  </div>
+        </el-card>
+    </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
@@ -92,12 +123,16 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f">
+<div class="com-box-img">
     <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
-    <div class="com-box com-box-you table-show-pj">
-        <a :href="item.href" target="_blank" v-for="item in qyProjectList" :key="item.href">
-    		<img class="lazy" :title="item.title" :src="item.src" :style="item.style">
-    	</a>
+    <div style="display: flex; flex-wrap: wrap;">
+      <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
+        <a :href="item.href" target="_blank">
+          <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
+            <img style="width: 100%" :title="item.title" :src="item.src">
+          </el-tooltip>
+        </a>
+      </el-card>
     </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
@@ -109,8 +144,17 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 </div>
 
 ---
-<div class="com-box-f">
+<div class="com-box-img">
     <br><strong style="font-size: 30px;">Dromara 成员项目</strong><br><br><br>
+    <div style="display: flex; flex-wrap: wrap;">
+      <el-card shadow="hover" v-for="item in dromaraList" :key="item.href">
+        <a :href="item.href" target="_blank">
+          <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
+            <img style="width: 100%" :title="item.title" :src="item.src">
+          </el-tooltip>
+        </a>
+      </el-card>
+    </div>
     <div class="com-box com-box-you table-show-pj">
     	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
         <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
@@ -126,7 +170,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 
 ---
-<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;">
+<div style="padding: 1em 1em; padding-bottom: 30px; text-align: center;max-width: var(--content-width, 740px);margin: 0 auto;">
 	<br><strong style="font-size: 30px;">👍友情链接</strong><br><br><br>
     <div class="links ">
             <a :href="item.href" target="_blank" v-for="item in projectList" :key="item.href">
@@ -145,8 +189,16 @@ export default {
     const qyProjectList = ref([]);
     const kyProjectList = ref([]);
     const dromaraList = ref([]);
+    const rzList = ref([]);
 
     const fetchData = async () => {
+      rzList.value = [
+        { title: "Gitee star数超1.7k", src: "https://foruda.gitee.com/images/1737022334513857663/1cd362ad_2218307.png" },
+        { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
+        { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
+        { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
+      ];
+
       projectList.value = [
         { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
@@ -163,8 +215,8 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
-        { href: "", title: "半月无霜", src: "http://localhost:8081/logo.png" },
-        { href: "", title: "图灵谷", src: "http://localhost:8081/logo.png" }
+        { href: "", title: "半月无霜", src: "logo.png" },
+        { href: "", title: "图灵谷", src: "logo.png" }
         ];
 
       kyProjectList.value = [
@@ -253,7 +305,7 @@ export default {
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
           <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
-          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/github/v/release/dromara/warm-flow' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.3.8-beta_1.6.0--m5-blue' alt='fork'></a>
         </p>
       `;
 
@@ -297,6 +349,7 @@ export default {
       qyProjectList,
       kyProjectList,
       dromaraList,
+      rzList,
     };
   },
 };
@@ -310,10 +363,36 @@ export default {
   margin-bottom: 50px;
   justify-content: flex-start;
 }
+.com-box-img,
 .com-box-f {
-    padding: 1em 1em;
-    padding-bottom: 30px;
-    text-align: center;
+  padding: 1em 1em;
+  padding-bottom: 30px;
+  text-align: center;
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
+}
+.com-box-f .el-card__body {
+  padding: 0px;
+}
+.com-box-img .el-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 76px;
+  flex: 1 1 calc(16% - 20px);
+  padding: 10px;
+}
+.com-box-img .el-card .el-card__body {
+  height: 100%;
+  padding: 0;
+}
+.com-box-img .el-card .el-card__body a {
+  display: block;
+  height: 100%;
+}
+.com-box-img .el-card .el-card__body a img {
+  object-fit: contain;
+  height: 100%;
 }
 .com-box-you a {
     flex: 0 0 14.5%;
@@ -349,13 +428,6 @@ export default {
     margin: 0px;
     cursor: pointer;
 }   
-
-.vp-feature-item:hover {
-  background-color: var(--bg-color-secondary);
-  box-shadow: 0 2px 12px 0 var(--card-shadow);
-  transform: translate(-2px, -2px);
-  transform: scale(1.05);
-}
 .links {
     display: flex;
     flex-wrap: wrap;
@@ -368,47 +440,6 @@ export default {
 .links a img {
     width: 200px !important;
     height: 200px !important;
-}
-.vp-feature-item:hover {
-  background-color: var(--bg-color-secondary);
-  box-shadow: 0 2px 12px 0 var(--card-shadow);
-  transform: translate(-2px, -2px);
-  transform: scale(1.05);
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.links a {
-  padding: 10px;
-}
-
-.links a img {
-  width: 200px !important;
-  height: 200px !important;
-}
-
-.version-badge {
-  padding: 4px 8px; /* 内边距 */
-  font-size: 20px; /* 字体大小 */
-  border-radius: 4px; /* 圆角 */
-  margin: 4px; /* 外边距 */
-}
-.vp-site-info {
-  width: calc(31%);
-}
-
-.s-case-box {
-    justify-content: space-between;
-}
-.feature-box {
-    margin-top: 10px;
-    margin-bottom: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 .s-case {
     position: relative;
@@ -432,23 +463,12 @@ export default {
   font-weight: 400;
   color: #333;
   font-family: "microsoft yahei";
-}
-
+} 
 .s-case-intro {
-    padding: 0 16px;
+    padding: 9px 16px 0px 16px;
     word-break: break-all;
     color: #777;
-}
-.s-case-link {
-    display: block;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    img {
-      height: 190px;
-      object-fit: cover;
-      width: 100%;
-    }
+    text-align: left;
 }
 .s-author {
     padding: 0 5px;
