@@ -6,7 +6,6 @@
 
 ### v1.6.0
 - 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
-- 升级前先把在途的流程实例全部走完，否则在途的流程实例会有问题
 - 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
 - 全局FlowFactory替换成FlowEngine
 - [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护
@@ -14,6 +13,7 @@
   - 条件表达式前端拼接需要把原本`eq|flag|5`格式 改成 `eq@@flag|5`,
   - `spel|#{@user.eval(#flag)}`改成`spel@@#{@user.eval(flag)}`
   - `default|${flag == 5 && flag > 4}``改成``default@@${flag == 5 && flag > 4}`
+- 最后流程图数据同步：通过DefService.hisToDefJson接口，把历史任务表记录转成新的流程图元数据，保存到实例表中的defJson，新版本流程图才能正常查看
 
 ::: tip 原skip.vue：`|`分隔回显
 ```js {4}

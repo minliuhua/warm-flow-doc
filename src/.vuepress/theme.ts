@@ -51,45 +51,27 @@ export default hopeTheme(
             },
             notice: [
                 {
-                    path: "/",
-                    title: "请务必阅读",
+                    path: "/master",
+                    title: "公告：1.6.0-m6测试版",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
-                        '       ⭐️ Star：一键三连，你的Star是我持续开发的动力' +
-                        '     </span>\n' +
-                        '</div>' +
-                        '<div>\n' +
-                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       ❓ 疑问：先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '       🔵 新增网关直连和测试案例' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
-                        '       📖使用文档：集成前先快速浏览，大概知道有功能和注意事项' +
+                        '       🔵 流程图重构' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
-                            text: "⭐️star⭐️",
-                            link: "https://gitee.com/dromara/warm-flow/stargazers",
+                            text: "详细更新记录",
+                            link: "/master/other/update.html#v1-6-0-2025-01-17-升级指南",
                             type: "primary",
                         },
-                        {
-                            text: "👉issue👈",
-                            link: "https://gitee.com/dromara/warm-flow/issues",
-                            type: "primary",
-                        },
-                        {
-                            text: "❓常见问题❓",
-                            link: "/master/other/troubleshooting.html",
-                            type: "primary",
-                        },
-                        { text: "取消" },
                     ],
                     showOnce: false,
-                    fullscreen: true,
-                    confirm: true
                 },
             ],
             slimsearch: true,

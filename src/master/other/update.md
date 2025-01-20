@@ -26,6 +26,7 @@
 - [feat] 新增网关直连和测试案例
 - [feat] 流程图右上角新增完成状态颜色示例
 - [feat] 新增流程图查询接口和扩展接口ChartService
+- [feat] 新增历史表数据同步为新的流程图元数据
 - [update] 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json的api
 - [update] FlowFactory修改为FlowEngine
 - [update] 历史表目标节点编码和目标节点名称字段长度改为200
@@ -33,6 +34,7 @@
 - [update] 退回或者任务完成，其他需要被删除的任务不需要记录历史表，因为已经存在退回记录，不需要重复记录
 - [update] 转办、委派、加签和减签，改为只产生一条历史记录
 - [update] 批量保存改为默认1000条一批
+- [update] 流程设计保存，增加遮罩层
 - [refactor] 流程图绘制调整重构
 - [refactor] 移除mybatis-flex,easy-query和jpa的扩展包，独立成项目，由专门人维护
 - [refactor] 实体类和dao获取改为通过反射，解耦orm-core包
@@ -43,6 +45,7 @@
 - [fix] 修复绘制流程图，错误判断同一条录像的key
 - [fix] 修复结束节点还执行创建监听器的问题
 - [remove] 移除DefService获取流程图api，由ChartService中chartIns和chartDef代替
+- [remove] 删除前端log打印
 
 ### v1.3.8 2025-01-07
 
