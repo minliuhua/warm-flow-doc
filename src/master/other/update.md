@@ -27,6 +27,7 @@
 - [feat] 流程图右上角新增完成状态颜色示例
 - [feat] 新增流程图查询接口和扩展接口ChartService
 - [feat] 新增历史表数据同步为新的流程图元数据
+- [feat] 新增sqlserver全量脚本
 - [update] 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json的api
 - [update] FlowFactory修改为FlowEngine
 - [update] 历史表目标节点编码和目标节点名称字段长度改为200
