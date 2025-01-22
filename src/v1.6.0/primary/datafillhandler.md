@@ -40,9 +40,10 @@ public class CustomDataFillHandler implements DataFillHandler {
 ```
 
 ## 2、注入bean
-### 2.1、通过@Component方式注入
+::: code-tabs#shell
 
-### 2.2、yaml配置方式
+@tab:active yaml
+
 ```yml
 # warm-flow工作流配置
 warm-flow:
@@ -50,7 +51,8 @@ warm-flow:
   data-fill-handler-path: com.ruoyi.system.handle.CustomDataFillHandler
 ```
 
-### 2.3、@Configuration+@Bean配置方式
+@tab @Bean
+
 ```java
 @Configuration
 public class WarmFlowConfig {
@@ -61,3 +63,16 @@ public class WarmFlowConfig {
     }
 }
 ```
+
+@tab @Component
+
+```java
+@Component
+public class CustomDataFillHandler implements DataFillHandler {
+
+    ...实际代码
+}
+```
+
+:::
+

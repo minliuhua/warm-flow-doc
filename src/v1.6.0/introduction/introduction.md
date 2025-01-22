@@ -44,11 +44,12 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
 10. 跨部门协作：Dromara Warm-Flow支持跨部门的流程协作，帮助不同部门之间更好地协调工作。
 
 ## 4、支持数据库类型
-::: tip 目前支持MySQL 、Oracle 和PostgreSQL，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
+::: tip 目前支持MySQL 、Oracle、PostgreSQL和SQL Server，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
 :::
-* [x] mysql
-* [x] oracle
-* [x] postgresql
+* [x] MySQL
+* [x] Oracle
+* [x] PostgreSQL
+* [x] SQL Server
 * [ ] ......
 
 

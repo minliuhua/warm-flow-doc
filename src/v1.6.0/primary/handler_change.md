@@ -16,10 +16,11 @@
 
 ## 3、代码示例
 
+::: code-tabs#shell
+
+@tab:active 转办
+
 ```java
-/**
- * 转办
- */
 public void transfer(TaskService taskService) {
 
     taskService.transfer(getTaskId(), new FlowParams()
@@ -28,10 +29,11 @@ public void transfer(TaskService taskService) {
             .addHandlers(Arrays.asList("1","2"))
             .message("转办"));
 }
+```
 
-/**
- * 委派
- */
+@tab 委派
+
+```java
 public void depute(TaskService taskService){
     taskService.transfer(getTaskId(), new FlowParams()
             .handler("1")
@@ -39,10 +41,11 @@ public void depute(TaskService taskService){
             .addHandlers(Arrays.asList("1","2"))
             .message("委派"));
 }
+```
 
-/**
- * 加签
- */
+@tab 加签
+
+```java
 public void addSignature(TaskService taskService){
     taskService.addSignature(getTaskId(), new FlowParams()
             .handler("1")
@@ -50,10 +53,11 @@ public void addSignature(TaskService taskService){
             .addHandlers(Arrays.asList("1","2"))
             .message("加签"));
 }
+```
 
-/**
- * 减签
- */
+@tab 减签
+
+```java
 public void reductionSignature(TaskService taskService){
     taskService.reductionSignature(getTaskId(), new FlowParams()
             .handler("1")
@@ -62,3 +66,5 @@ public void reductionSignature(TaskService taskService){
             .message("减签"));
 }
 ```
+
+:::

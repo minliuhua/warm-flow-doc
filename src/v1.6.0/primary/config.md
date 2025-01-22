@@ -1,7 +1,7 @@
 # 配置文件
 ::: code-tabs#shell
 
-@tab:active spring
+@tab:active springboot
 
 ```yml
 # warm-flow工作流配置

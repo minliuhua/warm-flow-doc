@@ -1,16 +1,91 @@
 # 升级指南
 ::: tip
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
+- 只提供mysql升级脚本和全量脚本，其他升级脚本的自行由mysql升级脚本转换
 
 :::
 
 ### v1.6.0
 - 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
-- 升级前先把在途的流程实例全部走完，否则在途的流程实例会有问题
 - 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
 - 全局FlowFactory替换成FlowEngine
 - [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护
+- 如果设计器是自己维护的，需要相应调整，可以参考如下
+  - 条件表达式前端拼接需要把原本`eq|flag|5`格式 改成 `eq@@flag|5`,
+  - `spel|#{@user.eval(#flag)}`改成`spel@@#{@user.eval(flag)}`
+  - `default|${flag == 5 && flag > 4}``改成``default@@${flag == 5 && flag > 4}`
+- 最后流程图数据同步：通过DefService.hisToDefJson接口，把历史任务表记录转成新的流程图元数据，保存到实例表中的defJson，新版本流程图才能正常查看
 
+::: tip 原skip.vue：`|`分隔回显
+```js {4}
+watch(() => form, n => {
+  n = n.value;
+  let skipCondition = '';
+  skipCondition = n.conditionType + "|";
+  if (!/^spel/.test(n.conditionType) && !/^default/.test(n.conditionType)) {
+    skipCondition = skipCondition
+            + (n.condition ? n.condition : '') + "|";
+  }
+  n.skipCondition = skipCondition
+          + (n.conditionValue ? n.conditionValue : '')
+  if (n) {
+    emit('change', n)
+  }
+}, {deep: true});
+```
+:::
+
+::: tip 现skip.vue：`@@`分隔回显
+```js {4}
+watch(() => form, n => {
+  n = n.value;
+  let skipCondition = '';
+  skipCondition = n.conditionType + "@@";
+  if (!/^spel/.test(n.conditionType) && !/^default/.test(n.conditionType)) {
+    skipCondition = skipCondition
+            + (n.condition ? n.condition : '') + "|";
+  }
+  n.skipCondition = skipCondition
+          + (n.conditionValue ? n.conditionValue : '')
+  if (n) {
+    emit('change', n)
+  }
+}, {deep: true});
+```
+:::
+
+::: tip 原/PropertySetting/index.vue：`|`分隔回显
+```js {2,8-9}
+if (skipCondition) {
+  let conditionSpl = skipCondition.split('|')
+  if (skipCondition && (/^spel/.test(skipCondition) || /^default/.test(skipCondition))) {
+    conditionType = conditionSpl && conditionSpl.length > 0 ? conditionSpl[0] : ''
+    conditionValue = conditionSpl && conditionSpl.length > 1 ? conditionSpl[1] : ''
+  } else if (skipCondition) {
+    conditionType = conditionSpl && conditionSpl.length > 0 ? conditionSpl[0] : ''
+    condition = conditionSpl && conditionSpl.length > 1 ? conditionSpl[1] : ''
+    conditionValue = conditionSpl && conditionSpl.length > 2 ? conditionSpl[2] : ''
+  }
+}
+```
+:::
+
+::: tip 现/PropertySetting/index.vue：`@@`分隔回显
+```js {2,8-10}
+if (skipCondition) {
+  let conditionSpl = skipCondition.split('@@')
+  if (skipCondition && (/^spel/.test(skipCondition) || /^default/.test(skipCondition))) {
+    conditionType = conditionSpl && conditionSpl.length > 0 ? conditionSpl[0] : ''
+    conditionValue = conditionSpl && conditionSpl.length > 1 ? conditionSpl[1] : ''
+  } else if (skipCondition) {
+    conditionType = conditionSpl && conditionSpl.length > 0 ? conditionSpl[0] : ''
+    let conditionOneSpl = conditionSpl[1].split("|")
+    condition = conditionOneSpl && conditionOneSpl.length > 0 ? conditionOneSpl[0] : ''
+    conditionValue = conditionOneSpl && conditionOneSpl.length > 1 ? conditionOneSpl[1] : ''
+  }
+}
+```
+:::
 
 ::: tip 原DefController.java：导入
 ```java
@@ -115,7 +190,7 @@ function getPermissionFlag() {
 ```
 :::
 
-::: tip 原/PropertySetting/index.html：入库拼接`,`
+::: tip 原/PropertySetting/index.vue：入库拼接`,`
 ```js {4}
 watch(() => form.value.permissionFlag, (n) => {
   // 监听节点属性变化并更新
@@ -126,7 +201,7 @@ watch(() => form.value.permissionFlag, (n) => {
 ```
 :::
 
-::: tip 现/PropertySetting/index.html：入库拼接`@@`
+::: tip 现/PropertySetting/index.vue：入库拼接`@@`
 ```js {4}
 watch(() => form.value.permissionFlag, (n) => {
   // 监听节点属性变化并更新
@@ -243,7 +318,7 @@ if (props.modelValue?.conditionType === 'spel' || props.modelValue?.conditionTyp
 ```
 :::
 
-::: tip 原/PropertySetting/index.html：回显js
+::: tip 原/PropertySetting/index.vue：回显js
 ```javascript
 let skipCondition = n.properties.skipCondition
 let conditionSpl = skipCondition ? skipCondition.split('@@|') : []
@@ -260,7 +335,7 @@ if (conditionSpl && conditionSpl.length > 0 && conditionSpl[0] === '@@spel') {
 ```
 :::
 
-::: tip 现/PropertySetting/index.html：回显js
+::: tip 现/PropertySetting/index.vue：回显js
 ```javascript
 let skipCondition = n.properties.skipCondition
 let condition, conditionType, conditionValue = ''

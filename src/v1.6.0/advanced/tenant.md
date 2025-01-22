@@ -6,8 +6,10 @@
 
 :::
 
+::: code-tabs#shell
 
-### 1.1、spring
+@tab:active springboot
+
 ```java
 @Component
 public class MpTenantHandler implements TenantLineHandler {
@@ -90,7 +92,8 @@ public class MybatisPlusConfig {
 }
 ```
 
-### 1.2、solon
+@tab solon
+
 ```java
 public class MpTenantHandler implements TenantLineHandler {
 
@@ -152,9 +155,13 @@ public class WarmFlowConfig {
 }
 ```
 
+:::
+
 
 ## 2、通用多租户
-### 2.1、yaml配置方式
+::: code-tabs#shell
+
+@tab:active yaml
 
 ```yaml
 # warm-flow工作流配置
@@ -162,7 +169,9 @@ warm-flow:
   # 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
   tenant_handler_path: org.dromara.warm.flow.core.test.handle.CustomTenantHandler
 ```
-### 2.2、bean配置方式
+
+@tab @bean
+
 ```java
 @Configuration
 public class WarmFlowConfig {
@@ -177,7 +186,8 @@ public class WarmFlowConfig {
 
 ```
 
-### 2.3、@Component配置方式
+@tab @Component
+
 ```java
 /**
  * 全局租户处理器（可通过配置文件注入，也可用@Bean/@Component方式
@@ -194,4 +204,7 @@ public class CustomTenantHandler implements TenantHandler {
     }
 }
 ```
+
+:::
+
 
