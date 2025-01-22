@@ -105,7 +105,7 @@ hr {
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
           v-for="item in kyProjectList" :key="item.href">
-          <el-image style="width: 100%;height: 190px;" :src="item.src"></el-image>
+          <el-image style="width: 100%;height: 190px;cursor: pointer" :src="item.src"></el-image>
           <div class="s-case-h3">
             <a :href="item.href" target="_blank"><span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span></a>
             <span class="s-author"> {{ item.author }} </span>
