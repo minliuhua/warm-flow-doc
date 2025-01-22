@@ -98,14 +98,23 @@ hr {
 
 <hr style="max-width: 100vw" />
 
+---
+
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
           v-for="item in kyProjectList" :key="item.href">
-          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%;height: 190px;"/></a>
+          <el-image style="width: 100%;height: 190px;"
+                  :src="item.src"
+                  :zoom-rate="1.2"
+                  :max-scale="0.4"
+                  :min-scale="0.2"
+                  :preview-src-list="[item.src]"
+                  fit="cover"
+                ></el-image>
           <div class="s-case-h3">
-            <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
+            <a :href="item.href" target="_blank"><span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span></a>
             <span class="s-author"> {{ item.author }} </span>
           </div>
           <div>
@@ -221,10 +230,12 @@ export default {
 
       kyProjectList.value = [
         { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
+        { href: "https://gitee.com/dromara/RuoYi-Vue-Plus", title: "RuoYi-Vue-Plus", src: "https://foruda.gitee.com/images/1737523204017735425/51f23421_2218307.png", author: "疯狂的狮子Li", intro: "多租户后台管理系统 重写RuoYi-Vue所有功能 集成 Sa-Token、Mybatis-Plus、Flowable、SpringDoc、Hutool、OSS 定期同步" },
+        { href: "https://gitee.com/dapppp/ruoyi-plus-vben5", title: "ruoyi-plus-vben5", src: "https://foruda.gitee.com/images/1737523316123951650/1dec0eeb_2218307.png", author: "玲娜贝er", intro: "基于vben最新版本v5 & ant-design-vue 的 RuoYi-Vue-Plus 前端项目" },
         { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seven", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
         { href: "/master/introduction/projectexample.md", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
-        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例:vue3前端" },
-        ];
+        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例:vue3前端" }, 
+      ];
 
       dromaraList.value = [
         {title: "一个轻量级的分布式日志标记追踪神器，10分钟即可接入，自动对日志打标签完成微服务的链路追踪", href: "https://gitee.com/dromara/TLog", src: "https://oss.dev33.cn/sa-token/link/tlog.png"},
@@ -305,7 +316,7 @@ export default {
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
           <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
-          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.3.8-beta_1.6.0--m6-blue' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.0-beta_not__have-blue' alt='fork'></a>
         </p>
       `;
 

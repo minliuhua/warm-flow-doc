@@ -63,6 +63,11 @@ export default hopeTheme(
                         '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
                         '       🔵 流程图重构' +
                         '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
+                        '       🔵 新增RuoYi-Vue-Plus优秀开源基础项目' +
+                        '     </span>\n' +
                         '</div>',
                     actions: [
                         {
