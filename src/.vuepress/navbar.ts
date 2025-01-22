@@ -45,7 +45,6 @@ export default navbar([
             { text: 'v1.3.3', link: '/v1.3.3/guide/started.md' },
             { text: 'v1.3.1', link: '/v1.3.1/guide/started.md' },
             { text: 'v1.3.0', link: '/v1.3.0/guide/started.md' },
-            { text: 'v1.2.10', link: '/v1.2.10/guide/started.md' },
             // { text: 'v1.2.8', link: '/v1.2.8/guide/started.md' },
             // { text: 'v1.2.7', link: '/v1.2.7/guide/started.md' },
             // { text: 'v1.2.6', link: '/v1.2.6/guide/started.md' },
