@@ -5,7 +5,7 @@
 
 :::
 
-### v1.6.0
+### v1.6.1
 - 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
 - 全局FlowFactory替换成FlowEngine

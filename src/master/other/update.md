@@ -19,9 +19,9 @@
 ## 开发中计划
 
 ## 更新日志
-### v1.6.0  2025-01-17 
+### v1.6.1  2025-01-23 
 
-- [升级指南](./upgrade_guide.md#v1-6-0)
+- [升级指南](./upgrade_guide.md#v1-6-1)
 - [feat] 导入、导出和保存等新增json格式支持DefService.importIs/importJson/importDef/saveDef/exportJson
 - [feat] 新增获取后置节点方法NodeService.suffixNodeList
 - [feat] 新增网关直连和测试案例
