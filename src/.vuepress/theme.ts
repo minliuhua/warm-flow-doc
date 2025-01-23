@@ -52,7 +52,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.0-正式版",
+                    title: "公告：1.6.1-正式版",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
