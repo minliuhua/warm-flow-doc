@@ -75,7 +75,7 @@ export default sidebar({
             ],
         }
     ],
-    "/v1.6.1/": [
+    "/v1.6.6/": [
         {
             text: "🤞开始",
             collapsible: true,

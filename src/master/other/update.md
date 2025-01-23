@@ -19,7 +19,7 @@
 ## 开发中计划
 
 ## 更新日志
-### v1.6.1  2025-01-23 
+### v1.6.6  2025-01-23 
 
 - [升级指南](./upgrade_guide.md#v1-6-1)
 - [feat] 导入、导出和保存等新增json格式支持DefService.importIs/importJson/importDef/saveDef/exportJson
