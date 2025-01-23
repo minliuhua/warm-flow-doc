@@ -157,8 +157,9 @@ public class DefFinishListener implements Listener {
 }
 ```
 
-### 5.4、分派监听器实现类例子
-如下图中示例可以很容易实现
+### 5.4、可实现的效果
+如下图中示例可以很容易实现  
+
 <img src="/assignmentlistener.jpg" width="550px" height="450px" />
 
 

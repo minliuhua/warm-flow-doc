@@ -50,6 +50,10 @@ public class VariableTest {
 
 > 比如B-->C, C任务设置办理人变量为`${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
 
+### 5、可实现的效果
+如下图中示例可以很容易实现 
+
+<img src="/assignmentlistener.jpg" width="550px" height="450px" />
 
 ## 5、默认办理人变量策略
 
@@ -72,7 +76,7 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 6、spel办理人变量策略
+## 7、spel办理人变量策略
 
 ### 前端页面设置变量
 - 比如：`#{@user.evalVar(#handler2)}`，是spel表达式，`#handler2`是方法入参变量，可以不设置
@@ -107,5 +111,5 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 7、办理人选择项接口
+## 8、办理人选择项接口
 - 通过此接口可以给办理人选择，增加默认选项比如发起人、部门领导审批之类的（待开发）
