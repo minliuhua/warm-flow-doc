@@ -44,7 +44,7 @@ highlights:
         link: /master/advanced/variableStategy.md
         details: 内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
 
-      - title: 🌎 orm框架扩展
+      - title: 🌎 orm框架支持
         link: /master/introduction/introduction.html#_6%E3%80%81%E6%94%AF%E6%8C%81orm%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B
         details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
 
@@ -126,7 +126,7 @@ hr {
 
 ---
 <div class="com-box-img">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（25家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">

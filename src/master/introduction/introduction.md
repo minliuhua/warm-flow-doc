@@ -11,12 +11,14 @@
 1. 流程设计器：可通过jar包形式快速集成到项目，减少繁琐代码搬运和适配，支持solon和springboot
 1. 条件表达式：内置常见的和spel条件表达式，并且支持自定义扩展
 1. 办理人变量表达式：内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
-1. orm框架扩展：目前支持MyBatis、Mybatis-Plus、Mybatis-Flex和Jpa，后续会由社区提供其他支持，扩展方便
-1. 数据库支持：目前支持MySQL 、Oracle 和PostgreSQL，后续会继续支持其他数据库或者国产数据库
+1. orm框架支持：目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
+1. 数据库支持：目前支持MySQL 、Oracle、PostgreSQL和SQL Server，后续会继续支持其他数据库或者国产数据库
 1. 多租户与软删除：流程引擎自身维护多租户和软删除实现，也可使用对应orm框架的实现方式
 1. 同时支持spring和solon
 1. 兼容java8和java17,理论11也可以 
 1. 官方提供基于ruoyi-vue封装实战项目，很实用
+
+<img src="https://foruda.gitee.com/images/1737611262515593024/64c8c9a4_2218307.png"/>
 
 ```shell
 希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长
