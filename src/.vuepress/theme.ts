@@ -71,8 +71,8 @@ export default hopeTheme(
                         '</div>',
                     actions: [
                         {
-                            text: "详细更新记录",
-                            link: "/master/other/update.html#v1-6-0-2025-01-17-升级指南",
+                            text: "新版本介绍",
+                            link: "/master/other/news/upgrade/4.html",
                             type: "primary",
                         },
                     ],
