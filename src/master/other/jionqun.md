@@ -1,19 +1,21 @@
 # 联系我
 
-## 1、提交issue
-::: tip issue描述清楚问题，方便我们快速定位问题
-<a href="https://gitee.com/dromara/warm-flow/issues">https://gitee.com/dromara/warm-flow/issues</a>
+## 1、沟通群和公众号
 
-:::
+<table>
+    <tbody>
+        <tr>
+            <td><strong>沟通群</strong></td>
+            <td><strong>公众号</strong></td>
+        </tr>
+        <tr>
+            <td><img src="https://foruda.gitee.com/images/1738717861762383267/3720a026_2218307.png" width="250px"></td>
+            <td><img src="/wxgzh.jpg" width="250px"></td>
+        </tr>
+    </tbody>
+</table>
 
-## 2、加入公众号
-<img src="/wxgzh.jpg" width="150px">
-
-<br>
-<br>
-<br>
-
-加入公众号的好处：
+加入沟通群和公众号的好处：
 
 - 第一时间收到框架更新通知。
 - 第一时间收到框架 bug 通知。
@@ -21,6 +23,13 @@
 - 第一时间收到最新技术文章通知。
 
 <br>
+
+## 2、提交issue
+::: tip issue描述清楚问题，方便我们快速定位问题
+<a href="https://gitee.com/dromara/warm-flow/issues">https://gitee.com/dromara/warm-flow/issues</a>
+
+:::
+
 
 ## 3、内部群：
 为感谢对 Warm-Flow 生态做出贡献的同学，我们特创建了内部群：【Warm-Flow 生态共享与合作】
