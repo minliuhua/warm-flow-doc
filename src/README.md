@@ -223,7 +223,7 @@ export default {
 
       kyProjectList.value = [
         { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
-        { href: "https://gitee.com/dromara/RuoYi-Vue-Plus", title: "RuoYi-Vue-Plus", src: "https://foruda.gitee.com/images/1737523204017735425/51f23421_2218307.png", author: "疯狂的狮子Li", intro: "多租户后台管理系统 重写RuoYi-Vue所有功能 集成 Sa-Token、Mybatis-Plus、Flowable、SpringDoc、Hutool、OSS 定期同步" },
+        { href: "https://gitee.com/dromara/RuoYi-Vue-Plus", title: "RuoYi-Vue-Plus", src: "https://foruda.gitee.com/images/1737523204017735425/51f23421_2218307.png", author: "疯狂的狮子Li", intro: "多租户后台管理系统 重写RuoYi-Vue所有功能 集成 Sa-Token、Mybatis-Plus、WarmFlow、SpringDoc、Hutool、OSS 定期同步" },
         { href: "https://gitee.com/dapppp/ruoyi-plus-vben5", title: "ruoyi-plus-vben5", src: "https://foruda.gitee.com/images/1737523316123951650/1dec0eeb_2218307.png", author: "玲娜贝er", intro: "基于vben最新版本v5 & ant-design-vue 的 RuoYi-Vue-Plus 前端项目" },
         { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seven", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
         { href: "/master/introduction/projectexample.md", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
