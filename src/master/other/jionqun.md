@@ -9,7 +9,7 @@
             <td><strong>公众号</strong></td>
         </tr>
         <tr>
-            <td><img src="https://foruda.gitee.com/images/1738724830175783029/06dd7706_2218307.png" width="250px"></td>
+            <td><img src="https://foruda.gitee.com/images/1739841918538142710/6ece5b97_2218307.png" width="250px"></td>
             <td><img src="/wxgzh.jpg" width="250px"></td>
         </tr>
     </tbody>
