@@ -126,7 +126,7 @@ hr {
 
 ---
 <div class="com-box-img">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（25家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（27家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -208,6 +208,7 @@ export default {
 
       qyProjectList.value = [
         { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
+        { href: "https://www.jrkjsoft.com/", title: "哈尔滨金睿科技有限公司", src: "https://foruda.gitee.com/images/1740295290063383498/42b11c67_2218307.png" },
         { href: "https://www.sneb.com.cn/zhgj/index_2578.html", title: "中交武汉智行国际", src: "https://foruda.gitee.com/images/1732083419998818655/3e444f08_2218307.png" },
         { href: "https://www.xly-net.com/login", title: "新理益智慧网络科技（重庆）有限公司", src: "https://foruda.gitee.com/images/1732083517105041838/b685e15c_2218307.png" },
         { href: "https://www.ctcemti.com", title: "安徽数智建造研究院有限公司", src: "https://foruda.gitee.com/images/1724128444763892376/f5925815_2218307.png" },
@@ -217,7 +218,6 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
-        { href: "", title: "半月无霜", src: "logo.png" },
         { href: "", title: "图灵谷", src: "logo.png" }
         ];
 
