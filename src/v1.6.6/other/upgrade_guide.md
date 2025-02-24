@@ -6,7 +6,7 @@
 :::
 
 ### v1.6.6
-- 执行升级脚本1.6.0版本[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
+- 执行升级脚本1.6.0版本[warm-flow_1.6.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.0.sql)
 - 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
 - 全局FlowFactory替换成FlowEngine
 - [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护

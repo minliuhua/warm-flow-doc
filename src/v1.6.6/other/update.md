@@ -16,12 +16,21 @@
 - 开启流程可以不默认执行到中间节点 @晓华
 - 动态表单支持 @vanlin
 
+
 ## 开发中计划
 
+### v1.6.7  2025-02-24
+
+- [升级指南](./upgrade_guide.md#v1-6-7)
+- [feat] 流程图扩展增加接口，方便新增文字
+- [feat] 设计器新增tabs扩展，比如按钮权限等
+
+
 ## 更新日志
+
 ### v1.6.6  2025-01-23 
 
-- [升级指南](./upgrade_guide.md#v1-6-1)
+- [升级指南](./upgrade_guide.md#v1-6-6)
 - [feat] 导入、导出和保存等新增json格式支持DefService.importIs/importJson/importDef/saveDef/exportJson
 - [feat] 新增获取后置节点方法NodeService.suffixNodeList
 - [feat] 新增网关直连和测试案例
