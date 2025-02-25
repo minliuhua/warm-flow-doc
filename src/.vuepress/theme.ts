@@ -52,27 +52,27 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.6-正式版",
+                    title: "公告：1.6.7-M1测试版",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
-                        '       🔵 新增网关直连和测试案例' +
+                        '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +
+                        '       🔵 设计器支持节点扩展属性设置' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
-                        '       🔵 流程图重构' +
+                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
+                        '       🔵 流程图扩展增加接口，方便新增文字' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
+                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
                         '       🔵 新增RuoYi-Vue-Plus优秀开源基础项目' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
                             text: "新版本介绍",
-                            link: "/master/other/news/upgrade/4.html",
+                            link: "/master/other/news/upgrade/6.html",
                             type: "primary",
                         },
                     ],
