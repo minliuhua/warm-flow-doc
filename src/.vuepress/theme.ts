@@ -52,7 +52,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.7-M1测试版",
+                    title: "公告：1.6.7-M2测试版",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +

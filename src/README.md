@@ -121,13 +121,13 @@ hr {
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多开源项目详情，您可以 <a href="/master/introduction/projectexample.html" target="_blank">在此</a> 查看）
+    	（更多开源项目详情，您可以 <a href="/master/introduction/projectexample.html">在此</a> 查看）
     </p>
 </div>
 
 ---
 <div class="com-box-img">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（27家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（28家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -142,7 +142,7 @@ hr {
     	（如果您的企业也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/I7Y57D" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多使用企业/个人详情，您可以 <a href="/master/introduction/companyintegration.md" target="_blank">在此</a> 查看）
+    	（更多使用企业/个人详情，您可以 <a href="/master/introduction/companyintegration.html">在此</a> 查看）
     </p>
 </div>
 
@@ -209,6 +209,7 @@ export default {
 
       qyProjectList.value = [
         { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
+        { href: "http://www.bjruike.com/", title: "北京瑞科科技", src: "https://foruda.gitee.com/images/1740658272131167588/49903c01_2218307.png" },
         { href: "https://www.jrkjsoft.com/", title: "哈尔滨金睿科技有限公司", src: "https://foruda.gitee.com/images/1740295290063383498/42b11c67_2218307.png" },
         { href: "https://www.sneb.com.cn/zhgj/index_2578.html", title: "中交武汉智行国际", src: "https://foruda.gitee.com/images/1732083419998818655/3e444f08_2218307.png" },
         { href: "https://www.xly-net.com/login", title: "新理益智慧网络科技（重庆）有限公司", src: "https://foruda.gitee.com/images/1732083517105041838/b685e15c_2218307.png" },
@@ -219,7 +220,6 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
-        { href: "", title: "图灵谷", src: "logo.png" }
         ];
 
       kyProjectList.value = [
@@ -310,7 +310,7 @@ export default {
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
           <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
-          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.6-beta_1.6.7--M1-blue' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.6-beta_1.6.7--M2-blue' alt='fork'></a>
         </p>
       `;
 
