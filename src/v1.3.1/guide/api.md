@@ -64,7 +64,7 @@
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 2.3、终止流程
 `termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
@@ -72,7 +72,7 @@
 - message: 审批意见 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 2.4、删除流程实例
 `remove(instanceIds)`：根据实例ids，删除流程
@@ -94,7 +94,7 @@
 - handler: 办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.2、终止流程
 `termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
@@ -102,7 +102,7 @@
 - handler: 办理人唯一标识 [建议传]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.3、转办
 `transfer(taskId, flowParams)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
@@ -110,7 +110,7 @@
 - permissionFlag: 用户权限标识集合 [必传]
 - addHandlers: 转办对象 [必传]
 - message: 审批意见 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.4、委派
 `depute(taskId, flowParams)`：委派, 默认删除当然办理用户权限，委派后，当前办理不可办理。flowParams包含如下字段：
@@ -118,7 +118,7 @@
 - permissionFlag: 用户权限标识集合 [必传]
 - addHandlers: 委托对象 [必传]
 - message: 审批意见 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.5、加签
 `addSignature(taskId, flowParams)`：加签，增加办理人。flowParams包含如下字段：
@@ -126,7 +126,7 @@
 - permissionFlag: 用户权限标识集合 [必传]
 - addHandlers: 加签对象 [必传]
 - message: 审批意见 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.6、减签
 `reductionSignature(taskId, flowParams)`：减签，减少办理人。flowParams包含如下字段：
@@ -134,7 +134,7 @@
 - permissionFlag: 用户权限标识集合 [必传]
 - reductionHandlers: 减少办理人 [必传]
 - message: 审批意见 [按需传输]
-- ignore: 转办忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.7、修改办理人
 `updateHandler(taskId, flowParams)`：传入流程任务id，修改办理人
