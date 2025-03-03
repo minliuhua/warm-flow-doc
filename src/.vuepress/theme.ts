@@ -52,7 +52,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.7-M2测试版",
+                    title: "公告：1.6.7-正式版",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +
@@ -66,7 +66,7 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
-                        '       🔵 新增RuoYi-Vue-Plus优秀开源基础项目' +
+                        '       🔵 自定义流程图节点颜色' +
                         '     </span>\n' +
                         '</div>',
                     actions: [

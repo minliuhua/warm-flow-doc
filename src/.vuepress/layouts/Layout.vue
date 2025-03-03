@@ -15,7 +15,10 @@ const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
   `<a href="https://www.maxkey.top" target="_blank">
-    <img className="no-zoom" height="50px" width="200px" src="/ggw/MaxKey.png">
+    <img className="no-zoom" height="50px" width="200px" src="/ggw/MaxKey.png" class="9999">
+  </a>`,
+  `<a href="https://ccflow.org/" target="_blank">
+    <img className="no-zoom" height="50px" width="200px" src="/ggw/ccflow.png" class="2025-03-03">
   </a>`,
 ];
 
