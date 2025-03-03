@@ -196,7 +196,7 @@ export default {
 
     const fetchData = async () => {
       rzList.value = [
-        { title: "Gitee star数超2.5k", src: "https://foruda.gitee.com/images/1740968861991454007/284b61bf_2218307.png" },
+        { title: "Gitee star数超2.6k", src: "https://foruda.gitee.com/images/1740993355211339962/08f66fab_2218307.png" },
         { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
         { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
         { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
