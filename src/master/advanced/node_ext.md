@@ -37,7 +37,7 @@ public interface NodeExtService {
         "code": "base1",                -- 编码，此json中唯一
         "label": "输入框",               -- label名称
         "desc": "基础设置扩展属性1",       -- 描述
-        "type": 1,                      -- 1：输入框 2：输入框 3：下拉框 4：选择框
+        "type": 1,                      -- 1：输入框 2：文本域 3：下拉框 4：选择框
         "must": true,                   -- 是否必填
         "multiple": true,               -- 是否多选
         "dict": [                       -- 字典，下拉框和复选框时用到
