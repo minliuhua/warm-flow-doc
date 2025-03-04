@@ -48,7 +48,8 @@ watch(
     shuffle(sidebarTopArray);
 
     sidebarContent.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">特别赞助</div>
+      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">
+      <a href="/master/other/paidservice.html#特别赞助" style="color: red;font-size: 0.9em;"">❤️特别赞助</a></div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>
