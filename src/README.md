@@ -155,13 +155,6 @@ hr {
         </a>
       </el-card>
     </div>
-    <div class="com-box com-box-you table-show-pj">
-    	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
-        <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
-    		  <img class="lazy" :src="item.src" :style="item.style">
-        </el-tooltip>
-    	</a>
-    </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	为往圣继绝学，一个人或许能走的更快，但一群人会走的更远。
@@ -356,13 +349,6 @@ export default {
 </script>
 
 <style>
-.com-box {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 50px;
-  justify-content: flex-start;
-}
 .com-box-img,
 .com-box-f {
   padding: 1em 1em;
@@ -400,45 +386,11 @@ export default {
   object-fit: contain;
   height: 100%;
 }
-.com-box-you a {
-  flex: 1 1 calc(9% - 12px);
-  line-height: 60px;
-  height: 60px;
-  margin: 10px;
-  flex-grow: 0;
-}
 .imgTip {
   padding: 10px;
   font-size: 14px;
   max-width: 300px;
-}
-.table-show-pj a img {
-  min-width: 60%;
-  max-width: 80%;
-  vertical-align: middle;
-  max-height: 100%;
-  transition: transform 0.2s !important;
-}
-.table-show-pj a {
-  border-width: 0 1px 1px 0px;
-}
-.table-show-pj a {
-  flex: 1 1 calc(9% - 12px);
-  flex-grow: 0;
-  border: 1px #d5d5d5 solid;
-  margin: 0;
-  padding: 7px 0;
-  overflow: hidden;
-}
-.com-box a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 47px;
-  flex: 1 1 calc(9% - 12px);
-  flex-grow: 0;
-  padding: 10px;
-}   
+} 
 .links {
     display: flex;
     flex-wrap: wrap;
