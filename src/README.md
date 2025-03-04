@@ -123,7 +123,7 @@ hr {
 </div>
 
 ---
-<div class="com-box-img">
+<div class="com-box-img flex1">
     <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（24家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
@@ -378,9 +378,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 76px;
-  flex: 1 1 calc(9% - 20px);
+  max-height: 47px;
+  flex: 1 1 calc(9% - 12px);
+  flex-grow: 0;
   padding: 10px;
+}
+.flex1 .el-card {
+  flex: 1 1 calc(16% - 20px);
+  width: auto;
+  max-height: 76px;
 }
 .com-box-img .el-card .el-card__body {
   height: 100%;
@@ -395,10 +401,11 @@ export default {
   height: 100%;
 }
 .com-box-you a {
-    flex: 0 0 14.5%;
-    line-height: 60px;
-    height: 60px;
-    margin: 10px;
+  flex: 1 1 calc(9% - 12px);
+  line-height: 60px;
+  height: 60px;
+  margin: 10px;
+  flex-grow: 0;
 }
 .imgTip {
   padding: 10px;
@@ -416,17 +423,21 @@ export default {
   border-width: 0 1px 1px 0px;
 }
 .table-show-pj a {
-  flex: 0 0 16.5%;
+  flex: 1 1 calc(9% - 12px);
+  flex-grow: 0;
   border: 1px #d5d5d5 solid;
   margin: 0;
   padding: 7px 0;
   overflow: hidden;
 }
 .com-box a {
-    display: block;
-    flex: 1 0 14.5%;
-    margin: 0px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 47px;
+  flex: 1 1 calc(9% - 12px);
+  flex-grow: 0;
+  padding: 10px;
 }   
 .links {
     display: flex;
