@@ -384,7 +384,7 @@ export default {
   align-items: center;
   justify-content: center;
   max-height: 76px;
-  flex: 1 1 calc(16% - 20px);
+  flex: 1 1 calc(9% - 20px);
   padding: 10px;
 }
 .com-box-img .el-card .el-card__body {
