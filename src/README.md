@@ -31,10 +31,11 @@ highlights:
 
       - title: 💯 流程设计器
         link: /master/primary/designerIntroduced.md
-        details: 可通过jar包形式快速集成到项目，减少繁琐代码搬运和适配，支持solon和springboot
+        details: 可通过jar包形式快速集成到项目，支持节点属性扩展，减少繁琐代码搬运和适配，支持solon和springboot
 
       - title: 👍 流程图
-        details: 流程引擎自带流程图，数据入库，并行支持扩展
+        link: /master/advanced/chart_manage.md
+        details: 流程引擎自带流程图，数据入库，并支持追加文字和自定义流程图节点颜色等扩展
 
       - title: 🔦 条件表达式
         link: /master/primary/condition.md
@@ -44,13 +45,13 @@ highlights:
         link: /master/advanced/variableStategy.md
         details: 内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
 
-      - title: 🌎 orm框架扩展
+      - title: 🌎 orm框架支持
         link: /master/introduction/introduction.html#_6%E3%80%81%E6%94%AF%E6%8C%81orm%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B
         details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
 
       - title: 🎬 数据库支持
         link: /master/introduction/introduction.html#_5%E3%80%81%E6%94%AF%E6%8C%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B
-        details: 目前支持MySQL 、Oracle 和PostgreSQL，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
+        details: 目前支持MySQL 、Oracle、PostgreSQL和SQL Server，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
 
       - title: 🏋 多租户
         link: /master/advanced/tenant.md
@@ -98,14 +99,16 @@ hr {
 
 <hr style="max-width: 100vw" />
 
+---
+
 <div class="com-box-f">
     <br><strong style="font-size: 30px;">优秀开源集成案例</strong><br><br><br>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <el-card style="max-width: 33%; flex: 1 1 calc(33% - 20px); padding: 0px;" shadow="hover"
           v-for="item in kyProjectList" :key="item.href">
-          <a :href="item.href" target="_blank"> <img :src="item.src" style="width: 100%;height: 190px;"/></a>
+          <el-image style="width: 100%;height: 190px;cursor: pointer" :src="item.src"></el-image>
           <div class="s-case-h3">
-            <span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span>
+            <a :href="item.href" target="_blank"><span class="s-case-title" style="font-size: 23px; font-weight: 500;">{{ item.title }}</span></a>
             <span class="s-author"> {{ item.author }} </span>
           </div>
           <div>
@@ -118,7 +121,7 @@ hr {
     	（如果您的开源项目也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/IBB37F" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多开源项目详情，您可以 <a href="/master/introduction/projectexample.html" target="_blank">在此</a> 查看）
+    	（更多开源项目详情，您可以 <a href="/master/introduction/projectexample.html">在此</a> 查看）
     </p>
 </div>
 
@@ -139,7 +142,7 @@ hr {
     	（如果您的企业也使用了 Warm-Flow，您可以 <a href="https://gitee.com/dromara/warm-flow/issues/I7Y57D" target="_blank">在此</a> 提交）
     </p>
     <p>
-    	（更多使用企业/个人详情，您可以 <a href="/master/introduction/companyintegration.md" target="_blank">在此</a> 查看）
+    	（更多使用企业/个人详情，您可以 <a href="/master/introduction/companyintegration.html">在此</a> 查看）
     </p>
 </div>
 
@@ -186,7 +189,7 @@ export default {
 
     const fetchData = async () => {
       rzList.value = [
-        { title: "Gitee star数超1.7k", src: "https://foruda.gitee.com/images/1737022334513857663/1cd362ad_2218307.png" },
+        { title: "Gitee star数超2.7k", src: "https://foruda.gitee.com/images/1741079539336175581/bbbd5701_2218307.png" },
         { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
         { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
         { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
@@ -199,6 +202,8 @@ export default {
 
       qyProjectList.value = [
         { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
+        { href: "http://www.bjruike.com/", title: "北京瑞科科技", src: "https://foruda.gitee.com/images/1740658272131167588/49903c01_2218307.png" },
+        { href: "https://www.jrkjsoft.com/", title: "哈尔滨金睿科技有限公司", src: "https://foruda.gitee.com/images/1740295290063383498/42b11c67_2218307.png" },
         { href: "https://www.sneb.com.cn/zhgj/index_2578.html", title: "中交武汉智行国际", src: "https://foruda.gitee.com/images/1732083419998818655/3e444f08_2218307.png" },
         { href: "https://www.xly-net.com/login", title: "新理益智慧网络科技（重庆）有限公司", src: "https://foruda.gitee.com/images/1732083517105041838/b685e15c_2218307.png" },
         { href: "https://www.ctcemti.com", title: "安徽数智建造研究院有限公司", src: "https://foruda.gitee.com/images/1724128444763892376/f5925815_2218307.png" },
@@ -208,16 +213,16 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
-        { href: "", title: "半月无霜", src: "logo.png" },
-        { href: "", title: "图灵谷", src: "logo.png" }
         ];
 
       kyProjectList.value = [
         { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
+        { href: "https://gitee.com/dromara/RuoYi-Vue-Plus", title: "RuoYi-Vue-Plus", src: "https://foruda.gitee.com/images/1737523204017735425/51f23421_2218307.png", author: "疯狂的狮子Li", intro: "多租户后台管理系统 重写RuoYi-Vue所有功能 集成 Sa-Token、Mybatis-Plus、WarmFlow、SpringDoc、Hutool、OSS 定期同步" },
+        { href: "https://gitee.com/dapppp/ruoyi-plus-vben5", title: "ruoyi-plus-vben5", src: "https://foruda.gitee.com/images/1737523316123951650/1dec0eeb_2218307.png", author: "玲娜贝er", intro: "基于vben最新版本v5 & ant-design-vue 的 RuoYi-Vue-Plus 前端项目" },
         { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "https://foruda.gitee.com/images/1734131229064035715/ef07a979_2218307.png", author: "seven", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
-        { href: "/master/introduction/projectexample.md", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
-        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例:vue3前端" },
-        ];
+        { href: "https://gitee.com/liangliyun/RuoYi-Cloud", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
+        { href: "https://gitee.com/min290/RuoYi-Vue3", title: "RuoYi-Vue3", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例:vue3前端" }, 
+      ];
 
       dromaraList.value = [
         {title: "一个轻量级的分布式日志标记追踪神器，10分钟即可接入，自动对日志打标签完成微服务的链路追踪", href: "https://gitee.com/dromara/TLog", src: "https://oss.dev33.cn/sa-token/link/tlog.png"},
@@ -276,7 +281,7 @@ export default {
         {title: "基于easyAi引擎的JAVA高性能，低成本，轻量级智能客服。", href: "https://gitee.com/dromara/sayOrder", src: "https://oss.dev33.cn/sa-token/link/sayorder.png"},
         {title: "扩展MyBatis JPA支持，简化CUID操作，增强SELECT分页查询", href: "https://gitee.com/dromara/mybatis-jpa-extra", src: "https://oss.dev33.cn/sa-token/link/mybatis-jpa-extra.png"},
         {title: "现代化的动画引擎", href: "https://newcar.js.org/zh/", src: "https://oss.dev33.cn/sa-token/link/newcar.png"},
-        {title: "Dromara Warm-Flow国产工作流引擎🎉，简洁轻量，五脏俱全，可扩展，可通过jar引入设计器。解决flowable和activities复杂、学习成本高和集成难等痛点。", href: "https://warm-flow.dromara.org/", src: "https://oss.dev33.cn/sa-token/link/warm-flow.png", style: "max-width: 110%"},
+        {title: "Dromara Warm-Flow国产工作流引擎🎉，简洁轻量，五脏俱全，灵活扩展性强，可通过jar引入设计器。解决flowable和activities复杂、学习成本高和集成难等痛点。", href: "https://warm-flow.dromara.org/", src: "https://oss.dev33.cn/sa-token/link/warm-flow.png", style: "max-width: 110%"},
         {title: "DyJava是一款功能强大的抖音Java开发工具包", href: "https://gitee.com/dromara/dy-java", src: "https://oss.dev33.cn/sa-token/link/dy-java.png"},
         {title: "MilvusPlus（简称 MP）是一个 Milvus 的操作工具，旨在简化与 Milvus 向量数据库的交互，为开发者提供类似 MyBatis-Plus 注解和方法调用风格的直观 API,提高效率而生。", href: "https://gitee.com/dromara/MilvusPlus", src: "https://oss.dev33.cn/sa-token/link/MilvusPlus-logo.png"},
         {title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin", href: "http://www.easy-query.com/easy-query-doc/", src: "https://oss.dev33.cn/sa-token/link/easy-query.png"},
@@ -298,7 +303,7 @@ export default {
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
           <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
-          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.3.8-beta_1.6.0--m5-blue' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.7-beta_not-have' alt='fork'></a>
         </p>
       `;
 

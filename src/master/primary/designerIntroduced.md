@@ -99,7 +99,7 @@ public class ShiroConfig {
 
 ## 3. 前端引入设计器
 ::: tip
-**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`**
+**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`**
 
 :::
 
@@ -206,7 +206,7 @@ onMounted(() => {
 @tab 前后端不分离
 
 ```java
-可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index?id=${definitionId}&disabled=${disabled}`
+可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
 
 @Controller
 @RequestMapping("/warm-flow")

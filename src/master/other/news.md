@@ -58,7 +58,13 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
-            "title": "🧨新春版v1.6.0发布：网关直连和流程图重构", 
+            "title": "三头六臂显神通：Warm-Flow引擎实现多维度灵活配置", 
+            "url": "./news/upgrade/6.html",    
+            "pushTime": "2025-02-25"
+        },
+        {
+            "type": "upgrade",
+            "title": "🧨新春版v1.6.6发布：网关直连和流程图重构，新增Ruoyi-Vue-Plus优秀开源集成案例", 
             "url": "./news/upgrade/4.html",    
             "pushTime": "2025-01-15"
         },

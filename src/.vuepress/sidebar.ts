@@ -43,6 +43,8 @@ export default sidebar({
                 'enhance/customstatus.md',
                 'advanced/variableStategy.md',
                 'advanced/listener.md',
+                'advanced/node_ext.md',
+                'advanced/chart_manage.md',
                 'advanced/ormusagetips.md',
                 'advanced/logicdelete.md',
                 'advanced/tenant.md',
@@ -57,7 +59,6 @@ export default sidebar({
                 'enhance/condition_two_open',
                 'enhance/variableStatey_two_open',
                 'enhance/listener_two_open',
-                'enhance/form.md',
             ],
         },
         {
@@ -75,7 +76,7 @@ export default sidebar({
             ],
         }
     ],
-    "/v1.6.0/": [
+    "/v1.6.6/": [
         {
             text: "🤞开始",
             collapsible: true,
@@ -131,7 +132,6 @@ export default sidebar({
                 'enhance/condition_two_open',
                 'enhance/variableStatey_two_open',
                 'enhance/listener_two_open',
-                'enhance/form.md',
             ],
         },
         {
@@ -204,7 +204,6 @@ export default sidebar({
                 'enhance/condition_two_open',
                 'enhance/variableStatey_two_open',
                 'enhance/listener_two_open',
-                'enhance/form.md',
                 'enhance/jsonlib.md',
             ],
         },
@@ -259,7 +258,6 @@ export default sidebar({
                 '/v1.3.4/guide/designer_two_open.md',
                 '/v1.3.4/guide/customstatus.md',
                 '/v1.3.4/guide/expression_ex.md',
-                '/v1.3.4/guide/form.md',
                 '/v1.3.4/guide/jsonlib.md',
             ],
         }
@@ -292,7 +290,6 @@ export default sidebar({
                 '/v1.3.3/guide/listener.md',
                 '/v1.3.3/guide/logicdelete.md',
                 '/v1.3.3/guide/tenant.md',
-                '/v1.3.3/guide/form.md',
                 '/v1.3.3/guide/customstatus.md',
                 '/v1.3.3/guide/expression.md',
                 '/v1.3.3/guide/jsonlib.md',
@@ -327,7 +324,6 @@ export default sidebar({
                 '/v1.3.1/guide/listener.md',
                 '/v1.3.1/guide/logicdelete.md',
                 '/v1.3.1/guide/tenant.md',
-                '/v1.3.1/guide/form.md',
                 '/v1.3.1/guide/customstatus.md',
                 '/v1.3.1/guide/expression.md',
                 '/v1.3.1/guide/jsonlib.md',
@@ -362,7 +358,6 @@ export default sidebar({
                 '/v1.3.0/guide/listener.md',
                 '/v1.3.0/guide/logicdelete.md',
                 '/v1.3.0/guide/tenant.md',
-                '/v1.3.0/guide/form.md',
                 '/v1.3.0/guide/customstatus.md',
                 '/v1.3.0/guide/expression.md',
                 '/v1.3.0/guide/jsonlib.md',
@@ -395,7 +390,6 @@ export default sidebar({
             children: [
                 '/v1.2.10/guide/logicdelete.md',
                 '/v1.2.10/guide/tenant.md',
-                '/v1.2.10/guide/form.md',
                 '/v1.2.10/guide/customstatus.md',
                 '/v1.2.10/guide/expression.md',
                 '/v1.2.10/guide/jsonlib.md',
@@ -429,7 +423,6 @@ export default sidebar({
                 '/v1.2.8/guide/listener.md',
                 '/v1.2.8/guide/logicdelete.md',
                 '/v1.2.8/guide/tenant.md',
-                '/v1.2.8/guide/form.md',
                 '/v1.2.8/guide/customstatus.md',
                 '/v1.2.8/guide/expression.md',
                 '/v1.2.8/guide/jsonlib.md',
@@ -462,7 +455,6 @@ export default sidebar({
                 '/v1.2.7/guide/listener.md',
                 '/v1.2.7/guide/logicdelete.md',
                 '/v1.2.7/guide/tenant.md',
-                '/v1.2.7/guide/form.md',
                 '/v1.2.7/guide/customstatus.md',
                 '/v1.2.7/guide/expression.md',
             ],
@@ -494,7 +486,6 @@ export default sidebar({
                 '/v1.2.6/guide/listener.md',
                 '/v1.2.6/guide/logicdelete.md',
                 '/v1.2.6/guide/tenant.md',
-                '/v1.2.6/guide/form.md',
                 '/v1.2.6/guide/customstatus.md',
                 '/v1.2.6/guide/expression.md',
             ],

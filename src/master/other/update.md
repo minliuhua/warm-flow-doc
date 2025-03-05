@@ -11,21 +11,49 @@
 - 会签和票签通过率策略，支持扩展
 - 重启流程
 - 包容网关
-- 接入仿钉钉设计器
 - 取回 @xiarigang
 - 开启流程可以不默认执行到中间节点 @晓华
-- 动态表单支持 @vanlin
+
 
 ## 开发中计划
+### v1.6.8  2025-03-20
+
+- 取回      @xiarigang
+- 撤销      @xiarigang
+- 包容网关   @晓华
+
 
 ## 更新日志
-### v1.6.0  2025-01-17  [升级指南](./upgrade_guide.md#v1-6-0)
+### v1.6.7  2025-03-03
 
+- [升级指南](./upgrade_guide.md#v1-6-7)
+- [feat] 设计器支持节点扩展属性设置
+- [feat] 流程图扩展，新增接口，方便追加文字
+- [feat] 流程状态支持颜色支持自定义
+- [update] 节点表版本号字段标识下个版本删除
+- [update] Jackson反序列化时忽略未知字段
+- [update] 删除部分代码，调整注释
+- [update] 修改当票签和会签节点时，注意事项描述
+- [fix] 规范solon,api注解 防止某些情况获取不到方法参数名
+- [fix] 删除流程实例的时候，办理用户不存在，导致删除失败
+- [fix] #IBP397：修复当设计流程，开始节点出现再负坐标时，文字名称未显示
+- [fix] #IBP3LK：修复开启流程，流程图第一个节点不是待办颜色
+- [fix] 网关节点编辑文字报错处理
+- [remove] 移除流程定义xml导入导出方式
+- [remove] 移除多余的skip_Any_Node字段
+- [style] 常量改成大写和下划线
+
+
+### v1.6.6  2025-01-23 
+
+- [升级指南](./upgrade_guide.md#v1-6-6)
 - [feat] 导入、导出和保存等新增json格式支持DefService.importIs/importJson/importDef/saveDef/exportJson
 - [feat] 新增获取后置节点方法NodeService.suffixNodeList
 - [feat] 新增网关直连和测试案例
 - [feat] 流程图右上角新增完成状态颜色示例
 - [feat] 新增流程图查询接口和扩展接口ChartService
+- [feat] 新增历史表数据同步为新的流程图元数据
+- [feat] 新增sqlserver全量脚本
 - [update] 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json的api
 - [update] FlowFactory修改为FlowEngine
 - [update] 历史表目标节点编码和目标节点名称字段长度改为200
@@ -33,6 +61,7 @@
 - [update] 退回或者任务完成，其他需要被删除的任务不需要记录历史表，因为已经存在退回记录，不需要重复记录
 - [update] 转办、委派、加签和减签，改为只产生一条历史记录
 - [update] 批量保存改为默认1000条一批
+- [update] 流程设计保存，增加遮罩层
 - [refactor] 流程图绘制调整重构
 - [refactor] 移除mybatis-flex,easy-query和jpa的扩展包，独立成项目，由专门人维护
 - [refactor] 实体类和dao获取改为通过反射，解耦orm-core包
@@ -43,23 +72,26 @@
 - [fix] 修复绘制流程图，错误判断同一条录像的key
 - [fix] 修复结束节点还执行创建监听器的问题
 - [remove] 移除DefService获取流程图api，由ChartService中chartIns和chartDef代替
+- [remove] 删除前端log打印
+- [remove] 移除oracle和postgresql升级脚本，后续只提供mysql升级脚本，所有的全量脚本，其他升级脚本的自行转换
 
 ### v1.3.8 2025-01-07
 
 - [fix] 修复最新设计器代码未复制到到jar包
 
-### v1.3.7 2024-12-31  [升级指南](./upgrade_guide.md#v1-3-7)
+### v1.3.7 2024-12-31  
 
+- [升级指南](./upgrade_guide.md#v1-3-7)
 - [fix] 修复设计器驳回指定节点显示异常问题
 - [fix] 流程实例查询SQL BUG
 
-## 更新日志
 ### v1.3.6 2024-12-23 
 
 - [fix] 修复设计器驳回指定节点显示异常问题
 
-### v1.3.5 2024-12-20  [升级指南](./upgrade_guide.md#v1-3-5) 
+### v1.3.5 2024-12-20  
 
+- [升级指南](./upgrade_guide.md#v1-3-5) 
 - [feat] 新增获取所有前置节点接口
 - [feat] 设计器新增设置驳回指定节点
 - [feat] 条件表达式新增默认策略`default|${flag == 5 && flag > 4}`
@@ -71,8 +103,9 @@
 - [refactor] 条件表达式原本太繁琐，进行精简, `@@eq@@|flag@@eq@5` --> `eq|flag|5`
 - [refactor] 任意跳转，改成退回选择目标节点，票签必填，修改字段名称
 
-### v1.3.4 2024-11-25  [升级指南](./upgrade_guide.md#v1-3-4)
+### v1.3.4 2024-11-25  
 
+- [升级指南](./upgrade_guide.md#v1-3-4)
 - [feat] 新增监听器spel表达式，并且支持扩展
 - [feat] 增加全局监听器，针对整个系统，通过接口接入方式
 - [feat] 新增审批前获取当前办理人接口，类似satoken方式 @huangjian
@@ -92,8 +125,8 @@
 - [refactor] 重构条件表达式和办理人变量表达式
 - [remove] 移除权限监听器
 
-### v1.3.3 2024-11-12  [升级指南](./upgrade_guide.md#v1-3-3)
-
+### v1.3.3 2024-11-12  
+- [升级指南](./upgrade_guide.md#v1-3-3)
 - [feat] 新增支持接入业务系统token，支持多token
 - [update] 办理人选择tabs切换
 - [update] 没有左侧树状选择数据时，左侧隐藏
@@ -102,8 +135,9 @@
 - [fix] 修改【Bug】 会签节点委派 @vanlin
 - [fix] 统一修复分页bug
 
-### v1.3.1 2024-11-01  [升级指南](./upgrade_guide.md#v1-3-1)
+### v1.3.1 2024-11-01  
 
+- [升级指南](./upgrade_guide.md#v1-3-1)
 - [feat] 新增boot3+java17支持
 - [feat] 流程设计器新增快捷键支持
 - [feat] 新增流程状态枚举（终止、作废、撤销和取回）
@@ -125,13 +159,11 @@
 - [update] 节点线条保存关联名称
 - [fix] 修复mybatis扩展包中，flowStatus变量书写错误的问题
 - [fix] 更新时间有值时，取更新时间，不是创建时间
-
-### v1.2.10 2024-09-26
-
 - [fix] 修复mybatis-plus扩展包，配置了其他id策略不生效的问题
 
-### v1.2.8 2024-09-25  [升级指南](./upgrade_guide.md#v1-2-8)
+### v1.2.8 2024-09-25  
 
+- [升级指南](./upgrade_guide.md#v1-2-8)
 - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展
 - [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展
 - [feat] ListenerVariable监听器变量新增FlowParams字段，方便开始监听器全局传递参数
@@ -151,8 +183,9 @@
 - [update] ModifyHandler增加链式调用
 - [fix] 修复流程监听器导出失败的问题
 
-### v1.2.6 2024-08-28  [升级指南](./upgrade_guide.md#v1-2-6)
+### v1.2.6 2024-08-28  
 
+- [升级指南](./upgrade_guide.md#v1-2-6)
 - [feat] 增加获取下个节点集合api @xiarigang
 - [feat] 流程监听器 @xiaoxiaoliu889
 - [feat] id内存策略新增14、15位雪花算法支持
@@ -167,8 +200,9 @@
 - [fix] 修复 jpa solon注解问题 @vanlin
 - [fix] 修复 并行网关三个任务分支的时候，错误结束流程的问题
 
-### v1.2.4 2024-08-14  [升级指南](./upgrade_guide.md#v1-2-4)
+### v1.2.4 2024-08-14  
 
+- [升级指南](./upgrade_guide.md#v1-2-4)
 - [feat] 激活和挂起 @xiaoxiaoliu889
 - [feat] 不同节点也支持配置审批表单路径 @vanlin
 - [feat] 支持接收外部流程状态，支持流程状态扩展 @vanlin
@@ -213,8 +247,9 @@
 - [fix] 修复更新拼上了多余的条件
 - [fix] 修复保存流程xml报错问题
 
-### v1.2.1 2024-06-28  [升级指南](./upgrade_guide.md#v1-2-1)
+### v1.2.1 2024-06-28  
 
+- [升级指南](./upgrade_guide.md#v1-2-1)
 - [feat] 新增mybatis-flex扩展包 @xiarigang
 - [feat] 新增抄送演示案例 @adru*
 - [feat] 历史记录表新增ext扩展字段，方便保存历史过程数据 @adru*
@@ -231,8 +266,9 @@
 - [fix] 修复填充器不接收外部设置的时间
 - [fix] 修复userMapper.xml中updateLogic的某个负值错误
 
-### v1.2.0  2024-06-13  [升级指南](./upgrade_guide.md#v1-2-0)
+### v1.2.0  2024-06-13  
 
+- [升级指南](./upgrade_guide.md#v1-2-0)
 - 待办表解偶用户，新增用户表（查询方式需要改动）
 - 会签，票签
 - 加减签
@@ -241,8 +277,9 @@
 - oracle适配
 - pg适配
 
-### v1.1.9  2024-05-08  [升级指南](./upgrade_guide.md#v1-1-9)
+### v1.1.9  2024-05-08  
 
+- [升级指南](./upgrade_guide.md#v1-1-9)
 - orm支持mybatis-plus扩展
 - 多租户字段隔离提供全局配置，自动获取
 - 增加软删除可以配置化

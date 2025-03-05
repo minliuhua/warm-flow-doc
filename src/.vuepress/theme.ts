@@ -51,45 +51,32 @@ export default hopeTheme(
             },
             notice: [
                 {
-                    path: "/",
-                    title: "请务必阅读",
+                    path: "/master",
+                    title: "公告：1.6.7-正式版",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/stargazers\'" class="link-style">' +
-                        '       ⭐️ Star：一键三连，你的Star是我持续开发的动力' +
+                        '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +
+                        '       🔵 设计器支持节点扩展属性设置' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'https://gitee.com/dromara/warm-flow/issues\'" class="link-style">' +
-                        '       ❓ 疑问：先看常见问题和issue，然后再是提👉 issue 👈' +
+                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
+                        '       🔵 流程图扩展增加接口，方便新增文字' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html\'" class="link-style">' +
-                        '       📖使用文档：集成前先快速浏览，大概知道有功能和注意事项' +
+                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
+                        '       🔵 自定义流程图节点颜色' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
-                            text: "⭐️star⭐️",
-                            link: "https://gitee.com/dromara/warm-flow/stargazers",
+                            text: "新版本介绍",
+                            link: "/master/other/news/upgrade/6.html",
                             type: "primary",
                         },
-                        {
-                            text: "👉issue👈",
-                            link: "https://gitee.com/dromara/warm-flow/issues",
-                            type: "primary",
-                        },
-                        {
-                            text: "❓常见问题❓",
-                            link: "/master/other/troubleshooting.html",
-                            type: "primary",
-                        },
-                        { text: "取消" },
                     ],
                     showOnce: false,
-                    fullscreen: true,
-                    confirm: true
                 },
             ],
             slimsearch: true,
