@@ -36,6 +36,7 @@ export default navbar([
     {
         text: '历史版本',
         children: [
+            { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },
             { text: 'v1.6.6', link: '/v1.6.6/introduction/introduction.md' },
             { text: 'v1.3.8', link: '/v1.3.5/introduction/introduction.md' },
             { text: 'v1.3.7', link: '/v1.3.5/introduction/introduction.md' },
