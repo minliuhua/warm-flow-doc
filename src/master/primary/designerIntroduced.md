@@ -30,7 +30,8 @@
 
 :::
 
-## 2. 后端放行部分路径
+## 2. 单体项目
+### 2.1 后端放行部分路径
 > 这个路径需要放行，否则无法访问，`/warm-flow-ui/**`, `/warm-flow/**`
 
 ::: code-tabs#shell
@@ -97,7 +98,7 @@ public class ShiroConfig {
 
 :::
 
-## 3. 前端引入设计器
+### 2.2. 前端引入设计器
 ::: tip
 **1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`**
 
@@ -235,6 +236,113 @@ function detail(dictId) {
 ```
 
 :::
+
+## 3. 微服务集成
+微服务集成原来和单体类似，都是后端放行部分路径，前端加载页面，<span style="color: red;">比如以RuoYi-Cloud为例</span>
+
+### 2.1 后端放行部分路径
+> 与单体不同，需要在gateway里面放行
+
+```yaml {12-13}
+# 安全配置
+security:
+  # 不校验白名单
+  ignore:
+    whites:
+      - /auth/logout
+      - /auth/login
+      - /auth/register
+      - /*/v2/api-docs
+      - /*/v3/api-docs
+      - /csrf
+	  - /warm-flow-ui/**
+	  - /warm-flow/**
+```
+
+<br/>
+
+> 这是RuoYi-Cloud网关服务的过滤器，根据上面的白名单进行放行部分代码
+
+```java
+/**
+ * 放行白名单配置
+ *
+ * @author RuoYi
+ */
+@Configuration
+@RefreshScope
+@ConfigurationProperties(prefix = "security.ignore")
+public class IgnoreWhiteProperties {
+    /**
+     * 放行白名单配置，网关不校验此处的白名单
+     */
+    private List<String> whites = new ArrayList<>();
+
+    public List<String> getWhites() {
+        return whites;
+    }
+
+    public void setWhites(List<String> whites) {
+        this.whites = whites;
+    }
+}
+
+```
+
+```java
+/**
+ * 网关鉴权
+ *
+ * @author RuoYi
+ */
+@Component
+public class AuthFilter implements GlobalFilter, Ordered {
+    private static final Logger log = LoggerFactory.getLogger(AuthFilter.class);
+
+    // 排除过滤的 uri 地址，nacos自行添加
+    @Autowired
+    private IgnoreWhiteProperties ignoreWhite;
+
+
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        ServerHttpRequest request = exchange.getRequest();
+        ServerHttpRequest.Builder mutate = request.mutate();
+
+        String url = request.getURI().getPath();
+        // 跳过不需要验证的路径
+        if (StringUtils.matches(url, ignoreWhite.getWhites())) {
+            return chain.filter(exchange);
+        }
+        .... 其他校验
+        return chain.filter(exchange.mutate().request(mutate.build()).build());
+    }
+}
+```
+<br>
+
+> 配置网关路由
+```yaml
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 流程服务
+        - id: ruoyi-flow
+          uri: lb://ruoyi-flow
+          predicates:
+            - Path=/flow/**
+          filters:
+            - StripPrefix=1
+```
+
+### 3.2. 前端引入设计器
+::: tip
+**设计器引入和单体类似，不过要多加一个网关路由`flow`，示例：`ip:port/flow/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`**
+
+:::
+
+<br>
 
 ## 4. 设计器办理人权限数据接入
 > 给任务节点设置哪些权限的人可以办理，实现接口提供给设计器
