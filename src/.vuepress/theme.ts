@@ -9,8 +9,6 @@ export default hopeTheme(
             name: "Dromara Warm-Flow工作流",
             url: "https://gitee.com/warm_4/warm-flow-doc",
         },
-        iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
-        iconPrefix: "iconfont icon-",
         logo: "/logo.png",
         docsDir: "src",
         print: false,
@@ -31,6 +29,7 @@ export default hopeTheme(
             mark: true,
             codeTabs: true,
             include: true,
+            component: true,
         },
 
         plugins: {
@@ -41,6 +40,10 @@ export default hopeTheme(
                     "VPCard",
                     "SiteInfo",
                 ],
+            },
+            icon: {
+                assets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
+                prefix: "iconfont icon-",
             },
             comment: {
                 provider: "Giscus",

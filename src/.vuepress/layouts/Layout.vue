@@ -15,10 +15,13 @@ const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
   `<a href="https://www.maxkey.top" target="_blank">
-    <img className="no-zoom" height="50px" width="200px" src="/ggw/MaxKey.png" class="9999">
+    <img className="no-zoom" height="60px" width="200px" src="/ggw/MaxKey.png" class="9999">
   </a>`,
   `<a href="https://ccflow.org/index.html?frm=warmflow" target="_blank">
-    <img className="no-zoom" height="50px" width="200px" src="/ggw/ccflow.png" class="2025-03-03">
+    <img className="no-zoom" height="60px" width="200px" src="/ggw/ccflow.png" class="2025-03-03">
+  </a>`,
+  `<a href="/master/other/paidservice.html#私人服务" target="_blank">
+    <img className="no-zoom" height="60px" width="200px" src="/ggw/yuui.jpg">
   </a>`,
 ];
 
@@ -49,7 +52,7 @@ watch(
 
     sidebarContent.value = `\
       <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">
-      <a href="/master/other/paidservice.html#特别赞助" style="color: red;font-size: 0.9em;"">❤️特别赞助</a></div>
+      <a href="/master/other/paidservice.html#赞助商" style="color: red;font-size: 0.9em;">❤️赞助商</a></div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>

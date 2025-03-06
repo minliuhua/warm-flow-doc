@@ -26,7 +26,7 @@
 
 ## 2、提交issue
 ::: tip issue描述清楚问题，方便我们快速定位问题
-<a href="https://gitee.com/dromara/warm-flow/issues">https://gitee.com/dromara/warm-flow/issues</a>
+[https://gitee.com/dromara/warm-flow/issues](https://gitee.com/dromara/warm-flow/issues)
 
 :::
 

@@ -64,40 +64,31 @@ highlights:
 
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
-
 ---
 
-<hr style="max-width: 100vw" />
-
-<el-carousel class="carousel" type="card" :interval="3000" height="650px" style="width: 100%" indicator-position="outside">
-    <el-carousel-item style="text-align: center;" v-for="item in rzList" :key="item.title">
-        <img :src="item.src"/>
-        <h3 class="small justify-end" text="2xl">{{item.title}}</h3>
-    </el-carousel-item>
-</el-carousel>
-
-<style scoped>
-.theme-hope-content {
-  max-width: 100vw !important;
-}
-.el-carousel__item img {
-  height: 600px;
-  object-fit: contain;
-}
-hr {
-  max-width: var(--content-width, 740px);
-  margin: 0 auto;
-}
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  line-height: 50px;
-  margin: 0;
-  text-align: center;
-}
-</style>
-
-<hr style="max-width: 100vw" />
+  <div class="com-box-f">
+    <strong style="font-size: 30px;">❤️特别赞助</strong><br><br><br>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+      <el-card 
+        style="max-width: 33.33%; flex: 1 1 calc(33.33% - 20px); padding: 0px; height: 100px; background-color: rgb(186, 69, 82); --randomColor: #ba4552;" 
+        v-for="item in sponsorshis" 
+        :key="item.href"
+      >
+	    <a :href="item.href" target="_blank" style="text-decoration: none; color: white; " >
+            <div style="display: flex;">
+              <el-image 
+                style="width: 150px; height: 100%; margin-right: 20px; cursor: pointer;" :src="item.src" alt="项目示例图片"
+              ></el-image>
+              <div>
+                <span  style="font-size: 18px; ">{{ item.title }}</span>
+                <p style="font-size: 15px; color: white">{{ item.description }}</p>
+              </div>
+            </div>
+        </a>
+      </el-card>
+    </div>
+    <div style="height: 10px; clear: both;"></div>
+  </div>
 
 ---
 
@@ -185,16 +176,9 @@ export default {
     const qyProjectList = ref([]);
     const kyProjectList = ref([]);
     const dromaraList = ref([]);
-    const rzList = ref([]);
+    const sponsorshis = ref([]);
 
     const fetchData = async () => {
-      rzList.value = [
-        { title: "Gitee star数超2.8k", src: "https://foruda.gitee.com/images/1741163001200534054/d339867d_2218307.png" },
-        { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
-        { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
-        { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
-      ];
-
       projectList.value = [
         { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
@@ -292,6 +276,26 @@ export default {
         {title: "轻量级、语义化、对开发者友好的 golang 时间处理库", href: "https://gitee.com/dromara/carbon", src: "https://oss.dev33.cn/sa-token/link/carbon.png"},
         {title: "java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。", href: "https://gitee.com/dromara/mica-mqtt", src: "https://oss.dev33.cn/sa-token/link/mica-mqtt.png"},
         ];
+      sponsorshis.value = [
+        {
+          title: '驰骋工作流引擎',
+          description: '驰骋BPM低代码，工作流、表单引擎!',
+          href: 'https://ccflow.org/index.html?frm=warmflow',
+          src: '/ggw/logo/ccflow.png'
+        },
+        {
+          title: 'Warm-Flow工作流',
+          description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
+          href: 'https://gitee.com/dromara/warm-flow',
+          src: '/logo.png'
+        },
+        {
+          title: 'Warm-Flow工作流',
+          description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
+          href: 'https://gitee.com/dromara/warm-flow',
+          src: '/logo.png'
+        },
+      ]
     };
 
     const navigateTo = () => {
@@ -347,7 +351,7 @@ export default {
       qyProjectList,
       kyProjectList,
       dromaraList,
-      rzList,
+      sponsorshis,
     };
   },
 };
@@ -445,4 +449,5 @@ export default {
     color: #ff5722;
     border: 1px #ff5722 solid;
 }
+
 </style>
