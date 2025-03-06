@@ -99,7 +99,42 @@ public class DefStartListener implements Listener {
 }
 ```
 
-### 5.3、完成监听器实现类例子
+### 5.4、分派监听器
+如下图中示例可以很容易实现
+
+<img src="/assignmentlistener.jpg" width="550px" height="450px" />
+
+
+- 注意：
+  - 当前节点分派监听器：执行时修改【下个节点配置办理人权限】或者其他
+  - 下个节点配置办理人权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
+```java
+@Component
+public class AssignmentListener implements Listener {
+
+    private static final Logger log = LoggerFactory.getLogger(AssignmentListener.class);
+
+    @Override
+    public void notify(ListenerVariable variable) {
+        log.info("分派监听器开始执行......");
+        List<Task> tasks = variable.getNextTasks();
+        Instance instance = variable.getInstance();
+        for (Task task : tasks) {
+            List<String> permissionList = task.getPermissionList();
+            // 如果设置了发起人审批，则需要动态替换权限标识
+            for (int i = 0; i < permissionList.size(); i++) {
+                String permission = permissionList.get(i);
+                if (StringUtils.isNotEmpty(permission) && permission.contains(FlowCons.WARMFLOWINITIATOR)) {
+                    permissionList.set(i, permission.replace(FlowCons.WARMFLOWINITIATOR, instance.getCreateBy()));
+                }
+            }
+        }
+        log.info("分派监听器执行结束......");
+    }
+}
+```
+
+### 5.4、完成监听器实现类例子
 ```java
 @Component
 public class DefFinishListener implements Listener {
@@ -154,41 +189,6 @@ public class DefFinishListener implements Listener {
 
     log.info("流程完成监听器结束......");
   }
-}
-```
-
-### 5.4、可实现的效果
-如下图中示例可以很容易实现  
-
-<img src="/assignmentlistener.jpg" width="550px" height="450px" />
-
-
-- 注意： 
-  - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
-  - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
-```java
-@Component
-public class AssignmentListener implements Listener {
-
-    private static final Logger log = LoggerFactory.getLogger(AssignmentListener.class);
-
-    @Override
-    public void notify(ListenerVariable variable) {
-        log.info("分派监听器开始执行......");
-        List<Task> tasks = variable.getNextTasks();
-        Instance instance = variable.getInstance();
-        for (Task task : tasks) {
-            List<String> permissionList = task.getPermissionList();
-            // 如果设置了发起人审批，则需要动态替换权限标识
-            for (int i = 0; i < permissionList.size(); i++) {
-                String permission = permissionList.get(i);
-                if (StringUtils.isNotEmpty(permission) && permission.contains(FlowCons.WARMFLOWINITIATOR)) {
-                    permissionList.set(i, permission.replace(FlowCons.WARMFLOWINITIATOR, instance.getCreateBy()));
-                }
-            }
-        }
-        log.info("分派监听器执行结束......");
-    }
 }
 ```
 
