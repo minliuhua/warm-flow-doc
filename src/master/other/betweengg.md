@@ -17,10 +17,24 @@
   border-radius: 4px;
 }
 
+.wwads-horizontal {
+  min-height: 0 !important;
+}
+
+.wwads-horizontal img {
+  width: 80px !important;
+}
+
+.wwads-horizontal .wwads-poweredby {
+  width: 40px;
+  position: absolute;
+  right: 25px;
+  bottom: 3px;
+}
 
 </style>
 
-<div class="wwads-cn wwads-horizontal" data-id="349" style="max-width: 350px; height: 160px; margin-bottom: 20px; display: flex; align-items: center;"></div>
+<div class="wwads-cn wwads-horizontal" data-id="349" style="margin-bottom: 20px;"></div>
 
 <div class="between-header">
     <a href="https://gitee.com/dromara/warm-flow">
