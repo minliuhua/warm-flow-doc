@@ -66,26 +66,25 @@ copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
 ---
 
-  <div class="com-box-f">
+  <div class="sponsorList">
     <strong style="font-size: 30px;">❤️特别赞助</strong><br><br><br>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <el-card 
-        style="max-width: 33.33%; flex: 1 1 calc(33.33% - 20px); padding: 0px; height: 100px; background-color: rgb(186, 69, 82); --randomColor: #ba4552;" 
+    <div class="cardList">
+      <div 
+        class="cardItem"
+        :style="`background-color: ${item.bgColor}`"
         v-for="item in sponsorshis" 
         :key="item.href"
       >
 	    <a :href="item.href" target="_blank" style="text-decoration: none; color: white; " >
-            <div style="display: flex;">
-              <el-image 
-                style="width: 150px; height: 100%; margin-right: 20px; cursor: pointer;" :src="item.src" alt="项目示例图片"
-              ></el-image>
-              <div>
-                <span  style="font-size: 18px; ">{{ item.title }}</span>
-                <p style="font-size: 15px; color: white">{{ item.description }}</p>
-              </div>
+          <div class="flex-hv">
+            <div class="cardImg" :style="`background-image: url(${item.src});`" alt="项目示例图片"></div>
+            <div style="text-align: center">
+              <span  style="font-size: 18px;">{{ item.title }}</span>
+              <p style="font-size: 15px; color: white; text-align: center;">{{ item.description }}</p>
             </div>
+          </div>
         </a>
-      </el-card>
+      </div>
     </div>
     <div style="height: 10px; clear: both;"></div>
   </div>
@@ -281,19 +280,22 @@ export default {
           title: '驰骋工作流引擎',
           description: '驰骋BPM低代码，工作流、表单引擎!',
           href: 'https://ccflow.org/index.html?frm=warmflow',
-          src: '/ggw/logo/ccflow.png'
+          src: '/ggw/logo/ccflow.png',
+          bgColor: "#2c61a9"
         },
         {
           title: 'Warm-Flow工作流',
           description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
           href: 'https://gitee.com/dromara/warm-flow',
-          src: '/logo.png'
+          src: '/logo.png',
+          bgColor: "#52290e"
         },
         {
           title: 'Warm-Flow工作流',
           description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
           href: 'https://gitee.com/dromara/warm-flow',
-          src: '/logo.png'
+          src: '/logo.png',
+          bgColor: "#6fcffd"
         },
       ]
     };
@@ -357,7 +359,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .com-box-img,
 .com-box-f {
   padding: 1em 1em;
@@ -449,5 +451,35 @@ export default {
     color: #ff5722;
     border: 1px #ff5722 solid;
 }
-
+.sponsorList {
+  .cardList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .cardItem {
+      max-width: 33.33%;
+      flex: 1 1 calc(33.33% - 38px);
+      padding: 15px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      .flex-hv {
+        display: flex;
+        align-items: center;
+        .cardImg{
+          width: 66px;
+          height: 66px;
+          background-repeat: round;
+          margin-right: 10px;
+          cursor: pointer;
+          border-radius: 50%;
+          flex-shrink: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+}
 </style>
