@@ -1,4 +1,6 @@
 # 常见问题
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 1、id精度丢失
 ::: tip 方案1：处理长度过长的Long类型

@@ -1,4 +1,6 @@
 # 开源协议
+<!-- @include: ../other/betweengg.md -->
+
 
 ::: warning
 - Dromara Warm-Flow采用APACHE LICENSE 2.0开源协议，项目代码、文档均开源免费可商用，遵循开源协议即可  

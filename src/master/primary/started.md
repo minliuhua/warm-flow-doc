@@ -1,4 +1,6 @@
 # 快速开始
+<!-- @include: ../other/betweengg.md -->
+
 ::: tip
 **在开始之前，我们假定您已经:**  
 

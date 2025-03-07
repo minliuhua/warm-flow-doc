@@ -1,4 +1,6 @@
 # 功能演示
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 演示地址
 

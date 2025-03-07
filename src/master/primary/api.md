@@ -1,4 +1,6 @@
 # 核心接口api
+<!-- @include: ../other/betweengg.md -->
+
 
 ## DefService流程定义
 ### 导入流程输入流

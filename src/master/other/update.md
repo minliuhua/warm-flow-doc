@@ -1,4 +1,6 @@
 # 更新日志
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 未来发布计划
 

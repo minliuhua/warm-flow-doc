@@ -1,4 +1,6 @@
 # 有偿服务
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 私人服务
 

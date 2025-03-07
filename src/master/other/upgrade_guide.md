@@ -1,4 +1,6 @@
 # 升级指南
+<!-- @include: ../other/betweengg.md -->
+
 ::: warning
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
 - 只提供mysql升级脚本和全量脚本，其他升级脚本的自行由mysql升级脚本转换

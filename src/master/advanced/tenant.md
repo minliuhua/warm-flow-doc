@@ -1,4 +1,5 @@
 # 多租户
+<!-- @include: ../other/betweengg.md -->
 
 ## 1、Mybatis-plus
 ::: tip
