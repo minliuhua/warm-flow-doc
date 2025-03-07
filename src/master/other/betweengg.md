@@ -34,7 +34,7 @@
 
 </style>
 
-<div class="wwads-cn wwads-horizontal" data-id="349"></div>
+<div class="wwads-cn wwads-horizontal" data-id="349" style="max-width:793px"></div>
 
 <div class="between-header">
     <a href="https://gitee.com/dromara/warm-flow">
