@@ -21,7 +21,11 @@
   min-height: 0 !important;
 }
 
-.wwads-horizontal img {
+.wwads-horizontal .wwads-logo {
+  width: 0 !important;
+}
+
+.wwads-horizontal .wwads-img img {
   width: 80px !important;
 }
 
@@ -34,7 +38,7 @@
 
 </style>
 
-<div class="wwads-cn wwads-horizontal" data-id="349" style="max-width:793px"></div>
+<div class="wwads-cn wwads-horizontal" data-id="349" style="max-width:793px;"></div>
 
 <div class="between-header">
     <a href="https://gitee.com/dromara/warm-flow">
