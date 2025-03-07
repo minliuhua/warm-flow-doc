@@ -87,6 +87,9 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
       </div>
     </div>
     <div style="height: 10px; clear: both;"></div>
+    <p style="text-align: center;">
+    	<el-button type="danger" plain round style="width: 200px; height: 50px; font-size: 20px">️成为赞助商</el-button>
+    </p>
   </div>
 
 ---
@@ -281,21 +284,21 @@ export default {
           description: '驰骋BPM低代码，工作流、表单引擎!',
           href: 'https://ccflow.org/index.html?frm=warmflow',
           src: '/ggw/logo/ccflow.png',
-          bgColor: "#2c61a9"
+          bgColor: "#ba4552"
         },
         {
-          title: 'Warm-Flow工作流',
-          description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
-          href: 'https://gitee.com/dromara/warm-flow',
-          src: '/logo.png',
-          bgColor: "#52290e"
+          title: '全栈设计UI设计',
+          description: '大屏数据|小程序生态|后台系统',
+          href: '/master/other/paidservice.html#私人服务',
+          src: '/ggw/logo/yuui.png',
+          bgColor: "#A6A1F3"
         },
         {
-          title: 'Warm-Flow工作流',
-          description: '简洁轻量，五脏俱全，灵活扩展，可快速集成设计器!',
-          href: 'https://gitee.com/dromara/warm-flow',
-          src: '/logo.png',
-          bgColor: "#6fcffd"
+          title: 'MaxKey单点登录认证系统',
+          description: 'MaxKey单点登录认证系统是业界领先的IAM-IDaas身份管理和认证产',
+          href: 'https://www.maxkey.top',
+          src: '/ggw/logo/MaxKey.png',
+          bgColor: "#302294"
         },
       ]
     };

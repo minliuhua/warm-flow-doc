@@ -1,44 +1,6 @@
 # 介绍
 
-<style>
-/* 定义样式 */
-.header {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.header img {
-  height: 50px;
-  border-radius: 4px;
-}
-
-.ad-orange img, .ad-blue img {
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 4px;
-}
-
-</style>
-
-<div class="header">
-    <a href="https://gitee.com/dromara/warm-flow">
-        <img src="https://liteflow.cc/img/donate/lfClub-banner.png" alt="LF-CLUB Logo">
-    </a>
-</div>
-
-<div style="display: flex; justify-content: space-between; gap: 5px;">
-    <div class="ad-orange">
-        <a href="https://gitee.com/dromara/warm-flow">
-            <img src="https://liteflow.cc/img/donate/fb-banner.png" alt="蜂信物联 Logo">
-        </a>
-    </div>
-    <div class="ad-blue">
-        <a href="https://gitee.com/dromara/warm-flow">
-            <img src="https://liteflow.cc/img/donate/suzhong-banner-2.jpg" alt="速众 Logo">
-        </a>
-    </div>
-</div>
+<!-- @include: ../other/betweengg.md -->
 
 ## 1、项目介绍
 ::: tip 
