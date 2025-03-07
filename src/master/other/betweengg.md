@@ -1,17 +1,17 @@
 <style>
 /* 定义样式 */
-.header {
+.between-header {
   margin-bottom: 5px;
   display: flex;
   align-items: center;
 }
 
-.header img {
+.between-header img {
   height: 40px;
   border-radius: 4px;
 }
 
-.ad-orange img, .ad-blue img {
+.between-left img, .between-right img {
   height: 40px;
   margin-right: 4px;
   border-radius: 4px;
@@ -22,19 +22,19 @@
 
 <div class="wwads-cn wwads-horizontal" data-id="349" style="max-width:350px"></div>
 
-<div class="header">
+<div class="between-header">
     <a href="https://gitee.com/dromara/warm-flow">
         <img src="/ggw/bewteenone.png" alt="warm-flow Logo">
     </a>
 </div>
 
 <div style="display: flex; ">
-    <div class="ad-orange">
+    <div class="between-left">
         <a href="https://gitee.com/dromara/warm-flow">
             <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
         </a>
     </div>
-    <div class="ad-blue">
+    <div class="between-right">
         <a href="https://gitee.com/dromara/warm-flow">
             <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
         </a>
