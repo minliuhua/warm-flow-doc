@@ -1,21 +1,22 @@
 <style>
 /* 定义样式 */
 .header {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
 }
 
 .header img {
-  height: 50px;
+  height: 40px;
   border-radius: 4px;
 }
 
 .ad-orange img, .ad-blue img {
-  height: 50px;
-  margin-right: 10px;
+  height: 40px;
+  margin-right: 4px;
   border-radius: 4px;
 }
+
 
 </style>
 
@@ -27,7 +28,7 @@
     </a>
 </div>
 
-<div style="display: flex; justify-content: space-between; gap: 5px;">
+<div style="display: flex; ">
     <div class="ad-orange">
         <a href="https://gitee.com/dromara/warm-flow">
             <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
