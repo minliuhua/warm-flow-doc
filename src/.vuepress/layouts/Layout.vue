@@ -52,7 +52,7 @@ watch(
 
     sidebarContent.value = `\
       <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">
-      <a href="/master/other/paidservice.html#赞助商广告" style="color: red;font-size: 0.9em;">❤️成为赞助商</a></div>
+      <a href="/master/other/paidservice.html#赞助商广告" style="color: red;font-size: 16px;">❤️成为赞助商</a></div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArray.slice(0, sidebarTopArray.length).join("\n  ")}
       </div>
@@ -85,3 +85,12 @@ watch(
     </template>
   </CommonWrapper>
 </template>
+
+<style lang="scss">
+.vp-toc-placeholder {
+  top: calc(var(--navbar-height));
+}
+.vp-toc-header {
+  margin-top: 10px;
+}
+</style>
