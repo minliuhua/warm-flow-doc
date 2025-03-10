@@ -74,6 +74,9 @@ watch(
           <template #contentBefore>
             <div content="content"></div>
           </template>
+          <template #tocBefore>
+            <div v-html="sidebarContent" />
+          </template>
         </NormalPage>
       </FadeSlideY>
     </template>
