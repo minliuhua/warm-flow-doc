@@ -40,10 +40,3 @@
 
 - 链接URL格式：<span class="red-bg">https://xxx.com?from=warmflow</span>
 
-
-<style>.red-bg {
-    color: red;
-    background-color: #f0f0f0;
-    padding: 8px;
-}
-</style>

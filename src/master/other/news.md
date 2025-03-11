@@ -22,7 +22,7 @@
                     <span @click="navigateTo(item.url)" class="link-style">{{ item.title }}</span>
                 </div>
             </td>
-            <td class="no-border" style="padding: 8px; width: 10%; text-align: right;">{{ item.pushTime }}</td>
+            <td class="no-border" style="padding: 8px; width: 15%; text-align: right;">{{ item.pushTime }}</td>
         </tr>
     </tbody>
 </table>

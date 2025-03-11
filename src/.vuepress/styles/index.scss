@@ -75,8 +75,11 @@
   width: 300px;
 }
 
-.vp-sidebar-links {
-  font-size: 15px
+.vp-sidebar-links, .vp-nav-links {
+  font-size: 19px;
+}
+.theme-hope-content *, .theme-hope-content {
+  font-size: 18px !important;
 }
 .vp-highlight-image {
   width: 33rem;
@@ -89,4 +92,21 @@
 }
 #main-description {
   max-width: 46rem;
+}
+
+.red-bg {
+   color: red;
+   background-color: #f0f0f0;
+   padding: 8px;
+ }
+
+.red-font {
+  color: red;
+  padding: 8px;
+  font-size: 20px
+}
+
+.big-font {
+  padding: 8px;
+  font-size: 20px
 }

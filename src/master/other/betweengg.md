@@ -16,39 +16,9 @@
   margin-right: 1px;
   border-radius: 4px;
 }
-
-.wwads-horizontal {
-  max-width: 793px;
-  padding: 0 !important;
-  min-height: 0 !important;
-  align-items: center;
-  .wwads-content {
-    .wwads-text {
-      min-height: 50px;
-      display: block;
-      padding: 5px;
-    }
-  }
-  .wwads-logo {
-    width: 0 !important;
-  }
-  .wwads-img {
-    margin: 0px !important;
-    height: 70px;
-    img {
-      width: 90px !important;
-    }
-  }
-  .wwads-poweredby {
-    width: 40px;
-    position: absolute;
-    right: 25px;
-    bottom: 3px;
-  }
-}
 </style>
 
-<div class="wwads-cn wwads-horizontal" data-id="349"></div>
+<div class="wwads-cn wwads-vertical wwads-sticky" data-id="349" style="max-width:180px"></div>
 
 <div class="between-header">
     <a href="https://gitee.com/dromara/warm-flow">
