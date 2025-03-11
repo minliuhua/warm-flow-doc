@@ -7,8 +7,8 @@
 ::: warning
 - admin/admin123
 
-演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
-项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)  
+- 演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
+- 项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)  
 :::
 
 ## 演示图
@@ -45,8 +45,9 @@
 
 ## 1、新增定义
 ::: tip
-流程编码和流程版本：确定唯一
-审批表单路径：记录待办任务需要显示的待办信息页面，点击待办时候获取这个路径，动态加载这个页面
+- 流程编码和流程版本：确定唯一
+
+- 审批表单路径：记录待办任务需要显示的待办信息页面，点击待办时候获取这个路径，动态加载这个页面
 :::
 
 

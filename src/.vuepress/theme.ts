@@ -55,27 +55,27 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.7-正式版",
+                    title: "公告：新增学习视频",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +
-                        '       🔵 设计器支持节点扩展属性设置' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
+                        '       🔵 1.项目介绍' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
-                        '       🔵 流程图扩展增加接口，方便新增文字' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
+                        '       🔵 2.竞品对比和快速集成' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
-                        '       🔵 自定义流程图节点颜色' +
+                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
+                        '       🔵 3.功能演示' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
-                            text: "新版本介绍",
-                            link: "/master/other/news/upgrade/6.html",
+                            text: "学习视频地址",
+                            link: "/master/primary/started.html#_6-1、推荐集成案例hh-vue",
                             type: "primary",
                         },
                     ],
