@@ -20,21 +20,23 @@
 
 <div class="wwads-cn wwads-vertical wwads-sticky" data-id="349" style="max-width:180px"></div>
 
-<div class="between-header">
-    <a href="https://gitee.com/dromara/warm-flow">
-        <img src="/ggw/bewteenone.png" alt="warm-flow Logo">
-    </a>
-</div>
+<div style="position: sticky; top: calc(var(--navbar-height)); z-index: 999;background: #fff;">
+  <div class="between-header">
+      <a href="https://gitee.com/dromara/warm-flow">
+          <img src="/ggw/bewteenone.png" alt="warm-flow Logo">
+      </a>
+  </div>
 
-<div style="display: flex; ">
-    <div class="between-left">
-        <a href="https://gitee.com/dromara/warm-flow">
-            <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
-        </a>
-    </div>
-    <div class="between-right">
-        <a href="https://gitee.com/dromara/warm-flow">
-            <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
-        </a>
-    </div>
+  <div style="display: flex; ">
+      <div class="between-left">
+          <a href="https://gitee.com/dromara/warm-flow">
+              <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
+          </a>
+      </div>
+      <div class="between-right">
+          <a href="https://gitee.com/dromara/warm-flow">
+              <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
+          </a>
+      </div>
+  </div>
 </div>
