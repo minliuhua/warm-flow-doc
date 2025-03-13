@@ -32,9 +32,12 @@
 
 .vp-sidebar > .vp-sidebar-links {
   padding: 8px 0 2.8rem 0;
+  overflow-y: auto;
+  height: calc(100% - 254px);
 }
 
 .vp-sidebar {
+  overflow-y: hidden;
   .vp-sidebar-header {
     margin-inline: 0;
   }
