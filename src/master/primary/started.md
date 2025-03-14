@@ -32,6 +32,7 @@
 ## 2、官网流程定义案例xml
 <span class="big-font">[官网流程定义案例xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)</span>
 
+<span class="red-font">有典型的流程案例，可以发给我json文件</span>
 
 
 ## 3、maven依赖

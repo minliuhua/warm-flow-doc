@@ -65,19 +65,27 @@ watch(
     shuffle(sidebarTopArrayRight);
 
     sidebarContentLift.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">
-      <a href="/master/other/paidservice.html#赞助商广告" style="color: red;font-size: 16px;">❤️成为赞助商1</a></div>
+      <div>
+          <br>
+            <span style="color: gray;font-size: smaller;">广告采用随机轮播方式显示</span>
+            <span style="color: #E01E5A;font-size: smaller;font-weight: bolder;float: right">❤️<a href="/master/other/paidservice.html#赞助商广告">成为赞助商</a></span>
+          <br>
+      </div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArrayLift.slice(0, sidebarTopArrayLift.length).join("\n  ")}
       </div>
     `;
     sidebarContentRight.value = `\
-      <div style="font-size: 1.1em;line-height: 1.5; padding: 8px; padding-left: 4px;color: var(--text-color);">
-      <a href="/master/other/paidservice.html#赞助商广告" style="color: red;font-size: 16px;">❤️成为赞助商2</a></div>
+      <div>
+          <br>
+            <span style="color: #E01E5A;font-size: smaller;font-weight: bolder;">❤️<a href="/master/other/paidservice.html#赞助商广告">成为赞助商</a></span>
+          <br>
+      </div>
       <div style="width:230px;margin:5px auto;">
         ${sidebarTopArrayRight.slice(0, sidebarTopArrayRight.length).join("\n  ")}
       </div>
     `;
+
   },
 );
 </script>
@@ -95,9 +103,9 @@ watch(
           <template #contentBefore>
             <div content="content"></div>
           </template>
-          <template #tocBefore>
-            <div v-html="sidebarContentRight" />
-          </template>
+<!--         <template #tocBefore>-->
+<!--           <div v-html="sidebarContentRight" />-->
+<!--         </template>-->
         </NormalPage>
       </FadeSlideY>
     </template>

@@ -11,7 +11,7 @@ export default defineUserConfig({
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Dromara Warm-Flow",
+            title: "Warm-Flow官网",
         },
     },
     theme,

@@ -39,7 +39,7 @@ export default navbar([
         ]
     },
     {
-        text: "联系我",
+        text: "加入群聊",
         link: "/master/other/jionqun.md",
     },
     {
