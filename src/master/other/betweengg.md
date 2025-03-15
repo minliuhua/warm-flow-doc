@@ -45,6 +45,9 @@
     right: 25px;
     bottom: 3px;
   }
+  .wwads-logo-text {
+      font-size: 12px !important;
+  }
 }
 </style>
 
