@@ -207,8 +207,6 @@ public void skipAnyNode() throws Exception {
 :::
 
 <BiliBili bvid="BV1AWRGYEEVr" />
-<BiliBili bvid="BV1pWRGY7EEM" />
-<BiliBili bvid="BV1BQR3YuEFJ" />
 
 ### 6.3、社区成员录制视频
 <BiliBili bvid="BV1Ci42117pK" />
