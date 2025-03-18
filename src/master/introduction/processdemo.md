@@ -72,7 +72,7 @@
 :::
 
 
-![](/defSkip.png)
+![](https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png)
 ![](https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png)
 ## 3、开启流程实例
 ::: tip

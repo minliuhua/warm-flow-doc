@@ -28,6 +28,7 @@ export default sidebar({
                 'primary/designerIntroduced.md',
                 'primary/datafillhandler.md',
                 'primary/variable.md',
+                'primary/gateway.md',
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
