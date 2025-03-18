@@ -8,6 +8,10 @@
 
 :::
 
+### v1.6.8
+- 执行升级脚本1.6.8版本[warm-flow_1.6.8.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.7.sql)
+- 如果二开设计器，请自行手动同步，参考工作流引擎源码中`warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/1/21 11:46 ~ 2025/2/24 14:59`
+
 ### v1.6.7
 - 执行升级脚本1.6.7版本[warm-flow_1.6.7.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.7.sql)
 - 如果二开设计器，请自行手动同步，参考工作流引擎源码中`warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/1/21 11:46 ~ 2025/2/24 14:59`

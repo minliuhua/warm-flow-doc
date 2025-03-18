@@ -55,27 +55,27 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：新增学习视频",
+                    title: "公告：1.6.8-正式版",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
-                        '       🔵 1.项目介绍' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 [fix] 流程复制后，丢失原有的，驳回到指定节点配置信息' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
-                        '       🔵 2.竞品对比和快速集成' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 [fix] 流程图退回状态设置，缺少判空' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/primary/started.html#_6-1、推荐集成案例hh-vue\'" class="link-style">' +
-                        '       🔵 3.功能演示' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 详细更新内容' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
                             text: "学习视频地址",
-                            link: "/master/primary/started.html#_6-1、推荐集成案例hh-vue",
+                            link: "https://www.bilibili.com/video/BV1AWRGYEEVr/?spm_id_from=333.1387.0.0&vd_source=1be886ace16159801f6ed0106df215d9",
                             type: "primary",
                         },
                     ],

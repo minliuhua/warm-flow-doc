@@ -12,7 +12,7 @@
 <table class="no-border" style="width: 100%; border-collapse: collapse; ">
     <tbody>
        <tr v-for="(item, index) in filterList" :key="index" style="font-size: 15px;">
-            <td class="no-border" style="width: 10%; text-align: left;">
+            <td class="no-border" style="width: 10%; text-align: center;">
                 <div :style="{ padding: '3px', backgroundColor: getTypeColor(item.type), color: 'white', borderRadius: '4px', margin: '2px' }">
                     {{ getTypeValue(item.type) }}
                 </div>
@@ -48,16 +48,22 @@ export default {
         },
         {
             "key": "upgrade",
-            "value": "版本发布", 
+            "value": "升级", 
             "color": "#ff9292"
         },
         {
             "key": "experience",
-            "value": "使用心得", 
+            "value": "心得", 
             "color": "#71e2a3"
         },
       ];
       filterList.value = allList.value = [
+        {
+            "type": "upgrade",
+            "title": "Warm-Flow版本升级1.6.8：修复部分错误", 
+            "url": "./news/upgrade/7.html",    
+            "pushTime": "2025-03-19"
+        },
         {
             "type": "upgrade",
             "title": "三头六臂显神通：Warm-Flow引擎实现多维度灵活配置", 
