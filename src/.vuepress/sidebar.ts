@@ -5,7 +5,6 @@ export default sidebar({
         {
             text: "🤞开始",
             collapsible: true,
-            expanded: true,
             children: [
                 "introduction/introduction.md",
                 "introduction/processdemo.md",
@@ -19,7 +18,6 @@ export default sidebar({
         {
             text: "🎃初级篇",
             collapsible: true,
-            expanded: true,
             children: [
                 "primary/started.md",
                 'primary/table.md',
@@ -38,7 +36,6 @@ export default sidebar({
         {
             text: "🎈进阶篇",
             collapsible: true,
-            expanded: true,
             children: [
                 'advanced/permission_handler.md',
                 'enhance/customstatus.md',
@@ -54,7 +51,6 @@ export default sidebar({
         {
             text: "🏆提高篇",
             collapsible: true,
-            expanded: true,
             children: [
                 'enhance/designer_two_open.md',
                 'enhance/condition_two_open',
@@ -65,7 +61,6 @@ export default sidebar({
         {
             text: "🚸 其他",
             collapsible: true,
-            expanded: true,
             children: [
                 'other/team.md',
                 'other/troubleshooting.md',
@@ -81,7 +76,6 @@ export default sidebar({
         {
             text: "🤞开始",
             collapsible: true,
-            expanded: true,
             children: [
                 "introduction/introduction.md",
                 "introduction/processdemo.md",
