@@ -1,4 +1,6 @@
 # 条件表达式
+<!-- @include: ../other/betweengg.md -->
+
 ::: tip
 - 在执行互斥网关时候，抉择是执行哪个分支，可以通过条件表达式来判断
 
@@ -19,12 +21,16 @@
 - 11、自定义表达式
 
 ## 2、匹配规则
-- 1、常规匹配规则：`xxx@@yyy|zzz`，`xxx`为表达式类型，其中`yyy`为变量名，，最后的`zzz`为变量值
+- 1、常规匹配规则：`xxx@@yyy|zzz`，`xxx`为表达式类型，其中`yyy`为变量名，，最后的`zzz`为变量值。
+<div><img src="https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png"></div>
 
-- 2、Spring Expression Language（SpEL）: 
-`spel@@#{@user.eval(#flag)}`表达式，`#flag`为变量和以下方法入参命名一致，可不设置入参
+- 2、默认表达式：`default@@${flag == 5 && flag > 4}`，其中`flag`为变量名。
+<div><img src="https://foruda.gitee.com/images/1742270414653294800/a10fec4f_2218307.png"></div>
 
-<img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
+- 3、Spring Expression Language（SpEL）表达式: 
+`spel@@#{@user.eval(#flag)}`表达式，`#flag`为变量和以下方法入参命名一致，可不设置入参。
+
+<div><img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png"></div>
 
 ```java
 @Component("user")

@@ -64,40 +64,33 @@ highlights:
 
 copyright: false
 footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="https://gitee.com/min290">xiaohua</a> Member of <a href="https://dromara.org.cn/">Dromara</a> <br><a href="https://beian.miit.gov.cn/">赣ICP备2021008655号-3</a>
-
 ---
 
-<hr style="max-width: 100vw" />
-
-<el-carousel class="carousel" type="card" :interval="3000" height="650px" style="width: 100%" indicator-position="outside">
-    <el-carousel-item style="text-align: center;" v-for="item in rzList" :key="item.title">
-        <img :src="item.src"/>
-        <h3 class="small justify-end" text="2xl">{{item.title}}</h3>
-    </el-carousel-item>
-</el-carousel>
-
-<style scoped>
-.theme-hope-content {
-  max-width: 100vw !important;
-}
-.el-carousel__item img {
-  height: 600px;
-  object-fit: contain;
-}
-hr {
-  max-width: var(--content-width, 740px);
-  margin: 0 auto;
-}
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  line-height: 50px;
-  margin: 0;
-  text-align: center;
-}
-</style>
-
-<hr style="max-width: 100vw" />
+  <div class="sponsorList">
+    <strong style="font-size: 30px;">❤️特别赞助</strong><br><br><br>
+    <div class="cardList">
+      <div 
+        class="cardItem"
+        :style="`background-color: ${item.bgColor}`"
+        v-for="item in sponsorshis" 
+        :key="item.href"
+      >
+	    <a :href="item.href" target="_blank" style="text-decoration: none; color: white; " >
+          <div class="flex-hv">
+            <div class="cardImg" :style="`background-image: url(${item.src});`" alt="项目示例图片"></div>
+            <div style="text-align: center">
+              <span  style="font-size: 18px;">{{ item.title }}</span>
+              <p style="font-size: 15px; color: white; text-align: center;">{{ item.description }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div style="height: 10px; clear: both;"></div>
+    <p style="text-align: center;">
+    	<el-button type="danger" plain round style="width: 200px; height: 50px; font-size: 20px">️成为赞助商</el-button>
+    </p>
+  </div>
 
 ---
 
@@ -126,8 +119,8 @@ hr {
 </div>
 
 ---
-<div class="com-box-img">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（28家）</strong><br><br><br>
+<div class="com-box-img flex1">
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（29家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -158,13 +151,6 @@ hr {
         </a>
       </el-card>
     </div>
-    <div class="com-box com-box-you table-show-pj">
-    	<a :href="item.href" target="_blank" v-for="item in dromaraList" :key="item.href">
-        <el-tooltip :content="item.title" placement="top" popper-class="imgTip">
-    		  <img class="lazy" :src="item.src" :style="item.style">
-        </el-tooltip>
-    	</a>
-    </div>
     <div style="height: 10px; clear: both;"></div>
     <p>
     	为往圣继绝学，一个人或许能走的更快，但一群人会走的更远。
@@ -192,16 +178,9 @@ export default {
     const qyProjectList = ref([]);
     const kyProjectList = ref([]);
     const dromaraList = ref([]);
-    const rzList = ref([]);
+    const sponsorshis = ref([]);
 
     const fetchData = async () => {
-      rzList.value = [
-        { title: "Gitee star数超2.7k", src: "https://foruda.gitee.com/images/1741079539336175581/bbbd5701_2218307.png" },
-        { title: "G-Star", src: "https://foruda.gitee.com/images/1736923423924958710/f82c54d8_2218307.jpeg" },
-        { title: "软著", src: "/Warm-Flow工作流引擎软件.png" },
-        { title: "dromara全家福", src: "https://foruda.gitee.com/images/1736923867358417389/a575585e_2218307.jpeg" },
-      ];
-
       projectList.value = [
         { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
         { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
@@ -299,6 +278,29 @@ export default {
         {title: "轻量级、语义化、对开发者友好的 golang 时间处理库", href: "https://gitee.com/dromara/carbon", src: "https://oss.dev33.cn/sa-token/link/carbon.png"},
         {title: "java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。", href: "https://gitee.com/dromara/mica-mqtt", src: "https://oss.dev33.cn/sa-token/link/mica-mqtt.png"},
         ];
+      sponsorshis.value = [
+        {
+          title: '驰骋工作流引擎',
+          description: '驰骋BPM低代码，工作流、表单引擎!',
+          href: 'https://ccflow.org/index.html?frm=warmflow',
+          src: '/ggw/logo/ccflow.png',
+          bgColor: "#ba4552"
+        },
+        {
+          title: '全栈设计UI设计',
+          description: '大屏数据|小程序生态|后台系统',
+          href: '/master/other/paidservice.html#私人服务',
+          src: '/ggw/logo/yuui.png',
+          bgColor: "#A6A1F3"
+        },
+        {
+          title: 'MaxKey单点登录认证系统',
+          description: 'MaxKey单点登录认证系统是业界领先的IAM-IDaas身份管理和认证产',
+          href: 'https://www.maxkey.top',
+          src: '/ggw/logo/MaxKey.png',
+          bgColor: "#302294"
+        },
+      ]
     };
 
     const navigateTo = () => {
@@ -310,7 +312,7 @@ export default {
           <a href='https://github.com/dromara/warm-flow.git'><img src='https://img.shields.io/github/forks/dromara/warm-flow.svg' alt='fork'></a>
           <a href='https://gitcode.com/dromara/warm-flow'><img src='https://gitcode.com/dromara/warm-flow/star/badge.svg' alt='fork'></a>
           <a href='https://gitee.com/dromara/warm-flow/blob/master/LICENSE'><img src='https://img.shields.io/github/license/dromara/warm-flow' alt='fork'></a>
-          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.7-beta_not-have' alt='fork'></a>
+          <a href='https://repo1.maven.org/maven2/org/dromara/warm/'><img src='https://img.shields.io/badge/release_1.6.8-beta_not-have' alt='fork'></a>
         </p>
       `;
 
@@ -354,20 +356,13 @@ export default {
       qyProjectList,
       kyProjectList,
       dromaraList,
-      rzList,
+      sponsorshis,
     };
   },
 };
 </script>
 
-<style>
-.com-box {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 50px;
-  justify-content: flex-start;
-}
+<style lang="scss">
 .com-box-img,
 .com-box-f {
   padding: 1em 1em;
@@ -383,9 +378,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 76px;
-  flex: 1 1 calc(9% - 20px);
+  max-height: 47px;
+  flex: 1 1 calc(9% - 12px);
+  flex-grow: 0;
   padding: 10px;
+}
+.flex1 .el-card {
+  flex: 1 1 calc(16% - 20px);
+  width: auto;
+  max-height: 76px;
 }
 .com-box-img .el-card .el-card__body {
   height: 100%;
@@ -399,40 +400,11 @@ export default {
   object-fit: contain;
   height: 100%;
 }
-.com-box-you a {
-    flex: 0 0 14.5%;
-    line-height: 60px;
-    height: 60px;
-    margin: 10px;
-}
 .imgTip {
   padding: 10px;
   font-size: 14px;
   max-width: 300px;
-}
-.table-show-pj a img {
-  min-width: 60%;
-  max-width: 80%;
-  vertical-align: middle;
-  max-height: 100%;
-  transition: transform 0.2s !important;
-}
-.table-show-pj a {
-  border-width: 0 1px 1px 0px;
-}
-.table-show-pj a {
-  flex: 0 0 16.5%;
-  border: 1px #d5d5d5 solid;
-  margin: 0;
-  padding: 7px 0;
-  overflow: hidden;
-}
-.com-box a {
-    display: block;
-    flex: 1 0 14.5%;
-    margin: 0px;
-    cursor: pointer;
-}   
+} 
 .links {
     display: flex;
     flex-wrap: wrap;
@@ -481,5 +453,36 @@ export default {
     line-height: 24px;
     color: #ff5722;
     border: 1px #ff5722 solid;
+}
+.sponsorList {
+  .cardList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .cardItem {
+      max-width: 33.33%;
+      flex: 1 1 calc(33.33% - 38px);
+      padding: 15px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      .flex-hv {
+        display: flex;
+        align-items: center;
+        .cardImg{
+          width: 66px;
+          height: 66px;
+          background-repeat: round;
+          margin-right: 10px;
+          cursor: pointer;
+          border-radius: 50%;
+          flex-shrink: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
 }
 </style>

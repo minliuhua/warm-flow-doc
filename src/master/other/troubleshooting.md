@@ -1,4 +1,6 @@
 # 常见问题
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 1、id精度丢失
 ::: tip 方案1：处理长度过长的Long类型
@@ -157,7 +159,7 @@ drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 ::: tip docker环境：安装中文字体
 - 以ruoyi-vue-plus-4.x中dockerfile为例，添加中文字体即可  （感谢【格调@main】提供的方案）
 
-<img src="https://foruda.gitee.com/images/1730708137813267165/0ff99854_2218307.png" width="700" />
+<div><img src="https://foruda.gitee.com/images/1730708137813267165/0ff99854_2218307.png" width="700" /></div>
 :::
 
 
@@ -294,13 +296,13 @@ public class MybatisPlusConfig {
 ::: tip
 - 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
 
-<img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/>
+<div><img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/></div>
 :::
 
 ## 9、 后端接收流程xml部分丢失
 ::: tip
 - 一般是xxs过滤导致，排查下接口就行或者对象就行
 
-<img src="https://foruda.gitee.com/images/1733466289672727602/b693f617_2218307.png" width="700"/>
-<img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/>
+<div><img src="https://foruda.gitee.com/images/1733466289672727602/b693f617_2218307.png" width="700"/></div>
+<div><img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/></div>
 :::

@@ -1,4 +1,6 @@
 # 介绍
+<!-- @include: ../other/betweengg.md -->
+
 ## 1、项目介绍
 ::: tip 
 - Dromara Warm-Flow国产工作流引擎🎉，其特点简洁轻量，五脏俱全，灵活扩展性强，是一个可通过jar引入设计器的工作流。
@@ -18,11 +20,12 @@
 1. 兼容java8和java17,理论11也可以 
 1. 官方提供基于ruoyi-vue封装实战项目，很实用
 
-<img src="https://foruda.gitee.com/images/1740539574846920667/481b7db8_2218307.png"/>
-
 ```shell
 希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长
 ```
+
+<div><img src="https://foruda.gitee.com/images/1740539574846920667/481b7db8_2218307.png"/></div>
+
 ## 2、演示地址
 
 - admin/admin123

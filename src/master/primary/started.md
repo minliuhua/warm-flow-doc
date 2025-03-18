@@ -1,18 +1,23 @@
 # 快速开始
+<!-- @include: ../other/betweengg.md -->
+
 ::: tip
 **在开始之前，我们假定您已经:**  
 
 - 熟悉 Java 环境配置及其开发  
+
 - 熟悉 关系型 数据库，比如 MySQL  
+
 - 熟悉 Spring Boot或者Solon 及相关框架  
+
 - 熟悉 Java 构建工具，比如 Maven  
 :::
 
 ## 1、导入sql，按需求执行
 
-- 开始学习前，请先了解[表结构](./table.md)，不迷路
-- 首次导入，先创建数据库，找到对应数据库的全量脚本[warm-flow-all.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql)，执行  
-- 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)，执行
+- 开始学习前，请先了解<span class="big-font">[表结构](./table.md)</span>，不迷路
+- 首次导入，先创建数据库，找到对应数据库的全量脚本<span class="big-font">[warm-flow-all.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql)</span>，执行  
+- 如果版本更新，找到对应数据库的更新版本，比如xx-upgrade，<span class="big-font">[warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql/mysql/v1-upgrade)</span>，执行
 
 <table>
     <tbody>
@@ -25,15 +30,16 @@
 
 
 ## 2、官网流程定义案例xml
+<span class="big-font">[官网流程定义案例xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)</span>
 
-[官网流程定义案例xml](https://gitee.com/dromara/warm-flow-test/tree/master/warm-flow-core-test/src/main/resources)
+<span class="red-font">有典型的流程案例，可以发给我json文件</span>
 
 
 ## 3、maven依赖
 ### 3.1、从首页获取最新版本
 <br>
 
-<img src="https://foruda.gitee.com/images/1737083916006381044/743f5bfb_2218307.png" width="500px">
+<div><img src="https://foruda.gitee.com/images/1737083916006381044/743f5bfb_2218307.png" width="500px"></div>
 <br>
 
 ### 3.2、mybatis
@@ -112,18 +118,17 @@
 
 ### 3.4、jpa
 
-[https://gitee.com/warm_4/warm-flow-jpa.git](https://gitee.com/warm_4/warm-flow-jpa.git)
+<span class="big-font">[https://gitee.com/warm_4/warm-flow-jpa.git](https://gitee.com/warm_4/warm-flow-jpa.git)</span>
 
 
 ### 3.5、mybatis-flex
 
-[https://gitee.com/rigangxia/warm-flow-mybatis-flex.git](https://gitee.com/rigangxia/warm-flow-mybatis-flex.git)
-
+<span class="big-font">[https://gitee.com/rigangxia/warm-flow-mybatis-flex.git](https://gitee.com/rigangxia/warm-flow-mybatis-flex.git)</span>
 
 
 ### 3.6、easy-query
 
-[https://gitee.com/link2fun/warm-flow-easy-query.git](https://gitee.com/link2fun/warm-flow-easy-query.git)
+<span class="big-font">[https://gitee.com/link2fun/warm-flow-easy-query.git](https://gitee.com/link2fun/warm-flow-easy-query.git)</span>
 
 
 
@@ -131,7 +136,9 @@
 
 ## 4、代码示例
 
-> 详细案例测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类
+> <span class="big-font">详细案例测试代码[warm-flow-test](https://gitee.com/dromara/warm-flow-test)项目中，warm-flow-xxx-test模块的测类</span>
+
+<br>
 
 **以下为简短案例：**
 
@@ -188,12 +195,18 @@ public void skipAnyNode() throws Exception {
 :::
 
 ## 5、设计器引入
-> 通过jar包引入：[文档地址](./designerIntroduced.md)
+> <span class="big-font">通过jar包引入：[文档地址](./designerIntroduced.md)</span>
 
 ## 6、初学者推荐学习路线
 
 ### 6.1、推荐集成案例hh-vue
-[项目地址](../introduction/projectexample.md)
+<span class="big-font">[项目地址](../introduction/projectexample.md)</span>
 
 ### 6.2、推荐学习视频
+::: tip <span class="red-font">给作者一些支持，一键三连，点赞+关注+评论666，这对作者很重要，谢谢！</span>
+:::
+
+<BiliBili bvid="BV1AWRGYEEVr" />
+
+### 6.3、社区成员录制视频
 <BiliBili bvid="BV1Ci42117pK" />

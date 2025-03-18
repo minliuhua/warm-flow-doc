@@ -1,4 +1,6 @@
 # 表结构
+<!-- @include: ../other/betweengg.md -->
+
 ::: tip 表描述
 流程定义的相关的三张表 
 

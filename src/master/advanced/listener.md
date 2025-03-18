@@ -1,4 +1,6 @@
 # 监听器
+<!-- @include: ../other/betweengg.md -->
+
 ::: tip 
 - 在办理流程过程中，通过监听器，监听办理过程的不同时期，进行业务处理，功能增强。  
 - 支持类包名配置和表达式配置。
@@ -18,7 +20,7 @@
 - 执行顺序：节点监听器 --> 流程监听器 --> 全局监听器
 
 ## 3、监听器生命周期图
-<img src="https://foruda.gitee.com/images/1737613725682981587/8e1c2a91_2218307.png" width="800">
+<div><img src="https://foruda.gitee.com/images/1737613725682981587/8e1c2a91_2218307.png" width="800"></div>
 
 
 ## 4、监听器设置
@@ -99,7 +101,42 @@ public class DefStartListener implements Listener {
 }
 ```
 
-### 5.3、完成监听器实现类例子
+### 5.4、分派监听器
+如下图中示例可以很容易实现
+
+<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
+
+
+- 注意：
+  - 当前节点分派监听器：执行时修改【下个节点配置办理人权限】或者其他
+  - 下个节点配置办理人权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
+```java
+@Component
+public class AssignmentListener implements Listener {
+
+    private static final Logger log = LoggerFactory.getLogger(AssignmentListener.class);
+
+    @Override
+    public void notify(ListenerVariable variable) {
+        log.info("分派监听器开始执行......");
+        List<Task> tasks = variable.getNextTasks();
+        Instance instance = variable.getInstance();
+        for (Task task : tasks) {
+            List<String> permissionList = task.getPermissionList();
+            // 如果设置了发起人审批，则需要动态替换权限标识
+            for (int i = 0; i < permissionList.size(); i++) {
+                String permission = permissionList.get(i);
+                if (StringUtils.isNotEmpty(permission) && permission.contains(FlowCons.WARMFLOWINITIATOR)) {
+                    permissionList.set(i, permission.replace(FlowCons.WARMFLOWINITIATOR, instance.getCreateBy()));
+                }
+            }
+        }
+        log.info("分派监听器执行结束......");
+    }
+}
+```
+
+### 5.4、完成监听器实现类例子
 ```java
 @Component
 public class DefFinishListener implements Listener {
@@ -157,53 +194,18 @@ public class DefFinishListener implements Listener {
 }
 ```
 
-### 5.4、可实现的效果
-如下图中示例可以很容易实现  
-
-<img src="/assignmentlistener.jpg" width="550px" height="450px" />
-
-
-- 注意： 
-  - 上个节点分派监听器修改：执行时修改【下个节点配置权限策略】
-  - 下个节点配置权限策略：可设置自定义权限策略，比如发起人审批，部门领导审批等
-```java
-@Component
-public class AssignmentListener implements Listener {
-
-    private static final Logger log = LoggerFactory.getLogger(AssignmentListener.class);
-
-    @Override
-    public void notify(ListenerVariable variable) {
-        log.info("分派监听器开始执行......");
-        List<Task> tasks = variable.getNextTasks();
-        Instance instance = variable.getInstance();
-        for (Task task : tasks) {
-            List<String> permissionList = task.getPermissionList();
-            // 如果设置了发起人审批，则需要动态替换权限标识
-            for (int i = 0; i < permissionList.size(); i++) {
-                String permission = permissionList.get(i);
-                if (StringUtils.isNotEmpty(permission) && permission.contains(FlowCons.WARMFLOWINITIATOR)) {
-                    permissionList.set(i, permission.replace(FlowCons.WARMFLOWINITIATOR, instance.getCreateBy()));
-                }
-            }
-        }
-        log.info("分派监听器执行结束......");
-    }
-}
-```
-
 ### 5.5、创建监听器
 - 就是在下一个任务生成前执行，比如创建任务前需要初始化信息或者校验数据是否合法
 
 ### 5.6、页面配置全局或节点监听器
 #### 5.6.1、节点监听器（流程节点配置）
 
-<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500" />
+<div><img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500"></div>
 
 
 #### 5.6.1、流程监听器（流程定义配置）
 
-<img src="https://foruda.gitee.com/images/1732548175204139076/1f88c928_2218307.png" width="600px">
+<div><img src="https://foruda.gitee.com/images/1732548175204139076/1f88c928_2218307.png" width="600px"></div>
 
 ## 6、全局监听器
 
@@ -269,7 +271,7 @@ public class CustomGlobalListener implements GlobalListener {
 
 - 页面配置监听器时加上类路径
 
-<img src="https://foruda.gitee.com/images/1732548102324679120/544ff483_2218307.png" width="600px">
+<div><img src="https://foruda.gitee.com/images/1732548102324679120/544ff483_2218307.png" width="600px"></div>
 
 ```java
     public void notify(ListenerVariable variable) {

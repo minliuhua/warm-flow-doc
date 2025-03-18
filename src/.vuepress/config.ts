@@ -11,7 +11,7 @@ export default defineUserConfig({
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Dromara Warm-Flow",
+            title: "Warm-Flow官网",
         },
     },
     theme,
@@ -33,6 +33,9 @@ export default defineUserConfig({
   hm.src = "https://hm.baidu.com/hm.js?65be70db3d38cbd58e6c4710a5a774ae";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
-})();`]]
+})();`],
+        ['script', { type: 'text/javascript', charset: 'UTF-8'
+            , src: 'https://cdn.wwads.cn/js/makemoney.js', async: '' }, '']
+    ]
 });
 

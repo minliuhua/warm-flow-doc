@@ -1,4 +1,6 @@
 # 捐赠
+<!-- @include: ../other/betweengg.md -->
+
 > 感谢所有捐赠者，你们的支持是我最大的动力。这些费用将用于服务器、域名和相关服务的费用，以及warm组织成员和贡献者的红包奖励。**<font color="red">（捐赠完并留言，附上昵称）</font>**
 
 <img src="https://foruda.gitee.com/images/1697770422557390406/7efa04d6_2218307.png" height="350px">

@@ -1,4 +1,6 @@
 # 条件表达式扩展
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 1、表达式公共接口
 

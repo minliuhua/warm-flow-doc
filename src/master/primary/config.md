@@ -1,4 +1,6 @@
 # 配置文件
+<!-- @include: ../other/betweengg.md -->
+
 ::: code-tabs#shell
 
 @tab:active springboot

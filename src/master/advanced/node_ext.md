@@ -1,4 +1,5 @@
 # 节点扩展属性
+<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 当业务系统需要给节点添加扩展属性时，可以按照这个进行扩展。
@@ -245,8 +246,8 @@ public interface NodeExtService {
 
 
 ## 3、设计器渲染效果
-<img src="https://foruda.gitee.com/images/1740388220090328621/a87819cd_2218307.png" width="800">
-<img src="https://foruda.gitee.com/images/1740388227772388546/b759aab9_2218307.png" width="800">
+<div><img src="https://foruda.gitee.com/images/1740388220090328621/a87819cd_2218307.png" width="800"></div>
+<div><img src="https://foruda.gitee.com/images/1740388227772388546/b759aab9_2218307.png" width="800"></div>
 
 ## 4、扩展属性入库
 点击保存后，保存到节点表的`ext`字段，格式如下：

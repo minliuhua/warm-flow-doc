@@ -9,8 +9,6 @@ export default hopeTheme(
             name: "Dromara Warm-Flow工作流",
             url: "https://gitee.com/warm_4/warm-flow-doc",
         },
-        iconAssets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
-        iconPrefix: "iconfont icon-",
         logo: "/logo.png",
         docsDir: "src",
         print: false,
@@ -31,6 +29,7 @@ export default hopeTheme(
             mark: true,
             codeTabs: true,
             include: true,
+            component: true,
         },
 
         plugins: {
@@ -42,6 +41,10 @@ export default hopeTheme(
                     "SiteInfo",
                 ],
             },
+            icon: {
+                assets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
+                prefix: "iconfont icon-",
+            },
             comment: {
                 provider: "Giscus",
                 repo: "dromara/warm-flow",
@@ -52,27 +55,27 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.7-正式版",
+                    title: "公告：1.6.8-正式版",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/node_ext.html\'" class="link-style">' +
-                        '       🔵 设计器支持节点扩展属性设置' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 [fix] 流程复制后，丢失原有的，驳回到指定节点配置信息' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
-                        '       🔵 流程图扩展增加接口，方便新增文字' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 [fix] 流程图退回状态设置，缺少判空' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/advanced/chart_manage.html\'" class="link-style">' +
-                        '       🔵 自定义流程图节点颜色' +
+                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
+                        '       🔵 详细更新内容' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
-                            text: "新版本介绍",
-                            link: "/master/other/news/upgrade/6.html",
+                            text: "学习视频地址",
+                            link: "https://www.bilibili.com/video/BV1AWRGYEEVr/?spm_id_from=333.1387.0.0&vd_source=1be886ace16159801f6ed0106df215d9",
                             type: "primary",
                         },
                     ],

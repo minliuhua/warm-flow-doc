@@ -1,12 +1,14 @@
 # 功能演示
+<!-- @include: ../other/betweengg.md -->
+
 
 ## 演示地址
 
 ::: warning
 - admin/admin123
 
-演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
-项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)  
+- 演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
+- 项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)  
 :::
 
 ## 演示图
@@ -43,8 +45,9 @@
 
 ## 1、新增定义
 ::: tip
-流程编码和流程版本：确定唯一
-审批表单路径：记录待办任务需要显示的待办信息页面，点击待办时候获取这个路径，动态加载这个页面
+- 流程编码和流程版本：确定唯一
+
+- 审批表单路径：记录待办任务需要显示的待办信息页面，点击待办时候获取这个路径，动态加载这个页面
 :::
 
 
@@ -53,12 +56,15 @@
 ## 2、流程设计
 ### 2、1节点设置
 ::: tip 
-配置节点名称，协作方式（会签、票签和或签），节点权限，是否任意调整，监听器等
+- 配置节点名称，协作方式（会签、票签和或签），节点权限，是否任意调整，监听器等
+
+- 支持不同节点配置不同得审批表单
 :::
 
 
-<img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="700" />
-<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" />
+<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="700" /></div>
+<div><img src="https://foruda.gitee.com/images/1742261152703131620/939d9684_2218307.png" width="700" /></div>
+<div><img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" /></div>
 
 ### 2、2跳转线设置
 ::: tip 
@@ -66,7 +72,7 @@
 :::
 
 
-![](/defSkip.png)
+![](https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png)
 ![](https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png)
 ## 3、开启流程实例
 ::: tip
