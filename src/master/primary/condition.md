@@ -26,7 +26,7 @@
 - 2、Spring Expression Language（SpEL）: 
 `spel@@#{@user.eval(#flag)}`表达式，`#flag`为变量和以下方法入参命名一致，可不设置入参
 
-<img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700">
+<div><img src="https://foruda.gitee.com/images/1727163098727096928/c29d9af5_2218307.png" width="700"></div>
 
 ```java
 @Component("user")

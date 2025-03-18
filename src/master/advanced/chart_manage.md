@@ -67,7 +67,7 @@ public R<String> flowChart(@PathVariable("instanceId") Long instanceId) {
 ```
 
 ### 1.3、效果图
-<img src="https://foruda.gitee.com/images/1740390432531294424/ce6d2ff7_2218307.png" width="800">
+<div><img src="https://foruda.gitee.com/images/1740390432531294424/ce6d2ff7_2218307.png" width="800"></div>
 
 
 ## 2、自定义流程图节点颜色
@@ -88,7 +88,7 @@ warm-flow:
 ```
 
 ### 2.2、效果图
-<img src="https://foruda.gitee.com/images/1740390600987335612/33073d72_2218307.png" width="800">
+<div><img src="https://foruda.gitee.com/images/1740390600987335612/33073d72_2218307.png" width="800"></div>
 
 
 ## 3、流程图渲染规则

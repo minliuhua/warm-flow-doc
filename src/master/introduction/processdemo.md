@@ -62,9 +62,9 @@
 :::
 
 
-<img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="700" />
-<img src="https://foruda.gitee.com/images/1742261152703131620/939d9684_2218307.png" width="700" />
-<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" />
+<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="700" /></div>
+<div><img src="https://foruda.gitee.com/images/1742261152703131620/939d9684_2218307.png" width="700" /></div>
+<div><img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="700" /></div>
 
 ### 2、2跳转线设置
 ::: tip 

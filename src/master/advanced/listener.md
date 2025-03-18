@@ -20,7 +20,7 @@
 - 执行顺序：节点监听器 --> 流程监听器 --> 全局监听器
 
 ## 3、监听器生命周期图
-<img src="https://foruda.gitee.com/images/1737613725682981587/8e1c2a91_2218307.png" width="800">
+<div><img src="https://foruda.gitee.com/images/1737613725682981587/8e1c2a91_2218307.png" width="800"></div>
 
 
 ## 4、监听器设置
@@ -104,7 +104,7 @@ public class DefStartListener implements Listener {
 ### 5.4、分派监听器
 如下图中示例可以很容易实现
 
-<img src="/assignmentlistener.jpg" width="550px" height="450px" />
+<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
 
 - 注意：
@@ -200,12 +200,12 @@ public class DefFinishListener implements Listener {
 ### 5.6、页面配置全局或节点监听器
 #### 5.6.1、节点监听器（流程节点配置）
 
-<img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500" />
+<div><img src="https://foruda.gitee.com/images/1732545153700629064/3183155f_2218307.png" width="500"></div>
 
 
 #### 5.6.1、流程监听器（流程定义配置）
 
-<img src="https://foruda.gitee.com/images/1732548175204139076/1f88c928_2218307.png" width="600px">
+<div><img src="https://foruda.gitee.com/images/1732548175204139076/1f88c928_2218307.png" width="600px"></div>
 
 ## 6、全局监听器
 
@@ -271,7 +271,7 @@ public class CustomGlobalListener implements GlobalListener {
 
 - 页面配置监听器时加上类路径
 
-<img src="https://foruda.gitee.com/images/1732548102324679120/544ff483_2218307.png" width="600px">
+<div><img src="https://foruda.gitee.com/images/1732548102324679120/544ff483_2218307.png" width="600px"></div>
 
 ```java
     public void notify(ListenerVariable variable) {

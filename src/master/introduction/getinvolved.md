@@ -38,7 +38,7 @@
 - 当然了 大家也可以对文档进行改进后提交PR修改申请
 <br>
 
-<img src="https://foruda.gitee.com/images/1724133504534596903/ceb7f181_2218307.png" width="550px" height="450px" />
+<div><img src="https://foruda.gitee.com/images/1724133504534596903/ceb7f181_2218307.png" width="550px" height="450px" /></div>
 
 
 ### 贡献代码
@@ -46,7 +46,7 @@
 > 想参与贡献代码的小伙伴 重点来了: 作者会经常在Issue里发布需求认领<br>
 > 觉得自己能做的可以在Issue里跟作者讨论 如需求还不够清晰 或者做的过程中遇到了什么问题
 
-<img src="https://foruda.gitee.com/images/1724137827842538771/4788e666_2218307.png" width="550px" height="450px" />
+<div><img src="https://foruda.gitee.com/images/1724137827842538771/4788e666_2218307.png" width="550px" height="450px" /></div>
 
 > 需求确定了以后就可以开始专注的写代码了<br>
 > 但在开始写代码之前 一定要先看一下如何正确的提交PR
@@ -86,7 +86,7 @@
 ### 步骤五 设置创建类的模板
 新创建的类使用这个模板生成注释，使用方式在类上面写上 `/c`，然后按回车会自动生成
 
-<img src="https://foruda.gitee.com/images/1730944360181690399/52ae8529_2218307.png" width="700">
+<div><img src="https://foruda.gitee.com/images/1730944360181690399/52ae8529_2218307.png" width="700"></div>
 
 ### 步骤六 将编写好的代码 提交到自己的远程仓库
 

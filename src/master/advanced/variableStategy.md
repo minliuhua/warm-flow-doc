@@ -55,7 +55,7 @@ public class VariableTest {
 ### 5、可实现的效果
 如下图中示例可以很容易实现 
 
-<img src="/assignmentlistener.jpg" width="550px" height="450px" />
+<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
 ## 5、默认办理人变量策略
 
@@ -63,7 +63,7 @@ public class VariableTest {
 - 比如：`${handler1}`，表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
 
 
-<img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" />
+<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" /></div>
 
 
 
@@ -83,7 +83,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 ### 前端页面设置变量
 - 比如：`#{@user.evalVar(#handler2)}`，是spel表达式，`#handler2`是方法入参变量，可以不设置
 
-<img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" />
+<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" /></div>
 
 
 
