@@ -10,7 +10,7 @@
 
 - 如果内置的接口不满足或者不够支持实际业务开发，可在业务系统中增加接口，设计器配置该接口地址
 
-<div><img src="https://foruda.gitee.com/images/1730823525754067269/9573585f_2218307.png" width="400"></div>
+<div><img src="https://foruda.gitee.com/images/1742547534890322780/bd27f761_2218307.png" width="400"></div>
 <div><img src="https://foruda.gitee.com/images/1730958025453602251/ae415296_2218307.png" width="700"></div>
 
 ## 2 源码调试

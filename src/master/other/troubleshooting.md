@@ -2,7 +2,7 @@
 <!-- @include: ../other/betweengg.md -->
 
 
-## 1、id精度丢失
+## **1、id精度丢失**
 ::: tip 方案1：处理长度过长的Long类型
 
 - 只处理长度过长的Long类型，前端页面就不会丢失精度了 (感谢【Colin】提供解决方案)
@@ -131,7 +131,7 @@ warm-flow:
 
 
 
-## 2、流程图片中文乱码
+## **2、流程图片中文乱码**
 ::: tip linux环境：安装中文字体
 - 生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
 
@@ -165,7 +165,7 @@ drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 
 
 
-## 3、initFlow()未加载
+## **3、initFlow()未加载**
 
 ::: tip
 - spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）  
@@ -182,22 +182,27 @@ spring:
 :::
 
 
-## 4、监听器等对象获取不到
+## **4、监听器等对象获取不到**
 
-::: tip
-- 热部署插件jrebel或者devtools导致问题，检查是否使用热部署插件，比如spring.devtools，可以把插件关了，或者加上排除配置spring-devtools.properties
+::: tip 问题出现的原理：
+
+- 业务系统和热加载器不是同一个(热部署插件导致)
+- 设置的监听器类的全限定名错误(检查监听器类全限定名)
+
+:::
+
+热部署插件jrebel或者devtools导致的问题，检查是否使用热部署插件，比如spring.devtools，可以把插件关了，或者加上排除配置spring-devtools.properties
 
 ```properties
 restart.include.flow=/org.dromara.warm.*.jar
 ```
-:::
 
-## 5、类型转换异常
+## **5、类型转换异常**
 ::: tip 同上
 :::
 
 
-## 6、hh-vue切换mybaits-plus
+## **6、hh-vue切换mybaits-plus**
 
 ::: tip
 - 1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter 
@@ -286,23 +291,29 @@ public class MybatisPlusConfig {
 :::
 
 
-## 7、导入依赖包失败
+## **7、导入依赖包失败**
 
 ::: tip 可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 - 如maven3.9.6切换为低版本3.8.2
 :::
 
-## 8、 StackOverflowError 错误
+## **8、 StackOverflowError 错误**
 ::: tip
 - 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
 
 <div><img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/></div>
 :::
 
-## 9、 后端接收流程xml部分丢失
+## **9、 后端接收流程xml部分丢失**
 ::: tip
 - 一般是xxs过滤导致，排查下接口就行或者对象就行
 
 <div><img src="https://foruda.gitee.com/images/1733466289672727602/b693f617_2218307.png" width="700"/></div>
 <div><img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/></div>
+:::
+
+## **10、 演示项目请假类型为啥使用字典**
+::: tip
+因为要在一个模块中展示不同的流程案例，所以使用字典，字典映射流程定义
+<div><img src="https://foruda.gitee.com/images/1742523937795259637/a55fbbda_2218307.png" width="700"/></div>
 :::
