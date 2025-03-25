@@ -351,7 +351,7 @@ spring:
 
 ### 4.1 办理人权限选择弹框页面
 
-<div><img src="https://foruda.gitee.com/images/1729094468685997422/d38c7e79_2218307.png"></div>
+<div><img src="https://foruda.gitee.com/images/1742804225175791843/02ddc1bd_2218307.png"></div>
 <br>
 
 ### 4.2 实现接口获取以上页面办理人权限数据

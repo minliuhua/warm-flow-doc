@@ -118,7 +118,7 @@
 
 ### 3.4、jpa
 
-<span class="big-font">[https://gitee.com/warm_4/warm-flow-jpa.git](https://gitee.com/warm_4/warm-flow-jpa.git)</span>
+<span class="big-font">[https://gitee.com/vanlin/warm-flow-jpa.git](https://gitee.com/vanlin/warm-flow-jpa.git)</span>
 
 
 ### 3.5、mybatis-flex

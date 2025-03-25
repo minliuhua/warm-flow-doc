@@ -50,8 +50,9 @@
 - 审批表单路径：记录待办任务需要显示的待办信息页面，点击待办时候获取这个路径，动态加载这个页面
 :::
 
+<div><img src="https://foruda.gitee.com/images/1742803956071384899/eb563152_2218307.png" width="700"></div>
+<div><img src="https://foruda.gitee.com/images/1742804032489030182/89b15652_2218307.png" width="700"></div>
 
-![输入图片说明](https://foruda.gitee.com/images/1703667450784737720/940b2bab_2218307.png "屏幕截图")
 
 ## 2、流程设计
 ### 2、1节点设置

@@ -120,7 +120,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 <div class="com-box-img flex1">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（29家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（30家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -198,7 +198,7 @@ export default {
         { href: "https://www.runyoucloud.com", title: "山东融佑信息科技有限公司", src: "https://foruda.gitee.com/images/1724129195385753446/c9b9b908_2218307.png" },
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
-        { href: "https://gitee.com/qq75547276/openflow-admin", title: "武汉数演科技有限公司", src: "https://foruda.gitee.com/images/1724129097682545577/22d88a87_2218307.png" },
+        { href: "www.hxhorae.com.cn", title: "华夏好瑞（天津）科技有限公司", src: "https://zhengxin-pub.cdn.bcebos.com/mark/54cdfdc0fcd3afd8f31c457803bcaa36.jpg?x-bce-process=image/resize,m_lfit,w_112" },
         ];
 
       kyProjectList.value = [
