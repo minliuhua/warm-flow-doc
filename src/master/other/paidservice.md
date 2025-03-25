@@ -18,9 +18,11 @@
 
 ## 赞助商广告
 
-<span class="red-bg">Warm-Flow</span>是基于Apache-2.0开源的项目，但我们每年都在支付第三方域名，云服务器，CDN流量费，推广开发费用。为了项目能够健康长久的发展下去，我们在<span class="red-bg">Warm-Flow</span>官网提供多个赞助商广告位。
+- <span class="red-bg">Warm-Flow</span>是基于Apache-2.0开源的项目，但我们每年都在支付第三方域名，云服务器，CDN流量费，推广开发费用。
 
-如您在<span class="red-bg">Warm-Flow</span>官网投放广告，可获得首页以及文档所有页面的展示，目前LiteFlow官网流量大概每月在<span class="red-bg">57w pv</span>以上。
+- 为了项目能够健康长久的发展下去，我们在<span class="red-bg">Warm-Flow</span>官网提供多个赞助商广告位。
+
+- 如您在<span class="red-bg">Warm-Flow</span>官网投放广告，可获得首页以及文档所有页面的展示，目前LiteFlow官网流量大概每月在<span class="red-bg">57w pv</span>以上。
 
 **合作方式：**
 
