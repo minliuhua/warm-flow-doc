@@ -88,8 +88,8 @@ warm-flow-jpa:
       "skipList": [                                 -- 跳转线集合
         {                                          
           "coordinate": "430,200;550,200",          -- 流程跳转坐标
-          "nextNodeCode": "3",                      -- 当前流程节点的编码
-          "nowNodeCode": "2",                       -- 下一个流程节点的编码
+          "nowNodeCode": "2",                       -- 当前流程节点的编码
+          "nextNodeCode": "3",                      -- 下一个流程节点的编码
           "skipName": "xx",                         -- 跳转名称
           "skipType": "PASS"                        -- 跳转类型（PASS审批通过 REJECT退回）
           "skipCondition": "gt@@flag|4",            -- 跳转条件
