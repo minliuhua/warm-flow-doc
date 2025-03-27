@@ -47,4 +47,10 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 - 课程目录可能会微调，请以视频内容为主
 
 <br>
+
+<div><img src="../../.vuepress/public/videosml.png"></div>
+
+
+### **课程大纲**
+
 <div><img src="../../.vuepress/public/videos.png"></div>
