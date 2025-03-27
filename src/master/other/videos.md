@@ -3,7 +3,6 @@
 
 ## **必看视频（免费）**
 给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
-
 b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?spm_id_from=333.788.videopod.sections&bvid=BV1AWRGYEEVr&vd_source=1be886ace16159801f6ed0106df215d9)
 
 ## **从零精通（收费）**
@@ -18,7 +17,10 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 
 ### **课程价格**
 - 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
-- 课程试看：[1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6/?vd_source=1be886ace16159801f6ed0106df215d9)
+- 课程试看
+  - [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6/?vd_source=1be886ace16159801f6ed0106df215d9)
+  - [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
+
 
 ### **课程目录**
 - 已更新到<span class="red-font-bold">18</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
