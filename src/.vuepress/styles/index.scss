@@ -82,7 +82,7 @@
   font-size: 17px;
 }
 .theme-hope-content *, .theme-hope-content {
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 .vp-highlight-image {
   width: 33rem;
@@ -103,10 +103,20 @@
    padding: 2px 8px;
  }
 
+.red-bg-bold {
+  @extend .red-bg;
+  font-weight: bold;
+}
+
 .red-font {
   color: red;
   padding: 8px;
-  font-size: 20px
+  font-size: 20px;
+}
+
+.red-font-bold {
+  @extend .red-font;
+  font-weight: bold;
 }
 
 .big-font {

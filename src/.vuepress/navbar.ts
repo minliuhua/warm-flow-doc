@@ -55,6 +55,10 @@ export default navbar([
         link: "/master/other/paidservice.md",
     },
     {
+        text: "教学视频",
+        link: "/master/other/videos.md",
+    },
+    {
         text: '常见问题',
         link: '/master/other/troubleshooting.md'
     },

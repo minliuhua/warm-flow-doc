@@ -55,27 +55,22 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告：1.6.8-正式版",
+                    title: "公告",
                     content:
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
-                        '       🔵 [fix] 流程复制后，丢失原有的，驳回到指定节点配置信息' +
+                        '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
+                        '       🔵 过去、现在和未来都不会有商业版' +
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
-                        '       🔵 [fix] 流程图退回状态设置，缺少判空' +
-                        '     </span>\n' +
-                        '</div>' +
-                        '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/update.html#v1-6-8-2025-03-19\'" class="link-style">' +
-                        '       🔵 详细更新内容' +
+                        '     <span onclick="window.location.href=\'/master/other/videos.html#从零精通-收费\'" class="link-style">' +
+                        '       🔵 新增从零精通教学视频' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
                         {
                             text: "学习视频地址",
-                            link: "https://www.bilibili.com/video/BV1AWRGYEEVr/?spm_id_from=333.1387.0.0&vd_source=1be886ace16159801f6ed0106df215d9",
+                            link: "'/master/other/videos.html",
                             type: "primary",
                         },
                     ],
