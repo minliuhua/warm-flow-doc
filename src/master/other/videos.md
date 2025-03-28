@@ -13,17 +13,19 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 - 带着大家从<span class="red-font">零集成</span>工作流<span class="red-font">前后端</span>代码，快速上手，并且进行前后端的<span class="red-font">源码解读</span>
 - 课程设计思路<span class="red-font">合理科学</span>，符合<span class="red-font">先使用，后掌握原理</span>的行为习惯
 - 课程大纲简洁明了，可以像<span class="red-font">查字典</span>一样方便
+- 如果源码解读涉及到<span class="red-font">设计模块</span>，也会带着大家一起解读
 - 适合初学者和已经使用过，想要进一步<span class="red-font">提升</span>的同学
 
 ### **课程价格**
 - 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
 - 课程试看
   - [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6/?vd_source=1be886ace16159801f6ed0106df215d9)
+  - [7.4. 流程实例service源码解读-开启实例](https://www.bilibili.com/video/BV1PQoXYMEFA/?spm_id_from=333.1387.collection.video_card.click&vd_source=1be886ace16159801f6ed0106df215d9)
   - [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
 
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">18</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">26</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
 <br>
 
