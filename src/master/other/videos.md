@@ -27,7 +27,7 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 
 <br>
 
-<div><img src="../../.vuepress/public/videosml.png"></div>
+<div><img src="/videosml.png"></div>
 
 
 ### **课程大纲**
@@ -36,7 +36,7 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 
 <br>
 
-<div><img src="../../.vuepress/public/videos.png"></div>
+<div><img src="/videos.png"></div>
 
 
 ### **购买方式**
