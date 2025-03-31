@@ -1,14 +1,13 @@
 # 教学视频
 <!-- @include: ../other/betweengg.md -->
 
-## **必看视频（免费）**
-给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
+## **1、Warm-Flow初体验**
+官方免费课程：给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
 b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?spm_id_from=333.788.videopod.sections&bvid=BV1AWRGYEEVr&vd_source=1be886ace16159801f6ed0106df215d9)
 
-## **从零精通（收费）**
-
+## **2、从零精通**
+收费课程：全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
 ### **课程宗旨**
-全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
 
 - 带着大家从<span class="red-font">零集成</span>工作流<span class="red-font">前后端</span>代码，快速上手，并且进行前后端的<span class="red-font">源码解读</span>
 - 课程设计思路<span class="red-font">合理科学</span>，符合<span class="red-font">先使用，后掌握原理</span>的行为习惯
