@@ -101,12 +101,12 @@
 - [update] 重新定义监听器名称，原全局监听器改名为流程监听器，局部监听器改名为节点监听器
 - [update] 已经开启过审批任务的不可取消发布和删除
 - [update] 转办、委派、加签和减签，增加参数合法性校验
-- [update] 修改流程变量传递方式，可通过办理人变量表达式或者分派监听器，初始化后续所有办理人
+- [update] 修改流程变量传递方式，可通过办理人表达式或者分派监听器，初始化后续所有办理人
 - [update] 加载handler取消懒加载，重构test项目
-- [update] 办理人变量表达式，删除策略前缀，通过$和#区分
+- [update] 办理人表达式，删除策略前缀，通过$和#区分
 - [update] 流程版本号默认改完自动递增，不接收外部设置
 - [update] 修改项目的groupId
-- [refactor] 重构条件表达式和办理人变量表达式
+- [refactor] 重构条件表达式和办理人表达式
 - [remove] 移除权限监听器
 
 ### v1.3.3 2024-11-12  
@@ -138,7 +138,7 @@
 
 - [feat] 设计器独立 @zhen
 - [feat] 使用jar引入方式引入设计器
-- [feat] 新增办理人变量表达式流程案例
+- [feat] 新增办理人表达式流程案例
 - [feat] 新增方法，获取流程变量的map类型
 - [update] 节点线条保存关联名称
 - [fix] 修复mybatis扩展包中，flowStatus变量书写错误的问题
@@ -149,7 +149,7 @@
 
 - [升级指南](./upgrade_guide.md#v1-2-8)
 - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展
-- [feat] 增加办理人变量表达式，支持${xxx}替换和spel，并支持扩展
+- [feat] 增加办理人表达式，支持${xxx}替换和spel，并支持扩展
 - [feat] ListenerVariable监听器变量新增FlowParams字段，方便开始监听器全局传递参数
 - [feat] 终止新增对开始和完成监听器的支持
 - [update] springboot项目的条件表达式默认支持spel

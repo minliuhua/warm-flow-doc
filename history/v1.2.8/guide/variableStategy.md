@@ -48,7 +48,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 public class User {
 
     /**
-     * spel办理人变量表达式
+     * spel办理人表达式
      * @param handler2 办理人
      * @return String
      */
@@ -72,7 +72,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 
 ```java
 /**
- * 办理人变量表达式策略
+ * 办理人表达式策略
  *
  * @author warm
  */
@@ -96,7 +96,7 @@ public interface VariableStrategy {
 
 
 /**
- * 默认办理人变量表达式策略： @@default@@|${flag}
+ * 默认办理人表达式策略： @@default@@|${flag}
  *
  * @author warm
  */

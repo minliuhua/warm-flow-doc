@@ -41,7 +41,7 @@ highlights:
         link: /master/primary/condition.md
         details: 内置常见的和spel条件表达式，并且支持自定义扩展
 
-      - title: ↔️ 办理人变量表达式
+      - title: ↔️ 办理人表达式
         link: /master/advanced/variableStategy.md
         details: 内置${handler}和spel格式的表达式，可满足不同场景，灵活可扩展
 
@@ -120,7 +120,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 <div class="com-box-img flex1">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（30家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（31家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -188,6 +188,7 @@ export default {
 
       qyProjectList.value = [
         { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
+        { href: "https://www.damanjinfu.com/", title: "湖南达漫电子商务有限公司", src: "https://cdn-oss.damanjinfu.com/2025-04/25a5649871724e339cfdc5efe7696e59.png" },
         { href: "http://www.bjruike.com/", title: "北京瑞科科技", src: "https://foruda.gitee.com/images/1740658272131167588/49903c01_2218307.png" },
         { href: "https://www.jrkjsoft.com/", title: "哈尔滨金睿科技有限公司", src: "https://foruda.gitee.com/images/1740295290063383498/42b11c67_2218307.png" },
         { href: "https://www.sneb.com.cn/zhgj/index_2578.html", title: "中交武汉智行国际", src: "https://foruda.gitee.com/images/1732083419998818655/3e444f08_2218307.png" },
@@ -199,6 +200,11 @@ export default {
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
         { href: "www.hxhorae.com.cn", title: "华夏好瑞（天津）科技有限公司", src: "https://zhengxin-pub.cdn.bcebos.com/mark/54cdfdc0fcd3afd8f31c457803bcaa36.jpg?x-bce-process=image/resize,m_lfit,w_112" },
+        { href: "", title: "Warm-Flow", src: "logo.png" },
+        { href: "", title: "Warm-Flow", src: "logo.png" },
+        { href: "", title: "Warm-Flow", src: "logo.png" },
+        { href: "", title: "Warm-Flow", src: "logo.png" },
+        { href: "", title: "Warm-Flow", src: "logo.png" },
         ];
 
       kyProjectList.value = [

@@ -24,7 +24,7 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">34</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">39</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
 <br>
 

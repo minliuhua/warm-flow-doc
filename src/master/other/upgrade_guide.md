@@ -386,7 +386,7 @@ if (skipCondition) {
 
 ### v1.3.4
 
-- 办理人变量表达式，删除策略前缀，通过$和#区分，需执行1.3.4.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
+- 办理人表达式，删除策略前缀，通过$和#区分，需执行1.3.4.[升级脚本warm-flow_x.x.x.sql](https://gitee.com/dromara/warm-flow/tree/master/sql)
 - 依赖的groupId：org.dromara，改为org.dromara.warm
 - 如果扩展了条件表达式策略
     - 接口或者抽象类前缀由`ExpressionStrategy`改为 `ConditionStrategy`

@@ -317,3 +317,18 @@ public class MybatisPlusConfig {
 因为要在一个模块中展示不同的流程案例，所以使用字典，字典映射流程定义
 <div><img src="https://foruda.gitee.com/images/1742523937795259637/a55fbbda_2218307.png" width="700"/></div>
 :::
+
+## **11、 skipByIns和skip区别**
+
+区别一：业务模块（请假申请）中能直接拿到流程实例id，因为业务表通常冗余了流程实例id，但是一般不会冗余任务id，而待办任务中最方便拿到任务id。
+区别一：调用skipByIns时候，这个流程实例对应的点任务不能存在多个，否则不知道办理哪里一个，skip没有这个问题。
+
+
+InsService流程实例
+`skipByInsId(instanceId, flowParams)`：传入流程实例id，流程跳转
+`termination(instanceId, flowParams)`：传入流程实例id，终止流程
+
+TaskService待办任务
+`skip(taskId, flowParams)`：传入流程任务id，流程跳转
+`termination(taskId, flowParams)`：传入流程任务id，终止流程
+
