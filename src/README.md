@@ -180,15 +180,11 @@ export default {
     const dromaraList = ref([]);
     const sponsorshis = ref([]);
 
-    const fetchData = async () => {
-      projectList.value = [
-        { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
-        { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
-      ];
-
       qyProjectList.value = [
         { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
         { href: "https://www.damanjinfu.com/", title: "湖南达漫电子商务有限公司", src: "https://cdn-oss.damanjinfu.com/2025-04/25a5649871724e339cfdc5efe7696e59.png" },
+        { href: "https://www.kmbit.cn", title: "昆明倍特技术服务", src: "https://foruda.gitee.com/images/1741657442203556781/90c14a90_2218307.png" },
+        { href: "www.hxhorae.com.cn", title: "华夏好瑞（天津）科技有限公司", src: "https://zhengxin-pub.cdn.bcebos.com/mark/54cdfdc0fcd3afd8f31c457803bcaa36.jpg?x-bce-process=image/resize,m_lfit,w_112" },
         { href: "http://www.bjruike.com/", title: "北京瑞科科技", src: "https://foruda.gitee.com/images/1740658272131167588/49903c01_2218307.png" },
         { href: "https://www.jrkjsoft.com/", title: "哈尔滨金睿科技有限公司", src: "https://foruda.gitee.com/images/1740295290063383498/42b11c67_2218307.png" },
         { href: "https://www.sneb.com.cn/zhgj/index_2578.html", title: "中交武汉智行国际", src: "https://foruda.gitee.com/images/1732083419998818655/3e444f08_2218307.png" },
@@ -199,13 +195,17 @@ export default {
         { href: "https://www.runyoucloud.com", title: "山东融佑信息科技有限公司", src: "https://foruda.gitee.com/images/1724129195385753446/c9b9b908_2218307.png" },
         { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
         { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
-        { href: "www.hxhorae.com.cn", title: "华夏好瑞（天津）科技有限公司", src: "https://zhengxin-pub.cdn.bcebos.com/mark/54cdfdc0fcd3afd8f31c457803bcaa36.jpg?x-bce-process=image/resize,m_lfit,w_112" },
-        { href: "", title: "Warm-Flow", src: "logo.png" },
         { href: "", title: "Warm-Flow", src: "logo.png" },
         { href: "", title: "Warm-Flow", src: "logo.png" },
         { href: "", title: "Warm-Flow", src: "logo.png" },
         { href: "", title: "Warm-Flow", src: "logo.png" },
         ];
+    const fetchData = async () => {
+
+      projectList.value = [
+        { href: "https://item.jd.com/13928958.html", src: "/yqlj/flowableHb.jpg", alt: "open-capacity-platform", title: "对flowable有兴趣的朋友可以购买贺波老师的书《深入flowable流程引擎》" },
+        { href: "http://www.easy-query.com/easy-query-doc/", src: "/yqlj/easy-query.png", alt: "open-capacity-platform", title: "java下唯一一款同时支持强类型对象关系查询和强类型SQL语法查询的ORM,拥有对象模型筛选、隐式子查询、隐式join、显式子查询、显式join,支持Java/Kotlin" },
+      ];
 
       kyProjectList.value = [
         { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
