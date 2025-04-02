@@ -1,12 +1,14 @@
 # 教学视频
 <!-- @include: ../other/betweengg.md -->
 
-## **1、Warm-Flow介绍**
-给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
+**给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢🤞**
+
+## **教程一、Warm-Flow介绍**
+
 * [x] [项目介绍](https://www.bilibili.com/video/BV1AWRGYEEVr?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
 * [x] [竞品对比和快速集成](https://www.bilibili.com/video/BV1pWRGY7EEM?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
 
-## **2、从零精通**
+## **教程二、从零精通**
 全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
 ### **课程宗旨**
 - 带着大家从<span class="red-font">零集成</span>工作流<span class="red-font">前后端</span>代码，快速上手，并且进行前后端的<span class="red-font">源码解读</span>
