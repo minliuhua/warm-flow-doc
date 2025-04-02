@@ -1,14 +1,14 @@
 # 教学视频
 <!-- @include: ../other/betweengg.md -->
 
-## **1、Warm-Flow初体验**
-官方免费课程：给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
-b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?spm_id_from=333.788.videopod.sections&bvid=BV1AWRGYEEVr&vd_source=1be886ace16159801f6ed0106df215d9)
+## **1、Warm-Flow介绍**
+给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢！
+* [x] [项目介绍](https://www.bilibili.com/video/BV1AWRGYEEVr?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
+* [x] [竞品对比和快速集成](https://www.bilibili.com/video/BV1pWRGY7EEM?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
 
 ## **2、从零精通**
-收费课程：全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
+全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
 ### **课程宗旨**
-
 - 带着大家从<span class="red-font">零集成</span>工作流<span class="red-font">前后端</span>代码，快速上手，并且进行前后端的<span class="red-font">源码解读</span>
 - 课程设计思路<span class="red-font">合理科学</span>，符合<span class="red-font">先使用，后掌握原理</span>的行为习惯
 - 课程大纲简洁明了，可以像<span class="red-font">查字典</span>一样方便
@@ -18,7 +18,6 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 ### **课程价格**
 - 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
 - 课程试看
-
   * [x] [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6?spm_id_from=333.788.videopod.sections&vd_source=1be886ace16159801f6ed0106df215d9)
   * [x] [2. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr/?spm_id_from=333.1387.collection.video_card.click&vd_source=1be886ace16159801f6ed0106df215d9)
   * [x] [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi?spm_id_from=333.788.videopod.sections&vd_source=1be886ace16159801f6ed0106df215d9)
