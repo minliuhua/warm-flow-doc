@@ -18,7 +18,9 @@ b站视频：[Warm-Flow初体验](https://www.bilibili.com/video/BV1AWRGYEEVr?sp
 ### **课程价格**
 - 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
 - 课程试看
-  - [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6/?vd_source=1be886ace16159801f6ed0106df215d9)
+  - [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6?spm_id_from=333.788.videopod.sections&vd_source=1be886ace16159801f6ed0106df215d9)
+  - [2. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr/?spm_id_from=333.1387.collection.video_card.click&vd_source=1be886ace16159801f6ed0106df215d9)
+  - [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi?spm_id_from=333.788.videopod.sections&vd_source=1be886ace16159801f6ed0106df215d9)
   - [7.4. 流程实例service源码解读-开启实例](https://www.bilibili.com/video/BV1PQoXYMEFA/?spm_id_from=333.1387.collection.video_card.click&vd_source=1be886ace16159801f6ed0106df215d9)
   - [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
 
