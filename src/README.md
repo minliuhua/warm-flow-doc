@@ -83,7 +83,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
               <p style="font-size: 15px; color: white; text-align: center;">{{ item.description }}</p>
             </div>
           </div>
-        </a>
+        </a> 
       </div>
     </div>
     <div style="height: 10px; clear: both;"></div>
