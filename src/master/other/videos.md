@@ -28,7 +28,7 @@
 
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">45</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">49</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
 <br>
 
