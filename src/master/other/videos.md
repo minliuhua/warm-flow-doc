@@ -18,7 +18,7 @@
 - 适合初学者和已经使用过，想要进一步<span class="red-font">提升</span>的同学
 
 ### **课程价格**
-- 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
+- 预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(劳动节后恢复原价) 原价: <span class="red-font-bold">599</span>
 - 课程试看
   * [x] [1. 课程设计](https://www.bilibili.com/video/BV15yZGYyEy6?spm_id_from=333.788.videopod.sections&vd_source=1be886ace16159801f6ed0106df215d9)
   * [x] [2. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr/?spm_id_from=333.1387.collection.video_card.click&vd_source=1be886ace16159801f6ed0106df215d9)
