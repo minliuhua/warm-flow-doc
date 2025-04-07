@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://gitee.com/warm_4/warm-flow-doc/sitemap.xml
