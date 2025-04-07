@@ -8,7 +8,20 @@
 
 ## 1 下载设计器源码，改造 
 
-- 如果内置的接口不满足或者不够支持实际业务开发，可在业务系统中增加接口，设计器配置该接口地址
+如果内置的接口不满足或者不够支持实际业务开发，可在业务系统中增加接口，设计器配置该接口地址
+
+
+- warm-flow
+    - warm-flow-plugin:                         插件模块
+        - warm-flow-plugin-ui:                     设计器插件模块
+            - warm-flow-plugin-ui-core:              设计器后端核心模块
+            - warm-flow-plugin-ui-sb-web:            设计器后端springboot web接口和starter启动模块
+            - warm-flow-plugin-ui-solon-web:         设计器后端solon web接口和plugin启动模块
+            - warm-flow-plugin-vue3-ui:              设计器前端编译后jar包引入模块
+    - warm-flow-ui:                              设计器前端模块
+        - warm-flow-vue3-base:                    设计器前端公共模块
+        - warm-flow-vue3-dFlow:                    设计器前端基于仿钉钉核心模块（开发中）
+        - warm-flow-vue3-logic-flow:               设计器前端基于logic-flow核心模块
 
 <div><img src="https://foruda.gitee.com/images/1742547534890322780/bd27f761_2218307.png" width="400"></div>
 <div><img src="https://foruda.gitee.com/images/1730958025453602251/ae415296_2218307.png" width="700"></div>
