@@ -102,7 +102,7 @@ public class ConditionStrategyEq extends ConditionStrategyAbstract {
 
     @Override
     public String getType() {
-        return FlowCons.splitAt + "eq" + FlowCons.splitAt;
+        return "eq";
     }
 
     @Override

@@ -19,14 +19,22 @@
 
 
 ## 开发中计划
-### v1.6.9  2025-04-30
+### v1.7.0  2025-04-30
 
 - 取回      @xiarigang
 - 撤销      @xiarigang
 - 包容网关   @晓华
 - 实体类、dto、vo等独立成一个模块，方便微服务接入   @晓华
-- 优化nodeService.getNextNodeList重复代码，提升性能   @晓华
 - 会签票签代码优化   @晓华
+
+### v1.6.9  2025-04-18
+
+- [update] 处理扩展节点多选反显  
+- [update] 删除多余的注释
+- [fix] Page未实现Serializable,导致Dubbo3.2+ 版本中默认的 STRICT严格检查报错  @yuegc
+- [fix] 修复双击中间节点后，再点击跳转线不打开右边抽屉的问题  @Vittery
+- [remove] 删除办理人表达式抽象类
+- 优化nodeService.getNextNodeList重复代码，提升性能   @晓华
 
 
 ## 更新日志
