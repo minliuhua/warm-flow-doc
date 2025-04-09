@@ -20,7 +20,7 @@
 - 执行顺序：节点监听器 --> 流程监听器 --> 全局监听器
 
 ## 3、监听器生命周期图
-<div><img src="https://foruda.gitee.com/images/1737613725682981587/8e1c2a91_2218307.png" width="800"></div>
+<div><img src="https://foruda.gitee.com/images/1744189606356147579/9904c854_2218307.png" width="800"></div>
 
 
 ## 4、监听器设置
