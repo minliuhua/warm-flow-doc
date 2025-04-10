@@ -55,7 +55,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告",
+                    title: "公告: 1.6.9版本更新",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
@@ -63,7 +63,7 @@ export default hopeTheme(
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/videos.html#从零精通-收费\'" class="link-style">' +
+                        '     <span onclick="window.location.href=\'/master/other/videos.html#教程二、从零精通\'" class="link-style">' +
                         '       🔵 新增从零精通教学视频' +
                         '     </span>\n' +
                         '</div>',

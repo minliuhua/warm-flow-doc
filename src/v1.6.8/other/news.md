@@ -59,12 +59,6 @@ export default {
       ];
       filterList.value = allList.value = [
         {
-            "type": "upgrade",
-            "title": "Warm-Flow版本升级1.6.9：修复部分错误", 
-            "url": "./news/upgrade/n-9.html",    
-            "pushTime": "2025-04-10"
-        },
-        {
             "type": "news",
             "title": "Warm-Flow过去、现在和未来都不会有商业版", 
             "url": "./news/news/8.html",

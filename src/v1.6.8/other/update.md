@@ -28,16 +28,16 @@
 - 会签票签代码优化   @晓华
 - 优化nodeService.getNextNodeList重复代码，提升性能   @晓华
 
-## 更新日志
 ### v1.6.9  2025-04-18
 
-- [update] 处理扩展节点多选反显
+- [update] 处理扩展节点多选反显  
 - [update] 删除多余的注释
 - [fix] Page未实现Serializable,导致Dubbo3.2+ 版本中默认的 STRICT严格检查报错  @yuegc
 - [fix] 修复双击中间节点后，再点击跳转线不打开右边抽屉的问题  @Vittery
 - [fix] 修复当图形出现在负坐标的时候，开始、结束、互斥网关节点文字没有显示在正确位置的问题
 - [remove] 删除办理人表达式抽象类
 
+## 更新日志
 ### v1.6.8  2025-03-19
 
 - [升级指南](./upgrade_guide.md#v1-6-8)
