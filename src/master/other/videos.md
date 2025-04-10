@@ -1,14 +1,10 @@
 # 教学视频
 <!-- @include: ../other/betweengg.md -->
 
-**给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢🤞**
+## **从零精通**
+本套课程叫：<span class="red-font">【从零精通: 全流程开发与源码解读】</span>手把手带着从零集成，打造自己的工作流
 
-## **教程一、Warm-Flow介绍**
-* [x] [项目介绍](https://www.bilibili.com/video/BV1AWRGYEEVr?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
-* [x] [竞品对比和快速集成](https://www.bilibili.com/video/BV1pWRGY7EEM?vd_source=1be886ace16159801f6ed0106df215d9&spm_id_from=333.788.videopod.sections)
-
-## **教程二、从零精通**
-全流程开发与源码解读，<span class="red-font">手把手</span>带着从零集成，打造自己的工作流
+> 给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢🤞
 
 ### **课程核心价值**
 🚀 你将获得：
@@ -33,21 +29,23 @@
 
 
 ### **课程价格**
-预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(劳动节后恢复原价) 原价: <span class="red-font-bold">599</span>
+> **课程预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(劳动节后恢复原价) 原价: <span class="red-font-bold">599</span>**
 
 ------
 
 ### **课程试看**
+  * [x] [0. 教程导读](https://www.bilibili.com/video/BV1AWRGYEEVr)
   * [x] [1. 课程介绍](https://www.bilibili.com/video/BV15yZGYyEy6)
   * [x] [2.1. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr)
   * [x] [2.2. 工作流术语解释](https://www.bilibili.com/video/BV1nGdHY6EAo)
   * [x] [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi)
+  * [x] [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
   * [x] [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
 
 ------
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">58</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">59</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
 <br>
 
