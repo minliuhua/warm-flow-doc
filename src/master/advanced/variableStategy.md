@@ -1,8 +1,8 @@
-# 办理人变量表达式
+# 办理人表达式
 <!-- @include: ../other/betweengg.md -->
 
 ::: tip
-- 业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人变量表达式就派上用场了  
+- 业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人表达式就派上用场了  
 
 :::
 
@@ -15,7 +15,7 @@
 public class VariableTest {
 
     /**
-     * 办理人变量表达式测试
+     * 办理人表达式测试
      */
     @Test
     public void testVariable() {
@@ -46,30 +46,36 @@ public class VariableTest {
 - 1、默认按照注入策略顺序，倒叙匹配。比如最后注入spel策略，就先遍历spel策略，匹配上就执行。
 
 ## 4、变量替换时机
-- 1、流程设计时，本节点配置办理人变量表达式
-- 2、上一个节点任务办理时，传入变量
-- 3、办理完成会生成本节点任务，即可替换完成  
+- 1、流程设计时，本节点配置办理人表达式
+- 2、在上一个节点任务或者之前办理时，传入变量
+- 3、办理完成会生成本节点任务，并且替换`flow_user`表中的表达式
 
 > 比如B-->C, C任务设置办理人变量为`${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
 
-### 5、可实现的效果
+## 5、可实现的效果
 如下图中示例可以很容易实现 
 
 <div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
-## 5、默认办理人变量策略
+## 6、动态指定办理人
 
-### 前端页面设置变量
-- 比如：`${handler1}`，表示默认办理人变量策略，handler1是需要被流程变量中替换的标识
+### 背景：
+
+审批任务的办理人，通常是在流程设计器中预先设定好办理人，那如果想要在办理过程中指定办理人呢？
+
+### 解决思路
+
+- 1、流程设计时，需要动态指定办理人的节点，配置办理人表达式`${handler1}`
+- 2、在上一个节点任务或者之前办理时，在流程变量中传入`${handler1}`的值
+- 3、办理完成会生成本节点任务，并且替换`flow_user`表中的表达式
+
 
 
 <div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" /></div>
 
+后端代码设置变量
 
-
-### 后端代码设置变量
 ```java
-
 // 流程变量
 Map<String, Object> variable = new HashMap<>();
 variable.put("handler1", "100");
@@ -78,16 +84,30 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 7、spel办理人变量策略
-
-### 前端页面设置变量
-- 比如：`#{@user.evalVar(#handler2)}`，是spel表达式，`#handler2`是方法入参变量，可以不设置
-
-<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" /></div>
 
 
+### 高级玩法
 
-### 后端代码设置变量
+- 支持动态指定一群人
+- 支持spel表达式
+- 支持表达式扩展
+
+
+
+把如上代码`"100"`改成`Arrays.asList(4, "5", 100L)`，就可以动态指定一群人
+
+```java
+// 流程变量
+Map<String, Object> variable = new HashMap<>();
+variable.put("handler1", Arrays.asList(4, "5", 100L));
+flowParams.variable(variable);
+
+Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
+```
+<br>
+
+比如设计器配置了`#{@user.evalVar(#handler2)}`spel表达式，`#handler2`是方法入参，通过流程变量传递，就会表达式，执行`user.evalVar`方法
+
 ```java
 /**
  * 用户类
@@ -96,7 +116,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 public class User {
 
     /**
-     * spel办理人变量表达式
+     * spel办理人表达式
      * @param handler2 办理人
      * @return String
      */
@@ -112,6 +132,12 @@ flowParams.variable(variable);
 
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
+
+## 7、条件表达式和办理人表达式区别
+
+- 使用地方：条件表达式网关中用到，办理人表达式在办理人输入中用到。
+- 替换时机：条件表达式是当前节点传入变量替换，办理人表达式在前置节点传入替换。
+- 作用：前者为了决定执行哪条节点任务，后者觉得谁可以办理。
 
 ## 8、办理人选择项接口
 - 通过此接口可以给办理人选择，增加默认选项比如发起人、部门领导审批之类的（待开发）

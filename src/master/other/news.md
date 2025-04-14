@@ -60,6 +60,18 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
+            "title": "Warm-Flow版本升级1.6.10：修复部分错误", 
+            "url": "./news/upgrade/n-9.html",    
+            "pushTime": "2025-04-13"
+        },
+        {
+            "type": "news",
+            "title": "Warm-Flow过去、现在和未来都不会有商业版", 
+            "url": "./news/news/8.html",
+            "pushTime": "2025-03-27"
+        }, 
+        {
+            "type": "upgrade",
             "title": "Warm-Flow版本升级1.6.8：修复部分错误", 
             "url": "./news/upgrade/7.html",    
             "pushTime": "2025-03-19"
@@ -99,12 +111,14 @@ export default {
             "title": "gitee变成maven私库", 
             "url": "./news/news/2.html",
             "pushTime": "2024-09-29"
-        }, {
+        }, 
+        {
             "type": "news",
             "title": "工作流引擎Warm-Flow加入Dromara开源社区", 
             "url": "./news/news/1.html",
             "pushTime": "2024-02-22"
-        }, {
+        }, 
+        {
             "type": "experience",
             "title": "Dromara Warm-Flow工作流引擎数据库主键自增策略实现", 
             "url": "https://juejin.cn/post/7402110528298074152",

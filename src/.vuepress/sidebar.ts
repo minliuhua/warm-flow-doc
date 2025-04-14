@@ -81,7 +81,6 @@ export default sidebar({
         {
             text: "🤞开始",
             collapsible: true,
-            expanded: true,
             children: [
                 "introduction/introduction.md",
                 "introduction/processdemo.md",

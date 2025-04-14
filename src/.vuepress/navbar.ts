@@ -10,12 +10,14 @@ export default navbar([
         link: '/master/introduction/introduction.md',
         children: [
             {
-                text: 'v1.6.7(当前版本)',
+                text: 'v1.6.10(当前版本)',
                 link: '/master/introduction/introduction.md'
             },
             {
                 text: '历史版本',
                 children: [
+                    { text: 'v1.6.8', link: '/v1.6.8/introduction/introduction.md' },
+                    { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },
                     { text: 'v1.6.6', link: '/v1.6.6/introduction/introduction.md' },
                     { text: 'v1.3.8', link: '/v1.3.5/introduction/introduction.md' },
                     { text: 'v1.3.7', link: '/v1.3.5/introduction/introduction.md' },
@@ -53,6 +55,10 @@ export default navbar([
     {
         text: "有偿服务",
         link: "/master/other/paidservice.md",
+    },
+    {
+        text: "教学视频",
+        link: "/master/other/videos.md",
     },
     {
         text: '常见问题',

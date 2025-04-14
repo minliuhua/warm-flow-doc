@@ -1,6 +1,6 @@
-# 办理人变量表达式
+# 办理人表达式
 > [!IMPORTANT]  
-> 1、业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人变量表达式就派上用场了
+> 1、业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人表达式就派上用场了
 
 ## 1、特点
 - 1、内置常见表达式，同时支持功能强大的spel表达，支持扩展
@@ -11,7 +11,7 @@
 public class VariableTest {
 
     /**
-     * 办理人变量表达式测试
+     * 办理人表达式测试
      */
     @Test
     public void testVariable() {
@@ -42,7 +42,7 @@ public class VariableTest {
 - 1、默认按照注入策略顺序，倒叙匹配。比如最后注入spel策略，就先遍历spel策略，匹配上就执行。
 
 ## 4、变量替换时机
-- 1、流程设计时，本节点配置办理人变量表达式
+- 1、流程设计时，本节点配置办理人表达式
 - 2、上一个节点任务办理时，传入变量
 - 3、办理完成会生成本节点任务，即可替换完成  
 
@@ -88,7 +88,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 public class User {
 
     /**
-     * spel办理人变量表达式
+     * spel办理人表达式
      * @param handler2 办理人
      * @return String
      */

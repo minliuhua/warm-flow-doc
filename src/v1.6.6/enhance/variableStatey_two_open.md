@@ -1,4 +1,4 @@
-# 办理人变量表达式扩展
+# 办理人表达式扩展
 ::: tip
 - 当内置的**办理人变量**不满足业务需求时，可进行扩展
 
@@ -6,21 +6,21 @@
 
 <!-- @include: ./expression_open.md -->
 
-## 3、办理人变量表达式
+## 3、办理人表达式
 
 - 扩展需要实现`VariableStrategy`接口, 实现`getType和eval`方法
 
-### 3.1、办理人变量表达式接口
+### 3.1、办理人表达式接口
 ```java
 /**
- * 办理人变量表达式策略
+ * 办理人表达式策略
  *
  * @author warm
  */
 public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 
     /**
-     * 办理人变量表达式策略实现类集合
+     * 办理人表达式策略实现类集合
      */
     List<ExpressionStrategy<List<String>>> expressionStrategyList = new ArrayList<>();
 
@@ -30,11 +30,11 @@ public interface VariableStrategy extends ExpressionStrategy<List<String>> {
 }
 ```
 
-### 3.2、办理人变量表达式实现类
+### 3.2、办理人表达式实现类
 
 ```java
 /**
- * 默认办理人变量表达式策略： ${flag}
+ * 默认办理人表达式策略： ${flag}
  *
  * @author warm
  */
