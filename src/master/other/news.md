@@ -60,9 +60,9 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
-            "title": "Warm-Flow版本升级1.6.9：修复部分错误", 
+            "title": "Warm-Flow版本升级1.6.10：修复部分错误", 
             "url": "./news/upgrade/n-9.html",    
-            "pushTime": "2025-04-10"
+            "pushTime": "2025-04-13"
         },
         {
             "type": "news",
