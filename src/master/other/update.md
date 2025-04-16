@@ -21,12 +21,33 @@
 ## 开发中计划
 ### v1.7.0  2025-04-30
 
-- 取回      @xiarigang
-- 撤销      @xiarigang
+- [升级指南](./upgrade_guide.md#v1-7-0)
 - 包容网关   @晓华
 - 实体类、dto、vo等独立成一个模块，方便微服务接入   @晓华
 - 会签票签代码优化   @晓华
 - 优化nodeService.getNextNodeList重复代码，提升性能   @晓华
+- [feat] 新增撤销功能  @xiarigang@晓华
+- [feat] 新增驳回到上一个任务 @xiarigang@晓华
+- [feat] DefService新增getByFlowCode接口 @晓华
+- [feat] InsService新增getByDefId接口 @晓华
+- [feat] NodeService新增getByDefId接口 @晓华
+- [feat] NodeService新增getEndNode接口 @晓华
+- [feat] NodeService新增getBetweenNode接口 @晓华
+- [feat] NodeService新增getStartNode接口 @晓华
+- [feat] NodeService新增getByDefIdAndNodeCode接口 @晓华
+- [feat] SkipService新增getByDefId接口 @晓华
+- [feat] SkipService新增getByDefIdAndNowNodeCode接口 @晓华
+- [feat] TaskService新增skipByInsId接口 @晓华
+- [feat] TaskService新增rejectLast接口 @晓华
+- [feat] TaskService新增revoke接口 @晓华
+- [feat] TaskService新增getByInsId接口 @晓华
+- [refactor] 重构部分代码 @晓华
+- [update] HisTaskService的getNoReject接口标识为即将删除 @晓华
+- [update] InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替 @晓华
+- [remove] 删除审批消息字数校验
+- [remove] TaskService删除removeAndUser
+- [remove] UserService删除setSkipUser
+- [update] 设计器驳回指定节点，过滤掉开始节点 @晓华
 
 ## 更新日志
 ### v1.6.10  2025-04-13

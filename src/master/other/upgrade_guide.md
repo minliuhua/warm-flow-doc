@@ -8,6 +8,10 @@
 
 :::
 
+### v1.7.0
+- InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
+
+
 ### v1.6.8
 - 执行升级脚本1.6.8版本[warm-flow_1.6.8.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.8.sql)
 - 如果二开设计器，请自行手动同步，参考如下：
