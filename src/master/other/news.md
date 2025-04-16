@@ -59,6 +59,12 @@ export default {
       ];
       filterList.value = allList.value = [
         {
+            "type": "experience",
+            "title": "maven如何解决jar包依赖冲突", 
+            "url": "./news/experience/7.html",
+            "pushTime": "2025-04-16"
+        },
+        {
             "type": "upgrade",
             "title": "Warm-Flow版本升级1.6.10：修复部分错误", 
             "url": "./news/upgrade/n-9.html",    

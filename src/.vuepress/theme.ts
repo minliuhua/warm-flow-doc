@@ -66,6 +66,11 @@ export default hopeTheme(
                         '     <span onclick="window.location.href=\'/master/other/videos.html\'" class="link-style">' +
                         '       🔵 新增从零精通教学视频' +
                         '     </span>\n' +
+                        '</div>' +
+                        '<div>\n' +
+                        '     <span onclick="window.location.href=\'/master/other/news/experience/7.html\'" class="link-style">' +
+                        '       🔵 maven如何解决jar包依赖冲突' +
+                        '     </span>\n' +
                         '</div>',
                     actions: [
                         {
