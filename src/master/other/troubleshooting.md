@@ -211,15 +211,30 @@ restart.include.flow=/org.dromara.warm.*.jar
 
 - 3、ruoyi-common增加依赖
 
-```java
+```xml
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.6</version>
         </dependency>
 ```
 
-- 4、MyBatisConfig.java注释掉，新增MybatisPlusConfig
+- 4、ruoyi-common中排除低版本jsqlparser
+
+```xml {5-8}
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.jsqlparser</groupId>
+                    <artifactId>jsqlparser</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+```
+
+- 5、MyBatisConfig.java注释掉，新增MybatisPlusConfig
 
 <details>
   <summary><span style="color: orangered;">👇 代码详情 👇</span></summary>
@@ -287,7 +302,7 @@ public class MybatisPlusConfig {
 
 </details>
 
-- 5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
+- 6、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
 :::
 
 
