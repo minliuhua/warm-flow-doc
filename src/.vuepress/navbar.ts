@@ -16,7 +16,7 @@ export default navbar([
             {
                 text: '历史版本',
                 children: [
-                    { text: 'v1.7.0-开发中', link: '/v1.7.0/introduction/introduction.md' },
+                    { text: 'v1.7.0-m2(测试版)', link: '/v1.7.0/introduction/introduction.md' },
                     { text: 'v1.6.8', link: '/v1.6.8/introduction/introduction.md' },
                     { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },
                     { text: 'v1.6.6', link: '/v1.6.6/introduction/introduction.md' },

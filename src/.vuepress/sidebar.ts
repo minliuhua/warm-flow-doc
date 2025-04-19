@@ -102,7 +102,9 @@ export default sidebar({
                 'primary/config.md',
                 'primary/api.md',
                 'primary/designerIntroduced.md',
+                'primary/permission_handler.md',
                 'primary/datafillhandler.md',
+                'primary/idGen.md',
                 'primary/variable.md',
                 'primary/gateway.md',
                 'primary/condition.md',
@@ -116,7 +118,6 @@ export default sidebar({
             collapsible: true,
             expanded: true,
             children: [
-                'advanced/permission_handler.md',
                 'enhance/customstatus.md',
                 'advanced/variableStategy.md',
                 'advanced/listener.md',
