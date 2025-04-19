@@ -21,7 +21,6 @@
 
 - [升级指南](./upgrade_guide.md#v1-7-0)
 - 实体类、dto、vo等独立成一个模块，方便微服务接入    
-- 会签票签代码优化    
 - 优化nodeService.getNextNodeList重复代码，提升性能    
 - [feat] 新增撤销功能  @xiarigang @晓华
 - [feat] 新增驳回到上一个任务 @xiarigang @晓华

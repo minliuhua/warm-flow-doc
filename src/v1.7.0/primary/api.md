@@ -1,4 +1,4 @@
-# 核心接口api
+# 接口文档
 <!-- @include: ../other/betweengg.md -->
 
 
