@@ -18,7 +18,7 @@
 1. 兼容java8和java17,理论11也可以 
 1. 官方提供基于ruoyi-vue封装实战项目，很实用
 
-<img src="https://foruda.gitee.com/images/1743491952828987062/f6d0d2a8_2218307.png"/>
+<img src="https://foruda.gitee.com/images/1744939512470131981/5e19fe90_2218307.png"/>
 
 ```shell
 希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长

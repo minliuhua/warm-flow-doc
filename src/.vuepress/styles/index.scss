@@ -79,10 +79,7 @@
 }
 
 .vp-sidebar-links, .vp-nav-links {
-  font-size: 17px;
-}
-.theme-hope-content *, .theme-hope-content {
-  font-size: 16px !important;
+  font-size: 18px;
 }
 .vp-highlight-image {
   width: 33rem;
@@ -97,10 +94,14 @@
   max-width: 46rem;
 }
 
+.red-no-bg {
+  color: red;
+  padding: 2px 8px;
+}
+
 .red-bg {
-   color: red;
+   @extend .red-no-bg;
    background-color: #f0f0f0;
-   padding: 2px 8px;
  }
 
 .red-bg-bold {
@@ -122,4 +123,8 @@
 .big-font {
   padding: 8px;
   font-size: 20px
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: bold;
 }

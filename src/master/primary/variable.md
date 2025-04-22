@@ -10,6 +10,7 @@
 
 :::
 
+## 设置流程变量
 ```java
     public void insertTestLeave(TestLeave testLeave, Integer flowStatus)
     {
@@ -41,4 +42,14 @@ public class FinishListener implements Listener {
         log.info("完成监听器结束......");
     }
 }
+```
+
+## 存储流程变量
+存储在flow_instance表中的variable
+
+<div><img src="https://foruda.gitee.com/images/1743128143393789644/a2b7eef4_2218307.png" width="700px"></div>
+
+## 获取流程变量
+```java
+Map<String, Object> variableMap = instance.getVariableMap();
 ```

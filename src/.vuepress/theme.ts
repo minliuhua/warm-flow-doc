@@ -55,7 +55,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.6.10版本更新",
+                    title: "公告: 1.7.0-m4（公测版）",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
@@ -68,8 +68,8 @@ export default hopeTheme(
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/news/experience/7.html\'" class="link-style">' +
-                        '       🔵 maven如何解决jar包依赖冲突' +
+                        '     <span onclick="window.location.href=\'/master/other/news/upgrade/8.html\'" class="link-style">' +
+                        '       🔵 国产工作流引擎star 5.6k，Warm-Flow版本升级1.7.0（新增n多好用功能）' +
                         '     </span>\n' +
                         '</div>',
                     actions: [

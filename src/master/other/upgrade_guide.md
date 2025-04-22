@@ -9,8 +9,34 @@
 :::
 
 ### v1.7.0
+- 执行升级脚本1.7.0版本[warm-flow_1.7.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.0.sql)
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
+- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
+- 如果二开设计器，请自行手动同步，参考如下：
 
+::: tip 原between.vue：`["serial", "parallel"]`
+```js {5}
+const filteredNodes = computed(() => {
+  let skipList = props.skips.filter(skip => skip.properties.skipType === "PASS");
+
+  let previousCode = getPreviousCode(skipList, form.value.nodeCode)
+  return props.nodes.filter(node => !["serial", "parallel"].includes(node.type)
+      && previousCode.includes(node.id)).reverse();
+});
+```
+:::
+
+::: tip 现between.vue：改成`["start", "serial", "parallel"]`，驳回指定节点下拉框排除开始节点
+```js {5}
+const filteredNodes = computed(() => {
+  let skipList = props.skips.filter(skip => skip.properties.skipType === "PASS");
+
+  let previousCode = getPreviousCode(skipList, form.value.nodeCode)
+  return props.nodes.filter(node => !["start", "serial", "parallel"].includes(node.type)
+      && previousCode.includes(node.id)).reverse();
+});
+```
+:::
 
 ### v1.6.8
 - 执行升级脚本1.6.8版本[warm-flow_1.6.8.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.8.sql)
