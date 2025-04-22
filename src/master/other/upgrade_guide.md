@@ -9,7 +9,9 @@
 :::
 
 ### v1.7.0
+- 执行升级脚本1.7.0版本[warm-flow_1.7.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.0.sql)
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
+- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：`["serial", "parallel"]`

@@ -67,34 +67,3 @@ public int insertTestLeave(TestLeave testLeave, String flowStatus)
     return instance != null? 1 : 0;
 }
 ```
-## 3、特别注意
-### 3.1 默认表达式
-字符串和long类型需要特别注意
-`${createBy == 1357280988086013951L}`: 流程变量里面也要传long类型，不然会报错。
-```java
-@Test
-    public void testCondition() {
-
-        Map<String, Object> variable = new HashMap<>();
-        variable.put("createBy", 1357280988086013951L);
-        log.info("default条件表达式结果:{}", ExpressionUtil.evalCondition
-                ("default@@${createBy == 1357280988086013951L}", variable));
-    }
-    
-    o.d.w.f.ExpressionTest - [testCondition,65] - default条件表达式结果:true
-```
-
-`${createBy == '1357280988086013951'}`: 如果右边的值是字符串，那需要用单引号包起来，否则会报错。
-```java
-@Test
-    public void testCondition() {
-
-        Map<String, Object> variable = new HashMap<>();
-        variable.put("createBy", "1357280988086013951");
-        log.info("default条件表达式结果:{}", ExpressionUtil.evalCondition
-                ("default@@${createBy == '1357280988086013951'}", variable));
-
-    }
-    
-    o.d.w.f.ExpressionTest - [testCondition,65] - default条件表达式结果:true
-```

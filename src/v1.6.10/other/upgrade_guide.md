@@ -10,7 +10,6 @@
 
 ### v1.7.0
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
-- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：`["serial", "parallel"]`
