@@ -10,23 +10,24 @@ export default navbar([
         link: '/master/introduction/introduction.md',
         children: [
             {
-                text: 'v1.6.10(当前版本)',
+                text: 'v1.7.0-m4(公测版)',
                 link: '/master/introduction/introduction.md'
             },
             {
                 text: '历史版本',
                 children: [
+                    { text: 'v1.6.10', link: '/v1.6.10/introduction/introduction.md' },
                     { text: 'v1.6.8', link: '/v1.6.8/introduction/introduction.md' },
                     { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },
                     { text: 'v1.6.6', link: '/v1.6.6/introduction/introduction.md' },
                     { text: 'v1.3.8', link: '/v1.3.5/introduction/introduction.md' },
-                    { text: 'v1.3.7', link: '/v1.3.5/introduction/introduction.md' },
-                    { text: 'v1.3.6', link: '/v1.3.5/introduction/introduction.md' },
-                    { text: 'v1.3.5', link: '/v1.3.5/introduction/introduction.md' },
-                    { text: 'v1.3.4', link: '/v1.3.4/guide/started.md' },
-                    { text: 'v1.3.3', link: '/v1.3.3/guide/started.md' },
-                    { text: 'v1.3.1', link: '/v1.3.1/guide/started.md' },
-                    { text: 'v1.3.0', link: '/v1.3.0/guide/started.md' },
+                    // { text: 'v1.3.7', link: '/v1.3.5/introduction/introduction.md' },
+                    // { text: 'v1.3.6', link: '/v1.3.5/introduction/introduction.md' },
+                    // { text: 'v1.3.5', link: '/v1.3.5/introduction/introduction.md' },
+                    // { text: 'v1.3.4', link: '/v1.3.4/guide/started.md' },
+                    // { text: 'v1.3.3', link: '/v1.3.3/guide/started.md' },
+                    // { text: 'v1.3.1', link: '/v1.3.1/guide/started.md' },
+                    // { text: 'v1.3.0', link: '/v1.3.0/guide/started.md' },
                     // { text: 'v1.2.8', link: '/v1.2.8/guide/started.md' },
                     // { text: 'v1.2.7', link: '/v1.2.7/guide/started.md' },
                     // { text: 'v1.2.6', link: '/v1.2.6/guide/started.md' },

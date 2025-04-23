@@ -60,6 +60,18 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
+            "title": "国产工作流引擎star 5.6k，Warm-Flow版本升级1.7.0（新增n多好用功能）", 
+            "url": "./news/upgrade/8.html",    
+            "pushTime": "2025-04-28"
+        },
+        {
+            "type": "experience",
+            "title": "maven如何解决jar包依赖冲突", 
+            "url": "./news/experience/7.html",
+            "pushTime": "2025-04-16"
+        },
+        {
+            "type": "upgrade",
             "title": "Warm-Flow版本升级1.6.10：修复部分错误", 
             "url": "./news/upgrade/n-9.html",    
             "pushTime": "2025-04-13"

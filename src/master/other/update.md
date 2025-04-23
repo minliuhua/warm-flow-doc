@@ -8,25 +8,56 @@
 
 - 事件
 - 流程图合法性检验
-- 把不能退回到开始节点去掉，会有什么影响
 - 子流程
 - 会签和票签通过率策略，支持扩展
 - 重启流程
 - 包容网关
-- 开启流程可以不默认执行到中间节点 @晓华
 - 动态表单 @晓华
 - 仿钉钉设计器 @晓华
 
 
 ## 开发中计划
-### v1.7.0  2025-04-30
+### v1.7.0  2025-04-28
 
-- 取回      @xiarigang
-- 撤销      @xiarigang
-- 包容网关   @晓华
-- 实体类、dto、vo等独立成一个模块，方便微服务接入   @晓华
-- 会签票签代码优化   @晓华
-- 优化nodeService.getNextNodeList重复代码，提升性能   @晓华
+- [升级指南](./upgrade_guide.md#v1-7-0)
+- [feat] 待办任务表新增流程状态字段，避免并行网关中，不同点任务流程状态都是相同
+- [feat] 新增撤销功能  @xiarigang @晓华
+- [feat] 新增驳回到上一个任务 @xiarigang @晓华
+- [feat] 新增拿回功能
+- [feat] TaskService新增pass：流程通过(自定义流程状态)
+- [feat] TaskService新增passAtWill：流程任意通过(自定义流程状态)
+- [feat] TaskService新增reject：流程退回(自定义流程状态)
+- [feat] TaskService新增rejectWill：流程任意退回(自定义流程状态)
+- [feat] TaskService新增rejectLastByInsId：驳回上一个任务
+- [feat] TaskService新增rejectLast：驳回上一个任务
+- [feat] TaskService新增revoke：撤销
+- [feat] TaskService新增taskBackByInsId：拿回到最近办理的任务
+- [feat] TaskService新增taskBack：拿回到最近办理的任务
+- [feat] TaskService新增skipByInsId：根据实例id，流程跳转
+- [feat] TaskService新增getByInsId：根据流程实例id获取流程任务集合
+- [feat] TaskService新增getByInsIdAndNodeCodes：根据流程实例id和节点code集合获取流程任务集合
+- [feat] DefService新增getByFlowCode: 根据流程定义code查询流程定义  
+- [feat] InsService新增getByDefId: 根据流程定义id，查询流程实例集合  
+- [feat] NodeService新增getByDefId: 根据流程定义id，查询流程节点集合  
+- [feat] NodeService新增getStartNode：根据流程定义id获取开始节点  
+- [feat] NodeService新增getBetweenNode：根据流程定义id获取中间节点集合  
+- [feat] NodeService新增getEndNode：根据流程定义id获取结束节点  
+- [feat] NodeService新增getByDefIdAndNodeCode：根据流程定义id和节点编码获取流程节点  
+- [feat] SkipService新增getByDefId：根据流程定义id查询节点跳转线  
+- [feat] SkipService新增getByDefIdAndNowNodeCode：根据流程定义id和节点编码查询节点跳转线  
+- [feat] DefService新增getPublishByFlowCode：根据流程定义code查询已发布的流程定义
+- [feat] 增加源码对应文档的地址@see注释
+- [perf] 优化nodeService.getNextNodeList重复代码，提升性能
+- [refactor] 重构部分代码  
+- [update] HisTaskService的getNoReject接口标识为即将删除  
+- [update] InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替  
+- [update] 设计器驳回指定节点，过滤掉开始节点 
+- [fix] 修复如果有long类型的时候，判断会出现问题
+- [fix] 修复互斥网关时，存在执行多个任务情况
+- [fix] 修复开启流程直接结束时，不能正确完成流程问题
+- [remove] 删除审批消息字数校验
+- [remove] TaskService删除removeAndUser
+- [remove] UserService删除setSkipUser
 
 ## 更新日志
 ### v1.6.10  2025-04-13
@@ -67,7 +98,7 @@
 - [style] 常量改成大写和下划线
 
 
-### v1.6.6  2025-01-23 
+### v1.6.6  2025-01-23
 
 - [升级指南](./upgrade_guide.md#v1-6-6)
 - [feat] 导入、导出和保存等新增json格式支持DefService.importIs/importJson/importDef/saveDef/exportJson
@@ -102,19 +133,19 @@
 
 - [fix] 修复最新设计器代码未复制到到jar包
 
-### v1.3.7 2024-12-31  
+### v1.3.7 2024-12-31
 
 - [升级指南](./upgrade_guide.md#v1-3-7)
 - [fix] 修复设计器驳回指定节点显示异常问题
 - [fix] 流程实例查询SQL BUG
 
-### v1.3.6 2024-12-23 
+### v1.3.6 2024-12-23
 
 - [fix] 修复设计器驳回指定节点显示异常问题
 
-### v1.3.5 2024-12-20  
+### v1.3.5 2024-12-20
 
-- [升级指南](./upgrade_guide.md#v1-3-5) 
+- [升级指南](./upgrade_guide.md#v1-3-5)
 - [feat] 新增获取所有前置节点接口
 - [feat] 设计器新增设置驳回指定节点
 - [feat] 条件表达式新增默认策略`default|${flag == 5 && flag > 4}`
@@ -126,7 +157,7 @@
 - [refactor] 条件表达式原本太繁琐，进行精简, `@@eq@@|flag@@eq@5` --> `eq|flag|5`
 - [refactor] 任意跳转，改成退回选择目标节点，票签必填，修改字段名称
 
-### v1.3.4 2024-11-25  
+### v1.3.4 2024-11-25
 
 - [升级指南](./upgrade_guide.md#v1-3-4)
 - [feat] 新增监听器spel表达式，并且支持扩展
@@ -148,7 +179,7 @@
 - [refactor] 重构条件表达式和办理人表达式
 - [remove] 移除权限监听器
 
-### v1.3.3 2024-11-12  
+### v1.3.3 2024-11-12
 - [升级指南](./upgrade_guide.md#v1-3-3)
 - [feat] 新增支持接入业务系统token，支持多token
 - [update] 办理人选择tabs切换
@@ -158,7 +189,7 @@
 - [fix] 修改【Bug】 会签节点委派 @vanlin
 - [fix] 统一修复分页bug
 
-### v1.3.1 2024-11-01  
+### v1.3.1 2024-11-01
 
 - [升级指南](./upgrade_guide.md#v1-3-1)
 - [feat] 新增boot3+java17支持
@@ -173,7 +204,7 @@
 - [fix] 修复历史记录表，创建时间和更新时间一样的问题
 - [remove] FlowParams对象删除setXxx(yyy)方法，改为xxx(yyy)方法赋值
 
-### v1.3.0 2024-10-23  
+### v1.3.0 2024-10-23
 
 - [feat] 设计器独立 @zhen
 - [feat] 使用jar引入方式引入设计器
@@ -184,7 +215,7 @@
 - [fix] 更新时间有值时，取更新时间，不是创建时间
 - [fix] 修复mybatis-plus扩展包，配置了其他id策略不生效的问题
 
-### v1.2.8 2024-09-25  
+### v1.2.8 2024-09-25
 
 - [升级指南](./upgrade_guide.md#v1-2-8)
 - [feat] json库支持snack3、jackson、fastjson和gson，并且支持扩展
@@ -206,7 +237,7 @@
 - [update] ModifyHandler增加链式调用
 - [fix] 修复流程监听器导出失败的问题
 
-### v1.2.6 2024-08-28  
+### v1.2.6 2024-08-28
 
 - [升级指南](./upgrade_guide.md#v1-2-6)
 - [feat] 增加获取下个节点集合api @xiarigang
@@ -223,7 +254,7 @@
 - [fix] 修复 jpa solon注解问题 @vanlin
 - [fix] 修复 并行网关三个任务分支的时候，错误结束流程的问题
 
-### v1.2.4 2024-08-14  
+### v1.2.4 2024-08-14
 
 - [升级指南](./upgrade_guide.md#v1-2-4)
 - [feat] 激活和挂起 @xiaoxiaoliu889
@@ -270,7 +301,7 @@
 - [fix] 修复更新拼上了多余的条件
 - [fix] 修复保存流程xml报错问题
 
-### v1.2.1 2024-06-28  
+### v1.2.1 2024-06-28
 
 - [升级指南](./upgrade_guide.md#v1-2-1)
 - [feat] 新增mybatis-flex扩展包 @xiarigang
@@ -289,7 +320,7 @@
 - [fix] 修复填充器不接收外部设置的时间
 - [fix] 修复userMapper.xml中updateLogic的某个负值错误
 
-### v1.2.0  2024-06-13  
+### v1.2.0  2024-06-13
 
 - [升级指南](./upgrade_guide.md#v1-2-0)
 - 待办表解偶用户，新增用户表（查询方式需要改动）
@@ -300,7 +331,7 @@
 - oracle适配
 - pg适配
 
-### v1.1.9  2024-05-08  
+### v1.1.9  2024-05-08
 
 - [升级指南](./upgrade_guide.md#v1-1-9)
 - orm支持mybatis-plus扩展

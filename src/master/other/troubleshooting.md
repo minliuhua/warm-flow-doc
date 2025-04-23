@@ -2,7 +2,7 @@
 <!-- @include: ../other/betweengg.md -->
 
 
-## **1、id精度丢失**
+## 1、id精度丢失
 ::: tip 方案1：处理长度过长的Long类型
 
 - 只处理长度过长的Long类型，前端页面就不会丢失精度了 (感谢【Colin】提供解决方案)
@@ -131,7 +131,7 @@ warm-flow:
 
 
 
-## **2、流程图片中文乱码**
+## 2、流程图片中文乱码
 ::: tip linux环境：安装中文字体
 - 生成的流程图中文乱码或者报错InternalError; java.lang.reflect,InvocationTargetException  
 
@@ -165,7 +165,7 @@ drwxr-xr-x 2 root root 4096 5月  17 11:40 zhFonts
 
 
 
-## **3、initFlow()未加载**
+## 3、initFlow()未加载
 
 ::: tip
 - spring开启懒加载后，导致FlowAutoConfig.initFlow()未加载。（由社区【^星^ Q】提供）  
@@ -182,7 +182,7 @@ spring:
 :::
 
 
-## **4、监听器等对象获取不到**
+## 4、监听器等对象获取不到
 
 ::: tip 问题出现的原理：
 
@@ -197,12 +197,12 @@ spring:
 restart.include.flow=/org.dromara.warm.*.jar
 ```
 
-## **5、类型转换异常**
+## 5、类型转换异常
 ::: tip 同上
 :::
 
 
-## **6、hh-vue切换mybaits-plus**
+## 6、hh-vue切换mybaits-plus
 
 ::: tip
 - 1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter 
@@ -211,15 +211,30 @@ restart.include.flow=/org.dromara.warm.*.jar
 
 - 3、ruoyi-common增加依赖
 
-```java
+```xml
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.6</version>
         </dependency>
 ```
 
-- 4、MyBatisConfig.java注释掉，新增MybatisPlusConfig
+- 4、ruoyi-common中排除低版本jsqlparser
+
+```xml {5-8}
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.jsqlparser</groupId>
+                    <artifactId>jsqlparser</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+```
+
+- 5、MyBatisConfig.java注释掉，新增MybatisPlusConfig
 
 <details>
   <summary><span style="color: orangered;">👇 代码详情 👇</span></summary>
@@ -287,24 +302,24 @@ public class MybatisPlusConfig {
 
 </details>
 
-- 5、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
+- 6、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
 :::
 
 
-## **7、导入依赖包失败**
+## 7、导入依赖包失败
 
 ::: tip 可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 - 如maven3.9.6切换为低版本3.8.2
 :::
 
-## **8、 StackOverflowError 错误**
+## 8、 StackOverflowError 错误
 ::: tip
 - 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
 
 <div><img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/></div>
 :::
 
-## **9、 后端接收流程xml部分丢失**
+## 9、 后端接收流程xml部分丢失
 ::: tip
 - 一般是xxs过滤导致，排查下接口就行或者对象就行
 
@@ -312,13 +327,13 @@ public class MybatisPlusConfig {
 <div><img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/></div>
 :::
 
-## **10、 演示项目请假类型为啥使用字典**
+## 10、 演示项目请假类型为啥使用字典
 ::: tip
 因为要在一个模块中展示不同的流程案例，所以使用字典，字典映射流程定义
 <div><img src="https://foruda.gitee.com/images/1742523937795259637/a55fbbda_2218307.png" width="700"/></div>
 :::
 
-## **11、 skipByIns和skip区别**
+## 11、 skipByIns和skip区别
 
 区别一：业务模块（请假申请）中能直接拿到流程实例id，因为业务表通常冗余了流程实例id，但是一般不会冗余任务id，而待办任务中最方便拿到任务id。
 区别一：调用skipByIns时候，这个流程实例对应的点任务不能存在多个，否则不知道办理哪里一个，skip没有这个问题。
