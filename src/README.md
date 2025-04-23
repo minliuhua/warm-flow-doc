@@ -336,13 +336,13 @@ export default {
     
       function typeWriter() {
         if (index < text.length) {
-            element.textContent += text.charAt(index);
+            element.innerHTML += `<span style=" color: #333 !important;">${text.charAt(index)}</span>`;
             index++;
             setTimeout(typeWriter, 60);
         } else {
             setTimeout(() => {
                 index = 0;
-                element.textContent = '';
+                element.innerHTML = '';
                 setTimeout(typeWriter, 60);
             }, 3000);
             
