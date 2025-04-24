@@ -45,7 +45,7 @@
 ------
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">59</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">65</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
 <br>
 
@@ -91,3 +91,8 @@
 <div><img src="https://foruda.gitee.com/images/1744103218578523985/590967db_2218307.png"></div>
 <div><img src="https://foruda.gitee.com/images/1744103236443767224/92bda156_2218307.png"></div>
 <div><img src="https://foruda.gitee.com/images/1744103244889567154/30a112b0_2218307.png"></div>
+
+
+### **视频套餐**
+视频+集中答疑：购买一套视频+一个半小时左右的远程会议答疑，通常公司中使用人多，积累一定数量问题可以统一答疑。
+价格：<span class="red-font-bold">1200元</span>

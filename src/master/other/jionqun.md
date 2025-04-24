@@ -53,7 +53,6 @@
     <tbody>
         <tr>
         <td><img src="/skwx.png" height="300"></td>
-        <td><img src="/skzfb.png" height="300"></td>
     </tr>
     </tbody>
 </table>

@@ -202,124 +202,20 @@ restart.include.flow=/org.dromara.warm.*.jar
 :::
 
 
-## 6、hh-vue切换mybaits-plus
-
-::: tip
-- 1、根pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter 
-
-- 2、ruoyi-flow的pom.xml，warm-flow-mybatis-sb-starter改为warm-flow-mybatis-plus-sb-starter  
-
-- 3、ruoyi-common增加依赖
-
-```xml
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.6</version>
-        </dependency>
-```
-
-- 4、ruoyi-common中排除低版本jsqlparser
-
-```xml {5-8}
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.github.jsqlparser</groupId>
-                    <artifactId>jsqlparser</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-```
-
-- 5、MyBatisConfig.java注释掉，新增MybatisPlusConfig
-
-<details>
-  <summary><span style="color: orangered;">👇 代码详情 👇</span></summary>
-
-```java
-package com.ruoyi.framework.config;
-
-import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-/**
- * Mybatis Plus 配置
- *
- * @author ruoyi
- */
-@EnableTransactionManagement(proxyTargetClass = true)
-@Configuration
-public class MybatisPlusConfig {
-    @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor() {
-        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        // 分页插件
-        interceptor.addInnerInterceptor(paginationInnerInterceptor());
-        // 乐观锁插件
-        interceptor.addInnerInterceptor(optimisticLockerInnerInterceptor());
-        // 阻断插件
-        interceptor.addInnerInterceptor(blockAttackInnerInterceptor());
-        return interceptor;
-    }
-
-    /**
-     * 分页插件，自动识别数据库类型 https://baomidou.com/guide/interceptor-pagination.html
-     */
-    public PaginationInnerInterceptor paginationInnerInterceptor() {
-        PaginationInnerInterceptor paginationInnerInterceptor = new PaginationInnerInterceptor();
-        // 设置数据库类型为mysql
-        paginationInnerInterceptor.setDbType(DbType.MYSQL);
-        // 设置最大单页限制数量，默认 500 条，-1 不受限制
-        paginationInnerInterceptor.setMaxLimit(-1L);
-        return paginationInnerInterceptor;
-    }
-
-    /**
-     * 乐观锁插件 https://baomidou.com/guide/interceptor-optimistic-locker.html
-     */
-    public OptimisticLockerInnerInterceptor optimisticLockerInnerInterceptor() {
-        return new OptimisticLockerInnerInterceptor();
-    }
-
-    /**
-     * 如果是对全表的删除或更新操作，就会终止该操作 https://baomidou.com/guide/interceptor-block-attack.html
-     */
-    public BlockAttackInnerInterceptor blockAttackInnerInterceptor() {
-        return new BlockAttackInnerInterceptor();
-    }
-}
-
-```
-
-</details>
-
-- 6、ruoyi-admin的application.yml中配置mybatis改为mybatis-plus
-:::
-
-
-## 7、导入依赖包失败
+## 6、导入依赖包失败
 
 ::: tip 可尝试切换maven版本 （感谢【一拳打爆常大宝】）
 - 如maven3.9.6切换为低版本3.8.2
 :::
 
-## 8、 StackOverflowError 错误
+## 7、 StackOverflowError 错误
 ::: tip
 - 查看跳转线退回的，是否设置为退回类型，后续有时间再做校验
 
 <div><img src="https://foruda.gitee.com/images/1730877942385830500/baf394aa_2218307.png" width="700"/></div>
 :::
 
-## 9、 后端接收流程xml部分丢失
+## 8、 后端接收流程xml部分丢失
 ::: tip
 - 一般是xxs过滤导致，排查下接口就行或者对象就行
 
@@ -327,13 +223,13 @@ public class MybatisPlusConfig {
 <div><img src="https://foruda.gitee.com/images/1733466264479226712/de836c18_2218307.png" width="700"/></div>
 :::
 
-## 10、 演示项目请假类型为啥使用字典
+## 9、 演示项目请假类型为啥使用字典
 ::: tip
 因为要在一个模块中展示不同的流程案例，所以使用字典，字典映射流程定义
 <div><img src="https://foruda.gitee.com/images/1742523937795259637/a55fbbda_2218307.png" width="700"/></div>
 :::
 
-## 11、 skipByIns和skip区别
+## 10、 skipByIns和skip区别
 
 区别一：业务模块（请假申请）中能直接拿到流程实例id，因为业务表通常冗余了流程实例id，但是一般不会冗余任务id，而待办任务中最方便拿到任务id。
 区别一：调用skipByIns时候，这个流程实例对应的点任务不能存在多个，否则不知道办理哪里一个，skip没有这个问题。
