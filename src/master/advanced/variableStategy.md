@@ -71,7 +71,7 @@ public class VariableTest {
 
 
 
-<div><img src="https://foruda.gitee.com/images/1734589294761157636/ac74e327_2218307.png" width="500" /></div>
+<div><img src="https://foruda.gitee.com/images/1745558346409798689/0bc86581_2218307.png" width="500" /></div>
 
 后端代码设置变量
 
@@ -135,7 +135,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 
 ## 7、条件表达式和办理人表达式区别
 
-- 使用地方：条件表达式网关中用到，办理人表达式在办理人输入中用到。
+- 使用地方：条件表达式网关中用到，办理人表达式在办理人列表中用到。
 - 替换时机：条件表达式是当前节点传入变量替换，办理人表达式在本节点前任意节点办理时替换。
 - 作用：前者为了决定执行哪条节点任务，后者觉得谁可以办理。
 

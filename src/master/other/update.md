@@ -24,6 +24,7 @@
 - [feat] 新增撤销功能  @xiarigang @晓华
 - [feat] 新增驳回到上一个任务 @xiarigang @晓华
 - [feat] 新增拿回功能
+- [feat] 设计器中间节点设置，办理人输入改成列表，可以反显中文名称
 - [feat] TaskService新增pass：流程通过(自定义流程状态)
 - [feat] TaskService新增passAtWill：流程任意通过(自定义流程状态)
 - [feat] TaskService新增reject：流程退回(自定义流程状态)

@@ -55,7 +55,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.7.0-m4（公测版）",
+                    title: "公告: 1.7.0（正式版）",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
@@ -69,7 +69,7 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/upgrade/8.html\'" class="link-style">' +
-                        '       🔵 国产免费工作流引擎star 5.6k，Warm-Flow版本升级1.7.0（新增n多好用功能）' +
+                        '       🔵 国产免费工作流引擎star 5.9k，Warm-Flow版本升级1.7.0（新增n多好用功能）' +
                         '     </span>\n' +
                         '</div>',
                     actions: [

@@ -346,15 +346,17 @@ spring:
 
 <br>
 
+
 ## 4. 设计器办理人选择框接入
 > 给任务节点设置哪些权限的人可以办理，实现接口提供给设计器
 
 ### 4.1 办理人权限选择弹框页面
 
+<div><img src="https://foruda.gitee.com/images/1745571554195473679/ca966032_2218307.png"></div>
 <div><img src="https://foruda.gitee.com/images/1742804225175791843/02ddc1bd_2218307.png"></div>
 <br>
 
-### 4.2 实现接口获取以上页面办理人权限数据
+### 4.2 实现接口获取办理人列表数据
 
 #### 4.2.1 HandlerSelectService接口
 ```java
@@ -511,7 +513,132 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 }
 ```
 
-## 5. 共享后端权限(如token)
+## 5. 设计器办理人列表回显
+> 回显该节点权限办理人名称，比如上一步选择后保存入库主键，下一次重新打开以下页面
+
+### 5.1 设计器办理人列表页面
+<div><img src="https://foruda.gitee.com/images/1745570346631861131/f5ba4bf7_2218307.png" width="700"></div>
+<br>
+
+### 5.2 实现接口获取办理人列表回显
+#### 5.2.1 HandlerSelectService接口
+- `handlerFeedback()`是默认方法，基于以上第四小节中的`getHandlerType`和`getHandlerSelect`实现，但是性能会比较差
+- 建议重新实现该接口，通过入库主键集合`storageIds`，重新覆盖查询，下面会会有实现案例
+
+```java {17,21}
+/**
+ * 流程设计器-获取办理人权限设置列表接口
+ *
+ * @author warm
+ */
+public interface HandlerSelectService {
+
+    /**
+     * 办理人权限名称回显，兼容老项目，新项目重写提高性能
+     *
+     * @param storageIds 入库主键集合
+     * @return 结果
+     */
+    default List<HandlerFeedBackVo> handlerFeedback(List<String> storageIds) {
+        List<HandlerFeedBackVo> handlerFeedBackVos = new ArrayList<>();
+        Map<String, String> authMap = new HashMap<>();
+        List<String> handlerTypes = getHandlerType();
+        for (String handlerType : handlerTypes) {
+            HandlerQuery handlerQuery = new HandlerQuery();
+            handlerQuery.setHandlerType(handlerType);
+            HandlerSelectVo handlerSelectVo = getHandlerSelect(handlerQuery);
+            if (ObjectUtil.isNotNull(handlerSelectVo)) {
+                FlowPage<HandlerAuth> handlerAuths = handlerSelectVo.getHandlerAuths();
+                List<HandlerAuth> rows = handlerAuths.getRows();
+                if (CollUtil.isNotEmpty(rows)) {
+                    authMap.putAll(StreamUtils.toMap(rows, HandlerAuth::getStorageId, HandlerAuth::getHandlerName));
+                }
+            }
+        }
+
+        // 遍历storageIds，按照原本的顺序回显名称
+        for (String storageId : storageIds) {
+            handlerFeedBackVos.add(new HandlerFeedBackVo()
+                    .setStorageId(storageId)
+                    .setHandlerName(MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
+        }
+        return handlerFeedBackVos;
+    }
+}
+
+```
+
+#### 5.2.2 HandlerSelectServiceImpl实现类
+
+```java
+/**
+ * 流程设计器-获取办理人权限设置列表接口实现类
+ *
+ * @author warm
+ */
+@Component
+public class HandlerSelectServiceImpl implements HandlerSelectService {
+    @Resource
+    private WarmFlowMapper warmFlowMapper;
+
+    @Override
+    public List<HandlerFeedBackVo> handlerFeedback(List<String> storageIds) {
+        List<HandlerFeedBackVo> handlerFeedBackVos = new ArrayList<>();
+        if (CollUtil.isNotEmpty(storageIds)) {
+            List<Long> roleIdList = new ArrayList<>();
+            List<Long> deptIdList = new ArrayList<>();
+            List<Long> userIdList = new ArrayList<>();
+
+            // 分别过滤出用户、角色和部门的id，分别用集合存储
+            for (String storageId : storageIds) {
+                if (storageId.startsWith("role:")) {
+                    roleIdList.add(Long.valueOf(storageId.replace("role:", "")));
+                } else if (storageId.startsWith("dept:")) {
+                    deptIdList.add(Long.valueOf(storageId.replace("dept:", "")));
+                } else if (MathUtil.isNumeric(storageId)){
+                    userIdList.add(Long.valueOf(storageId));
+                }
+            }
+
+            Map<String, String> authMap = new HashMap<>();
+            // 查询角色id对应的名称
+            if (CollUtil.isNotEmpty(roleIdList)) {
+                // 查询角色列表
+                List<SysRole> roleList = warmFlowMapper.selectRoleByIds(roleIdList);
+                authMap.putAll(StreamUtils.toMap(roleList, role -> "role:" + role.getRoleId()
+                        , SysRole::getRoleName));
+            }
+
+            // 查询部门id对应的名称
+            if (CollUtil.isNotEmpty(deptIdList)) {
+                List<SysDept> deptList = warmFlowMapper.selectDeptByIds(deptIdList);
+                authMap.putAll(StreamUtils.toMap(deptList, dept -> "dept:" + dept.getDeptId()
+                        , SysDept::getDeptName));
+            }
+
+            // 查询用户id对应的名称
+            if (CollUtil.isNotEmpty(userIdList)) {
+                List<SysUser> userList = warmFlowMapper.selectUserByIds(userIdList);
+                authMap.putAll(StreamUtils.toMap(userList, user -> String.valueOf(user.getUserId())
+                        , SysUser::getNickName));
+            }
+
+            // 遍历storageIds，按照原本的顺序回显名称
+            for (String storageId : storageIds) {
+                handlerFeedBackVos.add(new HandlerFeedBackVo()
+                        .setStorageId(storageId)
+                        .setHandlerName(MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
+            }
+        }
+
+        return handlerFeedBackVos;
+    }
+}
+```
+
+<br>
+
+## 6. 共享后端权限(如token)
 - 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
 - 在前端加载设计器页面路径后面，追加&Authorization=${token}，token是业务系统的token，可追加多个token
 - yml中配置`warm-flow.token-name=Authorization`,每次请求会把token, set到header的`Authorization`上，多个token用逗号分隔

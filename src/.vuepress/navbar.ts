@@ -10,7 +10,7 @@ export default navbar([
         link: '/master/introduction/introduction.md',
         children: [
             {
-                text: 'v1.7.0-m4(公测版)',
+                text: 'v1.7.0(当前版本)',
                 link: '/master/introduction/introduction.md'
             },
             {

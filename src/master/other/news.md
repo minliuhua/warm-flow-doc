@@ -60,7 +60,7 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
-            "title": "国产免费工作流引擎star 5.6k，Warm-Flow版本升级1.7.0（新增大量好用功能）", 
+            "title": "国产免费工作流引擎star 5.9k，Warm-Flow版本升级1.7.0（新增大量好用功能）", 
             "url": "./news/upgrade/8.html",    
             "pushTime": "2025-04-28"
         },
