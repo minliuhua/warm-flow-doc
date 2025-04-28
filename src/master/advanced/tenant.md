@@ -195,6 +195,7 @@ public class WarmFlowConfig {
  *
  * @author warm
  */
+@Component
 public class CustomTenantHandler implements TenantHandler {
 
 
