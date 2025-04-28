@@ -66,7 +66,7 @@ export default navbar([
         link: '/master/other/troubleshooting.md'
     },
     {
-        text: '更新日志',
+        text: '计划/日志',
         link: '/master/other/update.md'
     },
 ]);

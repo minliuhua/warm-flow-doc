@@ -1,4 +1,4 @@
-# 更新日志
+# 计划/日志
 <!-- @include: ../other/betweengg.md -->
 
 

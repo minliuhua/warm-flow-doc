@@ -36,13 +36,7 @@
 
 
 ## **3、maven依赖**
-### **3.1、从首页获取最新版本**
-<br>
-
-<div><img src="https://foruda.gitee.com/images/1737083916006381044/743f5bfb_2218307.png" width="500px"></div>
-<br>
-
-### **3.2、mybatis**
+### **3.1、mybatis**
 
 ::: code-tabs#shell
 
@@ -79,7 +73,7 @@
 :::
 
 
-### **3.3、mybatis-plus**
+### **3.2、mybatis-plus**
 
 ::: code-tabs#shell
 
@@ -116,20 +110,23 @@
 :::
 
 
-### **3.4、jpa**
+### **3.3、jpa**
 
 <span class="big-font">[https://gitee.com/vanlin/warm-flow-jpa.git](https://gitee.com/vanlin/warm-flow-jpa.git)</span>
 
 
-### **3.5、mybatis-flex**
+### **3.4、mybatis-flex**
 
 <span class="big-font">[https://gitee.com/rigangxia/warm-flow-mybatis-flex.git](https://gitee.com/rigangxia/warm-flow-mybatis-flex.git)</span>
 
 
-### **3.6、easy-query**
+### **3.5、easy-query**
 
 <span class="big-font">[https://gitee.com/link2fun/warm-flow-easy-query.git](https://gitee.com/link2fun/warm-flow-easy-query.git)</span>
 
+### **3.6、BeetlSql**
+
+<span class="big-font">[https://gitee.com/smartcity/warm-flow-beetlsql-solon.git](https://gitee.com/smartcity/warm-flow-beetlsql-solon.git)</span>
 
 
 > **有想扩展其他orm框架和数据库的可加qq群联系群主**
