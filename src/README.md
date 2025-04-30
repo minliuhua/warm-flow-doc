@@ -120,7 +120,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 <div class="com-box-img flex1">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（35家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（36家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -200,7 +200,7 @@ export default {
             { href: "https://www.bjhccx.net/", title: "北京海诚创想信息技术有限公司", src: "https://foruda.gitee.com/images/1745745608943588585/b939d228_2218307.png" },
             { href: "", title: "昆明世科计算机网络有限公司", src: "https://foruda.gitee.com/images/1745746151355846840/0207b2aa_2218307.png" },
             { href: "", title: "湖北公众信息产业有限责任公司", src: "https://foruda.gitee.com/images/1745745804459175481/fdf305da_2218307.png" },
-            { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
+            { href: "http://www.wenshengkeji.com/", title: "南京文盛科技有限公司", src: "https://foruda.gitee.com/images/1745992637639701953/d94c502d_2218307.png" },
         ];
 
         kyProjectList.value = [
