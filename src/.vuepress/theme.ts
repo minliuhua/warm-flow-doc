@@ -31,8 +31,10 @@ export default hopeTheme(
             include: true,
             component: true,
         },
-
         plugins: {
+            slimsearch: {
+              indexContent: true,
+            },
             components: {
                 // 你想使用的组件
                 components: [
@@ -82,7 +84,6 @@ export default hopeTheme(
                     showOnce: false,
                 },
             ],
-            slimsearch: true,
             mdEnhance: {
                 align: true,
                 attrs: true,
