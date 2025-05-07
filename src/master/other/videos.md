@@ -34,24 +34,26 @@
 ------
 
 ### **课程试看**
-  * [x] [0. 教程导读](https://www.bilibili.com/video/BV1AWRGYEEVr)
-  * [x] [1. 课程介绍](https://www.bilibili.com/video/BV15yZGYyEy6)
-  * [x] [2.1. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr)
-  * [x] [2.2. 工作流术语解释](https://www.bilibili.com/video/BV1nGdHY6EAo)
-  * [x] [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi)
-  * [x] [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
-  * [x] [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
+* [x] [0. 教程导读](https://www.bilibili.com/video/BV1AWRGYEEVr)
+* [x] [1. 课程介绍](https://www.bilibili.com/video/BV15yZGYyEy6)
+* [x] [2.1. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr)
+* [x] [2.2. 工作流术语解释](https://www.bilibili.com/video/BV1nGdHY6EAo)
+* [x] [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi)
+* [x] [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
+* [x] [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
+* [x] [25.1.1. 案例合同签订-需求分析](https://www.bilibili.com/video/BV1WCV8zkEec)
 
 ------
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">69</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">73</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
 
-- **平均值**：15 分钟 23 秒
-- **0-10分钟**：20 个视频，占比 25%
-- **10-20分钟**：35 个视频，占比 44%
-- **20-30分钟**：10 个视频，占比 13%
-- **30-40分钟**：5 个视频，占比 6%
+- **总时长**：	17:53:39
+- **平均值**：	0:14:42
+- **0-10分钟**：	14	个视频，占比 	19.18%
+- **10-20分钟**：	50	个视频，占比 	68.49%
+- **20-30分钟**：	7	个视频，占比 	9.59%
+- **30-40分钟**：	2	个视频，占比 	2.74%
 
 <div><img src="/videosml.png"></div>
 
