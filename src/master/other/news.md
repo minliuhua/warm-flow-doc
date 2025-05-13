@@ -58,9 +58,9 @@ export default {
         },
       ];
       filterList.value = allList.value = [
-{
+        {
             "type": "upgrade",
-            "title": "国产免费工作流引擎star 6.2k，Warm-Flow版本升级1.7.1（修复部分缺陷）", 
+            "title": "国产免费工作流引擎star 6.5k，Warm-Flow版本升级1.7.2（修复部分缺陷）", 
             "url": "./news/upgrade/8.html",    
             "pushTime": "2025-04-28"
         },
