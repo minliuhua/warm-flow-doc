@@ -132,7 +132,7 @@ public class ShiroConfig {
     mounted() {
       // process.env.VUE_APP_BASE_API: 前端地址的前缀如dev-api
       // definitionId: 为需要查询的流程定义id
-      // disabled: 为是否可编辑, true：不可编辑，false：可编辑；例如：查看的时候不可编辑，不可保存, 
+      // disabled: 为是否可编辑, 例如：查看的时候不可编辑，不可保存
       this.url = process.env.VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`;
       this.iframeLoaded();
     },
@@ -172,7 +172,7 @@ import { onMounted } from 'vue';
 
 // import.meta.env.VITE_APP_BASE_API:  前端地址的前缀如dev-api
 // definitionId: 为需要查询的流程定义id
-// disabled: 为是否可编辑, true：不可编辑，false：可编辑；例如：查看的时候不可编辑，不可保存, 
+// disabled: 为是否可编辑, 例如：查看的时候不可编辑，不可保存
 const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`);
 
 const iframeLoaded = () => {
@@ -558,9 +558,8 @@ public interface HandlerSelectService {
 
         // 遍历storageIds，按照原本的顺序回显名称
         for (String storageId : storageIds) {
-            handlerFeedBackVos.add(new HandlerFeedBackVo()
-                    .setStorageId(storageId)
-                    .setHandlerName(MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
+            handlerFeedBackVos.add(new HandlerFeedBackVo(storageId
+                    , MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
         }
         return handlerFeedBackVos;
     }
@@ -625,9 +624,8 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 
             // 遍历storageIds，按照原本的顺序回显名称
             for (String storageId : storageIds) {
-                handlerFeedBackVos.add(new HandlerFeedBackVo()
-                        .setStorageId(storageId)
-                        .setHandlerName(MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
+                handlerFeedBackVos.add(new HandlerFeedBackVo(storageId
+                        , MapUtil.isEmpty(authMap) ? "": authMap.get(storageId)));
             }
         }
 

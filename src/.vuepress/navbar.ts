@@ -10,13 +10,13 @@ export default navbar([
         link: '/master/introduction/introduction.md',
         children: [
             {
-                text: 'v1.7.0(当前版本)',
+                text: 'v1.7.1(当前版本)',
                 link: '/master/introduction/introduction.md'
             },
             {
                 text: '历史版本',
                 children: [
-                    // { text: 'v1.7.1-m1(测试版)', link: '/v1.7.1/introduction/introduction.md' },
+                    { text: 'v1.7.0', link: '/v1.7.0/introduction/introduction.md' },
                     { text: 'v1.6.10', link: '/v1.6.10/introduction/introduction.md' },
                     { text: 'v1.6.8', link: '/v1.6.8/introduction/introduction.md' },
                     { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },

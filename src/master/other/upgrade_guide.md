@@ -8,6 +8,126 @@
 
 :::
 
+### v1.7.1
+- mybatis-plus逻辑删除强制设置为（删除值：0，未删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个
+- 如果二开设计器，请自行手动同步，参考如下：
+
+::: tip 原between.vue：
+```vue {3}
+<el-table-column label="操作" width="55" v-if="!disabled">
+  <template #default="scope">
+  <el-button type="danger" v-if="form.permissionFlag.length !== 1 && !disabled" :icon="Delete" @click="delPermission(scope.$index)"/>
+</template>
+</el-table-column>
+```
+:::
+
+::: tip 现between.vue：
+```vue {3}
+<el-table-column label="操作" width="55" v-if="!disabled">
+  <template #default="scope">
+  <el-button type="danger" v-if="!disabled" :icon="Delete" @click="delPermission(scope.$index)"/>
+</template>
+</el-table-column>
+```
+:::
+
+::: tip 原skip.vue：
+```js {3}
+watch(() => form, n => {
+  n = n.value;
+  let skipCondition = '';
+  skipCondition = n.conditionType + "@@";
+  if (!/^spel/.test(n.conditionType) && !/^default/.test(n.conditionType)) {
+    skipCondition = skipCondition
+            + (n.condition ? n.condition : '') + "|";
+  }
+  n.skipCondition = skipCondition
+          + (n.conditionValue ? n.conditionValue : '')
+  if (n) {
+    emit('change', n)
+  }
+}, {deep: true});
+```
+:::
+
+::: tip 现skip.vue：
+```js {3}
+watch(() => form, n => {
+  n = n.value;
+  if (n.conditionType) {
+    let skipCondition;
+    skipCondition = n.conditionType + "@@";
+    if (!/^spel/.test(n.conditionType) && !/^default/.test(n.conditionType)) {
+      skipCondition = skipCondition
+              + (n.condition ? n.condition : '') + "|";
+    }
+    n.skipCondition = skipCondition
+            + (n.conditionValue ? n.conditionValue : '')
+    if (n) {
+      emit('change', n)
+    }
+  }
+
+}, {deep: true});
+```
+:::
+
+::: tip 原selectUser.vue：
+```js
+const tabsValue = ref("用户");
+
+    ....
+
+/** 获取tabs列表 */
+function getTabsType() {
+  handlerType().then(res => {
+    tabsList.value = res.data;
+  });
+}
+
+    ....
+
+/** 查询用户列表 */
+function getList() {
+    loading.value = true;
+    ....
+}
+
+```
+:::
+
+::: tip 现selectUser.vue：
+```js
+const tabsValue = ref("");
+
+    ....
+
+/** 获取tabs列表 */
+function getTabsType() {
+  handlerType().then(res => {
+    tabsList.value = res.data;
+    if(res.data && res.data.length > 0) {
+      tabsValue.value = res.data[0]
+    }
+    getList();
+  });
+}
+
+    ....
+
+/** 查询用户列表 */
+function getList() {
+    loading.value = true;
+    if (!tabsValue.value) {
+        loading.value = false;
+        return;
+    }
+    ....
+}
+```
+:::
+
 ### v1.7.0
 - 执行升级脚本1.7.0版本[warm-flow_1.7.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.0.sql)
 - 设计器原办理人输入改成列表，使用`HandlerSelectService.handlerFeedback`接口回显名称，他内部是利用`HandlerSelectService.getHandlerSelect`接口，但是性能会差，如果有特别要求 ，可以重写`HandlerSelectService.handlerFeedback`，[重写文档](/master/primary/designerIntroduced.html#_5-设计器办理人列表回显)

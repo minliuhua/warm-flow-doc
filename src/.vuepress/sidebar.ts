@@ -22,6 +22,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -34,7 +35,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -78,7 +78,7 @@ export default sidebar({
             ],
         }
     ],
-    "/v1.7.1/": [
+    "/v1.7.0/": [
         {
             text: "🤞开始",
             collapsible: true,
@@ -99,6 +99,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -111,7 +112,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -176,6 +176,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -186,7 +187,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -252,6 +252,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -262,7 +263,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -327,6 +327,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -336,7 +337,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -402,6 +402,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -411,7 +412,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -474,6 +474,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -482,7 +483,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
                 'primary/designerIntroduced.md',
             ],
         },
@@ -532,13 +532,13 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/v1.3.4/guide/started.md',
+                '/v1.3.4/guide/processterm.md',
                 '/v1.3.4/guide/table.md',
                 '/v1.3.4/guide/config.md',
                 '/v1.3.4/guide/api.md',
                 '/v1.3.4/guide/datafillhandler.md',
                 '/v1.3.4/guide/variable.md',
                 '/v1.3.4/guide/condition.md',
-                '/v1.3.4/guide/processterm.md',
             ],
         },
         {
