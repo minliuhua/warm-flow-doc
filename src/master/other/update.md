@@ -23,8 +23,8 @@
 
 - [升级指南](./upgrade_guide.md#v1-7-2)
 - [feat] 开启流程实例，新增流程定义是否存在校验
-- [feat] 新增合同签订流程案例
-- [feat] 新增企业采购流程案例
+- [feat] [新增合同签订流程案例](https://gitee.com/dromara/warm-flow-test/blob/master/warm-flow-core-test/src/main/resources/contract_process.json)
+- [feat] [新增企业采购流程案例](https://gitee.com/dromara/warm-flow-test/blob/master/warm-flow-core-test/src/main/resources/procurement_steps.json)
 - [update] mybatis-plus逻辑删除，删除值和未删除值强制设置为0和1
 - [update] 合并流程变量方法改成public修饰
 - [update] 如果没有网关，是驳回跳转线，跳转条件会默认加上`undefined@@|`
