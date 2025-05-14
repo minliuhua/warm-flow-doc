@@ -42,18 +42,19 @@
 * [x] [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
 * [x] [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
 * [x] [25.1.1. 案例合同签订-需求分析](https://www.bilibili.com/video/BV1WCV8zkEec)
+* [x] [25.2.1. 企业采购流程-需求分析](https://www.bilibili.com/video/BV1rCEizeEcT)
 
 ------
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">73</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">77</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- **总时长**：	19:09:53
+- **平均值**：	0:14:56
+- **0-10分钟**：	14	个视频，占比 	18.18%
+- **10-20分钟**：	52	个视频，占比 	67.53%
+- **20-30分钟**：	9	个视频，占比 	11.69%
+- **30-40分钟**：	2	个视频，占比 	2.60%
 
-- **总时长**：	17:53:39
-- **平均值**：	0:14:42
-- **0-10分钟**：	14	个视频，占比 	19.18%
-- **10-20分钟**：	50	个视频，占比 	68.49%
-- **20-30分钟**：	7	个视频，占比 	9.59%
-- **30-40分钟**：	2	个视频，占比 	2.74%
 
 <div><img src="/videosml.png"></div>
 

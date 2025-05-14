@@ -197,7 +197,7 @@ spring:
 restart.include.flow=/org.dromara.warm.*.jar
 ```
 
-## 5、类型转换异常
+## 5、类型转换异常或bean注入失败
 ::: tip 同上
 :::
 
