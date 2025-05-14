@@ -1,4 +1,4 @@
-# 更新日志
+# 计划/日志
 <!-- @include: ../other/betweengg.md -->
 
 
@@ -17,6 +17,21 @@
 
 
 ## 开发中计划
+
+## 更新日志
+### v1.7.2  2025-05-13
+
+- [升级指南](./upgrade_guide.md#v1-7-2)
+- [feat] 开启流程实例，新增流程定义是否存在校验
+- [feat] [新增合同签订流程案例](https://gitee.com/dromara/warm-flow-test/blob/master/warm-flow-core-test/src/main/resources/contract_process.json)
+- [feat] [新增企业采购流程案例](https://gitee.com/dromara/warm-flow-test/blob/master/warm-flow-core-test/src/main/resources/procurement_steps.json)
+- [update] mybatis-plus逻辑删除，删除值和未删除值强制设置为0和1
+- [update] 合并流程变量方法改成public修饰
+- [update] 如果没有网关，是驳回跳转线，跳转条件会默认加上`undefined@@|`
+- [fix] 修复办理人列表中只有一个办理人时，删除按钮消失的问题
+- [fix] 修复设计器办理人默认为“用户”问题
+- [fix] 修复办理人列表名称回显报错问题
+
 ### v1.7.0  2025-04-28
 
 - [升级指南](./upgrade_guide.md#v1-7-0)
@@ -24,6 +39,7 @@
 - [feat] 新增撤销功能  @xiarigang @晓华
 - [feat] 新增驳回到上一个任务 @xiarigang @晓华
 - [feat] 新增拿回功能
+- [feat] 设计器中间节点设置，办理人输入改成列表，可以反显中文名称
 - [feat] TaskService新增pass：流程通过(自定义流程状态)
 - [feat] TaskService新增passAtWill：流程任意通过(自定义流程状态)
 - [feat] TaskService新增reject：流程退回(自定义流程状态)
@@ -36,22 +52,22 @@
 - [feat] TaskService新增skipByInsId：根据实例id，流程跳转
 - [feat] TaskService新增getByInsId：根据流程实例id获取流程任务集合
 - [feat] TaskService新增getByInsIdAndNodeCodes：根据流程实例id和节点code集合获取流程任务集合
-- [feat] DefService新增getByFlowCode: 根据流程定义code查询流程定义  
-- [feat] InsService新增getByDefId: 根据流程定义id，查询流程实例集合  
-- [feat] NodeService新增getByDefId: 根据流程定义id，查询流程节点集合  
-- [feat] NodeService新增getStartNode：根据流程定义id获取开始节点  
-- [feat] NodeService新增getBetweenNode：根据流程定义id获取中间节点集合  
-- [feat] NodeService新增getEndNode：根据流程定义id获取结束节点  
-- [feat] NodeService新增getByDefIdAndNodeCode：根据流程定义id和节点编码获取流程节点  
-- [feat] SkipService新增getByDefId：根据流程定义id查询节点跳转线  
-- [feat] SkipService新增getByDefIdAndNowNodeCode：根据流程定义id和节点编码查询节点跳转线  
+- [feat] DefService新增getByFlowCode: 根据流程定义code查询流程定义
+- [feat] InsService新增getByDefId: 根据流程定义id，查询流程实例集合
+- [feat] NodeService新增getByDefId: 根据流程定义id，查询流程节点集合
+- [feat] NodeService新增getStartNode：根据流程定义id获取开始节点
+- [feat] NodeService新增getBetweenNode：根据流程定义id获取中间节点集合
+- [feat] NodeService新增getEndNode：根据流程定义id获取结束节点
+- [feat] NodeService新增getByDefIdAndNodeCode：根据流程定义id和节点编码获取流程节点
+- [feat] SkipService新增getByDefId：根据流程定义id查询节点跳转线
+- [feat] SkipService新增getByDefIdAndNowNodeCode：根据流程定义id和节点编码查询节点跳转线
 - [feat] DefService新增getPublishByFlowCode：根据流程定义code查询已发布的流程定义
 - [feat] 增加源码对应文档的地址@see注释
 - [perf] 优化nodeService.getNextNodeList重复代码，提升性能
-- [refactor] 重构部分代码  
-- [update] HisTaskService的getNoReject接口标识为即将删除  
-- [update] InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替  
-- [update] 设计器驳回指定节点，过滤掉开始节点 
+- [refactor] 重构部分代码
+- [update] HisTaskService的getNoReject接口标识为即将删除
+- [update] InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
+- [update] 设计器驳回指定节点，过滤掉开始节点
 - [fix] 修复如果有long类型的时候，判断会出现问题
 - [fix] 修复互斥网关时，存在执行多个任务情况
 - [fix] 修复开启流程直接结束时，不能正确完成流程问题
@@ -59,7 +75,7 @@
 - [remove] TaskService删除removeAndUser
 - [remove] UserService删除setSkipUser
 
-## 更新日志
+
 ### v1.6.10  2025-04-13
 
 - [update] 处理扩展节点多选反显

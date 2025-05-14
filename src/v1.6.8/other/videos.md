@@ -33,7 +33,7 @@
 
 
 ### **课程价格**
-预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(劳动节后恢复原价) 原价: <span class="red-font-bold">599</span>
+预售中🎉🎉🎉 优惠价: <span class="red-font-bold">399</span>，(视频完结恢复原价) 原价: <span class="red-font-bold">599</span>
 
 ------
 

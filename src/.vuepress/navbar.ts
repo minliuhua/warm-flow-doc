@@ -10,12 +10,13 @@ export default navbar([
         link: '/master/introduction/introduction.md',
         children: [
             {
-                text: 'v1.7.0-m4(公测版)',
+                text: 'v1.7.2(当前版本)',
                 link: '/master/introduction/introduction.md'
             },
             {
                 text: '历史版本',
                 children: [
+                    { text: 'v1.7.0', link: '/v1.7.0/introduction/introduction.md' },
                     { text: 'v1.6.10', link: '/v1.6.10/introduction/introduction.md' },
                     { text: 'v1.6.8', link: '/v1.6.8/introduction/introduction.md' },
                     { text: 'v1.6.7', link: '/v1.6.7/introduction/introduction.md' },
@@ -66,7 +67,7 @@ export default navbar([
         link: '/master/other/troubleshooting.md'
     },
     {
-        text: '更新日志',
+        text: '计划/日志',
         link: '/master/other/update.md'
     },
 ]);

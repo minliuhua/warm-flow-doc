@@ -47,11 +47,11 @@ highlights:
 
       - title: 🌎 orm框架支持
         link: /master/introduction/introduction.html#_6%E3%80%81%E6%94%AF%E6%8C%81orm%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B
-        details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa和Easy-Query，后续会由社区提供其他支持，扩展方便
+        details: 目前支持MyBatis、Mybatis-Plus、Mybatis-Flex、Jpa、Easy-Query和BeetlSql，后续会由社区提供其他支持，扩展方便
 
       - title: 🎬 数据库支持
         link: /master/introduction/introduction.html#_5%E3%80%81%E6%94%AF%E6%8C%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B
-        details: 目前支持MySQL 、Oracle、PostgreSQL和SQL Server，其他数据库只需要转换表结构，使用Mybatis-Plus、Mybatis-Flex和Easy-Query即可兼容
+        details: 目前支持MySQL 、Oracle、PostgreSQL和SQL Server，其他数据库只需要转换表结构，使用兼容性强的orm框架即可
 
       - title: 🏋 多租户
         link: /master/advanced/tenant.md
@@ -120,7 +120,7 @@ footer: © 2024 Warm-Flow Project. All Rights Reserved Designed by <a href="http
 
 ---
 <div class="com-box-img flex1">
-    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（31家）</strong><br><br><br>
+    <br><strong style="font-size: 30px;">正在使用 Warm-Flow 的企业 / 个人（36家）</strong><br><br><br>
     <div style="display: flex; flex-wrap: wrap;">
       <el-card shadow="hover" v-for="item in qyProjectList" :key="item.href">
         <a :href="item.href" target="_blank">
@@ -184,6 +184,7 @@ export default {
 
         qyProjectList.value = [
             { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "https://foruda.gitee.com/images/1724129406609614381/b3e2d2aa_2218307.png" },
+            { href: "http://www.smartby.cn/", title: "北京白杨医疗科技有限公司", src: "https://foruda.gitee.com/images/1745895569521449442/91de6ed0_2218307.png" },
             { href: "https://www.damanjinfu.com/", title: "湖南达漫电子商务有限公司", src: "https://cdn-oss.damanjinfu.com/2025-04/25a5649871724e339cfdc5efe7696e59.png" },
             { href: "https://www.kmbit.cn", title: "昆明倍特技术服务", src: "https://foruda.gitee.com/images/1741657442203556781/90c14a90_2218307.png" },
             { href: "www.hxhorae.com.cn", title: "华夏好瑞（天津）科技有限公司", src: "https://zhengxin-pub.cdn.bcebos.com/mark/54cdfdc0fcd3afd8f31c457803bcaa36.jpg?x-bce-process=image/resize,m_lfit,w_112" },
@@ -196,11 +197,10 @@ export default {
             { href: "https://ruyangkeji.com/", title: "郑州如阳科技有限公司", src: "https://foruda.gitee.com/images/1724128729136918262/f79703a0_2218307.png" },
             { href: "https://www.runyoucloud.com", title: "山东融佑信息科技有限公司", src: "https://foruda.gitee.com/images/1724129195385753446/c9b9b908_2218307.png" },
             { href: "http://www.aiwld.com.cn", title: "陕西物联达智能科技有限公司", src: "https://foruda.gitee.com/images/1724129259885472852/d538bd26_2218307.png" },
-            { href: "http://www.h5ve.com", title: "H5VE团队", src: "https://foruda.gitee.com/images/1724129316656246511/9f588786_2218307.png" },
-            { href: "", title: "Warm-Flow", src: "logo.png" },
-            { href: "", title: "Warm-Flow", src: "logo.png" },
-            { href: "", title: "Warm-Flow", src: "logo.png" },
-            { href: "", title: "Warm-Flow", src: "logo.png" },
+            { href: "https://www.bjhccx.net/", title: "北京海诚创想信息技术有限公司", src: "https://foruda.gitee.com/images/1745745608943588585/b939d228_2218307.png" },
+            { href: "", title: "昆明世科计算机网络有限公司", src: "https://foruda.gitee.com/images/1745746151355846840/0207b2aa_2218307.png" },
+            { href: "", title: "湖北公众信息产业有限责任公司", src: "https://foruda.gitee.com/images/1745745804459175481/fdf305da_2218307.png" },
+            { href: "http://www.wenshengkeji.com/", title: "南京文盛科技有限公司", src: "https://foruda.gitee.com/images/1745992637639701953/d94c502d_2218307.png" },
         ];
 
         kyProjectList.value = [

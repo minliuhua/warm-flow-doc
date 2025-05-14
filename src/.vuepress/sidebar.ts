@@ -22,6 +22,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -34,7 +35,83 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
+            ],
+        },
+        {
+            text: "🎈进阶篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'enhance/customstatus.md',
+                'advanced/variableStategy.md',
+                'advanced/listener.md',
+                'advanced/node_ext.md',
+                'advanced/chart_manage.md',
+                'advanced/ormusagetips.md',
+                'advanced/logicdelete.md',
+                'advanced/tenant.md',
+            ],
+        },
+        {
+            text: "🏆提高篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'enhance/designer_two_open.md',
+                'enhance/condition_two_open',
+                'enhance/variableStatey_two_open',
+                'enhance/listener_two_open',
+            ],
+        },
+        {
+            text: "🚸 其他",
+            collapsible: true,
+            expanded: true,
+            children: [
+                'other/team.md',
+                'other/troubleshooting.md',
+                'other/update',
+                'other/upgrade_guide.md',
+                'other/news',
+                'other/jionqun.md',
+                'other/paidservice',
+            ],
+        }
+    ],
+    "/v1.7.0/": [
+        {
+            text: "🤞开始",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "introduction/introduction.md",
+                "introduction/processdemo.md",
+                "introduction/license.md",
+                "introduction/getinvolved.md",
+                "introduction/companyintegration.md",
+                "introduction/projectexample.md",
+                "introduction/support.md",
+            ],
+        },
+        {
+            text: "🎃初级篇",
+            collapsible: true,
+            expanded: true,
+            children: [
+                "primary/started.md",
                 'primary/processterm.md',
+                'primary/table.md',
+                'primary/config.md',
+                'primary/api.md',
+                'primary/designerIntroduced.md',
+                'primary/permission_handler.md',
+                'primary/datafillhandler.md',
+                'primary/idGen.md',
+                'primary/variable.md',
+                'primary/gateway.md',
+                'primary/condition.md',
+                'primary/handler_change.md',
+                'primary/collaboration.md',
             ],
         },
         {
@@ -99,6 +176,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -109,7 +187,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -175,6 +252,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -185,7 +263,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -250,6 +327,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -259,7 +337,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -325,6 +402,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -334,7 +412,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
             ],
         },
         {
@@ -397,6 +474,7 @@ export default sidebar({
             expanded: true,
             children: [
                 "primary/started.md",
+                'primary/processterm.md',
                 'primary/table.md',
                 'primary/config.md',
                 'primary/api.md',
@@ -405,7 +483,6 @@ export default sidebar({
                 'primary/condition.md',
                 'primary/handler_change.md',
                 'primary/collaboration.md',
-                'primary/processterm.md',
                 'primary/designerIntroduced.md',
             ],
         },
@@ -455,13 +532,13 @@ export default sidebar({
             collapsible: false,
             children: [
                 '/v1.3.4/guide/started.md',
+                '/v1.3.4/guide/processterm.md',
                 '/v1.3.4/guide/table.md',
                 '/v1.3.4/guide/config.md',
                 '/v1.3.4/guide/api.md',
                 '/v1.3.4/guide/datafillhandler.md',
                 '/v1.3.4/guide/variable.md',
                 '/v1.3.4/guide/condition.md',
-                '/v1.3.4/guide/processterm.md',
             ],
         },
         {
