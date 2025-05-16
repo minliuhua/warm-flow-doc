@@ -243,3 +243,12 @@ TaskService待办任务
 `skip(taskId, flowParams)`：传入流程任务id，流程跳转
 `termination(taskId, flowParams)`：传入流程任务id，终止流程
 
+## 11、 抄送功能怎么实现
+::: tip
+- 抄送存在情况可能不同，内部做不好统一，抄送人有的是绑定任务表，有的是绑定实例表，有的绑定业务id，
+- 但是组件内部做，只能绑定任务表，没办法满足所有的情况。
+:::
+
+**建议仔细实现两种做法**
+- 自行给flow_user表插入抄送人，类型为非1、2、3就行，因为这三种类型组件内部用到，可以参考[hh-vue](https://gitee.com/min290/hh-vue.git)和[ruoyi-vue-plus](https://gitee.com/dromara/RuoYi-Vue-Plus.git)的实现
+- 结合节点扩展属性，设置抄送人，但是这个抄送人是保存在节点表中的ext字段里面，如果只是发送推送，那没啥影响，如果需要列表展示，需要自己获取插入到对应的表中，比如flow_user，或者自建表
