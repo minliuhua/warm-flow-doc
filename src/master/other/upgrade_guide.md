@@ -135,7 +135,7 @@ function getList() {
 <div><img src="https://foruda.gitee.com/images/1745570346631861131/f5ba4bf7_2218307.png" width="500"></div>
 
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
-- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
+- InsService的termination接口标识为即将删除，请使用TaskService.terminationByInsId代替
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：`["serial", "parallel"]`
