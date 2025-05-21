@@ -4,7 +4,9 @@
 ## **从零精通**
 本套课程叫：<span class="red-font">【从零精通: 全流程开发与源码解读】</span>手把手带着从零集成，打造自己的工作流
 
-> 给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢🤞
+- 给作者一些支持，一键三连，<span class="red-font">点赞+关注+评论666</span>，这对作者很重要，谢谢🤞
+
+- <span class="red-font">附带RuoYi-Vue-Plus工作流部分的课程</span>
 
 ### **课程核心价值**
 🚀 你将获得：
@@ -47,7 +49,7 @@
 ------
 
 ### **课程目录**
-- 已更新到<span class="red-font-bold">77</span>集，预计会有<span class="red-font-bold">80+</span>集，后续有新增功能，还会多
+- 已更新到<span class="red-font-bold">77</span>集，预计会有<span class="red-font-bold">110+</span>集，后续有新增功能，还会多
 - **总时长**：	19:09:53
 - **平均值**：	0:14:56
 - **0-10分钟**：	14	个视频，占比 	18.18%
