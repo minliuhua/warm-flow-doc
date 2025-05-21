@@ -10,7 +10,7 @@
 
 ### v1.7.2
 - 执行升级脚本1.7.2版本[warm-flow_1.7.2.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.2.sql)
-- mybatis-plus逻辑删除强制设置为（删除值：0，未删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个
+- mybatis-plus逻辑删除强制设置为（未删除值：0，删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：
