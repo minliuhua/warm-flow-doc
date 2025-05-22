@@ -97,7 +97,7 @@ Warm-Flow的表结构设计简洁明了，主要分为流程定义相关表和�
 | 3     | definition_id   | 流程定义id                                                   | BIGINT          |          | √        |            |              |
 | 4     | node_code       | 流程节点编码                                                 | VARCHAR(100)    |          | √        |            |              |
 | 5     | node_name       | 流程节点名称                                                 | VARCHAR(100)    |          |          |            |              |
-| 6     | permission_flag | 权限标识（权限类型:权限标识，可以多个，用逗号隔开)           | VARCHAR(200)    |          |          |            |              |
+| 6     | permission_flag | 权限标识（权限类型:权限标识，可以多个，用@@隔开)           | VARCHAR(200)    |          |          |            |              |
 | 7     | node_ratio      | 流程签署比例值                                               | DECIMAL(6,3)    |          |          |            |              |
 | 8     | coordinate      | 坐标                                                         | VARCHAR(100)    |          |          |            |              |
 | 9     | any_node_skip   | 任意结点跳转                                                 | VARCHAR(100)    |          |          |            |              |
