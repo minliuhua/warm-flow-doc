@@ -71,7 +71,7 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/upgrade/10.html\'" class="link-style">' +
-                        '       🔵 国产免费工作流引擎star 7.1k，Warm-Flow升级1.7.3（设计器流程图大升级）' +
+                        '       🔵 Warm-Flow发布1.7.3 端午节（设计器流和流程图大升级）' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
