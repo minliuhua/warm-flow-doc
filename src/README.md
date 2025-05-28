@@ -35,7 +35,7 @@ highlights:
 
       - title: 👍 流程图
         link: /master/advanced/chart_manage.md
-        details: 流程引擎自带流程图，数据入库，并支持追加文字和自定义流程图节点颜色等扩展
+        details: 自带流程图查看，可通过jar包形式快速集成到项目
 
       - title: 🔦 条件表达式
         link: /master/primary/condition.md

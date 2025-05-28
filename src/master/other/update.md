@@ -17,6 +17,16 @@
 
 
 ## 开发中计划
+### v1.7.3  2025-06-xx
+
+- [升级指南](./upgrade_guide.md#v1-7-3)
+- [feat] 新增通过前端显示流程图方式 @may
+- [feat] 办理人权限处理器，新增办理人转换接口，比如角色转用户
+- [perf] 美化流程设计器ui @may
+- [update] 优化报错提醒
+- [update] 添加Version适配当前设计器的行为  @WestFarmer
+- [update] 组件内置访问请求/warm-flow-ui/token-name改成/warm-flow-ui/config
+
 
 ## 更新日志
 ### v1.7.2  2025-05-13

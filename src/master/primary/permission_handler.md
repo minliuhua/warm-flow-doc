@@ -20,7 +20,7 @@
 public interface PermissionHandler {
 
     /**
-     * 审批前获取当前办理人，办理时会校验的该权限集合
+     * 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理任务
      * 后续在{@link FlowParams#getPermissionFlag}  中获取
      * 返回当前用户权限集合
      *
@@ -29,9 +29,17 @@ public interface PermissionHandler {
 
     /**
      * 获取当前办理人
+     * 后续在{@link FlowParams#getHandler()}  中获取
      * @return 当前办理人
      */
     String getHandler();
+
+    /**
+     * 转换办理人，比如设计器中预设了能办理的人，如果其中包含角色或者部门id等，可以通过此接口进行转换成用户id
+     */
+    default List<String> convertPermissions(List<String> permissions) {
+        return permissions;
+    }
 
 }
 ```
@@ -45,6 +53,11 @@ public interface PermissionHandler {
  * @author shadow
  */
 @Component
+/**
+ * 办理人权限处理器（可通过配置文件注入，也可用@Bean/@Component方式）
+ *
+ * @author shadow
+ */
 public class CustomPermissionHandler implements PermissionHandler {
 
     /**
@@ -76,6 +89,16 @@ public class CustomPermissionHandler implements PermissionHandler {
             return String.valueOf(sysUser.getUserId());
         }
         return null;
+    }
+
+    /**
+     * 转换办理人，比如设计器中预设了能办理的人，如果其中包含角色或者部门id等，可以通过此接口进行转换成用户id
+     */
+    @Override
+    public List<String> convertPermissions(List<String> permissions) {
+        // 把角色部门转换成用户
+        ......
+        return permissions;
     }
 }
 

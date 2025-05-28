@@ -8,6 +8,11 @@
 
 :::
 
+### v1.7.3
+- 业务系统涉及到/warm-flow-ui/token-name改成/warm-flow-ui/config，比如匿名访问等
+- 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/27 11:50 ~ 2025/5/27 11:50`
+
+
 ### v1.7.2
 - 执行升级脚本1.7.2版本[warm-flow_1.7.2.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.2.sql)
 - mybatis-plus逻辑删除强制设置为（未删除值：0，删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个

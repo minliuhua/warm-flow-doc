@@ -102,8 +102,10 @@ public class ShiroConfig {
 
 ### 2.2. 前端引入设计器
 ::: tip
-**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`**
-
+**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}&Authorization=${token}`**
+- definitionId：流程定义id
+- disabled：是否可编辑
+- token：用户token，[共享后端权限(如token)](./designerIntroduced.html#_6-共享后端权限-如token)
 :::
 
 ::: code-tabs#shell
@@ -111,9 +113,6 @@ public class ShiroConfig {
 @tab:active vue2
 
 ```vue
-首先传入设计器需要的流程定义definitionId和是否可编辑disabled参数
-本实例采用iframe方式嵌入设计器
-
 <template>
   <div :style="'height:' + height">
     <iframe :src="url" style="width: 100%; height: 100%"/>
@@ -130,9 +129,6 @@ public class ShiroConfig {
       };
     },
     mounted() {
-      // process.env.VUE_APP_BASE_API: 前端地址的前缀如dev-api
-      // definitionId: 为需要查询的流程定义id
-      // disabled: 为是否可编辑, true：不可编辑，false：可编辑；例如：查看的时候不可编辑，不可保存, 
       this.url = process.env.VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`;
       this.iframeLoaded();
     },
@@ -170,9 +166,6 @@ public class ShiroConfig {
 const { proxy } = getCurrentInstance();
 import { onMounted } from 'vue';
 
-// import.meta.env.VITE_APP_BASE_API:  前端地址的前缀如dev-api
-// definitionId: 为需要查询的流程定义id
-// disabled: 为是否可编辑, true：不可编辑，false：可编辑；例如：查看的时候不可编辑，不可保存, 
 const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`);
 
 const iframeLoaded = () => {
@@ -649,3 +642,92 @@ warm-flow:
   token-name: Authorization
   ......
 ```
+
+## 7. 查看流程图
+::: tip
+**1、流程图页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${insId}&type=FlowChart&Authorization=token`**
+- insId：流程实例id
+- type：查看流程图类型，固定写法
+- token：用户token，[共享后端权限(如token)](./designerIntroduced.html#_6-共享后端权限-如token)
+:::
+
+::: code-tabs#shell
+
+@tab:active vue2
+
+```vue
+
+<template>
+  <div :style="'height:' + height">
+    <iframe :src="url"  style="width: 100%; height: 100%"/>
+  </div>
+</template>
+<script>
+  import {getToken} from "@/utils/auth";
+
+  export default {
+    name: "WarmChart",
+    props: {
+      // 组件调用时传入的流程实例ID
+      insId: { type: [String, Number], default: null }
+    },
+    data() {
+      return {
+        height: document.documentElement.clientHeight - 200 + "px;",
+        url: "",
+      };
+    },
+
+    watch: {
+      insId: {
+        immediate: true, // 立即执行 handler 方法
+        handler(newVal) {
+          // 更新 url，添加时间戳防止缓存
+          this.url = `${process.env.VUE_APP_FLOW_API}/warm-flow-ui/index.html?id=${newVal}&type=FlowChart&Authorization=Bearer ${getToken()}`;
+        }
+      }
+    },
+
+  };
+</script>
+```
+
+@tab vue3
+
+```vue
+待完善
+
+```
+
+@tab 前后端不分离
+
+```java
+可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index.html?id=${insId}&type=FlowChart&Authorization=token`
+
+@Controller
+@RequestMapping("/warm-flow")
+public class WarmFlowController
+{
+    @GetMapping()
+    public String index(String insId)
+    {
+        return redirect("/warm-flow-ui/index.html?id=" + insId + "&type=" + FlowChart);
+    }
+}
+
+或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&type=FlowChart`
+/*打开新的页签，加载设计器*/
+function detail(dictId) {
+  var url = prefix + '/detail/' + dictId;
+  $.modal.openTab("字典数据", "/warm-flow-ui/index.html?id=1839683148936663047&type=FlowChart");
+}
+
+```
+
+@tab React
+
+```shell
+待完善
+```
+
+:::
