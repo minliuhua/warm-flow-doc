@@ -11,7 +11,7 @@
 ### v1.7.3
 - 业务系统涉及到/warm-flow-ui/token-name改成/warm-flow-ui/config，比如匿名访问等
 - 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/27 11:50 ~ 2025/5/27 11:50`
-- 查询流程图接口，请使用新版本替换，[前端渲染流程图](../primary/designerIntroduced.html#_7-查看流程图)
+- 查询流程图接口，请使用新版本替换，[前端渲染流程图](../primary/chart_manage.html)
 
 
 ### v1.7.2
