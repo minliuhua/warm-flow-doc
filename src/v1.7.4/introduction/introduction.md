@@ -22,7 +22,7 @@ Dromara Warm-Flow，一款国产的工作流引擎，以其简洁轻量、五脏
 希望一键三连，你的⭐️ Star ⭐️是我持续开发的动力，项目也活的更长
 ```
 
-<div><img src="https://foruda.gitee.com/images/1745805541036693091/682d12a0_2218307.png"/></div>
+<div><img src="https://foruda.gitee.com/images/1749458482882123468/1ce24e01_2218307.png"/></div>
 
 ## 2、演示地址
 
