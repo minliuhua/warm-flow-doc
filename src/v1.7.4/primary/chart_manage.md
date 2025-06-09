@@ -94,7 +94,7 @@ function detail(dictId) {
 
 :::
 
-## 2. 提示信息框
+## 2. 提示信息
 
 <div><img src="https://foruda.gitee.com/images/1749192691552471679/3662c05f_2218307.png" width="800"></div>
 
@@ -102,9 +102,10 @@ function detail(dictId) {
 
 - 实现`ChartExtService`, 才会开启提示框
 - 完上以上步骤后, `initPromptContent`默认方法会自动执行, 初始化提示框和第一行提示信息, 如不满意, 可在`execute`方法中重新设置
-- 如要返回自定义提示信息,  请实现`execute`, 可参考以下实现类`ChartExtServiceImpl`
+- 如要返回自定义`节点提示信息`,  请实现`execute`, 可参考以下实现类`ChartExtServiceImpl`
+- 如要返回自定义`顶部提示信息`,  请实现`execute`, 可参考以下实现类`ChartExtServiceImpl`
 
-```java  {13,19}
+```java  {13,19,20}
 /**
  * 流程图提示信息
  *
@@ -124,6 +125,7 @@ public interface ChartExtService {
    * @param defJson 流程定义json对象
    */
   default void initPromptContent(DefJson defJson) {
+    defJson.setTopText("流程名称: " + defJson.getFlowName());
     defJson.getNodeList().forEach(nodeJson -> {
       // 提示信息主对象
       PromptContent promptContent = new PromptContent();
@@ -169,7 +171,7 @@ public interface ChartExtService {
 }
 ```
 
-```java  {16,21-22}
+```java  {15-16,21-22}
 /**
  * 流程图提示信息
  *
@@ -184,6 +186,7 @@ public class ChartExtServiceImpl implements ChartExtService {
    */
   @Override
   public void execute(DefJson defJson) {
+    defJson.setTopText("顶部提示信息: 比如流程名称" );
     defJson.getNodeList().forEach(nodeJson -> {
       // extMap是在分派监听器中设置的, 用户使用的时候不用局限于这种方式, 可以临时查询出来, 或者通过其他方式获取提示信息  
       Map<String, Object> extMap = nodeJson.getExtMap();
