@@ -96,7 +96,7 @@ function detail(dictId) {
 
 ## 2. 提示信息
 
-<div><img src="https://foruda.gitee.com/images/1749444825939802609/d4dabf2f_2218307.png" width="800"></div>
+<div><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png" width="800"></div>
 
 **实现ChartExtService接口**
 
@@ -319,18 +319,19 @@ ${process.env.VUE_APP_FLOW_API}/warm-flow-ui/index.html?id=${newVal}&type=FlowCh
 ```
 
 ## 4. 暗黑模式
-发送postMessage,如：
+通过postMessage 跨文档通信方法,如：
 
 ```xml
-
 
 <iframe id="warmChart" :src="url"  style="width: 100%; height: 100%"/>
 
     
 // 获取目标窗口对象
 const targetWindow = document.getElementById('warmChart').contentWindow;
+// theme: theme-dark 暗, theme-light 明
 targetWindow.postMessage({type: theme}, "*");
 ```
+
 
 
 ## 5. 自定义流程图节点颜色
