@@ -47,7 +47,7 @@
 ### 2.1、开启流程
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode: 流程编码 [必传]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - ext: 扩展字段，预留给业务系统使用 [按需传输]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
@@ -58,7 +58,7 @@
 - nodeCode: 节点编码,如果指定节点,可任意跳转到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等 [只有未设置办理人时可不传]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 

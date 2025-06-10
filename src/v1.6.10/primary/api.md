@@ -87,7 +87,7 @@
 ### 开启流程
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode: 流程编码 [必传]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - ext: 扩展字段，预留给业务系统使用 [按需传输]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
@@ -98,7 +98,7 @@
 - nodeCode: 节点编码,如果指定节点,可任意跳转到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -107,14 +107,14 @@
 `rejectLast(instanceId, flowParams)`：传入流程实例id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
 
 ### 终止流程
 `termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - message: 审批意见 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限 [按需传输]
@@ -140,7 +140,7 @@
 - nodeCode: 节点编码，如果指定节点,可任意跳转到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -151,7 +151,7 @@
 - nodeCode: 节点编码,如果指定节点,可任意跳转到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -160,7 +160,7 @@
 `rejectLast(instanceId, flowParams)`：传入流程实例id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -169,7 +169,7 @@
 `skip(taskId, flowParams)`：传入流程任务id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等, 流程设计时未设置办理人或者ignore为true可不传 [按需传输]
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -177,7 +177,7 @@
 ### 撤销
 `revoke(instanceId, flowParams)`：传入流程实例id，撤销到第一个中间节点。flowParams包含如下字段：
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -185,7 +185,7 @@
 ### 终止流程
 `termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -224,7 +224,7 @@
 
 ### 修改办理人
 `updateHandler(taskId, flowParams)`：传入流程任务id，修改办理人
-- handler: 办理人唯一标识 [按需传输]
+- handler: 当前办理人唯一标识 [按需传输]
 - permissionFlag: 用户所拥有的权限标识 [按需传输，ignore为false，则必传]
 - addHandlers: 增加办理人：加签，转办，委托 [按需传输]
 - reductionHandlers: 减少办理人：减签，委托 [按需传输]
