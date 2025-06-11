@@ -36,15 +36,15 @@
 ------
 
 ### **课程试看**
-* [x] [0. 教程导读](https://www.bilibili.com/video/BV1AWRGYEEVr)
-* [x] [1. 课程介绍](https://www.bilibili.com/video/BV15yZGYyEy6)
-* [x] [2.1. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr)
-* [x] [2.2. 工作流术语解释](https://www.bilibili.com/video/BV1nGdHY6EAo)
-* [x] [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi)
-* [x] [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
-* [x] [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
-* [x] [25.1.1. 案例合同签订-需求分析](https://www.bilibili.com/video/BV1WCV8zkEec)
-* [x] [25.2.1. 企业采购流程-需求分析](https://www.bilibili.com/video/BV1rCEizeEcT)
+* [0. 教程导读](https://www.bilibili.com/video/BV1AWRGYEEVr)
+* [1. 课程介绍](https://www.bilibili.com/video/BV15yZGYyEy6)
+* [2.1. 工作流概念](https://www.bilibili.com/video/BV1tufAY6EVr)
+* [2.2. 工作流术语解释](https://www.bilibili.com/video/BV1nGdHY6EAo)
+* [3. Warm-Flow介绍](https://www.bilibili.com/video/BV14ufAY6Eyi)
+* [4.1. 快速集成](https://www.bilibili.com/video/BV1aQd3YAEEg)
+* [8.3. 待办任务列表查询](https://www.bilibili.com/video/BV1JeZGYHEao/?vd_source=1be886ace16159801f6ed0106df215d9)
+* [25.1.1. 案例合同签订-需求分析](https://www.bilibili.com/video/BV1WCV8zkEec)
+* [25.2.1. 企业采购流程-需求分析](https://www.bilibili.com/video/BV1rCEizeEcT)
 
 ------
 
