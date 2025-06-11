@@ -62,7 +62,7 @@
 
 **nginx配置示例**
 
-```config
+```
 server {
        listen       82;
        server_name  localhost;

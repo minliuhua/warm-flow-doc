@@ -30,6 +30,33 @@ export default hopeTheme(
             codeTabs: true,
             include: true,
             component: true,
+            align: true,
+            attrs: true,
+            demo: true,
+            figure: true,
+            flowchart: true,
+            gfm: true,
+            imgLazyload: true,
+            imgSize: true,
+            math: true,
+            mermaid: true,
+            stylize: [
+                {
+                    matcher: "Recommended",
+                    replacer: ({ tag }) => {
+                        if (tag === "em")
+                            return {
+                                tag: "Badge",
+                                attrs: { type: "tip" },
+                                content: "Recommended",
+                            };
+                    },
+                },
+            ],
+            sub: true,
+            sup: true,
+            tabs: true,
+            vPre: true,
         },
         plugins: {
             slimsearch: {
@@ -84,38 +111,6 @@ export default hopeTheme(
                     showOnce: false,
                 },
             ],
-            mdEnhance: {
-                align: true,
-                attrs: true,
-                codetabs: true,
-                demo: true,
-                figure: true,
-                flowchart: true,
-                gfm: true,
-                imgLazyload: true,
-                imgSize: true,
-                include: true,
-                katex: true,
-                mark: true,
-                mermaid: true,
-                stylize: [
-                    {
-                        matcher: "Recommended",
-                        replacer: ({ tag }) => {
-                            if (tag === "em")
-                                return {
-                                    tag: "Badge",
-                                    attrs: { type: "tip" },
-                                    content: "Recommended",
-                                };
-                        },
-                    },
-                ],
-                sub: true,
-                sup: true,
-                tabs: true,
-                vPre: true,
-            },
         }
     },
     { custom: true }

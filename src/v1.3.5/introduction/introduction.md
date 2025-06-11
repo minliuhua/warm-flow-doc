@@ -85,8 +85,6 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
     </tbody>
 </table>
 
-[如何成为赞助商 加群联系作者详谈](./joingroup.md)
-
 ## 8、你可以请作者喝杯咖啡表示鼓励
 [捐赠地址](./support.md)
 
