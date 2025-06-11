@@ -98,7 +98,7 @@
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，不传不校验权限 [按需传输]
 
 ### 3.3、转办
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
+`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理
 - taskId: 修改的任务id [必传]
 - curUser: 当前办理人唯一标识 [必传]
 - permissionFlag: 用户权限标识集合 [必传]

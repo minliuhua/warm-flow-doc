@@ -56,7 +56,7 @@
 - message:审批意见 [按需传输]
 - handler:当前办理人唯一标识 [建议传]
 
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
+`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理
 - taskId 修改的任务id
 - curUser 当前办理人唯一标识
 - permissionFlag 用户权限标识集合

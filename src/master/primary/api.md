@@ -244,7 +244,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 转办 
-`boolean transfer(taskId, flowParams)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
+`boolean transfer(taskId, flowParams)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
 - handler: 当前办理人唯一标识，如用户id，用于记录历史表; 如果通过办理人权限处理器{@link PermissionHandler#getHandler()}传入了，就不需要传 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - addHandlers: 转办对象 [必传]
@@ -252,7 +252,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 委派 
-`boolean depute(taskId, flowParams)`：委派, 默认删除当然办理用户权限，委派后，当前办理不可办理。flowParams包含如下字段：
+`boolean depute(taskId, flowParams)`：委派, 默认删除当前办理用户权限，委派后审批完, 重新回到当前办理人。flowParams包含如下字段：
 - handler: 当前办理人唯一标识，如用户id，用于记录历史表; 如果通过办理人权限处理器{@link PermissionHandler#getHandler()}传入了，就不需要传 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - addHandlers: 委托对象 [必传]

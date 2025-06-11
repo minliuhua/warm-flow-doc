@@ -111,7 +111,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.3、转办
-`transfer(taskId, flowParams)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
+`transfer(taskId, flowParams)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
 - permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - addHandlers: 转办对象 [必传]
@@ -119,7 +119,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 3.4、委派
-`depute(taskId, flowParams)`：委派, 默认删除当然办理用户权限，委派后，当前办理不可办理。flowParams包含如下字段：
+`depute(taskId, flowParams)`：委派, 默认删除当前办理用户权限，委派后审批完, 重新回到当前办理人。flowParams包含如下字段：
 - handler: 当前办理人唯一标识 [必传]
 - permissionFlag: 用户所拥有的权限标识[按需传输，ignore为false，则必传]
 - addHandlers: 委托对象 [必传]
