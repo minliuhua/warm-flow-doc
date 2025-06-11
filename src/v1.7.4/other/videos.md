@@ -58,10 +58,10 @@
 - **30-40分钟**：	5	个视频，占比 	4.76%
 
 **【从零精通: 全流程开发与源码解读】**：
-<div><img src="https://foruda.gitee.com/images/1749537149408995129/0d6d975c_2218307.png"></div>
+<div><img src="https://foruda.gitee.com/images/1749628179256149258/f473aef5_2218307.png"></div>
 
 **【RuoYi-Vue-Plus: 工作流视频】**：
-<div><img src="https://foruda.gitee.com/images/1749537315974274513/ec0ca7fe_2218307.png"></div>
+<div><img src="https://foruda.gitee.com/images/1749628207116541144/0ff94fdf_2218307.png"></div>
 
 ------
 
