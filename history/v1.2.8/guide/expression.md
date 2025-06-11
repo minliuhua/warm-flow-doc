@@ -66,3 +66,9 @@ public int insertTestLeave(TestLeave testLeave, String flowStatus)
         <td><img src="https://foruda.gitee.com/images/1703669685489610156/a8e6be49_2218307.png"/></td>
     </tr>
 </table>
+
+<style scoped>
+td {
+  width: 50%;
+}
+</style>

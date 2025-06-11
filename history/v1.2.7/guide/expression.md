@@ -24,6 +24,12 @@
     </tr>
 </table>
 
+<style scoped>
+td {
+  width: 50%;
+}
+</style>
+
 ## 3、Spring Expression Language（SpEL）
 引入以下包，前端配置如`@@spel@@|#{@user.eval()}`表达式，即可解析
 测试案例`com.warm.flow.sb.test.expression.ExpressionTest`

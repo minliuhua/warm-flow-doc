@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr v-for="(item, index) in authorsList" :key="index">
-            <td width="30"><img src="/logo.png"></td>
+            <td><img src="/logo.png" width="30px"></td>
             <td>{{ item.name }}</td>
             <td><a :href="'mailto:' + item.email">{{ item.email }}</a></td>
             <td>{{ item.role }}</td>

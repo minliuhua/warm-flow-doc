@@ -22,11 +22,17 @@
 <table>
     <tbody>
         <tr>
-            <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" width="500px" height="180px"/></td>
-            <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" width="500px" height="180px"/></td>
+            <td><img src="https://foruda.gitee.com/images/1724349579810152906/15af22df_2218307.png" height="180px"/></td>
+            <td><img src="https://foruda.gitee.com/images/1724349629546024487/f32625d9_2218307.png" height="180px"/></td>
         </tr>
     </tbody>
 </table>
+
+<style scoped>
+td {
+  width: 50%;
+}
+</style>
 
 
 ## **2、官网流程定义案例xml**

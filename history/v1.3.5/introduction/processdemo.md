@@ -1,28 +1,38 @@
 # 功能演示
+**以下演示基于项目示例hh-vue**
+> [!IMPORTANT]
+> 以下演示基于项目示例hh-vue
 
 ## 演示地址
 
 ::: warning
 - admin/admin123
 
-演示地址：[http://www.hhzai.top](http://www.hhzai.top)  
-项目地址：[https://gitee.com/min290/hh-vue.git](https://gitee.com/min290/hh-vue.git)  
+演示地址：http://www.hhzai.top
 :::
 
 ## 演示图
 
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763199058517932/2b01c913_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763731091619270/d74d099d_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763846364044932/e3c2552d_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1697704379975758657/558474f6_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703576997421577844/a1dc2737_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703577051212751284/203a05b0_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703577120823449150/ba952a84_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703577416508497463/863d8da1_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1703641952765512992/dc187080_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736762724064103953/a3934696_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736762828094704587/9c0f51c8_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736762913994459048/2b4b05bc_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736762989286625820/0cfad72f_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763079110050572/6e068531_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763097281901410/31cf558d_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703639870569018221/453a0e0e_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703639949778635820/34a6c14e_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703640045465410604/c14affda_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703641581976369452/e4629da5_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703640080823852176/bdf9a360_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703640099939146504/b19b2b85_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703641659022331552/cc4e0af2_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703641675840058630/3430da37_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703641687716655707/62a8b20c_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1703641702939748288/6da6c4f6_2218307.png"/></div>
+<div class="yat"><img src="/demo4.png"/></div>
+<div class="yat"><img src="/demo2.png"/></div>
+<div class="yat"><img src="/demo3.png"/></div>
+<div class="yat"><img src="/demo1.png"/></div>
 
 <style scope>
 .yat {
@@ -30,6 +40,7 @@
     margin-bottom: 10px;
 }
 </style>
+
 
 ## 1、新增定义
 ::: tip

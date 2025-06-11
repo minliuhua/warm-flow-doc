@@ -12,42 +12,23 @@
 :::
 
 ## 演示图
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749440851999417646/2d007565_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749440935916757073/289c38ec_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749441327270116846/0703ea49_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749441530297019454/8371b4e5_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749444048863642593/3871c503_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749444203640299283/f12e09d6_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1749444351828589754/1af0c3a8_2218307.png"/></div>
 
-<table>
-    <tbody>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749440851999417646/2d007565_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749440935916757073/289c38ec_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749441327270116846/0703ea49_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749441530297019454/8371b4e5_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749444048863642593/3871c503_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749444203640299283/f12e09d6_2218307.png"/></td>
-        </tr>
-        <tr>
-            <td><img src="https://foruda.gitee.com/images/1749444351828589754/1af0c3a8_2218307.png"/></td>
-        </tr>
-    </tbody>
-</table>
-
+<style scope>
+.yat {
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+</style>
 
 ## 1、新增定义
 ::: tip

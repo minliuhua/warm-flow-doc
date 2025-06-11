@@ -25,38 +25,10 @@ export default hopeTheme(
         editLink: false,
 
         markdown: {
-            spoiler: true,
-            mark: true,
             codeTabs: true,
-            include: true,
-            component: true,
-            align: true,
             attrs: true,
-            demo: true,
-            figure: true,
-            flowchart: true,
-            gfm: true,
+            include: true,
             imgLazyload: true,
-            imgSize: true,
-            math: true,
-            mermaid: true,
-            stylize: [
-                {
-                    matcher: "Recommended",
-                    replacer: ({ tag }) => {
-                        if (tag === "em")
-                            return {
-                                tag: "Badge",
-                                attrs: { type: "tip" },
-                                content: "Recommended",
-                            };
-                    },
-                },
-            ],
-            sub: true,
-            sup: true,
-            tabs: true,
-            vPre: true,
         },
         plugins: {
             slimsearch: {
@@ -115,4 +87,3 @@ export default hopeTheme(
     },
     { custom: true }
 );
-

@@ -41,6 +41,11 @@
     </tr>
 </table>
 
+<style scoped>
+td {
+  width: 50%;
+}
+</style>
 
 ## 新增定义
 

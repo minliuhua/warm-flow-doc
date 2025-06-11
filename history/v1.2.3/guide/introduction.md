@@ -50,3 +50,9 @@ Warm-Flow采用APACHE LICENSE 2.0开源协议，您如果需要源码开发方�
         <td><img src="https://foruda.gitee.com/images/1714027440230712264/bb5259a5_2218307.png"/></td>
     </tr>
 </table>
+
+<style scoped>
+td {
+  width: 50%;
+}
+</style>

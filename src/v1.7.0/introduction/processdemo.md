@@ -13,34 +13,25 @@
 
 ## 演示图
 
-<table>
-    <tbody>
-        <tr>
-        <td><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1736763199058517932/2b01c913_2218307.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1745555951022004075/a13f5b13_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1745558139208299114/3322cfa6_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1745558209405357598/5608eb3e_2218307.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1736762724064103953/a3934696_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1736762828094704587/9c0f51c8_2218307.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1736762913994459048/2b4b05bc_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1736762989286625820/0cfad72f_2218307.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://foruda.gitee.com/images/1736763079110050572/6e068531_2218307.png"/></td>
-        <td><img src="https://foruda.gitee.com/images/1736763097281901410/31cf558d_2218307.png"/></td>
-    </tr>
-    </tbody>
-</table>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763199058517932/2b01c913_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1745555951022004075/a13f5b13_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1745558139208299114/3322cfa6_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1745558209405357598/5608eb3e_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736762724064103953/a3934696_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736762828094704587/9c0f51c8_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736762913994459048/2b4b05bc_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736762989286625820/0cfad72f_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763079110050572/6e068531_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1736763097281901410/31cf558d_2218307.png"/></div>
+
+<style scope>
+.yat {
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+</style>
 
 
 ## 1、新增定义
