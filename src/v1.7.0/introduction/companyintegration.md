@@ -1,5 +1,4 @@
 # 公司使用列表
-<!-- @include: ../other/betweengg.md -->
 
 
 | 公司/个人             | 项目名称                | 项目介绍                                                                      | LOGO\代码地址                                                                                                                                                                                                     |

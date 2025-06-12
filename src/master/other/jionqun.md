@@ -1,5 +1,4 @@
 # 联系我
-<!-- @include: ../other/betweengg.md -->
 
 
 ## 1、沟通群和公众号

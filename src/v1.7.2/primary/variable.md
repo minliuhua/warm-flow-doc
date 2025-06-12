@@ -1,5 +1,4 @@
 # 流程变量
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 流程变量，map类型，用于流程执行中的数据转递  

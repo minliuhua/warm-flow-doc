@@ -1,5 +1,4 @@
 # 开源集成案例
-<!-- @include: ../other/betweengg.md -->
 
 
 | 作者       | 项目名称                                                                                                             | 描述                                                                                                        |

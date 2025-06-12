@@ -1,5 +1,4 @@
 # 表结构
-<!-- @include: ../other/betweengg.md -->
 
 Warm-Flow的表结构设计简洁明了，主要分为流程定义相关表和流程实例相关表两大类：
 

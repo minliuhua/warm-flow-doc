@@ -2,37 +2,31 @@
   <el-link
       :href="dynamicHref"
       target="_blank"
-      :icon="Edit"
       class="warm-edit"
   >
-    <img src="/icons/gitee_home.svg" alt="编辑图标"> <span>编辑此页</span>
+    <el-icon><img src="/icons/gitee_home.svg" alt="编辑图标"></el-icon>
+    <span>编辑此页</span>
   </el-link>
 </template>
 
-<script>
-export default {
-  name: 'DynamicEditLink',
-  data() {
-    return {
-      Edit: 'el-icon-edit' // 根据你的 UI 框架图标库调整
-    };
-  },
-  computed: {
-    currentPageUrl() {
-      if (typeof window === 'undefined') return '';
-      const url = window.location.href;
-      const baseUrl = url.split('#')[0]; // 去掉锚点
-      const path = new URL(baseUrl, location.origin).pathname; // 获取路径部分
-      return path.replace(/\.html$/, '.md'); // 替换 .html => .md
-    },
-    dynamicHref() {
-      const baseHref = 'https://gitee.com/warm_4/warm-flow-doc/edit/main/src';
-      if (!this.currentPageUrl) return baseHref;
+<script setup>
+import { computed } from 'vue';
 
-      return baseHref + this.currentPageUrl;
-    }
-  }
-};
+// 获取当前页面路径并替换 .html => .md
+const currentPageUrl = computed(() => {
+  if (typeof window === 'undefined') return '';
+  const url = window.location.href;
+  const baseUrl = url.split('#')[0]; // 去掉锚点
+  const path = new URL(baseUrl, location.origin).pathname; // 获取路径部分
+  return path.replace(/\.html$/, '.md'); // 替换 .html => .md
+});
+
+// 构建最终链接
+const dynamicHref = computed(() => {
+  const baseHref = 'https://gitee.com/warm_4/warm-flow-doc/edit/main/src';
+  if (!currentPageUrl.value) return baseHref;
+  return baseHref + currentPageUrl.value;
+});
 </script>
 
 <style scoped>
@@ -44,6 +38,7 @@ export default {
   padding: 5px 10px;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
+  margin-top: 20px;
 }
 
 .warm-edit:hover {

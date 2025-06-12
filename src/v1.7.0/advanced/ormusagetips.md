@@ -1,5 +1,4 @@
 # orm扩展包使用技巧
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 组件本身提供常见并且基础的api，如果满足不了需求，可以使用orm自身的api

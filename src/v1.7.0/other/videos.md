@@ -1,5 +1,4 @@
 # 教学视频
-<!-- @include: ../other/betweengg.md -->
 
 ## **从零精通**
 本套课程叫：<span class="red-font">【从零精通: 全流程开发与源码解读】</span>手把手带着从零集成，打造自己的工作流

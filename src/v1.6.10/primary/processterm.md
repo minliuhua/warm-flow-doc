@@ -1,5 +1,4 @@
 # 术语规则
-<!-- @include: ../other/betweengg.md -->
 
 
 | 术语       | 术语解释                                      |

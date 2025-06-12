@@ -1,17 +1,14 @@
 <script setup lang="ts">
+import { Layout } from "vuepress-theme-hope/client";
 import {usePageData, usePageFrontmatter} from "vuepress/client";
 import {ref, watch} from "vue";
+import Between from "../components/Between.vue";
 
-import CommonWrapper from "vuepress-theme-hope/components/CommonWrapper.js";
-import HopeHomePage from "vuepress-theme-hope/components/HomePage.js";
-import NormalPage from "vuepress-theme-hope/components/NormalPage.js";
-import SkipLink from "vuepress-theme-hope/components/SkipLink.js";
-import { FadeSlideY } from "vuepress-theme-hope/components/transitions/FadeSlideY.js";
+import type { ThemeBasePageFrontmatter } from "vuepress-theme-hope";
 
-import type {ThemePageFrontmatter} from "vuepress-theme-hope";
+const frontmatter = usePageFrontmatter<ThemeBasePageFrontmatter>();
 
 const page = usePageData();
-const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArrayLift = [
   `<a href="https://www.maxkey.top" target="_blank">
@@ -54,17 +51,17 @@ function shuffle(arr) {
 }
 
 watch(
-  () => page.value.path,
-  () => {
-    if (page.value.path.startsWith("/en/")) {
-      sidebarContentLift.value = "";
-      sidebarContentRight.value = "";
-      return;
-    }
-    shuffle(sidebarTopArrayLift);
-    shuffle(sidebarTopArrayRight);
+    () => page.value.path,
+    () => {
+      if (page.value.path.startsWith("/en/")) {
+        sidebarContentLift.value = "";
+        sidebarContentRight.value = "";
+        return;
+      }
+      shuffle(sidebarTopArrayLift);
+      shuffle(sidebarTopArrayRight);
 
-    sidebarContentLift.value = `\
+      sidebarContentLift.value = `\
       <div>
           <br>
             <span style="color: gray;font-size: smaller;">广告采用随机轮播方式显示</span>
@@ -75,7 +72,7 @@ watch(
         ${sidebarTopArrayLift.slice(0, sidebarTopArrayLift.length).join("\n  ")}
       </div>
     `;
-    sidebarContentRight.value = `\
+      sidebarContentRight.value = `\
       <div>
           <br>
             <span style="color: #E01E5A;font-size: smaller;font-weight: bolder;">❤️<a href="/master/other/paidservice.html#赞助商广告">成为赞助商</a></span>
@@ -86,40 +83,23 @@ watch(
       </div>
     `;
 
-  },
+    },
 );
 </script>
+
 <template>
-  <SkipLink />
-  <CommonWrapper>
-    <template #default>
-      <HopeHomePage v-if="frontmatter.home">
-        <template #center>
-          <div content="content"></div>
-        </template>
-      </HopeHomePage>
-      <FadeSlideY v-else>
-        <NormalPage :key="page.path">
-          <template #contentBefore>
-            <div content="content"></div>
-          </template>
-<!--         <template #tocBefore>-->
-<!--           <div v-html="sidebarContentRight" />-->
-<!--         </template>-->
-        </NormalPage>
-      </FadeSlideY>
-    </template>
+  <Layout>
     <template v-if="!frontmatter.home" #sidebarTop>
       <div v-html="sidebarContentLift" />
     </template>
-  </CommonWrapper>
+    <template v-if="!frontmatter.home" #contentBefore>
+      <Between/>
+    </template>
+    <template v-if="!frontmatter.home" #contentAfter>
+      <DynamicEditLink/>
+    </template>
+<!--    <template v-if="!frontmatter.home" #tocBefore >-->
+<!--      <div v-html="sidebarContentRight" />-->
+<!--    </template>-->
+  </Layout>
 </template>
-
-<style lang="scss">
-.vp-toc-placeholder {
-  top: calc(var(--navbar-height));
-}
-.vp-toc-header {
-  margin-top: 10px;
-}
-</style>

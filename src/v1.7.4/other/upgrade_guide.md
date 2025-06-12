@@ -1,5 +1,4 @@
 # 升级指南
-<!-- @include: ../other/betweengg.md -->
 
 ::: warning
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号

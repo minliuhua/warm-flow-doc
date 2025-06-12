@@ -1,5 +1,4 @@
 # 新闻
-<!-- @include: ../other/betweengg.md -->
 
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
     <el-input v-model="searchQuery" class="Input" placeholder="搜索标题" @input="filterByTitle" clearable />

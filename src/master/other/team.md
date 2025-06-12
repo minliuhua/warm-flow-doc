@@ -1,6 +1,4 @@
 # 团队
-<!-- @include: ../other/betweengg.md -->
-
 
 <table>
     <thead>

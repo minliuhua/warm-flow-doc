@@ -1,5 +1,4 @@
 # 逻辑删除
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 如果使用Mybatis-plus的orm框架，只支持自身的逻辑删除方式

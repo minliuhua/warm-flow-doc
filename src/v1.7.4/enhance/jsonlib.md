@@ -1,5 +1,4 @@
 # json库扩展
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 目前支持Snack3、Jackson、fastjson和Gson四种json库

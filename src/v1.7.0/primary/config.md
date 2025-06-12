@@ -1,5 +1,4 @@
 # 配置yml和定义json
-<!-- @include: ../other/betweengg.md -->
 
 ## yml配置文件
 

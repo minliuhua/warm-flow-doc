@@ -1,5 +1,4 @@
 # 流程图管理
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 **前提条件：仔细阅读[设计器集成](./designerIntroduced.html#流程图介绍)**

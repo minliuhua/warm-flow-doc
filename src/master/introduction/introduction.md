@@ -1,5 +1,4 @@
 # 介绍
-<!-- @include: ../other/betweengg.md -->
 
 ## 1、项目介绍
 Dromara Warm-Flow，一款国产的工作流引擎，以其简洁轻量、五脏俱全、灵活扩展性强的特点，成为了众多开发者的首选。它不仅可以通过jar包快速集成设计器，还具备以下显著优势：
@@ -79,7 +78,4 @@ Dromara Warm-Flow作为一个国产的工作流引擎，其设计简洁轻量但
 * [x] easy-query
 * [x] mybatis-flex
 * [ ] ......
-
----
-<DynamicEditLink></DynamicEditLink>
 
