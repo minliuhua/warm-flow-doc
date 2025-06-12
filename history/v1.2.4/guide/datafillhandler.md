@@ -24,7 +24,7 @@
 
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode:流程编码 [必传]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 - ext:扩展字段，预留给业务系统使用 [按需传输]
 
@@ -33,12 +33,12 @@
 - nodeCode:节点编码 [如果指定跳转节点,必传]
 - permissionFlag:办理人权限标识 [按需传输]
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 
 `termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 
 `remove(instanceIds)`：根据实例ids，删除流程
 
@@ -49,14 +49,14 @@
 - nodeCode:节点编码 [如果指定跳转节点,必传]
 - permissionFlag:办理人权限标识 [按需传输]
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 
 `termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
+`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理
 - taskId 修改的任务id
 - curUser 当前办理人唯一标识
 - permissionFlag 用户权限标识集合

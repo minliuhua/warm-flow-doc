@@ -25,11 +25,10 @@ export default hopeTheme(
         editLink: false,
 
         markdown: {
-            spoiler: true,
-            mark: true,
             codeTabs: true,
+            attrs: true,
             include: true,
-            component: true,
+            imgLazyload: true,
         },
         plugins: {
             slimsearch: {
@@ -57,7 +56,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.7.1（正式版）",
+                    title: "公告: 1.7.3（正式版）",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
@@ -70,8 +69,8 @@ export default hopeTheme(
                         '     </span>\n' +
                         '</div>' +
                         '<div>\n' +
-                        '     <span onclick="window.location.href=\'/master/other/news/upgrade/9.html\'" class="link-style">' +
-                        '       🔵 国产免费工作流引擎star 6.5k，Warm-Flow版本升级1.7.2（修复部分缺陷）' +
+                        '     <span onclick="window.location.href=\'/master/other/news/upgrade/10.html\'" class="link-style">' +
+                        '       🔵 Warm-Flow发布1.7.3 端午节（设计器流和流程图大升级）' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
@@ -84,40 +83,7 @@ export default hopeTheme(
                     showOnce: false,
                 },
             ],
-            mdEnhance: {
-                align: true,
-                attrs: true,
-                codetabs: true,
-                demo: true,
-                figure: true,
-                flowchart: true,
-                gfm: true,
-                imgLazyload: true,
-                imgSize: true,
-                include: true,
-                katex: true,
-                mark: true,
-                mermaid: true,
-                stylize: [
-                    {
-                        matcher: "Recommended",
-                        replacer: ({ tag }) => {
-                            if (tag === "em")
-                                return {
-                                    tag: "Badge",
-                                    attrs: { type: "tip" },
-                                    content: "Recommended",
-                                };
-                        },
-                    },
-                ],
-                sub: true,
-                sup: true,
-                tabs: true,
-                vPre: true,
-            },
         }
     },
     { custom: true }
 );
-

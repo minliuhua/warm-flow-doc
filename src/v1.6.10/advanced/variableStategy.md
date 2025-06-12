@@ -1,5 +1,4 @@
 # 办理人表达式
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 业务中，经常会出现设计流程时，还不确定具体办理人是谁，就需要后续能够动态设置办理人功能，此时办理人表达式就派上用场了  
@@ -55,7 +54,7 @@ public class VariableTest {
 ## 5、可实现的效果
 如下图中示例可以很容易实现 
 
-<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
+<div><img src="https://warm-flow.dromara.org/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
 ## 6、动态指定办理人
 

@@ -1,5 +1,4 @@
 # 开源协议
-<!-- @include: ../other/betweengg.md -->
 
 
 ::: warning

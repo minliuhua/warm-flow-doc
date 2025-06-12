@@ -1,5 +1,4 @@
 # id生成器
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 如果觉得内置的id，不符合业务要求，可通过修改配置文件，切换id生成器

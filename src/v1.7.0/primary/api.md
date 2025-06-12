@@ -1,5 +1,4 @@
 # 接口文档
-<!-- @include: ../other/betweengg.md -->
 
 
 ## DefService流程定义 
@@ -67,7 +66,7 @@
 ### 开启流程 
 `Instance start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode: 流程编码 [必传]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - ext: 扩展字段，预留给业务系统使用 [按需传输]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
@@ -170,7 +169,7 @@
 - nodeCode: 如果指定节点,可[任意跳转]到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -181,7 +180,7 @@
 - nodeCode: 如果指定节点,可[任意跳转]到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -190,7 +189,7 @@
 `Instance rejectLastByInsId(instanceId, flowParams)`：传入流程实例id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
@@ -199,7 +198,7 @@
 `Instance rejectLast(taskId, flowParams)`：传入流程任务id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
@@ -207,14 +206,14 @@
 ### 根据insId拿回到最近办理的任务
 `Instance taskBackByInsId(instanceId, flowParams)`：传入流程实例id，拿回到最近办理的任务。flowParams包含如下字段：
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 
 ### 根据taskId拿回到最近办理的任务
 `Instance taskBack(taskId, flowParams)`：传入流程任务id，拿回到最近办理的任务。flowParams包含如下字段：
 - message: 审批意见 [按需传输]
-- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 
@@ -244,7 +243,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 转办 
-`boolean transfer(taskId, flowParams)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
+`boolean transfer(taskId, flowParams)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理。flowParams包含如下字段：
 - handler: 当前办理人唯一标识，如用户id，用于记录历史表; 如果通过办理人权限处理器{@link PermissionHandler#getHandler()}传入了，就不需要传 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - addHandlers: 转办对象 [必传]
@@ -252,7 +251,7 @@
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
 ### 委派 
-`boolean depute(taskId, flowParams)`：委派, 默认删除当然办理用户权限，委派后，当前办理不可办理。flowParams包含如下字段：
+`boolean depute(taskId, flowParams)`：委派, 默认删除当前办理用户权限，委派后审批完, 重新回到当前办理人。flowParams包含如下字段：
 - handler: 当前办理人唯一标识，如用户id，用于记录历史表; 如果通过办理人权限处理器{@link PermissionHandler#getHandler()}传入了，就不需要传 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - addHandlers: 委托对象 [必传]

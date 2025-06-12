@@ -1,5 +1,4 @@
 # 设计器二开
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip
 - 当内置的设计器和接口不满足业务需求时，可进行二开设计器
@@ -62,7 +61,7 @@
 
 **nginx配置示例**
 
-```config
+```
 server {
        listen       82;
        server_name  localhost;

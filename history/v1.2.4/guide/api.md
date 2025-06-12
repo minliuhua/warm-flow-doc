@@ -40,7 +40,7 @@
 ### 2.1、开启流程
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode:流程编码 [必传]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 - ext:扩展字段，预留给业务系统使用 [按需传输]
 - flowStatus:流程状态，自定义流程状态[按需传输]
@@ -51,14 +51,14 @@
 - nodeCode:节点编码 [如果指定跳转节点,必传]
 - permissionFlag:办理人权限标识 [按需传输]
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 - flowStatus:流程状态，自定义流程状态[按需传输]
 
 ### 2.3、终止流程
 `termination(instanceId, flowParams)`：传入流程实例id，终止流程。flowParams包含如下字段：
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - flowStatus:流程状态，自定义流程状态[按需传输]
 
 ### 2.4、删除流程实例
@@ -78,18 +78,18 @@
 - nodeCode:节点编码 [如果指定跳转节点,必传]
 - permissionFlag:办理人权限标识 [按需传输]
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - variable:流程变量 [按需传输]
 - flowStatus:流程状态，自定义流程状态[按需传输]
 
 ### 3.2、终止流程
 `termination(taskId, flowParams)`：传入流程任务id，终止流程。flowParams包含如下字段：
 - message:审批意见 [按需传输]
-- handler:办理人唯一标识 [建议传]
+- handler:当前办理人唯一标识 [建议传]
 - flowStatus:流程状态，自定义流程状态[按需传输]
 
 ### 3.3、转办
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
+`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理
 - taskId 修改的任务id [必传]
 - curUser 当前办理人唯一标识 [必传]
 - permissionFlag 用户权限标识集合 [必传]
@@ -122,7 +122,7 @@
 
 ### 3.7、修改办理人
 `updateHandler(modifyHandler)`：修改办理人
-- curUser:办理人唯一标识 [按需传输]
+- curUser:当前办理人唯一标识 [按需传输]
 - ignore: 转办忽略权限校验（true：忽略，false：不忽略）[按需传输]
 - permissionFlag: 用户所拥有的权限标识 [按需传输，ignore为false，则必传]
 - addHandlers: 增加办理人：加签，转办，委托 [按需传输]

@@ -40,7 +40,7 @@
 ### 2.1、开启流程
 `start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode: 流程编码 [必传]
-- handler: 办理人唯一标识 [建议传]
+- handler: 当前办理人唯一标识 [建议传]
 - variable: 流程变量 [按需传输]
 - ext: 扩展字段，预留给业务系统使用 [按需传输]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
@@ -89,7 +89,7 @@
 - flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 3.3、转办
-`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当然办理用户权限，转办后，当前办理不可办理
+`transfer(taskId, curUser, permissionFlag, addHandlers, message)`：转办, 默认删除当前办理用户权限，转办后，当前办理不可办理
 - taskId: 修改的任务id [必传]
 - curUser: 当前办理人唯一标识 [必传]
 - permissionFlag: 用户权限标识集合 [必传]

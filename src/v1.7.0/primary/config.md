@@ -1,5 +1,4 @@
 # 配置yml和定义json
-<!-- @include: ../other/betweengg.md -->
 
 ## yml配置文件
 
@@ -74,11 +73,11 @@ warm-flow-jpa:
   "nodeList": [                                     -- 流程节点集合
     {                                               
       "coordinate": "380,200|380,200",              -- 流程节点坐标
-      "nodeCode": "2",                              -- 流程编码，definitionId+nodeCode唯一
-      "nodeName": "组长审批",                        -- 流程节点名称
+      "nodeCode": "2",                              -- 节点编码，definitionId+nodeCode唯一
+      "nodeName": "组长审批",                        -- 节点名称
       "nodeRatio": 0.000,                           -- 流程签署比例值, 0:或签，0-100：票签，100：会签
       "nodeType": 1,                                -- 节点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关）
-      "permissionFlag": "1,role:1",                 -- 权限标识（权限类型:权限标识，可以多个，用逗号隔开)
+      "permissionFlag": "1,role:1",                 -- 权限标识（权限类型:权限标识，可以多个，用@@隔开)
 	  "anyNodeSkip": "1",                           -- 任意结点跳转，目标节点编码
       "listenerPath": "x.x@@x.x@@x.x",              -- 节点监听器路径，全限定名
       "listenerType": "start,assignment,finish",    -- 节点监听器类型

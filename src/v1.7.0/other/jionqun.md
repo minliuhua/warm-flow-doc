@@ -1,5 +1,4 @@
 # 联系我
-<!-- @include: ../other/betweengg.md -->
 
 
 ## 1、沟通群和公众号
@@ -11,11 +10,17 @@
             <td><strong>公众号</strong></td>
         </tr>
         <tr>
-            <td><img src="https://foruda.gitee.com/images/1739841918538142710/6ece5b97_2218307.png" width="250px"></td>
-            <td><img src="/wxgzh.jpg" width="250px"></td>
+            <td><img src="https://foruda.gitee.com/images/1739841918538142710/6ece5b97_2218307.png" width="300px"></td>
+            <td><img src="/wxgzh.jpg"></td>
         </tr>
     </tbody>
 </table>
+
+<style scoped>
+td {
+  width: 50%;
+}
+</style>
 
 加入沟通群和公众号的好处：
 

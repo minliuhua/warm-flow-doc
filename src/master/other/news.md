@@ -1,5 +1,4 @@
 # 新闻
-<!-- @include: ../other/betweengg.md -->
 
 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
     <el-input v-model="searchQuery" class="Input" placeholder="搜索标题" @input="filterByTitle" clearable />
@@ -58,6 +57,12 @@ export default {
         },
       ];
       filterList.value = allList.value = [
+        {
+            "type": "upgrade",
+            "title": "Warm-Flow发布1.7.3 端午节（设计器流和流程图大升级）", 
+            "url": "./news/upgrade/10.html",    
+            "pushTime": "2025-05-13"
+        },
         {
             "type": "upgrade",
             "title": "国产免费工作流引擎star 6.5k，Warm-Flow版本升级1.7.2（修复部分缺陷）", 

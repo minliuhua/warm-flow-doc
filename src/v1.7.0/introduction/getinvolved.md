@@ -1,5 +1,4 @@
 # 如何贡献
-<!-- @include: ../other/betweengg.md -->
 
 ## 参与贡献
 

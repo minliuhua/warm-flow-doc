@@ -50,6 +50,12 @@
     </tbody>
 </table>
 
+<style scoped>
+td {
+  width: 50%;
+}
+</style>
+
 
 ## 1、新增定义
 

@@ -1,5 +1,4 @@
 # 监听器
-<!-- @include: ../other/betweengg.md -->
 
 ::: tip 
 - 在办理流程过程中，通过监听器，监听办理过程的不同时期，进行业务处理，功能增强。  
@@ -104,7 +103,7 @@ public class DefStartListener implements Listener {
 ### 5.4、分派监听器
 如下图中示例可以很容易实现
 
-<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
+<div><img src="https://warm-flow.dromara.org/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
 
 - 注意：

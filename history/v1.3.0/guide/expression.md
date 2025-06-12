@@ -68,3 +68,9 @@ public int insertTestLeave(TestLeave testLeave, String flowStatus)
     </tr>
     </tbody>
 </table>
+
+<style scoped>
+td {
+  width: 50%;
+}
+</style>

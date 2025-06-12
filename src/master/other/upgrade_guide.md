@@ -1,5 +1,4 @@
 # 升级指南
-<!-- @include: ../other/betweengg.md -->
 
 ::: warning
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
@@ -8,8 +7,15 @@
 
 :::
 
+### v1.7.3
+- 业务系统涉及到/warm-flow-ui/token-name改成/warm-flow-ui/config，比如匿名访问等
+- 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/27 11:50 ~ 2025/5/27 11:50`
+- 查询流程图接口，请使用新版本替换，[前端渲染流程图](../primary/chart_manage.html)
+
+
 ### v1.7.2
-- mybatis-plus逻辑删除强制设置为（删除值：0，未删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个
+- 执行升级脚本1.7.2版本[warm-flow_1.7.2.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.2.sql)
+- mybatis-plus逻辑删除强制设置为（未删除值：0，删除值：1），如果流程表的逻辑删除字段不是这个，请刷库修改为为这个
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：
@@ -134,7 +140,7 @@ function getList() {
 <div><img src="https://foruda.gitee.com/images/1745570346631861131/f5ba4bf7_2218307.png" width="500"></div>
 
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
-- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
+- InsService的termination接口标识为即将删除，请使用TaskService.terminationByInsId代替
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：`["serial", "parallel"]`
@@ -191,7 +197,8 @@ showWays: {
 
 ### v1.6.6
 - 执行升级脚本1.6.0版本[warm-flow_1.6.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.6.0.sql)
-- 导入、导出和保存xml格式标识为即将删除，请参照hh-vue切换json方式
+- 导入、导出和保存xml格式标识为即将删除，请参照[hh-vue](https://gitee.com/min290/hh-vue.git)的这个类`DefController`切换json方式
+- 移除DefService获取流程图api，由ChartService中chartIns和chartDef代替
 - 全局FlowFactory替换成FlowEngine
 - [mybatis-flex](https://gitee.com/warm_4/warm-flow-mybatis-flex.git),[easy-query](https://gitee.com/warm_4/warm-flow-easy-query.git)和[jpa](https://gitee.com/warm_4/warm-flow-jpa.git)的扩展包迁移到新的仓库，独立维护
 - 如果设计器是自己维护的，需要相应调整，可以参考如下
@@ -577,7 +584,7 @@ if (skipCondition) {
 - 本次升级，内置json库snack3方式，改为spi方式加载，业务项目中存在哪种json就会使用哪种的实现，
   支持顺序按顺序加载一种：snack3、jackson、fastjson、gson，并且目前只实现了这四种，可扩展
 - 如在未集成snack3库的环境下，还需要使用snack3库，需要单独使用（原组件使用snack3库）
-  ```pom.xml
+  ```xml
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>snack3</artifactId>

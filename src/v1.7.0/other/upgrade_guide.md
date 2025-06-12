@@ -1,5 +1,4 @@
 # 升级指南
-<!-- @include: ../other/betweengg.md -->
 
 ::: warning
 - 更新脚本在项目里面的sql文件下，对应数据库类型，对应版本号
@@ -14,7 +13,7 @@
 <div><img src="https://foruda.gitee.com/images/1745570346631861131/f5ba4bf7_2218307.png" width="500"></div>
 
 - InsService的skipByInsId接口标识为即将删除，请使用TaskService.skipByInsId代替
-- InsService的termination接口标识为即将删除，请使用TaskService.terminationInsId代替
+- InsService的termination接口标识为即将删除，请使用TaskService.terminationByInsId代替
 - 如果二开设计器，请自行手动同步，参考如下：
 
 ::: tip 原between.vue：`["serial", "parallel"]`
@@ -457,7 +456,7 @@ if (skipCondition) {
 - 本次升级，内置json库snack3方式，改为spi方式加载，业务项目中存在哪种json就会使用哪种的实现，
   支持顺序按顺序加载一种：snack3、jackson、fastjson、gson，并且目前只实现了这四种，可扩展
 - 如在未集成snack3库的环境下，还需要使用snack3库，需要单独使用（原组件使用snack3库）
-  ```pom.xml
+  ```xml
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>snack3</artifactId>
