@@ -90,12 +90,6 @@ watch(
 
 <template>
   <Layout>
-    <template v-if="frontmatter.home" #heroBefore>
-      <div ref="container" class="w-full h-[calc(100vh-88px)]">
-        <iframe ref="iframe" src="http://localhost:81/warm-flow-ui/index.html" width="1800px" height="800px"></iframe>
-      </div>
-    </template>
-
     <template v-if="!frontmatter.home" #sidebarTop>
       <div v-html="sidebarContentLift" />
     </template>
