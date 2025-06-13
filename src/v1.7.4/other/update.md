@@ -29,6 +29,8 @@
 - [update] 调整按钮布局
 - [update] 双击节点打开抽屉,改成单击
 - [update] 设计器打开自动居中
+- [update] 设计器base文件夹合并到logic-flow文件夹里
+- [update] 复制流程对象，不需要复制id、createTime和updateTime
 - [remove] 删除ChartService的chartIns接口
 - [remove] 删除ChartService的chartDef接口
 - [remove] 删除ChartService的chartInsObj接口
