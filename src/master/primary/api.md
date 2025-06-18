@@ -66,9 +66,11 @@
 ### 开启流程 
 `Instance start(businessId, flowParams)`：传入业务id，开启流程实例。flowParams包含如下字段：
 - flowCode: 流程编码 [必传]
-- handler: 当前办理人唯一标识，如用户id，用于记录到实例表和历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 办理人唯一标识，如用户id，用于记录到实例表和历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
 - ext: 扩展字段，预留给业务系统使用 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态[按需传输]
 
 ### 根据defIds查询流程实例集合
@@ -169,8 +171,10 @@
 - nodeCode: 如果指定节点,可[任意跳转]到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
@@ -180,8 +184,10 @@
 - nodeCode: 如果指定节点,可[任意跳转]到对应节点，严禁任意退回选择后置节点 [按需传输]
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
 
@@ -189,8 +195,10 @@
 `Instance rejectLastByInsId(instanceId, flowParams)`：传入流程实例id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 办理是忽略权限校验，默认不忽略（true：忽略，false：不忽略）[按需传输]
 
@@ -198,8 +206,10 @@
 `Instance rejectLast(taskId, flowParams)`：传入流程任务id，驳回上一个任务。flowParams包含如下字段：
 - permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
 - message: 审批意见 [按需传输]
-- handler: 当前办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
@@ -208,6 +218,8 @@
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 
 ### 根据taskId拿回到最近办理的任务
@@ -215,6 +227,8 @@
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 
 ### 撤销 
@@ -222,6 +236,8 @@
 - message: 审批意见 [按需传输]
 - handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
 - variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
 - flowStatus: 流程状态，自定义流程状态 [按需传输]
 - ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
 
@@ -359,33 +375,6 @@
 
 ### 根据流程实例Ids删除 
 `boolean deleteByInsIds(instanceIds)`：根据流程实例Ids删除
-
-## ChartService流程图绘制接口
-
-### 流程图(渲染状态)
-`chartIns(instanceId)`：根据流程实例ID,获取流程图的图片流(渲染状态)
-- instanceId: 流程实例id [必传]
-- 返回值：base64编码的图片流字符串，流程实例开启后，流程图元数据存储在实例表中的def_json字段中
-
-### 流程图(不渲染状态)
-`chartDef(definitionId)`：根据流程定义ID,获取流程图的图片流(不渲染状态), 返回base64编码的图片流字符串
-
-### 流程图(渲染状态)-可扩展
-`chartIns(instanceId)`：根据流程实例ID,获取流程图的图片流(渲染状态)
-- instanceId: 流程实例id [必传]
-- consumer: 可获取流程图对象，可用于修改流程图样式或者新增内容 [按需传输]
-- 返回值：base64编码的图片流字符串，流程实例开启后，流程图元数据存储在实例表中的def_json字段中
-
-### 流程图(不渲染状态)-可扩展
-`chartDef(definitionId)`：根据流程实例ID,获取流程图的图片流(不渲染状态), 返回base64编码的图片流字符串
-- instanceId: 流程实例id [必传]
-- consumer: 可获取流程图对象，可用于修改流程图样式或者新增内容 [按需传输]
-
-### 流程图(渲染状态)-自行渲染
-`chartInsObj(instanceId)`：根据流程实例ID,获取流程图对象
-
-### 流程图(不渲染状态)-自行渲染
-`chartDefObj(definitionId)`：根据流程定义ID,获取流程图对象
 
 ## 公共api接口 
 ### 根据id查询 

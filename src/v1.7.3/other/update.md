@@ -13,31 +13,9 @@
 - 包容网关
 - 动态表单 @晓华
 - 仿钉钉设计器 @晓华
-- 会签功能支持顺序会签
 
 
 ## 开发中计划
-### v1.7.4  2025-06-23
-
-- [升级指南](./upgrade_guide.md#v1-7-4)
-- [feat] 新增下载流程图功能
-- [feat] start和skip或者其衍生的方法，新增指定下个任务办理人flowParams.nextHandler @感谢 xiarigang
-- [feat] 新增流程图明暗主题  @感谢 Lina Bell
-- [feat] 流程图新增通过访问路径设置网格显隐
-- [feat] 流程图新增悬浮提示, 支持自定义内容和样式
-- [feat] 新增顶部提示信息和右下角log
-- [update] 调整按钮布局
-- [update] 双击节点打开抽屉,改成单击
-- [update] 设计器打开自动居中
-- [update] 设计器base文件夹合并到logic-flow文件夹里
-- [update] 复制流程对象，不需要复制id、createTime和updateTime
-- [remove] 删除ChartService的chartIns接口
-- [remove] 删除ChartService的chartDef接口
-- [remove] 删除ChartService的chartInsObj接口
-- [remove] 删除ChartService的chartDefObj接口
-- [remove] 删除HisTaskService的getNoReject接口
-- [remove] 删除InsService的skipByInsId接口
-- [remove] 删除InsService的termination接口
 
 ## 更新日志
 ### v1.7.3  2025-05-29

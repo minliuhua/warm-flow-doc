@@ -56,7 +56,7 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.7.3（正式版）",
+                    title: "公告: 1.7.4（正式版）",
                     content:
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/news/8.html\'" class="link-style">' +
@@ -70,7 +70,7 @@ export default hopeTheme(
                         '</div>' +
                         '<div>\n' +
                         '     <span onclick="window.location.href=\'/master/other/news/upgrade/10.html\'" class="link-style">' +
-                        '       🔵 Warm-Flow发布1.7.3 端午节（设计器流和流程图大升级）' +
+                        '       🔵 Warm-Flow发布1.7.4, 设计器和流程图优化' +
                         '     </span>\n' +
                         '</div>',
                     actions: [
