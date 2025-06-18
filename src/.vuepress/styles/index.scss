@@ -75,7 +75,17 @@
 }
 
 .vp-notice-wrapper {
-  width: 300px;
+  width: auto; /* 自适应宽度 */
+  height: auto; /* 自适应高度 */
+}
+
+.vp-notice-wrapper a {
+  color: inherit; /* 继承父级文字颜色 */
+  text-decoration: none; /* 去掉下划线 */
+}
+
+.vp-notice-wrapper a:hover {
+  color: red; /* 鼠标悬停时变成红色 */
 }
 
 .vp-sidebar-links, .vp-nav-links {
