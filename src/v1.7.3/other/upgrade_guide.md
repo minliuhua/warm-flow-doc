@@ -7,10 +7,6 @@
 
 :::
 
-### v1.7.4
-- 执行升级脚本1.7.4版本[warm-flow_1.7.4.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.4.sql)
-
-
 ### v1.7.3
 - 业务系统涉及到/warm-flow-ui/token-name改成/warm-flow-ui/config，比如匿名访问等
 - 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/27 11:50 ~ 2025/5/27 11:50`
