@@ -17,6 +17,14 @@
 
 
 ## 开发中计划
+### v1.8.0  2025-07-07
+
+- [升级指南](./upgrade_guide.md#v1-7-5)
+- [feat] 新增仿钉钉设计器模式
+- [feat] 设计器新增流程定义json下载
+- [feat] DefJson新增流程实例字段
+
+## 更新日志
 ### v1.7.4  2025-06-19
 
 - [升级指南](./upgrade_guide.md#v1-7-4)
@@ -38,7 +46,6 @@
 - [remove] 删除InsService的skipByInsId接口
 - [remove] 删除InsService的termination接口
 
-## 更新日志
 ### v1.7.3  2025-05-29
 
 - [升级指南](./upgrade_guide.md#v1-7-3)
