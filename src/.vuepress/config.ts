@@ -14,7 +14,7 @@ export default defineUserConfig({
         },
     },
     theme,
-    shouldPrefetch: true,
+    shouldPrefetch: false,
     bundler: viteBundler({
         viteOptions: {},
         vuePluginOptions: {},

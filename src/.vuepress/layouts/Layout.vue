@@ -5,6 +5,7 @@ import {ref, watch} from "vue";
 import Between from "../components/Between.vue";
 
 import type { ThemeBasePageFrontmatter } from "vuepress-theme-hope";
+import DynamicEditLink from "../components/DynamicEditLink.vue";
 
 const frontmatter = usePageFrontmatter<ThemeBasePageFrontmatter>();
 

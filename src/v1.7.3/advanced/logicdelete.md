@@ -1,6 +1,5 @@
 # 逻辑删除
 
-## 1、Mybatis-plus
 ::: tip
 - 如果使用Mybatis-plus的orm框架，只支持自身的逻辑删除方式
 - 默认逻辑未删除值：0，逻辑已删除值：1， 工作流组件内部通过注解实现
@@ -30,7 +29,6 @@ public class FlowNode implements Node {
 }
 
 ```
-
 
 ### 1.2、关闭逻辑删除方案
 
