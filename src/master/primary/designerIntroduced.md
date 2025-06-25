@@ -144,6 +144,7 @@ public class ShiroConfig {
         }
       },
       close() {
+        // 路由参数传递时间戳 来触发页面刷新
         const obj = { path: "/flow/definition", query: { t: Date.now(), pageNum: this.$route.query.pageNum } };
         this.$tab.closeOpenPage(obj);
       }
@@ -180,8 +181,9 @@ const iframeLoaded = () => {
 
 /** 关闭按钮 */
 function close() {
-  const obj = { path: "/flow/definition" };
-  proxy.$tab.closeOpenPage(obj);
+  // 路由参数传递时间戳 来触发页面刷新
+  const obj = { path: "/flow/definition", query: { t: Date.now(), pageNum: this.$route.query.pageNum } };
+  this.$tab.closeOpenPage(obj);
 }
 
 onMounted(() => {

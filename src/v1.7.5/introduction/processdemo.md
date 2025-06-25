@@ -25,7 +25,7 @@
 <style scope>
 .yat {
     border: 2px solid #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 </style>
 
