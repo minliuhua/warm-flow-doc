@@ -22,7 +22,9 @@
 - [升级指南](./upgrade_guide.md#v1-7-5)
 - [feat] 新增仿钉钉设计器模式
 - [feat] 设计器新增流程定义json下载
-- [feat] DefJson新增流程实例字段
+- [update] 获取流程图接口返回值defJson增加instance字段
+- [update] 结束节点边框加粗
+- [remove] 删除生成流程图片相关的代码
 
 ## 更新日志
 ### v1.7.4  2025-06-19
