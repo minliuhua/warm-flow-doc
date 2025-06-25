@@ -148,7 +148,7 @@ public class ShiroConfig {
         }
       },
       close() {
-        const obj = {path: "/flow/definition"};
+        const obj = { path: "/flow/definition", query: { t: Date.now(), pageNum: this.$route.query.pageNum } };
         this.$tab.closeOpenPage(obj);
       }
     }
