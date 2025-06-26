@@ -1,25 +1,51 @@
 <template>
-  <div class="wwads-cn wwads-horizontal" data-id="349"></div>
-  <div class="between-header">
-  <a href="https://gitee.com/dromara/warm-flow">
-    <img src="/ggw/bewteenone.png" alt="warm-flow Logo">
-  </a>
+  <div v-show="isVisible" class="wwads-cn wwads-horizontal" data-id="349"></div>
+  <div v-show="isVisible" class="between-header">
+    <a class="removeAfter" href="https://gitee.com/dromara/warm-flow">
+      <img src="/ggw/bewteenone.png" alt="warm-flow Logo">
+    </a>
   </div>
 
-  <div style="display: flex; ">
-  <div class="between-left">
-    <a href="https://gitee.com/dromara/warm-flow">
-      <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
-    </a>
-  </div>
-  <div class="between-right">
-    <a href="https://gitee.com/dromara/warm-flow">
-      <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
-    </a>
-  </div>
+  <div v-show="isVisible" style="position: relative; display: flex;">
+    <!-- 左侧图片 -->
+    <div class="between-left">
+      <a class="removeAfter" href="https://gitee.com/dromara/warm-flow">
+        <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
+      </a>
+    </div>
+    <!-- 右侧图片 -->
+    <div class="between-right">
+      <a class="removeAfter" href="https://gitee.com/dromara/warm-flow">
+        <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
+      </a>
+      <!-- 使用 a 标签作为关闭按钮 -->
+      <a
+        href="javascript:void(0);"
+        @click="hideBanner"      style="
+        position: absolute;
+        margin-left: 5px;
+        transform: translateX(-50%);
+        background-color: white;
+        border-radius: 50%;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        cursor: pointer;
+        z-index: 999;">×</a>
+    </div>
   </div>
 </template>
+<script setup>
+import { ref } from 'vue';
 
+const isVisible = ref(true);
+
+function hideBanner() {
+  isVisible.value = false
+}
+</script>
 <style lang="scss">
 /* 定义样式 */
 .between-header {
@@ -70,5 +96,9 @@
   .wwads-logo-text {
       font-size: 12px !important;
   }
+}
+
+.removeAfter::after {
+  content: none !important; /* 移除伪元素内容 */
 }
 </style>
