@@ -7,14 +7,9 @@
 :::
 
 <div class="yat"><img src="https://foruda.gitee.com/images/1750866311675627647/4fff1881_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1750866335924802912/1aa5d863_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1750899440440383448/c328e06f_2218307.png"/></div>
 
-<style scope>
-.yat {
-    border: 2px solid #ccc;
-    margin-bottom: 3px;
-}
-</style>
+
 
 ## 1. 引入依赖
 ::: code-tabs#shell

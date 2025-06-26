@@ -34,12 +34,7 @@
 <div class="yat"><img src="/demo3.png"/></div>
 <div class="yat"><img src="/demo1.png"/></div>
 
-<style scope>
-.yat {
-    border: 2px solid #ccc;
-    margin-bottom: 3px;
-}
-</style>
+
 
 
 ## 1、新增定义

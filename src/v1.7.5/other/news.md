@@ -59,6 +59,12 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
+            "title": "Warm-Flow发布1.7.5, 设计器重构和流程图优化", 
+            "url": "./news/upgrade/12.html",    
+            "pushTime": "2025-06-27"
+        },
+        {
+            "type": "upgrade",
             "title": "Warm-Flow发布1.7.4, 设计器和流程图优化", 
             "url": "./news/upgrade/11.html",    
             "pushTime": "2025-06-23"

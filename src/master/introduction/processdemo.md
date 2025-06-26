@@ -22,12 +22,7 @@
 <div class="yat"><img src="https://foruda.gitee.com/images/1749444203640299283/f12e09d6_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1749444351828589754/1af0c3a8_2218307.png"/></div>
 
-<style scope>
-.yat {
-    border: 2px solid #ccc;
-    margin-bottom: 3px;
-}
-</style>
+
 
 ## 1、新增定义
 ::: tip
