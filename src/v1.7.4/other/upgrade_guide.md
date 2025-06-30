@@ -7,15 +7,6 @@
 
 :::
 
-### v1.7.5-m2
-- 执行升级脚本1.7.5-m2版本
-```sql
-ALTER TABLE `flow_definition`
-    ADD COLUMN `mode` varchar(40) NOT NULL DEFAULT 'CLASSICS' COMMENT '设计器模式（CLASSICS经典模式 MIMIC仿钉钉模式）' AFTER `flow_name`;
-
-```
-- 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/28 11:50 ~ 2025/6/18 14:53`
-
 ### v1.7.4
 - 执行升级脚本1.7.4版本[warm-flow_1.7.4.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.4.sql)
 - 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/28 11:50 ~ 2025/6/18 14:53`

@@ -6,6 +6,11 @@
 - 设计原理采取不分离的方式，把设计器打包的jar包中,以接口和静态资源的方式引入
 :::
 
+<div class="yat"><img src="https://foruda.gitee.com/images/1750866311675627647/4fff1881_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1750899440440383448/c328e06f_2218307.png"/></div>
+
+
+
 ## 1. 引入依赖
 ::: code-tabs#shell
 
@@ -102,7 +107,7 @@ public class ShiroConfig {
 ### 2.2. 前端引入设计器
 ::: tip
 **1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}&Authorization=${token}`**
-- definitionId：流程定义id
+- definitionId：流程定义id，<span class="red-font">如果没传，则认定是新增流程，会初始化流程节点，否则则是编辑或者查看</span>
 - disabled：是否可编辑
 - token：用户token，[共享后端权限(如token)](./designerIntroduced.html#_6-共享后端权限-如token)
 :::
@@ -340,19 +345,32 @@ spring:
 
 <br>
 
+## 4. 共享后端权限(如token)
+- 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
+- 在前端加载设计器页面路径后面，追加&Authorization=${token}，token是业务系统的token，可追加多个token
+- yml中配置`warm-flow.token-name=Authorization`,每次请求会把token, set到header的`Authorization`上，多个token用逗号分隔
+- 请注意：请求中的token的名称或者key，要和后端yml中配置一致
+```yml
+# warm-flow工作流配置
+warm-flow:
+  ......
+  ## 如果需要工作流共享业务系统权限，默认Authorization，如果有多个token，用逗号分隔
+  token-name: Authorization
+  ......
+```
 
-## 4. 设计器办理人选择框接入
+## 5. 设计器办理人选择框接入
 > 给任务节点设置哪些权限的人可以办理，实现接口提供给设计器
 
-### 4.1 办理人权限选择弹框页面
+### 5.1 办理人权限选择弹框页面
 
 <div><img src="https://foruda.gitee.com/images/1745571554195473679/ca966032_2218307.png"></div>
 <div><img src="https://foruda.gitee.com/images/1742804225175791843/02ddc1bd_2218307.png"></div>
 <br>
 
-### 4.2 实现接口获取办理人列表数据
+### 5.2 实现接口获取办理人列表数据
 
-#### 4.2.1 HandlerSelectService接口
+#### 5.2.1 HandlerSelectService接口
 ```java
 /**
  * 流程设计器-获取办理人权限设置列表接口
@@ -378,7 +396,7 @@ public interface HandlerSelectService {
 ```
 <br>
 
-#### 4.2.2 HandlerSelectServiceImpl实现类
+#### 5.2.2 HandlerSelectServiceImpl实现类
 
 ```java
 /**
@@ -507,15 +525,15 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 }
 ```
 
-## 5. 设计器办理人列表回显
+## 6. 设计器办理人列表回显
 > 回显该节点权限办理人名称，比如上一步选择后保存入库主键，下一次重新打开以下页面
 
-### 5.1 设计器办理人列表页面
+### 6.1 设计器办理人列表页面
 <div><img src="https://foruda.gitee.com/images/1745570346631861131/f5ba4bf7_2218307.png" width="700"></div>
 <br>
 
-### 5.2 实现接口获取办理人列表回显
-#### 5.2.1 HandlerSelectService接口
+### 6.2 实现接口获取办理人列表回显
+#### 6.2.1 HandlerSelectService接口
 - `handlerFeedback()`是默认方法，基于以上第四小节中的`getHandlerType`和`getHandlerSelect`实现，但是性能会比较差
 - 建议重新实现该接口，通过入库主键集合`storageIds`，重新覆盖查询，下面会会有实现案例
 
@@ -561,7 +579,7 @@ public interface HandlerSelectService {
 
 ```
 
-#### 5.2.2 HandlerSelectServiceImpl实现类
+#### 6.2.2 HandlerSelectServiceImpl实现类
 
 ```java
 /**
@@ -630,16 +648,81 @@ public class HandlerSelectServiceImpl implements HandlerSelectService {
 
 <br>
 
-## 6. 共享后端权限(如token)
-- 后端放行路径`/warm-flow-ui/**,/warm-flow/**`，改为只放行一个`/warm-flow-ui/**`
-- 在前端加载设计器页面路径后面，追加&Authorization=${token}，token是业务系统的token，可追加多个token
-- yml中配置`warm-flow.token-name=Authorization`,每次请求会把token, set到header的`Authorization`上，多个token用逗号分隔
-- 请注意：请求中的token的名称或者key，要和后端yml中配置一致
-```yml
-# warm-flow工作流配置
-warm-flow:
-  ......
-  ## 如果需要工作流共享业务系统权限，默认Authorization，如果有多个token，用逗号分隔
-  token-name: Authorization
-  ......
+## 7. 基础信息类别
+> 流程类别通常是业务系统用来做细分的，比如请假，出差，项目，采购，销售，等等流程
+
+### 7.1 基础信息页面
+<div><img src="https://foruda.gitee.com/images/1750865204014479953/75d003e7_2218307.png"></div>
+<br>
+
+### 7.2 实现接口获取类别信息
+#### 7.2.1 CategoryService接口
+- 实现`queryCategory()`接口方法，返回`List<Tree>`集合
+
+```java
+/**
+ * 分类接口
+ *
+ * @author warm
+ * @since 2025/6/24
+ */
+public interface CategoryService {
+
+    /**
+     * 查询分类
+     *
+     * @return 分类
+     */
+    List<Tree> queryCategory();
+}
+
 ```
+
+#### 7.2.2 CategoryServiceImpl实现类
+- 如果返回的数据是树状结构，那请多设置`parentId`字段，组件会自动构建成树状，否则会显示成单选
+
+```java
+/**
+ * 分类服务
+ *
+ * @author warm
+ * @since 2025/6/24
+ */
+@Service
+public class CategoryServiceImpl implements CategoryService {
+
+    @Override
+    public List<Tree> queryCategory() {
+        List<Tree> trees = new ArrayList<>();
+        trees.add(new Tree("1", "分类1", null, null));
+        trees.add(new Tree("1-1", "分类1-1", "1", null));
+        trees.add(new Tree("2", "分类2", null, null));
+        trees.add(new Tree("2-1", "分类2-1", "2", null));
+        trees.add(new Tree("3", "分类3", null, null));
+
+        return trees;
+    }
+}
+
+public class Tree implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * ID
+     */
+    private String id;
+
+    /**
+     * 名称
+     */
+    private String name;
+
+    /**
+     * 父ID
+     */
+    private String parentId;
+}
+```
+
+<br>
