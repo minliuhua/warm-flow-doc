@@ -17,6 +17,22 @@
 
 
 ## 开发中计划
+### v1.7.6  2025-06-30
+
+- [升级指南](./upgrade_guide.md#v1-7-6)
+- [feat] 设计器新增流程定义json下载
+- [feat] 设置设计器基础信息分类下拉接口
+- [feat] 查询设计器接口queryDef改为同时支持新增和修改
+- [feat] 新增设计器模式字段，为仿钉钉设计器做准备
+- [update] 获取流程图接口返回值defJson增加instance字段
+- [update] 结束节点边框加粗
+- [update] 流程图提示信息，改成单价节点触发，点击空白关闭，并且提示框可选中
+- [update] 设计器界面重构，支持新增流程定义基础数据
+- [remove] DefService的saveAndInitNode接口标识即将删除，改用checkAndSave接口，初始化节点改为前端初始化
+- [remove] 删除无用的TreeSelection.java类
+- [remove] 删除生成流程图片相关的代码
+
+## 更新日志
 ### v1.7.4  2025-06-19
 
 - [升级指南](./upgrade_guide.md#v1-7-4)
@@ -38,7 +54,6 @@
 - [remove] 删除InsService的skipByInsId接口
 - [remove] 删除InsService的termination接口
 
-## 更新日志
 ### v1.7.3  2025-05-29
 
 - [升级指南](./upgrade_guide.md#v1-7-3)

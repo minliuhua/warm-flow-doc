@@ -56,17 +56,17 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.7.4（正式版）",
+                    title: "公告: 1.7.6（正式版）",
                     content:
                         `
                          <table>
                            <tbody>
                              <tr>
                                <td>
-                                 <a href="/master/other/news/upgrade/11.html" target="_blank">⏫ 新版发布</a>
+                                 <a href="/master/other/news/upgrade/12.html" target="_blank">⏫ 新版发布</a>
                                </td>
                                <td>
-                                 <a href="/master/other/news/upgrade/11.html" target="_blank">Warm-Flow发布1.7.4, 设计器和流程图优化</a>
+                                 <a href="/master/other/news/upgrade/12.html" target="_blank">Warm-Flow发布1.7.6, 设计器重构和流程图优化</a>
                                </td>
                              </tr>
                              <tr>

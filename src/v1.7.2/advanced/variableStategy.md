@@ -55,7 +55,7 @@ public class VariableTest {
 ## 5、可实现的效果
 如下图中示例可以很容易实现 
 
-<div><img src="https://warm-flow.dromara.org/assignmentlistener.jpg" width="550px" height="450px" /></div>
+<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
 
 ## 6、动态指定办理人
 

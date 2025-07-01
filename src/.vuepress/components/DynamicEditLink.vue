@@ -2,7 +2,7 @@
   <el-link
       :href="dynamicHref"
       target="_blank"
-      class="warm-edit"
+      class="warm-edit removeAfter"
   >
     <el-icon><img src="/icons/gitee_home.svg" alt="编辑图标"></el-icon>
     <span>编辑此页</span>
@@ -49,5 +49,9 @@ const dynamicHref = computed(() => {
   margin-right: 5px;
   width: 16px;
   height: 16px;
+}
+
+.removeAfter::after {
+  content: none !important; /* 移除伪元素内容 */
 }
 </style>
