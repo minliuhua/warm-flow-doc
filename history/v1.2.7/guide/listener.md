@@ -67,7 +67,7 @@ public class FinishListener implements Listener {
 
 ### 3.3、分派监听器实现类例子
 如下图中示例可以很容易实现
-<img src="../../.vuepress/publichttp://warm-flow.cn/assignmentlistener.jpg" width="550px" height="450px" />
+<img src="../../.vuepress/publichttps://warm-flow.dromara.org/assignmentlistener.jpg" width="550px" height="450px" />
 
 
 - 注意： 
