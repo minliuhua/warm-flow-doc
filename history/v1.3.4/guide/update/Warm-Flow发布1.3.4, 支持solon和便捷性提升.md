@@ -1,7 +1,7 @@
 # Warm-Flow发布1.3.4, 支持solon和便捷性提升
 
 ## 1、老群被干没了，新群：  
-<img src="https://warm-flow.dromara.org/assets/wxqun-DtKfuDNv.jpg" width="300">
+<img src="http://warm-flow.cn/assets/wxqun-DtKfuDNv.jpg" width="300">
 
 **本次的版本大大提升了工作流的使用便捷性，如下：**
 
@@ -57,4 +57,4 @@
 
 ## 7、官网
 
-[https://warm-flow.dromara.org/](https://warm-flow.dromara.org/)
+[http://warm-flow.cn/](http://warm-flow.cn/)
