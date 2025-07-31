@@ -29,6 +29,8 @@ warm-flow:
   token-name: Authorization1
   # 逻辑未删除字段（开启后默认为0）
   logic_not_delete_value: 0
+  # 是否显示流程图顶部文字，默认为true：显示
+  top-text-show: true
   # 当使用JPA时指定JpaPersistenceProvider
   jpa_persistence_provider: org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider
   # 内部已实现自动获取，失效时使用此配置（在使用mybatis扩展包时, 由于各数据库sql语句存在差异, 通过此配置兼容，默认为mysql）
@@ -60,6 +62,8 @@ warm-flow:
   tokenName: Authorization1
   # 逻辑未删除字段（开启后默认为0）
   logicNotDeleteValue: 0
+  # 是否显示流程图顶部文字，默认为true：显示
+  topTextShow: true
   # 内部已实现自动获取，失效时使用此配置（在使用mybatis扩展包时, 由于各数据库sql语句存在差异, 通过此配置兼容，默认为mysql）
   data_source_type: mysql
 ```

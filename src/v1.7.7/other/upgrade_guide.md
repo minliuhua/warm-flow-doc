@@ -431,7 +431,7 @@ watch(() => form.value.permissionFlag, (n) => {
       <el-option label="小于" value="lt"/>
       <el-option label="小于等于" value="le"/>
       <el-option label="包含" value="like"/>
-      <el-option label="不包含" value="notLike"/>
+      <el-option label="不包含" value="notNike"/>
       <el-option label="spel表达式" value="spel"/>
     </el-select>
     <el-input v-model="form.conditionValue" placeholder="条件值" style="width: 42%;margin-left: 1%;margin-right: 1%;"/>
@@ -455,7 +455,7 @@ watch(() => form.value.permissionFlag, (n) => {
       <el-option label="小于" value="lt"/>
       <el-option label="小于等于" value="le"/>
       <el-option label="包含" value="like"/>
-      <el-option label="不包含" value="notLike"/>
+      <el-option label="不包含" value="notNike"/>
     </el-select>
     <el-input v-model="form.conditionValue" placeholder="条件值" :style="{ width: spelFlag? '80%' : '43%', 'margin-left': '1%' }"/>
   </el-form-item>
