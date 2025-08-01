@@ -7,6 +7,12 @@
 
 :::
 
+
+### v1.8.0
+- 执行升级脚本1.8.0版本[warm-flow_1.8.0.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.8.0.sql)
+- 访问设计器时传入的disable变量可以不用传，内部会通过发布状态自行判断
+- 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/6/19 16:58 ~ 2025/8/1 10:29`
+
 ### v1.7.6
 - 执行升级脚本1.7.6版本[warm-flow_1.7.6.sql](https://gitee.com/dromara/warm-flow/blob/master/sql/mysql/v1-upgrade/warm-flow_1.7.6.sql)
 - 如果二开设计器，请自行手动同步，因为本次改动比较多，就不一一列举，参考工作流引擎源码中`warm-flow/warm-flow-ui`文件夹的提交记录，提交时间范围：`2025/5/28 11:50 ~ 2025/6/18 14:53`
