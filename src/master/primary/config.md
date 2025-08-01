@@ -77,7 +77,7 @@ warm-flow:
   "flowCode": "leaveFlow-serial3",                  -- 流程编码       
   "flowName": "串行-驳回互斥",						-- 流程名称
   "category": "请假",								-- 流程类别  
-  "formCustom": "N",                                -- 审批表单是否自定义（Y是 2否）
+  "formCustom": "N",                                -- 审批表单是否自定义（Y是 N否）
   "formPath": "system/leave/approve",               -- 审批表单路径
   "listenerPath": "x.x@@x.x@@x.x",                  -- 流程监听器路径，全限定名
   "listenerType": "start,assignment,finish",        -- 流程监听器类型

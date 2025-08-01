@@ -101,6 +101,14 @@ export default hopeTheme(
                                  <a href="/master/other/upgrade_guide.html" target="_blank">如发布新版本，请查看</a>
                                </td>
                              </tr>
+                             <tr>
+                               <td>
+                                 <a href="https://gitee.com/warm_4/warm-flow-doc" target="_blank">🚀 本地部署文档</a>
+                               </td>
+                               <td>
+                                 <a href="https://gitee.com/warm_4/warm-flow-doc" target="_blank">如部分地方访问不了，可本地部署文档</a>
+                               </td>
+                             </tr>
                            </tbody>
                          </table>
                         `,
