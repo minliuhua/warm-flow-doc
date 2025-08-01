@@ -308,8 +308,18 @@ public class CustomGlobalListener implements GlobalListener {
 }
 ```
 
+## 3. 顶部名称显示隐藏
 
-## 3. 显示网格
+```yaml
+# warm-flow工作流配置
+warm-flow:
+  # 是否显示流程图顶部文字，默认为true：显示
+  top-text-show: true
+```
+
+<div><img src="https://foruda.gitee.com/images/1754016903287080176/a5001480_2218307.png" width="800"></div>
+
+## 4. 显示网格
 
 不管是设计器地址还是流程图地址，请求地址中上拼接`showGrid=true`，如：
 ```
@@ -317,7 +327,7 @@ ${process.env.VUE_APP_FLOW_API}/warm-flow-ui/index.html?id=${newVal}&type=FlowCh
 &Authorization=Bearer ${getToken()}
 ```
 
-## 4. 暗黑模式
+## 5. 暗黑模式
 通过postMessage 跨文档通信方法,如：
 
 ```xml
@@ -333,7 +343,7 @@ targetWindow.postMessage({type: theme}, "*");
 
 
 
-## 5. 自定义流程图节点颜色
+## 6. 自定义流程图节点颜色
 
 **配置文件**
 ```yaml

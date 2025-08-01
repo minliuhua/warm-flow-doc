@@ -17,19 +17,24 @@
 
 
 ## 开发中计划
-### v1.8.0  2025-07-31
+### v1.8.0  2025-08-08
 - [feat] 仿钉钉设计器 @晓华
 - [feat] 如果跳转线往回画，默认给他退回跳转类型
 - [feat] 新增获取第一个中间节点接口，优化查询次数
 - [feat] 设计器经典模式节点和边文字可以自由拖动
 - [feat] 设计器页面中的可以访问基础信息和流程设计，或者可以单独访问流程设计
+- [feat] 增加流程图渲染顶部名称控制显示隐藏    @may
 - [update] 设计器不用通过外部传入得disable判断是否可以编辑，直接通过是否发布状态判断，是否可以编辑
-- [fix] 修复部门名称搜索不生效问题
+- [fix] 修复部门名称搜索不生效问题   @QS
 - [fix] like/notNike 条件表达式逻辑修复
-- [fix] active/unActive 检查流程是否存在, 避免空指针
+- [fix] active/unActive 检查流程是否存在, 避免空指针   @xloouis
 - [fix] 修复基础数据中表单路径和监听器保存异常问题
 - [fix] 办理人列表回显，不实现也可以返回
 - [fix] 前后端获取前置或者后置节点的方法，解决出现死循环问题
+- [fix] 修复v-for 缺少key属性的错误   @QS
+- [fix] 修复审批流程表单中key值错误的问题   @QS
+- [fix] 修复no-mutating-props报错问题: props.logicJson.flowName = flowName会造成Eslint报出no-mutating-props问题，emit已经通知父组件更改名字了   @QS
+- [fix] like/notNike 条件表达式逻辑修复   @xloouis
 
 ## 更新日志
 ### v1.7.7  2025-07-02

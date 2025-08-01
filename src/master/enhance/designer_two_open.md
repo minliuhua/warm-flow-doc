@@ -17,21 +17,18 @@
             - warm-flow-plugin-ui-sb-web:            设计器后端springboot web接口和starter启动模块
             - warm-flow-plugin-ui-solon-web:         设计器后端solon web接口和plugin启动模块
             - warm-flow-plugin-vue3-ui:              设计器前端编译后jar包引入模块
-    - warm-flow-ui:                              设计器前端模块
-        - warm-flow-vue3-base:                    设计器前端公共模块
-        - warm-flow-vue3-dFlow:                    设计器前端基于仿钉钉核心模块（开发中）
-        - warm-flow-vue3-logic-flow:               设计器前端基于logic-flow核心模块
+    - warm-flow-ui:                              设计器前端模块, 基于logic-flow开发
 
-<div><img src="https://foruda.gitee.com/images/1742547534890322780/bd27f761_2218307.png" width="400"></div>
-<div><img src="https://foruda.gitee.com/images/1730958025453602251/ae415296_2218307.png" width="700"></div>
+<div><img src="https://foruda.gitee.com/images/1754016507623081125/62e2f1b9_2218307.png" width="400"></div>
+<div><img src="https://foruda.gitee.com/images/1730958025453602251/ae415296_2218307.png"></div>
 
 ## 2 源码调试
 - 设计器需要配置业务系统的代理地址，否则无法访问业务系统
 - 独立启动该设计器
 - 业务系统配置设计器的地址
 
-<div><img src="https://foruda.gitee.com/images/1730821008574953214/941ea1cd_2218307.png" width="700"></div>
-<div><img src="https://foruda.gitee.com/images/1730825131504921296/a17821eb_2218307.png" width="700"></div>
+<div><img src="https://foruda.gitee.com/images/1754016548953059153/82d1314c_2218307.png"></div>
+<div><img src="https://foruda.gitee.com/images/1730825131504921296/a17821eb_2218307.png"></div>
 
 ## 3 部署
 ### 3.1 先排除原依赖的前端代码

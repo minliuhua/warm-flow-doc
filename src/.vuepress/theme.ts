@@ -56,11 +56,19 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.7.7（正式版）",
+                    title: "公告: 1.8.0-m1（测试半）",
                     content:
                         `
                          <table>
                            <tbody>
+                             <tr>
+                               <td>
+                                 <a href="/master/other/update.html" target="_blank">🚀 1.8.0版本</a>
+                               </td>
+                               <td>
+                                 <a href="/master/other/update.html" target="_blank">新增仿钉钉设计器</a>
+                               </td>
+                             </tr>
                              <tr>
                                <td>
                                  <a href="https://gitee.com/dromara/warm-flow/stargazers" target="_blank">⭐️ Star</a>
@@ -91,14 +99,6 @@ export default hopeTheme(
                                </td>
                                <td>
                                  <a href="/master/other/upgrade_guide.html" target="_blank">如发布新版本，请查看</a>
-                               </td>
-                             </tr>
-                             <tr>
-                               <td>
-                                 <a href="https://gitee.com/warm_4/warm-flow-doc" target="_blank">🚀 本地部署文档</a>
-                               </td>
-                               <td>
-                                 <a href="https://gitee.com/warm_4/warm-flow-doc" target="_blank">如部分地方访问不了，可本地部署文档</a>
                                </td>
                              </tr>
                            </tbody>

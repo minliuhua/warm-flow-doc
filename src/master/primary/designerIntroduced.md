@@ -8,6 +8,7 @@
 
 <div class="yat"><img src="https://foruda.gitee.com/images/1750866311675627647/4fff1881_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1750899440440383448/c328e06f_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754017286492257760/f5616fcf_2218307.png"/></div>
 
 
 
@@ -106,9 +107,9 @@ public class ShiroConfig {
 
 ### 2.2. 前端引入设计器
 ::: tip
-**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}&Authorization=${token}`**
+**1、设计器页面入口是访问后端地址(前后端不分离)：`ip:port/warm-flow-ui/index.html?id=${definitionId}&onlyDesignShow=${onlyDesignShow}&Authorization=${token}`**
 - definitionId：流程定义id，<span class="red-font">如果没传，则认定是新增流程，会初始化流程节点，否则则是编辑或者查看</span>
-- disabled：是否可编辑
+- onlyDesignShow：是否独显流程设计，不传默认显示基础信息和流程设计tabs
 - token：用户token，[共享后端权限(如token)](./designerIntroduced.html#_6-共享后端权限-如token)
 :::
 
@@ -133,7 +134,7 @@ public class ShiroConfig {
       };
     },
     mounted() {
-      this.url = process.env.VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`;
+      this.url = process.env.VUE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&onlyDesignShow=${onlyDesignShow}`;
       this.iframeLoaded();
     },
     methods: {
@@ -171,7 +172,7 @@ public class ShiroConfig {
 const { proxy } = getCurrentInstance();
 import { onMounted } from 'vue';
 
-const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`);
+const iframeUrl = ref(import.meta.env.VITE_APP_BASE_API + `/warm-flow-ui/index.html?id=${definitionId}&onlyDesignShow=${onlyDesignShow}`);
 
 const iframeLoaded = () => {
   // iframe监听组件内设计器保存事件
@@ -208,24 +209,24 @@ onMounted(() => {
 @tab 前后端不分离
 
 ```java
-可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`
+可以直接访问后端接口加载页面，如：`ip:port/warm-flow-ui/index.html?id=${definitionId}&onlyDesignShow=${onlyDesignShow}`
 
 @Controller
 @RequestMapping("/warm-flow")
 public class WarmFlowController
 {
     @GetMapping()
-    public String index(String definitionId, Boolean disabled)
+    public String index(String definitionId, Boolean onlyDesignShow)
     {
-        return redirect("/warm-flow-ui/index.html?id=" + definitionId + "&disabled=" + disabled);
+        return redirect("/warm-flow-ui/index.html?id=" + definitionId + "&onlyDesignShow=" + onlyDesignShow);
     }
 }
 
-或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&disabled=false`
+或者前端直接访问后端接口，如：`/warm-flow-ui/index.html?id=1839683148936663047&onlyDesignShow=false`
 /*打开新的页签，加载设计器*/
 function detail(dictId) {
   var url = prefix + '/detail/' + dictId;
-  $.modal.openTab("字典数据", "/warm-flow-ui/index.html?id=1839683148936663047&disabled=false");
+  $.modal.openTab("字典数据", "/warm-flow-ui/index.html?id=1839683148936663047&onlyDesignShow=false");
 }
 
 ```
@@ -339,7 +340,7 @@ spring:
 
 ### 3.2. 前端引入设计器
 ::: tip
-**设计器引入和单体类似，不过要多加一个网关路由`flow`，示例：`ip:port/flow/warm-flow-ui/index.html?id=${definitionId}&disabled=${disabled}`**
+**设计器引入和单体类似，不过要多加一个网关路由`flow`，示例：`ip:port/flow/warm-flow-ui/index.html?id=${definitionId}&onlyDesignShow=${onlyDesignShow}`**
 
 :::
 

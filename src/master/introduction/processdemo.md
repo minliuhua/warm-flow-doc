@@ -17,6 +17,7 @@
 <div class="yat"><img src="https://foruda.gitee.com/images/1749441327270116846/0703ea49_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1749441530297019454/8371b4e5_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754017301814622964/76689b79_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1749444048863642593/3871c503_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png"/></div>
 <div class="yat"><img src="https://foruda.gitee.com/images/1749444203640299283/f12e09d6_2218307.png"/></div>
