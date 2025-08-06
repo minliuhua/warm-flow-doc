@@ -49,6 +49,8 @@
 - [fix] 修复no-mutating-props报错问题: props.logicJson.flowName = flowName会造成Eslint报出no-mutating-props问题，emit已经通知父组件更改名字了   @QS
 - [fix] like/notNike 条件表达式逻辑修复   @xloouis
 - [fix] 删除流程实例，如果流程已结束，会删除失败
+- [fix] 修复设计器基础信息必填未填，也可以切换到流程设计tab
+- [fix] 修复未绘制流程图，不可发布
 
 ## 更新日志
 ### v1.7.7  2025-07-02
