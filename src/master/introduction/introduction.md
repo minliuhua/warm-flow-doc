@@ -1,7 +1,7 @@
 # 介绍
 
 ## 1、项目介绍
-Dromara Warm-Flow，一款国产的工作流引擎，以其简洁轻量、五脏俱全、灵活扩展性强的特点，成为了众多开发者的首选。它不仅可以通过jar包快速集成设计器，还具备以下显著优势：
+> Dromara Warm-Flow，国产的工作流引擎，以其简洁轻量、五脏俱全、灵活扩展性强的特点，成为了众多开发者的首选。它不仅可以通过**jar包快速集成设计器**，同时原生支持**经典和仿钉钉双模式**，还具备以下显著优势：
 
 - **简洁易用**‌：仅包含7张表，代码量少，上手和集成速度快。
 - **审批功能全面**‌：支持通过、退回、驳回到上一个任务、撤销、拿回、任意跳转、转办、终止、会签、票签、委派、加减签、互斥和并行网关等多种审批操作，以及条件表达式、办理人表达和监听器等高级功能。
@@ -22,7 +22,8 @@ Dromara Warm-Flow，一款国产的工作流引擎，以其简洁轻量、五脏
 ```
 
 <div class="yat"><div><img src="https://foruda.gitee.com/images/1749458482882123468/1ce24e01_2218307.png"/></div></div>
-<div class="yat"><div><img src="https://foruda.gitee.com/images/1754018811747061774/87af137e_2218307.png"/></div></div>
+<div class="yat"><div><img src="https://foruda.gitee.com/images/1754530281717340950/b531c256_2218307.png"/></div></div>
+<div class="yat"><div><img src="https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png"/></div></div>
 
 ## 2、演示地址
 

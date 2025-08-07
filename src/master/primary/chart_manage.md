@@ -95,7 +95,7 @@ function detail(dictId) {
 
 ## 2. 提示信息
 
-<div><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png" width="800"></div>
+<div><img src="https://foruda.gitee.com/images/1754531628206354303/b4c16c18_2218307.png" width="800"></div>
 
 **实现ChartExtService接口**
 

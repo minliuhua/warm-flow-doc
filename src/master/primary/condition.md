@@ -21,7 +21,7 @@
 
 ## 2、匹配规则
 - 1、常规匹配规则：`xxx@@yyy|zzz`，`xxx`为表达式类型，其中`yyy`为变量名，，最后的`zzz`为变量值。
-<div><img src="https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png"></div>
+<div><img src="https://foruda.gitee.com/images/1754531858724397764/de4b4e75_2218307.png"></div>
 
 - 2、默认表达式：`default@@${flag == 5 && flag > 4}`，其中`flag`为变量名。
 <div><img src="https://foruda.gitee.com/images/1742270414653294800/a10fec4f_2218307.png"></div>

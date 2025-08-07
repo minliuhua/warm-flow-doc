@@ -13,13 +13,13 @@
 
 ## 2、使用演示
 ### 2.1、或签
-<div><img src="https://foruda.gitee.com/images/1733192550833087867/e28c8a1c_2218307.png"/></div>
+<div><img src="https://foruda.gitee.com/images/1754532248385621301/50101415_2218307.png"/></div>
 
 ### 2.2、票签
-<div><img src="https://foruda.gitee.com/images/1733192752351796936/ab226443_2218307.png"/></div>
+<div><img src="https://foruda.gitee.com/images/1754532193226999260/e853749b_2218307.png"/></div>
 
 ### 2.3、会签
-<div><img src="https://foruda.gitee.com/images/1733192611266477094/d5d920aa_2218307.png"/></div>
+<div><img src="https://foruda.gitee.com/images/1754532261962167543/23ce23da_2218307.png"/></div>
 
 
 ## 3、入库值

@@ -63,10 +63,10 @@ export default hopeTheme(
                            <tbody>
                              <tr>
                                <td>
-                                 <a href="/master/other/update.html" target="_blank">🚀 1.8.0版本</a>
+                                 <a href="/master/other/news/upgrade/1.8.0.html" target="_blank">🚀 1.8.0版本</a>
                                </td>
                                <td>
-                                 <a href="/master/other/update.html" target="_blank">新增仿钉钉设计器</a>
+                                 <a href="/master/other/news/upgrade/1.8.0.html" target="_blank">重大突破：新增仿钉钉设计器</a>
                                </td>
                              </tr>
                              <tr>

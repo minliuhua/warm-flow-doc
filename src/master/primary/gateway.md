@@ -15,7 +15,7 @@
 
 ## 2.1、设计器设置网关的条件
 
-![](https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png)
+![](https://foruda.gitee.com/images/1754531858724397764/de4b4e75_2218307.png)
 
 ## 2.2、通过流程变量，设置变量值
 

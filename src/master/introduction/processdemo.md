@@ -12,16 +12,15 @@
 
 ## 演示图
 <div class="yat"><img src="https://foruda.gitee.com/images/1736763187046620959/814fd4bf_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749440851999417646/2d007565_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749440935916757073/289c38ec_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749441327270116846/0703ea49_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1736763757217975424/4d1053a9_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749441530297019454/8371b4e5_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1754017301814622964/76689b79_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749444048863642593/3871c503_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749444097213418444/b49a5938_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749444203640299283/f12e09d6_2218307.png"/></div>
-<div class="yat"><img src="https://foruda.gitee.com/images/1749444351828589754/1af0c3a8_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754530849204710785/020a16f2_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531012806253137/269398b8_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531231444872413/9c7ae4d1_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531289045726432/9d0469ca_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531401415504002/36de223c_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531543848405455/05dbc12f_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531628206354303/b4c16c18_2218307.png"/></div>
+<div class="yat"><img src="https://foruda.gitee.com/images/1754531682432509311/9cf83f7f_2218307.png"/></div>
 
 
 
@@ -55,8 +54,8 @@
 :::
 
 
-![](https://foruda.gitee.com/images/1742270239857999165/4c5ce68d_2218307.png)
-![](https://foruda.gitee.com/images/1726905626290177483/195615fc_2218307.png)
+![](https://foruda.gitee.com/images/1754531858724397764/de4b4e75_2218307.png)
+![](https://foruda.gitee.com/images/1754532009371254336/6466d91c_2218307.png)
 ## 3、开启流程实例
 ::: tip
 hh-vue项目已经准备了七套流程，以及开启流程代码，开启流程会直接执行到开始节点后一个节点
@@ -81,8 +80,3 @@ hh-vue项目已经准备了七套流程，以及开启流程代码，开启流�
 
 
 ![输入图片说明](https://foruda.gitee.com/images/1703668882786849328/0b9554ec_2218307.png "屏幕截图")
-![输入图片说明](https://foruda.gitee.com/images/1703668896500858952/c9dc78e1_2218307.png "屏幕截图")
-
-## 6、驳回流程
-
-![输入图片说明](https://foruda.gitee.com/images/1703669345903195445/4ba131bc_2218307.png "屏幕截图")
