@@ -69,12 +69,13 @@ export default sidebar({
             expanded: true,
             children: [
                 'other/team.md',
-                'other/troubleshooting.md',
+                'other/troubleshooting',
                 'other/update',
-                'other/upgrade_guide.md',
+                'other/upgrade_guide',
                 'other/news',
-                'other/jionqun.md',
+                'other/jionqun',
                 'other/paidservice',
+                'other/detail_history',
             ],
         }
     ],

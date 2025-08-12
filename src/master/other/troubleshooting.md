@@ -234,4 +234,5 @@ TaskService待办任务
 ## 12、 死循环
 - 调用`previousNodeList`、`suffixNodeList`、 `getNextNodeList`等方法时出现死循环，检查流程跳转线，本该是退回类型的，选择了通过
 
-
+## 13、 如何解决jar包依赖冲突
+[maven如何解决jar包依赖冲突](./news/experience/7.html)

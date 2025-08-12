@@ -17,8 +17,18 @@
 
 **新版流程图**
 
-<div class="yat"><div><img src="https://foruda.gitee.com/images/1754530281717340950/b531c256_2218307.png"/></div></div>
-<div class="yat"><div><img src="https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png"/></div></div>
+<div class="yat1"><div><img src="https://foruda.gitee.com/images/1754530281717340950/b531c256_2218307.png"/></div></div>
+
+---
+<div class="yat1"><div><img src="https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png"/></div></div>
+
+<style>
+ .yat1 {
+ border: 2px solid #ccc;
+ margin-bottom: 3px;
+ }
+</style>
+
 
 
 
@@ -49,5 +59,4 @@
 
 ## Warm-Flow视频
 [从零精通: 全流程开发与源码解读](https://www.bilibili.com/video/BV1AWRGYEEVr/?spm_id_from=333.1387.0.0&vd_source=1be886ace16159801f6ed0106df215d9)
-
 

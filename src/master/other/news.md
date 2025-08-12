@@ -60,7 +60,7 @@ export default {
         {
             "type": "upgrade",
             "title": "Warm-Flow重大突破, 自研仿钉钉设计器", 
-            "url": "./news/upgrade/1.8.0.html",    
+            "url": "./news/upgrade/Warm-Flow_1.8.0.html",    
             "pushTime": "2025-08-13"
         },
 {
