@@ -213,8 +213,9 @@ export default {
             { href: "https://gitee.com/min290/hh-vue", title: "hh-vue", src: "/warm-flow.png", author: "晓华/Zhen", intro: "官方集成案例：springboot2+vue2" },
             { href: "https://gitee.com/dromara/RuoYi-Vue-Plus", title: "RuoYi-Vue-Plus", src: "/webp/51f23421_2218307.webp", author: "疯狂的狮子Li", intro: "多租户后台管理系统 重写RuoYi-Vue所有功能 集成 Sa-Token、Mybatis-Plus、WarmFlow、SpringDoc、Hutool、OSS 定期同步" },
             { href: "https://gitee.com/dapppp/ruoyi-plus-vben5", title: "ruoyi-plus-vben5", src: "/webp/1dec0eeb_2218307.webp", author: "玲娜贝er", intro: "基于vben最新版本v5 & ant-design-vue 的 RuoYi-Vue-Plus 前端项目" },
+            { href: "https://gitee.com/lframework/xingyun", title: "星云ERP", src: "/webp/ax942-2pk52.webp", author: "lframework", intro: "为中小企业提供开源免费、优质体验的进销存ERP系统，解决开店、管理、数据统计难等问题，实现业务线上化、透明化、简易化等目标" }, 
+            { href: "https://gitee.com/iyhk_0/smart-flow", title: "SmartFlow", src: "/webp/1c9ce726_2218307.webp", author: "lovefawn", intro: "SmartFlow 基于SmartAdmin、Warm-Flow和Ruoyi-Vue-Plus开源项目，实现了流程设计、流程实例、流程审批、流程监控等功能" }, 
             { href: "https://gitee.com/qq75547276/seaflow", title: "seaflow", src: "/webp/ef07a979_2218307.webp", author: "seven", intro: "seaflow仿钉钉工作流平台，vue3、elementPlus，实现流程设计和审批功能" },
-            { href: "https://gitee.com/iyhk_0/smart-flow", title: "SmartFlow", src: "/webp/1c9ce726_2218307.webp", author: "lovefawn", intro: "SmartFlow 基于SmartAdmin、Warm-Flow和Ruoyi-Vue-Plus开源项目，实现了流程设计、流程实例、流程审批、流程监控等功能。" }, 
             { href: "https://gitee.com/liangliyun/RuoYi-Cloud", title: "Ruoyi-Cloud", src: "/warm-flow.png", author: "梁小梁/Zhen", intro: "基于Ruoyi-Cloud集成的跑批系统：spring-cloud(nacos)+vue3" },
         ];
     
