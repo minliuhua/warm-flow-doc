@@ -183,7 +183,9 @@ export default {
     const fetchData = async () => {
 
         qyProjectList.value = [
-            { href: "http://www.ytfs.top", title: "郑州樱桃服饰有限公司", src: "/webp/adozk-u2x7d.webp" },
+            { href: "https://www.xiangxiang.com/", title: "上海箱箱智能科技有限公司", src: "/webp/b83d8922_2218307.webp" },
+            { href: "https://cloud.cdcbys.com", title: "成都易创科兴科技有限公司", src: "/webp/af2lb-2as3k.webp" },
+            { href: "http://www.ytfs.top", title: "郑州樱桃服饰有限公司", src: "/webp/5a4dfca1_2218307.webp" },
             { href: "http://www.jslctech.com/", title: "北京金穗联创科技有限公司", src: "/webp/b91e7011_2218307.webp" },
             { href: "https://www.bankoffs.com.cn/", title: "抚顺银行", src: "/webp/b3e2d2aa_2218307.webp" },
             { href: "http://www.smartby.cn/", title: "北京白杨医疗科技有限公司", src: "/webp/91de6ed0_2218307.webp" },
@@ -203,8 +205,6 @@ export default {
             { href: "", title: "昆明世科计算机网络有限公司", src: "/webp/0207b2aa_2218307.webp" },
             { href: "", title: "湖北公众信息产业有限责任公司", src: "/webp/fdf305da_2218307.webp" },
             { href: "http://www.wenshengkeji.com/", title: "南京文盛科技有限公司", src: "/webp/d94c502d_2218307.webp" },
-            { href: "", title: "", src: "/logo.png" },
-            { href: "", title: "", src: "/logo.png" },
             { href: "", title: "", src: "/logo.png" },
             { href: "", title: "", src: "/logo.png" },
         ];
