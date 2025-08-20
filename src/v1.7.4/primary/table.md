@@ -50,7 +50,7 @@ Warm-Flow的表结构设计简洁明了，主要分为流程定义相关表和�
 | 6     | node_name        | 开始节点名称                                                 | VARCHAR(100)    |          |          |            |              |
 | 7     | node_type        | 开始节点类型（0开始节点 1中间节点 2结束节点 3互斥网关 4并行网关） | BIT(1)          |          |          |            |              |
 | 8     | target_node_code | 目标节点编码                                                 | VARCHAR(200)    |          |          |            |              |
-| 9     | target_node_name | 结束节点名称                                                 | VARCHAR(200)    |          |          |            |              |
+| 9     | target_node_name | 目标节点名称                                                 | VARCHAR(200)    |          |          |            |              |
 | 10    | approver         | 审批者                                                       | VARCHAR(40)     |          |          |            |              |
 | 11    | cooperate_type   | 协作方式(1审批 2转办 3委派 4会签 5票签 6加签 7减签)          | BIT(1)          |          | √        | 0          |              |
 | 12    | collaborator     | 协作人                                                       | VARCHAR(40)     |          |          |            |              |
