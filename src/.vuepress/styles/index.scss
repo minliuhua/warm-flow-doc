@@ -72,6 +72,7 @@
 /* 悬浮时的颜色 */
 .link-style:hover {
   color: red;
+  text-decoration: underline; /* 始终显示下划线 */
 }
 
 .vp-notice-wrapper {

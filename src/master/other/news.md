@@ -59,11 +59,17 @@ export default {
       filterList.value = allList.value = [
         {
             "type": "upgrade",
+            "title": "Warm-Flow 1.8.1 bug修复", 
+            "url": "./news/upgrade/Warm-Flow_1.8.1.html",    
+            "pushTime": "2025-08-22"
+        },
+        {
+            "type": "upgrade",
             "title": "Warm-Flow重大突破, 自研仿钉钉设计器", 
             "url": "./news/upgrade/Warm-Flow_1.8.0.html",    
             "pushTime": "2025-08-13"
         },
-{
+        {
             "type": "upgrade",
             "title": "Warm-Flow发布1.7.6, 设计器重构和流程图优化", 
             "url": "./news/upgrade/12.html",    
