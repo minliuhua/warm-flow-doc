@@ -56,17 +56,17 @@ export default hopeTheme(
             notice: [
                 {
                     path: "/master",
-                    title: "公告: 1.8.0-m2（测试版）",
+                    title: "公告: 1.8.1（正式版）",
                     content:
                         `
                          <table>
                            <tbody>
                              <tr>
                                <td>
-                                 <a href="/master/other/news/upgrade/1.8.0.html" target="_blank">🚀 1.8.0版本</a>
+                                 <a href="/master/other/news/upgrade/1.8.1.html" target="_blank">🚀 1.8.1版本</a>
                                </td>
                                <td>
-                                 <a href="/master/other/news/upgrade/1.8.0.html" target="_blank">重大突破：新增仿钉钉设计器</a>
+                                 <a href="/master/other/news/upgrade/1.8.1.html" target="_blank">Warm-Flow 1.8.1 bug修复</a>
                                </td>
                              </tr>
                              <tr>

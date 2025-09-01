@@ -1,46 +1,46 @@
-# Warm-Flow 1.8.1 bug修复
+# Warm-Flow 1.8.1版本发布｜多项Bug修复，体验更稳定！
 
-- [style] 优化代码样式,添加注释
-- [fix] WarmDaoImpl.selectPage 返回异常，返回的 Page 对象体都是 1,10
-- [fix] 修复流程设计器流程分类不显示的bug
-- [fix] 流程定义删除监听器，更新后失败
-- [fix] 修复流程图下载后，没有100%还原
+![](https://foruda.gitee.com/images/1754530281717340950/b531c256_2218307.png)
 
-## 📊 可视化展示
+亲爱的Warm-Flow用户们，我们很高兴地宣布Warm-Flow 1.8.1版本正式发布！本次更新主要聚焦于Bug修复和体验优化，让您的工作流引擎更加稳定可靠。
 
+## 🔧 本次更新内容
 
-![新版流程图](https://foruda.gitee.com/images/1754530281717340950/b531c256_2218307.png)
+### 🎨 代码优化
+- 优化代码样式，添加详细注释，提升代码可读性
 
----
+### 🐛 Bug修复
+- 修复[WarmDaoImpl.selectPage](file:///home/minliuhua/IdeaProjects/min/RuoYi-Vue-Warm-Flow/warm-flow/warm-flow-orm/warm-flow-mybatis-plus/warm-flow-mybatis-plus-core/src/main/java/org/dromara/warm/flow/orm/dao/WarmDaoImpl.java#L64-L82)返回异常问题，解决Page对象参数始终为1,10的bug
+- 解决流程设计器中流程分类不显示的问题
+- 修复流程定义删除监听器后更新失败的bug
+- 优化流程图下载功能，实现100%还原效果
 
-
-
-![新版流程图](https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png)
-
-
+![](https://foruda.gitee.com/images/1754530582498275502/be3acb55_2218307.png)
 
 ## 🌟 为什么选择Warm-Flow？
 
-作为国产工作流引擎，Warm-Flow具有以下优势：
+作为国产工作流引擎，Warm-Flow具有以下核心优势：
 
-1. **简洁轻量** - 五脏俱全，灵活扩展性强
-2. **双模式支持** - 原生支持经典和仿钉钉双模式
-3. **快速集成** - 可通过jar包快速集成设计器
-4. **广泛兼容** - 支持多种ORM框架和数据库
+✅ **简洁轻量** - 仅需7张表，代码量少，上手快速<br>
+✅ **双模式支持** - 原生支持经典和仿钉钉双模式<br>
+✅ **快速集成** - 通过jar包快速集成设计器<br>
+✅ **广泛兼容** - 支持MyBatis、Mybatis-Plus等多种ORM框架
 
 ## 🎯 功能全景
 
-![功能思维导图](https://foruda.gitee.com/images/1749458482882123468/1ce24e01_2218307.png)
+![](https://foruda.gitee.com/images/1749458482882123468/1ce24e01_2218307.png)
 
 ## 🚀 快速体验
 
-**演示地址**：[http://www.hhzai.top](http://www.hhzai.top)
-**账号密码**：admin/admin123
-
-**官方网站**：[https://warm-flow.dromara.org](https://warm-flow.dromara.org)
+💻 **演示地址**：[http://www.hhzai.top](http://www.hhzai.top)<br>
+👤 **账号密码**：admin/admin123<br>
+🌐 **官方网站**：[https://warm-flow.dromara.org](https://warm-flow.dromara.org)
 
 想要深入了解？观看我们的视频教程：[从零精通: 全流程开发与源码解读](https://www.bilibili.com/video/BV1AWRGYEEVr/)
 
 ---
 
-**立即升级到Warm-Flow 1.8.0，体验全新的工作流设计之旅！**
+**立即升级到Warm-Flow 1.8.1，体验更稳定的工作流设计之旅！**
+
+> 温馨提示：升级前请备份重要数据，如有任何问题欢迎联系我们的技术支持团队。
+
