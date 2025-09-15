@@ -25,6 +25,7 @@
 ### v1.8.2  2025-09-17
 - [feat] 多个表新增createBy,updateBy字段
 - [feat] 节点扩展属性desc参数显示提示出来
+- [feat] 节点扩展属性新增type类型5为办理人弹窗
 - [update] 流程图仿钉钉模式，不显示外框
 - [update] 流程图预览时去掉流程名称旁边的编辑图标
 - [update] 演示地址改成warm-flow.cn
