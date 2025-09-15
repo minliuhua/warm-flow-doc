@@ -8,7 +8,7 @@
 ::: warning
 - admin/admin123
 
-演示地址：http://www.hhzai.top
+演示地址：http://www.warm-flow.cn
 :::
 
 ## 演示图

@@ -32,7 +32,7 @@
 
 ## 🚀 快速体验
 
-💻 **演示地址**：[http://www.hhzai.top](http://www.hhzai.top)<br>
+💻 **演示地址**：[http://www.warm-flow.cn](http://www.warm-flow.cn)<br>
 👤 **账号密码**：admin/admin123<br>
 🌐 **官方网站**：[https://warm-flow.dromara.org](https://warm-flow.dromara.org)
 

@@ -39,7 +39,7 @@ Warm-Flow采用APACHE LICENSE 2.0开源协议，您如果需要源码开发方�
 
 - admin/admin123
 
-演示地址：http://www.hhzai.top
+演示地址：http://www.warm-flow.cn
 
 ## 3、联系方式
 

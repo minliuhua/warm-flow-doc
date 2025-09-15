@@ -24,7 +24,7 @@
 
 - admin/admin123
 
-演示地址：http://www.hhzai.top
+演示地址：http://www.warm-flow.cn
 
 ## 3、开源协议
 > Dromara Warm-Flow采用APACHE LICENSE 2.0开源协议，已申请软著，您如果需要源码开发方式，需要注意以下几点：
