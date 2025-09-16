@@ -23,9 +23,16 @@ public class CustomDataFillHandler implements DataFillHandler {
     public void insertFill(Object object) {
         RootEntity entity = (RootEntity) object;
         if (ObjectUtil.isNotNull(entity)) {
-            Date date = ObjectUtil.isNotNull(entity.getCreateTime())? entity.getCreateTime() : new Date();
-            entity.setCreateTime(date);
-            entity.setUpdateTime(date);
+            entity.setCreateTime(ObjectUtil.isNotNull(entity.getCreateTime()) ? entity.getCreateTime() : new Date());
+            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getUpdateTime() : new Date());
+
+            PermissionHandler permissionHandler = FlowEngine.permissionHandler();
+            String handler = null;
+            if (permissionHandler != null) {
+                handler = permissionHandler.getHandler();
+            }
+            entity.setCreateBy(StringUtils.isNotEmpty(handler) ? handler : entity.getCreateBy());
+            entity.setUpdateBy(StringUtils.isNotEmpty(handler) ? handler : entity.getUpdateBy());
         }
     }
 
@@ -33,7 +40,14 @@ public class CustomDataFillHandler implements DataFillHandler {
     public void updateFill(Object object) {
         RootEntity entity = (RootEntity) object;
         if (ObjectUtil.isNotNull(entity)) {
-            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getCreateTime() : new Date());
+            entity.setUpdateTime(ObjectUtil.isNotNull(entity.getUpdateTime()) ? entity.getUpdateTime() : new Date());
+
+            PermissionHandler permissionHandler = FlowEngine.permissionHandler();
+            String handler = null;
+            if (permissionHandler != null) {
+                handler = permissionHandler.getHandler();
+            }
+            entity.setUpdateBy(StringUtils.isNotEmpty(handler) ? handler : entity.getUpdateBy());
         }
     }
 }
