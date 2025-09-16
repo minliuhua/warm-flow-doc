@@ -63,10 +63,10 @@ export default hopeTheme(
                            <tbody>
                              <tr>
                                <td>
-                                 <a href="/master/other/news/upgrade/1.8.1.html" target="_blank">🚀 1.8.1版本</a>
+                                 <a href="/master/other/news/upgrade/Warm-Flow_1.8.2.html" target="_blank">🚀 1.8.2版本</a>
                                </td>
                                <td>
-                                 <a href="/master/other/news/upgrade/1.8.1.html" target="_blank">Warm-Flow 1.8.1 bug修复</a>
+                                 <a href="/master/other/news/upgrade/Warm-Flow_1.8.2.html" target="_blank">Warm-Flow 1.8.2 新增功能和优化</a>
                                </td>
                              </tr>
                              <tr>
