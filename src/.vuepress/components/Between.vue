@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isVisible" class="wwads-cn wwads-horizontal" data-id="349"></div>
+<!--  <div v-show="isVisible" class="wwads-cn wwads-horizontal" data-id="349"></div>-->
   <div v-show="isVisible" class="between-header">
     <a class="removeAfter" href="https://gitee.com/dromara/warm-flow">
       <img src="/ggw/bewteenone.png" alt="warm-flow Logo">

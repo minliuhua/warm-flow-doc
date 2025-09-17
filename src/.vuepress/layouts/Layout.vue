@@ -93,9 +93,9 @@ watch(
     <template v-if="!frontmatter.home" #sidebarTop>
       <div v-html="sidebarContentLift" />
     </template>
-<!--    <template v-if="!frontmatter.home" #contentBefore>-->
-<!--      <Between/>-->
-<!--    </template>-->
+    <template v-if="!frontmatter.home" #contentBefore>
+      <Between/>
+    </template>
     <template v-if="!frontmatter.home" #contentAfter>
       <DynamicEditLink/>
     </template>
