@@ -31,9 +31,9 @@ export default hopeTheme(
             imgLazyload: true,
         },
         plugins: {
-            slimsearch: {
-              indexContent: true,
-            },
+            // slimsearch: {
+            //   indexContent: true,
+            // },
             components: {
                 // 你想使用的组件
                 components: [
