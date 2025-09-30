@@ -31,9 +31,9 @@ export default hopeTheme(
             imgLazyload: true,
         },
         plugins: {
-            // slimsearch: {
-            //   indexContent: true,
-            // },
+            slimsearch: {
+              indexContent: true,
+            },
             components: {
                 // 你想使用的组件
                 components: [
@@ -42,10 +42,10 @@ export default hopeTheme(
                     "SiteInfo",
                 ],
             },
-            // icon: {
-            //     assets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
-            //     prefix: "iconfont icon-",
-            // },
+            icon: {
+                assets: "https://at.alicdn.com/t/c/font_4043253_v7nldr3uv7.css",
+                prefix: "iconfont icon-",
+            },
             comment: {
                 provider: "Giscus",
                 repo: "dromara/warm-flow",

@@ -24,7 +24,7 @@
 
 ### v1.8.2  2025-09-18
 - [升级指南](./upgrade_guide.md#v1-8-2)
-- [feat] 多个表新增createBy,updateBy字段
+- [feat] 多个表新增createBy,updateBy字段 @chengmaoning
 - [feat] 节点扩展属性desc参数显示提示出来
 - [feat] 节点扩展属性新增type类型5为办理人弹窗
 - [update] 流程图仿钉钉模式，不显示外框
@@ -33,6 +33,8 @@
 - [remove] 移除文本可以拖拽设置
 - [fix] 仿钉钉的设计器清空会导致流程无法继续设计
 - [fix] 仿钉钉模式节点上设置监听器无法保存
+- [fix] 调整 NOT_FOUNT_HANDLED_TASK描述错误
+- [style] 行尾注释处理，遵循阿里代码规范 @唐亚峰 | battcn
 
 
 ## 更新日志

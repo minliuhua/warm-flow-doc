@@ -29,9 +29,9 @@ export default defineUserConfig({
               s.parentNode.insertBefore(hm, s);
             })();
         `],
-        // ['script', { type: 'text/javascript', charset: 'UTF-8'
-        //     , src: 'https://cdn.wwads.cn/js/makemoney.js', async: '' }, ''
-        // ],
+        ['script', { type: 'text/javascript', charset: 'UTF-8'
+            , src: 'https://cdn.wwads.cn/js/makemoney.js', async: '' }, ''
+        ],
     ],
 });
 
