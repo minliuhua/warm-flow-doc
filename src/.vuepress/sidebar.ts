@@ -45,6 +45,7 @@ export default sidebar({
             children: [
                 'enhance/customstatus.md',
                 'advanced/variableStategy.md',
+                'advanced/change_of_handler.md',
                 'advanced/listener.md',
                 'advanced/node_ext.md',
                 'advanced/ormusagetips.md',
