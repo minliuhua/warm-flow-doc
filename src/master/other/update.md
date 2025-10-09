@@ -22,7 +22,7 @@
 - 包容网关
 - 设计器可支持新增额外的文本
 
-### v1.8.2  2025-09-18
+### v1.8.2  2025-10-09
 - [升级指南](./upgrade_guide.md#v1-8-2)
 - [feat] 多个表新增createBy,updateBy字段 @chengmaoning
 - [feat] 节点扩展属性desc参数显示提示出来
@@ -36,6 +36,7 @@
 - [fix] 仿钉钉模式节点上设置监听器无法保存
 - [fix] 调整 NOT_FOUNT_HANDLED_TASK描述错误
 - [fix] 设计器cookies改成localStorage，避免cookies被浏览器拦截
+- [fix] 指定节点优先级高于配置的任意跳转节点
 - [style] 行尾注释处理，遵循阿里代码规范 @唐亚峰 | battcn
 
 
