@@ -49,11 +49,6 @@ public interface PermissionHandler {
 ## 2、编写PermissionHandler实现类
 
 ```java
-/**
- * 办理人权限处理器（可通过配置文件注入，也可用@Bean/@Component方式）
- *
- * @author shadow
- */
 @Component
 /**
  * 办理人权限处理器（可通过配置文件注入，也可用@Bean/@Component方式）
@@ -95,12 +90,14 @@ public class CustomPermissionHandler implements PermissionHandler {
 
     /**
      * 转换办理人，比如设计器中预设了能办理的人，如果其中包含角色或者部门id等，可以通过此接口进行转换成用户id
+     * permissions：{role:1,dept:1}
      */
     @Override
     public List<String> convertPermissions(List<String> permissions) {
         // 把角色部门转换成用户
+        // permissions：{role:1,dept:1} ---> {1,2,100}
         ......
-        return permissions;
+        return "{1,2,100}";
     }
 }
 

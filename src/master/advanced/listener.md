@@ -100,7 +100,7 @@ public class DefStartListener implements Listener {
 }
 ```
 
-### 5.4、分派监听器
+### 5.3、分派监听器
 如下图中示例可以很容易实现
 
 <div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>

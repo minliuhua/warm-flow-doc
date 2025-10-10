@@ -34,7 +34,6 @@ export default sidebar({
                 'primary/variable.md',
                 'primary/gateway.md',
                 'primary/condition.md',
-                'primary/handler_change.md',
                 'primary/collaboration.md',
             ],
         },

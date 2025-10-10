@@ -1,75 +1,29 @@
 # 办理人变更
 
 ::: tip
-- 审批任务的办理人，通常是在流程设计器中预先设定好办理人，那如果想要在办理过程中指定办理人呢？
+- 审批任务的办理人，通常是在流程设计器中预先设定好办理人，那如果想要在办理过程中修改办理人呢？
 
 :::
 
-转办、委派、加签和减签，
-动态指定办理人(分派监听器)，办理人权限处理器转换办理人，
 ## 1、变更的时机
-- 1、办理后，变更新生成任务的办理人
-  - 办理人表达式，动态指定办理人(分派监听器)，动态修改下个任务的办理人
-  - 办理人权限处理器转换办理人，通常用来把角色id或者部门id转换成用id
-  - 办理时给接口的入参，比如skip的FlowParams(nextHandler、nextHandlerAppend)设置值，直接指定下个任务的办理人
+- 1、修改下个任务的办理人
+  - <span class="red-no-bg">动态指定办理人：</span> 办理人表达式(或[分派监听器](./listener.html#_5-3、分派监听器))，动态修改下个任务的办理人
+  - <span class="red-no-bg">角色|部门id转用户id：</span> 办理人权限处理器转换接口，角色/部门id转成用户id
+  - <span class="red-no-bg">跳转接口FlowParams设置nextHandler：</span> 比如skip的FlowParams(nextHandler、nextHandlerAppend)设置值，直接指定下个任务的办理人
 - 2、修改当前任务的办理人
-  - 转办、委派、加签和减签
+  - <span class="red-no-bg">转办：</span> 任务转给其他人办理
+  - <span class="red-no-bg">委派：</span> 求助其他人审批，然后参照他的意见决定是否审批通过
+  - <span class="red-no-bg">加签：</span> 办理中途，希望其他人一起参与办理
+  - <span class="red-no-bg">减签：</span> 办理中途，希望某些人不参与办理
 
+    
+## 2、动态指定办理人
 
-## 2、内置表达式
-- 1、默认办理人变量策略: `${handler1}`， `$`前缀表示默认办理人变量策略
-- 2、spel办理人变量策略: `#{@user.evalVar(#handler2)}`，`#`前缀表示spel办理人变量策略
-
-```java
- @SpringBootTest
-public class VariableTest {
-
-    /**
-     * 办理人表达式测试
-     */
-    @Test
-    public void testVariable() {
-        List<Task> addTasks = new ArrayList<>();
-        addTasks.add(FlowEngine.newTask().setPermissionList(Arrays.asList("${handler1}"
-                , "#{@user.evalVar(#handler2)}", "${handler3}", "#{@user.evalVar(#handler4)}"
-                , "#{@user.evalVarEntity(#handler5)}", "role:1", "1")));
-        FlowParams flowParams = new FlowParams();
-        Map<String, Object> variable = new HashMap<>();
-        variable.put("handler1", Arrays.asList(4, "5", 100L));
-        variable.put("handler2", 12L);
-        variable.put("handler3", new Object[]{9, "10", 102L});
-        variable.put("handler4", "15");
-        Task task = FlowEngine.newTask();
-        variable.put("handler5", task.setId(55L));
-
-        ExpressionUtil.evalVariable(addTasks, variable);
-        addTasks.forEach(p -> p.getPermissionList().forEach(System.out::println));
-    }
-}
-```
-
-## 3、匹配规则
-- 1、默认按照注入策略顺序，倒叙匹配。比如最后注入spel策略，就先遍历spel策略，匹配上就执行。
-
-## 4、变量替换时机
-- 1、流程设计时，本节点配置办理人表达式
-- 2、本节点前任意节点办理时设置，传入变量
-- 3、办理完成会生成本节点任务，并且替换`flow_user`表中的表达式
-
-> 比如B-->C, C任务设置办理人变量为`${handler1}`，B任务或者之前任务办理时传入变量`handler1=100`，则C节点办理人变量为100
-
-## 5、可实现的效果
-如下图中示例可以很容易实现 
-
-<div><img src="/assignmentlistener.jpg" width="550px" height="450px" /></div>
-
-## 6、动态指定办理人
-
-### 背景：
+**背景**
 
 审批任务的办理人，通常是在流程设计器中预先设定好办理人，那如果想要在办理过程中指定办理人呢？
 
-### 解决思路
+**解决思路**
 
 - 1、流程设计时，需要动态指定办理人的节点，配置办理人表达式`${handler1}`
 - 2、本节点前任意节点办理时设置，在流程变量中传入`${handler1}`的值
@@ -92,7 +46,7 @@ Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams
 
 
 
-### 高级玩法
+**高级玩法**
 
 - 支持动态指定一群人
 - 支持spel表达式
@@ -139,11 +93,103 @@ flowParams.variable(variable);
 Instance instance = insService.skipByInsId(testLeave.getInstanceId(), flowParams);
 ```
 
-## 7、条件表达式和办理人表达式区别
+## 3、角色|部门id转用户id
 
-- 使用地方：条件表达式网关中用到，办理人表达式在办理人列表中用到。
-- 替换时机：条件表达式是当前节点传入变量替换，办理人表达式在本节点前任意节点办理时替换。
-- 作用：前者为了决定执行哪条节点任务，后者觉得谁可以办理。
+```java
 
-## 8、办理人选择项接口
-- 通过此接口可以给办理人选择，增加默认选项比如发起人、部门领导审批之类的（待开发）
+@Component
+/**
+ * 办理人权限处理器（可通过配置文件注入，也可用@Bean/@Component方式）
+ *
+ * @author shadow
+ */
+public class CustomPermissionHandler implements PermissionHandler {
+
+    /**
+     * 转换办理人，比如设计器中预设了能办理的人，如果其中包含角色或者部门id等，可以通过此接口进行转换成用户id
+     * permissions：{role:1,dept:1}
+     */
+    @Override
+    public List<String> convertPermissions(List<String> permissions) {
+        // 把角色部门转换成用户
+        // permissions：{role:1,dept:1} ---> {1,2,100}
+        ......
+        return "{1,2,100}";
+    }
+}
+
+```
+
+## 4、跳转接口FlowParams设置nextHandler
+在[接口文档中](../primary/api.html#流程跳转)，skip方法的flowParams入参中有(nextHandler, nextHandlerAppend)，设置了nextHandler，会跳转到指定节点，
+并把nextHandler的值作为下一个任务的办理人。同理只要接口中有nextHandler，就可以设置。
+
+`Instance skip(taskId, flowParams)`：传入流程任务id，流程跳转。flowParams包含如下字段：
+- skipType: 跳转类型(PASS审批通过 REJECT退回) [必传]
+- nodeCode: 如果指定节点,可[任意跳转]到对应节点，严禁任意退回选择后置节点 [按需传输]
+- permissionFlag: 办理人权限标识，比如用户，角色，部门等，用于校验是否有权限办理 [按需传输]；满足任一情况可以不传：流程设计时未设置办理人、ignore为true、实现了[办理人权限处理器](./permission_handler.md)
+- message: 审批意见 [按需传输]
+- handler: 办理人唯一标识，如用户id，用于记录历史表 [按需传输]；如果实现了[办理人权限处理器](./permission_handler.md)可不用传
+- variable: 流程变量 [按需传输]
+- nextHandler: 执行的下个任务的办理人[按需传输]
+- nextHandlerAppend: 个任务处理人配置类型（true-追加，false-覆盖，默认false）[按需传输]
+- flowStatus: 流程状态，自定义流程状态 [按需传输]
+- ignore: 忽略权限校验（比如管理员不校验），默认不忽略 [按需传输]
+
+## 5、转办|委派|加签|减签
+
+[接口描述地址](../primary/api.html#转办)
+</br>
+
+::: code-tabs#shell
+
+@tab:active 转办
+
+```java
+public void transfer(TaskService taskService) {
+
+    taskService.transfer(getTaskId(), new FlowParams()
+            .handler("1")
+            .permissionFlag(Arrays.asList("role:1", "role:2", "user:1"))
+            .addHandlers(Arrays.asList("1","2"))
+            .message("转办"));
+}
+```
+
+@tab 委派
+
+```java
+public void depute(TaskService taskService){
+    taskService.transfer(getTaskId(), new FlowParams()
+            .handler("1")
+            .permissionFlag(Arrays.asList("role:1", "role:2", "user:1"))
+            .addHandlers(Arrays.asList("1","2"))
+            .message("委派"));
+}
+```
+
+@tab 加签
+
+```java
+public void addSignature(TaskService taskService){
+    taskService.addSignature(getTaskId(), new FlowParams()
+            .handler("1")
+            .permissionFlag(Arrays.asList("role:1", "role:2", "user:1"))
+            .addHandlers(Arrays.asList("1","2"))
+            .message("加签"));
+}
+```
+
+@tab 减签
+
+```java
+public void reductionSignature(TaskService taskService){
+    taskService.reductionSignature(getTaskId(), new FlowParams()
+            .handler("1")
+            .permissionFlag(Arrays.asList("role:1", "role:2", "user:1"))
+            .reductionHandlers(Arrays.asList("1","2"))
+            .message("减签"));
+}
+```
+
+:::

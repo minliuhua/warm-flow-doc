@@ -61,7 +61,7 @@ export default {
             "type": "upgrade",
             "title": "Warm-Flow 1.8.2 新增功能和优化", 
             "url": "./news/upgrade/Warm-Flow_1.8.2.html",    
-            "pushTime": "2025-09-18"
+            "pushTime": "2025-10-09"
         },
         {
             "type": "upgrade",
