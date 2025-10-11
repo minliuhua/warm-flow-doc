@@ -47,7 +47,7 @@
 
 💻 **演示地址**：[http://www.warm-flow.cn](http://www.warm-flow.cn)<br>
 👤 **账号密码**：admin/admin123<br>
-🌐 **官方网站**：[https://warm-flow.dromara.org](https://warm-flow.dromara.org)
+🌐 **官方网站**：[https://www.warm-flow.com](https://www.warm-flow.com)
 
 想要深入了解？观看我们的视频教程：[从零精通: 全流程开发与源码解读](https://www.bilibili.com/video/BV1AWRGYEEVr/)
 
