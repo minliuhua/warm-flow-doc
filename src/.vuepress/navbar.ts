@@ -16,9 +16,9 @@ export default navbar([
                     { text: 'v1.8.1', link: '/v1.8.0/introduction/introduction.md' },
                     { text: 'v1.8.0', link: '/v1.8.0/introduction/introduction.md' },
                     { text: 'v1.7.7', link: '/v1.7.7/introduction/introduction.md' },
-                    { text: 'v1.7.6', link: '/v1.7.7/introduction/introduction.md' },
-                    { text: 'v1.7.5', link: '/v1.7.7/introduction/introduction.md' },
-                    { text: 'v1.7.4', link: '/v1.7.4/introduction/introduction.md' },
+                    // { text: 'v1.7.6', link: '/v1.7.7/introduction/introduction.md' },
+                    // { text: 'v1.7.5', link: '/v1.7.7/introduction/introduction.md' },
+                    // { text: 'v1.7.4', link: '/v1.7.4/introduction/introduction.md' },
                     // { text: 'v1.7.3', link: '/v1.7.3/introduction/introduction.md' },
                     // { text: 'v1.7.2', link: '/v1.7.2/introduction/introduction.md' },
                     // { text: 'v1.7.0', link: '/v1.7.0/introduction/introduction.md' },
@@ -45,12 +45,12 @@ export default navbar([
             {
                 text: '升级指南',
                 children: [
-                    { text: '升级注意事项', link: '/master/other/upgrade_guide.html#注意事项' },
                     { text: 'v1.8.1 ⇧ v1.8.2', link: '/master/other/upgrade_guide.html#v1-8-2' },
                     { text: 'v1.8.0 ⇧ v1.8.1', link: '/master/other/upgrade_guide.html#v1-8-1' },
                     { text: 'v1.7.7 ⇧ v1.8.0', link: '/master/other/upgrade_guide.html#v1-8-0' },
-                    { text: 'v1.7.5 ⇧ v1.7.6', link: '/master/other/upgrade_guide.html#v1-7-6' },
-                    { text: 'v1.7.3 ⇧ v1.7.4', link: '/master/other/upgrade_guide.html#v1-7-4' },
+                    // { text: 'v1.7.5 ⇧ v1.7.6', link: '/master/other/upgrade_guide.html#v1-7-6' },
+                    // { text: 'v1.7.3 ⇧ v1.7.4', link: '/master/other/upgrade_guide.html#v1-7-4' },
+                    { text: '升级事项 ⇧ 更多...', link: '/master/other/upgrade_guide.html#注意事项' },
                 ]
             },
         ]
