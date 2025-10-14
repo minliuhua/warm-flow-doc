@@ -14,38 +14,47 @@
       </a>
     </div>
     <!-- 右侧图片 -->
-    <div class="between-right">
+    <div class="between-right" style="display: flex; align-items: center; justify-content: flex-end;">
       <a class="removeAfter" href="https://gitee.com/dromara/warm-flow">
         <img src="/ggw/bewteentwo.png" alt="warm-flow Logo">
       </a>
-      <!-- 使用 a 标签作为关闭按钮 -->
-      <a
-        href="javascript:void(0);"
-        @click="hideBanner"      style="
-        position: absolute;
-        margin-left: 5px;
-        transform: translateX(-50%);
-        background-color: white;
-        border-radius: 50%;
-        font-size: 15px;
-        line-height: 22px;
-        text-align: center;
-        text-decoration: none;
-        color: #333;
-        cursor: pointer;
-        z-index: 999;">×</a>
+      <el-link
+          :href="dynamicHref"
+          target="_blank"
+          class="warm-edit removeAfter"
+      >
+        <el-icon><img src="/icons/gitee_home.svg" alt="编辑图标"></el-icon>
+        <span style="font-size: 18px">编辑此页</span>
+      </el-link>
     </div>
   </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import {computed, ref} from 'vue';
 
 const isVisible = ref(true);
 
 function hideBanner() {
   isVisible.value = false
 }
+
+// 获取当前页面路径并替换 .html => .md
+const currentPageUrl = computed(() => {
+  if (typeof window === 'undefined') return '';
+  const url = window.location.href;
+  const baseUrl = url.split('#')[0]; // 去掉锚点
+  const path = new URL(baseUrl, location.origin).pathname; // 获取路径部分
+  return path.replace(/\.html$/, '.md'); // 替换 .html => .md
+});
+
+// 构建最终链接
+const dynamicHref = computed(() => {
+  const baseHref = 'https://gitee.com/warm_4/warm-flow-doc/edit/main/src';
+  if (!currentPageUrl.value) return baseHref;
+  return baseHref + currentPageUrl.value;
+});
 </script>
+
 <style lang="scss">
 /* 定义样式 */
 .between-header {
@@ -63,6 +72,13 @@ function hideBanner() {
   height: 40px;
   margin-right: 1px;
   border-radius: 4px;
+}
+
+.between-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* 图片和按钮之间的间距 */
 }
 
 .wwads-horizontal {
@@ -96,6 +112,31 @@ function hideBanner() {
   .wwads-logo-text {
       font-size: 12px !important;
   }
+}
+
+.removeAfter::after {
+  content: none !important; /* 移除伪元素内容 */
+}
+
+.warm-edit {
+  display: inline-flex;
+  align-items: center;
+  color: #1E90FF; /* 链接颜色 */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 0;
+}
+
+.warm-edit:hover {
+  color: indianred;
+}
+
+.warm-edit img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
 }
 
 .removeAfter::after {
